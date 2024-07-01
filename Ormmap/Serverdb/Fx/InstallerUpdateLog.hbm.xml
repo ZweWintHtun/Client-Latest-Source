@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Windows.Core" namespace="Ace.Windows.Core.DataModel" xmlns="urn:nhibernate-mapping-2.2">
+
+  <!--CustomerId Table Fields-->
+  <class name="Ace.Windows.Core.DataModel.InstallerUpdateLog" table="[InstallerUpdateLog]" >
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+
+    <property name="Version" >
+      <column name="Version" sql-type="numeric(18,2)" />
+    </property>
+    <property name="UpdatedFileName" column="UpdatedFileName">
+      <column name="UpdatedFileName" sql-type="nvarchar"  />
+    </property>
+    
+    <property name="ClientInfo">
+      <column name="ClientInfo" sql-type="nvarchar" />
+    </property>
+
+    <property name="Status">
+      <column name="Status" sql-type="int"  />
+    </property>
+
+    <property name="Active" not-null="true" />
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+</hibernate-mapping>

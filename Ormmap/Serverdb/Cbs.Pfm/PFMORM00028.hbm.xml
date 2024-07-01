@@ -1,0 +1,702 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00028, Ace.Cbs.Pfm.Dmd" rename="cledgerdto"/>
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00072, Ace.Cbs.Pfm.Dmd" rename="accountClosingInfo"/>
+	<import class="Ace.Cbs.Pfm.Dmd.PFMDTO00033, Ace.Cbs.Pfm.Dmd" rename="baldto"/>
+
+  <class name="PFMORM00028" table="[CLedger]" >
+
+    <id name="AccountNo">
+      <column name="AcctNo" sql-type="varchar" not-null="true" />
+    </id>
+    
+	  <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+		  <column name="TS" sql-type="timestamp" not-null="false"/>
+	  </version>
+
+	  <property name="CurrentBal">
+      <column name="CBal" sql-type="numeric(15,2)" not-null="true" default="0" />
+    </property>
+    <property name="OverdraftLimit">
+      <column name="OVDLimit" sql-type="numeric(15,2)" not-null="true" default="0"/>
+    </property>
+    <property name="MinimumBalance" >
+      <column name="MinBal" sql-type="numeric(15,2)" not-null="true"  default="0"/>
+    </property>
+    <property name="OverdraftDate">
+      <column name="ODDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="DayOfBalance">
+      <column name="DOBal" sql-type="numeric(15,2)" not-null="true" default="0"/>
+    </property>
+    <property name="AccountSign">
+      <column name="ACSign" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="LoansCount">
+      <column name="LoansCount" sql-type="numeric(3,0)" not-null="true" default="0"/>
+    </property>
+    <property name="SavingInterestRate">
+      <column name="SavIntRate" sql-type="numeric(5,2)" not-null="true" />
+    </property>
+    <property name="TransactionCount">
+      <column name="TCount" sql-type="numeric(5,0)" not-null="true" default="0"/>
+    </property>
+    <property name="MonthOpeningBalance">
+      <column name="MOBal" sql-type="numeric(15,2)" not-null="true" default="0"/>
+    </property>
+    <property name="CloseDate">
+      <column name="CloseDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="PrintLineNo">
+      <column name="PrnLineNo" sql-type="numeric(2,0)" not-null="true" default="0" />
+    </property>
+    <property name="CLINACCTNO">
+      <column name="CLINACCTNO" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="UsedRate">
+      <column name="USEDRATE" sql-type="numeric(15,2)" not-null="false" />
+    </property>
+    <property name="UnUsedRate">
+      <column name="UNUSEDRATE" sql-type="numeric(15,2)" not-null="false" />
+    </property>
+    <property name="Code">
+      <column name="CODE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Date_Time">
+      <column name="DATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="UserNo">
+      <column name="USERNO" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="LastDate">
+      <column name="LASTDATE" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="LastUserNo">
+      <column name="LASTUSERNO" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="TemporaryOverdraftLimit">
+      <column name="TODLimit" sql-type="numeric(15,2)" not-null="true" default="0"/>
+    </property>
+	<property name="CustomerId">
+	  <column name="CustId" sql-type="varchar" not-null="false" />
+	</property>
+	<property name="CurrencyCode">
+	  <column name="Cur" sql-type="varchar" not-null="false" />
+	</property>
+	<property name="SourceBranchCode">
+	  <column name="SourceBr" sql-type="varchar" not-null="true" />
+	</property>
+	  
+    <!--Relationship--> 
+    
+    <many-to-one name="Customer" column="[CustId]" class="PFMORM00001" insert="false" update="false"></many-to-one>
+    <many-to-one name="Currency" column="[Cur]" class="Ace.Windows.Admin.DataModel.Currency" insert="false" update="false"></many-to-one>
+    <many-to-one name="Branch" column="[SourceBr]" class="Ace.Windows.Admin.DataModel.Branch" insert="false" update="false"></many-to-one>
+
+	  <!--RelationShip With SAOF-->
+	  
+    <bag name="SAOFs" inverse="true" lazy="true">
+      <key column="AcctNo" />
+      <one-to-many class="PFMORM00016" />
+    </bag>
+	  <!--RelationShip With CAOF-->
+	  
+	  <bag name="CAOFs" inverse="true" lazy="true">
+		  <key column="AcctNo" />
+		  <one-to-many class="PFMORM00017" />
+	  </bag>
+
+	  <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  <!--//PFMDAO00028.UpdateCloseDate(not use)-->
+  <query name="PFMDAO00028.UpdateCloseDate">
+	  update PFMORM00028 c
+	  set
+	  c.CloseDate = :closeDate,
+	  c.UpdatedUserId = :updatedUserId,
+	  c.UpdatedDate = :updatedDate
+	  where c.AccountNo = :accountNo
+	  and c.Active = true
+  </query>
+
+  <!--//PFMDAO00028.UpdateForClosing-->
+  <query name="PFMDAO00028.UpdateForClosing">
+    update PFMORM00028 c
+    set
+    c.CloseDate = :closeDate,
+    c.CurrentBal = :currentBalance,
+    c.MinimumBalance = :minimumBalance,
+    c.UpdatedUserId = :updatedUserId,
+    c.UpdatedDate = :updatedDate
+    where c.AccountNo = :accountNo
+	and c.Active = true
+  </query>
+
+  <!--//PFMDAO00028.UpdateCloseDate-->
+  <query name="PFMDAO00028.IsValidCustomerId">
+	  select new cledgerdto ( c.AccountNo )
+	  from PFMORM00028 as c where c.CustomerId = :id and c.Active = true
+  </query>
+	<!--//PFMDAO00028.SelectMinimumBalanceByAccountNo-->
+	<query name="PFMDAO00028.SelectMinimumBalanceByAccountNo">
+		select new cledgerdto ( c.MinimumBalance, c.CurrentBal )
+		from PFMORM00028 as c where c.AccountNo = :accountNo and c.Active = true
+	</query>
+
+
+	<!--//PFMDAO00028.SelectAccountNoByCustomerId-->
+	<query name="PFMDAO00028.SelectAccountNoByCustomerId">
+		select new cledgerdto ( c.AccountNo,c.CustomerId )
+		from PFMORM00028 as c
+		where c.AccountNo = :accountNo and c.Active = true
+	</query>
+  
+  
+  
+  <query name="CXDAO00006.GetCurrentAccountInfoByAccountNumber">
+    select new accountClosingInfo(
+    cLedger.AccountSign,
+    cLedger.CurrencyCode,
+    cLedger.CurrentBal,
+    cust.CustomerId,
+    cust.Name,
+    cust.NRC,
+    caof.Business)
+    from PFMORM00028 as cLedger
+    left join cLedger.CAOFs as caof 
+    left join caof.Customer as cust
+    where caof.CustomerID = cust.CustomerId
+    and caof.CledgerAccountNo = cLedger.AccountNo
+    and cLedger.AccountNo = :accountNumber
+    and cLedger.Active = true
+ <!-- and (cLedger.CloseDate is null or cLedger.CloseDate = '') Client's Request(16-11-2020) -->
+    and cust.Active = true
+  </query>
+
+  <query name="CXDAO00006.GetCurrentAccountInfoByAccountNumber_ForClosedACAndUnClosed">
+    select new accountClosingInfo(
+    cLedger.AccountSign,
+    cLedger.CurrencyCode,
+    cLedger.CurrentBal,
+    cust.CustomerId,
+    cust.Name,
+    cust.NRC,
+    caof.Business)
+    from PFMORM00028 as cLedger
+    left join cLedger.CAOFs as caof
+    left join caof.Customer as cust
+    where caof.CustomerID = cust.CustomerId
+    and caof.CledgerAccountNo = cLedger.AccountNo
+    and cLedger.AccountNo = :accountNumber
+    and cLedger.Active = true
+    <!--and (cLedger.CloseDate is null or cLedger.CloseDate = '')-->
+    and cust.Active = true
+  </query>
+
+  <query name="CXDAO00006.GetSavingAccountInfoByAccountNumber">
+    select new accountClosingInfo(
+    cLedger.AccountSign,
+    cLedger.CurrencyCode,
+    cLedger.CurrentBal,
+    cust.CustomerId,
+    cust.Name,
+    cLedger.Date_Time)
+    from PFMORM00028 as cLedger
+    left join cLedger.SAOFs as saof
+    left join saof.Customer as cust
+    where saof.Customer_Id = cust.CustomerId
+    and saof.CledgerAccountNo = cLedger.AccountNo
+    and cLedger.AccountNo = :accountNumber
+    and cLedger.Active = true
+    and (cLedger.CloseDate is null or cLedger.CloseDate = '')
+    and cust.Active = true
+  </query>
+
+  <query name="CXDAO00006.GetLoanAccountCountFromCLedgerByAccountNo">
+	  select LoansCount
+	  from PFMORM00028
+	  where AccountNo = :accountNo
+	  and (CloseDate = null or CloseDate = '')
+	  and Active = true
+  </query>
+
+  <!--//PFMDAO00028.UpdatePrnLineNo-->
+  <query name="PFMDAO00028.UpdatePrintLineNo">
+	  update PFMORM00028 c
+	  set c.PrintLineNo = :lineNo,
+	  c.UpdatedUserId = :updatedUserId,
+	  c.UpdatedDate = :updatedDate
+	  where c.AccountNo = :accountNo
+	  and c.Active = true
+  </query>
+
+  <query name="PFMDAO00028.SelectPrintLineNo">
+    select new cledgerdto(
+    cLedger.PrintLineNo
+    )
+    from PFMORM00028 as cLedger
+    where cLedger.AccountNo = :accountNo
+    and cLedger.Active = true
+  </query>
+
+  <query name="CXDAO00006.IsClosedAccountForCLedger">
+	  select cLedger.AccountNo
+	  from PFMORM00028 as cLedger
+	  where cLedger.AccountNo = :accountNo
+	  and cLedger.Active = true
+	  and (cLedger.CloseDate != null or cLedger.CloseDate != '')
+  </query>
+
+	<query name="SelectLoanInfoFromCledgerByAccountNo">
+    select new cledgerdto
+    (
+    c.AccountNo,
+    c.AccountSign,
+    c.OverdraftLimit,
+    c.LoansCount,
+    c.TemporaryOverdraftLimit)
+    from PFMORM00028 as c
+    where c.AccountNo = :accountNo
+    and c.SourceBranchCode = :sourcebranch
+    and c.Active = true
+  </query>
+
+	<!--//PFMDAO00028.UpdateCurrentBalance-->
+	<query name="PFMDAO00028.UpdateCurrentBalance">
+    update PFMORM00028 c
+    set
+    c.CurrentBal = :currentBalance,
+    c.UpdatedUserId = :updatedUserId,
+    c.UpdatedDate = :updatedDate,
+    c.LastDate = :updatedDate,
+    c.LastUserNo = :updatedUserNo,
+    c.TransactionCount = :transactionCount
+    where c.AccountNo = :accountNo
+	and c.Active = true
+  </query>
+  
+  <!--PFMDAO00028.UpdateMinimumBalance-->
+  <query name="PFMDAO00028.UpdateMinimumBalance">
+	  update PFMORM00028 c
+	  set
+	  c.MinimumBalance = :minBal,
+	  c.UpdatedUserId = :updatedUserId,
+	  c.UpdatedDate = :updatedDate
+	  where c.AccountNo = :accountNo
+	  and c.Active = true
+  </query>
+
+	
+
+	<!--//CXDAO00006.SelectAccountInfoFromCledgerByAccountNo-->
+	<query name="CXDAO00006.SelectAccountInfoFromCledgerByAccountNo">
+		select new cledgerdto (
+		c.AccountNo,
+		c.CurrentBal,
+		c.OverdraftLimit,
+		c.MinimumBalance,
+		c.OverdraftDate,
+		c.AccountSign,
+		c.LoansCount,
+		c.SavingInterestRate,
+		c.TransactionCount,
+		c.MonthOpeningBalance,
+		c.CloseDate,
+		c.PrintLineNo,
+		c.CLINACCTNO,
+		c.UsedRate,
+		c.UnUsedRate,
+		c.Code,
+		c.Date_Time,
+		c.UserNo,
+		c.LastDate,
+		c.LastUserNo,
+		c.TemporaryOverdraftLimit,
+		c.CustomerId,
+		c.CurrencyCode,
+		c.SourceBranchCode)
+		from PFMORM00028 as c
+		where c.AccountNo = :accountNo and c.Active = true
+	</query>
+
+	<!--//CXDAO00006.SelectAccountInfoFromCledgerByAccountNoAndSourceBranch-->
+	<query name="CXDAO00006.SelectAccountInfoFromCledgerByAccountNoAndSourceBranch">
+		select new cledgerdto (
+		c.AccountNo,
+		c.CurrentBal,
+		c.OverdraftLimit,
+		c.MinimumBalance,
+		c.OverdraftDate,
+		c.AccountSign,
+		c.LoansCount,
+		c.SavingInterestRate,
+		c.TransactionCount,
+		c.MonthOpeningBalance,
+		c.CloseDate,
+		c.PrintLineNo,
+		c.CLINACCTNO,
+		c.UsedRate,
+		c.UnUsedRate,
+		c.Code,
+		c.Date_Time,
+		c.UserNo,
+		c.LastDate,
+		c.LastUserNo,
+		c.TemporaryOverdraftLimit,
+		c.CustomerId,
+		c.CurrencyCode,
+		c.SourceBranchCode)
+		from PFMORM00028 as c
+		where c.AccountNo = :accountNo and c.SourceBranchCode = :branchcode and c.Active = true
+	</query>
+
+	<!--//CXDAO00006.CheckAccountNoinCLedger-->
+	<query name="CXDAO00006.CheckAccountNoinCLedger">
+		select new cledgerdto (
+		c.AccountNo
+		)
+		from PFMORM00028 as c
+		where c.AccountNo = :accountNo
+		and (c.CloseDate = null or c.CloseDate = '')
+		and c.Active = true
+	</query>
+
+	<!--//PFMDAO00028.SelectCbalTCount-->
+	<query name="PFMDAO00028.SelectCbalTCount">
+		select new cledgerdto (
+		c.AccountNo,
+		c.TransactionCount,
+		c.CurrentBal
+		)
+		from PFMORM00028 as c
+		where (c.CloseDate = null or c.CloseDate = '')
+		and c.SourceBranchCode = :SourceBranchCode
+		and c.Active = true
+	</query>
+	
+	<!--//PFMDAO00028.UpdateTcount-->
+	<query name="PFMDAO00028.UpdateTcount">
+		update PFMORM00028 c
+		set c.TransactionCount=0,
+		c.UpdatedUserId = :updatedUserId,
+		c.UpdatedDate = :updatedDate
+		where (c.CloseDate = null or c.CloseDate = '')
+		and c.SourceBranchCode = :SourceBranchCode
+		and c.Active = true
+	</query>
+
+  <!--//PFMDAO00028.UpdateDOBal-->
+  <query name="PFMDAO00028.UpdateDOBal">
+    update PFMORM00028 c
+    set c.DayOfBalance = c.CurrentBal,
+    c.UpdatedUserId = :updatedUserId,
+    c.UpdatedDate = :updatedDate
+    where c.SourceBranchCode = :branchCode and c.Active = true
+  </query>
+  
+  <!--PFMDAO00028.SelectCurrency-->         <!--NLKK-->
+  <query name="PFMDAO00028.SelectCurrency">
+	  select c.CurrencyCode
+	  from PFMORM00028 as c
+	  where c.CurrentBal > 0 and (c.AccountSign like 'C%' or c.AccountSign like 'S%') and c.Active = true group by c.CurrencyCode
+  </query>
+  
+  <!--PFMDAO00028.UpdateCbal-->           <!--NLKK-->
+  <query name="PFMDAO00028.UpdateCbal">
+	  update PFMORM00028 c
+	  set c.CurrentBal = :cBal,
+	  c.UpdatedDate = :updatedDate,
+	  c.UpdatedUserId = :updatedUserId
+	  where c.AccountNo = :accountNo
+	  and c.Active = true
+  </query>
+
+  <!--//PFMDAO00028.SelectACSignByAccountNo-->              <!--NLKK-->
+  <query name="PFMDAO00028.SelectACSignByAccountNo">
+    select new cledgerdto (
+    c.AccountSign,
+    c.CloseDate,
+    c.MinimumBalance,
+    c.CurrentBal,
+    c.OverdraftLimit,
+    c.CurrencyCode,
+    c.SourceBranchCode
+    )
+    from PFMORM00028 as c
+    where c.AccountNo = :accountNo and c.Active = true
+  </query>
+  
+  <!--PFMDAO00028.SelectTotalBalanceByCurrency-->                   <!--NLKK-->
+  <query name="PFMDAO00028.SelectTotalBalanceByCurrency">
+    select new cledgerdto ( sum(c.CurrentBal) , c.CurrencyCode)
+    from PFMORM00028 as c
+    where c.AccountSign like 'S%' and c.CurrentBal > 0 and c.Active = true and c.SourceBranchCode = :sourceBr and (c.CloseDate = null or c.CloseDate = '') group by c.CurrencyCode
+  </query>
+  
+  <!--PFMDAO00028.SelectForOverDraftPosting-->                      <!--NLKK-->
+  <query name="PFMDAO00028.SelectForOverDraftPosting">
+    select new cledgerdto (c.AccountNo,c.UsedRate,c.UnUsedRate,c.OverdraftLimit,c.CurrentBal,c.CurrencyCode)
+    from PFMORM00028 as c
+    where c.SourceBranchCode = :sourceBr and c.Active = true and (c.CloseDate = null or c.CloseDate='')
+  </query>
+
+	<query name="PFMDAO00028.SelectSumDayOfBalance">
+    select new cledgerdto (c.CurrencyCode,sum(c.DayOfBalance))
+    from PFMORM00028 as c
+    where c.SourceBranchCode = :sourcebr and c.Active = true and c.AccountSign like :accountsign and c.CurrentBal> 0
+    group by c.CurrencyCode
+  </query>
+
+  <query name="PFMDAO00028.SelectSumDayOfBalanceForOD">
+  <![CDATA[
+  	select new cledgerdto (c.CurrencyCode,sum(c.DayOfBalance))
+		from PFMORM00028 as c
+    where c.SourceBranchCode = :sourcebr and c.Active = true and c.AccountSign like :accountsign and c.CurrentBal< 0
+    group by c.CurrencyCode
+	
+		
+  ]]>
+  </query>
+	
+	<!--TCMSVE00045.SelectCustomerCAOFData-->
+	<query name="TCMSVE00045.SelectCustomerCAOFData">
+		select new cledgerdto
+		(
+		caof.CustomerID,
+		c.AccountNo,
+		c.CurrentBal,
+		c.AccountSign,
+		c.CloseDate
+		)
+		from PFMORM00028 as c , PFMORM00017 as caof
+		where c.AccountNo = caof.CledgerAccountNo
+		and caof.CustomerID = :custid
+		and c.Active = true
+		and caof.Active = true
+	</query>
+
+	<!--TCMSVE00045.SelectCustomerSAOFData-->
+	<query name="TCMSVE00045.SelectCustomerSAOFData">
+		select new cledgerdto
+		(
+		saof.Customer_Id,
+		c.AccountNo,
+		c.CurrentBal,
+		c.AccountSign,
+		c.CloseDate
+		)
+		from PFMORM00028 as c , PFMORM00016 as saof
+		where c.AccountNo = saof.CledgerAccountNo
+		and saof.Customer_Id = :custid
+		and c.Active = true
+		and saof.Active = true
+	</query>
+
+	<!--TCMSVE00045.SelectCustomerLAOFData-->
+	<query name="TCMSVE00045.SelectCustomerLAOFData">
+		select new cledgerdto
+		(
+		laof.CustomerId,
+		c.AccountNo,
+		c.CurrentBal,
+		c.AccountSign,
+		c.CloseDate
+		)
+		from PFMORM00028 as c , TCMORM00010 as laof
+		where c.AccountNo = laof.AccountNo
+		and laof.CustomerId = :custid
+		and c.Active = true
+		and laof.Active = true
+	</query>
+
+	<query name="PFMDAO00028.SelectByAccountNoAndSourceBr">
+		select new cledgerdto (
+		c.AccountSign,
+		c.CloseDate,
+		c.MinimumBalance,
+		c.CurrentBal,
+		c.OverdraftLimit,
+		c.CurrencyCode,
+		c.SourceBranchCode
+		)
+		from PFMORM00028 as c
+		where c.AccountNo = :accountNo and c.Active = true and c.SourceBranchCode = :sourcebr
+	</query>
+
+  <query name="PFMDAO00028.SelectAccountSign">
+    select new cledgerdto 
+    (
+    c.AccountSign
+    )
+    from PFMORM00028 as c
+    where c.AccountNo = :accountNo and c.Active = true and c.SourceBranchCode = :sourcebr
+  </query>
+
+	<query name="PFMDAO00028.UpdateCBalForPORefundReversal">
+		update PFMORM00028 c
+		set c.CurrentBal = c.CurrentBal - :cBal,
+		c.TransactionCount = c.TransactionCount + 1,
+		c.LastDate = :updatedDate,
+		c.LastUserNo = :userNo,
+		c.UpdatedDate = :updatedDate,
+		c.UpdatedUserId = :updatedUserId
+		where c.AccountNo = :accountNo
+		and c.Active = true
+	</query>
+
+	<query name="PFMDAO00028.UpdateTransactionCount">
+		update PFMORM00028 c
+		set c.TransactionCount = c.TransactionCount + 1,
+		c.LastDate = :updatedDate,
+		c.LastUserNo = :userNo,
+		c.UpdatedDate = :updatedDate,
+		c.UpdatedUserId = :updatedUserId
+		where c.AccountNo = :accountNo
+		and c.Active = true
+	</query>
+
+	<query name="PFMDAO00028.UpdatePrnLineNoByAccountNo">
+		update PFMORM00028 c
+		set c.PrintLineNo = PrintLineNo+:lineNo,		
+		c.UpdatedDate = :updatedDate,
+		c.UpdatedUserId = :updatedUserId
+		where c.AccountNo = :accountNo
+		and c.Active = true
+	</query>
+
+	<query name="PFMDAO00028.UpdateOVDLimitInCledger">
+		update PFMORM00028 c
+		set c.OverdraftLimit = :oVDLimit,
+		c.UpdatedDate = :updatedDate,
+		c.UpdatedUserId = :updatedUserId
+		where c.AccountNo = :accountNo
+		and c.SourceBranchCode = :sourceBranchCode
+		and c.Active = true
+	</query>
+
+  <query name="PFMDAO00028.UpdateLoansCountForLoan">
+    update PFMORM00028 c
+    set c.LoansCount = LoansCount + 1,
+    c.UpdatedDate = :updatedDate,
+    c.UpdatedUserId = :updatedUserId
+    where c.AccountNo = :accountNo
+    and c.SourceBranchCode = :sourceBranchCode
+    and c.Active = true
+  </query>
+
+  <query name="PFMDAO00028.UpdateLoansCountForCledger">
+    update PFMORM00028 c
+    set c.LoansCount = LoansCount - 1,
+    c.UpdatedDate = :updatedDate,
+    c.UpdatedUserId = :updatedUserId
+    where c.AccountNo = :accountNo
+    and c.SourceBranchCode = :sourceBranchCode
+    and c.Active = true
+  </query>
+  
+  <query name="PFMDAO00028.UpdateLoansCountForOD">
+    update PFMORM00028 c
+    set c.LoansCount = LoansCount + 1,
+    c.OverdraftLimit = Ovdlimit + :samount,
+    c.UsedRate = :usedrate,
+    c.OverdraftDate = :updatedDate,
+    c.UpdatedDate = :updatedDate,
+    c.UpdatedUserId = :updatedUserId
+    where c.AccountNo = :accountNo
+    and c.SourceBranchCode = :sourceBranchCode
+    and c.Active = true
+  </query>
+
+	<query name="PFMDAO00028.SelectAccountInfoFromCledgerAndBal">
+		<![CDATA[
+		select new baldto (
+		c.AccountNo,
+		c.CurrentBal,
+		c.OverdraftLimit,
+		c.AccountSign,
+		c.UsedRate,
+		c.UnUsedRate,
+		c.Date_Time,
+		c.CurrencyCode,
+		c.SourceBranchCode,
+		bal.Month1,		
+		bal.Month2,		
+		bal.Month3,		
+		bal.Month4,		
+		bal.Month5,		
+		bal.Month6,		
+		bal.Month7,		
+		bal.Month8,
+		bal.Month9,
+		bal.Month10,
+		bal.Month11,
+		bal.Month12
+)
+		from PFMORM00028 as c , PFMORM00033 as bal
+		where bal.Budget = :budget And convert(Char(10),c.Date_Time,111) <= convert(Char(10),:endOfMonth,111) And c.CloseDate is null
+		And c.AccountSign like 'C%' And c.AccountNo = bal.AccountNo And (c.OverdraftLimit != 0 or c.TemporaryOverdraftLimit != 0)
+		And c.AccountNo = :accountNo And c.SourceBranchCode  = :sourceBr and c.Active = true And bal.SourceBranchCode = :sourceBr And bal.Active = true
+		]]>
+		</query>
+		
+
+
+	<!--<query name="CXDAO00006.GetLoansAccountInfoByAccountNumber">
+		select new accountClosingInfo(
+		cLedger.AccountSign,
+		cLedger.CurrencyCode,
+		cLedger.SourceBranchCode,
+		cLedger.CurrentBal,
+		cLedger.OverdraftLimit,
+		cLedger.MinimumBalance,
+		cLedger.OverdraftDate,
+		cLedger.DayOfBalance,
+		cLedger.LoansCount,
+		cLedger.SavingInterestRate,
+		cLedger.TransactionCount,
+		cLedger.MonthOpeningBalance,
+		cLedger.CloseDate,
+		cLedger.PrintLineNo,
+		cLedger.CLINACCTNO,
+		cLedger.UsedRate,
+		cLedger.UnUsedRate,
+		cLedger.Code,
+		cLedger.Date_Time,
+		cLedger.UserNo,
+		cLedger.LastDate,
+		cLedger.LastUserNo,
+		cLedger.TemporaryOverdraftLimit,
+		cust.CustomerId,
+		cust.Name,
+		cust.NRC,
+		caof.Business)
+		from PFMORM00028 as cLedger
+		left join cLedger.CAOFs as caof
+		left join caof.Customer as cust
+		where cLedger.AccountNo = :accountNumber and cledger.
+		and cLedger.Active = true
+		and (cLedger.CloseDate is null or cLedger.CloseDate = '')
+		and cust.Active = true
+	</query>-->
+
+	<query name="PFMDAO00028.UpdateCledgerCBalByAccountNo">
+		update PFMORM00028 c
+		set c.CurrentBal = :cledgerCBal,
+		c.TransactionCount = c.TransactionCount + 1,
+		c.UserNo = :userNo,
+		c.UpdatedDate = :updatedDate,
+		c.UpdatedUserId = :updatedUserId
+		where c.AccountNo = :accountNo
+		and c.SourceBranchCode = :sourceBr
+		and c.Active = true
+	</query>
+
+</hibernate-mapping>
+

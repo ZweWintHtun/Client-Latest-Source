@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00042, Ace.Cbs.Pfm.Dmd" rename="receiptReverseDto"/>
+  <class name="MNMVIW00030" table="VW_MOB19RL_ALL" mutable="false">
+
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+
+    <property name="CHKTIME">
+      <column name="CHKTIME" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="DATE_TIME">
+      <column name="DATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+
+    <property name="ENO">
+      <column name="ENO" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="ORGNENO">
+      <column name="ORGNENO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="ACCTNO">
+      <column name="ACCTNO" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="NAME">
+      <column name="NAME" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="OTHERBANK">
+      <column name="OTHERBANK" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="CHEQUE">
+      <column name="CHEQUE" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="SOURCECUR">
+      <column name="SOURCECUR" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="LOCALAMOUNT">
+      <column name="LOCALAMOUNT" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="STATUS">
+      <column name="STATUS" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="TRANCODE">
+      <column name="TRANCODE" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="WORKSTATION">
+      <column name="WORKSTATION" sql-type="varchar" not-null="false" />
+    </property>
+
+
+  </class>
+  
+  <!--Clearing Receipt Reversal Listing -->  
+  <query name="MNMVIW00030.VW_MOB19RL_All">
+    select new receiptReverseDto
+    (
+    mob.ENO,
+    mob.ORGNENO,
+    mob.ACCTNO,
+    mob.NAME,
+    mob.OTHERBANK,
+    mob.CHEQUE,
+    mob.SOURCECUR,
+    mob.LOCALAMOUNT,
+    mob.DATE_TIME
+    )
+    from MNMVIW00030 as mob
+    where Convert(char(10),mob.DATE_TIME,111) between :startdate and :enddate
+    and (mob.TRANCODE='RPORCL' or mob.TRANCODE='RCLRECE')
+    and mob.STATUS =:status
+    and mob.WORKSTATION =:workstation
+  </query>
+
+
+</hibernate-mapping>

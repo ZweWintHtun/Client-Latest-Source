@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    UIForm Objects Settings
+  </description>
+
+  <object id="frmPFMVEW00027" type="Ace.Cbs.Pfm.Vew.PFMVEW00027, Ace.Cbs.Pfm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="FReceiptController" ref="FReceiptController"/>
+  </object>
+
+<!--//JointForm//-->
+  <object id="frmCurrentAccount.Joint" type="Ace.Cbs.Pfm.Vew.PFMVEW00003, Ace.Cbs.Pfm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="JointController"/>
+    <property name="FormName" value="Current.Joint"/>
+  </object>
+
+  <object id="frmSavingAccount.Joint" type="Ace.Cbs.Pfm.Vew.PFMVEW00003, Ace.Cbs.Pfm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="JointController"/>
+    <property name="FormName" value="Saving.Joint"/>
+  </object>
+  <object id="frmFixedAccount.Joint" type="Ace.Cbs.Pfm.Vew.PFMVEW00003, Ace.Cbs.Pfm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="JointController"/>
+    <property name="FormName" value="Fixed.Joint"/>
+  </object>
+
+  <!--//CurrentCompanyOpening Form-->
+  <object id="frmCurrentAccount.Company" type="Ace.Cbs.Pfm.Vew.PFMVEW00002, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="CurrentCompanyController"/>
+    <property name="FormName" value="Current.Company"/>
+  </object>
+
+  <object id="frmCurrentAccount.Partnership" type="Ace.Cbs.Pfm.Vew.PFMVEW00002, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="CurrentCompanyController"/>
+    <property name="FormName" value="Current.Partnership"/>
+  </object>
+
+  <object id="frmCurrentAccount.Association" type="Ace.Cbs.Pfm.Vew.PFMVEW00002, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="CurrentCompanyController"/>
+    <property name="FormName" value="Current.Association"/>
+  </object>
+
+  <object id="frmSavingAccount.Organization" type="Ace.Cbs.Pfm.Vew.PFMVEW00002, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="CurrentCompanyController"/>
+    <property name="FormName" value="Saving.Company"/>
+  </object>
+
+  <object id="frmFixedAccount.Company" type="Ace.Cbs.Pfm.Vew.PFMVEW00002, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="CurrentCompanyController"/>
+    <property name="FormName" value="Fixed.Company"/>
+  </object>
+
+  <!--//Joint Form-->
+  <object id="frmCurrentAccount.Individual" type="Ace.Cbs.Pfm.Vew.PFMVEW00001, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="IndividualController"/>
+    <property name="FormName" value="Current.Individual"/>
+  </object>
+
+  <object id="frmCurrentAccount.PrivateFirm" type="Ace.Cbs.Pfm.Vew.PFMVEW00001, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="IndividualController"/>
+    <property name="FormName" value="Current.PrivateFirm"/>
+  </object>
+
+  <object id="frmSavingAccount.Individual" type="Ace.Cbs.Pfm.Vew.PFMVEW00001, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="IndividualController"/>
+    <property name="FormName" value="Saving.Individual"/>
+  </object>
+
+  <object id="frmSavingAccount.Minor" type="Ace.Cbs.Pfm.Vew.PFMVEW00001, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="IndividualController"/>
+    <property name="FormName" value="Saving.Minor"/>
+  </object>
+
+  <object id="frmFixedAccount.Individual" type="Ace.Cbs.Pfm.Vew.PFMVEW00001, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="IndividualController"/>
+    <property name="FormName" value="Fixed.Individual"/>
+  </object>
+
+  <object id="frmFixedAccount.Minor" type="Ace.Cbs.Pfm.Vew.PFMVEW00001, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="IndividualController"/>
+    <property name="FormName" value="Fixed.Minor"/>
+  </object>
+
+  <!--//CustomerId Form//-->
+  <object id="frmPFMVEW00004" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00004,Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="CustomerIdController" ref="CustomerIdController"/>
+    <property name="FormName" value="Entry"/>
+    <property name="FormState" value="New"/>
+	  
+  </object>
+  <!--//CustomerId Form//-->
+  <object id="frmPFMVEW000042" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00004,Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="CustomerIdController" ref="CustomerIdController"/>
+    <property name="FormName" value="Edit"/>
+    <property name="FormState" value="Edit"/>
+  </object>
+
+  <!--//CustomerId Search Form//-->
+  <object id="frmPFMVEW00005" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00005, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="CustomerIdSearchController" ref="CustomerIdSearchController"/>
+	
+  </object>
+
+  <!-- //StopCheque Form -->
+  <object id="frmPFMVEW00014" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00014, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="StopChequeController" ref="StopChequeController"/>
+  </object>
+
+  <!-- //Print User Entry -->
+  <object id="frmPFMVEW00007" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00007,Ace.Cbs.Pfm.Vew" singleton="false" parent="SecureDockForm" >
+    <property name="PrintUserController" ref="PrintUserController"/>
+  </object>
+  
+  <!--//Print Entry Transaction//-->
+  <object id="frmPFMVEW00008" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00008,Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm" >
+    <property name="PrintRecordController" ref="PrintRecordController"/>
+  </object>
+
+  <!--//ChequeIssueForm//-->
+  <object id="frmPFMVEW00013" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00013, Ace.Cbs.Pfm.Vew" singleton="false"  parent="NonSecureDockForm">
+    <property name="ChequeController" ref="ChequeController"/>
+  </object>
+
+  <!-- //PrintCheque Form -->
+  <object id="frmPFMVEW00015" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00015, Ace.Cbs.Pfm.Vew" singleton="false" parent="SecureDockForm">
+    <property name="PrintChequeController" ref="PrintChequeController"/>
+  </object>
+
+  <object id="frmPFMVEW00079.ReportViewer" type="Ace.Cbs.Pfm.Vew.PFMVEW00079, Ace.Cbs.Pfm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--End Region-->
+
+  <!--//Opening Form Printing Form//-->
+  <object id="frmPFMVEW00016" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00016,Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+  </object>
+
+  <!--//Opening Form Printing Form//-->
+  <object id="frmPFMVEW00018" type="Ace.Cbs.Pfm.Vew.PFMVEW00018,Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="OpeningFormPrintingJointController"/>
+    <property name="IsShowDialog" value="True"/>
+  </object>
+
+  <!--//Saving A/C Withdraw Form Printing//-->
+  <object id="frmPFMVEW00020" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00020,Ace.Cbs.Pfm.Vew" singleton="false" parent="SecureDockForm">
+
+  </object>
+
+
+  <!--//Saving A/C Withdraw Form Printing OffLine(Online)//-->
+  <object id="frmPFMVEW00021" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00021,Ace.Cbs.Pfm.Vew" singleton="false"	parent="NonSecureDockForm"	>
+    <property name="SavingWithdrawalController" ref="SavingWithdrawalController"/>
+    <property name="IsShowDialog" value="true"/>
+  </object>
+  
+  <!--//LinkAccountForm//-->
+  <object id="frmPFMVEW00012" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00012, Ace.Cbs.Pfm.Vew" singleton="false"  parent="NonSecureDockForm">
+    <property name="LinkAccountController" ref="LinkAccountController"/>
+  </object>
+
+  <object id="frmPFMVEW00009" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00009, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="PrintLineEntryController" ref="PrintLineEntryController"/>
+  </object>
+
+	<!--//Saving Offline Withdrawl Report 2//-->
+<object id="frmPFMVEW00023" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00023, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+  <property name="IsShowDialog" value="false"/>
+</object>
+<!--//Saving Online Offline Withdrawl Report 2//-->
+<object id="frmPFMVEW00022" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00022, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+  <property name="IsShowDialog" value="false"/>
+</object>
+<!--//Saving Online Withdrawl Report 2//-->
+<object id="frmPFMVEW00024" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00024, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+  <property name="IsShowDialog" value="false"/>
+</object>
+<object id="frmPFMVEW00006" type="Ace.Cbs.Pfm.Vew.PFMVEW00006, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+  <property name="IsShowDialog" value="false"/>
+</object>
+
+<!--//Saving Joint  Report//-->
+<object id="frmPFMVEW00030" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00030, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+  <property name="IsShowDialog" value="false"/>
+</object>
+
+
+  <object id="frmPFMVEW00029" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00029, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="IsShowDialog" value="true"/>
+  </object>
+
+
+  <!--//CurrentIndividualReport1//-->
+  <object id="frmPFMVEW00025" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00025, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+
+  <!--//CurrentIndividualReport2//-->
+  <object id="frmPFMVEW00026" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00026, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+
+  <!--//Printing Form Opening Current Account Individual//-->
+  <object id="frmPFMVEW00017" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00017, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="IndividualPrintingController" ref="IndividualPrintingController"/>
+    <property name="IsShowDialog" value="True"/>
+  </object> 
+
+
+  <!--//Current Account Close//-->
+  <object id="frmPFMVEW00011" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00011, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="CurrentAccountCloseController"/>
+  </object>
+
+  <!--//Saving Account Close//-->
+  <object id="frmPFMVEW00010" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00010, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="SavingAccountClosingController"/>
+  </object>
+  
+  <!--//Printing Form Opening Current Account Company//-->
+  <object id="frmPFMVEW00019" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00019, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="CurrentCompanyPrintingController"/>
+    <property name="IsShowDialog" value="True"/>
+  </object>
+
+  <object id="frmPFMVEW00028" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00028, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+
+  <object id="frmPFMVEW00033" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00033, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+
+  <object id="frmPFMVEW00034" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00034, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  
+  <object id="frmPFMVEW00031" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00031, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+
+	<object id="frmPFMVEW00035" type="Ace.Cbs.Pfm.Vew.PFMVEW00035, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+		<property name="IsShowDialog" value="True"/>
+	</object>
+
+  <!--//Solidarity Lending Entry Form//-->
+  <object id="frmPFMVEW00078" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00078, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="SolidarityLendingController" ref="SolidarityLendingEntryController"/>
+    <property name="FormName" value="Entry"/>
+    <property name="FormState" value="New"/>
+  </object>
+
+  <object id="frmPFMVEW00078.Edit" type="Ace.Cbs.Pfm.Vew.frmPFMVEW00078, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="SolidarityLendingController" ref="SolidarityLendingEntryController"/>
+    <property name="FormName" value="Edit"/>
+    <property name="FormState" value="Edit"/>
+  </object>
+
+  <!--Business Loan A/C Opening // Added By HWKO (22-Jun-2017)-->
+  <object id="frmBusinessLoanAccount.Individual" type="Ace.Cbs.Pfm.Vew.PFMVEW00001, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="IndividualController"/>
+    <property name="FormName" value="BusinessLoan.Individual"/>
+  </object>
+
+  <object id="frmBusinessLoanAccount.Joint" type="Ace.Cbs.Pfm.Vew.PFMVEW00003, Ace.Cbs.Pfm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="JointController"/>
+    <property name="FormName" value="BusinessLoan.Joint"/>
+  </object>
+
+  <object id="frmBusinessLoanAccount.Company" type="Ace.Cbs.Pfm.Vew.PFMVEW00002, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="CurrentCompanyController"/>
+    <property name="FormName" value="BusinessLoan.Company"/>
+  </object>
+  <!--End Region-->
+
+  <!--Hire Purchase Loan A/C Opening // Added By HWKO (22-Jun-2017)-->
+  <object id="frmHirePurchaseLoanAccount.Individual" type="Ace.Cbs.Pfm.Vew.PFMVEW00001, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="IndividualController"/>
+    <property name="FormName" value="HirePurchaseLoan.Individual"/>
+  </object>
+
+  <object id="frmHirePurchaseLoanAccount.Joint" type="Ace.Cbs.Pfm.Vew.PFMVEW00003, Ace.Cbs.Pfm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="JointController"/>
+    <property name="FormName" value="HirePurchaseLoan.Joint"/>
+  </object>
+
+  <object id="frmHirePurchaseLoanAccount.Company" type="Ace.Cbs.Pfm.Vew.PFMVEW00002, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="CurrentCompanyController"/>
+    <property name="FormName" value="HirePurchaseLoan.Company"/>
+  </object>
+  <!--End Region-->
+
+  <!--Personal Loan A/C Opening // Added By HWKO (22-Jun-2017)-->
+  <object id="frmPersonalLoanAccount.Individual" type="Ace.Cbs.Pfm.Vew.PFMVEW00001, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="IndividualController"/>
+    <property name="FormName" value="PersonalLoan.Individual"/>
+  </object>
+
+  <object id="frmPersonalLoanAccount.Joint" type="Ace.Cbs.Pfm.Vew.PFMVEW00003, Ace.Cbs.Pfm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="JointController"/>
+    <property name="FormName" value="PersonalLoan.Joint"/>
+  </object>
+
+  <object id="frmPersonalLoanAccount.Company" type="Ace.Cbs.Pfm.Vew.PFMVEW00002, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="CurrentCompanyController"/>
+    <property name="FormName" value="PersonalLoan.Company"/>
+  </object>
+  <!--End Region-->
+
+  <!--Dealer A/C Opening // Added By HWKO (04-Aug-2017)-->
+  <object id="frmDealerAccount.Individual" type="Ace.Cbs.Pfm.Vew.PFMVEW00001, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="IndividualController"/>
+    <property name="FormName" value="Dealer.Individual"/>
+  </object>
+
+  <object id="frmDealerAccount.Joint" type="Ace.Cbs.Pfm.Vew.PFMVEW00003, Ace.Cbs.Pfm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="JointController"/>
+    <property name="FormName" value="Dealer.Joint"/>
+  </object>
+
+  <object id="frmDealerAccount.Company" type="Ace.Cbs.Pfm.Vew.PFMVEW00002, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="CurrentCompanyController"/>
+    <property name="FormName" value="Dealer.Company"/>
+  </object>
+  <!--End Region-->
+  
+  <!-- Added by ZMS to show enlarge customer photo -->
+  <object id="frmPFMVEW00080" type="Ace.Cbs.Pfm.Vew.PFMVEW00080, Ace.Cbs.Pfm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="Controller"/>
+  </object>  
+</objects>	

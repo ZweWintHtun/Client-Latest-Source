@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AmountKey-->
+<!-- 
+// <copyright file="TLMORM00036.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>Nyo Me San</CreatedUser>
+// <CreatedDate>2013-05-21</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version>1.0</Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Tel.Dmd" namespace="Ace.Cbs.Tel.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+	
+	<import class="Ace.Cbs.Tel.Dmd.TLMDTO00036, Ace.Cbs.Tel.Dmd" rename="amountkeydto"/>
+	
+	<class name="TLMORM00036" table="AmountKey" >
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="true"/>
+		</version>
+		
+		<property name="Code">
+			<column name="Code" sql-type="varchar" not-null="true" />
+		</property>
+		<property name="Value">
+			<column name="Value" sql-type="numeric" not-null="true" />
+		</property>
+		<property name="StartDate">
+			<column name="Start_Date" sql-type="datetime" not-null="false" />
+		</property>
+		<property name="UniqueId">
+			<column name="UId" sql-type="char" not-null="false" />
+		</property>
+		<!--Support fields-->
+	
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+
+	</class>
+
+	<query name="CXCLE00001.SelectAmountKey">
+	<![CDATA[
+    select new amountkeydto(
+    amountkey.Value
+    )
+    from TLMORM00036 as amountkey
+    where amountkey.Code=:Code 
+    and amountkey.StartDate <= :todaydate
+    and amountkey.Active = true
+    order by amountkey.StartDate desc
+     ]]>
+	</query>
+
+  <!--//AmountKey.CheckExist//-->
+  <query name="AmountKeyDAO.CheckExist">
+    select new amountkeydto( a.Id,a.Code,a.Value,a.StartDate )
+    from TLMORM00036 as a where ( a.Value = :value or a.Code = :code ) and  a.Active = true
+  </query>
+
+  <!--//AmountKeyDAO.SelectAll//-->
+  <query name="AmountKeyDAO.SelectAll">
+    select new amountkeydto(
+    a.Id,
+    a.Code,
+    a.Value,
+    a.StartDate,
+    a.UniqueId,
+    a.Active,
+    a.TS,
+    a.CreatedDate,
+    a.CreatedUserId,
+    a.UpdatedDate,
+    a.UpdatedUserId
+    )
+    from TLMORM00036 as a
+    where a.Active = true
+    order by a.StartDate desc
+  </query>
+
+  <!--//AmountKeyDAO.SelectById//-->
+  <query name="AmountKeyDAO.SelectById">
+    select new amountkeydto(
+    a.Id,
+    a.Code,
+    a.Value,
+    a.StartDate,
+    a.UniqueId,
+    a.Active,
+    a.TS,
+    a.CreatedDate,
+    a.CreatedUserId,
+    a.UpdatedDate,
+    a.UpdatedUserId
+    )
+    from TLMORM00036 as a
+    where a.Id = :id
+    and a.Active = true
+  </query>
+
+
+</hibernate-mapping>

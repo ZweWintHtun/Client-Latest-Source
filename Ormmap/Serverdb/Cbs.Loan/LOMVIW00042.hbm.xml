@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00035, Ace.Cbs.Loan.Dmd" rename="vw_moblon001_dto"/>
+  <class name="LOMVIW00042" table="VW_MOBLON001" mutable="false">
+
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+
+    <property name="LNO">
+      <column name="LNO" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="ACCTNO">
+      <column name="ACCTNO" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="SDATE">
+      <column name="SDATE" sql-type="datetime" not-null="false"/>
+    </property>
+    <property name="CLOSEDATE">
+      <column name="CLOSEDATE" sql-type="datetime" not-null="false"/>
+    </property>
+    <property name="SAMT">
+      <column name="SAMT" sql-type="numeric" not-null="false"/>
+    </property>
+    <property name="ATYPE">
+      <column name="ATYPE" sql-type="varchar" not-null="false"/>
+    </property>
+    <property name="LEGALCASE">
+      <column name="LEGALCASE" sql-type="bit" not-null="true"/>
+    </property>
+    <property name="CUR">
+      <column name="CUR" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="SourceBr">
+      <column name="SourceBr" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="Active">
+      <column name="Active" sql-type="bit" not-null="true"/>
+    </property>
+  </class>
+
+  <!--//LOMDAO00042.SelectAllAccountClose//-->
+  <query name="LOMDAO00042.SelectAllAccountClose">
+    select new vw_moblon001_dto (
+    h.Id,
+    h.LNO,
+    h.ACCTNO,
+    h.SDATE,
+    h.CLOSEDATE,
+    h.SAMT
+    )
+    from LOMVIW00042 as h
+    where CONVERT(char(10),h.CLOSEDATE,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and h.CUR = :cur
+    and h.SourceBr = :sourceBranchCode
+    and h.Active = true
+  </query>
+
+  <!--//LOMDAO00042.SelectLoansAccountClose//-->
+  <query name="LOMDAO00042.SelectLoansAccountClose">
+    select new vw_moblon001_dto (
+    h.Id,
+    h.LNO,
+    h.ACCTNO,
+    h.SDATE,
+    h.CLOSEDATE,
+    h.SAMT
+    )
+    from LOMVIW00042 as h
+    where CONVERT(char(10),h.CLOSEDATE,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and h.CUR = :cur
+    and h.SourceBr = :sourceBranchCode
+    and Upper(h.ATYPE) = 'LOANS'
+    and h.Active = true
+  </query>
+  
+  <!--//LOMDAO00042.SelectODAccountClose//-->
+  <query name="LOMDAO00042.SelectODAccountClose">
+    select new vw_moblon001_dto (
+    h.Id,
+    h.LNO,
+    h.ACCTNO,
+    h.SDATE,
+    h.CLOSEDATE,
+    h.SAMT
+    )
+    from LOMVIW00042 as h
+    where CONVERT(char(10),h.CLOSEDATE,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and h.CUR = :cur
+    and h.SourceBr = :sourceBranchCode
+    and Upper(h.ATYPE) = 'OVERDRAFT'
+    and h.Active = true
+  </query>
+  
+  
+</hibernate-mapping>

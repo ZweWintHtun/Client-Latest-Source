@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+	<import class="Ace.Cbs.Pfm.Dmd.PFMDTO00052, Ace.Cbs.Pfm.Dmd" rename="formatDefinitiondto"/>
+	<class name="PFMORM00052" table="[FormatDefinition]" >
+
+
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="true"/>
+		</version>
+
+		<property name="FormatId">
+			<column name="FormatId" sql-type="int" not-null="true" />
+		</property>
+
+		<property name="PortionCode">
+			<column name="PortionCode" sql-type="varchar" not-null="true" />
+		</property>
+
+		<!--<many-to-one name="MaxFile" column="[MaxItem]" class="PFMORM00008" insert="false" update="false"></many-to-one>-->
+		<many-to-one name="Format" column="[FormatId]" class="PFMORM00051" insert="false" update="false"></many-to-one>
+
+		<property name="Position">
+			<column name="Position" sql-type="int" not-null="true" />
+		</property>
+
+		<property name="Length">
+			<column name="Length" sql-type="int" not-null="true" />
+		</property>
+
+		<property name="Prefix">
+			<column name="Prefix" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="Suffix">
+			<column name="Suffix" sql-type="varchar" not-null="false" />
+		</property>
+
+    <property name="BranchCode">
+      <column name="BranchCode" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="MaximumValue">
+      <column name="MaximumValue" sql-type="varchar" not-null="false" />
+    </property>
+    
+		<property name="IsValue" not-null="true" />
+		<property name="IsCheckDigit" not-null="true" />
+		<property name="IsIncrement" not-null="true" />
+		<property name="IsZeroLeading" not-null="true" />
+
+		<property name="Active" not-null="true" />
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+
+	</class>
+
+  <!--//FormatDefinition.SelectFormatDefinitonByFormatCode//-->
+  <query name="FormatDefinitionDAO.SelectFormatDefinitonByFormatCode">
+    select new PFMORM00052(
+    fd.Id,
+    fd.FormatId,
+    fd.PortionCode,
+    fd.Position,
+    fd.Length,
+    fd.MaximumValue,
+    fd.Prefix,
+    fd.Suffix,
+    fd.IsValue,
+    fd.IsCheckDigit,
+    fd.IsIncrement,
+    fd.IsZeroLeading,
+    fd.Active,
+    fd.TS,
+    fd.CreatedDate,
+    fd.CreatedUserId,
+    fd.UpdatedDate,
+    fd.UpdatedUserId
+    )
+    from PFMORM00052 as fd
+    inner join fd.Format as f
+    where f.Code =:code and fd.BranchCode =: branchCode and fd.Active=true
+  </query>
+
+  <query name="CXDAO00002.FormatDefinitionUpdate">
+    update PFMORM00052 fd set
+    fd.MaximumValue = :maximumValue,
+    fd.UpdatedUserId = :updatedUserId,
+    fd.UpdatedDate = :updatedDate
+    where fd.Id = :id and fd.TS = :ts and fd.BranchCode =: branchCode
+  </query>
+
+	<!--//FormatDefinitionDAO.SelectAll//-->
+	<query name="FormatDefinitionDAO.SelectAll">
+		select distinct new formatDefinitiondto(
+		fd.FormatId,
+		f.Code,
+		f.Description,
+		fd.PortionCode,
+		fd.Position,
+		fd.Length,
+		fd.Prefix,
+		fd.Suffix,
+		fd.IsValue,
+		fd.IsCheckDigit,
+		fd.IsIncrement,
+		fd.IsZeroLeading,
+		fd.Active,
+		fd.TS,
+		fd.CreatedDate,
+		fd.CreatedUserId,
+		fd.UpdatedDate,
+		fd.UpdatedUserId
+		)
+		from PFMORM00052 as fd
+		inner join fd.Format as f
+		where fd.Active = true
+	</query>
+
+	<!--//FormatDefinition.CheckExist//-->
+	<query name="FormatDefinitionDAO.CheckExist">
+		select distinct new formatDefinitiondto(
+		f.FormatId,
+		f.PortionCode)
+		from PFMORM00052 as f
+		where ( f.FormatId =: formatId and f.PortionCode =: portionCode)
+		and  f.Active = true
+	</query>
+
+  <!--//FormatDefinitionDAO.SelectMaxId//-->
+  <query name="FormatDefinitionDAO.SelectMaxId">
+    select new formatDefinitiondto(
+    Max(f.Id)
+    )
+    from PFMORM00052 as f
+  </query>
+  
+</hibernate-mapping>

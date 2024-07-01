@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Windows.Admin.DataModel" namespace="Ace.Windows.Admin.DataModel" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Windows.Admin.DataModel.ProgramInGroupDTO, Ace.Windows.Admin.DataModel" rename="programingroupdto"/>
+  
+	<class name="ProgramInGroup" table="[ProgramInGroup]" >
+   
+		<id name="Id" type="Int32" unsaved-value="0">
+			<generator class="increment">
+			</generator>
+		</id>
+		
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="false"/>
+		</version>
+		
+		<property name="ProgramId">
+			<column name="ProgramId" sql-type="int" not-null="true" />
+		</property>
+		
+		<property name="GroupId">
+			<column name="GroupId" sql-type="int" not-null="true" />
+		</property>
+
+		<many-to-one name="Group" column="[GroupId]" class="Group" insert="false" update="false"></many-to-one>
+		
+		<many-to-one name="Program" column="[ProgramId]" class="Program" insert="false" update="false"></many-to-one>
+		
+		<property name="CanAdd" >
+			<column name="CanAdd" sql-type="bit" not-null="true" default="0" />
+		</property>
+		
+		<property name="CanUpdate">
+			<column name="CanUpdate" sql-type="bit" not-null="true" default="0"  />
+		</property>
+		
+		<property name="CanDelete">
+			<column name="CanDelete" sql-type="bit" not-null="true" default="0" />
+		</property>
+		
+		<property name="CanView">
+			<column name="CanView" sql-type="bit" not-null="true" default="0"  />
+		</property>
+		<property name="IsValidPermission">
+			<column name="IsValidPermission" sql-type="bit" not-null="true" default="0"  />
+		</property>
+		
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+		
+  </class>
+
+	<!--//ProgramInGroupDAO.GetManagerApprove//-->
+	<query name="ProgramInGroupDAO.GetManagerPermission">
+		select new programingroupdto(
+		pg.CanView,
+		pg.CanAdd,
+		pg.CanUpdate,
+		pg.CanDelete
+		)
+		from User as u
+		inner join u.Roles as r
+		inner join r.Group as g with g.Active = true
+		inner join g.ProgramInGroups as pg
+		inner join pg.Program as p with p.Active = true
+		where u.Active = true and u.Id = :id
+		and pg.IsValidPermission = true
+		and p.ProgramPath = :programpath
+	</query>
+  
+  <query name="ProgramInGroupDAO.GetAllGroupForAutoUpdate">
+    select new groupdto(
+    g.Id,
+    g.GroupName,
+    case
+    when count(pig.Id) > 0 then true
+    else false end)
+    from Group as g
+    left join g.ProgramInGroups as pig with pig.ProgramId = :programId and pig.Active = true
+    where g.Active = true
+    group by g.Id, g.GroupName
+  </query>
+
+</hibernate-mapping>

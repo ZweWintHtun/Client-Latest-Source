@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    Center Controller Objects Settings
+  </description>
+
+  <!--Data Version Update Definition-->
+  <object id="DataVersionUpdateDefinitionController" type="Ace.Cbs.Cen.Ptr.CENCTL00007, Ace.Cbs.Cen.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="DataVersionUpdateDefinitionErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="DataVersionUpdateDefinition.Validator"/>
+        <property name="CustomValidatingMethod" value="gvDataVersionUpdateDefinition_CustomValidating"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtVersionNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Version"/>
+            <property name="CustomValidatingMethod" value="txtVersionNo_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="cboVersionNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="ClientDataVersionHeaderId"/>
+            <property name="CustomValidatingMethod" value="cboVersionNo_CustomValidating"/>
+          </object>
+        </entry>        
+        <entry key="dtpReleaseDate">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="ReleaseDate"/>
+            <property name="CustomValidatingMethod" value="dtpReleaseDate_CustomValidating"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+  
+  <object id="ComponentVersionUpdateDefinitionController" type="Ace.Cbs.Cen.Ptr.CENCTL00001, Ace.Cbs.Cen.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="ComponentVersionUpdateDefinitionErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="ComponentVersion.Validator"/>   
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+		  <entry key="txtComponentUpload">
+			  <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+				  <property name="Providers" value="ComponentVersionFolder"/>
+			  </object>
+		  </entry>
+        <entry key="txtVersionNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="ComponentVersionNo"/>           
+          </object>
+        </entry>
+		  <entry key="txtInstallerType">
+			  <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+				  <property name="Providers" value="InstallerTypeId"/>
+			  </object>
+		  </entry>
+        <entry key="cboVersionNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="ComponentVersionHeaderId"/>
+            <property name="CustomValidatingMethod" value="cboVersionNo_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="dtpReleaseDate">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="ReleaseDate"/>          
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+  <object id="CENCTL00008" type="Ace.Cbs.Cen.Ptr.CENCTL00008, Ace.Cbs.Cen.Ptr" parent="AbstractController" singleton="false">
+  </object>
+  <object id="CENCTL00004" type="Ace.Cbs.Cen.Ptr.CENCTL00004, Ace.Cbs.Cen.Ptr" parent="AbstractController" singleton="false">
+  </object>
+  <object id="CENCTL00005" type="Ace.Cbs.Cen.Ptr.CENCTL00005, Ace.Cbs.Cen.Ptr" parent="AbstractController" singleton="false">
+  </object>
+  <object id="CENCTL00006" type="Ace.Cbs.Cen.Ptr.CENCTL00006, Ace.Cbs.Cen.Ptr" parent="AbstractController" singleton="false">
+  </object>
+  <object id="CENCTL00002" type="Ace.Cbs.Cen.Ptr.CENCTL00002, Ace.Cbs.Cen.Ptr" parent="AbstractController" singleton="false">
+  </object>
+	
+</objects>

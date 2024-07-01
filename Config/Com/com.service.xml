@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+	<description>
+		Service Objects Settings
+	</description>
+
+  <!--//Server Error Handler (Common Module)//-->
+  <object id="ServerErrorHandler" type="Ace.Windows.Core.Utt.ErrorHandler, Ace.Windows.Core" singleton="true">
+  </object>
+
+  <!--//Code Generator Service//-->
+  <object id="CXSVE00002" type="Ace.Cbs.Cx.Ser.Sve.CXSVE00002, Ace.Cbs.Cx.Ser" singleton="false">
+    <property name="CodeGeneratorDAO" ref="CodeGeneratorDAO"/>
+  </object>
+
+  <!--//Deno Calculation Service//-->
+  <object id="CXSVE00004" type="Ace.Cbs.Cx.Ser.Sve.CXSVE00004, Ace.Cbs.Cx.Ser" singleton="false">
+  </object>
+  
+	<!-- Region Teller Common Module -->
+	<object id="CXSVE00008" type="Ace.Cbs.Cx.Ser.Sve.CXSVE00008, Ace.Cbs.Cx.Ser" singleton="false" >
+		<property name="RegisterDAO" ref="RegisterDAO"/>
+	</object>
+
+	<object id="CXSVE00009" type="Ace.Cbs.Cx.Ser.Sve.CXSVE00009, Ace.Cbs.Cx.Ser" singleton="false" >
+		<property name="CodeCheckerDAO" ref="CodeCheckerDAO"/>
+	</object>
+  
+	<object id="CXSVE00010" type="Ace.Cbs.Cx.Ser.Sve.CXSVE00010, Ace.Cbs.Cx.Ser" singleton="false">
+		<property name="DataGenerateDAO" ref="DataGenerateDAO"/>
+	</object>
+
+
+  <!--//Printing Service//-->
+  <object id="CXSVE00003" type="Ace.Cbs.Cx.Ser.Sve.CXSVE00003, Ace.Cbs.Cx.Ser" singleton="false">
+    <property name="PrintingDAO" ref="PrintingDAO"/>
+  </object>
+
+  <!-- Server Version Service (Common Module) -->
+  <object id="CXSVE00001" type="Ace.Cbs.Cx.Ser.Sve.CXSVE00001, Ace.Cbs.Cx.Ser"  singleton="false">
+    <property name="ServerDataDAO" ref="ServerVersionDAO"/>
+		<property name="ServerClientDataUpdateDAO" ref="ServerClientDataUpdateDAO"/>
+  </object>
+
+  <!-- Server Version Service (Common Module) -->
+  <object id="CXSVE00006" type="Ace.Cbs.Cx.Ser.Sve.CXSVE00006, Ace.Cbs.Cx.Ser"  singleton="false">
+    <property name="CodeCheckerDAO" ref="CodeCheckerDAO"/>
+    <property name="ProcedureDAO" ref="DataGenerateDAO"/>
+    <property name="PrintDAO" ref="PrintingDAO"/>
+    <property name="TLFDAO" ref="Tlfdao"/>
+    <property name="Cashdao" ref="CashDAO"/>
+    <property name="IBLTLFDAO" ref="Ibltlfdao"/>
+    <property name="HisCashDAO" ref="HisCashDenoDAO"/>
+    <property name="FPRNDAO" ref="FrpnDAO"/>
+  </object>
+
+  <object id="CXSVE00007" type="Ace.Cbs.Cx.Ser.Sve.CXSVE00007, Ace.Cbs.Cx.Ser" singleton="false" >
+    <property name="CounterDAO" ref="CounterDAO"/>
+  </object>
+
+  <!--//Installer Update Service //-->
+  <object id="FXCXSVE00007" type="Ace.Windows.CXServer.SVE.FXCXSVE00007, Ace.Windows.CXServer" singleton="false" >
+    <property name="InstallerUpdateDefinitionDAO" ref="InstallerUpdateDefinitionDAO"/>
+    <property name="InstallerUpdateLogDAO" ref="InstallerUpdateLogDAO"/>
+    <property name="InstallerUpdateRootFolder" value="./updateversion/" />
+  </object>
+
+  <object id="FX.MapperConfig" type="Ace.Windows.Core.Utt.MapperConfig, Ace.Windows.Core" singleton="false" >
+    <property name="MapperObjects">
+      <dictionary key-type="string" value-type="string">
+        <entry key="Ace.Cbs.Pfm.Dmd.PFMDTO00001, Ace.Cbs.Pfm.Dmd" value="Ace.Cbs.Pfm.Dmd.PFMORM00001, Ace.Cbs.Pfm.Dmd" />
+        <entry key="Ace.Cbs.Pfm.Dmd.PFMDTO00006, Ace.Cbs.Pfm.Dmd" value="Ace.Cbs.Pfm.Dmd.PFMORM00006, Ace.Cbs.Pfm.Dmd" />
+        <entry key="Ace.Cbs.Pfm.Dmd.PFMDTO00010, Ace.Cbs.Pfm.Dmd" value="Ace.Cbs.Pfm.Dmd.PFMORM00010, Ace.Cbs.Pfm.Dmd" />
+        <entry key="Ace.Cbs.Pfm.Dmd.PFMDTO00011, Ace.Cbs.Pfm.Dmd" value="Ace.Cbs.Pfm.Dmd.PFMORM00011, Ace.Cbs.Pfm.Dmd" />
+        <entry key="Ace.Cbs.Pfm.Dmd.PFMDTO00029, Ace.Cbs.Pfm.Dmd" value="Ace.Cbs.Pfm.Dmd.PFMORM00029, Ace.Cbs.Pfm.Dmd" />
+        <entry key="Ace.Cbs.Pfm.Dmd.PFMDTO00032, Ace.Cbs.Pfm.Dmd" value="Ace.Cbs.Pfm.Dmd.PFMORM00032, Ace.Cbs.Pfm.Dmd" />
+        <entry key="Ace.Cbs.Pfm.Dmd.PFMDTO00043, Ace.Cbs.Pfm.Dmd" value="Ace.Cbs.Pfm.Dmd.PFMORM00043, Ace.Cbs.Pfm.Dmd" />
+        <entry key="Ace.Cbs.Pfm.Dmd.PFMDTO00044, Ace.Cbs.Pfm.Dmd" value="Ace.Cbs.Pfm.Dmd.PFMORM00044, Ace.Cbs.Pfm.Dmd" />
+        <entry key="Ace.Cbs.Pfm.Dmd.PFMDTO00045, Ace.Cbs.Pfm.Dmd" value="Ace.Cbs.Pfm.Dmd.PFMORM00045, Ace.Cbs.Pfm.Dmd" />
+        <entry key="Ace.Cbs.Pfm.Dmd.PFMDTO00058, Ace.Cbs.Pfm.Dmd" value="Ace.Cbs.Pfm.Dmd.PFMORM00058, Ace.Cbs.Pfm.Dmd" />
+      </dictionary>
+    </property>
+  </object>
+  
+</objects>
+
+

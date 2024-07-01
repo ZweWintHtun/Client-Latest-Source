@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00076, Ace.Cbs.Pfm.Dmd" rename="counterdto"/>
+
+  <class name="PFMORM00075" table="[Counter]" >
+
+    <composite-id>
+      <key-property name="BranchCode" column="BranchCode"></key-property>
+      <key-property name="CounterPhysicalAddress" column="CounterPhysicalAddress"></key-property>
+    </composite-id>
+    
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version> 
+    
+    <property name="IsAlwaysValid">
+      <column name="IsAlwaysValid" sql-type="bit" not-null="true" />
+    </property>
+    <property name="ValidStartDate">
+      <column name="ValidStartDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="ValidEndDate">
+      <column name="ValidEndDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="IsNeedInstallerUpdate">
+      <column name="IsNeedInstallerUpdate" sql-type="bit" not-null="true" />
+    </property>
+
+	  <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+	  <property name="UpdatedDate" not-null="false" insert="false" />
+	  <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  <query name="PFMDAO00059.SelectByBranchCodeAndCounter">
+    select new counterdto(c.BranchCode, c.CounterPhysicalAddress, c.IsAlwaysValid, c.ValidStartDate, c.ValidEndDate, c.IsNeedInstallerUpdate) from PFMORM00075 as c
+    where c.BranchCode = :branchCode and c.CounterPhysicalAddress = :counterPhysicalAddress and c.Active = true
+  </query>
+  
+</hibernate-mapping>

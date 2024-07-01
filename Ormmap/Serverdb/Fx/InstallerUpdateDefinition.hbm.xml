@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Windows.Core" namespace="Ace.Windows.Core.DataModel" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Windows.Core.DataModel.InstallerUpdateDefinitionDTO, Ace.Windows.Core" rename="installerupdatedefinitiondto"/>
+  
+	<!--CustomerId Table Fields-->
+	<class name="Ace.Windows.Core.DataModel.InstallerUpdateDefinition" table="[InstallerUpdateDefinition]" >
+
+    <composite-id>
+      <key-property name="Version" >
+        <column name="Version" sql-type="numeric(18,2)" />
+      </key-property>
+      <key-property name="UpdatedFileName" column="UpdatedFileName">
+        <column name="UpdatedFileName" sql-type="nvarchar"  />
+      </key-property>
+    </composite-id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+
+    <property name="FilePath">
+      <column name="FilePath" sql-type="nvarchar"  />
+    </property>
+
+    <property name="Active" not-null="true" />
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+    
+  </class>
+  
+  <!--//CXDAO00007.SelectUpdateFile//-->
+  <query name="CXDAO00007.SelectInstallerUpdateDefinitionByCurrentVersion">
+    select new installerupdatedefinitiondto(max(a.Version), a.UpdatedFileName, a.FilePath)
+    from InstallerUpdateDefinition a
+    where
+    a.Version > :currentVersion and
+    a.Active = true and
+    (str(a.Version) + a.UpdatedFileName) not in
+    (select str(n.Version) + n.UpdatedFileName
+    from InstallerUpdateLog n
+    where n.Active = true and n.ClientInfo = :clientInfo)
+    group by a.UpdatedFileName,a.FilePath
+  </query>
+  
+</hibernate-mapping>

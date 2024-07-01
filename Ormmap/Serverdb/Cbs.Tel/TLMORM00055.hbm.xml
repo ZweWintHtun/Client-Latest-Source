@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--IblDwtRate-->
+<!-- 
+// <copyright file="TLMORM00042.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>Ye Mann Aung</CreatedUser>
+// <CreatedDate>2013-07-11</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version>1.0</Version>
+-->
+
+<hibernate-mapping assembly="Ace.Cbs.Tel.Dmd" namespace="Ace.Cbs.Tel.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+	<import class="Ace.Cbs.Tel.Dmd.TLMDTO00055, Ace.Cbs.Tel.Dmd" rename="messagecodetranslatordto"/>
+
+	<class name="TLMORM00055" table="MessageCodeTranslator" >
+		<id name="ErrorCode">
+			<column name="ErrorCode" sql-type="varchar" not-null="true" />
+		</id>
+
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="true"/>
+		</version>
+
+		<property name="CXMessageCode">
+			<column name="CXMessageCode" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="Description">
+			<column name="Description" sql-type="varchar" not-null="false" />
+		</property>
+
+		<!--Support Fields-->
+
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+	</class>
+	
+</hibernate-mapping>

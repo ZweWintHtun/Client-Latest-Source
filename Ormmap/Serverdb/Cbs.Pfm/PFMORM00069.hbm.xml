@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00069, Ace.Cbs.Pfm.Dmd" rename="_sys001dto"/>
+
+  <class name="PFMORM00069" table="[Sys001]">
+
+	  <id name="Name">
+		  <column name="Name" sql-type="varchar" not-null="true" />
+	  </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+   
+	  <property name="SysMonYear">
+		  <column name="SysMonYear" sql-type="varchar" not-null="false" />
+	  </property>
+	  <property name="Status">
+		  <column name="Status" sql-type="varchar" not-null="false" />
+	  </property>
+    <property name="SysDate">
+      <column name="SysDate" sql-type="datetime" not-null="true" />
+    </property>
+	  <property name="SysQty">
+		  <column name="SysQty" sql-type="varchar" not-null="false" />
+	  </property>   
+    <property name="SourceBranchCode">
+      <column name="SourceBr" sql-type="varchar" not-null="true" />
+    </property>    
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+</hibernate-mapping>

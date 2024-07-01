@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:v="http://www.springframework.net/validation">
+
+	<description>
+		UI Control Settings
+	</description>
+
+	<!-- Region Admin Module -->
+
+	<object id="Initial.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="DisableControls"
+				  value="txtInitialCode" />
+	</object>
+
+	<object id="Initial.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="EnableControls"
+				  value="txtInitialCode" />
+	</object>
+
+	<object id="OccupationCode.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="DisableControls"
+				  value="txtOccupationCode" />
+	</object>
+
+	<object id="OccupationCode.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="EnableControls"
+				  value="txtOccupationCode" />
+	</object>
+
+	<object id="BCode.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="DisableControls"
+				  value="txtBankCode" />
+	</object>
+
+	<object id="BCode.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="EnableControls"
+				  value="txtBankCode" />
+	</object>
+
+	<object id="RateFile.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="DisableControls"
+				  value="txtCode" />
+	</object>
+
+	<object id="RateFile.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="EnableControls"
+				  value="txtCode" />
+	</object>
+
+	<!-- EndRegion -->
+
+	<!-- Region System Module -->
+
+	<!-- TranType -->
+	<object id="TranType.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="DisableControls"
+				  value="txtCode" />
+	</object>
+
+	<object id="TranType.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="EnableControls"
+				  value="txtCode" />
+	</object>
+
+	<!-- DepositCode -->
+	<object id="DEPOSITCODE.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="DisableControls"
+				  value="txtDepositCode" />
+	</object>
+
+	<object id="DEPOSITCODE.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="EnableControls"
+				  value="txtDepositCode" />
+	</object>
+
+	<!-- BranchServer -->
+	<object id="SERVERLOG.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="DisableControls"
+				  value="txtId" />
+	</object>
+
+	<object id="SERVERLOG.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="EnableControls"
+				  value="txtId" />
+	</object>
+
+	<!-- NewSetup -->
+	<object id="NewSetup.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="DisableControls"
+				  value="txtVariable" />
+	</object>
+
+	<object id="NewSetup.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="EnableControls"
+				  value="txtVariable" />
+	</object>
+
+	<!-- Message List -->
+	<object id="Message.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="DisableControls"
+				  value="txtCode" />
+	</object>
+
+	<object id="Message.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="EnableControls"
+				  value="txtCode" />
+	</object>
+
+  <!-- EndRegion -->
+
+</objects>

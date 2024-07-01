@@ -1,0 +1,1385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00054, Ace.Cbs.Pfm.Dmd" rename="tlfdto"/>
+
+  <class name="PFMORM00054" table="[TLF]" >
+
+    <id name="Id" type="Int32" unsaved-value="0">
+		<!--<generator class="increment">
+		</generator>-->
+	</id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+
+    <property name="Eno">
+      <column name="Eno" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="AccountNo">
+      <column name="AcctNo" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Amount">
+      <column name="Amount" sql-type="numeric(15,2)" not-null="true" default="0"/>
+    </property>
+    <property name="Acode">
+      <column name="ACode" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="HomeAmount">
+      <column name="HomeAmount" sql-type="numeric(15,2)" not-null="false"/>
+    </property>
+    <property name="HomeAmt">
+      <column name="HomeAmt" sql-type="numeric(15,2)" not-null="false" />
+    </property>
+    <property name="HomeOAmt">
+      <column name="HomeOAmt" sql-type="numeric(15,2)" not-null="false" />
+    </property>
+    <property name="LocalAmount">
+      <column name="LocalAmount" sql-type="numeric(15,2)" not-null="false" />
+    </property>
+    <property name="LocalAmt">
+      <column name="LocalAmt" sql-type="numeric(15,2)" not-null="false" />
+    </property>
+    <property name="LocalOAmt">
+      <column name="LocalOAmt" sql-type="numeric(15,2)" not-null="false" />
+    </property>
+    <property name="SourceCurrency">
+      <column name="SourceCur" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="CurrencyCode">
+      <column name="CurCode" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Cheque">
+      <column name="Cheque" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="PaymentOrderNo">
+      <column name="PONo" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="DRegisterNo">
+      <column name="DRegisterNo" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="ERegisterNo">
+      <column name="ERegisterNo" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="LgNo">
+      <column name="LGNo" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Lno">
+      <column name="LNo" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Description">
+      <column name="Desp" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Narration">
+      <column name="Narration" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="DateTime">
+      <column name="DATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="Status">
+      <column name="Status" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="TransactionCode">
+      <column name="TranCode" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="AccountSign">
+      <column name="ACSign" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="DOMBankPost">
+      <column name="DOMBankPost" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="CLRPostStatus">
+      <column name="CLRPostStatus" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="OrgnEno">
+      <column name="OrgnENo" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="OrgnTransactionCode">
+      <column name="OrgnTranCode" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="OrgnCheque">
+      <column name="OrgnCheque" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="OrgnPaymentOrderNo">
+      <column name="OrgnPONo" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="OrgnDRegister">
+      <column name="OrgnDReg" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="OrgnERegister">
+      <column name="OrgnEReg" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="OrgnLgNo">
+      <column name="OrgnLGNo" sql-type="varchar" not-null="false" />
+    </property>
+    <!--<property name="OrgnLNo">
+      <column name="OrgnLNo" sql-type="varchar" not-null="false" />-->
+    <!--</property>-->
+    <property name="UserNo">
+      <column name="USERNO" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="ContraENo">
+      <column name="ContraENo" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="ContraLNo">
+      <column name="ContraLNo" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="ContraDateTime">
+      <column name="ContraDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="OtherBank">
+      <column name="OtherBank" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="DeliverReturn">
+      <column name="DeliverReturn" sql-type="bit" not-null="true" />
+    </property>
+    <property name="ReceiptNo">
+      <column name="ReceiptNo" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="OtherBankChq">
+      <column name="OtherBankChq" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="CheckTime">
+      <column name="CHKTIME" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="OtherBankAcctNo">
+      <column name="OtherBankAcctNo" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="CustomerId">
+      <column name="CustId" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="GChequeNo">
+      <column name="GChqNo" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="SourceBranchCode">
+      <column name="SourceBr" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Rate">
+      <column name="Rate" sql-type="numeric(15,2)" not-null="false"/>
+    </property>
+    <property name="SettlementDate">
+      <column name="SettlementDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="Channel">
+      <column name="Channel" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="ReferenceVoucherNo">
+      <column name="RefVNo" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="ReferenceType">
+      <column name="RefType" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+  </class>	
+	
+  <!--//TLFDAO.SelectMaxId//-->
+  <query name="TLFDAO.SelectMaxId">
+    select new tlfdto
+    (
+    MAX(t.Id)
+    )
+    from PFMORM00054 as t
+  </query>
+
+  <!--//TLFDAO.SelectForReversal-->
+  <query name="TLFDAO.SelectForReversal">
+    select new tlfdto
+    (
+    t.Eno,
+    t.DateTime,
+    t.AccountNo,
+    t.Amount,
+    t.Status,
+    t.TransactionCode,
+    t.Lno,
+    t.Cheque,
+    t.Narration,
+    t.OrgnEno,
+    t.SettlementDate,
+    t.SourceCurrency
+    )
+    from PFMORM00054 as t
+    where t.Eno = :eno and t.SourceBranchCode = :sourceBr and (t.TransactionCode = 'CLRCR' or t.TransactionCode = 'CLRDR') and t.Active = true
+  </query>
+
+ <!--
+  <query name="TLFDAO.SelectTLFInfoByEno">
+	  select new tlfdto
+	  (
+	  t.Eno,
+	  t.DateTime,
+	  t.LocalAmount,
+	  t.Cheque,
+	  t.TransactionCode,
+	  t.Description,
+	  t.Status,
+	  t.AccountNo,
+	  t.Rate,
+	  t.SettlementDate,
+	  t.Amount,
+	  t.Narration,	  
+	  t.OrgnEno,
+	  t.SourceBranchCode,
+	  t.UpdatedUserId,
+	  t.SourceCurrency
+	  )
+	  from PFMORM00054 as t
+	  where t.Eno = :eno
+	  and t.SourceBranchCode = :sourceBr
+	  and t.Active = true
+  </query>-->
+
+	<!--Select Tlf Information By EntryNo-->
+	<query name="TLFDAO.SelectTLFInfoByEno">
+		select new tlfdto
+		(
+		t.Eno
+		,t.AccountNo
+		,t.Amount
+		,t.Acode
+		,t.HomeAmount
+		,t.HomeAmt
+		,t.HomeOAmt
+		,t.LocalAmount
+		,t.LocalAmt
+		,t.SourceCurrency
+		,t.CurrencyCode
+		,t.Cheque
+		,t.PaymentOrderNo
+		,t.DRegisterNo
+		,t.ERegisterNo
+		,t.LgNo
+		,t.Lno
+		,t.Description
+		,t.Narration
+		,t.DateTime
+		,t.Status
+		,t.TransactionCode
+		,t.AccountSign
+		,t.DOMBankPost
+		,t.CLRPostStatus
+		,t.OrgnEno
+		,t.OrgnTransactionCode
+		,t.OrgnCheque
+		,t.OrgnPaymentOrderNo
+		,t.OrgnDRegister
+		,t.OrgnERegister
+		,t.OrgnLgNo
+		,t.UserNo
+		,t.ContraENo
+		,t.ContraLNo
+		,t.ContraDateTime
+		,t.OtherBank
+		,t.DeliverReturn
+		,t.ReceiptNo
+		,t.OtherBankChq
+		,t.CheckTime
+		,t.OtherBankAcctNo
+		,t.CustomerId
+		,t.GChequeNo
+		,t.SourceBranchCode
+		,t.Rate
+		,t.SettlementDate
+		,t.Channel
+		,t.ReferenceVoucherNo
+		,t.ReferenceType
+		,t.Active
+		,t.CreatedDate
+		,t.CreatedUserId
+		,t.UpdatedDate
+		,t.UpdatedUserId
+		)
+		from PFMORM00054 as t
+		where t.Eno = :eno
+		and t.SourceBranchCode = :sourceBr
+		and t.Active = true
+	</query>
+
+  <!--//TLFDAO.Select Tlf Information By EntryNo and DateTime//-->
+  <query name="TLFDAO.SelectTlfInfoByEnoandDate">
+    select new tlfdto
+    (
+    t.Eno,
+    t.Narration,
+    t.AccountNo,
+    t.Acode,
+    t.AccountSign,
+    t.Amount,
+    t.Rate,
+    t.Status,
+    t.DateTime,
+    t.TransactionCode,
+    t.OrgnEno,
+    t.PaymentOrderNo,
+    t.OtherBank,
+    t.SourceCurrency,
+    t.Cheque,
+    t.OtherBankChq,
+    t.ReceiptNo,
+    t.CLRPostStatus,
+    t.SettlementDate,
+    t.DeliverReturn
+    )
+    from PFMORM00054 as t where t.Eno =: entryNo
+    and (t.TransactionCode =: credit or t.TransactionCode =: debit)
+    and t.SourceBranchCode = :sourceBr
+    and t.Active = true Order by t.Eno Desc
+
+  </query>
+
+  <!--//TLFDAO.Select Tlf Information For Reversal//-->
+  <query name="TLFDAO.SelectTlfForReversal">
+    select new tlfdto
+    (
+    t.Eno,
+    t.Amount,
+    t.Description,
+    t.Rate,
+    t.CurrencyCode
+    )
+    from PFMORM00054 as t where t.AccountNo =: accountNo
+    and t.ReceiptNo =:receiptNo
+    and t.SourceBranchCode = :sourceBr
+    and t.Active = true Order by t.Eno Desc
+  </query>
+
+  <!--//For Clearing Posting.TLFDAO.Select  From TLf where Datetime and Status and ClRPostStatus .//-->
+  <query name="TLFDAO.SelectTlfForClearingPosting">
+	  select new tlfdto
+	  (
+	  t.Eno,
+	  t.AccountNo,
+	  t.ReceiptNo,
+	  t.OtherBank,
+	  t.OtherBankChq,
+	  t.Amount,
+	  t.AccountSign,
+	  t.CLRPostStatus
+	  )
+	  from PFMORM00054 as t where
+	  Convert(char(10),t.DateTime,111) =:datetime
+	  and t.Status = :status
+	  and t.SourceBranchCode = :sourceBr
+	  and (t.CLRPostStatus is null or t.CLRPostStatus ='')
+	  and t.Active = true
+  </query>
+
+  <!--//For Clearing Posting.TLFDAO.Select * From TLf where Datetime and Status and ClRPostStatus .//-->
+  <query name="TLFDAO.SelectTlfForClearingPostingInService">
+	  select new tlfdto
+	  (
+	  t.Eno
+	  ,t.AccountNo
+	  ,t.Amount
+	  ,t.Acode
+	  ,t.HomeAmount
+	  ,t.HomeAmt
+	  ,t.HomeOAmt
+	  ,t.LocalAmount
+	  ,t.LocalAmt
+	  ,t.SourceCurrency
+	  ,t.CurrencyCode
+	  ,t.Cheque
+	  ,t.PaymentOrderNo
+	  ,t.DRegisterNo
+	  ,t.ERegisterNo
+	  ,t.LgNo
+	  ,t.Lno
+	  ,t.Description
+	  ,t.Narration
+	  ,t.DateTime
+	  ,t.Status
+	  ,t.TransactionCode
+	  ,t.AccountSign
+	  ,t.DOMBankPost
+	  ,t.CLRPostStatus
+	  ,t.OrgnEno
+	  ,t.OrgnTransactionCode
+	  ,t.OrgnCheque
+	  ,t.OrgnPaymentOrderNo
+	  ,t.OrgnDRegister
+	  ,t.OrgnERegister
+	  ,t.OrgnLgNo
+	  ,t.UserNo
+	  ,t.ContraENo
+	  ,t.ContraLNo
+	  ,t.ContraDateTime
+	  ,t.OtherBank
+	  ,t.DeliverReturn
+	  ,t.ReceiptNo
+	  ,t.OtherBankChq
+	  ,t.CheckTime
+	  ,t.OtherBankAcctNo
+	  ,t.CustomerId
+	  ,t.GChequeNo
+	  ,t.SourceBranchCode
+	  ,t.Rate
+	  ,t.SettlementDate
+	  ,t.Channel
+	  ,t.ReferenceVoucherNo
+	  ,t.ReferenceType
+	  ,t.Active
+	  ,t.CreatedDate
+	  ,t.CreatedUserId
+	  ,t.UpdatedDate
+	  ,t.UpdatedUserId
+	  )
+	  from PFMORM00054 as t where
+	  Convert(char(10),t.DateTime,111) =:datetime
+	  and t.Eno = :eno
+	  and t.Status = :status
+	  and t.SourceBranchCode = :sourceBr
+	  and (t.CLRPostStatus is null or t.CLRPostStatus = '')
+	  and t.Active = true
+  </query>
+
+  <!--//Update Tlf By RegisterNo And SourceBr//-->
+  <query name="PFMDAO00054.UpdateDRegisterNo">
+	  update PFMORM00054 as t set
+	  t.DRegisterNo = :newRegisterNo,
+	  t.UpdatedDate = :updatedDate,
+	  t.UpdatedUserId = :updatedUserId
+	  where t.DRegisterNo = :oldReisterNo
+	  and t.SourceBranchCode = :sourceBr
+	  and t.Active = true
+  </query>
+
+  <!--//Update Tlf For Claring Posting by Eno,AccountNo,Status and Source Branch//-->
+  <query name="PFMDAO00054.UpdateTLFForClearingPosting">
+    update PFMORM00054 as t set
+    t.HomeAmt = :homeamt,
+    t.HomeOAmt = :homeOamt,
+    t.LocalAmt = :localamt,
+    t.LocalOAmt = :localOamt,
+    t.CLRPostStatus = :clrpostStatus,
+    t.DeliverReturn = :deliverReturn,
+    t.Narration = :narration,
+    t.UpdatedDate = :updatedDate,
+    t.UpdatedUserId = :updatedUserId
+    where t.Eno = :eno
+    and t.AccountNo = :accountno
+    and t.Status = :status
+    and t.SourceBranchCode = :sourceBr
+    and t.Active = true
+
+  </query>
+
+
+  <!--//Update Tlf For Concat "C"By RegisterNo And SourceBr//-->
+  <query name="PFMDAO00054.UpdateDRegisterNoC">
+	  update PFMORM00054  t
+	  set
+	  t.DRegisterNo = :modifyRegisterNo,
+	  t.UpdatedDate = :updatedDate,
+	  t.UpdatedUserId = :updatedUserId
+	  where t.DRegisterNo = :registerNo
+	  and t.SourceBranchCode = :sourceBr
+	  and t.Active = true
+  </query>
+
+  <query name="PFMDAO00054.UpdateTlfDeliver">
+	  update PFMORM00054 as t set
+	  t.Amount = :amount,
+	  t.HomeAmount = :homeAmount,
+	  t.HomeAmt = :homeAmount,
+	  t.LocalAmount = :amount,
+	  t.LocalAmt = :amount,
+	  t.OtherBank = :paidBank,
+	  t.OtherBankChq = :otherBankChq,
+	  t.Narration = :narration,
+	  t.UpdatedUserId = :updatedUserId,
+	  t.UpdatedDate = :updatedDate
+	  where t.Eno = :eno
+	  and t.Active = true
+
+  </query>
+
+  <!--//TLFDAO.Select Tlf Information By EntryNo,DateTime,OrgnEno,group No,active branch //-->
+  <query name="TLFDAO.SelectTlfInfoByEnoOrgnEnoDateTime">
+	  select new tlfdto
+	  (
+	  t.Eno,
+	  t.Narration,
+	  t.AccountNo,
+	  t.Amount,
+	  t.Status,
+	  t.DateTime,
+	  t.TransactionCode,
+	  t.OrgnEno,
+	  t.PaymentOrderNo,
+	  t.OtherBank
+	  )
+	  from PFMORM00054 as t
+	  where t.Eno =: eno
+	  and  t.DateTime = :dateTime
+	  and t.SourceBranchCode = :sourceBr
+	  and t.Active = true
+	  and (t.OrgnEno = null or t.OrgnEno = '')
+  </query>
+
+  <query name="TLFDAO.SelectTlfInfoByLGNo">
+    select new tlfdto
+    (
+    t.Eno,
+    t.AccountNo,
+    t.ReceiptNo,
+    t.OtherBank,
+    t.SourceCurrency,
+    t.Amount,
+    t.AccountSign,
+    t.CLRPostStatus
+    )
+    from PFMORM00054 as t
+    where t.LgNo =: lgNo
+    and t.SourceBranchCode = :sourceBr
+    and t.Active = true
+    and (t.OrgnEno = null or t.OrgnEno = '')
+  </query>
+  
+  <query name="CXDAO00006.SelectTLFByENOBranchCodeDate">
+    select new tlfdto
+    (
+    t.Id
+    ,t.Eno
+    ,t.AccountNo
+    ,t.Amount
+    ,t.Acode
+    ,t.HomeAmount
+    ,t.HomeAmt
+    ,t.HomeOAmt
+    ,t.LocalAmount
+    ,t.LocalAmt
+    ,t.LocalOAmt
+    ,t.SourceCurrency
+    ,t.CurrencyCode
+    ,t.Cheque
+    ,t.PaymentOrderNo
+    ,t.DRegisterNo
+    ,t.ERegisterNo
+    ,t.LgNo
+    ,t.Lno
+    ,t.Description
+    ,t.Narration
+    ,t.DateTime
+    ,t.Status
+    ,t.TransactionCode
+    ,t.AccountSign
+    ,t.DOMBankPost
+    ,t.CLRPostStatus
+    ,t.OrgnEno
+    ,t.OrgnTransactionCode
+    ,t.OrgnCheque
+    ,t.OrgnPaymentOrderNo
+    ,t.OrgnDRegister
+    ,t.OrgnERegister
+    ,t.OrgnLgNo
+    ,t.UserNo
+    ,t.ContraENo
+    ,t.ContraLNo
+    ,t.ContraDateTime
+    ,t.OtherBank
+    ,t.DeliverReturn
+    ,t.ReceiptNo
+    ,t.OtherBankChq
+    ,t.CheckTime
+    ,t.OtherBankAcctNo
+    ,t.CustomerId
+    ,t.GChequeNo
+    ,t.SourceBranchCode
+    ,t.Rate
+    ,t.SettlementDate
+    ,t.Channel
+    ,t.ReferenceVoucherNo
+    ,t.ReferenceType
+    ,t.Active
+    ,t.CreatedDate
+    ,t.CreatedUserId
+    ,t.UpdatedDate
+    ,t.UpdatedUserId
+    )
+    from PFMORM00054 as t
+    where t.Eno = :ENO
+    and t.SourceBranchCode = :ActiveBranch
+    and Convert(char(10),t.DateTime,111)= :Date
+    and t.Active=true
+    Order by t.DateTime,t.TS desc
+    <!--and (t.TransactionCode= :trancode || :trancode='')-->
+  </query>
+
+  <query name="CXDAO00006.SelectTLFByENOBranchCodeDateTrancode">
+    select new tlfdto
+    (
+    t.Id
+    ,t.Eno
+    ,t.AccountNo
+    ,t.Amount
+    ,t.Acode
+    ,t.HomeAmount
+    ,t.HomeAmt
+    ,t.HomeOAmt
+    ,t.LocalAmount
+    ,t.LocalAmt
+
+    ,t.LocalOAmt
+    ,t.SourceCurrency
+    ,t.CurrencyCode
+    ,t.Cheque
+    ,t.PaymentOrderNo
+    ,t.DRegisterNo
+    ,t.ERegisterNo
+    ,t.LgNo
+    ,t.Lno
+    ,t.Description
+    ,t.Narration
+    ,t.DateTime
+    ,t.Status
+    ,t.TransactionCode
+    ,t.AccountSign
+    ,t.DOMBankPost
+    ,t.CLRPostStatus
+    ,t.OrgnEno
+    ,t.OrgnTransactionCode
+    ,t.OrgnCheque
+    ,t.OrgnPaymentOrderNo
+    ,t.OrgnDRegister
+    ,t.OrgnERegister
+    ,t.OrgnLgNo
+    ,t.UserNo
+    ,t.ContraENo
+    ,t.ContraLNo
+    ,t.ContraDateTime
+    ,t.OtherBank
+    ,t.DeliverReturn
+    ,t.ReceiptNo
+    ,t.OtherBankChq
+    ,t.CheckTime
+    ,t.OtherBankAcctNo
+    ,t.CustomerId
+    ,t.GChequeNo
+    ,t.SourceBranchCode
+    ,t.Rate
+    ,t.SettlementDate
+    ,t.Channel
+    ,t.ReferenceVoucherNo
+    ,t.ReferenceType
+    ,t.Active
+    ,t.CreatedDate
+    ,t.CreatedUserId
+    ,t.UpdatedDate
+    ,t.UpdatedUserId
+    )
+    from PFMORM00054 as t
+    where t.Eno = :ENO
+    and t.SourceBranchCode = :ActiveBranch
+    and Convert(char(10),t.DateTime,111) = :Date
+    and t.Active=true
+    and t.TransactionCode= :trancode
+    Order by t.DateTime,t.TS desc
+  </query>
+
+  <query name="CXDAO00004.UpdateTLFOrgnENOOrgnTranCodeByENO">
+	  update PFMORM00054 tlf
+	  set
+	  tlf.OrgnEno= :ReversalENO	  
+	  ,tlf.OrgnTransactionCode= :ReversalTranCode
+	  ,tlf.UpdatedUserId= :UpdatedUserId
+	  ,tlf.UpdatedDate= :updatedDate
+	  where tlf.Eno = :ENO
+	  and tlf.AccountNo= :AccountNo 
+	  and tlf.SourceBranchCode= :SourceBranchCode
+	  and tlf.Active = true
+  </query>
+
+  <query name="PFMDAO00054.Delete">
+    update PFMORM00054 tlf
+    set
+    tlf.Active = false,
+    tlf.UpdatedUserId = :updatedUserId,
+    tlf.UpdatedDate = :updatedDate
+    where
+    tlf.Eno = :eno
+    and tlf.SourceBranchCode = :sourceBr
+    and tlf.Active = true
+  </query>
+
+  <!--//TLFDAO.Select Tlf Information By EntryNo , Status and Orgneno//-->
+  <!--<query name="TLFDAO.SelectTlfInfo">
+		select new tlfdto
+		(
+		t.Eno,
+		t.AccountNo,
+		t.Narration,
+		t.SourceCurrency,
+		t.Amount
+		)
+		from PFMORM00054 as t where t.Eno =: entryNo		
+		and t.SourceBranchCode =: sourceBr
+		and t.OrgnEno = null
+
+	</query>-->
+
+  <!--//TLFDAO.Select Tlf Information By EntryNo and Orgneno//-->
+  <query name="TLFDAO.SelectTlfInfo">
+	  select new tlfdto
+	  (
+	  t.Id
+	  ,t.Eno
+	  ,t.AccountNo
+	  ,t.Amount
+	  ,t.Acode
+	  ,t.HomeAmount
+	  ,t.HomeAmt
+	  ,t.HomeOAmt
+	  ,t.LocalAmount
+	  ,t.LocalAmt
+	  ,t.LocalOAmt
+	  ,t.SourceCurrency
+	  ,t.CurrencyCode
+	  ,t.Cheque
+	  ,t.PaymentOrderNo
+	  ,t.DRegisterNo
+	  ,t.ERegisterNo
+	  ,t.LgNo
+	  ,t.Lno
+	  ,t.Description
+	  ,t.Narration
+	  ,t.DateTime
+	  ,t.Status
+	  ,t.TransactionCode
+	  ,t.AccountSign
+	  ,t.DOMBankPost
+	  ,t.CLRPostStatus
+	  ,t.OrgnEno
+	  ,t.OrgnTransactionCode
+	  ,t.OrgnCheque
+	  ,t.OrgnPaymentOrderNo
+	  ,t.OrgnDRegister
+	  ,t.OrgnERegister
+	  ,t.OrgnLgNo
+	  ,t.UserNo
+	  ,t.ContraENo
+	  ,t.ContraLNo
+	  ,t.ContraDateTime
+	  ,t.OtherBank
+	  ,t.DeliverReturn
+	  ,t.ReceiptNo
+	  ,t.OtherBankChq
+	  ,t.CheckTime
+	  ,t.OtherBankAcctNo
+	  ,t.CustomerId
+	  ,t.GChequeNo
+	  ,t.SourceBranchCode
+	  ,t.Rate
+	  ,t.SettlementDate
+	  ,t.Channel
+	  ,t.ReferenceVoucherNo
+	  ,t.ReferenceType
+	  ,t.Active
+	  ,t.CreatedDate
+	  ,t.CreatedUserId
+	  ,t.UpdatedDate
+	  ,t.UpdatedUserId
+	  )
+	  from PFMORM00054 as t where t.Eno =: entryNo
+	  and t.SourceBranchCode =: sourceBr
+	  and t.TransactionCode =: tranCode
+	  and (t.OrgnEno is null or t.OrgnEno = '')
+	  and t.Active = true
+  </query>
+
+  <!--Select By ERegisterNo-->
+  <query name="TLFDAO.SelectTlfInfoByEregisterNoAndSourceBr">
+    select new tlfdto
+    (
+    t.Id
+    ,t.Eno
+    ,t.AccountNo
+    ,t.Amount
+    ,t.Acode
+    ,t.HomeAmount
+    ,t.HomeAmt
+    ,t.HomeOAmt
+    ,t.LocalAmount
+    ,t.LocalAmt
+    ,t.LocalOAmt
+    ,t.SourceCurrency
+    ,t.CurrencyCode
+    ,t.Cheque
+    ,t.PaymentOrderNo
+    ,t.DRegisterNo
+    ,t.ERegisterNo
+    ,t.LgNo
+    ,t.Lno
+    ,t.Description
+    ,t.Narration
+    ,t.DateTime
+    ,t.Status
+    ,t.TransactionCode
+    ,t.AccountSign
+    ,t.DOMBankPost
+    ,t.CLRPostStatus
+    ,t.OrgnEno
+    ,t.OrgnTransactionCode
+    ,t.OrgnCheque
+    ,t.OrgnPaymentOrderNo
+    ,t.OrgnDRegister
+    ,t.OrgnERegister
+    ,t.OrgnLgNo
+    ,t.UserNo
+    ,t.ContraENo
+    ,t.ContraLNo
+    ,t.ContraDateTime
+    ,t.OtherBank
+    ,t.DeliverReturn
+    ,t.ReceiptNo
+    ,t.OtherBankChq
+    ,t.CheckTime
+    ,t.OtherBankAcctNo
+    ,t.CustomerId
+    ,t.GChequeNo
+    ,t.SourceBranchCode
+    ,t.Rate
+    ,t.SettlementDate
+    ,t.Channel
+    ,t.ReferenceVoucherNo
+    ,t.ReferenceType
+    ,t.Active
+    ,t.CreatedDate
+    ,t.CreatedUserId
+    ,t.UpdatedDate
+    ,t.UpdatedUserId
+    )
+    from PFMORM00054 as t where
+    t.ERegisterNo = :eRegisterNo and
+    t.SourceBranchCode = :sourceBr and
+    Convert(char(10),t.DateTime,111)= :Date and
+    t.Active = true
+    order by t.DateTime desc
+  </query>
+
+  <query name="TLFDAO.SelectTlfInfoByDregisterNoAndSourceBr">
+    select new tlfdto
+    (
+    t.Id
+    ,t.Eno
+    ,t.AccountNo
+    ,t.Amount
+    ,t.Acode
+    ,t.HomeAmount
+    ,t.HomeAmt
+    ,t.HomeOAmt
+    ,t.LocalAmount
+    ,t.LocalAmt
+    ,t.LocalOAmt
+    ,t.SourceCurrency
+    ,t.CurrencyCode
+    ,t.Cheque
+    ,t.PaymentOrderNo
+    ,t.DRegisterNo
+    ,t.ERegisterNo
+    ,t.LgNo
+    ,t.Lno
+    ,t.Description
+    ,t.Narration
+    ,t.DateTime
+    ,t.Status
+    ,t.TransactionCode
+    ,t.AccountSign
+    ,t.DOMBankPost
+    ,t.CLRPostStatus
+    ,t.OrgnEno
+    ,t.OrgnTransactionCode
+    ,t.OrgnCheque
+    ,t.OrgnPaymentOrderNo
+    ,t.OrgnDRegister
+    ,t.OrgnERegister
+    ,t.OrgnLgNo
+    ,t.UserNo
+    ,t.ContraENo
+    ,t.ContraLNo
+    ,t.ContraDateTime
+    ,t.OtherBank
+    ,t.DeliverReturn
+    ,t.ReceiptNo
+    ,t.OtherBankChq
+    ,t.CheckTime
+    ,t.OtherBankAcctNo
+    ,t.CustomerId
+    ,t.GChequeNo
+    ,t.SourceBranchCode
+    ,t.Rate
+    ,t.SettlementDate
+    ,t.Channel
+    ,t.ReferenceVoucherNo
+    ,t.ReferenceType
+    ,t.Active
+    ,t.CreatedDate
+    ,t.CreatedUserId
+    ,t.UpdatedDate
+    ,t.UpdatedUserId
+    )
+    from PFMORM00054 as t where
+    t.DRegisterNo = :dRegisterNo and
+    t.SourceBranchCode = :sourceBr and
+    Convert(char(10),t.DateTime,111)= :Date and
+    t.Active = true
+  </query>
+
+	<query name="TLFDAO.SelectTLFInfoForReversalByEntryNo">
+    select new tlfdto
+    (
+    t.Eno,
+    t.AccountNo,
+    t.Amount,
+    t.Status,
+    t.TransactionCode,
+    t.Narration,
+    t.DateTime,
+    t.Acode,
+    t.Cheque,
+    t.SourceCurrency,
+    t.Rate,
+    t.SettlementDate,
+    t.TS,
+    t.AccountSign,
+    t.HomeAmount,
+    t.HomeAmt,
+    t.HomeOAmt,
+    t.LocalAmount,
+    t.LocalAmt,
+    t.LocalOAmt,
+    t.Description,
+    t.PaymentOrderNo)
+    from PFMORM00054 as t
+    where t.Eno =: eno
+    and t.SourceBranchCode = :sourcebr
+    and t.Active = true
+    and (t.OrgnEno = null or t.OrgnEno = '')
+    and t.TransactionCode like :tranCode
+    order by t.Id desc
+  </query>
+
+	<query name="PFMDAO00054.UpdateTLFForSavingInterestWithdrawReversal">
+		update PFMORM00054 as t set
+		t.OrgnEno = :orgneno,
+		t.OrgnTransactionCode = :orgntrancode,
+		t.UpdatedDate = :updatedDate,
+		t.UpdatedUserId = :updatedUserId
+		where t.Eno = :eno
+		and t.TransactionCode = :transactioncode
+		and t.SourceCurrency = :sourcecurrency
+		and t.SourceBranchCode = :sourcebr
+		and t.Active = true
+		and t.TS = :ts
+	</query>
+
+  <!-- PO Edit-->
+  <query name="PFMDAO00054.UpdateTlfByOrgnEno">
+    update PFMORM00054 as t set
+    t.OrgnEno = :orgnEno,
+    t.OrgnTransactionCode = :orgnTranCode,
+    t.UpdatedDate = :updatedDate,
+    t.UpdatedUserId = :updatedUserId
+    where t.PaymentOrderNo = :poNo
+    and (t.OrgnEno = null or t.OrgnEno = '')
+    and t.SourceBranchCode = :sourceBranch
+    and t.Active = true
+  </query>
+
+  <query name="PFMDAO00054.SelectTlfDataByPONo">
+	  select new tlfdto
+	  (
+	  t.PaymentOrderNo,
+	  t.Eno,
+	  t.TransactionCode,
+	  t.Rate,
+	  t.SettlementDate,
+	  t.Channel,
+	  t.SourceCurrency
+	  )
+	  from PFMORM00054 as t
+	  where t.PaymentOrderNo = :poNo
+	  and t.SourceBranchCode = :sourceBranch
+	  and (t.OrgnEno = null or t.OrgnEno = '')
+	  and (t.OrgnTransactionCode = null or t.OrgnTransactionCode = '')
+	  and t.Active = true
+
+  </query>
+
+	<!-- TLF DRegister Update-->
+	<query name="PFMDAO00054.UpdateTlfByRefVno">
+		update PFMORM00054 as t set
+		t.DRegisterNo = :registerNo,
+		t.UpdatedDate = :updatedDate,
+		t.UpdatedUserId = :updatedUserId
+		where t.ReferenceVoucherNo=:refVno
+		and t.ReferenceType=:refType
+		and t.SourceBranchCode = :sourceBranch
+		and t.Active = true
+	</query>
+
+	<!-- PO Refund-->
+	<query name="PFMDAO00054.UpdateTlfByPONo">
+		update PFMORM00054 as t set
+		t.PaymentOrderNo = null,
+		t.UpdatedDate = :updatedDate,
+		t.UpdatedUserId = :updatedUserId
+		where t.PaymentOrderNo = :poNo
+		and (substring(t.TransactionCode,1,3) = :transactionCode)
+		and t.OrgnEno = :orgnEno
+		and t.SourceBranchCode = :sourceBranch
+		and t.Active = true
+	</query>
+
+	<query name="TLFDAO.SelectTlfForPORefundReversal">
+		select new tlfdto
+		(
+		t.Eno
+		,t.AccountNo
+		,t.Amount
+		,t.Acode
+		,t.HomeAmount
+		,t.HomeAmt
+		,t.HomeOAmt
+		,t.LocalAmount
+		,t.LocalAmt
+		,t.SourceCurrency
+		,t.CurrencyCode
+		,t.Cheque
+		,t.PaymentOrderNo
+		,t.DRegisterNo
+		,t.ERegisterNo
+		,t.LgNo
+		,t.Lno
+		,t.Description
+		,t.Narration
+		,t.DateTime
+		,t.Status
+		,t.TransactionCode
+		,t.AccountSign
+		,t.DOMBankPost
+		,t.CLRPostStatus
+		,t.OrgnEno
+		,t.OrgnTransactionCode
+		,t.OrgnCheque
+		,t.OrgnPaymentOrderNo
+		,t.OrgnDRegister
+		,t.OrgnERegister
+		,t.OrgnLgNo
+		,t.UserNo
+		,t.ContraENo
+		,t.ContraLNo
+		,t.ContraDateTime
+		,t.OtherBank
+		,t.DeliverReturn
+		,t.ReceiptNo
+		,t.OtherBankChq
+		,t.CheckTime
+		,t.OtherBankAcctNo
+		,t.CustomerId
+		,t.GChequeNo
+		,t.SourceBranchCode
+		,t.Rate
+		,t.SettlementDate
+		,t.Channel
+		,t.ReferenceVoucherNo
+		,t.ReferenceType
+		,t.Active
+		,t.CreatedDate
+		,t.CreatedUserId
+		,t.UpdatedDate
+		,t.UpdatedUserId
+		)
+		from PFMORM00054 as t where
+		t.PaymentOrderNo = :poNo
+		and (substring(t.TransactionCode,1,3) = :transactionCode)
+		and t.SourceBranchCode = :sourceBranch
+		and (t.OrgnEno is null or t.OrgnEno = '')
+		and (t.OrgnTransactionCode is null or t.OrgnTransactionCode = '')
+		and t.Active = true
+	</query>
+
+  <query name="TLFDAO.SelectTlfForPORegisterByTransferReverse">
+    select new tlfdto
+    (
+    t.Eno
+    ,t.AccountNo
+    ,t.Amount
+    ,t.Acode
+    ,t.HomeAmount
+    ,t.HomeAmt
+    ,t.HomeOAmt
+    ,t.LocalAmount
+    ,t.LocalAmt
+    ,t.SourceCurrency
+    ,t.CurrencyCode
+    ,t.Cheque
+    ,t.PaymentOrderNo
+    ,t.DRegisterNo
+    ,t.ERegisterNo
+    ,t.LgNo
+    ,t.Lno
+    ,t.Description
+    ,t.Narration
+    ,t.DateTime
+    ,t.Status
+    ,t.TransactionCode
+    ,t.AccountSign
+    ,t.DOMBankPost
+    ,t.CLRPostStatus
+    ,t.OrgnEno
+    ,t.OrgnTransactionCode
+    ,t.OrgnCheque
+    ,t.OrgnPaymentOrderNo
+    ,t.OrgnDRegister
+    ,t.OrgnERegister
+    ,t.OrgnLgNo
+    ,t.UserNo
+    ,t.ContraENo
+    ,t.ContraLNo
+    ,t.ContraDateTime
+    ,t.OtherBank
+    ,t.DeliverReturn
+    ,t.ReceiptNo
+    ,t.OtherBankChq
+    ,t.CheckTime
+    ,t.OtherBankAcctNo
+    ,t.CustomerId
+    ,t.GChequeNo
+    ,t.SourceBranchCode
+    ,t.Rate
+    ,t.SettlementDate
+    ,t.Channel
+    ,t.ReferenceVoucherNo
+    ,t.ReferenceType
+    ,t.Active
+    ,t.CreatedDate
+    ,t.CreatedUserId
+    ,t.UpdatedDate
+    ,t.UpdatedUserId
+    )
+    from PFMORM00054 as t where
+    t.PaymentOrderNo = :poNo
+    and (t.TransactionCode = 'POIDRTR' or t.TransactionCode = 'POICRTR')
+    and t.SourceBranchCode = :sourceBranch
+    and (t.OrgnEno is null or t.OrgnEno = '')
+    and (t.OrgnTransactionCode is null or t.OrgnTransactionCode = '')
+    and t.Active = true
+  </query>
+
+	<query name="SelectNarrationByEno.DenoEdit">
+		select new tlfdto
+		(
+		t.Narration,
+		t.Active
+		)
+		from PFMORM00054 as t
+		where t.Eno = :eno
+		and t.Active = true
+	</query>
+
+  <!--Used in Cash Payment Denomination Entry.(HWH)-->
+  <query name="TLFDAO.SelectTLFDataByEntryNo">
+    select new tlfdto
+    (
+    t.Eno,
+    t.AccountNo,
+    t.Narration,
+    t.SourceCurrency,
+    t.PaymentOrderNo,
+    t.Amount,
+    t.AccountSign,
+    t.CLRPostStatus,
+    t.TransactionCode
+   
+    )
+    from PFMORM00054 as t where
+    t.Eno=:eno
+    and Convert(char(10),t.DateTime,111) =Convert(char(10),:datetime,111)
+    and t.Status Like :status
+    and t.SourceBranchCode = :sourceBr
+    and (t.OrgnEno is null or t.OrgnEno = '')
+    and t.Active = true
+  </query>
+
+	<!--Used in Online Withdraw Entry.(ASDA)-->
+	<query name="TLFDAO.SelectTlfInfoForWithdrawEntry">
+		select new tlfdto
+		(
+		t.Id
+		,t.Eno
+		,t.AccountNo
+		,t.Amount
+		,t.Acode
+		,t.HomeAmount
+		,t.HomeAmt
+		,t.HomeOAmt
+		,t.LocalAmount
+		,t.LocalAmt
+		,t.LocalOAmt
+		,t.SourceCurrency
+		,t.CurrencyCode
+		,t.Cheque
+		,t.PaymentOrderNo
+		,t.DRegisterNo
+		,t.ERegisterNo
+		,t.LgNo
+		,t.Lno
+		,t.Description
+		,t.Narration
+		,t.DateTime
+		,t.Status
+		,t.TransactionCode
+		,t.AccountSign
+		,t.DOMBankPost
+		,t.CLRPostStatus
+		,t.OrgnEno
+		,t.OrgnTransactionCode
+		,t.OrgnCheque
+		,t.OrgnPaymentOrderNo
+		,t.OrgnDRegister
+		,t.OrgnERegister
+		,t.OrgnLgNo
+		,t.UserNo
+		,t.ContraENo
+		,t.ContraLNo
+		,t.ContraDateTime
+		,t.OtherBank
+		,t.DeliverReturn
+		,t.ReceiptNo
+		,t.OtherBankChq
+		,t.CheckTime
+		,t.OtherBankAcctNo
+		,t.CustomerId
+		,t.GChequeNo
+		,t.SourceBranchCode
+		,t.Rate
+		,t.SettlementDate
+		,t.Channel
+		,t.ReferenceVoucherNo
+		,t.ReferenceType
+		,t.Active
+		,t.CreatedDate
+		,t.CreatedUserId
+		,t.UpdatedDate
+		,t.UpdatedUserId
+		)
+		from PFMORM00054 as t where t.Eno =: entryNo		
+		and Convert(char(10),t.SettlementDate,111) = :settlementDate		
+		and t.Active = true
+	</query>
+	
+	<query name="TLFDAO.UpdateTlfHomeAmt">
+		update PFMORM00054 as t set
+		 t.HomeAmount = :amount
+		,t.HomeAmt = :amount
+		where t.Id = :id		
+		and t.Active = true
+	</query>
+
+	<query name="TLFDAO.UpdateTlfForNPLRelease">
+		update PFMORM00054 as t set
+		t.Lno = :loanNo,
+		t.Eno = :eno,
+		t.UpdatedDate = :updatedDate,
+		t.UpdatedUserId = :updatedUserId
+		where t.SourceBranchCode = :sourceBr and t.Active = true
+	</query>
+
+	<query name="TLFDAO.UpdateTlfByLnoAndRepayNo">
+		update PFMORM00054 as t set
+		t.LgNo = :repayNo,
+		t.Lno = :loanNo,
+		t.UpdatedDate = :updatedDate,
+		t.UpdatedUserId = :updatedUserId
+		where t.Eno = :eno and t.SourceBranchCode = :sourceBr and t.Active = true
+	</query>
+
+  <!--//PFMDAO00054.UpdateCloseDateForLMT9900//-->
+  <query name="PFMDAO00054.UpdateCloseDateForLMT9900">
+    update LOMORM00011 as lmt set
+    lmt.CloseDate = :closeDate
+    where lmt.LoanNo = :loanNo
+    and lmt.Active = true
+  </query>
+
+  <!--//PFMDAO00054.UpdateCloseDateForLoan//-->
+  <query name="PFMDAO00054.UpdateCloseDateForLoan">
+    update TLMORM00018 as l set
+    l.CloseDate = :closeDate
+    where l.Lno = :loanNo
+    and l.Active = true
+  </query>
+
+  <!--//PFMDAO00054.UpdateCloseDateForLI//-->
+  <query name="PFMDAO00054.UpdateCloseDateForLI">
+    update MNMORM00017 as li set
+    li.CloseDate = :closeDate
+    where li.LNo = :loanNo
+    and li.Active = true
+  </query>
+
+  <!--//PFMDAO00054.UpdateCloseDateForLI//-->
+  <query name="PFMDAO00054.UpdateCloseDateForOI">
+    update MNMORM00008 as li set
+    li.CloseDate = :closeDate
+    where li.LNo = :loanNo
+    and li.Active = true
+  </query>
+  
+  <!--//PFMDAO00054.UpdateCloseDateForLand_Bld//-->
+  <query name="PFMDAO00054.UpdateCloseDateForLand_Bld">
+    update LOMORM00015 as lb set
+    lb.CloseDate = :closeDate
+    where lb.LNo = :loanNo
+    and lb.Active = true
+  </query>
+
+  <!--//PFMDAO00054.UpdateCloseDateForPer_Guan//-->
+  <query name="PFMDAO00054.UpdateCloseDateForPer_Guan">
+    update PFMORM00039 as pg set
+    pg.ClosedDate = :closeDate
+    where pg.LineNo = :loanNo
+    and pg.Active = true
+  </query>
+
+  <!--//PFMDAO00054.UpdateCloseDateForPledge//-->
+  <query name="PFMDAO00054.UpdateCloseDateForPledge">
+    update LOMORM00016 as pl set
+    pl.CloseDate = :closeDate
+    where pl.LNo = :loanNo
+    and pl.Active = true
+  </query>
+
+  <!--//PFMDAO00054.UpdateCloseDateForHypo//-->
+  <query name="PFMDAO00054.UpdateCloseDateForHypo">
+    update LOMORM00017 as hp set
+    hp.CloseDate = :closeDate
+    where hp.LNo = :loanNo
+    and hp.Active = true
+  </query>
+
+  <!--//PFMDAO00054.UpdateCloseDateForGJKind//-->
+  <query name="PFMDAO00054.UpdateCloseDateForGJKind">
+    update LOMORM00018 as gjk set
+    gjk.CloseDate = :closeDate
+    where gjk.LNo = :loanNo
+    and gjk.Active = true
+  </query>
+
+  <!--//PFMDAO00054.UpdateCloseDateForGJType//-->
+  <query name="PFMDAO00054.UpdateCloseDateForGJType">
+    update LOMORM00019 as gjt set
+    gjt.CloseDate = :closeDate
+    where gjt.LNo = :loanNo
+    and gjt.Active = true
+  </query>
+</hibernate-mapping>

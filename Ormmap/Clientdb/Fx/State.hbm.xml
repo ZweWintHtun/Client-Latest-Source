@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--StateCode-->
+<!-- 
+// <copyright file="PFMORM00013.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>Hay Mar</CreatedUser>
+// <CreatedDate>07/23/2013</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version></Version>
+-->
+<hibernate-mapping assembly="Ace.Windows.Admin.DataModel" namespace="Ace.Windows.Admin.DataModel" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Windows.Admin.DataModel.StateDTO, Ace.Windows.Admin.DataModel" rename="stateCodedto"/>
+
+  <class name="State" table="[StateCode]" >
+    
+    <id name="StateCode">
+      <column name="StateCode" sql-type="varchar" not-null="true" />
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+
+    <property name="Description">
+      <column name="Desp" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="UserNo">
+      <column name="USERNO" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Date_Time">
+      <column name="DATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="EditDate_Time">
+      <column name="EDITDATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="EditUser">
+      <column name="EDITUSER" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="EditType">
+      <column name="EDITTYPE" sql-type="numeric" not-null="false" />  
+    </property>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  <!--//StateCode.CheckExist//-->
+  <query name="StateCodeDAO.CheckExist">
+    select new stateCodedto(
+    s.StateCode,
+    s.Description,
+    s.UserNo,
+    s.Date_Time,
+    s.EditDate_Time,
+    s.EditUser,
+    s.EditType )
+    from State as s
+    where ( s.StateCode =: stateCode or s.Description =: desp  )
+    and  s.Active = true
+  </query>
+
+  <!--//StateCodeDAO.SelectAll//-->
+  <query name="StateCodeDAO.SelectAll">
+    select new stateCodedto(
+    s.StateCode,
+    s.Description,
+    s.UserNo,
+    s.Date_Time,
+    s.EditDate_Time,
+    s.EditUser,
+    s.EditType,
+    s.Active,
+    s.TS,
+    s.CreatedDate,
+    s.CreatedUserId,
+    s.UpdatedDate,
+    s.UpdatedUserId
+    )
+    from State as s
+    where s.Active = true
+  </query>
+
+  <!--//StateCodeDAO.SelectByStateCode//-->
+  <query name="StateCodeDAO.SelectByStateCode">
+    select new stateCodedto(
+    s.StateCode,
+    s.Description,
+    s.UserNo,
+    s.Date_Time,
+    s.EditDate_Time,
+    s.EditUser,
+    s.EditType,
+    s.Active,
+    s.TS,
+    s.CreatedDate,
+    s.CreatedUserId,
+    s.UpdatedDate,
+    s.UpdatedUserId
+    )
+    from State as s
+    where s.StateCode = :stateCode
+    and s.Active = true
+  </query>
+  
+</hibernate-mapping>

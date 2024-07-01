@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Sam.Dmd" namespace="Ace.Cbs.Sam.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+	<import class="Ace.Cbs.Sam.Dmd.SAMDTO00053, Ace.Cbs.Sam.Dmd" rename="NationalityCodedto"/>
+
+	<class name="SAMORM00053" table="[NationalityCode]" >
+
+		<id name="Nationality_Code">
+			<column name="NationalityCode" sql-type="varchar" not-null="true" />
+		</id>
+
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="true"/>
+		</version>
+
+		<property name="Description">
+			<column name="Desp" sql-type="nvarchar" not-null="true" />
+		</property>
+		<property name="UserNo">
+			<column name="USERNO" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="Date_Time">
+			<column name="DATE_TIME" sql-type="datetime" not-null="false" />
+		</property>
+		<property name="EditDate_Time">
+			<column name="EDITDATE_TIME" sql-type="datetime" not-null="false" />
+		</property>
+		<property name="EditUser">
+			<column name="EDITUSER" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="EditType">
+			<column name="EDITTYPE" sql-type="numeric" not-null="false" />
+		</property>
+		<property name="Defaults">
+			<column name="DEFAULTS" sql-type="bit" not-null="false" />
+		</property>
+
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+
+	</class>
+
+	<!--//NationalityCodeDAO.CheckExist//-->
+	<query name="NationalityCodeDAO.CheckExist">
+		select new NationalityCodedto( n.Nationality_Code,n.Description,n.UserNo,n.Date_Time,n.EditDate_Time,n.EditUser,n.EditType,n.Defaults )
+		from SAMORM00053 as n where ( n.Nationality_Code =: nationalityCode or n.Description =: desp ) and  n.Active = true
+	</query>
+
+  <query name="NationalityCodeDAO.CheckExist2">
+    select new NationalityCodedto(
+    n.Nationality_Code,
+    n.Description,
+    n.UserNo,
+    n.Date_Time,
+    n.EditDate_Time,
+    n.EditUser,
+    n.EditType,
+    n.Defaults,
+    n.Active,
+    n.TS,
+    n.CreatedDate,
+    n.CreatedUserId,
+    n.UpdatedDate,
+    n.UpdatedUserId
+    )
+    from SAMORM00053 as n where ( n.Nationality_Code =: nationalityCode or n.Description =: desp )
+  </query>
+
+	<!--//NationalityCodeDAO.SelectAll//-->
+	<query name="NationalityCodeDAO.SelectAll">
+		select new NationalityCodedto(
+		n.Nationality_Code,
+		n.Description,
+		n.UserNo,
+		n.Date_Time,
+		n.EditDate_Time,
+		n.EditUser,
+		n.EditType,
+		n.Defaults,
+		n.Active,
+		n.TS,
+		n.CreatedDate,
+		n.CreatedUserId,
+		n.UpdatedDate,
+		n.UpdatedUserId
+		)
+		from SAMORM00053 as n
+		where n.Active = true
+	</query>
+
+	<!--//NationalityCodeDAO.SelectByOccupationCode//-->
+	<query name="NationalityCodeDAO.SelectByNationalityCode">
+		select new NationalityCodedto(
+		n.Nationality_Code,
+		n.Description,
+		n.UserNo,
+		n.Date_Time,
+		n.EditDate_Time,
+		n.EditUser,
+		n.EditType,
+		n.Defaults,
+		n.Active,
+		n.TS,
+		n.CreatedDate,
+		n.CreatedUserId,
+		n.UpdatedDate,
+		n.UpdatedUserId
+		)
+		from SAMORM00053 as n
+		where n.Nationality_Code = :nationalityCode
+		and n.Active = true
+	</query>
+
+  <!--//SAMORM00053.Client.SelectByNationalityCode//-->
+  <query name="SAMORM00053.Client.SelectByNationalityCode">
+    select new NationalityCodedto(
+    n.Nationality_Code,
+    n.Description,
+    n.UserNo,
+    n.Date_Time,
+    n.EditDate_Time,
+    n.EditUser,
+    n.EditType,
+    n.Defaults,
+    n.Active,
+    n.TS,
+    n.CreatedDate,
+    n.CreatedUserId,
+    n.UpdatedDate,
+    n.UpdatedUserId
+    )
+    from SAMORM00053 as n
+    where n.Nationality_Code = :nationalityCode
+    and n.Active = true
+  </query>
+  
+  
+</hibernate-mapping>

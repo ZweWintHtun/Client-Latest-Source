@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8E57EAE3-7397-490E-B276-123DAC52B728}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ace.Cbs.Loan.Ctr</RootNamespace>
+    <AssemblyName>Ace.Cbs.Loan.Ctr</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ace.Windows.Admin.DataModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Ace.Windows.Admin.DataModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.CXClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.CXClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Ix.Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\CBS_FDB_Version 1.1\Output\Ace.Windows.Ix.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Ix.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Ix.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dao\ILOMDAO00101.cs" />
+    <Compile Include="Dao\ILOMDAO00001.cs" />
+    <Compile Include="Dao\ILOMDAO00002.cs" />
+    <Compile Include="Dao\ILOMDAO00003.cs" />
+    <Compile Include="Dao\ILOMDAO00004.cs" />
+    <Compile Include="Dao\ILOMDAO00005.cs" />
+    <Compile Include="Dao\ILOMDAO00006.cs" />
+    <Compile Include="Dao\ILOMDAO00007.cs" />
+    <Compile Include="Dao\ILOMDAO00008.cs" />
+    <Compile Include="Dao\ILOMDAO00009.cs" />
+    <Compile Include="Dao\ILOMDAO00010.cs" />
+    <Compile Include="Dao\ILOMDAO00011.cs" />
+    <Compile Include="Dao\ILOMDAO00034.cs" />
+    <Compile Include="Dao\ILOMDAO00035.cs" />
+    <Compile Include="Dao\ILOMDAO00042.cs" />
+    <Compile Include="Dao\ILOMDAO00415.cs" />
+    <Compile Include="Dao\ILOMDAO00427.cs" />
+    <Compile Include="Dao\ILOMDAO00044.cs" />
+    <Compile Include="Dao\ILOMDAO00047.cs" />
+    <Compile Include="Dao\ILOMDAO00051.cs" />
+    <Compile Include="Dao\ILOMDAO00057.cs" />
+    <Compile Include="Dao\ILOMDAO00059.cs" />
+    <Compile Include="Dao\ILOMDAO00063.cs" />
+    <Compile Include="Dao\ILOMDAO00064.cs" />
+    <Compile Include="Dao\ILOMDAO00068.cs" />
+    <Compile Include="Dao\ILOMDAO00069.cs" />
+    <Compile Include="Dao\ILOMDAO00070.cs" />
+    <Compile Include="Dao\ILOMDAO00071.cs" />
+    <Compile Include="Dao\ILOMDAO00072.cs" />
+    <Compile Include="Dao\ILOMDAO00073.cs" />
+    <Compile Include="Dao\ILOMDAO00074.cs" />
+    <Compile Include="Dao\ILOMDAO00075.cs" />
+    <Compile Include="Dao\ILOMDAO00076.cs" />
+    <Compile Include="Dao\ILOMDAO00077.cs" />
+    <Compile Include="Dao\ILOMDAO00078.cs" />
+    <Compile Include="Dao\ILOMDAO00079.cs" />
+    <Compile Include="Dao\ILOMDAO00080.cs" />
+    <Compile Include="Dao\ILOMDAO00085.cs" />
+    <Compile Include="Dao\ILOMDAO00086.cs" />
+    <Compile Include="Dao\ILOMDAO00093.cs" />
+    <Compile Include="Dao\ILOMDAO00094.cs" />
+    <Compile Include="Dao\ILOMDAO00096.cs" />
+    <Compile Include="Dao\ILOMDAO00099.cs" />
+    <Compile Include="Dao\ILOMDAO00102.cs" />
+    <Compile Include="Dao\ILOMDAO00300.cs" />
+    <Compile Include="Dao\ILOMDAO00302.cs" />
+    <Compile Include="Dao\ILOMDAO00303.cs" />
+    <Compile Include="Dao\ILOMDAO00305.cs" />
+    <Compile Include="Dao\ILOMDAO00307.cs" />
+    <Compile Include="Dao\ILOMDAO00309.cs" />
+    <Compile Include="Dao\ILOMDAO00311.cs" />
+    <Compile Include="Dao\ILOMDAO00312.cs" />
+    <Compile Include="Dao\ILOMDAO00313.cs" />
+    <Compile Include="Dao\ILOMDAO00314.cs" />
+    <Compile Include="Dao\ILOMDAO00316.cs" />
+    <Compile Include="Dao\ILOMDAO00401.cs" />
+    <Compile Include="Dao\ILOMDAO00402.cs" />
+    <Compile Include="Dao\ILOMDAO00403.cs" />
+    <Compile Include="Dao\ILOMDAO00404.cs" />
+    <Compile Include="Dao\ILOMDAO00405.cs" />
+    <Compile Include="Dao\ILOMDAO00406.cs" />
+    <Compile Include="Dao\ILOMDAO00435.cs" />
+    <Compile Include="Dao\ILOMDAO00444.cs" />
+    <Compile Include="Ptr\ILOMCTL00030.cs" />
+    <Compile Include="Dao\ILOMDAO00012.cs" />
+    <Compile Include="Dao\ILOMDAO00013.cs" />
+    <Compile Include="Dao\ILOMDAO00015.cs" />
+    <Compile Include="Dao\ILOMDAO00016.cs" />
+    <Compile Include="Dao\ILOMDAO00017.cs" />
+    <Compile Include="Dao\ILOMDAO00018.cs" />
+    <Compile Include="Dao\ILOMDAO00019.cs" />
+    <Compile Include="Dao\ILOMDAO00022.cs" />
+    <Compile Include="Dao\ILOMDAO00023.cs" />
+    <Compile Include="Ptr\ILOMCTL00003.cs" />
+    <Compile Include="Ptr\ILOMCTL00004.cs" />
+    <Compile Include="Ptr\ILOMCTL00005.cs" />
+    <Compile Include="Ptr\ILOMCTL00007.cs" />
+    <Compile Include="Ptr\ILOMCTL00008.cs" />
+    <Compile Include="Ptr\ILOMCTL00010.cs" />
+    <Compile Include="Ptr\ILOMCTL00011.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ptr\ILOMCTL00001.cs" />
+    <Compile Include="Ptr\ILOMCTL00002.cs" />
+    <Compile Include="Ptr\ILOMCTL00006.cs" />
+    <Compile Include="Ptr\ILOMCTL00009.cs" />
+    <Compile Include="Ptr\ILOMCTL00012.cs" />
+    <Compile Include="Ptr\ILOMCTL00013.cs" />
+    <Compile Include="Ptr\ILOMCTL00014.cs" />
+    <Compile Include="Ptr\ILOMCTL00015.cs" />
+    <Compile Include="Ptr\ILOMCTL00025.cs" />
+    <Compile Include="Ptr\ILOMCTL00016.cs" />
+    <Compile Include="Ptr\ILOMCTL00020.cs" />
+    <Compile Include="Ptr\ILOMCTL00021.cs" />
+    <Compile Include="Ptr\ILOMCTL00023.cs" />
+    <Compile Include="Ptr\ILOMCTL00024.cs" />
+    <Compile Include="Ptr\ILOMCTL00027.cs" />
+    <Compile Include="Ptr\ILOMCTL00028.cs" />
+    <Compile Include="Ptr\ILOMCTL00029.cs" />
+    <Compile Include="Ptr\ILOMCTL00031.cs" />
+    <Compile Include="Ptr\ILOMCTL00032.cs" />
+    <Compile Include="Ptr\ILOMCTL00034.cs" />
+    <Compile Include="Ptr\ILOMCTL00035.cs" />
+    <Compile Include="Ptr\ILOMCTL00040.cs" />
+    <Compile Include="Ptr\ILOMCTL00042.cs" />
+    <Compile Include="Ptr\ILOMCTL00044.cs" />
+    <Compile Include="Ptr\ILOMCTL00045.cs" />
+    <Compile Include="Ptr\ILOMCTL00047.cs" />
+    <Compile Include="Ptr\ILOMCTL00049.cs" />
+    <Compile Include="Ptr\ILOMCTL00051.cs" />
+    <Compile Include="Ptr\ILOMCTL00054.cs" />
+    <Compile Include="Ptr\ILOMCTL00057.cs" />
+    <Compile Include="Ptr\ILOMCTL00059.cs" />
+    <Compile Include="Ptr\ILOMCTL00061.cs" />
+    <Compile Include="Ptr\ILOMCTL00063.cs" />
+    <Compile Include="Ptr\ILOMCTL00065.cs" />
+    <Compile Include="Ptr\ILOMCTL00066.cs" />
+    <Compile Include="Ptr\ILOMCTL00068.cs" />
+    <Compile Include="Ptr\ILOMCTL00069.cs" />
+    <Compile Include="Ptr\ILOMCTL00070.cs" />
+    <Compile Include="Ptr\ILOMCTL00071.cs" />
+    <Compile Include="Ptr\ILOMCTL00072.cs" />
+    <Compile Include="Ptr\ILOMCTL00073.cs" />
+    <Compile Include="Ptr\ILOMCTL00074.cs" />
+    <Compile Include="Ptr\ILOMCTL00075.cs" />
+    <Compile Include="Ptr\ILOMCTL00076.cs" />
+    <Compile Include="Ptr\ILOMCTL00077.cs" />
+    <Compile Include="Ptr\ILOMCTL00078.cs" />
+    <Compile Include="Ptr\ILOMCTL00080.cs" />
+    <Compile Include="Ptr\ILOMCTL00081.cs" />
+    <Compile Include="Ptr\ILOMCTL00086.cs" />
+    <Compile Include="Ptr\ILOMCTL00087.cs" />
+    <Compile Include="Ptr\ILOMCTL00088.cs" />
+    <Compile Include="Ptr\ILOMCTL00089.cs" />
+    <Compile Include="Ptr\ILOMCTL00090.cs" />
+    <Compile Include="Ptr\ILOMCTL00091.cs" />
+    <Compile Include="Ptr\ILOMCTL00092.cs" />
+    <Compile Include="Ptr\ILOMCTL00093.cs" />
+    <Compile Include="Ptr\ILOMCTL00096.cs" />
+    <Compile Include="Ptr\ILOMCTL00100.cs" />
+    <Compile Include="Ptr\ILOMCTL00102.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ptr\ILOMCTL00104.cs" />
+    <Compile Include="Ptr\ILOMCTL00200.cs" />
+    <Compile Include="Ptr\ILOMCTL00201.cs" />
+    <Compile Include="Ptr\ILOMCTL00202.cs" />
+    <Compile Include="Ptr\ILOMCTL00203.cs" />
+    <Compile Include="Ptr\ILOMCTL00204.cs" />
+    <Compile Include="Ptr\ILOMCTL00205.cs" />
+    <Compile Include="Ptr\ILOMCTL00206.cs" />
+    <Compile Include="Ptr\ILOMCTL00207.cs" />
+    <Compile Include="Ptr\ILOMCTL00208.cs" />
+    <Compile Include="Ptr\ILOMCTL00209.cs" />
+    <Compile Include="Ptr\ILOMCTL00210.cs" />
+    <Compile Include="Ptr\ILOMCTL00211.cs" />
+    <Compile Include="Ptr\ILOMCTL00212.cs" />
+    <Compile Include="Ptr\ILOMCTL00213.cs" />
+    <Compile Include="Ptr\ILOMCTL00214.cs" />
+    <Compile Include="Ptr\ILOMCTL00215.cs" />
+    <Compile Include="Ptr\ILOMCTL00216.cs" />
+    <Compile Include="Ptr\ILOMCTL00217.cs" />
+    <Compile Include="Ptr\ILOMCTL00218.cs" />
+    <Compile Include="Ptr\ILOMCTL00219.cs" />
+    <Compile Include="Ptr\ILOMCTL00220.cs" />
+    <Compile Include="Ptr\ILOMCTL00221.cs" />
+    <Compile Include="Ptr\ILOMCTL00222.cs" />
+    <Compile Include="Ptr\ILOMCTL00223.cs" />
+    <Compile Include="Ptr\ILOMCTL00224.cs" />
+    <Compile Include="Ptr\ILOMCTL00225.cs" />
+    <Compile Include="Ptr\ILOMCTL00227.cs" />
+    <Compile Include="Ptr\ILOMCTL00228.cs" />
+    <Compile Include="Ptr\ILOMCTL00229.cs" />
+    <Compile Include="Ptr\ILOMCTL00230.cs" />
+    <Compile Include="Ptr\ILOMCTL00231.cs" />
+    <Compile Include="Ptr\ILOMCTL00232.cs" />
+    <Compile Include="Ptr\ILOMCTL00233.cs" />
+    <Compile Include="Ptr\ILOMCTL00234.cs" />
+    <Compile Include="Ptr\ILOMCTL00235.cs" />
+    <Compile Include="Ptr\ILOMCTL00236.cs" />
+    <Compile Include="Ptr\ILOMCTL00237.cs" />
+    <Compile Include="Ptr\ILOMCTL00238.cs" />
+    <Compile Include="Ptr\ILOMCTL00300.cs" />
+    <Compile Include="Ptr\ILOMCTL00301.cs" />
+    <Compile Include="Ptr\ILOMCTL00303.cs" />
+    <Compile Include="Ptr\ILOMCTL00305.cs" />
+    <Compile Include="Ptr\ILOMCTL00307.cs" />
+    <Compile Include="Ptr\ILOMCTL00309.cs" />
+    <Compile Include="Ptr\ILOMCTL00311.cs" />
+    <Compile Include="Ptr\ILOMCTL00312.cs" />
+    <Compile Include="Ptr\ILOMCTL00313.cs" />
+    <Compile Include="Ptr\ILOMCTL00314.cs" />
+    <Compile Include="Ptr\ILOMCTL00316.cs" />
+    <Compile Include="Ptr\ILOMCTL00318.cs" />
+    <Compile Include="Ptr\ILOMCTL00320.cs" />
+    <Compile Include="Ptr\ILOMCTL00322.cs" />
+    <Compile Include="Ptr\ILOMCTL00323.cs" />
+    <Compile Include="Ptr\ILOMCTL00325.cs" />
+    <Compile Include="Ptr\ILOMCTL00326.cs" />
+    <Compile Include="Ptr\ILOMCTL00327.cs" />
+    <Compile Include="Ptr\ILOMCTL00328.cs" />
+    <Compile Include="Ptr\ILOMCTL00330.cs" />
+    <Compile Include="Ptr\ILOMCTL00332.cs" />
+    <Compile Include="Ptr\ILOMCTL00334.cs" />
+    <Compile Include="Ptr\ILOMCTL00336.cs" />
+    <Compile Include="Ptr\ILOMCTL00338.cs" />
+    <Compile Include="Ptr\ILOMCTL00340.cs" />
+    <Compile Include="Ptr\ILOMCTL00342.cs" />
+    <Compile Include="Ptr\ILOMCTL00403.cs" />
+    <Compile Include="Ptr\ILOMCTL00404.cs" />
+    <Compile Include="Ptr\ILOMCTL00405.cs" />
+    <Compile Include="Ptr\ILOMCTL00407.cs" />
+    <Compile Include="Ptr\ILOMCTL00408.cs" />
+    <Compile Include="Ptr\ILOMCTL00410.cs" />
+    <Compile Include="Ptr\ILOMCTL00412.cs" />
+    <Compile Include="Ptr\ILOMCTL00414.cs" />
+    <Compile Include="Ptr\ILOMCTL00415.cs" />
+    <Compile Include="Ptr\ILOMCTL00416.cs" />
+    <Compile Include="Ptr\ILOMCTL00418.cs" />
+    <Compile Include="Ptr\ILOMCTL00419.cs" />
+    <Compile Include="Ptr\ILOMCTL00421.cs" />
+    <Compile Include="Ptr\ILOMCTL00422.cs" />
+    <Compile Include="Ptr\ILOMCTL00423.cs" />
+    <Compile Include="Ptr\ILOMCTL00425.cs" />
+    <Compile Include="Ptr\ILOMCTL00426.cs" />
+    <Compile Include="Ptr\ILOMCTL00427.cs" />
+    <Compile Include="Ptr\ILOMCTL00428.cs" />
+    <Compile Include="Ptr\ILOMCTL00429.cs" />
+    <Compile Include="Ptr\ILOMCTL00430.cs" />
+    <Compile Include="Ptr\ILOMCTL00431.cs" />
+    <Compile Include="Ptr\ILOMCTL00433.cs" />
+    <Compile Include="Ptr\ILOMCTL00434.cs" />
+    <Compile Include="Ptr\ILOMCTL00435.cs" />
+    <Compile Include="Ptr\ILOMCTL00436.cs" />
+    <Compile Include="Ptr\ILOMCTL00437.cs" />
+    <Compile Include="Ptr\ILOMCTL00438.cs" />
+    <Compile Include="Ptr\ILOMCTL00440.cs" />
+    <Compile Include="Ptr\ILOMCTL00441.cs" />
+    <Compile Include="Ptr\ILOMCTL00442.cs" />
+    <Compile Include="Ptr\ILOMCTL00444.cs" />
+    <Compile Include="Ptr\ILOMCTL00446.cs" />
+    <Compile Include="Sve\ILOMSVE00030.cs" />
+    <Compile Include="Sve\ILOMSVE00025.cs" />
+    <Compile Include="Sve\ILOMSVE00001.cs" />
+    <Compile Include="Sve\ILOMSVE00002.cs" />
+    <Compile Include="Sve\ILOMSVE00003.cs" />
+    <Compile Include="Sve\ILOMSVE00004.cs" />
+    <Compile Include="Sve\ILOMSVE00005.cs" />
+    <Compile Include="Sve\ILOMSVE00006.cs" />
+    <Compile Include="Sve\ILOMSVE00007.cs" />
+    <Compile Include="Sve\ILOMSVE00008.cs" />
+    <Compile Include="Sve\ILOMSVE00009.cs" />
+    <Compile Include="Sve\ILOMSVE00010.cs" />
+    <Compile Include="Sve\ILOMSVE00012.cs" />
+    <Compile Include="Sve\ILOMSVE00011.cs" />
+    <Compile Include="Sve\ILOMSVE00014.cs" />
+    <Compile Include="Sve\ILOMSVE00015.cs" />
+    <Compile Include="Sve\ILOMSVE00016.cs" />
+    <Compile Include="Sve\ILOMSVE00020.cs" />
+    <Compile Include="Sve\ILOMSVE00021.cs" />
+    <Compile Include="Sve\ILOMSVE00024.cs" />
+    <Compile Include="Sve\ILOMSVE00027.cs" />
+    <Compile Include="Sve\ILOMSVE00028.cs" />
+    <Compile Include="Sve\ILOMSVE00029.cs" />
+    <Compile Include="Sve\ILOMSVE00032.cs" />
+    <Compile Include="Sve\ILOMSVE00034.cs" />
+    <Compile Include="Sve\ILOMSVE00035.cs" />
+    <Compile Include="Sve\ILOMSVE00042.cs" />
+    <Compile Include="Sve\ILOMSVE00044.cs" />
+    <Compile Include="Sve\ILOMSVE00047.cs" />
+    <Compile Include="Sve\ILOMSVE00051.cs" />
+    <Compile Include="Sve\ILOMSVE00057.cs" />
+    <Compile Include="Sve\ILOMSVE00059.cs" />
+    <Compile Include="Sve\ILOMSVE00063.cs" />
+    <Compile Include="Sve\ILOMSVE00064.cs" />
+    <Compile Include="Sve\ILOMSVE00068.cs" />
+    <Compile Include="Sve\ILOMSVE00069.cs" />
+    <Compile Include="Sve\ILOMSVE00070.cs" />
+    <Compile Include="Sve\ILOMSVE00071.cs" />
+    <Compile Include="Sve\ILOMSVE00072.cs" />
+    <Compile Include="Sve\ILOMSVE00073.cs" />
+    <Compile Include="Sve\ILOMSVE00074.cs" />
+    <Compile Include="Sve\ILOMSVE00075.cs" />
+    <Compile Include="Sve\ILOMSVE00076.cs" />
+    <Compile Include="Sve\ILOMSVE00077.cs" />
+    <Compile Include="Sve\ILOMSVE00078.cs" />
+    <Compile Include="Sve\ILOMSVE00080.cs" />
+    <Compile Include="Sve\ILOMSVE00085.cs" />
+    <Compile Include="Sve\ILOMSVE00086.cs" />
+    <Compile Include="Sve\ILOMSVE00089.cs" />
+    <Compile Include="Sve\ILOMSVE00092.cs" />
+    <Compile Include="Sve\ILOMSVE00093.cs" />
+    <Compile Include="Sve\ILOMSVE00096.cs" />
+    <Compile Include="Sve\ILOMSVE00102.cs" />
+    <Compile Include="Sve\ILOMSVE00300.cs" />
+    <Compile Include="Sve\ILOMSVE00301.cs" />
+    <Compile Include="Sve\ILOMSVE00303.cs" />
+    <Compile Include="Sve\ILOMSVE00305.cs" />
+    <Compile Include="Sve\ILOMSVE00307.cs" />
+    <Compile Include="Sve\ILOMSVE00309.cs" />
+    <Compile Include="Sve\ILOMSVE00311.cs" />
+    <Compile Include="Sve\ILOMSVE00314.cs" />
+    <Compile Include="Sve\ILOMSVE00316.cs" />
+    <Compile Include="Sve\ILOMSVE00325.cs" />
+    <Compile Include="Sve\ILOMSVE00403.cs" />
+    <Compile Include="Sve\ILOMSVE00405.cs" />
+    <Compile Include="Sve\ILOMSVE00415.cs" />
+    <Compile Include="Sve\ILOMSVE00427.cs" />
+    <Compile Include="Sve\ILOMSVE00435.cs" />
+    <Compile Include="Sve\ILOMSVE00444.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Mnm\Ace.Cbs.Mnm.Dmd\Ace.Cbs.Mnm.Dmd.csproj">
+      <Project>{D8EA36A9-8BBC-4D2A-84C7-49BDA6006F94}</Project>
+      <Name>Ace.Cbs.Mnm.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Pfm\Ace.Cbs.Pfm.Dmd\Ace.Cbs.Pfm.Dmd.csproj">
+      <Project>{8F20F64D-FF47-47A3-87CA-30D8A12B5B75}</Project>
+      <Name>Ace.Cbs.Pfm.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tcm\Ace.Cbs.Tcm.Dmd\Ace.Cbs.Tcm.Dmd.csproj">
+      <Project>{F4D9433A-689F-4964-857C-D3C14355A870}</Project>
+      <Name>Ace.Cbs.Tcm.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tel\Ace.Cbs.Tel.Dmd\Ace.Cbs.Tel.Dmd.csproj">
+      <Project>{4AE62F74-E000-4768-90BC-DCBBB1B4C68C}</Project>
+      <Name>Ace.Cbs.Tel.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Pfm\Ace.Cbs.Pfm.Dmd\Ace.Cbs.Pfm.Dmd.csproj">
+      <Project>{8F20F64D-FF47-47A3-87CA-30D8A12B5B75}</Project>
+      <Name>Ace.Cbs.Pfm.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tel\Ace.Cbs.Tel.Ctr\Ace.Cbs.Tel.Ctr.csproj">
+      <Project>{E940CDA8-DE03-44C7-BF69-37EB9ACCD7C6}</Project>
+      <Name>Ace.Cbs.Tel.Ctr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tel\Ace.Cbs.Tel.Dmd\Ace.Cbs.Tel.Dmd.csproj">
+      <Project>{4AE62F74-E000-4768-90BC-DCBBB1B4C68C}</Project>
+      <Name>Ace.Cbs.Tel.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ace.Cbs.Loan.Dmd\Ace.Cbs.Loan.Dmd.csproj">
+      <Project>{9D836AEE-6202-4573-B5CD-EB5D6F0F50FA}</Project>
+      <Name>Ace.Cbs.Loan.Dmd</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

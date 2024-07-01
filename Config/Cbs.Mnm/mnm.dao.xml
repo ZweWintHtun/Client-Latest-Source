@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    DataAccess Objects Settings
+  </description>
+
+
+	<!--Account Editing DAO-->
+	<object id="AccountEditingDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00031, Ace.Cbs.Mnm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+  <!--Link Auto Priority DAO-->
+  <object id="LinkAutoDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00129, Ace.Cbs.Mnm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>  
+  
+  <!--Format DAO-->
+  <object id="FormatDao" type="Ace.Cbs.Mnm.Dao.FormatDao, Ace.Cbs.Mnm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  
+	<!--Adjustment Voucher-->
+	<object id="AdjustmentVoucherDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00010, Ace.Cbs.Mnm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+
+	<!--syspost DAO-->
+	<object id="SyspostDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00001, Ace.Cbs.Mnm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+  <!--closed Account DAO-->
+  <object id="ClosedaccountDAO" type="Ace.Cbs.Cx.Ser.Dao.MNMDAO00068, Ace.Cbs.Mnm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+
+  <!--prevccoa DAO-->
+	<object id="PrevccoaDAO" type="Ace.Cbs.Mnm.DAO.MNMDAO00010, Ace.Cbs.Mnm.DAO" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+	
+
+
+	<!--//PO Receipt Reversal DAO//
+	<object id="TLFDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00054, Ace.Cbs.Pfm.Dao" singleton="false">
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>-->
+
+
+	<!--prevsi DAO-->
+	<object id="PrevsiDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00007, Ace.Cbs.Mnm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+
+	<!--report tlf  DAO-->
+	<object id="ReporttlfDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00030, Ace.Cbs.Mnm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+
+	<!--TOd_Scharged DAO-->
+	<object id="TOd_SchargedDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00005, Ace.Cbs.Mnm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--prevTOd_Scharged DAO-->
+	<object id="PrevTOd_SchargedDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00006, Ace.Cbs.Mnm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+	
+	<!--vw_postingDAO DAO-->
+   <!--<object id="vw_postingDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00023, Ace.Cbs.Mnm.Dao" singleton="false" >
+	<property name="SessionFactory" ref="MySessionFactory"/>
+   </object>-->
+	
+	<!--OI DAO-->
+	<object id="OIDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00008, Ace.Cbs.Mnm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+	
+	<!--prevOI DAO-->
+	<object id="PrevOIDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00009, Ace.Cbs.Mnm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--LIDAO DAO-->
+	<object id="LIDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00017, Ace.Cbs.Mnm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--Prev_LIDAO DAO-->
+	<object id="Prev_LIDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00018, Ace.Cbs.Mnm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--Prev_CashdenoDAO DAO-->
+	<object id="Prev_CashdenoDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00004, Ace.Cbs.Mnm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--Prev_DepodenoDAO DAO-->
+	<object id="Prev_DepodenoDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00003, Ace.Cbs.Mnm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--Prev_BalDAO DAO-->
+	<object id="Prev_BalDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00016, Ace.Cbs.Mnm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--Prev_PODAO DAO-->
+	<object id="Prev_PODAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00002, Ace.Cbs.Mnm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--Prev_RDDAO DAO-->
+	<object id="Prev_RDDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00020, Ace.Cbs.Mnm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--Prev_REDAO DAO-->
+	<object id="Prev_REDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00019, Ace.Cbs.Mnm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--CommitDAO DAO-->
+	<object id="CommitDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00011, Ace.Cbs.Mnm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--Prev_CommitDAO DAO-->
+	<object id="Prev_CommitDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00025, Ace.Cbs.Mnm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+	
+
+  <!--InTlf DAO-->
+  <object id="InTlfDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00021, Ace.Cbs.Mnm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--FixIntPostingBefore DAO-->
+  <object id="FixIntPostingBeforeDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00026, Ace.Cbs.Mnm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--FixIntPostingBefore DAO-->
+  <object id="LegalIntDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00012, Ace.Cbs.Mnm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="AdjRemitOiDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00022, Ace.Cbs.Mnm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="AdjRemitSchargeDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00023, Ace.Cbs.Mnm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="AdjRemitTodSchargeDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00024, Ace.Cbs.Mnm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="BankStatementMonthlyDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00046, Ace.Cbs.Mnm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="POIRDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00076, Ace.Cbs.Mnm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="InterestOutstanding" type="Ace.Cbs.Mnm.Dao.MNMDAO00081, Ace.Cbs.Mnm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+	<object id="SChargeDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00027, Ace.Cbs.Mnm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--//Fixed interst prev Dao//-->
+	<object id="TempFreceiptDateDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00041, Ace.Cbs.Mnm.Dao" singleton="false">
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--//Fixed interst prev Dao//-->
+	<object id="TFreceiptDAO" type="Ace.Cbs.Mnm.Dao.MNMDAO00042, Ace.Cbs.Mnm.Dao" singleton="false">
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+
+</objects>
+
+

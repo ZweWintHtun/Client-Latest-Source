@@ -1,0 +1,1334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    UIForm Objects Settings
+  </description>
+ 
+  <!--Region Management-->
+
+ 
+  <!--//Reversal//-->
+  <object id="frmMNMVEW00010" type="Ace.Cbs.Mnm.Vew.MNMVEW00010, Ace.Cbs.Mnm.Vew" parent="SecureDockForm" singleton="false">
+    <property name="Controller" ref="AdjustmentVoucherController"/>
+  </object>
+
+  <!--//Before DayClose//-->
+  <object id="frmMNMVEW00001" type="Ace.Cbs.Mnm.Vew.MNMVEW00001, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="BeforeDayCloseController"/>
+  </object>
+  
+  <!--Current Account Editing (Joint)-->
+  <object id="frmMNMVEW00032.CurrentAC" type="Ace.Cbs.Mnm.Vew.MNMVEW00032, Ace.Cbs.Mnm.Vew" parent="SecureDockForm" singleton="false">
+    <property name="FormName" value="Current.Joint"/>
+    <property name="Controller" ref="JointACEditController"/>
+  </object>
+
+  <!--//Added by HWKO (27-Dec-2017)-->
+  <!--Business Loan Account Editing (Joint)-->
+  <object id="frmBLAccount.Joint_Editing" type="Ace.Cbs.Mnm.Vew.MNMVEW00032, Ace.Cbs.Mnm.Vew" parent="SecureDockForm" singleton="false">
+    <property name="FormName" value="BUSINESSLOAN.Joint"/>
+    <property name="Controller" ref="JointACEditController"/>
+  </object>
+
+  <!--Hire Purchase Loan Account Editing (Joint)-->
+  <object id="frmHPAccount.Joint_Editing" type="Ace.Cbs.Mnm.Vew.MNMVEW00032, Ace.Cbs.Mnm.Vew" parent="SecureDockForm" singleton="false">
+    <property name="FormName" value="HIREPURCHASELOAN.Joint"/>
+    <property name="Controller" ref="JointACEditController"/>
+  </object>
+
+  <!--Personal Loan Account Editing (Joint)-->
+  <object id="frmPLAccount.Joint_Editing" type="Ace.Cbs.Mnm.Vew.MNMVEW00032, Ace.Cbs.Mnm.Vew" parent="SecureDockForm" singleton="false">
+    <property name="FormName" value="PERSONALLOAN.Joint"/>
+    <property name="Controller" ref="JointACEditController"/>
+  </object>
+
+  <!--Dealer Account Editing (Joint)-->
+  <object id="frmDealerAccount.Joint_Editing" type="Ace.Cbs.Mnm.Vew.MNMVEW00032, Ace.Cbs.Mnm.Vew" parent="SecureDockForm" singleton="false">
+    <property name="FormName" value="DEALER.Joint"/>
+    <property name="Controller" ref="JointACEditController"/>
+  </object>
+  <!---->
+
+  <!--Saving Account (Joint)-->
+  <object id="frmMNMVEW00032.SavingAC" type="Ace.Cbs.Mnm.Vew.MNMVEW00032, Ace.Cbs.Mnm.Vew" parent="SecureDockForm" singleton="false">
+    <property name="FormName" value="Saving.Joint"/>
+    <property name="Controller" ref="JointACEditController"/>
+  </object>
+
+  <!--Fixed Account (Joint)-->
+  <object id="frmMNMVEW00032.FixedAC" type="Ace.Cbs.Mnm.Vew.MNMVEW00032, Ace.Cbs.Mnm.Vew" parent="SecureDockForm" singleton="false">
+    <property name="FormName" value="Fixed.Joint"/>
+    <property name="Controller" ref="JointACEditController"/>
+  </object>
+  
+  <!--Current Account Editing (Company)-->
+  <object id="frmMNMVEW00033.CurACEdit_Company" type="Ace.Cbs.Mnm.Vew.MNMVEW00033, Ace.Cbs.Mnm.Vew" parent="SecureDockForm" singleton="false">
+    <property name="FormName" value="Current.Company"/>
+    <property name="AcSign" value="CC"/>
+    <property name="Controller" ref="AccountEditCompanyController"/>
+  </object>
+
+  <!--//Added by HWKO (28-Dec-2017)-->
+  <!--Business Loan Account Editing (Company)-->
+  <object id="frmBLAccount.Company_Editing" type="Ace.Cbs.Mnm.Vew.MNMVEW00033, Ace.Cbs.Mnm.Vew" parent="SecureDockForm" singleton="false">
+    <property name="FormName" value="BUSINESSLOAN.Company"/>
+    <property name="AcSign" value="BC"/>
+    <property name="Controller" ref="AccountEditCompanyController"/>
+  </object>
+
+  <!--Hire Purchase Loan Account Editing (Company)-->
+  <object id="frmHPAccount.Company_Editing" type="Ace.Cbs.Mnm.Vew.MNMVEW00033, Ace.Cbs.Mnm.Vew" parent="SecureDockForm" singleton="false">
+    <property name="FormName" value="HIREPURCHASELOAN.Company"/>
+    <property name="AcSign" value="HC"/>
+    <property name="Controller" ref="AccountEditCompanyController"/>
+  </object>
+
+  <!--Personal Loan Account Editing (Company)-->
+  <object id="frmPLAccount.Company_Editing" type="Ace.Cbs.Mnm.Vew.MNMVEW00033, Ace.Cbs.Mnm.Vew" parent="SecureDockForm" singleton="false">
+    <property name="FormName" value="PERSONALLOAN.Company"/>
+    <property name="AcSign" value="PC"/>
+    <property name="Controller" ref="AccountEditCompanyController"/>
+  </object>
+
+  <!--Dealer Account Editing (Company)-->
+  <object id="frmDealerAccount.Company_Editing" type="Ace.Cbs.Mnm.Vew.MNMVEW00033, Ace.Cbs.Mnm.Vew" parent="SecureDockForm" singleton="false">
+    <property name="FormName" value="DEALER.Company"/>
+    <property name="AcSign" value="DC"/>
+    <property name="Controller" ref="AccountEditCompanyController"/>
+  </object>
+  <!--//End Region-->
+  
+  <!--Saving Account Editing (Company)-->
+  <object id="frmMNMVEW00033.SavgACEdit_Company" type="Ace.Cbs.Mnm.Vew.MNMVEW00033, Ace.Cbs.Mnm.Vew" parent="SecureDockForm" singleton="false">
+    <property name="FormName" value="Saving.Company"/>
+    <property name="AcSign" value="SO"/>
+    <property name="Controller" ref="AccountEditCompanyController"/>
+  </object>
+  
+  <!--Fixed Account Editing (Co/Organization)-->
+  <object id="frmMNMVEW00033.FixACEdit_CoOrganization" type="Ace.Cbs.Mnm.Vew.MNMVEW00033, Ace.Cbs.Mnm.Vew" parent="SecureDockForm" singleton="false">
+    <property name="FormName" value="Fixed.Company"/>
+    <property name="AcSign" value="FC"/>
+    <property name="Controller" ref="AccountEditCompanyController"/>
+  </object>
+  
+  <!--Current Account Editing (Partner Ship)-->
+  <object id="frmMNMVEW00033.CurACEdit_PartnerShip" type="Ace.Cbs.Mnm.Vew.MNMVEW00033, Ace.Cbs.Mnm.Vew" parent="SecureDockForm" singleton="false">
+    <property name="FormName" value="Current.Partnership"/>
+    <property name="AcSign" value="CP"/>
+    <property name="Controller" ref="AccountEditCompanyController"/>
+  </object>
+  
+  <!--Current Account Editing (Association)-->
+  <object id="frmMNMVEW00033.CurACEdit_Association" type="Ace.Cbs.Mnm.Vew.MNMVEW00033, Ace.Cbs.Mnm.Vew" parent="SecureDockForm" singleton="false">
+    <property name="FormName" value="Current.Association"/>
+    <property name="AcSign" value="CA"/>
+    <property name="Controller" ref="AccountEditCompanyController"/>
+  </object>
+
+  <!--Transfer Scroll-->
+  <object id="frmMNMVEW00035" type="Ace.Cbs.Mnm.Vew.MNMVEW00035, Ace.Cbs.Mnm.Vew" parent="SecureDockForm" singleton="false">
+    <property name="Controller" ref="TransferScrollController"/>
+    <!--<property name="rdoTransactionDate_Checked" value="true"/>
+    <property name="chkAllBranches_Checked" value="false"/>
+    <property name="chkHomeCurrency_Checked" value="false"/>-->
+  </object>
+
+  <!--//After DayClose//-->
+  <object id="frmMNMVEW00002" type="Ace.Cbs.Mnm.Vew.MNMVEW00002, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="AfterDayCloseController"/>
+  </object>
+
+  <!--//SavingInterest//-->
+  <object id="frmMNMVEW00003" type="Ace.Cbs.Mnm.Vew.MNMVEW00003, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="SavingInterestCalutationController"/>
+  </object>
+
+  <!--//Fixed Deposit Auto Renewal//-->
+  <object id="frmMNMVEW00004" type="Ace.Cbs.Mnm.Vew.MNMVEW00004, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+		<property name="Controller" ref="FixedDepositAutoRenewalController"/>
+  </object>
+
+  <!--//DailyPosting//-->
+  <object id="frmMNMVEW00005" type="Ace.Cbs.Mnm.Vew.MNMVEW00005, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+	  <property name="Controller" ref="DailyPostingController"/>
+  </object>
+
+  <!--//YearlyPosting//-->
+  <object id="frmMNMVEW00006" type="Ace.Cbs.Mnm.Vew.MNMVEW00006, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+    <property name="Controller" ref="YearlyPostingController"/>
+  </object>
+
+  <!--//InterestNatureConfig//-->
+  <object id="frmMNMVEW00007" type="Ace.Cbs.Mnm.Vew.MNMVEW00007, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="InterestNatureConfigController"/>
+  </object>
+
+  <!--//Cash Voucher//-->
+  <object id="frmMNMVEW00008" type="Ace.Cbs.Mnm.Vew.MNMVEW00008, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="CashVoucherController"/>
+  </object>
+
+  <!--//Clearing Voucher//-->
+  <object id="frmMNMVEW00009" type="Ace.Cbs.Mnm.Vew.MNMVEW00009, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="ClearingVoucherReversalController"/>
+  </object>
+
+  <!--//Deliver Edit//-->
+  <object id="frmMNMVEW00011.DeliverEditting" type="Ace.Cbs.Mnm.Vew.MNMVEW00011, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="FormName" value="Deliver Edit"/>
+    <property name="Controller" ref="DeliverandReceiptReverseController"/>
+  </object>
+
+  <!--//Deliver Reverse//-->
+  <object id="frmMNMVEW00011.DeliverReverseEdit" type="Ace.Cbs.Mnm.Vew.MNMVEW00011, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="FormName" value="Deliver Reverse"/>
+    <property name="Controller" ref="DeliverandReceiptReverseController"/>
+  </object>
+
+  <!--//Receipt Reverse//-->
+  <object id="frmMNMVEW00011.ReceiptReverseEdit" type="Ace.Cbs.Mnm.Vew.MNMVEW00011, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="FormName" value="Receipt Reverse"/>
+    <property name="Controller" ref="DeliverandReceiptReverseController"/>
+  </object>
+
+  <!--//PO Receipt Reverse//-->
+  <object id="frmMNMVEW00012" type="Ace.Cbs.Mnm.Vew.MNMVEW00012, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="POReceiptReversalController"/>
+  </object>
+
+  <!--//Saving Interest Withdrawal Reversal//-->
+  <object id="frmMNMVEW00013" type="Ace.Cbs.Mnm.Vew.MNMVEW00013, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="SavingIntWithReversalController"/>
+  </object>
+
+  <!--//PO Register By Cash Edit//-->
+  <object id="frmMNMVEW00014" type="Ace.Cbs.Mnm.Vew.MNMVEW00014, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="PORegisterByCashEditController"/>
+  </object>
+  
+  <!--//PO Register By Transfer Edit//-->
+  <object id="frmMNMVEW00015" type="Ace.Cbs.Mnm.Vew.MNMVEW00015, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="PORegisterByTransferEditController"/>
+  </object>
+
+  <!--//PO Refund Reversal//-->
+  <object id="frmMNMVEW00016" type="Ace.Cbs.Mnm.Vew.MNMVEW00016, Ace.Cbs.Mnm.Vew"   parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="PORefundReversalController"/>
+  </object>
+
+  <!--//PO No.Editting//-->
+  <object id="frmMNMVEW00018" type="Ace.Cbs.Mnm.Vew.MNMVEW00018, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+  </object>
+
+  <!--//PO Issue for Encashment//-->
+  <object id="frmMNMVEW00019POIssueForEncash" type="Ace.Cbs.Mnm.Vew.MNMVEW00019, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="PONoEdittingForEncashmentController"/>
+  </object>
+
+  <!--//PO Issue By Transfer(Income)//-->
+  <object id="frmMNMVEW00020POIssueByTransfer.Income" type="Ace.Cbs.Mnm.Vew.MNMVEW00020, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="POEdittingByTransferController"/>
+    <property name="FormName" value="POIssueByTransferIncome"/>
+  </object>
+
+  <!--//PO Issue By Transfer//-->
+  <object id="frmMNMVEW00020POIssueByTransfer.NoIncome" type="Ace.Cbs.Mnm.Vew.MNMVEW00020, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="POEdittingByTransferController"/>
+    <property name="FormName" value="POIssueByTransferNoIncome"/>
+  </object>
+  
+  <!--//Cross Change//-->
+  <object id="frmMNMVEW00021" type="Ace.Cbs.Mnm.Vew.MNMVEW00021, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="CrossChangeController"/>
+  </object>
+  
+  <!--//RD Personal Information//-->
+  <object id="frmMNMVEW00022" type="Ace.Cbs.Mnm.Vew.MNMVEW00022, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="RDPersonalInformationEditController"/>
+  </object>
+  
+  <!--//RD Important Information//-->
+  <object id="frmMNMVEW00023" type="Ace.Cbs.Mnm.Vew.MNMVEW00023, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="RDImportantInformationController"/>
+  </object>
+  
+  <!--//EncashNoEdit//-->
+  <object id="frmMNMVEW00024" type="Ace.Cbs.Mnm.Vew.MNMVEW00024, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="EncashNoEditController"/>
+  </object>
+  
+  <!--//RE Personal Information//-->
+  <object id="frmMNMVEW00025" type="Ace.Cbs.Mnm.Vew.MNMVEW00025, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="REPersonalInformationEditController"/>
+  </object>
+  
+  <!--//RE Important Information//-->
+  <object id="frmMNMVEW00026" type="Ace.Cbs.Mnm.Vew.MNMVEW00026, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="REImportantInformationEditController"/>
+  </object>
+
+  <!--//Drawing Adjustment//-->
+  <object id="frmMNMVEW00027" type="Ace.Cbs.Mnm.Vew.MNMVEW00027, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="DrawingRemittanceAdjustmentController"/>
+  </object>
+
+  <!--//Encashment Adjustment//-->
+  <object id="frmMNMVEW00028" type="Ace.Cbs.Mnm.Vew.MNMVEW00028, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="EncashAdjustmentController"/>
+  </object>
+
+  <!--//Account Open Pass Book Printing//-->
+  <object id="frmMNMVEW00029" type="Ace.Cbs.Mnm.Vew.MNMVEW00029, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="PassBookPrintingController"/>
+  </object>
+
+	<!--//Fixed Deposit Certificate Printing//-->
+	<object id="frmMNMVEW00030" type="Ace.Cbs.Mnm.Vew.MNMVEW00030, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+		<property name="Controller" ref="FixedDepositCertificatePrintingController"/>
+	</object>
+
+  <!--//Ledger Balance By Account Type(Current)//-->
+  <object id="frmMNMVEW00062.Current" type="Ace.Cbs.Mnm.Vew.MNMVEW00062, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <!--<property name="Controller" ref="LedgerBalByCurrentAccountController"/>-->
+  </object>
+
+  <!--//Ledger Balance By Account Type(Saving)//-->
+  <object id="frmMNMVEW00062.Saving" type="Ace.Cbs.Mnm.Vew.MNMVEW00062, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <!--<property name="Controller" ref="LedgerBalByAccountController"/>-->
+  </object>
+
+  <!--//Ledger Balance By Account Type(FixedDeposit)//-->
+  <object id="frmMNMVEW00062.FixedDeposit" type="Ace.Cbs.Mnm.Vew.MNMVEW00062, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <!--<property name="Controller" ref="LedgerBalByAccountController"/>-->
+  </object>
+
+  <!--//Ledger Balance By Account Type(OverDrawn)//-->
+  <object id="frmMNMVEW00062.OverDrawn" type="Ace.Cbs.Mnm.Vew.MNMVEW00062, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <!--<property name="Controller" ref="LedgerBalByAccountController"/>-->
+  </object>
+
+  <!--//Ledger Balance By Grade(Current/Saving)//-->
+  <object id="frmMNMVEW00063" type="Ace.Cbs.Mnm.Vew.MNMVEW00063, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <!--<property name="Controller" ref="LedgerBalByGradeController"/>-->
+    <property name="FormName" value="LedgerBalanceByGrade"/>
+    <property name="Controller" ref="LedgerBalByGradeController"/>
+  </object>
+
+  <!--//Ledger Balance By Grade(Saving)//--><!--
+  <object id="frmMNMVEW00063.Saving" type="Ace.Cbs.Mnm.Vew.MNMVEW00063, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    --><!--<property name="Controller" ref="LedgerBalByGradeController"/>--><!--
+    <property name="FormName" value="LedgerBalanceByGrade.BySaving"/>
+    <property name="Controller" ref="LedgerBalByGradeController"/>
+  </object>-->
+
+  <!--//Ledger Balance By Grade Report//-->
+  <object id="frmMNMVEW00112.ReportViewer" type="Ace.Cbs.Mnm.Vew.MNMVEW00112, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+
+  <!--//Saving Interest(Jan-March)//-->
+  <object id="frmMNMVEW00064.Jan_March" type="Ace.Cbs.Mnm.Vew.MNMVEW00064, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">	  
+	  <property name="FormName" value="Saving Interest Listing For January to March"/>
+	  <property name="Controller" ref="SavingInterestListingController"/>
+  </object>
+
+  <!--//Saving Interest(Apr-Jun)//-->
+  <object id="frmMNMVEW00064.Apr_Jun" type="Ace.Cbs.Mnm.Vew.MNMVEW00064, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+	  <property name="Controller" ref="SavingInterestListingController"/>
+	  <property name="FormName" value="Saving Interest Listing For April to June"/>
+	  
+  </object>
+
+  <!--//Saving Interest(July_Sep)//-->
+  <object id="frmMNMVEW00064.July_Sep" type="Ace.Cbs.Mnm.Vew.MNMVEW00064, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+	  <property name="FormName" value="Saving Interest Listing For July to September"/>
+	  <property name="Controller" ref="SavingInterestListingController"/>
+  </object>
+
+  <!--//Saving Interest(Oct_Dec)//-->
+  <object id="frmMNMVEW00064.Oct_Dec" type="Ace.Cbs.Mnm.Vew.MNMVEW00064, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+	<property name="FormName" value="Saving Interest Listing For October to December"/>
+	  <property name="Controller" ref="SavingInterestListingController"/>
+  </object>
+
+  <!--//Fixed Deposit Interest(Renewal Voucher)//-->
+  <object id="frmMNMVEW00066.RenewalVoucher" type="Ace.Cbs.Mnm.Vew.MNMVEW00066, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="FixedDepositController"/>	  
+	  <property name="FormName" value="Renewal Voucher Listing"/>
+  </object>
+
+  <!--//Fixed Deposit Interest(Coming Accrued)//-->
+  <object id="frmMNMVEW00066.ComingAccrued" type="Ace.Cbs.Mnm.Vew.MNMVEW00066, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+	  <property name="Controller" ref="FixedDepositController"/>
+	  <property name="FormName" value="Coming Accrued Listing"/>
+  </object>
+
+  <!--//Fixed Deposit Interest(Coming Interest)/(Coming Expense) Listing //-->
+  <object id="frmMNMVEW00066.ComingInterest" type="Ace.Cbs.Mnm.Vew.MNMVEW00066, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+	  <property name="Controller" ref="FixedDepositController"/>
+	  <property name="FormName" value="Coming Interest Listing"/>  
+  </object>
+  
+  <!--//Interest Withdrawal Listing//-->
+  <object id="frmMNMVEW00067" type="Ace.Cbs.Mnm.Vew.MNMVEW00067, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <!--<property name="Controller" ref="InterestWithdrawalController"/>-->
+  </object>
+
+  <!--//Closed Account(Current)//-->
+  <object id="frmMNMVEW00068.Current" type="Ace.Cbs.Mnm.Vew.MNMVEW00068, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <!--<property name="Controller" ref="ClosedAccountController"/>-->
+    <property name="FormName" value="ClosedAccount.Current"/>
+    <property name="Controller" ref="ClosedAccountController"/>
+  </object>
+
+  <!--//Closed Account(Saving)//-->
+  <object id="frmMNMVEW00068.Saving" type="Ace.Cbs.Mnm.Vew.MNMVEW00068, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <!--<property name="Controller" ref="ClosedAccountController"/>-->
+    <property name="FormName" value="ClosedAccount.Saving"/>
+    <property name="Controller" ref="ClosedAccountController"/>
+  </object>
+
+  <!--//Closed Account Report//-->
+  <object id="frmMNMVEW000117.ReportViewer" type="Ace.Cbs.Mnm.Vew.MNMVEW00117, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  
+  <!--//Link Account(Current and Saving)//-->
+  <object id="frmMNMVEW00069" type="Ace.Cbs.Mnm.Vew.MNMVEW00069, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+    <property name="Controller" ref="LinkAccountListingController"/>
+  </object>
+
+  <!--//Link Account(Current and Saving)//-->
+  <object id="frmMNMVEW00118LinkAccountReprot" type="Ace.Cbs.Mnm.Vew.MNMVEW00118, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+  </object>
+
+  <!--//Link Account(Link Auto Priority Listing)//-->
+  <object id="frmMNMVEW00129" type="Ace.Cbs.Mnm.Vew.MNMVEW00129, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+    <property name="Controller" ref="LinkAutoPriorityController"/>
+  </object>
+
+  <!--//Customer ID Listing(By Date)//-->
+  <object id="frmMNMVEW00070.ByDate" type="Ace.Cbs.Mnm.Vew.MNMVEW00070, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <!--<property name="Controller" ref="CustomerIdListController"/>-->
+    <property name="FormName" value="CustomerIDListing.ByDate"/>
+    <property name="Controller" ref="CustIDListingController"/>
+  </object>
+
+  <!--//Customer ID Listing(By TownShip)//-->
+  <object id="frmMNMVEW00070.ByTownship" type="Ace.Cbs.Mnm.Vew.MNMVEW00070, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <!--<property name="Controller" ref="CustomerIdListController"/>-->
+    <property name="FormName" value="CustomerIDListing.ByTownship"/>
+    <property name="Controller" ref="CustIDListingController"/>
+  </object>
+  
+  <!--//CustomerID Listing ReportViewer//-->
+  <object id="frmMNMVEW000119.ReportViewer" type="Ace.Cbs.Mnm.Vew.MNMVEW00119, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  
+  <!--//Saving Accrued Interest//-->
+  <object id="frmMNMVEW00071" type="Ace.Cbs.Mnm.Vew.MNMVEW00071, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="SavingAccruedInterestController"/>
+  </object>
+
+  <!--//Fixed Renewal Status//-->
+  <object id="frmMNMVEW00072" type="Ace.Cbs.Mnm.Vew.MNMVEW00072, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <!--<property name="Controller" ref="FixedRenewalStatusController"/>-->
+  </object>
+
+  <!--//PO RegisterByCash//-->
+  <object id="frmMNMVEW00073.PORegisterByCash" type="Ace.Cbs.Mnm.Vew.MNMVEW00073, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+	  <property name="FormName" value="Payment Order Register Listing By Cash"/>	  
+	  <property name="Controller" ref="PORegisterController"/>
+  </object>
+
+	<!--//PO RegisterByTransfer//-->
+	<object id="frmMNMVEW00073.PORegisterByTransfer" type="Ace.Cbs.Mnm.Vew.MNMVEW00073, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+		<property name="FormName" value="Payment Order Register Listing By Transfer"/>		
+		<property name="Controller" ref="PORegisterController"/>
+	</object>
+
+	<!--//PO RegisterAll//-->
+	<object id="frmMNMVEW00073.PORegisterAll" type="Ace.Cbs.Mnm.Vew.MNMVEW00073, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+		<property name="FormName" value="Payment Order Register Listing All"/>		
+		<property name="Controller" ref="PORegisterController"/>
+	</object>
+  
+  <!--//PO WithdrawalByCash//-->
+  <object id="frmMNMVEW00073.POWithdrawalByCash" type="Ace.Cbs.Mnm.Vew.MNMVEW00073, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+	  <property name="FormName" value="Payment Order Withdrawal By Cash"/>	  
+	  <property name="Controller" ref="PORegisterController"/>
+	  <!--<property name="Controller" ref="POWithdrawalController"/>-->
+  </object>
+
+	<!--//PO WithdrawalByTransfer//-->
+	<object id="frmMNMVEW00073.POWithdrawalByTransfer" type="Ace.Cbs.Mnm.Vew.MNMVEW00073, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+		<property name="FormName" value="Payment Order Withdrawal By Transfer"/>		
+		<property name="Controller" ref="PORegisterController"/>		
+	</object>
+
+	<!--//PO WithdrawalAll//-->
+	<object id="frmMNMVEW00073.POWithdrawalAll" type="Ace.Cbs.Mnm.Vew.MNMVEW00073, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+		<property name="FormName" value="Payment Order Withdrawal All"/>		
+		<property name="Controller" ref="PORegisterController"/>		
+	</object>
+
+  <!--//IR Register//-->
+  <object id="frmMNMVEW00073.IRRegister" type="Ace.Cbs.Mnm.Vew.MNMVEW00073, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+	  <property name="FormName" value="Internal Remittance Register"/>
+	  <property name="Controller" ref="PORegisterController"/>	 
+  </object>
+
+	<!--//IR WithdrawalByCash//-->
+	<object id="frmMNMVEW00073.IRWithdrawalByCash" type="Ace.Cbs.Mnm.Vew.MNMVEW00073, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+		<property name="FormName" value="Internal Remittance Withdrawal By Cash"/>		
+		<property name="Controller" ref="PORegisterController"/>		
+	</object>
+
+	<!--//IR WithdrawalByTransfer//-->
+	<object id="frmMNMVEW00073.IRWithdrawalByTransfer" type="Ace.Cbs.Mnm.Vew.MNMVEW00073, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+		<property name="FormName" value="Internal Remittance Withdrawal By Transfer"/>		
+		<property name="Controller" ref="PORegisterController"/>		
+	</object>
+
+	<!--//IR WithdrawalAll//-->
+	<object id="frmMNMVEW00073.IRWithdrawalAll" type="Ace.Cbs.Mnm.Vew.MNMVEW00073, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+		<property name="FormName" value="Internal Remittance Withdrawal All"/>		
+		<property name="Controller" ref="PORegisterController"/>		
+	</object>
+
+	<!--//RD and RE List By Branch(RD List By Branch)//-->
+	<object id="frmMNMVEW00077.RDListByBranch" type="Ace.Cbs.Mnm.Vew.MNMVEW00077, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+		<property name="FormName" value="Daily Drawing Remittance Listing"/>
+		<property name="Controller" ref="RDandREListByBranchController"/>
+	</object>
+
+	<!--//RD and RE List By Branch(RE List By Branch)//-->
+	<object id="frmMNMVEW00077.REListByBranch" type="Ace.Cbs.Mnm.Vew.MNMVEW00077, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+		<!--<property name="Controller" ref="RDandREListByBranchController"/>-->
+		<property name="FormName" value="Daily Encashment Remittance Listing"/>
+		<property name="Controller" ref="RDandREListByBranchController"/>
+	</object>
+
+	<!-- RD List By Branch Report-->
+	<object id="frmMNMVEW00126" type="Ace.Cbs.Mnm.Vew.MNMVEW00126, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+	</object>
+	<!--Endregion-->
+
+	<!-- RE List By Branch Report-->
+	<object id="frmMNMVEW00137" type="Ace.Cbs.Mnm.Vew.MNMVEW00137, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+	</object>
+	<!--Endregion-->
+
+  <!--//PO Register(Encash)//-->
+  <object id="frmMNMVEW00078" type="Ace.Cbs.Mnm.Vew.MNMVEW00078, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="PORegisterEncashController"/>
+    <property name="FormName" value="PO Register(Encash) Listing"/>
+  </object>
+
+  <!--//PO Withdrawal(Encash)//-->
+  <object id="frmMNMVEW00079.POWithdrawlByCash" type="Ace.Cbs.Mnm.Vew.MNMVEW00079, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="POWithdrawlEncashController"/>
+    <property name="FormName" value="PO Withdrawl(Encash) By Cash Listing"/>
+  </object>
+
+  <!--//PO Withdrawal(Encash)//-->
+  <object id="frmMNMVEW00079.POWithdrawlByTransfer" type="Ace.Cbs.Mnm.Vew.MNMVEW00079, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="POWithdrawlEncashController"/>
+    <property name="FormName" value="PO Withdrawl(Encash) By Transfer Listing"/>
+  </object>
+
+  <!--//PO Withdrawal(Encash)//-->
+  <object id="frmMNMVEW00079.POWithdrawlByAll" type="Ace.Cbs.Mnm.Vew.MNMVEW00079, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="POWithdrawlEncashController"/>
+    <property name="FormName" value="PO Withdrawl(Encash) All Listing"/>
+  </object>
+
+
+
+  <!--Auto Link Debit Listing-->
+  <object id="frmMNMVEW00040" type="Ace.Cbs.Mnm.Vew.MNMVEW00040, Ace.Cbs.Mnm.Vew" parent="SecureDockForm" singleton="false">
+	  <property name="Controller" ref="AutoLinkListingController"/>
+    <property name="FormName" value="Debit"/>
+    
+  </object>
+
+	<!--Auto Link Schedule-->
+	<object id="frmMNMVEW00039" type="Ace.Cbs.Mnm.Vew.MNMVEW00039, Ace.Cbs.Mnm.Vew" parent="SecureDockForm" singleton="false">
+		<property name="Controller" ref="AutoLinkScheduleController"/>
+	</object>
+  
+  <!--Tri Balance Detail-->
+  <object id="frmMNMVEW00043" type="Ace.Cbs.Mnm.Vew.MNMVEW00043, Ace.Cbs.Mnm.Vew" parent="SecureDockForm" singleton="false">
+    <property name="Controller" ref="TriBalanceListingController"/>
+  </object>
+  
+  <!--Tri Balance Group-->
+  <object id="frmMNMVEW00044" type="Ace.Cbs.Mnm.Vew.MNMVEW00044, Ace.Cbs.Mnm.Vew" parent="SecureDockForm" singleton="false">
+    <property name="Controller" ref="TriBalanceGroupController"/>
+  </object>
+  
+  <!--Trial Sheet-->
+  <object id="frmMNMVEW00045" type="Ace.Cbs.Mnm.Vew.MNMVEW00045, Ace.Cbs.Mnm.Vew" parent="SecureDockForm" singleton="false">
+    <property name="Controller" ref="TriSheetController"/>
+  </object>
+
+  <!-- Bank Statement Monthly Report-->
+  <object id="frmMNMRDLC00014.Report" type="Ace.Cbs.Mnm.Vew.MNMVEW00094, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+  </object>
+  
+  <!--Current All-->
+  <object id="frmMNMVEW00046.Current" type="Ace.Cbs.Mnm.Vew.MNMVEW00046, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+	  <property name="Controller" ref="BankStatementMonthlyController"/>
+	  <property name="FormName" value="Bank Statement Listing For Current All Account"/>
+  </object>
+  
+  <!--Saving All-->
+  <object id="frmMNMVEW00046.Saving" type="Ace.Cbs.Mnm.Vew.MNMVEW00046, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+	  <property name="Controller" ref="BankStatementMonthlyController"/>
+    <property name="FormName" value="Bank Statement Listing For Saving All Account"/>
+  </object>
+  
+  <!--Current Specific-->
+  <object id="frmMNMVEW00046.CurrentSpecific" type="Ace.Cbs.Mnm.Vew.MNMVEW00046, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+	  <property name="Controller" ref="BankStatementMonthlyController"/>
+    <property name="FormName" value="Bank Statement For Current Specific A/C"/>
+  </object>
+  
+  <!--Saving Specific-->
+  <object id="frmMNMVEW00046.SavingSpecific" type="Ace.Cbs.Mnm.Vew.MNMVEW00046, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+	  <property name="Controller" ref="BankStatementMonthlyController"/>
+    <property name="FormName" value="Bank Statement For Saving Specific A/C"/>
+  </object>
+  
+  <!--Balance Confirmation.Current All-->
+  <object id="frmMNMVEW00047.CurrentAll" type="Ace.Cbs.Mnm.Vew.MNMVEW00047, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="FormName" value="Current All"/>
+    <property name="AcSign" value="CA"/>
+    <property name="Controller" ref="BalanceConfirmationController"/>
+  </object>
+
+  <!--Balance Confirmation.Saving All-->
+  <object id="frmMNMVEW00047.SavingAll" type="Ace.Cbs.Mnm.Vew.MNMVEW00047, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="FormName" value="Saving All"/>
+    <property name="AcSign" value="SA"/>
+    <property name="Controller" ref="BalanceConfirmationController"/>
+  </object>
+
+  <!--Balance Confirmation.Current Specific-->
+  <object id="frmMNMVEW00047.CurrentSpecific" type="Ace.Cbs.Mnm.Vew.MNMVEW00047, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="FormName" value="Current Specific"/>
+    <property name="AcSign" value="CS"/>
+    <property name="Controller" ref="BalanceConfirmationController"/>
+  </object>
+
+  <!--Balance Confirmation.Saving Specific-->
+  <object id="frmMNMVEW00047.SavingSpecific" type="Ace.Cbs.Mnm.Vew.MNMVEW00047, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="FormName" value="Saving Specific"/>
+    <property name="AcSign" value="SS"/>
+    <property name="Controller" ref="BalanceConfirmationController"/>
+  </object>
+  
+  <!--Balance Certificate-->
+  <object id="frmMNMVEW00049.BalanceCertificate" type="Ace.Cbs.Mnm.Vew.MNMVEW00049, Ace.Cbs.Mnm.Vew" parent="SecureDockForm" singleton="false">
+    <property name="Controller" ref="BalanceCertificateController"/>
+  </object>
+  
+  <!--Interest Schedule.Apr-Jun-->
+  <object id="frmMNMVEW00050.Apr-Jun" type="Ace.Cbs.Mnm.Vew.MNMVEW00050, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="InterestScheduleController"/>
+    <property name="FormName" value="Interest Schedule (Apr-Jun)"/>
+  </object>
+
+  <!--Interest Schedule.July-Sep-->
+  <object id="frmMNMVEW00050.July-Sep" type="Ace.Cbs.Mnm.Vew.MNMVEW00050, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="InterestScheduleController"/>
+    <property name="FormName" value="Interest Schedule (July-Sep)"/>
+  </object>
+
+  <!--Interest Schedule.Oct-Dec-->
+  <object id="frmMNMVEW00050.Oct-Dec" type="Ace.Cbs.Mnm.Vew.MNMVEW00050, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="InterestScheduleController"/>
+    <property name="FormName" value="Interest Schedule (Oct-Dec)"/>
+  </object>
+
+  <!--Interest Schedule.Jan-Mar-->
+  <object id="frmMNMVEW00050.Jan-Mar" type="Ace.Cbs.Mnm.Vew.MNMVEW00050, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="InterestScheduleController"/>
+    <property name="FormName" value="Interest Schedule (Jan-Mar)"/>
+  </object>
+
+  <!--Sub Ledger(Customer).Current All-->
+  <object id="frmMNMVEW00052.CurrentAll" type="Ace.Cbs.Mnm.Vew.MNMVEW00052, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="FormName" value="Current All"/>
+    <property name="Controller" ref="SubLedgerCusController"/>
+  </object>
+
+  <!--Sub Ledger(Customer).Current Specific-->
+  <object id="frmMNMVEW00052.CurrentSpecific" type="Ace.Cbs.Mnm.Vew.MNMVEW00052, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="FormName" value="Current Specific"/>
+    <property name="Controller" ref="SubLedgerCusController"/>
+  </object>
+
+  <!--Sub Ledger(Customer).Saving All-->
+  <object id="frmMNMVEW00052.SavingAll" type="Ace.Cbs.Mnm.Vew.MNMVEW00052, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="FormName" value="Saving All"/>
+    <property name="Controller" ref="SubLedgerCusController"/>
+  </object>
+
+  <!--Sub Ledger(Customer).Saving Specific-->
+  <object id="frmMNMVEW00052.SavingSpecific" type="Ace.Cbs.Mnm.Vew.MNMVEW00052, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="FormName" value="Saving Specific"/>
+    <property name="Controller" ref="SubLedgerCusController"/>
+  </object>
+  
+  <!--Ledger Balance By Transaction Listing-->
+  <object id="frmMNMVEW00053" type="Ace.Cbs.Mnm.Vew.MNMVEW00053, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="FormName" value="Ledger Balance All"/>
+    <property name="Controller" ref="LedgerBalanceByTransactionController"/>
+  </object>
+  
+  <!--Sub Ledger(Domestic)-->
+  <object id="frmMNMVEW00054" type="Ace.Cbs.Mnm.Vew.MNMVEW00054, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="SubLedgerDomesticController"/>
+  </object>
+
+	<!-- Ledger Balance All-->
+	<object id="frmMNMVEW00061" type="Ace.Cbs.Mnm.Vew.MNMVEW00061, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+		<!--<property name="FormName" value="LedgerBalanceAll"></property>-->
+	</object>
+  
+  <!--Cash Control Report-->
+  <object id="frmMNMVEW00056" type="Ace.Cbs.Mnm.Vew.MNMVEW00056, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+	  <property name="Controller" ref="CashControlController"/>
+  </object>
+  
+  <!--Current Account_All Listing-->
+  <object id="frmMNMVEW00057.CurrentAll" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+	 <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Current Account All"/>
+  </object>
+
+  <!--Current Account_Individual Listing-->
+  <object id="frmMNMVEW00057.CurrentIndividual" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+	  <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Current Account Individual"/>
+  </object>
+
+  <!--Current Account_Joint Listing-->
+  <object id="frmMNMVEW00057.CurrentJoint" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+	  <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Current Account Joint"/>
+  </object>
+
+  <!--Current Account_Company Listing-->
+  <object id="frmMNMVEW00057.CurrentCompany" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+	  <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Current Account Company"/>
+  </object>
+
+  <!--Current Account_Private Firm Listing-->
+  <object id="frmMNMVEW00057.CurrentPrivateFirm" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+	  <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Current Account Private Firm"/>
+  </object>
+
+  <!--Current Account_Partnership Listing-->
+  <object id="frmMNMVEW00057.CurrentPartnership" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+	  <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Current Account Partnership"/>
+  </object>
+
+  <!--Current Account_Association Listing-->
+  <object id="frmMNMVEW00057.CurrentAssociation" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+	  <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Current Account Association"/>
+  </object>
+
+  <!--Saving Account_All Listing-->
+  <object id="frmMNMVEW00057.SavingAll" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+	  <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Saving Account All"/>
+  </object>
+
+  <!--Saving Account_Individual Listing-->
+  <object id="frmMNMVEW00057.SavingIndividual" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+	  <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Saving Account Individual"/>
+  </object>
+
+  <!--Saving Account_Joint Listing-->
+  <object id="frmMNMVEW00057.SavingJoint" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+	  <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Saving Account Joint"/>
+  </object>
+
+  <!--Saving Account_Organization Listing-->
+  <object id="frmMNMVEW00057.SavingOrganization" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+	  <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Saving Account Organization"/>
+  </object>
+
+  <!--Saving Account_Minor Listing-->
+  <object id="frmMNMVEW00057.SavingMinor" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+	  <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Saving Account Minor"/>
+  </object>
+
+  <!--Fixed Account_All Listing-->
+  <object id="frmMNMVEW00058.FixedAll" type="Ace.Cbs.Mnm.Vew.MNMVEW00058, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="FixedAccountListingController"/>
+    <property name="FormName" value="Fixed Deposit Account All"/>
+  </object>
+
+  <!--Fixed Account_Individual Listing-->
+  <object id="frmMNMVEW00058.FixedIndividual" type="Ace.Cbs.Mnm.Vew.MNMVEW00058, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="FixedAccountListingController"/>
+    <property name="FormName" value="Fixed Deposit Account Individual"/>
+  </object>
+
+  <!--Fixed Account_Joint Listing-->
+  <object id="frmMNMVEW00058.FixedJoint" type="Ace.Cbs.Mnm.Vew.MNMVEW00058, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="FixedAccountListingController"/>
+    <property name="FormName" value="Fixed Deposit Account Joint"/>
+  </object>
+
+  <!--Fixed Account_Co/Organization Listing-->
+  <object id="frmMNMVEW00058.FixedOrganization" type="Ace.Cbs.Mnm.Vew.MNMVEW00058, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="FixedAccountListingController"/>
+    <property name="FormName" value="Fixed Deposit Account Co/Organization"/>
+  </object>
+ 
+  <!--Fixed Account_Minor Listing-->
+  <object id="frmMNMVEW00058.FixedMinor" type="Ace.Cbs.Mnm.Vew.MNMVEW00058, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="FixedAccountListingController"/>
+    <property name="FormName" value="Fixed Deposit Account Minor"/>
+  </object>
+  
+  
+  <!--Fixed Account_Receipt Listing-->
+  <object id="frmMNMVEW00059.FixedReceipt" type="Ace.Cbs.Mnm.Vew.MNMVEW00059, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="FixedReceiptController"/>
+  </object>
+
+  <!--Fixed Account_Duration Listing-->
+  <object id="frmMNMVEW00060.FixedDuration" type="Ace.Cbs.Mnm.Vew.MNMVEW00060, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="FixedDepoDurationListingController"/>
+  </object>
+
+  <!--Fixed All_Receipt Report Listing-->
+  <object id="frmMNMVEW00107FixedDepoAll_ReceiptReport" type="Ace.Cbs.Mnm.Vew.MNMVEW00107, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+  </object>
+
+  <!--Fixed Account_Duration Report Listing-->
+  <object id="frmMNMVEW00108FixedDepoReceiptReport" type="Ace.Cbs.Mnm.Vew.MNMVEW00108, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+  </object>
+
+  <!--Fixed Account_Duration Report Listing-->
+  <object id="frmMNMVEW00131FixedDepoDurationReport" type="Ace.Cbs.Mnm.Vew.MNMVEW00131, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+  </object>
+  
+
+  <!--Current Account (Individual) Editing -->
+	<object id="frmCurrentAccount.Individual_Editing" type="Ace.Cbs.Mnm.Vew.MNMVEW00031, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+		<property name="Controller" ref="IndividualEditingController"/>
+		<property name="AcSign" value="CI"/>
+		<property name="FormName" value="Current.Individual"/>	
+	</object>
+
+  <!--//Added by HWKO (26-Dec-2017) -->
+  <!--Business Loan Account (Individual) Editing -->
+  <object id="frmBLAccount.Individual_Editing" type="Ace.Cbs.Mnm.Vew.MNMVEW00031, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="IndividualEditingController"/>
+    <property name="AcSign" value="BI"/>
+    <property name="FormName" value="BUSINESSLOAN.Individual"/>
+  </object>
+
+  <!--Personal Loan Account (Individual) Editing -->
+  <object id="frmPLAccount.Individual_Editing" type="Ace.Cbs.Mnm.Vew.MNMVEW00031, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="IndividualEditingController"/>
+    <property name="AcSign" value="PI"/>
+    <property name="FormName" value="PERSONALLOAN.Individual"/>
+  </object>
+
+  <!--Hire Purchase Loan Account (Individual) Editing -->
+  <object id="frmHPAccount.Individual_Editing" type="Ace.Cbs.Mnm.Vew.MNMVEW00031, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="IndividualEditingController"/>
+    <property name="AcSign" value="HI"/>
+    <property name="FormName" value="HIREPURCHASELOAN.Individual"/>
+  </object>
+
+  <!--Dealer Account (Individual) Editing -->
+  <object id="frmDealerAccount.Individual_Editing" type="Ace.Cbs.Mnm.Vew.MNMVEW00031, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="IndividualEditingController"/>
+    <property name="AcSign" value="DI"/>
+    <property name="FormName" value="DEALER.Individual"/>
+  </object>
+  <!--//End Region-->
+
+	<!--Current Account (Private Firm) Editing -->
+	<object id="frmCurrentAccount.PrivateFirm_Editing" type="Ace.Cbs.Mnm.Vew.MNMVEW00031, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+		<property name="Controller" ref="IndividualEditingController"/>
+		<property name="AcSign" value="CS"/>
+		<property name="FormName" value="Current.PrivateFirm"/>
+	</object>
+
+	<!--Saving Account (Individual) Editing -->
+	<object id="frmSavingAccount.Individual_Editing" type="Ace.Cbs.Mnm.Vew.MNMVEW00031, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+		<property name="Controller" ref="IndividualEditingController"/>
+		<property name="AcSign" value="SI"/>
+		<property name="FormName" value="Saving.Individual"/>
+	</object>
+
+	<!--Saving Account (Minor) Editing -->
+	<object id="frmSavingAccount.Minor_Editing" type="Ace.Cbs.Mnm.Vew.MNMVEW00031, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+		<property name="Controller" ref="IndividualEditingController"/>
+		<property name="AcSign" value="SM"/>
+		<property name="FormName" value="Saving.Minor"/>
+	</object>
+
+	<!--Fixed Account (Individual) Editing -->
+	<object id="frmFixedAccount.Individual_Editing" type="Ace.Cbs.Mnm.Vew.MNMVEW00031, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+		<property name="Controller" ref="IndividualEditingController"/>
+		<property name="AcSign" value="FI"/>
+		<property name="FormName" value="Fixed.Individual"/>
+	</object>
+	
+	<!--Fixed Account (Minor) Editing -->
+	<object id="frmFixedAccount.Minor_Editing" type="Ace.Cbs.Mnm.Vew.MNMVEW00031, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+		<property name="Controller" ref="IndividualEditingController"/>
+		<property name="AcSign" value="FM"/>
+		<property name="FormName" value="Fixed.Minor"/>
+	</object>
+
+
+  <!--Endregion-->
+  
+	<!-- Monthly Closing Listing -> Drawing Remittance -->
+	<object id="frmMNMVEW00048.DrawingRemittance" type="Ace.Cbs.Mnm.Vew.MNMVEW00048, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+		<!--<property name="Controller" ref="DrawingRemittanceMonthlyClosingListingController"/>-->
+	</object>
+
+	<!-- Monthly Closing Listing -> Encashment Remittance -->
+	<object id="frmMNMVEW00048.EncashRemittance" type="Ace.Cbs.Mnm.Vew.MNMVEW00048, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+		<!--<property name="Controller" ref="EncashmentRemittanceMonthlyClosingListingController"/>-->
+	</object>
+
+	<!-- Interest  Listing -> Interest(Payment)  ->Fixed Deposit Interest  -> Interest Oustanding Listing -->
+	<object id="frmMNMVEW00065" type="Ace.Cbs.Mnm.Vew.MNMVEW00065, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+		<!--<property name="Controller" ref="InterestOutstandingListingController"/>-->
+	</object>
+
+	<!-- Payment Order Remittance Listing -> PO & IR-> Oustanding All -->
+	<object id="frmOutstandingAll.PORListing" type="Ace.Cbs.Mnm.Vew.MNMVEW00076, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureBaseForm">
+		<!--<property name="Controller" ref="SavingBalanceInterestListingController"/>-->
+	</object>
+
+  <!-- Interest Listing -> Interest Schedule Listing -->
+  <object id="frmMNMVEW00099" type="Ace.Cbs.Mnm.Vew.MNMVEW00099, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="InterestScheduleReportController"/>
+    <property name="FormName" value="Interest Schedule "/>
+  </object>
+
+  <!-- Interest Listing -> Saving Balance (Interest) -->
+  <object id="frmMNMVEW00100" type="Ace.Cbs.Mnm.Vew.MNMVEW00100, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="SavingBalanceInterestReportController"/>
+    <property name="FormName" value="Saving Balance (Interest) "/>
+  </object>
+
+  <!-- Interest Listing -> SubLedger (Customer) All Listing -->
+  <object id="frmMNMVEW00101" type="Ace.Cbs.Mnm.Vew.MNMVEW00101, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="SubLedgerCustomerReportController"/>
+    <property name="FormName" value="Sub Ledger Sheet for (Customer) A/C All "/>
+  </object>
+
+	<!-- Interest Listing -> SubLedger (Customer) Specific Listing -->
+	<object id="frmMNMVEW00104" type="Ace.Cbs.Mnm.Vew.MNMVEW00104, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+		<property name="Controller" ref="SubLedgerCustomerSpecificReportController"/>
+		<property name="FormName" value="Sub Ledger Sheet for (Customer) A/C Specific "/>
+	</object>
+
+  <!--Balance Confirmation-->
+  <object id="frmMNMVEW00095BalanceConfirmationReprot" type="Ace.Cbs.Mnm.Vew.MNMVEW00095, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+    <!--<property name="Controller" ref="InterestOutstandingListingController"/>-->
+  </object>
+
+  <!--TriBalanceDetailReport-->
+  <object id="frmMNMVEW00091TriBalanceDetailReport" type="Ace.Cbs.Mnm.Vew.MNMVEW00091, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="TriBalanceDetailReportController"/>
+  </object>
+  
+  <!--TriBalanceGroupReport-->
+  <object id="frmMNMVEW00092TriBalanceGroupReport" type="Ace.Cbs.Mnm.Vew.MNMVEW00092, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="TriBalanceGroupReportController"/>
+  </object>
+
+  <!--TrialSheetReport-->
+  <object id="frmMNMVEW00093TrialSheetReport" type="Ace.Cbs.Mnm.Vew.MNMVEW00093, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+    <!--<property name="Controller" ref="InterestOutstandingListingController"/>-->
+  </object>
+
+  <!--BalanceCertificateReprot"-->
+  <object id="frmMNMVEW00098BalanceCertificateReprot" type="Ace.Cbs.Mnm.Vew.MNMVEW00098, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+    <!--<property name="Controller" ref="InterestOutstandingListingController"/>-->
+  </object>
+
+  <!--TransferScrollReprot"-->
+  <object id="frmMNMVEW00082TransferScrollReprot" type="Ace.Cbs.Mnm.Vew.MNMVEW00082, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+    <!--<property name="Controller" ref="InterestOutstandingListingController"/>-->
+  </object>
+
+  <!--Ledger Balance By Transaction Report Listing -->
+  <object id="frmMNMVEW00102" type="Ace.Cbs.Mnm.Vew.MNMVEW00102, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="true">
+    <property name="Controller" ref="LedgerBalByTransReportController"/>
+    <property name="FormName" value="Ledger Balance By Transaction "/>
+  </object>
+
+  <object id="frmMNMVEW00163" type="Ace.Cbs.Mnm.Vew.MNMVEW00163, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="true">
+    <property name="FormName" value="Ledger Balance By Transaction "/>
+  </object>
+
+  <!-- Interest Listing -> SubLedger (Domestic) Listing -->
+  <object id="frmMNMVEW00103" type="Ace.Cbs.Mnm.Vew.MNMVEW00103, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+    <!--<property name="Controller" ref="SubLedgerDomesticReportController"/>-->
+    <property name="FormName" value="Sub Ledger (Domestic) "/>
+  </object>
+  
+  <!-- DrawingPrinting Report-->
+  <object id="frmMNMVEW00130DrawintPrintingReport" type="Ace.Cbs.Mnm.Vew.MNMVEW00130, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+  </object>
+  <!--Endregion-->
+
+  <!-- DrawingPrinting Report-->
+  <object id="frmMNMVEW00027DrawintRemittanceAdjustment" type="Ace.Cbs.Mnm.Vew.MNMVEW00027, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="DrawingRemittanceAdjustmentController"/>
+  </object>
+  <!--Endregion-->
+
+	<!-- Customer Current Account (All) Report-->
+	<object id="frmMNMVEW00106" type="Ace.Cbs.Mnm.Vew.MNMVEW00106, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+	</object>
+	<!--Endregion-->
+
+	<!-- Customer Current Account (Partnership) Report-->
+	<object id="frmMNMVEW00132" type="Ace.Cbs.Mnm.Vew.MNMVEW00132, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+	</object>
+	<!--Endregion-->
+
+	<!-- Customer Current Account (Company) Report-->
+	<object id="frmMNMVEW00133" type="Ace.Cbs.Mnm.Vew.MNMVEW00133, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+	</object>
+	<!--Endregion-->
+
+	<!-- Customer Current Account (Private Firm) Report-->
+	<object id="frmMNMVEW00134" type="Ace.Cbs.Mnm.Vew.MNMVEW00134, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">		
+	</object>
+	<!--Endregion-->
+
+	<!-- Customer Current Account (Individual) Report-->
+	<object id="frmMNMVEW00135" type="Ace.Cbs.Mnm.Vew.MNMVEW00135, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">		
+	</object>
+	<!--Endregion-->
+
+	<!-- Customer Saving Account (Minor) Report-->
+	<object id="frmMNMVEW00136" type="Ace.Cbs.Mnm.Vew.MNMVEW00136, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">		
+	</object>	
+	<!--Endregion-->
+
+	<!-- Auto Link Schedule Report-->
+	<object id="frmMNMVEW00088" type="Ace.Cbs.Mnm.Vew.MNMVEW00088, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+	</object>
+  
+  
+  
+	<!--Endregion-->
+
+	<!-- Fixed Deposit Certificate Printing Report-->
+	<object id="frmFixedDepositCertificatePrinting" type="Ace.Cbs.Mnm.Vew.MNMVEW00105, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+	</object>
+
+  <object id="frmFixedDepositCertificateDirectPrinting" type="Ace.Cbs.Mnm.Vew.MNMVEW00164, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+  </object>
+	<!--Endregion-->
+
+  <!--//PO and IR//-->
+  <object id="frmMNMVEW00076" type="Ace.Cbs.Mnm.Vew.MNMVEW00076, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="POIRController"/>
+  </object>
+
+	<!-- PO Register Listing Report-->
+	<object id="frmMNMVEW00122" type="Ace.Cbs.Mnm.Vew.MNMVEW00122, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+	</object>
+	<!--Endregion-->
+
+	<!--Cash Denomination Editing -->
+	<object id="frmCashDenoEdit.Indi" type="Ace.Cbs.Mnm.Vew.MNMVEW00139, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+		<property name="Controller" ref="CashDenoEditController"/>
+		<property name="FormName" value="CashDenoEdit.Indi"/>
+	</object>
+	
+	<!-- PO Withdrawal Listing Report-->
+	<object id="frmMNMVEW00123" type="Ace.Cbs.Mnm.Vew.MNMVEW00123, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+	</object>
+	<!--Endregion-->
+
+	<!-- IR Register Listing Report-->
+	<object id="frmMNMVEW00124" type="Ace.Cbs.Mnm.Vew.MNMVEW00124, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+		<property name="Controller" ref="IROutstandingController"/>
+	</object>
+	<!--Endregion-->
+	
+
+	<object id="frmCashDenoEdit.Multi" type="Ace.Cbs.Mnm.Vew.MNMVEW00139, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+		<property name="Controller" ref="CashDenoEditController"/>
+		<property name="FormName" value="CashDenoEdit.Multi"/>
+	</object>
+
+	<!--Fixed Deposit Interest Listing Report-->
+	<object id="frmMNMVEW00115" type="Ace.Cbs.Mnm.Vew.MNMVEW00115, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">		
+	</object>
+
+	<!--Coming Accrued Listing Report-->
+	<object id="frmMNMVEW00140" type="Ace.Cbs.Mnm.Vew.MNMVEW00140, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+	</object>
+
+
+	<!--Coming Interest Listing report-->
+	<object id="frmMNMVEW00141" type="Ace.Cbs.Mnm.Vew.MNMVEW00141, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+	</object>
+
+  <!--//Interest Outstanding//-->
+  <object id="frmMNMVEW00081" type="Ace.Cbs.Mnm.Vew.MNMVEW00081, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="InterestOutstandingController"/>
+  </object>
+	
+	<!--//Interest Outstanding//-->
+	<object id="frmMNMVEW00113" type="Ace.Cbs.Mnm.Vew.MNMVEW00113, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">		
+	</object>
+
+	<!--Fixed year end interest-->
+	<object id="frmMNMVEW00142" type="Ace.Cbs.Mnm.Vew.MNMVEW00142, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+		<property name="Controller" ref="FixedyearendInterestController"/>
+		<property name="FormName" value="Fixed Year End"/>
+	</object>
+
+	<!--Fixed year prev end interest-->
+	<object id="frmMNMVEW00142.Prev" type="Ace.Cbs.Mnm.Vew.MNMVEW00142, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+		<property name="Controller" ref="FixedyearendInterestController"/>
+		<property name="FormName" value="Fixed Year End Prev"/>
+	</object>
+
+	<!--Fixed year end interest Listing-->
+	<object id="frmMNMVEW00143" type="Ace.Cbs.Mnm.Vew.MNMVEW00143, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+		<property name="Controller" ref="FixedyearendInterestListingController"/>
+		<property name="FormName" value="Fixed Year End Interest"/>
+	</object>
+
+	<!--Fixed year prev end interest Listing-->
+	<object id="frmMNMVEW00143.Prev" type="Ace.Cbs.Mnm.Vew.MNMVEW00143, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+		<property name="Controller" ref="FixedyearendInterestListingController"/>
+		<property name="FormName" value="Fixed Year End Interest Prev"/>
+	</object>
+
+	<!--Cash Control Report (By Counter)-->
+	<object id="frmMNMVEW00055.ByCounter" type="Ace.Cbs.Mnm.Vew.MNMVEW00055, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+		<property name="Controller" ref="CashControlReportByCounterController"/>
+	</object>
+
+	<!--Message Box-->
+	<object id="frmMNMVEW00146" type="Ace.Cbs.Mnm.Vew.MNMVEW00146, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+		<property name="IsShowDialog" value="True"/>
+	</object>
+
+  <!--AutoLink Debit Listing Report-->
+  <object id="frmMNMVEW00144" type="Ace.Cbs.Mnm.Vew.MNMVEW00144, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+   </object>
+
+  <!--PO Register (Encash) Listing-->
+  <object id="frmMNMVEW00148" type="Ace.Cbs.Mnm.Vew.MNMVEW00148, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+    <property name="IsShowDialog" value="True"/>
+  </object>
+ 
+  <!--PO Withdrawl(Encash) By Cash Listing-->
+  <object id="frmMNMVEW00149" type="Ace.Cbs.Mnm.Vew.MNMVEW00149, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+    <property name="IsShowDialog" value="True"/>
+  </object>
+
+  <!--PO Withdrawl(Encash) By Transfer Listing-->
+  <object id="frmMNMVEW00150" type="Ace.Cbs.Mnm.Vew.MNMVEW00150, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+    <property name="IsShowDialog" value="True"/>
+  </object>
+
+  <!--PO Withdrawl(Encash) By All Listing-->
+  <object id="frmMNMVEW00151" type="Ace.Cbs.Mnm.Vew.MNMVEW00151, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+    <property name="IsShowDialog" value="True"/>
+  </object>
+
+  <!--Fixed Renewal Status Listing-->
+<object id="frmMNMVEW00152" type="Ace.Cbs.Mnm.Vew.MNMVEW00152, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="FixedRenewalListingController"/>
+    <property name="FormName" value="Fixed Auto Renewal Listing"/>
+</object>
+
+<!--Fixed Auto Renewal Listing-->
+  <object id="frmMNMVEW00153" type="Ace.Cbs.Mnm.Vew.MNMVEW00153, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+    <property name="IsShowDialog" value="True"/>
+  </object>
+  
+  <!--Drawing Remittance Monthly Closing-->
+  <object id="frmMNMVEW00156.MonthlyDrawingRemittanceListing" type="Ace.Cbs.Mnm.Vew.MNMVEW00156, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">
+    <property name="DrawingRemittanceMonthlyClosingController" ref="DrawingEncashMonthlyClosingController"/>  
+    <property name="FormName" value="Monthly Drawing Remittance Listing"/>      
+  </object>
+
+  <object id="frmMNMVEW00156.MonthlyEncashRemittanceListing" type="Ace.Cbs.Mnm.Vew.MNMVEW00156, Ace.Cbs.Mnm.Vew" parent="NonSecureBaseForm" singleton="false">     
+    <property name="DrawingRemittanceMonthlyClosingController" ref="DrawingEncashMonthlyClosingController"/>
+    <property name="FormName" value="Monthly Encash Remittance Listing"/>
+  </object>
+
+  <object id="frmMNMVEW00157DrawingTransaction" type="Ace.Cbs.Mnm.Vew.MNMVEW00157, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+  </object>
+
+  <object id="frmMNMVEW00160EncashTransaction" type="Ace.Cbs.Mnm.Vew.MNMVEW00160, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+  </object>
+
+  <object id="frmMNMVEW00157DrawingSettlement" type="Ace.Cbs.Mnm.Vew.MNMVEW00157, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+  </object>
+
+  <object id="frmMNMVEW00160EncashSettlement" type="Ace.Cbs.Mnm.Vew.MNMVEW00160, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureDockForm">
+  </object>
+
+  <object id="frmMNMVEW00158" type="Ace.Cbs.Mnm.Vew.MNMVEW00158, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+	<object id="frmMNMVEW00159" type="Ace.Cbs.Mnm.Vew.MNMVEW00159, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+
+  <object id="frmMNMVEW00161" type="Ace.Cbs.Mnm.Vew.MNMVEW00161, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="FixedDepositInterestWithdrawListingController" ref="FixedDepositInterestWithdrawListingController"/>
+  </object>
+
+  <object id="frmMNMVEW00162" type="Ace.Cbs.Mnm.Vew.MNMVEW00162, Ace.Cbs.Mnm.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+  <!--Business Loan Account_All Listing // Added By HWKO (23-Jun-2017)-->
+  <object id="frmMNMVEW00057.BusinessLoanAll" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Business Loan Account All"/>
+  </object>
+
+  <!--Business Loan Account_Individual Listing // Added By HWKO (23-Jun-2017)-->
+  <object id="frmMNMVEW00057.BusinessLoanIndividual" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Business Loan Account Individual"/>
+  </object>
+
+  <!--Business Loan Account_Joint Listing // Added By HWKO (23-Jun-2017)-->
+  <object id="frmMNMVEW00057.BusinessLoanJoint" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Business Loan Account Joint"/>
+  </object>
+
+  <!--Business Loan Account_Company Listing // Added By HWKO (23-Jun-2017)-->
+  <object id="frmMNMVEW00057.BusinessLoanCompany" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Business Loan Account Company"/>
+  </object>
+  <!--End-->
+
+  <!--Hire Purchase Loan Account_All Listing // Added By HWKO (23-Jun-2017)-->
+  <object id="frmMNMVEW00057.HirePurchaseLoanAll" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Hire Purchase Loan Account All"/>
+  </object>
+
+  <!--Hire Purchase Loan Account_Individual Listing // Added By HWKO (23-Jun-2017)-->
+  <object id="frmMNMVEW00057.HirePurchaseLoanIndividual" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Hire Purchase Loan Account Individual"/>
+  </object>
+
+  <!--Hire Purchase Loan Account_Joint Listing // Added By HWKO (23-Jun-2017)-->
+  <object id="frmMNMVEW00057.HirePurchaseLoanJoint" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Hire Purchase Loan Account Joint"/>
+  </object>
+
+  <!--Hire Purchase Loan Account_Company Listing // Added By HWKO (23-Jun-2017)-->
+  <object id="frmMNMVEW00057.HirePurchaseLoanCompany" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Hire Purchase Loan Account Company"/>
+  </object>
+  <!--End-->
+
+  <!--Personal Loan Account_All Listing // Added By HWKO (23-Jun-2017)-->
+  <object id="frmMNMVEW00057.PersonalLoanAll" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Personal Loan Account All"/>
+  </object>
+
+  <!--Personal Loan Account_Individual Listing // Added By HWKO (23-Jun-2017)-->
+  <object id="frmMNMVEW00057.PersonalLoanIndividual" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Personal Loan Account Individual"/>
+  </object>
+
+  <!--Personal Loan Account_Joint Listing // Added By HWKO (23-Jun-2017)-->
+  <object id="frmMNMVEW00057.PersonalLoanJoint" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Personal Loan Account Joint"/>
+  </object>
+
+  <!--Personal Loan Account_Company Listing // Added By HWKO (23-Jun-2017)-->
+  <object id="frmMNMVEW00057.PersonalLoanCompany" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Personal Loan Account Company"/>
+  </object>
+  <!--End-->
+
+  <!--Dealer Account_All Listing // Added By HWKO (04-Aug-2017)-->
+  <object id="frmMNMVEW00057.DealerAll" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Dealer Account All"/>
+  </object>
+
+  <!--Dealer Account_Individual Listing // Added By HWKO (04-Aug-2017)-->
+  <object id="frmMNMVEW00057.DealerIndividual" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Dealer Account Individual"/>
+  </object>
+
+  <!--Dealer Account_Joint Listing // Added By HWKO (04-Aug-2017)-->
+  <object id="frmMNMVEW00057.DealerJoint" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Dealer Account Joint"/>
+  </object>
+
+  <!--Dealer Account_Company Listing // Added By HWKO (04-Aug-2017)-->
+  <object id="frmMNMVEW00057.DealerCompany" type="Ace.Cbs.Mnm.Vew.MNMVEW00057, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="AccountOpeningListingController"/>
+    <property name="FormName" value="Dealer Account Company"/>
+  </object>
+  <!--End-->
+
+  <!--Trial Balance Group Listing By Date// Added By HWKO (31-Aug-2017)-->
+  <object id="frmMNMVEW00165.Group" type="Ace.Cbs.Mnm.Vew.MNMVEW00165, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="TrialBalanceListingByDateController"/>
+    <property name="FormName" value="Trial Balance Group Listing By Date"/>
+  </object>
+
+  <!--Trial Balance Detail Listing By Date// Added By HWKO (31-Aug-2017)-->
+  <object id="frmMNMVEW00165.Detail" type="Ace.Cbs.Mnm.Vew.MNMVEW00165, Ace.Cbs.Mnm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="TrialBalanceListingByDateController"/>
+    <property name="FormName" value="Trial Balance Detail Listing By Date"/>
+  </object>
+  <!--End-->
+
+  <!--//Group Reversal//-->
+  <object id="frmMNMVEW00166" type="Ace.Cbs.Mnm.Vew.MNMVEW00166, Ace.Cbs.Mnm.Vew" parent="SecureDockForm" singleton="false">
+    <property name="Controller" ref="GroupAdjustmentVoucherController"/>
+  </object>
+</objects>	

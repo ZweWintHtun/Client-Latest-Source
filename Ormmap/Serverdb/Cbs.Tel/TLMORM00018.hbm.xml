@@ -1,0 +1,970 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Loans-->
+<!-- 
+// <copyright file="TLMORM00018.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>Nyo Me San</CreatedUser>
+// <CreatedDate>2013-05-21</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version>1.0</Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Tel.Dmd" namespace="Ace.Cbs.Tel.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Tel.Dmd.TLMDTO00018, Ace.Cbs.Tel.Dmd" rename="loansdto" />
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00021, Ace.Cbs.Loan.Dmd" rename="lidto"/>
+
+  <class name="TLMORM00018" table="Loans">
+    <id name="Lno">
+      <column name="Lno" sql-type="varchar" not-null="true" />
+    </id>
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+    <property name="AccountNo">
+      <column name="AcctNo" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="AType">
+      <column name="AType" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="BType">
+      <column name="BType" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="SDate">
+      <column name="SDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="SAmount">
+      <column name="SAmt" sql-type="numeric" not-null="false" />
+    </property>
+    <property name="Time">
+      <column name="Time" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Loans_Type">
+      <column name="Loans_Type" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="RelatedGLACode">
+      <column name="RelatedGLACode" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="ExpireDate">
+      <column name="ExpireDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="IntRate">
+      <column name="IntRate" sql-type="numeric" not-null="false" />
+    </property>
+    <property name="UnUsedRate">
+      <column name="UnUsedRate" sql-type="numeric" not-null="false" />
+    </property>
+    <property name="UsedOverRate">
+      <column name="UsedOverRate" sql-type="numeric" not-null="false" />
+    </property>
+    <property name="FirstSAmount">
+      <column name="FirstSAmt" sql-type="numeric" not-null="false" />
+    </property>
+    <property name="DocmentationFee">
+      <column name="DocFee" sql-type="numeric" not-null="false" />
+    </property>
+    <property name="LasIntDate">
+      <column name="LasIntDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="LasRepayNo">
+      <column name="LasRepayNo" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Min_Period">
+      <column name="Min_Period" sql-type="numeric" not-null="false" />
+    </property>
+    <property name="Vouchered">
+      <column name="Vouchered" sql-type="bit" not-null="true" />
+    </property>
+    <property name="ACSign">
+      <column name="ACSign" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="UserNo">
+      <column name="UserNo" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Assessor">
+      <column name="Assessor" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Lawer">
+      <column name="Lawer" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="LegalCase">
+      <column name="LegalCase" sql-type="bit" not-null="true" />
+    </property>
+    <property name="LegalDate">
+      <column name="LegalDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="LegaLawer">
+      <column name="LegaLawer" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="CloseDate">
+      <column name="CloseDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="NPLCase">
+      <column name="NPLCase" sql-type="bit" not-null="true" />
+    </property>
+    <property name="NPLDate">
+      <column name="NPLDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="LastUserNo">
+      <column name="LastUserNo" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="LastDate">
+      <column name="LastDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="Partial">
+      <column name="Partial" sql-type="bit" not-null="false" />
+    </property>
+    <property name="VoucherDate">
+      <column name="VoucherDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="PartialNo">
+      <column name="PartialNo" sql-type="int" not-null="false" />
+    </property>
+    <property name="Scharges">
+      <column name="Scharges" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="TodSerial">
+      <column name="TodSerial" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="TodCloseDate">
+      <column name="TodCloseDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="Charges_Status">
+      <column name="Charges_Status" sql-type="char" not-null="false" />
+    </property>
+    <property name="MarkNPLUser">
+      <column name="MarkNPLUser" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="NPLReleaseUser">
+      <column name="NPLReleaseUser" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="MarkLegalUser">
+      <column name="MarkLegalUser" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="LegalReleaseUser">
+      <column name="LegalReleaseUser" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="UniqueId">
+      <column name="UId" sql-type="char" not-null="false" />
+    </property>
+    <property name="SourceBranchCode">
+      <column name="SourceBr" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Currency">
+      <column name="Cur" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="BalStatus">
+      <column name="BalStatus" sql-type="bit" not-null="false" />
+    </property>
+    <property name="isLateFee">
+      <column name="isLateFee" sql-type="bit" not-null="false" />
+    </property>
+    <property name="isSCharge">
+      <column name="isSCharge" sql-type="bit" not-null="false" />
+    </property>
+
+    <property name="GracePeriod">
+      <column name="GracePeriod" sql-type="numeric" not-null="false" />
+    </property>
+    <property name="PrincipleRepayOptions">
+      <column name="PrincipleRepayOptions" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="InterestRepayOptions">
+      <column name="InterestRepayOptions" sql-type="varchar" not-null="false" />
+    </property>
+	<property name="ReversalStatus">
+		<column name="ReversalStatus" sql-type="int" not-null="false" />
+	</property>
+
+    <!--<one-to-one name="Legal" column="[Lno]" class="LOMORM00013" insert="false" update="false"></one-to-one>-->
+    <!--Support fields-->
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+    <bag name="Li" inverse="true" lazy="true" cascade="none">
+      <key column="[LNo]" />
+      <one-to-many class="Ace.Cbs.Mnm.Dmd.MNMORM00017" />
+    </bag>
+
+  </class>
+
+  <!--<query name="LOMSVE00011.SelectLoanAccountInfo">
+    select new loansdto
+    (
+    l.Lno
+    )
+    from TLMORM00018 as l
+    inner join l.Legal as le
+    where l.Lno = le.Lno
+    and l.AccountNo = :accountNo
+    and (l.CloseDate is null or l.LegalCase = true)
+    and (le.CloseDate is null and l.AType != 'loans')
+    and 
+    l.Active = true
+    and le.Active = true
+  </query>-->
+
+  <!--//Added By HWKO (26-Jun-2017)-->
+  <query name="TLMSVR00042.SelectOverdraftExpireAmountByAccountNo">
+    select new loansdto
+    (
+    l.SAmount,
+    l.ExpireDate
+    )
+    from TLMORM00018 as l where l.AccountNo = :accountNo
+    and  l.AType = 'OVERDRAFT'
+    and l.Active = true
+  </query>
+
+  <!--//Added By HWKO (26-Jun-2017)-->
+  <query name="TLMSVR00042.SelectLoansExpireAmountByAccountNo">
+    select new loansdto
+    (
+    l.SAmount,
+    l.ExpireDate
+    )
+    from TLMORM00018 as l where l.AccountNo = :accountNo
+    and  l.AType = 'LOANS'
+    and l.Active = true
+  </query>
+
+  <query name="TLMSVR00042.SelectExpireAmountByAccountNo">
+    select new loansdto
+    (
+    l.SAmount,
+    l.ExpireDate
+    )
+    from TLMORM00018 as l where l.AccountNo = :accountNo
+    and l.Active = true
+  </query>
+
+  <query name="CXDAO00006.SelectLegalCaseAccountByAccountNo">
+    select new loansdto
+    (
+    l.AccountNo
+    )
+    from TLMORM00018 as l where l.AccountNo = :accountNo
+    and l.Active = true and l.LegalCase = true
+  </query>
+
+  <query name="CXDAO00006.SelectNPLCaseAccountByAccountNo">
+    select new loansdto
+    (
+    l.AccountNo
+    )
+    from TLMORM00018 as l where l.AccountNo = :accountNo
+    and l.Active = true and l.NPLCase = true and ( l.CloseDate is null or l.CloseDate='' )
+  </query>
+
+  <!--updated by ZMS (15.11.18) For Pristine requirement-->
+  <!--<query name="CXDAO00006.SelectExpiredLoansAccountByAccountNo">
+    <![CDATA[select new loansdto
+		(
+		l.AccountNo
+		)
+		from TLMORM00018 as l where l.AccountNo = :accountNo
+		and l.Active = true and convert(char(10),l.ExpireDate,111) < convert(char(10),:todaydate,111) 
+    and ( l.CloseDate is null or l.CloseDate='' )
+	]]>
+  </query>-->
+  <query name="CXDAO00006.SelectExpiredLoansAccountByAccountNo">
+    <![CDATA[select new loansdto
+		(
+		l.AccountNo
+		)
+		from TLMORM00018 as l where l.AccountNo = :accountNo
+		and l.Active = true and convert(char(10),l.ExpireDate,111) < convert(char(10),:todaydate,111) 
+	]]>
+  </query>
+
+  <query name="CXDAO00006.SelectSAmountByAccountNo">
+    select new loansdto
+    (
+    Sum(l.SAmount)
+    )
+    from TLMORM00018 as l where l.AccountNo = :accountNo
+    and l.Active = true and convert(char(10),l.ExpireDate,111) > convert(char(10),:todaydate,111) and ( l.CloseDate is null or l.CloseDate='' )
+  </query>
+
+  <!--TLMDAO00018.SelectForOverDraftPosting-->
+  <!--NLKK-->
+  <query name="TLMDAO00018.SelectForOverDraftPosting">
+    select new loansdto
+    (
+    l.LegalCase,
+    l.Lno,
+    l.AType,
+    l.NPLCase
+    )
+    from TLMORM00018 as l
+    where l.AccountNo = :accountNo and l.Active = true and (l.CloseDate is null or l.CloseDate = '')
+  </query>
+
+  <!--//TLMDAO00018.SelectAll//-->
+  <query name="TLMDAO00018.SelectAll">
+    select new loansdto(
+    l.Lno,
+    l.AccountNo,
+    l.AType,
+    l.BType,
+    l.SDate,
+    l.SAmount,
+    l.Time,
+    l.Loans_Type,
+    l.RelatedGLACode,
+    l.ExpireDate,
+    l.IntRate,
+    l.UnUsedRate,
+    l.FirstSAmount,
+    l.DocmentationFee,
+    l.LasIntDate,
+    l.LasRepayNo,
+    l.Min_Period,
+    l.Vouchered,
+    l.ACSign,
+    l.UserNo,
+    l.Assessor,
+    l.Lawer,
+    l.LegalCase,
+    l.LegalDate,
+    l.LegaLawer,
+    l.CloseDate,
+    l.NPLCase,
+    l.NPLDate,
+    l.LastUserNo,
+    l.LastDate,
+    l.Partial,
+    l.VoucherDate,
+    l.PartialNo,
+    l.Scharges,
+    l.TodSerial,
+    l.TodCloseDate,
+    l.Charges_Status,
+    l.MarkNPLUser,
+    l.NPLReleaseUser,
+    l.MarkLegalUser,
+    l.LegalReleaseUser,
+    l.UniqueId,
+    l.SourceBranchCode,
+    l.Currency,
+    l.Active,
+    l.TS,
+    l.CreatedDate,
+    l.CreatedUserId,
+    l.UpdatedDate,
+    l.UpdatedUserId,
+    l.BalStatus,
+    l.UsedOverRate,
+    l.isLateFee,
+    l.GracePeriod,
+    l.PrincipleRepayOptions,
+    l.InterestRepayOptions
+    )
+    from TLMORM00018 as l
+    where l.Active = true and ( l.CloseDate is null or l.CloseDate='' )
+    and l.SourceBranchCode=:SourceBranchCode
+  </query>
+
+  <!--TLMDAO00018.SelectLoansByCloseDate-->
+  <!--NLKK-->
+  <query name="TLMDAO00018.SelectLoansByCloseDate">
+    select new loansdto
+    (
+    l.AccountNo,
+    l.Lno,
+    l.LegalCase,
+    l.LasIntDate,
+    l.NPLCase,
+    l.Currency
+    )
+    from TLMORM00018 as l
+    where l.SourceBranchCode =: sourceBr and l.Active = true and (l.CloseDate is null or l.CloseDate = '')
+  </query>
+
+  <!--TLMDAO00018.UpdateLastIntDate-->
+  <!--NLKK-->
+  <query name="TLMDAO00018.UpdateLastIntDate">
+    update TLMORM00018 l
+    set l.LasIntDate = :lastIntDate,
+    l.UpdatedDate = :updatedDate,
+    l.UpdatedUserId = :updatedUserId
+    where l.Lno = :lno and l.Active = true
+  </query>
+
+  <!--TCMSVE00045.SelectLoanGuarantee-->
+  <query name="TCMSVE00045.SelectLoanGuarantee">
+    select new loansdto
+    (
+    l.AccountNo , l.Lno , pg.AccountNo
+    )
+    from TLMORM00018 as l , PFMORM00039 as pg
+    where pg.LineNo = l.Lno and pg.AccountNo = :acctno and pg.Active = true
+  </query>
+
+  <!--TCMSVE00045.SelectLoansInformationByAcctno //Updated By HWKO (01-June-2017)-->
+  <query name="TCMSVE00045.SelectLoansInformationByAcctno">
+    select new loansdto
+    (
+    l.AccountNo , l.Lno , l.SAmount
+    )
+    from TLMORM00018 as l
+    where l.AccountNo = :acctno and l.Active = true
+  </query>
+
+  <query name="TLMDAO00010.SelectLoanBetweenSysDateandToday">
+    select new loansdto
+    (
+    l.AccountNo,
+    l.Lno,
+    l.LegalCase,
+    l.LasIntDate,
+    l.NPLCase,
+    l.Currency
+    )
+    from TLMORM00018 as l
+    where l.CloseDate is null and
+    l.Active = true and
+    l.SourceBranchCode = :sourcebr and
+    convert(char(10),l.ExpireDate,111) between convert(char(10),:sysdate,111) and convert(char(10),:today,111)
+  </query>
+
+  <query name="TLMDAO00010.SelectLoanLessthanSysDate">
+    <![CDATA[
+		select new loansdto
+    (
+    l.AccountNo,
+    l.Lno,
+    l.LegalCase,
+    l.LasIntDate,
+    l.NPLCase,
+    l.Currency
+    )
+    from TLMORM00018 as l
+    where (l.CloseDate is null or l.CloseDate = '') and
+    l.Active = true and
+    l.SourceBranchCode = :sourcebr and
+    convert(char(10),l.ExpireDate,111) < convert(char(10),:sysdate,111) 
+		
+		]]>
+  </query>
+
+  <query name="TCMDAO00009.SelectInterestRate">
+    select new loansdto
+    (
+    l.IntRate
+    )
+    from TLMORM00018 as l where l.AccountNo = :accountNo
+    and l.Active = true and ( l.CloseDate is null or l.CloseDate='' )
+    and (l.AType = :acType1 or l.AType = :acType2)
+    order by SDate desc
+  </query>
+
+
+  <query name="TLMORM00018.GetLoansAccountInformation">
+    select new loansdto(
+    l.Lno,
+    l.AccountNo,
+    l.AType,
+    l.BType,
+    l.SDate,
+    l.SAmount,
+    l.Time,
+    l.Loans_Type,
+    l.RelatedGLACode,
+    l.ExpireDate,
+    l.IntRate,
+    l.UnUsedRate,
+    l.FirstSAmount,
+    l.DocmentationFee,
+    l.LasIntDate,
+    l.LasRepayNo,
+    l.Min_Period,
+    l.Vouchered,
+    l.ACSign,
+    l.UserNo,
+    l.Assessor,
+    l.Lawer,
+    l.LegalCase,
+    l.LegalDate,
+    l.LegaLawer,
+    l.CloseDate,
+    l.NPLCase,
+    l.NPLDate,
+    l.LastUserNo,
+    l.LastDate,
+    l.Partial,
+    l.VoucherDate,
+    l.PartialNo,
+    l.Scharges,
+    l.TodSerial,
+    l.TodCloseDate,
+    l.Charges_Status,
+    l.MarkNPLUser,
+    l.NPLReleaseUser,
+    l.MarkLegalUser,
+    l.LegalReleaseUser,
+    l.UniqueId,
+    l.SourceBranchCode,
+    l.Currency,
+    l.Active,
+    l.TS,
+    l.CreatedDate,
+    l.CreatedUserId,
+    l.UpdatedDate,
+    l.UpdatedUserId,
+    l.BalStatus,
+    l.UsedOverRate,
+    l.isSCharge,
+    l.isLateFee,
+    l.GracePeriod,
+    l.PrincipleRepayOptions,
+    l.InterestRepayOptions
+    )
+    from TLMORM00018 as l
+    where l.Lno = :loanNo
+    <!--and l.Vouchered = false -->
+	and l.SourceBranchCode=:sourceBr
+	and l.ReversalStatus = 0 <!--Added by HMW (17-10-2019)-->
+	and l.Active = true
+  </query>
+
+  <query name="TLMORM00018.GetLoansByLoanNo">
+    select new loansdto(
+    l.Lno,
+    l.AccountNo,
+    l.AType,
+    l.BType,
+    l.SDate,
+    l.SAmount,
+    l.Time,
+    l.Loans_Type,
+    l.RelatedGLACode,
+    l.ExpireDate,
+    l.IntRate,
+    l.UnUsedRate,
+    l.FirstSAmount,
+    l.DocmentationFee,
+    l.LasIntDate,
+    l.LasRepayNo,
+    l.Min_Period,
+    l.Vouchered,
+    l.ACSign,
+    l.UserNo,
+    l.Assessor,
+    l.Lawer,
+    l.LegalCase,
+    l.LegalDate,
+    l.LegaLawer,
+    l.CloseDate,
+    l.NPLCase,
+    l.NPLDate,
+    l.LastUserNo,
+    l.LastDate,
+    l.Partial,
+    l.VoucherDate,
+    l.PartialNo,
+    l.Scharges,
+    l.TodSerial,
+    l.TodCloseDate,
+    l.Charges_Status,
+    l.MarkNPLUser,
+    l.NPLReleaseUser,
+    l.MarkLegalUser,
+    l.LegalReleaseUser,
+    l.UniqueId,
+    l.SourceBranchCode,
+    l.Currency,
+    l.Active,
+    l.TS,
+    l.CreatedDate,
+    l.CreatedUserId,
+    l.UpdatedDate,
+    l.UpdatedUserId,
+    l.BalStatus,
+    l.UsedOverRate,
+    l.isSCharge,
+    l.isLateFee,
+    l.GracePeriod,
+    l.PrincipleRepayOptions,
+    l.InterestRepayOptions
+    )
+    from TLMORM00018 as l
+    where l.Lno =: loanNo
+    and l.Active = true
+  </query>
+
+  <!--TLMORM00018.UpdateChargesstatus-->
+  <query name="TLMORM00018.UpdateChargesstatus">
+    update TLMORM00018 l
+    set l.Charges_Status = :chargesStatus,
+    l.UpdatedDate = :updatedDate,
+    l.UpdatedUserId = :updatedUserId
+    where l.Lno = :loanNo and l.Active = true
+  </query>
+
+  <!--TLMORM00018.UpdateSamtAndFirstSamt-->
+  <query name="TLMORM00018.UpdateSamtAndFirstSamt">
+    update TLMORM00018 l
+    set l.SAmount = :newODLimit,
+    l.FirstSAmount = :newODLimit,
+    l.UpdatedDate = :updatedDate,
+    l.UpdatedUserId = :updatedUserId
+    where l.Lno = :loanNo and l.SourceBranchCode = :sourceBranchCode
+    and l.AccountNo = :accountNo and l.Active = true
+  </query>
+
+
+  <query name="TLMDAO00018.SelectLoanInfoByLoanNo">
+    select new loansdto
+    (
+    l.AccountNo,
+    l.Lno,
+    l.LegalCase,
+    l.LasIntDate,
+    l.NPLCase,
+    l.Currency
+    )
+    from TLMORM00018 as l where l.Lno = :loanNo
+    and l.Active = true and ( l.CloseDate is null or l.CloseDate='' )
+  </query>
+
+
+  <!--TLMORM00018.UpdateLoansForNPLCase-->
+  <query name="TLMORM00018.UpdateLoansForNPLCase">
+    update TLMORM00018 l
+    set l.NPLCase = :nplCase,
+    l.MarkNPLUser = :userName,
+    l.NPLDate = :updatedDate,
+    l.UpdatedDate = :updatedDate,
+    l.UpdatedUserId = :updatedUserId
+    where l.Lno = :loanNo and l.SourceBranchCode = :sourceBranchCode
+    and l.Active = true
+  </query>
+
+
+  <!--<sql-query name="SpGetLoanInformationWithInterest">
+		exec dbo.SpGetLoanInformationWithInterest :loanNo, :sourceBr
+	</sql-query>-->
+
+  <!--TLMORM00018.UpdateLoanInfoByLoanNoAndSourceBr-->
+  <query name="TLMDAO00018.UpdateLoanInfoByLoanNoAndSourceBr">
+	  update TLMORM00018 l
+	  set l.Assessor = :assessor,
+	  l.Lawer =:lawer,
+	  l.BType =:btype,
+	  l.ExpireDate =:edate,
+	  l.IntRate = :rate,
+	  l.UnUsedRate =:unUsedRate,
+	  l.UsedOverRate =:useOverRate,
+	  l.UpdatedDate = :updatedDate,
+	  l.UpdatedUserId = :updatedUserId,
+	  l.ReversalStatus = :reversalStatus
+	  where l.Lno = :lno and l.SourceBranchCode = :sourcebr
+	  and l.Active = true
+  </query>
+
+  <!--TLMORM00018.Update Loan For Loan Voucher By LoanNo And SourceBr-->
+  <query name="TLMDAO00018.UpdateLoanForLoanVoucherByLoanNoAndSourceBr">
+    update TLMORM00018 l
+    set l.Vouchered = :vouchered,
+    l.VoucherDate =:vDate,
+    l.SAmount = l.SAmount + :samt,
+    l.Partial =:partial,
+    l.PartialNo = PartialNo + 1,
+    l.Scharges=:serviceCharges,
+    l.UpdatedDate = :updatedDate,
+    l.UpdatedUserId = :updatedUserId
+    where l.Lno = :lno
+    and l.SourceBranchCode = :sourcebr
+    and l.Active = true
+  </query>
+
+
+  <!--TLMDAO00018.UpdateLegaLawyer-->
+  <query name="TLMDAO00018.UpdateLegaLawyer">
+    update TLMORM00018 l
+    set l.LegaLawer = :legalawyer,
+    l.UpdatedDate = :updatedDate,
+    l.UpdatedUserId = :updatedUserId
+    where l.Lno = :lno and l.SourceBranchCode=:sourceBr and l.Active = true
+  </query>
+
+  <!--TLMDAO00018.SelectIntRateByatype-->
+  <query name="TLMDAO00018.SelectIntRateByAtype">
+    select new loansdto
+    (
+    l.IntRate
+    )
+    from TLMORM00018 as l where l.AccountNo = :accountNo
+    and l.Active = true and ( l.CloseDate is null or l.CloseDate='' )
+    and l.SourceBranchCode=:sourceBr
+    and (l.AType = :atype)
+  </query>
+
+  <query name="TLMORM00018.GetLoansAccountInfoByAccountNo">
+    select new loansdto(
+    l.Lno,
+    l.AccountNo,
+    l.AType,
+    l.BType,
+    l.SDate,
+    l.SAmount,
+    l.Time,
+    l.Loans_Type,
+    l.RelatedGLACode,
+    l.ExpireDate,
+    l.IntRate,
+    l.UnUsedRate,
+    l.FirstSAmount,
+    l.DocmentationFee,
+    l.LasIntDate,
+    l.LasRepayNo,
+    l.Min_Period,
+    l.Vouchered,
+    l.ACSign,
+    l.UserNo,
+    l.Assessor,
+    l.Lawer,
+    l.LegalCase,
+    l.LegalDate,
+    l.LegaLawer,
+    l.CloseDate,
+    l.NPLCase,
+    l.NPLDate,
+    l.LastUserNo,
+    l.LastDate,
+    l.Partial,
+    l.VoucherDate,
+    l.PartialNo,
+    l.Scharges,
+    l.TodSerial,
+    l.TodCloseDate,
+    l.Charges_Status,
+    l.MarkNPLUser,
+    l.NPLReleaseUser,
+    l.MarkLegalUser,
+    l.LegalReleaseUser,
+    l.UniqueId,
+    l.SourceBranchCode,
+    l.Currency,
+    l.Active,
+    l.TS,
+    l.CreatedDate,
+    l.CreatedUserId,
+    l.UpdatedDate,
+    l.UpdatedUserId,
+    l.BalStatus,
+    l.UsedOverRate,
+    l.isLateFee,
+    l.GracePeriod,
+    l.PrincipleRepayOptions,
+    l.InterestRepayOptions
+    )
+    from TLMORM00018 as l
+    where l.AccountNo =: accountNo
+    and ( l.CloseDate is null or l.CloseDate='' )
+    and l.AType != 'LOANS'
+    and l.SourceBranchCode=:sourceBr and  l.Active = true
+
+  </query>
+
+  <!--TLMORM00018.UpdateLoansForLegalCase-->
+  <query name="TLMORM00018.UpdateLoansForLegalCase">
+    update TLMORM00018 l
+    set l.LegalCase = true,
+    l.LegalDate = :legalDate,
+    l.NPLCase = false,
+    l.NPLDate = null,
+    l.LegaLawer = :legalCaseLawyer,
+    l.MarkLegalUser = :markLegalUser,
+    l.UpdatedDate = :updatedDate,
+    l.UpdatedUserId = :updatedUserId
+    where l.Lno = :lno and l.SourceBranchCode = :sourceBr
+    and l.Active = true
+  </query>
+
+  <!--TLMORM00018.UpdateLoansForLegalReleaseCase-->
+  <query name="TLMORM00018.UpdateLoansForLegalReleaseCase">
+    update TLMORM00018 l
+    set l.CloseDate = null,
+    l.LegalCase = false,
+    l.LegalDate = null,
+    l.LegaLawer = null,
+    l.LegalReleaseUser = :LegalReleaseUser,
+    l.UpdatedDate = :updatedDate,
+    l.UpdatedUserId = :updatedUserId
+    where l.Lno = :lno and l.SourceBranchCode = :sourceBr
+    and l.Active = true
+  </query>
+
+  <!--//MNMORM00017.SelectLiAndLoan//-->
+  <query name="MNMORM00017.SelectLiAndLoan">
+    select new lidto(
+    l.Id,
+    l.LNo,
+    l.Acctno,
+    l.IntRate,
+    l.Duration,
+    l.Repaymentoption,
+    l.M1,
+    l.M2,
+    l.M3,
+    l.M4,
+    l.M5,
+    l.M6,
+    l.M7,
+    l.M8,
+    l.M9,
+    l.M10,
+    l.M11,
+    l.M12,
+    l.Q1,
+    l.Q2,
+    l.Q3,
+    l.Q4,
+    l.QBal1,
+    l.QBal2,
+    l.QBal3,
+    l.QBal4,
+    l.UserNo,
+    l.ACSign,
+    l.CloseDate,
+    l.Budget,
+    l.UId,
+    l.SourceBr,
+    l.Cur,
+    l.Active,
+    l.TS,
+    l.CreatedUserId,
+    l.CreatedDate,
+    l.UpdatedUserId,
+    l.UpdatedDate,
+    loans.SAmount,
+    loans.SDate
+    )
+    from TLMORM00018 as loans
+    inner join loans.Li as l with l.Active = true
+    where l.Budget = :year
+    and (l.CloseDate is null or l.CloseDate = '')
+    and loans.Vouchered = true
+    <!--and l.StartDate between convert(char(10),:smonth,111) and convert(char(10),:emonth,111-->
+    <!--and  convert(char(10), l.StartDate,111) between convert(char(10),:smonth,111) and convert(char(10),:emonth,111)-->
+    <!--and  (:datetime >= l.StartDate And l.EndDate >= :datetime)-->
+  </query>
+
+  <!--//TLMDAO00018.SelectByLoanNo//-->
+  <query name="TLMDAO00018.SelectByLoanNo">
+    select new loansdto(
+    l.Lno,
+    l.AccountNo,
+    l.AType,
+    l.BType,
+    l.SDate,
+    l.SAmount,
+    l.Time,
+    l.Loans_Type,
+    l.RelatedGLACode,
+    l.ExpireDate,
+    l.IntRate,
+    l.UnUsedRate,
+    l.FirstSAmount,
+    l.DocmentationFee,
+    l.LasIntDate,
+    l.LasRepayNo,
+    l.Min_Period,
+    l.Vouchered,
+    l.ACSign,
+    l.UserNo,
+    l.Assessor,
+    l.Lawer,
+    l.LegalCase,
+    l.LegalDate,
+    l.LegaLawer,
+    l.CloseDate,
+    l.NPLCase,
+    l.NPLDate,
+    l.LastUserNo,
+    l.LastDate,
+    l.Partial,
+    l.VoucherDate,
+    l.PartialNo,
+    l.Scharges,
+    l.TodSerial,
+    l.TodCloseDate,
+    l.Charges_Status,
+    l.MarkNPLUser,
+    l.NPLReleaseUser,
+    l.MarkLegalUser,
+    l.LegalReleaseUser,
+    l.UniqueId,
+    l.SourceBranchCode,
+    l.Currency,
+    l.GracePeriod,
+    l.PrincipleRepayOptions,
+    l.InterestRepayOptions,
+    l.Active,
+    l.TS,
+    l.CreatedDate,
+    l.CreatedUserId,
+    l.UpdatedDate,
+    l.UpdatedUserId
+    )
+    from TLMORM00018 as l
+    where l.Active = true and l.Lno =:loanNo
+    and l.SourceBranchCode=:sourceBr
+  </query>
+
+  <!--TLMORM00018.UpdateSamtByLnoAndAcctnoForLimitDecrease-->
+  <query name="TLMORM00018.UpdateSamtByLnoAndAcctnoLMIDecrease">
+    update TLMORM00018 l
+    set l.SAmount = l.SAmount-:newODLimit,
+    l.LasRepayNo=:repayNo,
+    l.UpdatedDate = :updatedDate,
+    l.UpdatedUserId = :updatedUserId
+    where l.Lno = :loanNo and l.SourceBranchCode = :sourceBranchCode
+    and l.AccountNo = :accountNo and l.Active = true
+  </query>
+
+  <!--TLMORM00018.UpdateSamtByLnoAndAcctnoLimitIncrease-->
+  <query name="TLMORM00018.UpdateSamtByLnoAndAcctnoLMIncrease">
+    update TLMORM00018 l
+    set l.SAmount = l.SAmount+:newODLimit,
+    l.LasRepayNo=:repayNo,
+    l.UpdatedDate = :updatedDate,
+    l.UpdatedUserId = :updatedUserId
+    where l.Lno = :loanNo and l.SourceBranchCode = :sourceBranchCode
+    and l.AccountNo = :accountNo and l.Active = true
+  </query>
+  <!--BL Listing By BL No-->
+  <query name="TLMDAO00018.SelectBusinessLoansNo">
+    select new loansdto
+    (
+    l.AccountNo,
+    l.Lno,
+    l.LegalCase,
+    l.LasIntDate,
+    l.NPLCase,
+    l.Currency
+    )
+    from TLMORM00018 as l
+    where l.Active = true and ( l.CloseDate is null or l.CloseDate='' )
+    and l.VoucherDate is not null
+    and l.SourceBranchCode = :sourceBr
+  </query>
+<!--BL Limit change entry-->
+  <!-- <query name="TLMDAO00018.SelectBusinessLoansType">
+    select new loansdto
+    (
+    l.BType
+    )
+    from TLMORM00018 as l
+    where l.Lno =:loanNo
+    and l.Active = true
+    and l.SourceBranchCode = :sourceBr
+  </query> -->
+</hibernate-mapping>
+

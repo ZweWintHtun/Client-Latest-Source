@@ -1,0 +1,597 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<objects xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+	<description>
+		UIForm Objects Settings
+	</description>
+
+	<!-- Region Teller Module -->
+
+	<!--Encash Remit Registration Entry-->
+	<object id="frmTLMVEW00002" type="Ace.Cbs.Tel.Vew.TLMVEW00002, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="EncashRemitRegistrationController"/>
+	</object>
+
+	<!--<object id="frmForm1" type="Ace.Cbs.Loan.Vew.Form1, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureBaseForm">
+		
+	</object>-->
+	
+	<!--//Clearing -> Delivered Entry-->
+	<object id="frmClearing.Delivered" type="Ace.Cbs.Tel.Vew.TLMVEW00006, Ace.Cbs.Tel.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="ClearingDeliveredReceiptController"/>
+		<property name="FormName" value="Clearing.Delivered"/>
+	</object>
+
+	<!--//Clearing -> Receipt Entry-->
+	<object id="frmClearing.Receipt" type="Ace.Cbs.Tel.Vew.TLMVEW00006, Ace.Cbs.Tel.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="ClearingDeliveredReceiptController"/>
+		<property name="FormName" value="Clearing.Receipt"/>
+	</object>
+
+
+	<!--PO Issue Entry (Income)-->
+	<object id="frmTLMVEW00015.Income" type="Ace.Cbs.Tel.Vew.TLMVEW00015, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="POIssueEntryController"/>
+		<property name="FormName" value="POIssue.Income"/>
+	</object>
+	<!--PO Issue Entry (No Income)-->
+	<object id="frmTLMVEW00015.NoIncome" type="Ace.Cbs.Tel.Vew.TLMVEW00015, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="POIssueEntryController"/>
+		<property name="FormName" value="POIssue.NoIncome"/>
+	</object>
+
+	<!--//Drawing Remittance Passing-->
+	<object id="frmDrawingRemittance" type="Ace.Cbs.Tel.Vew.frmTLMVEW00017, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="DrawingAndEncashPassingController"/>
+	</object>
+
+	<!--//Encash Remittance Passing-->
+	<object id="frmEncashRemittance" type="Ace.Cbs.Tel.Vew.frmTLMVEW00017, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="DrawingAndEncashPassingController"/>
+	</object>
+	
+	<!--//Vault Withdrawl Denomination Entry-->
+	<object id="frmTLMVEW00004" type="Ace.Cbs.Tel.Vew.TLMVEW00004, Ace.Cbs.Tel.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="VaultWithdrawlDenominationController"/>
+	</object>
+
+	<!--//PORefundByCash Entry-->
+	<object id="frmTLMVEW00016" type="Ace.Cbs.Tel.Vew.TLMVEW00016, Ace.Cbs.Tel.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="PORefundByCashController"/>
+	</object>
+
+	<!--Drawing Remittance Entry-->
+	<object id="frmTLMVEW00018.IBL" type="Ace.Cbs.Tel.Vew.TLMVEW00018, Ace.Cbs.Tel.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="DrawingRemittanceEntryController"/>
+		<property name="FormName" value="IBL"/>
+	</object>
+
+	<object id="frmTLMVEW00018.IBS" type="Ace.Cbs.Tel.Vew.TLMVEW00018, Ace.Cbs.Tel.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="DrawingRemittanceEntryController"/>
+		<property name="FormName" value="IBS"/>
+	</object>
+
+	<object id="frmTLMVEW00005" type="Ace.Cbs.Tel.Vew.TLMVEW00005, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="CounterWithdrawalEntryController"/>
+	</object>
+
+
+	<object id="frmTLMVEW00008" type="Ace.Cbs.Tel.Vew.TLMVEW00008, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="RemittanceCalculatorController"/>
+		<property name="IsShowDialog" value="true"/>
+	</object>
+
+	<!--Account Information-->
+	<object id="frmTLMVEW00042" type="Ace.Cbs.Tel.Vew.TLMVEW00042, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="AccountInformationController"/>
+		<property name="IsShowDialog" value="true"/>
+	</object>
+
+	<!--Deposit Entry-->
+	<object id="frmTLMVEW00010" type="Ace.Cbs.Tel.Vew.TLMVEW00010, Ace.Cbs.Tel.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="DepositController"/>
+	</object>
+
+	<!--Deno Entry-->
+	<object id="frmTLMVEW00011" type="Ace.Cbs.Tel.Vew.TLMVEW00011, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="IsShowDialog" value="true"/>
+		<property name="Controller" ref="DenoController"/>
+	</object>
+
+	<!--Refund Entry-->
+	<object id="frmTLMVEW00012" type="Ace.Cbs.Tel.Vew.TLMVEW00012, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="IsShowDialog" value="true"/>
+		<property name="Controller" ref="DenoRefundController"/>
+	</object>
+
+	<!--Transfer Online Entry-->
+	<object id="frmTLMVEW00003" type="Ace.Cbs.Tel.Vew.TLMVEW00003, Ace.Cbs.Tel.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="TransferController"/>
+		<property name="FormName" value="TrOnline"/>
+	</object>
+
+	<!--Transfer Voucher Entry-->
+	<object id="frmTLMVEW00003.TrVoucher" type="Ace.Cbs.Tel.Vew.TLMVEW00003, Ace.Cbs.Tel.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="TransferController"/>
+		<property name="FormName" value="TrLocal"/>
+	</object>
+
+  <!--HP Interest Prepayment Entry //Added by HWKO (13-Sep-2017)-->
+  <object id="frmTLMVEW00081.TrVoucher" type="Ace.Cbs.Tel.Vew.TLMVEW00081, Ace.Cbs.Tel.Vew" singleton="false" parent="SecureDockForm">
+    <property name="Controller" ref="HPIntPrepaymentController"/>
+    <property name="FormName" value="TrLocal"/>
+  </object>
+
+	<object id="frmTLMVEW00013" type="Ace.Cbs.Tel.Vew.TLMVEW00013, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="FixedDepositWithdrawalController"/>
+	</object>
+
+	<object id="frmTLMVEW00029" type="Ace.Cbs.Tel.Vew.frmTLMVEW00029, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+
+  <!--PO.Receipt-->
+	<object id="frmTLMVEW00007" type="Ace.Cbs.Tel.Vew.frmTLMVEW00007, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="POReceiptController" ref="POReceiptController"/>
+    <property name="BLFDAO" ref="FrwAllDAO"/>
+	</object>
+
+	<!--Fixed Deposit Deposit-->
+	<object id="frmTLMVEW00009" type="Ace.Cbs.Tel.Vew.frmTLMVEW00009, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="FixedDepositDepositController"/>
+	</object>
+
+	<!--Drawing Remittance Voucher-->
+	<object id="frmTLMVEW00019.IBL" type="Ace.Cbs.Tel.Vew.TLMVEW00019, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="DrawingRemittanceVoucherController"/>
+		<property name="FormName" value="DrawingRemittanceVoucher.IBL"/>
+	</object>
+
+	<!--Drawing Remittance Voucher-->
+	<object id="frmTLMVEW00019.FX" type="Ace.Cbs.Tel.Vew.TLMVEW00019, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="DrawingRemittanceVoucherController"/>
+		<property name="FormName" value="DrawingRemittanceVoucher.FX"/>
+	</object>
+
+
+	<!--Clearing Voucher Entry Form-->
+	<object id="frmTLMVEW00021" type="Ace.Cbs.Tel.Vew.TLMVEW00021, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="ClearingVoucherController"/>
+	</object>
+
+	<object id="frmTLMVEW00020" type="Ace.Cbs.Tel.Vew.TLMVEW00020, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="EncashRemittanceController"/>
+		<property name="FormName" value="IsNotCashType"/>
+	</object>
+	
+		<object id="frmTLMVEW00020.CashType" type="Ace.Cbs.Tel.Vew.TLMVEW00020, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="EncashRemittanceController"/>
+		<property name="FormName" value="IsCashType"/>
+	</object>
+
+	<!--Domestic Voucher Entry Form-->
+	<object id="frmTLMVEW00001.Credit" type="Ace.Cbs.Tel.Vew.TLMVEW00001, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="DomesticVoucherController"/>
+		<property name="FormName" value="DomesticVoucher.Credit"/>
+	</object>
+
+	<object id="frmTLMVEW00001.Debit" type="Ace.Cbs.Tel.Vew.TLMVEW00001, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="DomesticVoucherController"/>
+		<property name="FormName" value="DomesticVoucher.Debit"/>
+	</object>
+
+
+	<object id="frmTLMVEW00022" type="Ace.Cbs.Tel.Vew.frmTLMVEW00022, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+
+	<!--Withdrawal Entry Form-->
+	<object id="frmTLMVEW00014" type="Ace.Cbs.Tel.Vew.TLMVEW00014, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="WithdrawalController"/>
+	</object>
+
+	<!--Transaction Listing Enquiry Form-->
+	<object id="frmTLMVEW00023" type="Ace.Cbs.Tel.Vew.TLMVEW00023, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="TransactionListingController"/>
+	</object>
+
+
+  <!--Withdrawal Listing By Acctno-->
+  <object id="frmTLMVEW00027WithdrawalByAccountNo" type="Ace.Cbs.Tel.Vew.TLMVEW00027, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="WithdrawalListingByAllController" ref="WithdrawalListingByAllController"/>
+    <property name="FormName" value="Withdrawal.AccountNo"/>
+  </object>
+
+  <!--Withdrawal Listing By Counter-->
+  <object id="frmTLMVEW00027WithdrawalByCounter" type="Ace.Cbs.Tel.Vew.TLMVEW00027, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="WithdrawalListingByAllController" ref="WithdrawalListingByAllController"/>
+    <property name="FormName" value="Withdrawal.Counter"/>
+  </object>  
+ 
+  <!--Withdrawal Listing By All-->
+  <object id="frmTLMVEW00027WithdrawalByAll" type="Ace.Cbs.Tel.Vew.TLMVEW00027, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="WithdrawalListingByAllController" ref="WithdrawalListingByAllController"/>
+    <property name="FormName" value="Withdrawal.All"/>
+  </object>
+
+  <!--(Withdrawal Listing By Account Type) -> Current Account-->
+  <object id="frmTLMVEW00027WithdrawalByCurrent" type="Ace.Cbs.Tel.Vew.TLMVEW00027, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="WithdrawalListingByAllController" ref="WithdrawalListingByAllController"/>
+    <property name="FormName" value="Withdrawal.Current"/>
+  </object>
+  
+   <!--Added By ZMS (for Pristine (BL/PL/HP/DL A/C-->
+  <!--(Withdrawal Listing By Account Type) -> Business Loans Account-->
+  <object id="frmTLMVEW00027WithdrawalByBL" type="Ace.Cbs.Tel.Vew.TLMVEW00027, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="WithdrawalListingByAllController" ref="WithdrawalListingByAllController"/>
+    <property name="FormName" value="Withdrawal.BL"/>
+  </object>
+  <!--(Withdrawal Listing By Account Type) -> HirePurchase Account-->
+  <object id="frmTLMVEW00027WithdrawalByHP" type="Ace.Cbs.Tel.Vew.TLMVEW00027, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="WithdrawalListingByAllController" ref="WithdrawalListingByAllController"/>
+    <property name="FormName" value="Withdrawal.HP"/>
+  </object>
+  <!--(Withdrawal Listing By Account Type) -> Personal Loans Account-->
+  <object id="frmTLMVEW00027WithdrawalByPL" type="Ace.Cbs.Tel.Vew.TLMVEW00027, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="WithdrawalListingByAllController" ref="WithdrawalListingByAllController"/>
+    <property name="FormName" value="Withdrawal.PL"/>
+  </object>
+  <!--(Withdrawal Listing By Account Type) -> Dealer Account-->
+  <object id="frmTLMVEW00027WithdrawalByDL" type="Ace.Cbs.Tel.Vew.TLMVEW00027, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="WithdrawalListingByAllController" ref="WithdrawalListingByAllController"/>
+    <property name="FormName" value="Withdrawal.DL"/>
+  </object>
+  <!--By ZMS (for Pristine (BL/PL/HP/DL A/C-->
+  
+  <!--(Withdrawal Listing By Account Type) -> Saving Account-->
+  <object id="frmTLMVEW00027WithdrawalBySaving" type="Ace.Cbs.Tel.Vew.TLMVEW00027, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="WithdrawalListingByAllController" ref="WithdrawalListingByAllController"/>
+    <property name="FormName" value="Withdrawal.Saving"/>
+  </object>
+
+  <!--(Withdrawal Listing By Account Type) -> Fixed Account-->
+  <object id="frmTLMVEW00027WithdrawalByFixed" type="Ace.Cbs.Tel.Vew.TLMVEW00027, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="WithdrawalListingByAllController" ref="WithdrawalListingByAllController"/>
+    <property name="FormName" value="Withdrawal.Fixed"/>
+  </object>
+
+
+  <!--IBL Transaction Listing Enquiry Form-->
+	<object id="frmTLMVEW00028TransactionListingByBranch" type="Ace.Cbs.Tel.Vew.TLMVEW00028, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="FormName" value="Transaction Listing By Branch"/>
+		<property name="Controller" ref="TransactionListingByBranchCodeController"/>
+	</object> 
+	
+	<object id="frmTLMVEW00028OnlineTransactionListing" type="Ace.Cbs.Tel.Vew.TLMVEW00028, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="FormName" value="Online Transaction Listing"/>
+		<property name="Controller" ref="TransactionListingByBranchCodeController"/>
+	</object>
+	<!--Income  Listing Enquiry Form-->
+	<object id="frmTLMVEW00028IncomeListing" type="Ace.Cbs.Tel.Vew.TLMVEW00028, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="FormName" value="Income Listing"/>
+		<property name="Controller" ref="TransactionListingByBranchCodeController"/>
+	</object>
+
+	<!--Drawing Remittance Listing Enquiry Form-->
+	<object id="frmTLMVEW00030DrawingRemittanceListing" type="Ace.Cbs.Tel.Vew.TLMVEW00030, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="FormName" value="Drawing Remittance Listing"/>
+	</object>
+
+	<!--Encash Remittance Listing Enquiry Form-->
+	<object id="frmTLMVEW00030EncashRemittanceListing" type="Ace.Cbs.Tel.Vew.TLMVEW00030, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="FormName" value="Encash Remittance Listing"/>
+	</object>
+
+	<!--DayBook-->
+	<object id="frmTLMVEW00036" type="Ace.Cbs.Tel.Vew.TLMVEW00036, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="DayBookController"/>
+	</object>
+
+	<!-- Drawing Remittance Register Outstanding-->
+	<object id="frmTLMVEW00037" type="Ace.Cbs.Tel.Vew.TLMVEW00037, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+
+  <!--Drawing / Encash Remittance Listing All/By Branch-->
+  <object id="frmTLMVEW00038" type="Ace.Cbs.Tel.Vew.TLMVEW00038, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="DrawingEncashController" ref="DrawingEncashController"/>
+  </object>
+
+  <!-- Drawing/Encash Remittance Listing All/By Amount-->
+  <object id="frmTLMVEW00039" type="Ace.Cbs.Tel.Vew.TLMVEW00039, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="DrawingRemittanceEncashAmountController" ref="DrawingRemittanceEncashAmountController"/>
+  </object>
+ 
+	<!-- Drawing/Encash Remittance Listing By NRC/Name-->
+	<object id="frmTLMVEW00040" type="Ace.Cbs.Tel.Vew.TLMVEW00040, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="DrawingRemittanceEncashNRCandNameController" ref="DrawingRemittanceEncashNRCandNameController"/>
+	</object>
+
+	<object id="frmTLMVEW00041" type="Ace.Cbs.Tel.Vew.TLMVEW00041, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="CenterTableDepositApproveController" ref="CenterTableDepositApproveController"/>
+	</object>
+
+	<!-- Cash Denomination Listing-->
+	<object id="frmTLMVEW00071" type="Ace.Cbs.Tel.Vew.TLMVEW00071, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="CashDenomiantionController"/>
+	</object>
+
+	<object id="frmTLMVEW00043" type="Ace.Cbs.Tel.Vew.TLMVEW00043, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="DenoOutstandingReportViewController" ref="DenoOutstandingReportViewController"/>
+	</object>
+
+
+	<object id="frmTLMVEW00044" type="Ace.Cbs.Tel.Vew.TLMVEW00044, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="DenominationOutstandingMultipleTransactionController" ref="DenominationOutstandingMultipleTransactionController"/>
+	</object>
+
+	<object id="frmTLMVEW00045" type="Ace.Cbs.Tel.Vew.frmTLMVEW00045, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="POOutstandingNormalReportController" ref="POOutstandingNormalReportController"/>
+	</object>
+
+	<!--Deposit Listing Enquiry Form-->
+	<object id="frmTLMVEW00025" type="Ace.Cbs.Tel.Vew.TLMVEW00025, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="DepositListingController"/>
+	</object>
+
+	<!--Deposit/Withdraw Listing By Grade Enquiry Form-->
+	<object id="frmTLMVEW00026" type="Ace.Cbs.Tel.Vew.TLMVEW00026, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="DepositListingByGradeController"/>
+  </object>
+
+	<!--Deposit Listing By Account Type and Withdrawal Listing By Account Type-->
+	<object id="frmTLMVEW00024" type="Ace.Cbs.Tel.Vew.frmTLMVEW00024, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+
+
+	<object id="frmTLMVEW00066" type="Ace.Cbs.Tel.Vew.TLMVEW00066, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+
+	<object id="frmTLMVEW00031" type="Ace.Cbs.Tel.Vew.TLMVEW00031, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="BankstatementListingByDateController" ref="BankstatementListingByDateController"/>
+	</object>
+
+	<object id="frmTLMVEW00032" type="Ace.Cbs.Tel.Vew.TLMVEW00032, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="IBLTestKeyListingController" ref="IBLTestKeyListingController"/>
+  </object>
+  
+
+	<object id="frmTLMVEW00033" type="Ace.Cbs.Tel.Vew.TLMVEW00033, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="IBLReconcileController" ref="IBLReconcileController"/>
+	</object>
+
+	<object id="frmTLMVEW00034" type="Ace.Cbs.Tel.Vew.TLMVEW00034, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+
+	<object id="frmRDREReconsileReport" type="Ace.Cbs.Tel.Vew.TLMVEW00069, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+
+	<object id="frmTransactionReconsileReport" type="Ace.Cbs.Tel.Vew.TLMVEW00070, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+
+	<object id="frmTLMVEW00035" type="Ace.Cbs.Tel.Vew.TLMVEW00035, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="BankCashScrollController" ref="BankCashScrollController"/>
+	</object>
+
+  <object id="frmTLMVEW00050ByDate" type="Ace.Cbs.Tel.Vew.TLMVEW00050, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="IBLTestKeyListingController" ref="IBLTestKeyListingController"/>
+    <property name="FormName" value="TestKey.ByDate"/>
+  </object>
+
+  <object id="frmTLMVEW00050All" type="Ace.Cbs.Tel.Vew.TLMVEW00050, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="IBLTestKeyListingController" ref="IBLTestKeyListingController"/>
+    <property name="FormName" value="TestKey.All"/>
+  </object>
+
+	<object id="frmTLMVEW00051" type="Ace.Cbs.Tel.Vew.TLMVEW00051, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="BankStatementListingReportController" ref="BankStatementListingReportController"/>
+    </object>
+  
+  <!--Bank Cash Scroll With Reversal All Currencies By Home Amount-->
+	<object id="frmTLMVEW00052WithReversalByDateHomeCurrency" type="Ace.Cbs.Tel.Vew.TLMVEW00052, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureDockForm">
+   </object>
+
+  <!--<object id="frmTLMVEW00074WithReversalByDateHomeCurrency" type="Ace.Cbs.Tel.Vew.TLMVEW00074, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureDockForm">
+  </object>-->
+
+	<object id="frmTLMVEW00068" type="Ace.Cbs.Tel.Vew.TLMVEW00068, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+
+	<object id="frmTLMVEW00067" type="Ace.Cbs.Tel.Vew.TLMVEW00067, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+
+  <object id="frmTLMVEW00058DrawingTransactionByBranch" type="Ace.Cbs.Tel.Vew.TLMVEW00058, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+  <object id="frmTLMVEW00058DrawingRemittanceAmountByTransactionDate" type="Ace.Cbs.Tel.Vew.TLMVEW00058, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+  <object id="frmTLMVEW00058DrawingRemittanceAmountBySettlementDate" type="Ace.Cbs.Tel.Vew.TLMVEW00058, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+  <object id="frmTLMVEW00058DrawingTransactionByALL" type="Ace.Cbs.Tel.Vew.TLMVEW00058, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    <!--<property name="DrawingEncashController" ref="DrawingEncashController"/>-->
+  </object>
+
+
+  <object id="frmTLMVEW00058DrawingSettlementByBranch" type="Ace.Cbs.Tel.Vew.TLMVEW00058, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+
+  </object>
+
+  <object id="frmTLMVEW00058DrawingSettlementByALL" type="Ace.Cbs.Tel.Vew.TLMVEW00058, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    <!--<property name="DrawingEncashController" ref="DrawingEncashController"/>-->
+  </object>
+
+  <object id="frmTLMVEW00058DrawingRemitNRCExactlyByTransactionDate" type="Ace.Cbs.Tel.Vew.TLMVEW00058, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+  <object id="frmTLMVEW00058DrawingRemitNRCExactlyBySettlementDate" type="Ace.Cbs.Tel.Vew.TLMVEW00058, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+  <object id="frmTLMVEW00058DrawingRemitNRCByTransactionDate" type="Ace.Cbs.Tel.Vew.TLMVEW00058, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+  <object id="frmTLMVEW00058DrawingRemitNRCBySettlementDate" type="Ace.Cbs.Tel.Vew.TLMVEW00058, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+  <object id="frmTLMVEW00058DrawingRemitNameExactlyByTransactionDate" type="Ace.Cbs.Tel.Vew.TLMVEW00058, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+  <object id="frmTLMVEW00058DrawingRemitNameExactlyBySettlementDate" type="Ace.Cbs.Tel.Vew.TLMVEW00058, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+  <object id="frmTLMVEW00058DrawingRemitNameByTransactionDate" type="Ace.Cbs.Tel.Vew.TLMVEW00058, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+  <object id="frmTLMVEW00058DrawingRemitNameBySettlementDate" type="Ace.Cbs.Tel.Vew.TLMVEW00058, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+  <!--<object id="frmTLMVEW00061EncashTransactionByBranch" type="Ace.Cbs.Tel.Vew.TLMVEW00060, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    --><!--<property name="DrawingEncashController" ref="DrawingEncashController"/>--><!--
+  </object>
+
+  <object id="frmTLMVEW00061EncashSettlementByBranch" type="Ace.Cbs.Tel.Vew.TLMVEW00060, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    --><!--<property name="DrawingEncashController" ref="DrawingEncashController"/>--><!--
+  </object>-->
+
+  <object id="frmTLMVEW00061EncashTransactionByBranch" type="Ace.Cbs.Tel.Vew.TLMVEW00061, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+
+  <object id="frmTLMVEW00061EncashRemittanceAmountByTransactionDate" type="Ace.Cbs.Tel.Vew.TLMVEW00061, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+  <object id="frmTLMVEW00061EncashRemittanceAmountBySettlementDate" type="Ace.Cbs.Tel.Vew.TLMVEW00061, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+  
+  <object id="frmTLMVEW00061EncashTransactionByALL" type="Ace.Cbs.Tel.Vew.TLMVEW00061, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+
+	<object id="frmTLMVEW00061EncashSettlementByBranch" type="Ace.Cbs.Tel.Vew.TLMVEW00061, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+
+	<object id="frmTLMVEW00061EncashSettlementByALL" type="Ace.Cbs.Tel.Vew.TLMVEW00061, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+
+  <!--Encash Remittance By NRC and By Name Report Form-->
+  <object id="frmTLMVEW00062EncashRemitNRCExactlyByTransactionDate" type="Ace.Cbs.Tel.Vew.TLMVEW00062, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+  <object id="frmTLMVEW00062EncashRemitNRCByTransactionDate" type="Ace.Cbs.Tel.Vew.TLMVEW00062, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+  <object id="frmTLMVEW00062EncashRemitNRCExactlyBySettlementDate" type="Ace.Cbs.Tel.Vew.TLMVEW00062, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+  <object id="frmTLMVEW00062EncashRemitNRCBySettlementDate" type="Ace.Cbs.Tel.Vew.TLMVEW00062, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+  <object id="frmTLMVEW00062EncashRemitNameExactlyByTransactionDate" type="Ace.Cbs.Tel.Vew.TLMVEW00062, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+  <object id="frmTLMVEW00062EncashRemitNameByTransactionDate" type="Ace.Cbs.Tel.Vew.TLMVEW00062, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+  <object id="frmTLMVEW00062EncashRemitNameExactlyBySettlementDate" type="Ace.Cbs.Tel.Vew.TLMVEW00062, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+  <object id="frmTLMVEW00062EncashRemitNameBySettlementDate" type="Ace.Cbs.Tel.Vew.TLMVEW00062, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+  <object id="frmTLMVEW00074.DrawingRemittanceRegisterEntry" type="Ace.Cbs.Tel.Vew.TLMVEW00074, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+	<!--Region NMS-->
+	<object id="frmTLMVEW00072" type="Ace.Cbs.Tel.Vew.TLMVEW00072, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="PrintRemainTransactionController"/>
+	</object>
+
+	<object id="frmTLMVEW00063" type="Ace.Cbs.Tel.Vew.TLMVEW00063, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="DepositByAllController"/>
+	</object>
+
+	<object id="frmTLMVEW00048" type="Ace.Cbs.Tel.Vew.TLMVEW00048, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="IncomeListingController"/>
+	</object>
+
+
+	<object id="frmTLMVEW00047" type="Ace.Cbs.Tel.Vew.TLMVEW00047, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="OnlineTransacionListingController"/>			
+	</object>
+
+  <object id="frmTLMVEW00046" type="Ace.Cbs.Tel.Vew.TLMVEW00046, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="TransactionListingByBranchController"/>
+  </object>
+
+  <object id="frmTLMVEW00064" type="Ace.Cbs.Tel.Vew.TLMVEW00064, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="DepositByAccountNoController"/>
+  </object>
+
+  <object id="frmTLMVEW00065" type="Ace.Cbs.Tel.Vew.TLMVEW00065, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="DepositByAccountTypeController"/>
+  </object>
+
+	<object id="frmTLMVEW00059" type="Ace.Cbs.Tel.Vew.TLMVEW00059, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="EncashOutstandingController"/>
+	</object>
+
+	<object id="frmTLMVEW00057" type="Ace.Cbs.Tel.Vew.TLMVEW00057, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="DrawingOutstandingController"/>
+	</object>
+
+  <object id="frmTLMVEW00053" type="Ace.Cbs.Tel.Vew.TLMVEW00053, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="CurrentDayBookController"/>
+  </object>
+  <object id="frmTLMVEW00054" type="Ace.Cbs.Tel.Vew.TLMVEW00054, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="SavingDayBookController"/>
+  </object>
+  <object id="frmTLMVEW00055" type="Ace.Cbs.Tel.Vew.TLMVEW00055, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="DomesticDayBookController"/>
+  </object>
+  <object id="frmTLMVEW00073" type="Ace.Cbs.Tel.Vew.TLMVEW00073, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="BankStatementListingByDateForFixedDepositACController"/>
+  </object>
+  
+  <object id="frmTLMVEW00056" type="Ace.Cbs.Tel.Vew.TLMVEW00056, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="DrawingRegisterByReceiptDateController"/>
+  </object>
+
+  <object id="frmTLMVEW00075" type="Ace.Cbs.Tel.Vew.TLMVEW00075, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="CashPaymentDenominationController"/>
+  </object>
+
+  <object id="frmTLMVEW00076" type="Ace.Cbs.Tel.Vew.TLMVEW00076, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="DrawingCashDepositDenominationController"/>
+  </object>
+  <!--endregion-->
+
+  <!--End Region-Encash Remittance By NRC and By Name Report Form-->
+
+  <object id="frmTLMVEW00077" type="Ace.Cbs.Tel.Vew.TLMVEW00077, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+    <!--<property name="Controller" ref="CashDenoWithMultiTransactionController"/>-->
+  </object>
+
+	<object id="frmTLMVEW00078" type="Ace.Cbs.Tel.Vew.TLMVEW00078, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="NewCashPaymentController"/>
+	</object>
+	
+  <!-- EndRegion -->
+
+  <!--Loans Deposit Entry-->
+  <object id="frmTLMVEW00080" type="Ace.Cbs.Tel.Vew.TLMVEW00080, Ace.Cbs.Tel.Vew" singleton="false" parent="SecureDockForm">
+    <property name="Controller" ref="LoansDepositController"/>
+  </object>
+
+  <!--Added by HWKO For Printing Debit/Credit Cash and Transfer and Loan Deposit Entry-->
+  <object id="frmTLMVEW00082" type="Ace.Cbs.Tel.Vew.TLMVEW00082, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+  
+  <object id="frmTLMVEW00083" type="Ace.Cbs.Tel.Vew.TLMVEW00083, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+  <object id="frmTLMVEW00084" type="Ace.Cbs.Tel.Vew.TLMVEW00084, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+  <object id="frmTLMVEW00085" type="Ace.Cbs.Tel.Vew.TLMVEW00085, Ace.Cbs.Tel.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+  <!--End Region-->
+	
+</objects>

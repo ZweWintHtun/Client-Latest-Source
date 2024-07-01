@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--VW_Deno Outstanding Report-->
+<!-- 
+// <copyright file="TLMVIW00001.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser> Hsu Wai Htoo </CreatedUser>
+// <CreatedDate> 2013-08-21 </CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version>1.0</Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Tel.Dmd" namespace="Ace.Cbs.Tel.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00054, Ace.Cbs.Pfm.Dmd" rename="tlfdto"/>
+  <class name="TLMVIW00001" table="VW_DENO_OUTSTANDING_REPORT" mutable="false" >
+  <id name="Id" type="Int32" unsaved-value="0">
+  </id>
+
+  <property name="ENo">
+    <column name="ENo" sql-type="varchar" not-null="false" />
+  </property>
+  <property name="AcctNo">
+    <column name="AcctNo" sql-type="varchar" not-null="false" />
+  </property>
+  <property name="Narration">
+    <column name="Narration" sql-type="varchar" not-null="false"/>
+  </property>
+  <property name="Amount">
+    <column name="Amount" sql-type="numeric" not-null="false"/>
+  </property>
+  <property name="Date_Time">
+    <column name="DATE_TIME" sql-type="datetime" not-null="false"/>
+  </property>
+  <property name="SourceCurrency">
+    <column name="SourceCur" sql-type="varchar" not-null="false"/>
+  </property>
+  <property name="SourceBranch">
+    <column name="SourceBr" sql-type="varchar" not-null="true"/>
+  </property>  
+</class>
+</hibernate-mapping>

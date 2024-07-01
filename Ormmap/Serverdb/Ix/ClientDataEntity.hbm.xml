@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Windows.Ix.DataModel" namespace="Ace.Windows.Ix.DataModel" xmlns="urn:nhibernate-mapping-2.2">
+  <!--<import class="Ace.Windows.Ix.DataModel.ClientDataEntityDTO" rename="clientdataentitydto"/>-->
+
+  <class name="ClientDataEntity" table="[ClientDataEntity]" >
+    <id name="ORMName">
+      <column name="ORMName" sql-type="varchar" not-null="true" />
+    </id>    
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+    <property name="DTOName">
+      <column name="DTOName" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="TableName">
+      <column name="TableName" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="ORMDescription">
+      <column name="ORMDescription" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="ORMProperties">
+      <column name="ORMProperties" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="TableColumnNames">
+      <column name="TableColumnNames" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="DataIdName">
+      <column name="DataIdName" sql-type="varchar" not-null="true" />
+    </property>
+    
+    <property name="Active" not-null="true" />
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>    
+  </class>
+</hibernate-mapping>

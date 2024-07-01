@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00099, Ace.Cbs.Loan.Dmd" rename="loanRecord_businessTypeDTO"/>
+
+  <class name="LOMORM00099" table="LoanRecord_BusinessType">
+    <id name="Id" type="int" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+    
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+
+    <property name="RENO">
+      <column name="RENO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="BusinessType">
+      <column name="BusinessType" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="UM" >
+      <column name="UM" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>    
+  </class>
+  <query name="LOMORM00099.SelectAll">
+    select new loanRecord_businessTypeDTO
+    (
+    b.Id,
+    b.RENO,
+    b.BusinessType,
+    b.UM
+    )
+    from LOMORM00099 as b
+    where b.Active = true
+  </query>
+  
+  <!--<query name="LOMORM00099.SelectByLoanNo">
+    select new loanRecord_businessTypeDTO
+    (
+    b.Id,
+    b.RENO,
+    b.BusinessType,
+    b.UM,
+    lr.LoanType,
+    lr.TownshipCode,
+    lr.VillageCode,
+    lr.FinancialYear,
+    lr.BusinessCode,
+    lr.SuspendDate,
+    lr.SuspendAmu,
+    lr.DeliverDate,
+    lr.TotalGroup,
+    lr.Population,
+    lr.Acre,
+    lr.SanctionAmu,
+    lr.RefundDate,
+    lr.RefundAmu,
+    lr.RefundVrNo,
+    lr.Date_Time,
+    lr.UserNo,
+    lr.SourceBr,
+    lr.Active,
+    lr.TS
+    )
+    from LOMORM00099 as b
+    left join b.LoanRecord as lr with lr.Active = true
+    where b.RENO = lr.Eno and lr.Eno =: lno and b.Active = true
+  </query>-->
+  
+  <query name="LOMORM00099.UpdateBusinessType">
+    update LOMORM00099 as b
+    set b.BusinessType =: businessType,
+    b.UM =: um,
+    b.UpdatedUserId =: updatedUserId,
+    b.UpdatedDate =: updatedDate
+    where b.Id =: id
+    and b.Active = true   
+  </query>
+  
+  <query name="LOMORM00099.DeleteBusinessType">
+    delete from LOMORM00099 as b
+    where b.Id =: id    
+  </query>
+</hibernate-mapping>

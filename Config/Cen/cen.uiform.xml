@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    Center UIForm Objects Settings
+  </description>
+  
+  <!--Data Version Update Definition Form-->
+  <object id="frmCENVEW00007" type="Ace.Cbs.Cen.Vew.CENVEW00007, Ace.Cbs.Cen.Vew" singleton="false" parent="SecureDockForm">
+    <property name="Controller" ref="DataVersionUpdateDefinitionController"/>
+  </object>
+  <object id="frmCENVEW00007.NonSecureForm" type="Ace.Cbs.Cen.Vew.CENVEW00007, Ace.Cbs.Cen.Vew" singleton="false" parent="NonSecureDockForm">
+		<property name="Controller" ref="DataVersionUpdateDefinitionController"/>
+	</object>
+  <object id="frmCENVEW00008" type="Ace.Cbs.Cen.Vew.CENVEW00008, Ace.Cbs.Cen.Vew" singleton="false" parent="SecureDockForm">
+    <property name="Controller" ref="CENCTL00008"/>
+  </object>
+  <object id="frmCENVEW00009" type="Ace.Cbs.Cen.Vew.CENVEW00009, Ace.Cbs.Cen.Vew" singleton="false" parent="SecureBaseForm">    
+  </object>
+  <object id="frmCENVEW00004" type="Ace.Cbs.Cen.Vew.CENVEW00004, Ace.Cbs.Cen.Vew" singleton="false" parent="SecureBaseForm">
+    <property name="Controller" ref="CENCTL00004"/>
+  </object>
+  <object id="frmCENVEW00005" type="Ace.Cbs.Cen.Vew.CENVEW00005, Ace.Cbs.Cen.Vew" singleton="false" parent="SecureBaseForm">
+    <property name="Controller" ref="CENCTL00005"/>
+  </object>
+  <object id="frmCENVEW00006" type="Ace.Cbs.Cen.Vew.CENVEW00006, Ace.Cbs.Cen.Vew" singleton="false" parent="SecureBaseForm">
+    <property name="ComponentVersionInstalledHistorySummaryController" ref="CENCTL00006"/>
+  </object>
+  <object id="frmCENVEW00003" type="Ace.Cbs.Cen.Vew.CENVEW00003, Ace.Cbs.Cen.Vew" singleton="false" parent="SecureBaseForm">
+  </object>
+  <object id="frmCENVEW00002" type="Ace.Cbs.Cen.Vew.CENVEW00002, Ace.Cbs.Cen.Vew" singleton="false" parent="SecureBaseForm">
+    <property name="Controller" ref="CENCTL00002"/>
+  </object>
+  <!--Component  version Update Definition Form-->
+  <object id="frmCENVEW00001" type="Ace.Cbs.Cen.Vew.CENVEW00001, Ace.Cbs.Cen.Vew" singleton="false" parent="SecureBaseForm">
+    <property name="Controller" ref="ComponentVersionUpdateDefinitionController"/>	 
+  </object>
+
+</objects>	

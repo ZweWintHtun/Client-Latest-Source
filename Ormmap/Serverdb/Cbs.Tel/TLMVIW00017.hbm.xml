@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--VIEW FOR ENCASH REGISTER OUTSTANDING REPORT-->
+<!-- 
+// <copyright file="TLMVIW00003.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser> Nyo Me San </CreatedUser>
+// <CreatedDate> 2013-08-21 </CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version>1.0</Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Tel.Dmd" namespace="Ace.Cbs.Tel.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+	
+	<import class="Ace.Cbs.Tel.Dmd.TLMDTO00001, Ace.Cbs.Tel.Dmd" rename="redto"/>
+	
+	<class name="TLMVIW00017" table="VW_ENCASHMENTREMITTANCEREGISTEROUTSTANDING" mutable="false" >
+		
+		<id name="Id" type="Int32" unsaved-value="0">
+		</id>
+		<property name="Ebank">
+			<column name="EBANK" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="ToAccountNo">
+			<column name="TOACCTNO" sql-type="varchar" not-null="false"/>
+		</property>
+		<property name="RegisterNo">
+			<column name="REGISTERNO" sql-type="varchar" not-null="true"/>
+		</property>
+		<property name="Br_Alias">
+			<column name="BR_ALIAS" sql-type="varchar" not-null="false"/>
+		</property>
+		<property name="Date_Time">
+			<column name="DATE_TIME" sql-type="datetime" not-null="false"/>
+		</property>
+		<property name="Type">
+			<column name="TYPE" sql-type="varchar" not-null="false"/>
+		</property>
+		<property name="ToName">
+			<column name="TONAME" sql-type="varchar" not-null="false"/>
+		</property>
+		<property name="ToNRC">
+			<column name="TONRC" sql-type="varchar" not-null="false"/>
+		</property>
+		<property name="Amount">
+			<column name="AMOUNT" sql-type="decimal" not-null="false"/>
+		</property>
+		<property name="AccountSign">
+			<column name="ACSIGN" sql-type="varchar" not-null="false"/>
+		</property>
+		<property name="OtherBank">
+			<column name="OtherBank" sql-type="bit" not-null="false"/>
+		</property>
+    <property name="SourceBranchCode">
+      <column name="SourceBr" sql-type="varchar" not-null="true"/>
+    </property>
+	</class>
+
+	<!--<query name="TLMDAO00059.SelectEncashRegisterOutstanding">
+		select new  encashddto
+		(vw.EBANK,
+		vw.TOACCTNO,
+		vw.REGISTERNO,
+		vw.BR_ALIAS,
+		vw.DATE_TIME,
+		vw.TYPE,
+		vw.TONAME,
+		vw.TONRC,
+		vw.AMOUNT,
+		vw.ACSIGN,
+		vw.OTHERBANK,
+		vw.SOURCEBR)
+		from TLMVIW00017 as vw where vw.SOURCEBR = :sourceBr
+
+	</query>-->
+
+	<query name="TLMDAO00059.SelectEncashRegisterOutstanding">
+		select new redto
+		(vw.Ebank,
+		vw.ToAccountNo,
+		vw.RegisterNo,
+		vw.Br_Alias,
+		vw.Date_Time,
+		vw.Type,
+		vw.ToName,
+		vw.ToNRC,
+		vw.Amount,
+		vw.AccountSign,
+		vw.OtherBank,
+		vw.SourceBranchCode)
+		from TLMVIW00017 as vw where vw.SourceBranchCode = :sourceBr
+	</query>
+
+</hibernate-mapping>

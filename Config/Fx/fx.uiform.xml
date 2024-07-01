@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    UIForm Objects Settings
+  </description>
+
+  <!--//frmActivateUser//-->
+  <object id="frmActivateUser" type="Ace.Windows.Admin.UI.Forms.ActivateUserEntry, Ace.Windows.Admin.UI" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="ActivateUserController"/>
+  </object>
+
+  <!--//MainMenuForm//-->
+  <object id="MainMenuForm" type="Ace.Windows.Admin.UI.Forms.frmMainMenu, Ace.Windows.Admin.UI" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="MainMenuController"/>
+  </object>
+
+  <!--//SecureBaseForm//-->
+  <object id="SecureBaseForm" type="Ace.Windows.CXClient.Controls.BaseForm, Ace.Windows.CXClient.Controls" singleton="false">
+    <property name="CheckSecurity" value="true"/>
+  </object>
+
+  <!--//NonSecureBaseForm//-->
+  <object id="NonSecureBaseForm" type="Ace.Windows.CXClient.Controls.BaseForm, Ace.Windows.CXClient.Controls" singleton="false">
+    <property name="CheckSecurity" value="false"/>
+  </object>
+
+  <!--//SecureDockForm//-->
+  <object id="SecureDockForm" type="Ace.Windows.CXClient.Controls.BaseDockingForm, Ace.Windows.CXClient.Controls" singleton="false">
+    <property name="CheckSecurity" value="true"/>
+  </object>
+
+  <!--//NonSecureDockForm//-->
+  <object id="NonSecureDockForm" type="Ace.Windows.CXClient.Controls.BaseDockingForm, Ace.Windows.CXClient.Controls" singleton="false">
+    <property name="CheckSecurity" value="false"/>
+  </object>
+
+  <!--//UserForm//-->
+  <object id="frmUserForm" type="Ace.Windows.Admin.UI.Forms.frmUserForm, Ace.Windows.Admin.UI" singleton="false" parent="SecureDockForm">
+    <property name="UserController" ref="UserController"/>
+  </object>
+
+  <!--Quick Access Menu-->
+  <object id="frmQuickAccessMenuEntryForm" type="Ace.Windows.Admin.UI.Forms.frmQuickAccessMenuEntry, Ace.Windows.Admin.UI" singleton="false" parent="SecureDockForm">
+    <property name="Controller" ref="QuickAccessMenuController"/>
+  </object>
+
+  <!--//LogInForm//-->
+  <object id="frmLogInForm" type="Ace.Windows.Admin.UI.Forms.frmLogInForm, Ace.Windows.Admin.UI" singleton="false" parent="NonSecureBaseForm">
+    <property name="LoginController" ref="LoginController"/>
+  </object>
+
+  <!--//ManageGroupForm//-->
+  <object id="frmManageGroupForm" type="Ace.Windows.Admin.UI.Forms.frmManageGroupForm, Ace.Windows.Admin.UI" singleton="false" parent="NonSecureBaseForm">
+    <property name="RoleController" ref="RoleController"/>
+  </object>
+
+  <!--//GroupForm//-->
+  <object id="frmGroupForm" type="Ace.Windows.Admin.UI.Forms.frmGroupForm, Ace.Windows.Admin.UI" singleton="false" parent="SecureDockForm">
+    <property name="GroupController" ref="GroupController"/>
+  </object>
+
+  <!--//ProgramForm//-->
+  <object id="frmProgramForm" type="Ace.Windows.Admin.UI.Forms.frmProgramForm, Ace.Windows.Admin.UI" singleton="false" parent="SecureDockForm">
+    <property name="ProgramController" ref="ProgramController"/>
+  </object>
+
+  <!--//MenuListingForm//-->
+  <object id="frmMenuListingForm" type="Ace.Windows.Admin.UI.Forms.frmMenuListingForm, Ace.Windows.Admin.UI" singleton="false" parent="SecureDockForm">
+    <property name="MenuController" ref="MenuController"/>
+  </object>
+
+  <!--//ProgramInMenuForm//-->
+  <object id="frmProgramInMenuForm" type="Ace.Windows.Admin.UI.Forms.frmProgramInMenuForm, Ace.Windows.Admin.UI" singleton="false" parent="SecureDockForm">
+    <property name="ProgramInMenuController" ref="ProgramInMenuController"/>
+  </object>
+
+  <!--//MenuEntryForm//-->
+  <object id="frmMenuEntryForm" type="Ace.Windows.Admin.UI.Forms.frmMenuEntryForm, Ace.Windows.Admin.UI" singleton="false" parent="SecureDockForm">
+    <property name="MenuEntryController" ref="MenuEntryController"/>
+  </object>
+
+  <!--//MenuInGroupForm//-->
+  <object id="frmMenusInGroupForm" type="Ace.Windows.Admin.UI.Forms.frmMenusInGroupForm, Ace.Windows.Admin.UI" parent="SecureBaseForm" singleton="false" >
+    <property name="MenuInGroupController" ref="MenuInGroupController"/>
+  </object>
+
+  <!--//StateDivisionCode//-->
+  <object id="frmStateForm" type="Ace.Windows.Admin.UI.Forms.StateEntry, Ace.Windows.Admin.UI" singleton="false" parent="SecureDockForm">
+    <property name="Controller" ref="StateCodeController"/>
+  </object>
+
+  <!--//CityCode//-->
+  <object id="frmCityForm" type="Ace.Windows.Admin.UI.Forms.CityEntry, Ace.Windows.Admin.UI" singleton="false" parent="SecureDockForm">
+    <property name="Controller" ref="CityCodeController"/>
+  </object>
+
+  <!--//TownshipCode//-->
+  <object id="frmTownshipForm" type="Ace.Windows.Admin.UI.Forms.TownshipEntry, Ace.Windows.Admin.UI" singleton="false" parent="SecureDockForm">
+    <property name="Controller" ref="TownshipCodeController"/>
+  </object>
+
+  <!--//CounterSetup//-->
+  <object id="frmCounterInfoForm" type="Ace.Windows.Admin.UI.Forms.CounterInfoEntry, Ace.Windows.Admin.UI" singleton="false" parent="SecureDockForm">
+    <property name="Controller" ref="CounterInfoController"/>
+  </object>
+
+  <!--//BranchCodeSetup//-->
+  <object id="frmBranchForm" type="Ace.Windows.Admin.UI.Forms.BranchEntry, Ace.Windows.Admin.UI" singleton="false" parent="SecureDockForm">
+    <property name="Controller" ref="BranchController"/>
+  </object>
+
+  <!--//WorkStationEntry//-->
+  <object id="frmWorkStationForm" type="Ace.Windows.Admin.UI.Forms.WorkStationEntry, Ace.Windows.Admin.UI" singleton="false" parent="SecureDockForm">
+    <property name="Controller" ref="WorkStationController"/>
+  </object>
+
+  <!--//CounterType//-->
+  <object id="frmCounterTypeEntry" type="Ace.Windows.Admin.UI.Forms.CounterTypeEntry, Ace.Windows.Admin.UI" singleton="false" parent="SecureDockForm">
+    <property name="Controller" ref="CounterTypeController"/>
+  </object>
+
+  <!--//UserPermissionForm//-->
+  <object id="frmUserPermissionForm" type="Ace.Windows.Admin.UI.Forms.UserPermissionForm, Ace.Windows.Admin.UI" singleton="false" parent="NonSecureBaseForm">
+    <property name="UserPermissionController" ref="UserPermissionController"/>
+  </object>
+
+  <!--//CurrencyCodeEntry//-->
+  <object id="frmSAMVEW00046" type="Ace.Windows.Admin.UI.Forms.CurrencyEntry, Ace.Windows.Admin.UI" singleton="false" parent="SecureDockForm">
+    <property name="Controller" ref="CurController"/>
+  </object>
+
+  <!--//COACodeEntry//-->
+  <object id="frmSAMVEW00048" type="Ace.Windows.Admin.UI.Forms.ChargeOfAccountEntry, Ace.Windows.Admin.UI" singleton="false" parent="SecureDockForm">
+    <property name="Controller" ref="COAController"/>
+  </object>
+
+  <!--//FormatEntry//-->
+  <object id="frmSAMVEW00012" type="Ace.Windows.Admin.UI.Forms.FormatEntry, Ace.Windows.Admin.UI" singleton="false" parent="SecureDockForm">
+    <property name="Controller" ref="FormatController"/>
+  </object>
+
+  <!--//FormatDefinitionEntry//-->
+  <object id="frmSAMVEW00013" type="Ace.Windows.Admin.UI.Forms.FormatDefinitionEntry, Ace.Windows.Admin.UI" singleton="false" parent="SecureDockForm">
+    <property name="Controller" ref="FormatDefinitionController"/>
+  </object>
+
+  <!--Region Installer-->
+
+  <object id="frmHierarchyWorkStationForm" type="Ace.Windows.Admin.UI.Forms.HierarchyWorkStationEntry, Ace.Windows.Admin.UI" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HierarchyWorkStationController"/>
+  </object>
+
+  <object id="frmCounterInformationForm" type="Ace.Windows.Admin.UI.Forms.CounterInformationEntry, Ace.Windows.Admin.UI" singleton="false" parent="SecureDockForm">
+    <property name="Controller" ref="CounterInformationController"/>
+  </object>
+
+  <!--EndRegion Installer-->
+</objects>

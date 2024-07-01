@@ -1,0 +1,721 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+	<import class="Ace.Cbs.Pfm.Dmd.PFMDTO00042, Ace.Cbs.Pfm.Dmd" rename="report_tlfDto"/>
+<class name="MNMVIW00033" table="VW_MOB3511" mutable="false">
+
+		<id name="Id" type="Int32" unsaved-value="0">
+		</id>
+
+		<property name="PONo">
+			<column name="PONO" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="Amount">
+			<column name="AMOUNT" sql-type="numeric" not-null="true" />
+		</property>
+
+		<property name="AcctNo">
+			<column name="ACCTNO" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="ADate">
+			<column name="ADATE" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="IDate">
+			<column name="IDATE" sql-type="datetime" not-null="false" />
+		</property>
+
+
+		<property name="Status">
+			<column name="STATUS" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="ToAcctNo">
+			<column name="TOACCTNO" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="ACode">
+			<column name="ACODE" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="ACNoName">
+			<column name="ACNONAME" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="RegisterNo">
+			<column name="REGISTERNO" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="Cur">
+			<column name="CUR" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="SettlementDate">
+			<column name="SETTLEMENTDATE" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="RefundsDate">
+			<column name="REFUNDSDATE" sql-type="datetime" not-null="false" />
+		</property>
+		
+		<property name="SourceBr">
+			<column name="SourceBr" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="Active" not-null="true"/>
+	</class>
+
+	<!--//MNMVEW00073.SelectPORegisterByCash_WithTransactionDate//-->
+	<query name="MNMVEW00073.SelectPORegisterByCash_WithTransactionDate">
+    select new report_tlfDto
+    (
+    tlf.PONo,
+    tlf.Amount,
+    tlf.AcctNo,
+    tlf.ADate,
+    tlf.IDate,
+    tlf.Status,
+    tlf.ToAcctNo,
+    tlf.ACode,
+    tlf.ACNoName,
+    tlf.RegisterNo,
+    tlf.Cur,
+    tlf.SettlementDate,
+    tlf.RefundsDate
+    )
+    from MNMVIW00033 as tlf
+    where substring(tlf.PONo,1,2)='PO' and tlf.ACNoName = 'PO'
+    and CONVERT(char(10),tlf.ADate, 111) between CONVERT(char(10),:startDate, 111) and CONVERT(char(10),:endDate, 111)
+    and tlf.AcctNo is null and tlf.SourceBr =:sourceBranchCode and tlf.Active=true
+    order by tlf.Cur, tlf.PONo
+  </query>
+
+	<!--//MNMVEW00073.SelectPORegisterByCash_WithSettlementDate//-->
+	<query name="MNMVEW00073.SelectPORegisterByCash_WithSettlementDate">
+    select new report_tlfDto
+    (
+    tlf.PONo,
+    tlf.Amount,
+    tlf.AcctNo,
+    tlf.ADate,
+    tlf.IDate,
+    tlf.Status,
+    tlf.ToAcctNo,
+    tlf.ACode,
+    tlf.ACNoName,
+    tlf.RegisterNo,
+    tlf.Cur,
+    tlf.SettlementDate,
+    tlf.RefundsDate
+    )
+    from MNMVIW00033 as tlf
+    where substring(tlf.PONo,1,2)='PO' and tlf.ACNoName = 'PO'
+    and CONVERT(char(10),tlf.SettlementDate, 111) between CONVERT(char(10),:startDate, 111) and CONVERT(char(10),:endDate, 111)
+    and tlf.AcctNo is null and tlf.SourceBr =:sourceBranchCode and tlf.Active=true
+    order by tlf.Cur, tlf.PONo
+  </query>
+	
+	<!--//MNMVEW00073.SelectPORegisterByTransfer_WithTransactionDate//-->
+	<query name="MNMVEW00073.SelectPORegisterByTransfer_WithTransactionDate">
+    select new report_tlfDto
+    (
+    tlf.PONo,
+    tlf.Amount,
+    tlf.AcctNo,
+    tlf.ADate,
+    tlf.IDate,
+    tlf.Status,
+    tlf.ToAcctNo,
+    tlf.ACode,
+    tlf.ACNoName,
+    tlf.RegisterNo,
+    tlf.Cur,
+    tlf.SettlementDate,
+    tlf.RefundsDate
+    )
+    from MNMVIW00033 as tlf
+    where substring(tlf.PONo,1,2)='PO' and tlf.ACNoName = 'PO'
+    and CONVERT(char(10),tlf.ADate, 111) between CONVERT(char(10),:startDate, 111) and CONVERT(char(10),:endDate, 111)
+    and tlf.AcctNo is not null and tlf.SourceBr =:sourceBranchCode and tlf.Active=true
+    order by tlf.Cur, tlf.PONo
+  </query>
+
+	<!--MNMVEW00073.SelectPORegisterByTransfer_WithSettlementDate//-->
+	<query name="MNMVEW00073.SelectPORegisterByTransfer_WithSettlementDate">
+    select new report_tlfDto
+    (
+    tlf.PONo,
+    tlf.Amount,
+    tlf.AcctNo,
+    tlf.ADate,
+    tlf.IDate,
+    tlf.Status,
+    tlf.ToAcctNo,
+    tlf.ACode,
+    tlf.ACNoName,
+    tlf.RegisterNo,
+    tlf.Cur,
+    tlf.SettlementDate,
+    tlf.RefundsDate
+    )
+    from MNMVIW00033 as tlf
+    where substring(tlf.PONo,1,2)='PO' and tlf.ACNoName = 'PO'
+    and CONVERT(char(10),tlf.SettlementDate, 111) between CONVERT(char(10),:startDate, 111) and CONVERT(char(10),:endDate, 111)
+    and tlf.AcctNo is not null and tlf.SourceBr =:sourceBranchCode and tlf.Active=true
+    order by tlf.Cur, tlf.PONo
+  </query>
+
+	<!--MNMVEW00073.SelectPORegisterAll_WithTransactionDate//-->
+	<query name="MNMVEW00073.SelectPORegisterAll_WithTransactionDate">
+    select new report_tlfDto
+    (
+    tlf.PONo,
+    tlf.Amount,
+    tlf.AcctNo,
+    tlf.ADate,
+    tlf.IDate,
+    tlf.Status,
+    tlf.ToAcctNo,
+    tlf.ACode,
+    tlf.ACNoName,
+    tlf.RegisterNo,
+    tlf.Cur,
+    tlf.SettlementDate,
+    tlf.RefundsDate
+    )
+    from MNMVIW00033 as tlf
+    where substring(tlf.PONo,1,2)='PO' and tlf.ACNoName = 'PO'
+    and CONVERT(char(10),tlf.ADate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111) and tlf.SourceBr =:sourceBranchCode
+    and tlf.Active=true
+    order by tlf.Cur, tlf.PONo
+  </query>
+
+	<!--MNMVEW00073.SelectPORegisterAll_WithSettlementDate//-->
+	<query name="MNMVEW00073.SelectPORegisterAll_WithSettlementDate">
+    select new report_tlfDto
+    (
+    tlf.PONo,
+    tlf.Amount,
+    tlf.AcctNo,
+    tlf.ADate,
+    tlf.IDate,
+    tlf.Status,
+    tlf.ToAcctNo,
+    tlf.ACode,
+    tlf.ACNoName,
+    tlf.RegisterNo,
+    tlf.Cur,
+    tlf.SettlementDate,
+    tlf.RefundsDate
+    )
+    from MNMVIW00033 as tlf
+    where substring(tlf.PONo,1,2)='PO' and tlf.ACNoName = 'PO'
+    and CONVERT(char(10),tlf.SettlementDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111) and tlf.SourceBr =:sourceBranchCode
+    and tlf.Active=true
+    order by tlf.Cur, tlf.PONo
+  </query>
+
+	<!--MNMVEW00073.SelectPOWithdrawalByCash_WithTransactionDate//-->
+	<query name="MNMVEW00073.SelectPOWithdrawalByCash_WithTransactionDate">
+    select new report_tlfDto
+    (
+    tlf.PONo,
+    tlf.Amount,
+    tlf.AcctNo,
+    tlf.ADate,
+    tlf.IDate,
+    tlf.Status,
+    tlf.ToAcctNo,
+    tlf.ACode,
+    tlf.ACNoName,
+    tlf.RegisterNo,
+    tlf.Cur,
+    tlf.SettlementDate,
+    tlf.RefundsDate
+    )
+    from MNMVIW00033 as tlf
+    where substring(tlf.PONo,1,2)='PO' and tlf.ACNoName = 'PO'
+    and CONVERT(char(10),tlf.IDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and tlf.ToAcctNo is null and tlf.SourceBr =:sourceBranchCode
+    and tlf.Active=true
+    order by tlf.Cur, tlf.PONo
+  </query>
+
+	<!--MNMVEW00073.SelectPOWithdrawalByCash_WithSettlementDate//-->
+	<query name="MNMVEW00073.SelectPOWithdrawalByCash_WithSettlementDate">
+    select new report_tlfDto
+    (
+    tlf.PONo,
+    tlf.Amount,
+    tlf.AcctNo,
+    tlf.ADate,
+    tlf.IDate,
+    tlf.Status,
+    tlf.ToAcctNo,
+    tlf.ACode,
+    tlf.ACNoName,
+    tlf.RegisterNo,
+    tlf.Cur,
+    tlf.SettlementDate,
+    tlf.RefundsDate
+    )
+    from MNMVIW00033 as tlf
+    where substring(tlf.PONo,1,2)='PO' and tlf.ACNoName = 'PO'
+    and CONVERT(char(10),tlf.RefundsDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and tlf.ToAcctNo is null and tlf.SourceBr =:sourceBranchCode
+    and tlf.Active=true
+    order by tlf.Cur, tlf.PONo
+  </query>
+
+	<!--MNMVEW00073.SelectPOWithdrawalByTransfer_WithTransactionDate//-->
+	<query name="MNMVEW00073.SelectPOWithdrawalByTransfer_WithTransactionDate">
+    select new report_tlfDto
+    (
+    tlf.PONo,
+    tlf.Amount,
+    tlf.AcctNo,
+    tlf.ADate,
+    tlf.IDate,
+    tlf.Status,
+    tlf.ToAcctNo,
+    tlf.ACode,
+    tlf.ACNoName,
+    tlf.RegisterNo,
+    tlf.Cur,
+    tlf.SettlementDate,
+    tlf.RefundsDate
+    )
+    from MNMVIW00033 as tlf
+    where substring(tlf.PONo,1,2)='PO' and tlf.ACNoName = 'PO'
+    and CONVERT(char(10),tlf.IDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and tlf.ToAcctNo is not null and tlf.SourceBr =:sourceBranchCode
+    and tlf.Active=true
+    order by tlf.Cur, tlf.PONo
+  </query>
+
+	<!--MNMVEW00073.SelectPOWithdrawalByTransfer_WithSettlementDate//-->
+	<query name="MNMVEW00073.SelectPOWithdrawalByTransfer_WithSettlementDate">
+    select new report_tlfDto
+    (
+    tlf.PONo,
+    tlf.Amount,
+    tlf.AcctNo,
+    tlf.ADate,
+    tlf.IDate,
+    tlf.Status,
+    tlf.ToAcctNo,
+    tlf.ACode,
+    tlf.ACNoName,
+    tlf.RegisterNo,
+    tlf.Cur,
+    tlf.SettlementDate,
+    tlf.RefundsDate
+    )
+    from MNMVIW00033 as tlf
+    where substring(tlf.PONo,1,2)='PO' and tlf.ACNoName = 'PO'
+    and CONVERT(char(10),tlf.RefundsDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and tlf.ToAcctNo is not null and tlf.SourceBr =:sourceBranchCode
+    and tlf.Active=true
+    order by tlf.Cur, tlf.PONo
+  </query>
+
+	<!--MNMVEW00073.SelectPOWithdrawalAll_WithTransactionDate//-->
+	<query name="MNMVEW00073.SelectPOWithdrawalAll_WithTransactionDate">
+    select new report_tlfDto
+    (
+    tlf.PONo,
+    tlf.Amount,
+    tlf.AcctNo,
+    tlf.ADate,
+    tlf.IDate,
+    tlf.Status,
+    tlf.ToAcctNo,
+    tlf.ACode,
+    tlf.ACNoName,
+    tlf.RegisterNo,
+    tlf.Cur,
+    tlf.SettlementDate,
+    tlf.RefundsDate
+    )
+    from MNMVIW00033 as tlf
+    where substring(tlf.PONo,1,2)='PO' and tlf.ACNoName = 'PO'
+    and CONVERT(char(10),tlf.IDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111) and tlf.SourceBr =:sourceBranchCode
+    and tlf.Active=true
+    order by tlf.Cur, tlf.PONo
+  </query>
+
+	<!--MNMVEW00073.SelectPOWithdrawalAll_WithSettlementDate//-->
+	<query name="MNMVEW00073.SelectPOWithdrawalAll_WithSettlementDate">
+    select new report_tlfDto
+    (
+    tlf.PONo,
+    tlf.Amount,
+    tlf.AcctNo,
+    tlf.ADate,
+    tlf.IDate,
+    tlf.Status,
+    tlf.ToAcctNo,
+    tlf.ACode,
+    tlf.ACNoName,
+    tlf.RegisterNo,
+    tlf.Cur,
+    tlf.SettlementDate,
+    tlf.RefundsDate
+    )
+    from MNMVIW00033 as tlf
+    where substring(tlf.PONo,1,2)='PO' and tlf.ACNoName = 'PO'
+    and CONVERT(char(10),tlf.RefundsDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111) and tlf.SourceBr =:sourceBranchCode
+    and tlf.Active=true
+    order by tlf.Cur, tlf.PONo
+  </query>
+
+	<!--MNMVEW00073.SelectIRRegister_WithTransactionDate//-->
+	<query name="MNMVEW00073.SelectIRRegister_WithTransactionDate">
+    select new report_tlfDto
+    (
+    tlf.PONo,
+    tlf.Amount,
+    tlf.AcctNo,
+    tlf.ADate,
+    tlf.IDate,
+    tlf.Status,
+    tlf.ToAcctNo,
+    tlf.ACode,
+    tlf.ACNoName,
+    tlf.RegisterNo,
+    tlf.Cur,
+    tlf.SettlementDate,
+    tlf.RefundsDate
+    )
+    from MNMVIW00033 as tlf
+    where substring(tlf.PONo,1,2)='IR'
+    and CONVERT(char(10),tlf.ADate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and tlf.AcctNo is not null and tlf.SourceBr =:sourceBranchCode
+    and tlf.Active=true
+    order by tlf.Cur, tlf.PONo
+  </query>
+
+	<!--MNMVEW00073.SelectIRRegister_WithSettlementDate//-->
+	<query name="MNMVEW00073.SelectIRRegister_WithSettlementDate">
+    select new report_tlfDto
+    (
+    tlf.PONo,
+    tlf.Amount,
+    tlf.AcctNo,
+    tlf.ADate,
+    tlf.IDate,
+    tlf.Status,
+    tlf.ToAcctNo,
+    tlf.ACode,
+    tlf.ACNoName,
+    tlf.RegisterNo,
+    tlf.Cur,
+    tlf.SettlementDate,
+    tlf.RefundsDate
+    )
+    from MNMVIW00033 as tlf
+    where substring(tlf.PONo,1,2)='IR'
+    and CONVERT(char(10),tlf.SettlementDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and tlf.AcctNo is not null and tlf.SourceBr =:sourceBranchCode
+    and tlf.Active=true
+    order by tlf.Cur, tlf.PONo
+  </query>
+
+	<!--MNMVEW00073.SelectIRWithdrawalByCash_WithTransactionDate//-->
+	<query name="MNMVEW00073.SelectIRWithdrawalByCash_WithTransactionDate">
+    select new report_tlfDto
+    (
+    tlf.PONo,
+    tlf.Amount,
+    tlf.AcctNo,
+    tlf.ADate,
+    tlf.IDate,
+    tlf.Status,
+    tlf.ToAcctNo,
+    tlf.ACode,
+    tlf.ACNoName,
+    tlf.RegisterNo,
+    tlf.Cur,
+    tlf.SettlementDate,
+    tlf.RefundsDate
+    )
+    from MNMVIW00033 as tlf
+    where substring(tlf.PONo,1,2)='IR'
+    and CONVERT(char(10),tlf.IDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and tlf.ToAcctNo is null and tlf.IDate is not null and tlf.SourceBr =:sourceBranchCode
+    and tlf.Active=true
+    order by tlf.Cur, tlf.PONo
+  </query>
+
+	<!--MNMVEW00073.SelectIRWithdrawalByCash_WithSettlementDate//-->
+	<query name="MNMVEW00073.SelectIRWithdrawalByCash_WithSettlementDate">
+    select new report_tlfDto
+    (
+    tlf.PONo,
+    tlf.Amount,
+    tlf.AcctNo,
+    tlf.ADate,
+    tlf.IDate,
+    tlf.Status,
+    tlf.ToAcctNo,
+    tlf.ACode,
+    tlf.ACNoName,
+    tlf.RegisterNo,
+    tlf.Cur,
+    tlf.SettlementDate,
+    tlf.RefundsDate
+    )
+    from MNMVIW00033 as tlf
+    where substring(tlf.PONo,1,2)='IR'
+    and CONVERT(char(10),tlf.RefundsDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and tlf.ToAcctNo is null and tlf.RefundsDate is not null and tlf.SourceBr =:sourceBranchCode
+    and tlf.Active=true
+    order by tlf.Cur, tlf.PONo
+  </query>
+
+	<!--MNMVEW00073.SelectIRWithdrawalByTransfer_WithTransactionDate//-->
+	<query name="MNMVEW00073.SelectIRWithdrawalByTransfer_WithTransactionDate">
+    select new report_tlfDto
+    (
+    tlf.PONo,
+    tlf.Amount,
+    tlf.AcctNo,
+    tlf.ADate,
+    tlf.IDate,
+    tlf.Status,
+    tlf.ToAcctNo,
+    tlf.ACode,
+    tlf.ACNoName,
+    tlf.RegisterNo,
+    tlf.Cur,
+    tlf.SettlementDate,
+    tlf.RefundsDate
+    )
+    from MNMVIW00033 as tlf
+    where substring(tlf.PONo,1,2)='IR'
+    and CONVERT(char(10),tlf.IDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and tlf.ToAcctNo is not null and tlf.IDate is not null and tlf.SourceBr =:sourceBranchCode
+    and tlf.Active=true
+    order by tlf.Cur, tlf.PONo
+  </query>
+
+	<!--MNMVEW00073.SelectIRWithdrawalByTransfer_WithSettlementDate//-->
+	<query name="MNMVEW00073.SelectIRWithdrawalByTransfer_WithSettlementDate">
+    select new report_tlfDto
+    (
+    tlf.PONo,
+    tlf.Amount,
+    tlf.AcctNo,
+    tlf.ADate,
+    tlf.IDate,
+    tlf.Status,
+    tlf.ToAcctNo,
+    tlf.ACode,
+    tlf.ACNoName,
+    tlf.RegisterNo,
+    tlf.Cur,
+    tlf.SettlementDate,
+    tlf.RefundsDate
+    )
+    from MNMVIW00033 as tlf
+    where substring(tlf.PONo,1,2)='IR'
+    and CONVERT(char(10),tlf.RefundsDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and tlf.ToAcctNo is not null and tlf.IDate is not null and tlf.SourceBr =:sourceBranchCode
+    and tlf.Active=true
+    order by tlf.Cur, tlf.PONo
+  </query>
+
+	<!--MNMVEW00073.SelectIRWithdrawalAll_WithTransactionDate//-->
+	<query name="MNMVEW00073.SelectIRWithdrawalAll_WithTransactionDate">
+    select new report_tlfDto
+    (
+    tlf.PONo,
+    tlf.Amount,
+    tlf.AcctNo,
+    tlf.ADate,
+    tlf.IDate,
+    tlf.Status,
+    tlf.ToAcctNo,
+    tlf.ACode,
+    tlf.ACNoName,
+    tlf.RegisterNo,
+    tlf.Cur,
+    tlf.SettlementDate,
+    tlf.RefundsDate
+    )
+    from MNMVIW00033 as tlf
+    where substring(tlf.PONo,1,2)='IR'
+    and CONVERT(char(10),tlf.IDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and tlf.AcctNo is not null and tlf.IDate is not null and tlf.SourceBr =:sourceBranchCode
+    and tlf.Active=true
+    order by tlf.Cur, tlf.PONo
+  </query>
+
+	<!--MNMVEW00073.SelectIRWithdrawalAll_WithSettlementDate//-->
+	<query name="MNMVEW00073.SelectIRWithdrawalAll_WithSettlementDate">
+    select new report_tlfDto
+    (
+    tlf.PONo,
+    tlf.Amount,
+    tlf.AcctNo,
+    tlf.ADate,
+    tlf.IDate,
+    tlf.Status,
+    tlf.ToAcctNo,
+    tlf.ACode,
+    tlf.ACNoName,
+    tlf.RegisterNo,
+    tlf.Cur,
+    tlf.SettlementDate,
+    tlf.RefundsDate
+    )
+    from MNMVIW00033 as tlf
+    where substring(tlf.PONo,1,2)='IR'
+    and CONVERT(char(10),tlf.RefundsDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and tlf.AcctNo is not null and tlf.RefundsDate is not null and tlf.SourceBr =:sourceBranchCode
+    and tlf.Active=true
+    order by tlf.Cur, tlf.PONo
+  </query>
+
+	<!--MNMVEW00073.SelectIROutstanding//-->
+	<query name="MNMVEW00073.SelectIROutstanding">
+		select new report_tlfDto
+		(
+		tlf.PONo,
+		tlf.Amount,
+		tlf.AcctNo,
+		tlf.ADate,
+		tlf.IDate,
+		tlf.Status,
+		tlf.ToAcctNo,
+		tlf.ACode,
+		tlf.ACNoName,
+		tlf.RegisterNo,
+		tlf.Cur,
+		tlf.SettlementDate,
+		tlf.RefundsDate
+		)
+		from MNMVIW00033 as tlf
+		where substring(tlf.PONo,1,2)='IR' and tlf.IDate is null
+		and tlf.Active=true
+		and tlf.SourceBr =:sourceBranchCode
+		order by tlf.Cur, tlf.PONo
+	</query>
+
+
+
+  <!--MNMVEW00078.SelectPOEncashRegister//-->
+  <query name="MNMVEW00078.SelectPOEncashRegister">
+    select new report_tlfDto
+    (
+    tlf.PONo,
+    tlf.Cur,
+    tlf.RegisterNo,
+    tlf.Amount,
+    tlf.ADate,
+    tlf.IDate
+
+    )
+    from MNMVIW00033 as tlf
+    where substring(tlf.PONo,1,2)='IR'
+    and CONVERT(char(10),tlf.ADate, 111) between CONVERT(char(10),:startDate, 111) and CONVERT(char(10),:endDate, 111)
+    and tlf.Active=true
+    and tlf.SourceBr =:sourceBranchCode
+    order by tlf.Cur, tlf.PONo
+  </query>
+
+
+  <!--MNMVEW00079.SelectPOWithdrawlEncashByCash//-->
+  <query name="MNMVEW00079.SelectPOWithdrawlEncashByCash">
+    select new report_tlfDto
+    (
+    tlf.PONo,
+    tlf.Cur,
+    tlf.AcctNo ,
+    tlf.RegisterNo,
+    tlf.Amount,
+    tlf.ADate,
+    tlf.ACode,
+    tlf.IDate,
+    tlf.ToAcctNo,
+    tlf.Status,
+    tlf.ACNoName
+    )
+    from MNMVIW00033 as tlf
+    where substring(tlf.PONo,1,2)='IR'
+    and tlf.ACNoName = 'POR'
+    and CONVERT(char(10),tlf.IDate, 111) between CONVERT(char(10),:startDate, 111) and CONVERT(char(10),:endDate, 111)
+    and tlf.ToAcctNo is null
+    and tlf.Active=true
+    and tlf.SourceBr =:sourceBranchCode
+    order by tlf.Cur, tlf.PONo
+  </query>
+
+  <!--MNMVEW00079.SelectPOWithdrawlEncashByTransfer//-->
+  <query name="MNMVEW00079.SelectPOWithdrawlEncashByTransfer">
+    select new report_tlfDto
+    (
+    tlf.PONo,
+    tlf.Cur,
+    tlf.AcctNo ,
+    tlf.RegisterNo,
+    tlf.Amount,
+    tlf.ADate,
+    tlf.ACode,
+    tlf.IDate,
+    tlf.ToAcctNo,
+    tlf.Status,
+    tlf.ACNoName
+    )
+    from MNMVIW00033 as tlf
+    where substring(tlf.PONo,1,2)='IR'
+    and tlf.ACNoName = 'POR'
+    and CONVERT(char(10),tlf.IDate, 111) between CONVERT(char(10),:startDate, 111) and CONVERT(char(10),:endDate, 111)
+    and tlf.ToAcctNo is not NULL
+    and len(TOAcctno) > 5
+    and tlf.Active=true
+    and tlf.SourceBr =:sourceBranchCode
+    order by tlf.Cur, tlf.PONo
+</query>
+
+
+    <!--MNMVEW00079.SelectPOWithdrawlEncashByAll//-->
+    <query name="MNMVEW00079.SelectPOWithdrawlEncashAll">
+      select new report_tlfDto
+      (
+      tlf.PONo,
+      tlf.Cur,
+      tlf.AcctNo ,
+      tlf.RegisterNo,
+      tlf.Amount,
+      tlf.ADate,
+      tlf.ACode,
+      tlf.IDate,
+      tlf.ToAcctNo,
+      tlf.Status,
+      tlf.ACNoName
+      )
+      from MNMVIW00033 as tlf
+      where substring(tlf.PONo,1,2)='IR'
+      and tlf.ACNoName = 'POR'
+      and CONVERT(char(10),tlf.IDate, 111) between CONVERT(char(10),:startDate, 111) and CONVERT(char(10),:endDate, 111)
+      and tlf.Active=true
+      and tlf.SourceBr =:sourceBranchCode
+      order by tlf.Cur, tlf.PONo
+
+    </query>
+  
+
+
+
+</hibernate-mapping>
+
+ 
+
+
+
+
+
+
+
+

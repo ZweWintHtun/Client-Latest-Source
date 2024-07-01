@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Ace.Windows.Core.Service;
+using Ace.Windows.Admin.DataModel;
+using Ace.Cbs.Gl.Dmd;
+using Ace.Cbs.Gl.Ctr.Dao;
+using Ace.Cbs.Pfm.Dmd;
+
+namespace Ace.Cbs.Gl.Ctr.Sve
+{
+    public interface IGLMSVE00023 :IBaseService
+    {
+        //string CheckDate(DateTime Dailydate, string sourcebr);
+        void Posting(DateTime startDate, DateTime endDate, string workstation, int createdUserId, string branchCode);
+
+    }
+}

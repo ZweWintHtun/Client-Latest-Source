@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--INTLF-->
+<!-- 
+// <copyright file="MNMORM00021.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>Banking</CreatedUser>
+// <CreatedDate>11/15/2013</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version></Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Mnm.Dmd.MNMDTO00021, Ace.Cbs.Mnm.Dmd" rename="MNMDTO00021"/>
+  <class name="MNMORM00021" table="INTLF">
+
+    <id name="ENO">
+      <column name="ENO" sql-type="ACCTNO" not-null="true" />
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+
+    <property name="ACCTNO">
+      <column name="ACCTNO" sql-type="ACCTNO" not-null="true" />
+    </property>
+
+    <property name="AMOUNT">
+      <column name="AMOUNT" sql-type="AMOUNT" not-null="true" />
+    </property>
+
+    <property name="ACODE">
+      <column name="ACODE" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="HOMEAMOUNT">
+      <column name="HOMEAMOUNT" sql-type="AMOUNT" not-null="true" />
+    </property>
+
+    <property name="HOMEAMT">
+      <column name="HOMEAMT" sql-type="AMOUNT" not-null="true" />
+    </property>
+
+    <property name="HOMEOAMT">
+      <column name="HOMEOAMT" sql-type="AMOUNT" not-null="true" />
+    </property>
+
+    <property name="LOCALAMOUNT">
+      <column name="LOCALAMOUNT" sql-type="AMOUNT" not-null="true" />
+    </property>
+
+    <property name="LOCALAMT">
+      <column name="LOCALAMT" sql-type="AMOUNT" not-null="true" />
+    </property>
+
+    <property name="LOCALOAMT">
+      <column name="LOCALOAMT" sql-type="AMOUNT" not-null="true" />
+    </property>
+
+    <property name="SOURCECUR">
+      <column name="SOURCECUR" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="CURCODE">
+      <column name="CURCODE" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="DESP">
+      <column name="DESP" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="NARRATION">
+      <column name="NARRATION" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="DATE_TIME">
+      <column name="DATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="STATUS">
+      <column name="STATUS" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="TRANCODE">
+      <column name="TRANCODE" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="ACSIGN">
+      <column name="ACSIGN" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="ORGNENO">
+      <column name="ORGNENO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="USERNO">
+      <column name="USERNO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="CHKTIME">
+      <column name="CHKTIME" sql-type="timestamp" not-null="false" />
+    </property>
+
+    <property name="CLRPOSTSTATUS">
+      <column name="CLRPOSTSTATUS" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="CHEQUE">
+      <column name="CHEQUE" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="RECEIPTNO">
+      <column name="RECEIPTNO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="UID">
+      <column name="UID" sql-type="char" not-null="false" />
+    </property>
+
+    <property name="SOURCEBR">
+      <column name="SOURCEBR" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="RATE">
+      <column name="RATE" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="SETTLEMENTDATE">
+      <column name="SETTLEMENTDATE" sql-type="datetime" not-null="false" />
+    </property>
+
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  <!--//INTLF.CheckExist//-->
+  <query name="INTLFDAO.CheckExist">
+    select new MNMDTO00021( i.ENO,i.ACCTNO,i.AMOUNT,i.ACODE,i.HOMEAMOUNT,i.HOMEAMT,i.HOMEOAMT,i.LOCALAMOUNT,i.LOCALAMT,i.LOCALOAMT,i.SOURCECUR,i.CURCODE,i.DESP,i.NARRATION,i.DATE_TIME,i.STATUS,i.TRANCODE,i.ACSIGN,i.ORGNENO,i.USERNO,i.CHKTIME,i.CLRPOSTSTATUS,i.CHEQUE,i.RECEIPTNO,i.UID,i.SOURCEBR,i.RATE,i.SETTLEMENTDATE )
+    from MNMORM00021 as i where ( i.ENO =: eNO or i.ACCTNO =: aCCTNO or i.AMOUNT =: aMOUNT or i.HOMEAMOUNT =: hOMEAMOUNT or i.HOMEAMT =: hOMEAMT or i.HOMEOAMT =: hOMEOAMT or i.LOCALAMOUNT =: lOCALAMOUNT or i.LOCALAMT =: lOCALAMT or i.LOCALOAMT =: lOCALOAMT or i.STATUS =: sTATUS or i.UID =: uID  ) and  i.Active = true
+  </query>
+
+  <!--//INTLFDAO.SelectAll//-->
+  <query name="INTLFDAO.SelectAll">
+    select new MNMDTO00021(
+    i.ENO,
+    i.ACCTNO,
+    i.AMOUNT,
+    i.ACODE,
+    i.HOMEAMOUNT,
+    i.HOMEAMT,
+    i.HOMEOAMT,
+    i.LOCALAMOUNT,
+    i.LOCALAMT,
+    i.LOCALOAMT,
+    i.SOURCECUR,
+    i.CURCODE,
+    i.DESP,
+    i.NARRATION,
+    i.DATE_TIME,
+    i.STATUS,
+    i.TRANCODE,
+    i.ACSIGN,
+    i.ORGNENO,
+    i.USERNO,
+    i.CHKTIME,
+    i.CLRPOSTSTATUS,
+    i.CHEQUE,
+    i.RECEIPTNO,
+    i.UID,
+    i.SOURCEBR,
+    i.RATE,
+    i.SETTLEMENTDATE
+    )
+    from MNMORM00021 as i
+    where i.Active = true
+  </query>
+
+  <!--//INTLFDAO.SelectByENO//-->
+  <query name="INTLFDAO.SelectByENO">
+    select new MNMDTO00021(
+    i.ENO,
+    i.ACCTNO,
+    i.AMOUNT,
+    i.ACODE,
+    i.HOMEAMOUNT,
+    i.HOMEAMT,
+    i.HOMEOAMT,
+    i.LOCALAMOUNT,
+    i.LOCALAMT,
+    i.LOCALOAMT,
+    i.SOURCECUR,
+    i.CURCODE,
+    i.DESP,
+    i.NARRATION,
+    i.DATE_TIME,
+    i.STATUS,
+    i.TRANCODE,
+    i.ACSIGN,
+    i.ORGNENO,
+    i.USERNO,
+    i.CHKTIME,
+    i.CLRPOSTSTATUS,
+    i.CHEQUE,
+    i.RECEIPTNO,
+    i.UID,
+    i.SOURCEBR,
+    i.RATE,
+    i.SETTLEMENTDATE
+    )
+    from MNMORM00021 as i
+    where i.ENO = :eNO
+    and i.Active = true
+  </query>
+
+
+</hibernate-mapping>

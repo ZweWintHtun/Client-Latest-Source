@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+	<import class="Ace.Cbs.Pfm.Dmd.PFMDTO00017, Ace.Cbs.Pfm.Dmd" rename="caofdto"/>
+	<class name="MNMVIW00026" table="VW_CURLIST_ALL" mutable="false">
+
+		<id name="Id" type="Int32" unsaved-value="0">
+		</id>
+
+		<property name="AccountNo">
+			<column name="ACCTNO" sql-type="nvarchar" not-null="true" />
+		</property>
+		<property name="Name">
+			<column name="NAME" sql-type="varchar" not-null="true" />
+		</property>
+		<property name="CustomerID">
+			<column name="CUSTID" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="Address">
+			<column name="ADDRESS" sql-type="nvarchar" not-null="false" />
+		</property>
+    <property name="Township_Code">
+      <column name="TOWNSHIPDESP" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="City_Code">
+      <column name="CITYDESP" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="State_Code">
+      <column name="STATEDESP" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="PhoneNo">
+      <column name="PHONE" sql-type="nvarchar" not-null="false" />
+    </property>
+		<property name="Fax">
+			<column name="FAX" sql-type="nvarchar" not-null="false" />
+			</property>
+		<property name="OpenDate">
+			<column name="OPENDATE" sql-type="datetime" not-null="false" />
+		</property>
+		<property name="AccountSign">			
+			<column name="ACSIGN" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="NRC">
+			<column name="NRC" sql-type="nvarchar" not-null="false" />
+		</property>
+		<property name="Description">
+			<column name="DESP" sql-type="nvarchar" not-null="false" />
+		</property>
+		<property name="Business">
+			<column name="BUSINESS" sql-type="nvarchar" not-null="false" />
+		</property>
+		<property name="SourceBr">
+			<column name="SOURCEBR" sql-type="varchar" not-null="true" />
+		</property>
+		<property name="Currency">
+			<column name="CUR" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>		
+		
+	</class>
+
+	<!--//Select Current Account All //-->
+	<query name="MNMVIW00026.SelectCurrentAccountAll">
+    select new caofdto
+    (
+    vw.AccountNo,
+    vw.Name,
+    vw.CustomerID,
+    vw.Address,
+    vw.Township_Code,
+    vw.City_Code,
+    vw.State_Code,
+    vw.PhoneNo,
+    vw.Fax,
+    vw.OpenDate,
+    vw.AccountSign,
+    vw.NRC,
+    vw.Business,
+    vw.SourceBr,
+    vw.Currency
+    )
+    from MNMVIW00026 as vw
+    where convert(char(10),vw.OpenDate,111) between :startDate and :endDate and vw.AccountSign Like :acSign
+    and vw.SourceBr = :sourceBr and vw.Active = true
+    order by vw.AccountNo
+  </query>
+   
+
+	<query name="MNMVIW00026.SelectCurrentAccountSpecific">
+    select new caofdto
+    (
+    vw.AccountNo,
+    vw.Name,
+    vw.CustomerID,
+    vw.Address,
+    vw.Township_Code,
+    vw.City_Code,
+    vw.State_Code,
+    vw.PhoneNo,
+    vw.Fax,
+    vw.OpenDate,
+    vw.AccountSign,
+    vw.NRC,
+    vw.Business,
+    vw.SourceBr,
+    vw.Currency
+    )
+    from MNMVIW00026 as vw
+    where convert(char(10),vw.OpenDate,111) between :startDate and :endDate and vw.AccountSign = :acSign
+    and vw.SourceBr = :sourceBr and vw.Active = true
+    order by vw.AccountNo
+  </query>
+
+</hibernate-mapping>
+

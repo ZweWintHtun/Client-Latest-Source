@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:db="http://www.springframework.net/database"
+         xmlns:tx="http://www.springframework.net/tx">
+
+
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    Database factory and settings
+  </description>
+
+  <db:provider id="DbProvider" provider="SqlServer-2.0" connectionString="Data Source=DESKTOP-LL55OS2\SQLEXPRESS;Database=FVS_GOLIVE;User Id=sa;Password=12121212;"/>
+
+  <object id="MySessionFactory" type="Spring.Data.NHibernate.LocalSessionFactoryObject, Spring.Data.NHibernate33">
+    <property name="DbProvider" ref="DbProvider"/>
+    <property name="MappingResources">
+      <list>
+        <!--Region Framework Admin Module -->
+        <value>../ormmap/serverdb/ADM/Group.hbm.xml</value>
+        <value>../ormmap/serverdb/ADM/Menu.hbm.xml</value>
+        <value>../ormmap/serverdb/ADM/MenuInGroup.hbm.xml</value>
+        <value>../ormmap/serverdb/ADM/Program.hbm.xml</value>
+        <value>../ormmap/serverdb/ADM/ProgramInMenu.hbm.xml</value>
+        <value>../ormmap/serverdb/ADM/Role.hbm.xml</value>
+        <value>../ormmap/serverdb/ADM/User.hbm.xml</value>
+        <value>../ormmap/serverdb/Adm/QuickAccessMenu.hbm.xml</value>
+        <value>../ormmap/serverdb/Adm/ProgramInGroup.hbm.xml</value>
+        <value>../ormmap/serverdb/Adm/Format.hbm.xml</value>
+        <value>../ormmap/serverdb/Adm/FormatDefinition.hbm.xml</value>
+        <!--<value>../ormmap/serverdb/Adm/ActivateUser.hbm.xml</value>-->
+
+        <!-- Framework Module -->
+        <value>../ormmap/serverdb/fx/InstallerUpdateDefinition.hbm.xml</value>
+        <value>../ormmap/serverdb/fx/InstallerUpdateLog.hbm.xml</value>
+        <value>../ormmap/serverdb/fx/AppSettings.hbm.xml</value>
+        <value>../ormmap/serverdb/fx/Message.hbm.xml</value>
+        <value>../ormmap/serverdb/fx/StoreProcedure.hbm.xml</value>
+        <value>../ormmap/serverdb/fx/ViewList.hbm.xml</value>
+
+
+        <!-- Core Baning Admin Module -->
+        <value>../ormmap/serverdb/Adm/Branch.hbm.xml</value>
+        <value>../ormmap/serverdb/Adm/City.hbm.xml</value>
+        <value>../ormmap/serverdb/Adm/State.hbm.xml</value>
+        <value>../ormmap/serverdb/Adm/Township.hbm.xml</value>
+        <value>../ormmap/serverdb/Adm/CounterInfo.hbm.xml</value>
+        <value>../ormmap/serverdb/Adm/UserPermission.hbm.xml</value>
+        <value>../ormmap/serverdb/Adm/Workstation.hbm.xml</value>
+        <value>../ormmap/serverdb/Adm/WorkstationType.hbm.xml</value>
+        <value>../ormmap/serverdb/Adm/CounterType.hbm.xml</value>
+        <value>../ormmap/serverdb/Adm/Currency.hbm.xml</value>
+        <value>../ormmap/serverdb/Adm/ChargeOfAccount.hbm.xml</value>
+        <value>../ormmap/serverdb/Adm/ChargeOfAccountSetup.hbm.xml</value>
+        <value>../ormmap/serverdb/Adm/CurrencyChargeOfAccount.hbm.xml</value>
+        <value>../ormmap/serverdb/Adm/ActivateUser.hbm.xml</value>
+
+        <!--Endregion-->
+
+        <!--Region Platform Module-->
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00001.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00002.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00003.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00004.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00006.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00007.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00009.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00010.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00011.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00014.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00015.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00016.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00017.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00020.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00021.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00022.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00023.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00028.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00029.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00030.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00031.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00032.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00033.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00034.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00036.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00038.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00039.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00040.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00041.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00042.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00043.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00044.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00045.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00048.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00053.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00054.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00056.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00057.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00058.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00073.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00074.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00075.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00076.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Pfm/PFMORM00078.hbm.xml</value>
+        <!--Endregion-->
+
+        <!--Region Teller Module -->
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00001.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00004.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00005.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00009.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00013.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00015.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00016.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00017.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00018.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00019.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00025.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00026.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00027.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00055.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00029.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00040.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00056.hbm.xml</value>
+        <!--<value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00057.hbm.xml</value>-->
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00001.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00002.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00003.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00008.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00009.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW000A9.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00024.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00016.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00A16.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00B16.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00052.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00A52.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00B52.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00C16.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00C52.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00003.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00012.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00020.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00034.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00035.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00036.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00037.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00031.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00032.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00028.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00030.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00024.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00021.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMORM00008.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00006.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00021.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00017.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00015.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00014.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00A11.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00A10.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00B11.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00C11.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00D11.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00A12.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00B12.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00C12.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00D12.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00A13.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00B13.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00C13.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00D13.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00D14.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00D15.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00D16.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00D17.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00D18.hbm.xml</value>
+        <!--<value>../Ormmap/Serverdb/Cbs.Tel/TLMVIW00A10.hbm.xml</value>-->
+
+        <!--Endregion-->
+
+        <!--Endregion-->
+
+        <!-- Region System Admin Module -->
+        <value>../Ormmap/Serverdb/Cbs.Sam/SAMORM00003.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Sam/SAMORM00053.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Sam/SAMORM00054.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Sam/SAMVIW00001.hbm.xml</value>
+
+        <!--Endregion-->
+
+        <!-- Region Management Module -->
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMORM00012.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMORM00001.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMORM00010.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMORM00004.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMORM00007.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMORM00005.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMORM00006.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMORM00008.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMORM00009.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMORM00018.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMORM00003.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMORM00016.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMORM00002.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMORM00020.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMORM00011.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMORM00025.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMORM00019.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMORM00021.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMORM00017.hbm.xml</value>
+
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00001.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00002.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00003.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMORM00022.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMORM00023.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMORM00024.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00009.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00005.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00006.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00007.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00008.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00010.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00012.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00015.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00013.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00014.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00016.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00017.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00021.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00022.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00023.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00024.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00025.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00027.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00028.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00030.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00011.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00018.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00019.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00020.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00026.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00029.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00031.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00032.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00076.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00033.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00034.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMORM00027.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00035.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMORM00026.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMORM00041.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMORM00042.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00036.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00037.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00077.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00078.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00079.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00080.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00082.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00083.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00084.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00071.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00072.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00085.hbm.xml</value>
+        <!--<value>../Ormmap/Serverdb/Cbs.Mnm/MNMVIW00081.hbm.xml</value>-->
+
+
+
+        <!--Endregion-->
+
+        <!--Region Transfer And Clearing Module-->
+        <value>../Ormmap/Serverdb/Cbs.Tcm/TCMORM00006.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tcm/TCMORM00002.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tcm/TCMORM00007.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tcm/TCMORM00008.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tcm/TCMORM00009.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tcm/TCMORM00010.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tcm/TCMORM00052.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tcm/TCMORM00001.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tcm/TCMVIW00001.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tcm/TCMVIW00002.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tcm/TCMVIW00003.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tcm/TCMVIW00004.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tcm/TCMVIW00005.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tcm/TCMVIW00006.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tcm/TCMVIW00007.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tcm/TCMVIW00008.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tcm/TCMVIW00009.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tcm/TCMVIW00010.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tcm/TCMVIW00011.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tcm/TCMVIW00013.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tcm/TCMVIW00052.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Tcm/TCMORM00003.hbm.xml</value>
+        <!--Endregion-->
+
+        <!-- Region Installer Module -->
+
+        <value>../ormmap/serverdb/Ix/CCCComponentVersionDownloadedForClient.hbm.xml</value>
+        <value>../ormmap/serverdb/Ix/ClientDataEntity.hbm.xml</value>
+        <value>../ormmap/serverdb/Ix/ClientDataVersion.hbm.xml</value>
+        <value>../ormmap/serverdb/Ix/ClientDataVersionHeader.hbm.xml</value>
+        <value>../ormmap/serverdb/Ix/ClientDataVersionItem.hbm.xml</value>
+        <value>../ormmap/serverdb/Ix/ComponentVersionItem.hbm.xml</value>
+        <value>../ormmap/serverdb/Ix/ComponentVersionHeader.hbm.xml</value>
+        <value>../ormmap/serverdb/Ix/ComponentFileDownloadedHistory.hbm.xml</value>
+        <value>../ormmap/serverdb/Ix/ComponentVersionInstalledHistory.hbm.xml</value>
+        <value>../ormmap/serverdb/Ix/InstallerInWorkStation.hbm.xml</value>
+        <value>../ormmap/serverdb/Ix/InstallerType.hbm.xml</value>
+        <value>../ormmap/serverdb/Ix/WorkStationActivityStatus.hbm.xml</value>
+        <value>../ormmap/serverdb/Ix/WorkStationCurrentClientDataVersion.hbm.xml</value>
+        <value>../ormmap/serverdb/Ix/WorkStationCurrentComponentVersion.hbm.xml</value>
+
+        <!--Endregion-->
+
+<!--Region General Ledger-->
+				<value>../Ormmap/Serverdb/Cbs.Gl/GLMORM00001.hbm.xml</value>
+				<value>../Ormmap/Serverdb/Cbs.Gl/GLMVIW00013.hbm.xml</value>
+				<value>../Ormmap/Serverdb/Cbs.Gl/GLMORM00023.hbm.xml</value>
+				<value>../Ormmap/Serverdb/Cbs.Gl/GLMVIW00024.hbm.xml</value>
+				<!--Endregion-->
+
+        <!--Region Loan Module-->
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00001.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00002.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00003.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00004.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00009.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00010.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00005.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00006.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00007.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00008.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00011.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00012.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00013.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00014.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00015.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00016.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00017.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00018.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00019.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00023.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00024.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMVIW00002.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMVIW00001.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00021.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00022.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMVIW00035.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMVIW00034.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMVIW00042.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMVIW00047.hbm.xml</value>
+
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00025.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00071.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00074.hbm.xml</value>
+
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMVIW00051.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMVIW00057.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMVIW00059.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMVIW00061.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00068.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00069.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00070.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00072.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00073.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00075.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00076.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00077.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00078.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00079.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00085.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00086.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMVIW00093.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMVIW00094.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00099.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00300.hbm.xml</value>
+	      <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00100.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00302.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMVIW00303.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMVIW00305.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMVIW00307.hbm.xml</value>
+        <!--<value>../Ormmap/Serverdb/Cbs.Loan/LOMVIW00400.hbm.xml</value>-->
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00311.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00312.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00313.hbm.xml</value>
+      	<value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00401.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00402.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMVIW00314.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMVIW00316.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMVIW00405.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMVIW00414.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00404.hbm.xml</value>
+        <value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00405.hbm.xml</value>
+		<value>../Ormmap/Serverdb/Cbs.Loan/LOMORM00415.hbm.xml</value>
+		<!--Endregion-->
+
+
+      </list>
+    </property>
+    <property name="ExposeTransactionAwareSessionFactory" value="true" />
+    <property name="HibernateProperties">
+      <dictionary>
+        <entry key="hibernate.connection.provider" value="NHibernate.Connection.DriverConnectionProvider"/>
+        <entry key="dialect" value="NHibernate.Dialect.MsSql2008Dialect"/>
+        <entry key="hibernate.connection.driver_class" value="NHibernate.Driver.SqlClientDriver"/>
+        <entry key="query.substitutions" value="true=1;false=0"/>
+        <entry key="showsql" value="false"/>
+        <entry key="use_proxy_validator" value="false" />
+      </dictionary>
+    </property>
+  </object>
+
+  <!-- Exception translation object post processor -->
+  <object type="Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor, Spring.Data"/>
+
+
+  <object id="TransactionManager" type="Spring.Data.NHibernate.HibernateTransactionManager, Spring.Data.NHibernate33">
+    <property name="SessionFactory" ref="MySessionFactory">
+    </property>
+    <property name="DbProvider" ref="DbProvider"/>
+  </object>
+
+  <tx:attribute-driven transaction-manager="TransactionManager"/>
+
+</objects>

@@ -1,0 +1,1667 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Store Procedure of Database-->
+<!-- 
+// <copyright file="TLMORM00000.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>AK</CreatedUser>
+// <CreatedDate>2013-09-21</CreatedDate>	
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version>1.0</VersionSP_Get_HP_PrepaymentInfo
+-->
+<hibernate-mapping assembly="Ace.Cbs.Tel.Dmd" namespace="Ace.Cbs.Tel.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+   
+  <!--CBM Reports-->
+  <!--SP_GetAll_CashInHandPosition-->
+  <sql-query name="SP_GetAll_CashInHandPosition_CBM">
+    exec dbo.SP_GetAll_CashInHandPosition_CBM :date,:cur
+  </sql-query>
+  
+  <!--SP_GetAll_DailyPosition_CBM-->
+  <sql-query name="SP_GetAll_DailyPosition_CBM">
+    exec dbo.SP_GetAll_DailyPosition_CBM :date,:cur
+  </sql-query>
+
+  <!--SP_GetAll_FinancialStatement_CBM-->
+  <sql-query name="SP_GetAll_FinancialStatement_CBM">
+    exec dbo.SP_GetAll_FinancialStatement_CBM :date,:cur
+  </sql-query>
+
+  <!--SP_GetAll_DailyImprovement_CBM-->
+  <sql-query name="SP_GetAll_DailyImprovement_CBM">
+    exec dbo.SP_GetAll_DailyImprovement_CBM :date,:budgetMonth,:cur
+  </sql-query>
+
+  <!--SP_GetAll_DailyProgress_CBM-->
+  <sql-query name="SP_GetAll_DailyProgress_CBM">
+    exec dbo.SP_GetAll_DailyProgress_CBM :date,:budgetMonth,:cur
+  </sql-query>
+
+  <!--SP_GetAll_CashFlowData_CBM-->
+  <sql-query name="SP_GetAll_CashFlowData_CBM">
+    exec dbo.SP_GetAll_CashFlowData_CBM :date,:cur
+  </sql-query>
+  
+  <!--SP_Get_Liquidity_Ratio_CBM-->
+  <sql-query name="SP_Get_Liquidity_Ratio_CBM">
+    exec dbo.SP_Get_Liquidity_Ratio_CBM :date,:cur
+  </sql-query>
+
+  <!--CBM Reports-->
+  
+  <sql-query name="SP_IBLVoucher_IBD">
+    exec dbo.SP_IBL_VOUCHER_IBD :eno,:acode,:amount,:status,:trancode,:type,:orgnTranCode,:orgnEno,:incomeAmount,:faxCharges,:takeIncome,:incomeAc,:FaxAc,:userId,:curCode,:sourceCur,:homeExchaneRate,:sourceBr,:Settlementdate,:channel,:createdDate,0
+  </sql-query>
+
+  <sql-query name="SP_IBL_DEPOSIT_NAR_IBD">
+    exec dbo.SP_IBL_DEPOSIT_NAR_IBD :voucherNo,:acctno,:amount,:forceCheck,:minBalCheck,:tempStatus,:tempTranCode,:reference,:receipt_No,:fromBranch,:incomeAmount,:faxCharges,:takeIncome,:IBSAC,:incomeAC,:faxAC,:narTest,:userId,:sourceCur,:homeExchangeRate,:soruceBr,:Settlementdate,:channel,:createdDate,0
+  </sql-query>
+
+  <!--<sql-query name="IBL_CHECK_SAVAC_DATE_SP">
+	  exec dbo.IBL_CHECK_SAVAC_DATE_SP :acctno,:startDate,:endDate,:createdUserId,:message output select :message
+  </sql-query>-->
+
+  <sql-query name="SP_ALUPDATE_TRANSFER">
+    exec SP_ALUPDATE_TRANSFER  :eno,:acctno,:amount,:Oamt,:chequeNo,:userId,:voucherStatus,:status,:narration,:currency,:homeExchangeRate,
+    :sourceBr,:settlementDate,:channel,0,''
+  </sql-query>
+
+  <sql-query name="SP_ALUPDATE_CLEARING">
+    exec dbo.SP_ALUPDATE_CLEARING :eno,:macctno,:amount,:oamount,:cheque,:otherbank,:userno,:wstatus,:cur,:homeexrate,:sourcebr,:settlementdate,:channel,:createduserid,''
+  </sql-query>
+
+  <sql-query name="SP_IBL_CHECK_AMOUNT">
+    exec dbo.SP_IBL_CHECK_AMOUNT :accountno,:amount,:action,:acsign,:force,:minbalcheck,0,0
+  </sql-query>
+
+  <sql-query name="SP_ATL_AMOUNTCHECKING_CHECK_SAVAC_DATE">
+    exec dbo.SP_ATL_AMOUNTCHECKING_CHECK_SAVAC_DATE :accountno,:amount,:vip,:userId,''
+  </sql-query>
+
+  <sql-query name="SP_INSERT_REPORT_DATA">
+    exec dbo.SP_INSERT_REPORT_DATA :accountno,:acode,:acsign,:cashcleartran,:creditdebit,:orgneno,:userno,:trancode,:specialcond,:startdate,:enddate,:c_r,:createduserId
+  </sql-query>
+
+  <sql-query name="SP_INSERT_REPORT_DATA_ALLBRANCH">
+    exec dbo.SP_INSERT_REPORT_DATA_ALLBRANCH :accountno,:acode,:acsign,:cashcleartran,:creditdebit,:orgneno,:userno,:trancode,:specialcond,:startdate,:enddate,:c_r,:createduserId
+  </sql-query>
+
+  <sql-query name="SP_INSERT_REPORT_DATA_SDATE">
+    exec dbo.SP_INSERT_REPORT_DATA_SDATE :accountno,:acode,:acsign,:cashcleartran,:creditdebit,:orgneno,:userno,:trancode,:specialcond,:startdate,:enddate,:c_r,:createduserId
+  </sql-query>
+
+  <sql-query name="SP_INSERT_REPORT_DATA_SDATE_ALLBRANCH">
+    exec dbo.SP_INSERT_REPORT_DATA_SDATE_ALLBRANCH :accountno,:acode,:acsign,:cashcleartran,:creditdebit,:orgneno,:userno,:trancode,:specialcond,:startdate,:enddate,:c_r,:createduserId
+  </sql-query>
+
+  <sql-query name="SP_IBL_TRDEBIT_CHECK_SAVAC_DATE_IBD">
+    exec SP_IBL_TRDEBIT_CHECK_SAVAC_DATE_IBD :eno,:acctno,:isVIP,:amount,:forceCheck,:minbalCheck,:chequeNo,:status,:transactionCode,:reference,
+    :fromBranch,:debitBranch,:creditBranch,:creditAccount,:incomeAmount,:faxCharges,:takeIncome,:iBSAC,:incomeAC,:faxAC,:userId,:currency,:homeExchangeRate,
+    :sourceBr,:settlementDate,:channel,0
+  </sql-query>
+
+  <sql-query name="sp_Ibl_TrCredit_Nar_IBD">
+    exec sp_Ibl_TrCredit_Nar_IBD :eno,:acctno,:iBSAC,:amount,:forceCheck,:minbalCheck,:status,:transactionCode,:reference,0,
+    :fromBranch,:debitBranch,:creditBranch,:debitAccount,:narration,:userId,:currency,:homeExchangeRate,
+    :sourceBr,:settlementDate,:channel,0
+  </sql-query>
+
+  <sql-query name="SP_IBL_TRANSFER_CHECK_SAVAC_DATE_IBD">
+    exec SP_IBL_TRANSFER_CHECK_SAVAC_DATE_IBD :eno,:CreditAccount,:DebitAccount,:isVIP,:amount,:forceCheck,:minbalCheck,:fromBranch,
+    :incomeAmount,:faxCharges,:takeIncome,:iBSAC,:faxAC,:userId,:chequeNo,:currency,:homeExchangeRate,:sourceBr,:settlementDate,:channel,0
+  </sql-query>
+
+  <sql-query name="SP_ENCASHVOU">
+    exec dbo.SP_ENCASHVOU :eno,:mainAccountNo,:amount,:cheque,:registerNo,:poNo,:poStatus,:encashNo,:userNo,:closeStatus,:poAccountNo,:budget,:dBank,:currency,:homeExchangeRate,:sourceBr,:settlementDate,:channel,:createdUserId
+  </sql-query>
+
+  <sql-query name="SP_IBL_REMIT">
+    exec dbo.SP_IBL_REMIT :voucherNo,:accountNo,:amount,:cheque,:remitCharges,:branchCode,:registerNo,:remitStatus,:userNo,:closeStatus,:linkStatus,:sourceCurrency,:homeExRate,:sourceBranch,:settlementDate,:channel,:createdUserId
+  </sql-query>
+
+  <sql-query name="SP_REMITTANCE_VOUCHER">
+    exec dbo.SP_REMITTANCE_VOUCHER :voucherNo,:accountNo,:amount,:overdraftAmount,:cheque,:remitCharges,:branchCode,:registerNo,:remitStatus,:userNo,:closeStatus,:sourceCurrency,:homeExRate,:settlementDate,:sourceBranch,:channel,:createdUserId
+  </sql-query>
+
+  <sql-query name="SP_ALUPDATE_REMIT">
+    exec dbo.SP_ALUPDATE_REMIT :voucherNo,:accountNo,:amount,:cheque,:remitCharges,:branchCode,:registerNo,:remitStatus,:userNo,:sourceCurrency,:homeExRate,:sourceBranch,:settlementDate,:channel,:createdUserId
+  </sql-query>
+
+
+  <sql-query name="SP_IBL_ENCASHVOU">
+    exec dbo.SP_IBL_ENCASHVOU :ENO,:MACCTNO,:AMOUNT,:CHEQUE,:REGISTERNO,:PONO,:POSTATUS,:ENCASHNO,:USERNO,:CLOSESTATUS,:BUDYEAR,:NARTEXT,:BRANCHCODE,:SOURCECUR,:HOMEEXRATE,:SOURCEBR,:SETTLEMENTDATE,:CHANNEL,:CREATEDUSERID,''
+  </sql-query>
+
+  <sql-query name="SP_ALUPDATE_WITHDRAW">
+    exec dbo.SP_ALUPDATE_WITHDRAW :ENO,:MACCTNO,:AMOUNT,:OAMOUNT,:CHEQUE,:USERNO,:WSTATUS,:SOURCEBR,:CHANNEL,:SETTLEMENTDATE,:CreatedUserId,:CreatedDate,:UpdatedUserId,:IsLastWithdraw,:ERRMESSAGE
+  </sql-query>
+
+  <sql-query name="SP_IBL_WITHDRAW_CHECK_SAVAC_DATE_IBD">
+    exec dbo.SP_IBL_WITHDRAW_CHECK_SAVAC_DATE_IBD
+    :VOUCHERNO,:ACCTNO,:VIP,:AMOUNT,:FORCECHECK,
+    :MINBALCHECK,:CHEQUENO,:TEMPSTATUS,:TEMPTRANCODE,:REFERENCE,
+    :FROMBRANCH,:INCOMEAMOUNT,:FAXCHARGES,:TAKEINCOME,:IBSAC,
+    :INCOMEAC,:FAXAC,:USERID,:RECEIPT_NO,:SOURCECUR,
+    :HOMEEXRATE,:SOURCEBR,:SETTLEMENTDATE,:CHANNEL,:CreatedUserId,:CreatedDate
+  </sql-query>
+
+  <sql-query name="SP_BANKING_BANKCASH_CALC_BYHOMECURALL">
+    exec dbo.SP_BANKING_BANKCASH_CALC_BYHOMECURALL :machineName,:requestDate,:rStatus,:dStatus,:brCode,:createduserId
+  </sql-query>
+
+  <sql-query name="SP_BANKING_BANKCASH_CALC_BYHOMECUR">
+    exec dbo.SP_BANKING_BANKCASH_CALC_BYHOMECUR :machineName,:requestDate,:rStatus,:dStatus,:currency,:brCode,:createduserId
+  </sql-query>
+
+  <sql-query name="SP_BANKING_BANKCASH_CALC_BYSourceCUR">
+    exec dbo.SP_BANKING_BANKCASH_CALC_BYSourceCUR :machineName,:requestDate,:rStatus,:dStatus,:currency,:createduserId
+  </sql-query>
+
+  <sql-query name="SP_BANKING_BANKCASH_CALC">
+    exec dbo.SP_BANKING_BANKCASH_CALC :machineName,:requestDate,:rStatus,:dStatus,:currency,:brCode,:createduserId
+  </sql-query>
+
+  <sql-query name="SP_ALUPDATE_DEPOSITADJUST">
+    exec dbo.SP_ALUPDATE_DEPOSITADJUST :newEno,:eno,:mAcctno,:mAcode,:mName,:amount,:oAmount,:mAcSign,:createduserId,:Currency,
+    :homeExchangeRate,:soruceBr,:settlementDate,:channel,''
+  </sql-query>
+
+  <sql-query name="StoreProcedure_INS_CASHDENO">
+    exec dbo.INS_CASHDENO :receiptNo,:denoEno,:tlfEno,:acType,:fromType,:branchcode,:amount,:adjustAmt,:denoDetail,:denorefundDetail,:userNo,:counterNo,:status,:reverse,:registerNo,:sourceBranch,:currency,:denoRate,:denorefundRate,:settlementDate,:rate,:createduserId
+  </sql-query>
+
+  <sql-query name="Sp_FixRenewal">
+    exec dbo.Sp_FixRenewal :SDate,:EDate,:Start,:UserNo,:SourceBr,:Vouno,:RetValue,:RetMsg output select :RetMsg
+  </sql-query>
+
+  <sql-query name="SP_SERVICECHARGES_VOU">
+    exec dbo.SP_SERVICECHARGES_VOU :ENO,:MACCTNO,:LNO,:NAR,:AMOUNT,:OAMOUNT,:USERNO,:VOUSTATUS,:TSTATUS,:CUR,:HOMEEXRATE,:SOURCEBR,:SETTLEMENTDATE,:CHANNEL,:RETVALUE output ,:MESSAGE output select :RETVALUE
+  </sql-query>
+
+
+  <sql-query name="DAYBOOK_SUMMARY_CDDATA_SP_FORBRANCH">
+    exec dbo.DAYBOOK_SUMMARY_CDDATA_SP_FORBRANCH :date, :crdr, :workstation, :createduserId, :brCode, :sourcecur
+  </sql-query>
+
+  <sql-query name="SP_DAYBOOK_SUMMARYFORBRANCHNEW">
+    exec dbo.Sp_DayBook_SummaryForBranchNew :date, :crdr, :workstation, :createduserId, :brCode, :sourcecur
+  </sql-query>
+
+  <sql-query name="SP_RETURN_CLOSINGBALANCE_BYHOMECURALL">
+    exec dbo.SP_RETURN_CLOSINGBALANCE_BYHOMECURALL :machineName,:requestDate,:parameter,:rStatus,:brCode,:createduserId
+  </sql-query>
+
+  <sql-query name="SP_RETURN_CLOSINGBALANCE_BYSOURCECUR">
+    exec dbo.SP_RETURN_CLOSINGBALANCE_BYSOURCECUR :machineName,:requestDate,:parameter,:rStatus,:currency,:createduserId
+  </sql-query>
+
+  <sql-query name="SP_RETURN_CLOSINGBALANCE">
+    exec dbo.SP_RETURN_CLOSINGBALANCE :machineName,:requestDate,:parameter,:rStatus,:currency,:brCode,:createduserId
+  </sql-query>
+
+  <sql-query name="SP_RETURN_CLOSINGBALANCE_BYHOMECUR">
+    exec dbo.SP_RETURN_CLOSINGBALANCE_BYHOMECUR :machineName,:requestDate,:parameter,:rStatus,:currency,:brCode,:createduserId
+  </sql-query>
+
+
+
+  <!--<sql-query name="SP_SERVICECHARGES_VOU">
+		exec dbo.SP_SERVICECHARGES_VOU :ENO,:MACCTNO,:LNO,:NAR,:AMOUNT,:OAMOUNT,:USERNO,:VOUSTATUS,:TSTATUS,:CUR,:HOMEEXRATE,:SOURCEBR,:SETTLEMENTDATE,:CHANNEL,:RETVALUE,:MESSAGE
+	</sql-query>-->
+
+  <sql-query name="SP_CHANGE_TABLES">
+    exec dbo.SP_CHANGE_TABLES :SDATE,:NEXTSDATE,:sourceBr
+  </sql-query>
+
+  <!--Created By HWKO (17-Mar-2017)-->
+  <sql-query name="SP_CHANGE_TABLES_CLedger">
+    exec dbo.SP_CHANGE_TABLES_CLedger :SDATE,:NEXTSDATE,:sourceBr,:budget
+  </sql-query>
+
+  <sql-query name="SP_GETNEXTDATE">
+    exec dbo.SP_GETNEXTDATE :requiredDate,:duration,:registerDate,:createduserId,:retdate output,:diffdate output,:message output select :retdate as MatureDate,:diffdate as DiffDay,:message as Message
+  </sql-query>
+
+
+  <sql-query name="SP_FIXINTCAL">
+    exec dbo.SP_FIXINTCAL :requiredDate,:amount,:createduserId
+  </sql-query>
+
+  <sql-query name="SP_CASHCONTROLREPORT">
+    exec dbo.SP_CASHCONTROLREPORT :CUR,:WHERESTRING,:ORDERSTRING
+  </sql-query>
+
+  <sql-query name="SP_CASHCONTROLREPORT_DENOREFUND">
+    exec dbo.SP_CASHCONTROLREPORT_DENOREFUND :CUR,:WHERESTRING,:ORDERSTRING
+  </sql-query>
+
+  <sql-query name="SP_CASHDENO_OPENING">
+    exec dbo.SP_CASHDENO_OPENING :CUR,:WHERESTRING,:ORDERSTRING
+  </sql-query>
+
+
+  <sql-query name="SP_ALUPDATE_PO">
+    exec dbo.SP_ALUPDATE_PO :eno,:mainaccountno,:amount,:odamount,:cheque,:pocharges,:userno,:postatus,:pono,:budget,:cur,:homeexrate,:sourcebr,:settlementdate,:channel,:createduserId
+  </sql-query>
+
+  <sql-query name="SP_BANKING_TRANSFERSCROLL">
+    exec dbo.SP_BANKING_TRANSFERSCROLL :sourceBr,:workstation,:datetime,:Rstatus,:Dstatus,:Cur
+  </sql-query>
+
+  <sql-query name="SP_GROUPTRIALREPORT_SOURCECUR_TOTAL">
+    exec dbo.SP_GROUPTRIALREPORT_SOURCECUR_TOTAL :STROPENINGFIELD,:CUR,:ISSOURCECUR,:SOURCEBR
+  </sql-query>
+
+  <sql-query name="SP_GROUPTRIALREPORT_SOURCECUR">
+    exec dbo.SP_GROUPTRIALREPORT_SOURCECUR :STROPENINGFIELD,:CUR,:ISSOURCECUR,:SOURCEBR
+  </sql-query>
+
+  <sql-query name="sp_GroupTrialReport_TOTAL">
+    exec dbo.sp_GroupTrialReport_TOTAL :STROPENINGFIELD,:CUR,:ISSOURCECUR,:SOURCEBR
+  </sql-query>
+
+  <sql-query name="sp_GroupTrialReport">
+    exec dbo.sp_GroupTrialReport :STROPENINGFIELD,:CUR,:ISSOURCECUR,:SOURCEBR
+  </sql-query>
+
+  <!--//Added by HWKO (31-Aug-2017)-->
+  <sql-query name="SP_GROUPTRIALREPORT_BACKDATE">
+    exec dbo.SP_GROUPTRIALREPORT_BACKDATE :cur,:sourceBr,:selectedDate,:STROPENINGFIELD
+  </sql-query>
+
+  <!--//Added by HWKO (03-Sep-2017)-->
+  <sql-query name="SP_DETAILTRIALREPORT_BACKDATE">
+    exec dbo.SP_DETAILTRIALREPORT_BACKDATE :cur,:sourceBr,:selectedDate,:STROPENINGFIELD
+  </sql-query>
+
+  <sql-query name="SP_PPDAY">
+    exec dbo.SP_PPDAY :RDATE,:BUDMONTH,:CUR
+  </sql-query>
+
+  <sql-query name="SP_Income_Expenditure">
+    exec dbo.SP_Income_Expenditure :BUDMonth,:year,:month
+  </sql-query>
+
+  <!--Auto Link Schedule-->
+  <sql-query name="Sp_AutoLink_Report">
+    exec dbo.Sp_AutoLink_Report :workstation,:reversal,:cur,:sourcebr
+  </sql-query>
+
+  <!--Auto Link Debit/Credit Listing-->
+  <sql-query name="sp_autolink_voucher_report">
+    exec dbo.sp_autolink_voucher_report :workstation,:datetime,:accountsign,:vouchertype,:sortedField,:reversal
+  </sql-query>
+
+  <sql-query name="Sp_ALUpdate_Check">
+    exec dbo.Sp_ALUpdate_Check :MACCTNO,:LINKACCTNO,:MNAME,:LINKACNAME,:MACODE,:LINKACODE,:MACSIGN,
+    :LINKACSIGN,:LINKCHG,:RETVALUE
+  </sql-query>
+
+  <sql-query name="Sp_ALUpdate_Int_TransferAdjust">
+    exec dbo.Sp_ALUpdate_Int_TransferAdjust :NewEno,:Eno,:MAcctno,:Amount,:Cheque,:UserNo,:TStatus,
+    :VouStatus,:Channel,:RefVno,:RefType,:SourceBr,:Rate,:Cur,:SettlementDate,:RetValue output select :RetValue
+  </sql-query>
+
+  <!--Renewal Voucher Listing-->
+  <sql-query name="Sp_FixRenew_Voucher_Listing">
+    exec dbo.Sp_FixRenew_Voucher_Listing :workstation,:date,:cur,:sourcebr
+  </sql-query>
+
+  <sql-query name="Sp_FixRenewalNew">
+    exec dbo.Sp_FixRenewalNew :processdate,:yearendDate,:budSDate,:budendDate,:user,:sourcebr,:RetMsg output select :RetMsg
+  </sql-query>
+
+  <sql-query name="Sp_PrevFixRenewalNew">
+    exec dbo.Sp_PrevFixRenewalNew :processdate,:yearendDate,:budSDate,:budendDate,:user,:sourcebr,:RetMsg output select :RetMsg
+  </sql-query>
+
+  <!--<sql-query name="SP_LOANINTEREST">
+		exec dbo.SP_LOANINTEREST :LNO,:DAYSINYEAR,:QTRSDATE,:QTREDATE,:PERIOD,:RINTEREST output select :RINTEREST
+	</sql-query>-->
+
+  <sql-query name="SpGetLoanInformationWithInterest" callable="true">
+    <query-param name="loanNo" type="string"/>
+    <query-param name="sourceBr" type="string"/>
+    <return-scalar column ="ResultCode" type ="System.String"/>
+    <return-scalar column ="Lno" type ="System.String"/>
+    <return-scalar column ="AccountNo" type ="System.String"/>
+    <return-scalar column ="SAmount" type ="System.Decimal"/>
+    <return-scalar column ="Loans_Type" type ="System.String"/>
+    <return-scalar column ="Currency" type ="System.String"/>
+    <return-scalar column ="Name" type ="System.String"/>
+    <!--<return-scalar column ="CreditAccountDesp" type ="System.String"/>
+		<return-scalar column ="InterestAccountDesp" type ="System.String"/>
+		<return-scalar column ="WithdrawableBalance" type ="System.Decimal"/>
+		<return-scalar column ="CreditAccountCode" type ="System.String"/>
+		<return-scalar column ="InterestAccountCode" type ="System.String"/>-->
+
+    exec dbo.SpGetLoanInformationWithInterest :loanNo, :sourceBr
+  </sql-query>
+
+  <sql-query name="SpGetLoanInformationForRepaymentEdit" callable="true">
+    <query-param name="loanNo" type="string"/>
+    <query-param name="sourceBr" type="string"/>
+    <return-scalar column ="Lno" type ="System.String"/>
+    <return-scalar column ="AccountNo" type ="System.String"/>
+    <return-scalar column ="ResultCode" type ="System.String"/>
+    <return-scalar column ="LastRepaymentNo" type ="System.String"/>
+    <return-scalar column ="Name" type ="System.String"/>
+    <return-scalar column ="LastRepaymentAmount" type ="System.Decimal"/>
+    <return-scalar column ="BeforeLastRepaymentSanctionAmount" type ="System.Decimal"/>
+    <return-scalar column ="AfterLastRepaymentSanctionAmount" type ="System.Decimal"/>
+    <return-scalar column ="FistSanctionAmount" type ="System.Decimal"/>
+    <return-scalar column ="PrevTotalSanctionAmount" type ="System.Decimal"/>
+
+    exec [SpGetLoanInformationForRepaymentEdit] @loanNo=:loanNo, @sourceBr=:sourceBr
+  </sql-query>
+
+  <sql-query name="SpRepayLoan" callable="true">
+
+    <query-param name="FullSettlement" type="int"/>
+    <query-param name="loanNo" type="string"/>
+    <query-param name="AccountNo" type="string"/>
+    <query-param name="RepayAmount" type="decimal"/>
+    <query-param name="UserNo" type="string"/>
+    <query-param name="UserId" type="int"/>
+    <query-param name="BranchCode" type="string"/>
+    <query-param name="VoucherNo" type="string"/>
+    <return-scalar column ="ResultCode" type ="string"/>
+    <return-scalar column ="CreditAccountDesp" type ="string"/>
+    <return-scalar column ="InterestAccountDesp" type ="string"/>
+    <return-scalar column ="Interest" type ="decimal"/>
+    <return-scalar column ="CreditAccountCode" type ="string"/>
+    <return-scalar column ="InterestAccountCode" type ="string"/>
+    <return-scalar column ="LastRepaymentNo" type ="string"/>
+
+    exec [SpRepayLoan] :FullSettlement,:LoanNo,:AccountNo,:RepayAmount,:UserNo,:UserId,:BranchCode,:VoucherNo
+  </sql-query>
+
+  <sql-query name="SpRepayLoanEdit" callable="true">
+
+    <query-param name="FullSettlement" type="int"/>
+    <query-param name="LoanNo" type="string"/>
+    <query-param name="AccountNo" type="string"/>
+    <query-param name="RepayNo" type="string"/>
+    <query-param name="RepayAmount" type="decimal"/>
+    <query-param name="UserNo" type="string"/>
+    <query-param name="UserId" type="int"/>
+    <query-param name="BranchCode" type="string"/>
+    <query-param name="VoucherNo" type="string"/>
+    <return-scalar column ="ResultCode" type ="string"/>
+    <return-scalar column ="CreditAccountDesp" type ="string"/>
+    <return-scalar column ="InterestAccountDesp" type ="string"/>
+    <return-scalar column ="Interest" type ="decimal"/>
+    <return-scalar column ="CreditAccountCode" type ="string"/>
+    <return-scalar column ="InterestAccountCode" type ="string"/>
+
+    exec [SpRepayLoanEdit] :FullSettlement,:LoanNo,:AccountNo,:RepayNo,:LastRepayAmount,:UserNo,:UserId,:NewRepayAmount,:Reno,:BranchCode,:VoucherNo
+  </sql-query>
+
+
+  <sql-query name="SP_LoanScharge">
+    exec dbo.SP_LoanScharge :LNO,:DAYSINYEAR,:QTRSDATE,:QTREDATE,:PERIOD,:UPDATE,:RINTEREST output select :RINTEREST
+  </sql-query>
+
+
+   <!--<sql-query name="SP_LOANINTEREST">
+    exec dbo.SP_LOANINTEREST :LNO,:DAYSINYEAR,:QTRSDATE,:QTREDATE,:PERIOD,:RINTEREST output select :RINTEREST
+  </sql-query>-->
+
+  <sql-query name="SP_FarmLoanInterestCalculationByMonthly"> 
+    exec dbo.SP_FarmLoanInterestCalculationByMonthly :LNO,:SMonthDate,:EMonthDate,:Month,:RINTEREST output select :RINTEREST
+  </sql-query>
+
+  <sql-query name="SP_FarmLoan_InterestCalculationByMonth">
+    exec dbo.SP_FarmLoan_InterestCalculationByMonth :LNO,:SDate,:Endate,:RInterest output select :RInterest
+  </sql-query>
+
+  <sql-query name="SP_FarmLoan_InterestCalculationByDate">
+    exec dbo.SP_FarmLoan_InterestCalculationByDate :LNO,:SDate,:Endate,:RInterest output select :RInterest
+  </sql-query>
+  
+  <sql-query name="SP_CALCULATEODINTEREST">
+    exec dbo.SP_CALCULATEODINTEREST :DAYSINYEAR,:QTRDATE
+  </sql-query>
+
+
+  <sql-query name="SP_LOANINTEREST_NewLogic">
+    exec dbo.SP_LOANINTEREST_NewLogic :LNO,:DAYSINYEAR,:QTRSDATE,:QTREDATE,:TERMNO,:SourceBr,:UpdatedUserId,:RINTEREST output select :RINTEREST
+  </sql-query>
+
+  <sql-query name="SP_LoanScharge_NewLogic">
+    exec dbo.SP_LoanScharge_NewLogic :LNO,:DAYSINYEAR,:QTRSDATE,:QTREDATE,:TERMNO,:UPDATE,:SourceBr,:RINTEREST output select :RINTEREST
+  </sql-query>
+
+  <sql-query name="SP_LI9900">
+    <!--exec dbo.SP_LI9900 :SQTRTOTAL-->
+    exec dbo.SP_LI9900 :QNo,:BudgetYear,:SourceBr,:Cur
+  </sql-query>
+
+  <sql-query name="SP_MOB3911">
+    <!--exec dbo.SP_LI9900 :SQTRTOTAL-->
+    exec dbo.SP_MOB3911 :MNo,:BudgetYear,:Cur,:SourceBr
+  </sql-query>
+
+  <sql-query name="SP_InsertDealerRegistration">
+    <!--exec dbo.SP_LI9900 :SQTRTOTAL-->
+    exec dbo.SP_InsertDealerRegistration :dealerNo,:dealerAC,:dName,:dPhone,
+    :dAddress,:email,:nrc,:fax,
+    :businessName,:city,:businessEmail,:address,
+    :commission,:eventMode,:sourceBr,:createdUserId,
+    :createdDate,:updatedUserId,:updatedDate
+  </sql-query>
+
+  <sql-query name="SP_DeleteDealerRegistration">
+    exec dbo.SP_DeleteDealerRegistration :dealerNo,:createdUserId,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_GetAllDealer">
+    exec dbo.SP_GetAllDealer :sourceBr
+  </sql-query>
+
+
+  <sql-query name="SP_GetAllStockItem">
+    exec dbo.SP_GetAllStockItem
+  </sql-query>
+
+  <sql-query name="SP_GetAllStockGroup">
+    exec dbo.SP_GetAllStockGroup
+  </sql-query>
+
+  <sql-query name="SP_GetAllInstallmentTypes">
+    exec dbo.SP_GetAllInstallmentTypes
+  </sql-query>
+
+  <sql-query name="SP_HirePurchaseRegistration">
+    exec dbo.SP_HirePurchaseRegistration :hpno,:caccount,:dealerAC,:dealerStatus,:guanteeAcctNo,:downPayPercent,:rChgsPercent, <!--:sChgsPercent,-->
+    :nextYrRChgsPercent,:disAmt,:docFees,:gapPeriod,:commPercent,:stockGCode,:stockISubCode,:relatedGLACode,:productValue,:payDuration,:payOptionId,
+    :repaySDate,:repayExpDate,:sourceBr,:remarks,:createdUserId,:eno,:userName
+  </sql-query>
+
+  <!--<sql-query name="SP_CheckCustomerBalance">
+    exec dbo.SP_CheckCustomerBalance 	:caccount,:downPayPercent,:rChgsPercent,:sChgsPercent,:disAmt
+  </sql-query>-->
+
+  <sql-query name="SP_CheckBalance">
+    exec dbo.SP_CheckBalance 	:caccount,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_GetHPVoucherDetails">
+    exec dbo.SP_GetHPVoucherDetails :eno
+  </sql-query>
+
+  <sql-query name="SP_CheckAccountExistsOrValid">
+    exec dbo.SP_CheckAccountExistsOrValid :caccount,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_GetAllAGLoanProductTypeItem">
+    <!--exec dbo.AGLoanProductTypeItem,productcode,seasonCode,UM-->
+    exec dbo.SP_GetAllAGLoanProductTypeItem
+  </sql-query>
+
+  <sql-query name="SP_GetAllAGLoanProductTypeItemBySeasonCode">
+    <!--exec dbo.AGLoanProductTypeItem,productcode,seasonCode,UM-->
+    exec dbo.SP_GetAllAGLoanProductTypeItemBySeasonCode :seasonCode
+  </sql-query>
+
+  <sql-query name="SP_CheckLoanAccNo">
+    <!--exec dbo.AGLoanProductTypeItem,productcode,seasonCode,UM-->
+    exec dbo.SP_CheckLoanAccNo :vrNo
+  </sql-query>
+
+  <sql-query name="SP_CheckFarmLoanNo">
+    <!--exec dbo.AGLoanProductTypeItem,productcode,seasonCode,UM-->
+    exec dbo.SP_CheckFarmLoanNo :loanNo
+  </sql-query>
+  <sql-query name="SP_GetDealerAccountInfo">
+    exec dbo.SP_GetDealerAccountInfo :acctNo,:sourceBr
+  </sql-query>
+
+  <sql-query name="SpGetFarmLoanInformationWithInterest">
+    <!--exec dbo.AGLoanProductTypeItem,productcode,seasonCode,UM-->
+    exec dbo.SpGetFarmLoanInformationWithInterest :loanNo, :sourceBr
+  </sql-query>
+  <sql-query name="SP_FARMLOAN_REPAYMENT">
+    <!--exec dbo.AGLoanProductTypeItem,productcode,seasonCode,UM-->
+    exec dbo.SP_FARMLOAN_REPAYMENT :LoanNo, :AccountNo, :RepayAmount, :Interest, :Penalties, :UserNo, :UserId, :BranchCode, :VoucherNo, :AcctCreditCode, :InterestCode, :PenaltiesCode
+  </sql-query>
+
+  <sql-query name="ProcGetLoanRecord_BusinessType">
+    <!--exec dbo.AGLoanProductTypeItem,productcode,seasonCode,UM-->
+    exec dbo.ProcGetLoanRecord_BusinessType :LoanNo
+  </sql-query>
+
+  <sql-query name="SP_HPRegistrationListing">
+    exec dbo.SP_HPRegistrationListing :sourceBr,:currency,:startDate,:endDate,:stockGroup
+  </sql-query>
+
+  <sql-query name="SP_HPPaymentSchedule">
+    exec dbo.SP_HPPaymentSchedule :sourceBr,:currency,:month,:year
+  </sql-query>
+
+  <sql-query name="SP_HPOverDrawnListing">
+    exec dbo.SP_HPOverDrawnListing :sourceBr,:currency,:startDate,:endDate
+  </sql-query>
+
+  <sql-query name="SP_HPInsufficientListing">
+    exec dbo.SP_HPInsufficientListing :sourcebr,:cur,:month
+  </sql-query>
+  
+  <sql-query name="Proc_GetAcctNoForLoanRepayment">
+    exec dbo.Proc_GetAcctNoForLoanRepayment :LoanNo,:SourceBr, :type
+  </sql-query>
+
+  <sql-query name="ProcGetAllLoanRecord">
+    exec dbo.ProcGetAllLoanRecord :townshipCode,:startDate,:endDate,:type
+  </sql-query>
+  
+  <sql-query name="SP_GetAllLSProductTypeItem">
+    exec dbo.SP_GetAllLSProductTypeItem
+  </sql-query>
+  
+  <sql-query name="SP_HPManualRepayment">
+    exec dbo.SP_HPManualRepayment :hpno,:startTerm,:endTerm,:totalRepayAmt,:eno,:sourceBr,:createdUserId,:userName
+  </sql-query>
+
+  <sql-query name="SP_HPManualRepayment_CheckPaidOrUnPaid">
+    exec dbo.SP_HPManualRepayment_CheckPaidOrUnPaid :hpno,:startTerm,:endTerm,:sourceBr,:createdUserId,:userName
+  </sql-query>
+  
+  <sql-query name="SP_GetRepayAmountPerTerm">
+    exec dbo.SP_GetRepayAmountPerTerm :hpno,:sourceBr
+  </sql-query>
+    
+  <sql-query name="SP_GetRepayAmountSTermToETerm">
+    exec dbo.SP_GetRepayAmountSTermToETerm :hpno,:startTerm,:endTerm,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_GetInstallmentAmtToShow">
+    exec dbo.SP_GetInstallmentAmtToShow :netAmt,:noOfTerms
+  </sql-query>
+
+  <sql-query name="SP_HP_Monthly_AutoPayment_ForAllHPAccount">
+    exec dbo.SP_HP_Monthly_AutoPayment_ForAllHPAccount :sourcebr,:createduserid,:username
+  </sql-query>
+  
+  <sql-query name="SP_HP_GetLateFeesForAllHPAccount">
+    exec dbo.SP_HP_GetLateFeesForAllHPAccount :sourcebr,:createduserid,:username
+  </sql-query>
+
+  <sql-query name="SP_BLInfoListingByDateRange">
+    exec dbo.SP_BLInfoListingByDateRange :startDate,:endDate,:sourceBr,:blType
+  </sql-query>
+
+  <sql-query name="SP_PersonalLoanInfoListing">
+    exec dbo.SP_PersonalLoanInfoListing :startDate,:endDate,:companyName,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_BusinessLoanInterestListing">
+    exec dbo.SP_BusinessLoanInterestListing :month,:year,:sourceBr,:createdUserId
+  </sql-query>
+
+  <sql-query name="SP_PersonalLoanNPLCaseListing">
+    exec dbo.SP_PersonalLoanNPLCaseListing :startDate,:endDate,:sourceBr
+  </sql-query>
+  
+  <sql-query name="SP_GetAllCompanyNameFromPersonalLoans">
+    exec dbo.SP_GetAllCompanyNameFromPersonalLoans :sourceBr
+  </sql-query>
+
+  <sql-query name="SP_Get_HPLateFeesRepayment_Amount">
+    exec dbo.SP_Get_HPLateFeesRepayment_Amount :hpNo,:startTerm,:endTerm,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_HP_LateFees_Repayment">
+    exec dbo.SP_HP_LateFees_Repayment :hpNo,:startTerm,:endTerm,:totalLateFeesAmount,:eno,:sourceBr,:createdUserId,:userName
+  </sql-query>
+
+  <sql-query name="SP_CheckHPAccountExistsOrValid">
+    exec dbo.SP_CheckHPAccountExistsOrValid :hpNo,:sourceBr
+  </sql-query>
+  
+  <sql-query name="SP_HPDailyPositionListing">
+    <!--exec dbo.SP_HPDailyPositionListing :stockGroupCode,:startDate,:endDate,:sourceBr-->
+    exec dbo.SP_HPDailyPositionListing :stockGroupCode,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_HPInformationListing">
+    exec dbo.SP_HPInformationListing :startDate,:endDate,:stockGroup,:sourceBr 
+  </sql-query>
+
+  <sql-query name="SP_HPPaymentListing">
+    exec dbo.SP_HPPaymentListing :startDate,:endDate,:stockGroup,:currency,:sourceBr 
+  </sql-query>
+
+  <sql-query name="SP_HPRepaymentListing">
+    exec dbo.SP_HPRepaymentListing :startDate,:endDate,:currency,:sourceBr,:stockGroup
+  </sql-query>
+
+  <sql-query name="SP_HPInterest_Due_PreListing">
+    exec dbo.SP_HPInterest_Due_PreListing :startDate,:endDate,:currency,:sourceBr,:stockGroup,:interestPaidStatus
+  </sql-query>
+
+  <!--Updated by HWKO (21-Nov-2017)-->
+  <sql-query name="SP_HPRepaymentScheduleListing">
+    exec dbo.SP_HPRepaymentScheduleListing :acctNo,:currency,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_GetDealerCommission_ByDealerNo">
+    exec dbo.SP_GetDealerCommission_ByDealerNo :dealerNo,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_Get_HP_PrepaymentInfo">
+    exec dbo.SP_Get_HP_PrepaymentInfo :hpNo,:sourceBr
+  </sql-query>
+
+  <!--//Added by HWKO (14-Sep-2017) // For HP Interest Pre-Payment Voucher Entry-->
+  <sql-query name="SP_GetTotalIntAmtOfAllTermByAcctNo">
+    exec dbo.SP_GetTotalIntAmtOfAllTermByAcctNo :acctNo,:sourceBr
+  </sql-query>
+
+  <!--//Added by HWKO (14-Sep-2017) // For HP Interest Pre-Payment Voucher Entry-->
+  <sql-query name="SP_ALUPDATE_HPINTPREPAYMENTVOUCHER">
+    exec dbo.SP_ALUPDATE_HPINTPREPAYMENTVOUCHER :eno,:acctno,:amount,:narration,:userId,:currency,:sourceBr,:settlementDate,:channel,0,''
+  </sql-query>
+
+  <!--//Added by HWKO (14-Sep-2017) // For HP Interest Pre-Payment Voucher Entry-->
+  <sql-query name="SP_UpdateRentalChargesInTermByAcctNo">
+    exec dbo.SP_UpdateRentalChargesInTermByAcctNo :acctNo,:sourceBr
+  </sql-query>  
+
+  <sql-query name="SP_HP_Manual_Prepayment_Process">
+    exec dbo.SP_HP_Manual_Prepayment_Process :hpNo,:startTerm,:endTerm,:totalPaidPrepayAmt,:totalPaidRentalChgAmt,:rentalDiscountRate,
+                                             :eno,:sourceBr,:createdUserId,:userName
+  </sql-query>
+
+  <!--Added at 22-Sep-2017--><!--
+  <sql-query name="SP_HP_Manual_Prepayment_Process_NewLogic">
+    exec dbo.SP_HP_Manual_Prepayment_Process_NewLogic :hpNo,:startTerm,:endTerm,:totalPaidInstallmentAmt,:totalPaidPrincipleAmt,:totalPaidRentalChgAmt,:rentalDiscountRate,
+                                                      :eno,:sourceBr,:createdUserId,:userName
+
+  </sql-query>-->
+  
+  <!--<sql-query name="SP_Get_HP_PrepaymentInfo_NewLogic">
+    exec dbo.SP_Get_HP_PrepaymentInfo_NewLogic :hpNo,:startTerm,:endTerm,:sourceBr
+  </sql-query>-->
+
+  <!--<sql-query name="SP_CheckHPAccountandStartTerm">
+    exec dbo.SP_CheckHPAccountandStartTerm :hpNo,:sourceBr
+  </sql-query>-->
+  
+  <!--Monthly Posting-->
+  
+  <sql-query name="SP_SelectAllMonthlyCOA">
+    <!--exec dbo.SP_SelectAllMonthlyCOA-->
+    exec dbo.SP_SelectAllMonthlyCOA :dcode
+  </sql-query>  
+  <sql-query name="SP_SelectACodeAndBal">
+    <!--exec dbo.SP_SelectACodeAndBal-->
+    exec dbo.SP_SelectACodeAndBal :currentMonth,:budget,:dcode
+  </sql-query>
+  <sql-query name="SP_SelectDistinctACodeFromReportTLF">
+    <!--exec dbo.SP_SelectDistinctACodeFromReportTLF-->
+    exec dbo.SP_SelectDistinctACodeFromReportTLF :dcode
+  </sql-query>
+  <sql-query name="SP_SelectTotalBalAndAcodeFromVWCCOA">
+    <!--exec dbo.SP_SelectTotalBalAndAcodeFromVWCCOA-->
+    exec dbo.SP_SelectTotalBalAndAcodeFromVWCCOA :currentMonth,:budget,:dcode
+  </sql-query>
+  <sql-query name="SP_SelectFromVWLedgerListingMonthlyPosting">
+    <!--exec dbo.SP_SelectFromVWLedgerListingMonthlyPosting-->
+    exec dbo.SP_SelectFromVWLedgerListingMonthlyPosting :startdate,:enddate,:sourceBr,:workStation
+  </sql-query>
+  <sql-query name="Monthly_Posting_of_CashAcc_Proc">
+    <!--exec dbo.Monthly_Posting_of_CashAcc_Proc-->
+    exec dbo.Monthly_Posting_of_CashAcc_Proc :startdate,:enddate,:workStation,:sourceBr
+  </sql-query>
+  <sql-query name="SP_SelectReportTLfHomeOAmt_Of_Monthly_Posting">
+    <!--exec dbo.SP_SelectReportTLfHomeOAmt_Of_Monthly_Posting-->
+    exec dbo.SP_SelectReportTLfHomeOAmt_Of_Monthly_Posting :startdate,:enddate,:sourceBr,:workStation
+  </sql-query>
+  <sql-query name="LEDGERLISTING_Of_Monthly_Posting_Proc">
+    <!--exec dbo.LEDGERLISTING_Of_Monthly_Posting_Proc-->
+    exec dbo.LEDGERLISTING_Of_Monthly_Posting_Proc :acode,:startdate,:enddate,:sourceBr,:workStation
+  </sql-query>
+  <!--End Region-->
+  
+  <!--For Monthly Posting Income And Expenditure / General Ledger Reports-->
+  <sql-query name="SP_SelectMonthlyCOAForIncome">
+    <!--exec dbo.SP_SelectMonthlyCOAForIncome-->
+    exec dbo.SP_SelectMonthlyCOAForIncome :requiredDate,:sourceBr,:isIncome,:workstation
+  </sql-query>
+  <sql-query name="SP_SelectMonthlyCOAForExpenditure">
+    <!--exec dbo.SP_SelectMonthlyCOAForExpenditure-->
+    exec dbo.SP_SelectMonthlyCOAForExpenditure :requiredDate,:sourceBr,:isIncome,:workstation
+  </sql-query>
+  <sql-query name="SP_SelectMonthlyCOAForGeneralReturns_Assets">
+    <!--exec dbo.SP_SelectMonthlyCOAForGeneralReturns_Assets-->
+    exec dbo.SP_SelectMonthlyCOAForGeneralReturns_Assets :requiredDate,:sourceBr,:isIncome,:workstation
+  </sql-query>
+  <sql-query name="SP_SelectMonthlyCOAForGeneralReturns_Liability">
+    <!--exec dbo.SP_SelectMonthlyCOAForGeneralReturns_Liability-->
+    exec dbo.SP_SelectMonthlyCOAForGeneralReturns_Liability :requiredDate,:sourceBr,:isIncome,:workstation
+  </sql-query>
+  <!--End Region-->
+
+	<!--Loans Interest Calculation-->
+	<sql-query name="SP_LOANINTEREST_QUARTERLY">
+		exec dbo.SP_LOANINTEREST_QUARTERLY :DAYSINYEAR,:QTRSDATE,:QTREDATE,:PERIOD,:BRANCHCODE,:MESSAGE output select :MESSAGE
+	</sql-query>
+
+	<sql-query name="SP_LOANINTEREST_MONTHLY">
+		exec dbo.SP_LOANINTEREST_MONTHLY :DAYSINYEAR,:QTRSDATE,:QTREDATE,:PERIOD,:BRANCHCODE,:MESSAGE output select :MESSAGE
+	</sql-query>
+
+  <!--Business Loans Interest-->
+  <sql-query name="SP_LOANINTEREST">
+    exec dbo.SP_LOANINTEREST :DAYSINYEAR,:QTRSDATE,:QTREDATE,:PERIOD,:BRANCHCODE,:MESSAGE output select :MESSAGE
+  </sql-query>
+  <sql-query name="SP_LOANINTEREST_DAILY">
+    exec dbo.SP_LOANINTEREST_DAILY :DAYSINYEAR,:QTRSDATE,:QTREDATE,:BRANCHCODE,:USERID,:MESSAGE output select :MESSAGE
+  </sql-query>
+  <!--Business Loans Interest-->
+  
+  <sql-query name="SP_FarmLoan_GetInterestCalculationByDate">
+    exec dbo.SP_FarmLoan_GetInterestCalculationByDate :LNO,:REPAYAMU,:SDate,:Endate,:CurBudYear
+  </sql-query>
+
+  <sql-query name="SP_GetHomeAmountByVrNo">
+    exec dbo.SP_GetHomeAmountByVrNo :vrNo
+  </sql-query>
+
+  <sql-query name="SP_FarmLoan_GetPenalFee">
+    exec dbo.SP_FarmLoan_GetPenalFee :LNO, :REPAYAMU, :SourceBr
+  </sql-query>
+  
+  <sql-query name="SP_GetRemittanceWithRate">
+    exec dbo.SP_GetRemittanceWithRate 
+  </sql-query>
+  <!--End Region-->
+
+  <!--Database Auto Backup After Month Close (By HWKO)-->
+  <sql-query name="SP_DatabaseBackupAfterMonthClose">
+    exec dbo.SP_DatabaseBackupAfterMonthClose
+  </sql-query>
+
+  <!--Database Backup Immediately (By HWKO 15-May-2017)-->
+  <sql-query name="SP_DatabaseBackupImmediately">
+    exec dbo.SP_DatabaseBackupImmediately
+  </sql-query>
+
+  <!--Database Auto Backup Daily (By HWKO 15-May-2017)-->
+  <sql-query name="SP_DatabaseBackupDaily">
+    exec dbo.SP_DatabaseBackupDaily
+  </sql-query>
+
+  <!--Database Auto Backup Before (By HWKO 15-May-2017)-->
+  <sql-query name="SP_DatabaseBackupBefore">
+    exec dbo.SP_DatabaseBackupBefore
+  </sql-query>
+
+  <!--Database Auto Backup After (By HWKO 15-May-2017)-->
+  <sql-query name="SP_DatabaseBackupAfter">
+    exec dbo.SP_DatabaseBackupAfter
+  </sql-query>
+
+  <!--Created By HWKO (08/Mar/2017)-->
+  <sql-query name="SP_FarmLoan_PenalFeeCalculation">
+    exec dbo.SP_FarmLoan_PenalFeeCalculation :SourceBr,:RInterest output select :RInterest
+  </sql-query>
+
+  <!--Created By HWKO (23/Mar/2017)-->
+  <sql-query name="SP_FarmLoan_GetOutstandingInterest">
+    exec dbo.SP_FarmLoan_GetOutstandingInterest :LNO,:OUTAMU,:SDate,:Endate,:SourceBr,:RInterest output select :RInterest
+  </sql-query>
+
+  <!--Created By HWKO (23/Mar/2017)-->
+  <sql-query name="SP_FarmLoan_GetOutstandingPenalFee">
+    exec dbo.SP_FarmLoan_GetOutstandingPenalFee :LNO,:OUTAMU,:SourceBr,:RInterest output select :RInterest
+  </sql-query>
+
+  <sql-query name="SP_DealerAccountExists">
+    exec dbo.SP_DealerAccountExists :dealerNo,:sourcebr
+  </sql-query>
+
+  <!--<sql-query name="SP_GetRateForHPReg">
+    exec dbo.SP_GetRateForHPReg
+  </sql-query>-->
+
+  <!--Monthly OD Interest Calculation-->
+  <sql-query name="SP_SelectTransactionsForMonthlyODInterest">
+    exec dbo.SP_SelectTransactionsForMonthlyODInterest :currentMonth,:budget,:startDate,:endDate,:dcode
+  </sql-query>
+
+  <!--Added By HWKO (29-Jun-2017) //Updated By HWKO (02-Oct-2017)-->
+  <sql-query name="SP_PLReg_Detail_Vou">
+    exec dbo.SP_PLReg_Detail_Vou :plno,:acctNo,:noofterms,:sanAmt,:intRate,:documentFee,:paymentDuration,:paymentOptionId,
+    :userNo,:sourceBr,:cur,:createdUserId,:eno,:sdate,:btype,:expireDate,:assessor,:lawer,:monthlyIncome,:companyName,:isscharge
+    ,:scharges,:islatefee,:guacompanyName,:guaname,:guanrc,:guaphone,:nyintrate,:graceperiod
+  </sql-query>
+
+  <!--Added By KCM (31-Jan-2023)-->
+  <sql-query name="SP_PLReg_Detail_Vou_MyannmarNetCustomer">
+    exec dbo.SP_PLReg_Detail_Vou_MyannmarNetCustomer :plno,:acctNo,:noofterms,:sanAmt,:intRate,:documentFee,:paymentDuration,:paymentOptionId,
+    :userNo,:sourceBr,:cur,:createdUserId,:eno,:sdate,:btype,:expireDate,:assessor,:lawer,:monthlyIncome,:companyName,:isscharge
+    ,:scharges,:islatefee,:guacompanyName,:guaname,:guanrc,:guaphone,:nyintrate,:graceperiod, :monthlyRepayDD
+  </sql-query>
+
+  <!--Added By ZMS (06-Jun-2018) -->
+  <sql-query name="SP_PLReg_Detail_Vou_ByPaymentDurationLessThanOneYr">
+    exec dbo.SP_PLReg_Detail_Vou_ByPaymentDurationLessThanOneYr :plno,:acctNo,:noofterms,:sanAmt,:intRate,:documentFee,:paymentDuration,:paymentOptionId,
+    :userNo,:sourceBr,:cur,:createdUserId,:eno,:sdate,:btype,:expireDate,:assessor,:lawer,:monthlyIncome,:companyName,:isscharge
+    ,:scharges,:islatefee,:guacompanyName,:guaname,:guanrc,:guaphone,:nyintrate,:graceperiod
+  </sql-query>
+  
+
+
+  <!--BLoans Late Fee Calculation-->
+  <sql-query name="SP_Get_BusinessLoans_LateFeesForAllBLAccount">
+    exec dbo.SP_Get_BusinessLoans_LateFeesForAllBLAccount :sourcebr,:createduserid,:username
+  </sql-query>
+
+  <!--BLoans Auto Payment Process-->
+  <sql-query name="SP_BL_Monthly_AutoPayment_ForAllBLAccount">
+    exec dbo.SP_BL_Monthly_AutoPayment_ForAllBLAccount :sourcebr,:createduserid,:username
+  </sql-query>
+	
+  <!--Added By HWKO (04-Jul-2017)-->
+  <sql-query name="SP_PL_Monthly_AutoPayment_ForAllPLAccount">
+    exec dbo.SP_PL_Monthly_AutoPayment_ForAllPLAccount :sourcebr,:createduserid,:username
+  </sql-query>
+
+  <!--Added By HWKO (07-Jul-2017)-->
+  <sql-query name="SP_PL_GetLateFeesForAllPLAccount">
+    exec dbo.SP_PL_GetLateFeesForAllPLAccount :sourcebr,:createduserid,:username
+  </sql-query>
+
+  <!--Added By HWKO (18-Jul-2017)-->
+  <sql-query name="SP_PL_GetOverdrawnAccountListing">
+    exec dbo.SP_PL_GetOverdrawnAccountListing :sourcebr,:cur,:startDate,:endDate
+  </sql-query>
+
+  <!--Added By HWKO (18-Jul-2017)-->
+  <sql-query name="SP_PL_GetOverdrawnWithCompanyNameListing">
+    exec dbo.SP_PL_GetOverdrawnWithCompanyNameListing :sourcebr,:cur,:companyname
+  </sql-query>
+
+  <!--Added By HWKO (20-Jul-2017)-->
+  <sql-query name="SP_PLRepaymentListing">
+    exec dbo.SP_PLRepaymentListing :startDate,:endDate,:sourceBranchCode,:cur
+  </sql-query>
+
+  <!--Added By HWKO (28-Jul-2017)-->
+  <sql-query name="SP_PL_VoucherUpdate">
+    exec dbo.SP_PL_VoucherUpdate :eno,:plno,:sourceBr
+  </sql-query>
+
+  <!--Added By HWKO (28-Aug-2017)-->
+  <!--Updated By HWKO (11-Oct-2017)-->
+  <sql-query name="SP_INSERT_CCOAHISTORY_DATA">
+    exec dbo.SP_INSERT_CCOAHISTORY_DATA :dcode
+  </sql-query>
+
+  <!--Added By HWKO (29-Sep-2017)-->
+  <sql-query name="SP_GetACodeBySFPType">
+    exec dbo.SP_GetACodeBySFPType :sfpType,:sourceBr,:cur
+  </sql-query>
+  
+  <!--<sql-query name="SP_HirePurchaseRegistration">
+    exec dbo.SP_HirePurchaseRegistration :hpno,:caccount,:dealerAC,:dealerStatus,:guanteeAcctNo,:downPayPercent,:rChgsPercent, :sChgsPercent,
+    :nextYrRChgsPercent,:disAmt,:docFees,:gapPeriod,:commPercent,:stockGCode,:stockISubCode,:productValue,:payDuration,:payOptionId,
+    :repaySDate,:repayExpDate,:sourceBr,:remarks,:createdUserId,:eno,:userName
+  </sql-query>-->
+
+  <!--Added at 22-Sep-2017-->
+  <sql-query name="SP_HP_Manual_Prepayment_Process_NewLogic">
+    exec dbo.SP_HP_Manual_Prepayment_Process_NewLogic :hpNo,:startTerm,:endTerm,:totalPaidInstallmentAmt,:totalPaidPrincipleAmt,:totalPaidRentalChgAmt,:rentalDiscountRate,
+    :eno,:sourceBr,:createdUserId,:userName
+  </sql-query>
+
+  <sql-query name="SP_Get_HP_PrepaymentInfo_NewLogic">
+    exec dbo.SP_Get_HP_PrepaymentInfo_NewLogic :hpNo,:startTerm,:endTerm,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_CheckHPAccountandStartTerm">
+    exec dbo.SP_CheckHPAccountandStartTerm :hpNo,:sourceBr
+  </sql-query>
+
+  <!--BL Voucher Insert in Business_Loans_Details-->
+  <sql-query name="SP_SaveBLDetails_Voucher">
+    exec dbo.SP_SaveBLDetails_Voucher :Lno,:Acctno,:FirstAmt,:FirstMDueDate,:DAYSINYEAR,:CreatedUserId,:UserName,:SourceBr,:Message output select :Message
+  </sql-query>
+  <!--Added at 13-Oct-2017-->
+  <!--<sql-query name="SP_HP_LateFeesAutoPay_Voucher_ALLHPTOD">
+    exec dbo.SP_HP_LateFeesAutoPay_Voucher_ALLHPTOD :eno,:sourceBr,:createdUserId,:userName
+  </sql-query>-->
+
+  <!--Modified by HMW at 26-July-2019-->	
+  <sql-query name="SP_HP_LateFeesAutoPay_Voucher_ALLHPTOD">
+	exec dbo.SP_HP_LateFeesAutoPay_Voucher_ALLHPTOD :sourceBr,:createdUserId,:userName
+  </sql-query>
+
+  <!--Added By AAM at 20-Oct-2017-->
+  <sql-query name="SP_HPAbsentHistoryListing">
+    exec dbo.SP_HPAbsentHistoryListing :startDate,:endDate,:acctNo,:sourceBr
+  </sql-query>
+
+  <!--Added By AAM at 23-Oct-2017-->
+  <sql-query name="SP_PLAbsentHistoryListing">
+    exec dbo.SP_PLAbsentHistoryListing :startDate,:endDate,:acctNo,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_HPAbsentHistory_Enquiry">
+    exec dbo.SP_HPAbsentHistory_Enquiry :acctNo,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_PLAbsentHistory_Enquiry">
+    exec dbo.SP_PLAbsentHistory_Enquiry :acctNo,:sourceBr
+  </sql-query>
+
+  <!--Added by HWKO at 17-Oct-2017-->
+  <sql-query name="SP_PL_LateFeesAutoPay_Voucher_ALLPLTOD">
+    exec dbo.SP_PL_LateFeesAutoPay_Voucher_ALLPLTOD :sourceBr,:createdUserId,:userName
+  </sql-query>
+
+
+  <!--Added by HWKO at 13-Oct-2017 //For Personal Loans Manual Prepayment-->
+  <sql-query name="SP_PL_Manual_Prepayment_Process_NewLogic">
+    exec dbo.SP_PL_Manual_Prepayment_Process_NewLogic :plNo,:startTerm,:endTerm,:totalPaidInstallmentAmt,:totalPaidPrincipleAmt,:totalPaidRentalChgAmt,:rentalDiscountRate,
+    :eno,:sourceBr,:createdUserId,:userName
+  </sql-query>
+
+  <!--Added by ZMS -->
+  <sql-query name="SP_PL_Manual_Prepayment_Process">
+    exec dbo.SP_PL_Manual_Prepayment_Process :plNo,:startTerm,:endTerm,:totalPaidPrepayAmt,:totalPaidPrincipleAmt,:totalPaidInterestAmt,:interestDiscountRate,
+                                             :sourceBr,:createdUserId,:userName
+  </sql-query>
+
+  <!--<sql-query name="SP_Get_PL_PrepaymentInfo_NewLogic">
+    exec dbo.SP_Get_PL_PrepaymentInfo_NewLogic :plNo,:startTerm,:endTerm,:sourceBr
+  </sql-query>-->
+
+  <!--Modified by ZMS-->
+  <sql-query name="SP_Get_PL_PrepaymentInfo">
+    exec dbo.SP_Get_PL_PrepaymentInfo :plNo,:startTerm,:endTerm,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_CheckPLAccountandStartTerm">
+    exec dbo.SP_CheckPLAccountandStartTerm :plNo,:sourceBr
+  </sql-query>
+  <!--//Endregion-->
+  <!--For saving in BL Detail table (Repay Limit Decrease) -->
+  <sql-query name="SP_BL_UpdateBLDetails_LimitChangeDecrease">
+    exec dbo.SP_BL_UpdateBLDetails_LimitChangeDecrease :Lno,:Acctno,:LimitChangeAmt,:LimitChangeState,:DAYSINYEAR,:LCTermNo,:interestForBeforeLC,:CreatedUserId,
+    :UserName,:SourceBr,:Message output select :Message
+  </sql-query>
+
+  <!--For saving in BL Detail table (Repay Limit Increase) --><!--
+  <sql-query name="SP_BL_UpdateBLDetails_LimitChangeIncrease">
+    exec dbo.SP_BL_UpdateBLDetails_LimitChangeIncrease :Lno,:Acctno,:Eno,:LimitChangeAmt,:LimitChangeState,:DAYSINYEAR,:LCTermNo,
+    :ServiceCharges,:NewIntRate,:DocFee,:interestForBeforeLC,
+    :CreatedUserId,:UserName,:SourceBr,:Message output select :Message
+  </sql-query>-->
+
+  <!--For BL LateFee Auto Voucher -->
+  <!--Modified by HMW at 30-July-2019-->
+  <sql-query name="SP_BL_LateFeesAutoPay_Voucher_ALLBLTOD">
+    exec dbo.SP_BL_LateFeesAutoPay_Voucher_ALLBLTOD :sourceBr,:createdUserId,:userName
+  </sql-query>
+  <!--Added by HWKO at 26-Oct-2017 //For Personal Loans Repayment Schedule Modify-->
+  <sql-query name="SP_PL_GetPLNoByAcctNoAndSourceBr">
+    exec dbo.SP_PL_GetPLNoByAcctNoAndSourceBr :acctNo,:sourceBr
+  </sql-query>
+  <!--//Endregion-->
+
+  <!--Added by HWKO at 27-Oct-2017 //For Personal Loans Voucher Outstanding Listing-->
+  <sql-query name="SP_PL_GetPLVrOutstandingListing">
+    exec dbo.SP_PL_GetPLVrOutstandingListing :sourceBr,:cur
+  </sql-query>
+  <!--//Endregion-->
+
+  <!--Added By AAM(06-Nov-2017)-->
+  <sql-query name="SP_HP_LateFeesOutstanding_Listing">
+    exec dbo.SP_HP_LateFeesOutstanding_Listing :currency,:sourceBr,:startDate,:endDate,:searchBy
+  </sql-query>
+  <!--For Business Loans NPL Listing-->
+  <sql-query name="SP_BL_NPLListing">
+    exec dbo.SP_BL_NPLListing :StartDate,:EndDate,:sourceBranchCode,:cur,:blType
+  </sql-query>
+  <!--//Endregion-->
+
+  <!--For Business Loans Schedule Listing //Updated by HWKO (22-Nov-2017)-->
+  <sql-query name="SP_BL_ScheduleListingByBLno">
+    exec dbo.SP_BL_ScheduleListingByBLno :acctNo,:cur,:sourceBranchCode
+  </sql-query>
+  <!--//Endregion-->
+
+  <!--For Business Loans History Listing-->
+  <sql-query name="SP_BLAbsentHistoryListing">
+    exec dbo.SP_BLAbsentHistoryListing :startDate,:endDate,:acctNo,:sourceBr
+  </sql-query>
+
+  <!--For Business Loans History Enquiry-->
+  <sql-query name="SP_BLAbsentHistory_Enquiry">
+    exec dbo.SP_BLAbsentHistory_Enquiry :acctNo,:sourceBr
+  </sql-query>
+
+  <!--For Business Loans Interest Due Pre Listing-->
+  <sql-query name="SP_BLInterestDuePreListing">
+    exec dbo.SP_BLInterestDuePreListing :startDate,:endDate,:sourceBr,:cur,:blType,:interestPaidStatus
+  </sql-query>
+
+  <!--For Business Loans Service charges Listing-->
+  <sql-query name="SP_BL_ServiceChargesListing">
+    exec dbo.SP_BL_ServiceChargesListing :startDate,:endDate,:sourceBranchCode,:cur,:blType
+  </sql-query>
+  
+  <!--For Business Loans Listing By Grade-->
+  <sql-query name="SP_BLInfoByBLTypeAndGrade">
+    exec dbo.SP_BLInfoByBLTypeAndGrade :startDate,:endDate,:sourceBranchCode,:cur,:minimumAmt,:maximumAmt,:blType
+  </sql-query>
+
+  <!--For Business Loans Repay Info Listing-->
+  <sql-query name="SP_BL_RepayListing">
+    exec dbo.SP_BL_RepayListing :startDate,:endDate,:sourceBranchCode,:cur,:blType
+  </sql-query>
+  <!--//Endregion-->
+  
+  <!--Added by HWKO at 07-Nov-2017 //For Business Loans Voucher Outstanding Listing-->
+  <sql-query name="SP_BL_GetBLVrOutstandingListing">
+    exec dbo.SP_BL_GetBLVrOutstandingListing :sourceBr,:cur
+  </sql-query>
+  <!--//Endregion-->
+  
+  <!--Added By AAM(16-Nov-2017)-->
+  <sql-query name="SP_BL_LateFeesOutstanding_Listing">
+    exec dbo.SP_BL_LateFeesOutstanding_Listing :currency,:sourceBr
+  </sql-query>
+  <!--Added by HWKO at 09-Nov-2017 //For Personal Loans Late Fees Outstanding Listing-->
+  
+  <sql-query name="SP_PL_LateFeesOutstanding_Listing">
+    exec dbo.SP_PL_LateFeesOutstanding_Listing :currency,:sourceBr
+  </sql-query>
+  <!--//Endregion-->
+
+  <!--Updated By ZMS(18-06-2018)-->
+  <!--Added By AAM(27-Nov-2017)-->
+  <sql-query name="SP_HP_Installment_Listing">
+    exec dbo.SP_HP_Installment_Listing :currency,:sourceBr,:stockGroup,:sortType
+  </sql-query>
+
+  <!--Updated By ZMS(18-06-2018)-->
+  <!--Added By AAM(28-Nov-2017)-->
+  <sql-query name="SP_PL_Installment_Listing">
+    exec dbo.SP_PL_Installment_Listing :currency,:sourceBr,:companyName,:sortType
+  </sql-query>
+
+  <!--Updated By ZMS(18-06-2018)-->
+  <!--Added By AAM(29-Nov-2017)-->
+  <sql-query name="SP_BL_Installment_Listing">
+    exec dbo.SP_BL_Installment_Listing :currency,:sourceBr,:businessType,:sortType
+  </sql-query>
+
+  <!--Added By AAM(29-Nov-2017)-->
+  <sql-query name="SP_PLDailyPositionListing">
+    exec dbo.SP_PLDailyPositionListing :sourceBr,:companyName
+  </sql-query>
+
+  <!--Added By ZMS(04/12/2017) To get TotalGroupAmt For Multiple Widthdraw and deposit-->
+  <sql-query name="SP_GetGroupAmount_MultipleWithdrawAndDepositReversal">
+    exec dbo.SP_GetGroupAmount_MultipleWithdrawAndDepositReversal :groupNo,:sourceBr
+  </sql-query>
+
+  <!--Added By AAM(04-Dec-2017)-->
+  <sql-query name="SP_HP_AutoPay_Sufficient_Listing">
+    exec dbo.SP_HP_AutoPay_Sufficient_Listing :startDate,:endDate,:stockGroup,:currency,:sourceBr
+  </sql-query>
+
+  <!--Added By AAM(05-Dec-2017)-->
+  <sql-query name="SP_PL_AutoPay_Sufficient_Listing">
+    exec dbo.SP_PL_AutoPay_Sufficient_Listing :startDate,:endDate,:companyName,:currency,:sourceBr
+  </sql-query>
+
+  <!--Added By AAM(06-Dec-2017)-->
+  <sql-query name="SP_BL_AutoPay_Sufficient_Listing">
+    exec dbo.SP_BL_AutoPay_Sufficient_Listing :startDate,:endDate,:businessType,:currency,:sourceBr
+  </sql-query>
+
+  <!--Added By ZMS(19/12/2017)-->
+  <sql-query name="SP_InsertCashDeno_MultipleWithdrawAndDepositReversal">
+    exec dbo.SP_InsertCashDeno_MultipleWithdrawAndDepositReversal
+    :denoEno,:tlfEno,:acType,:branchcode,:amount,:adjustAmt,:denoDetail,
+    :denorefundDetail,:userNo,:counterNo,:status,:reverse,:sourceBranch,:currency,:denoRate,:denorefundRate,
+    :settlementDate,:rate,:createduserId,
+    :ErrorMessage output select :ErrorMessage
+  </sql-query>
+
+  <!--Added By AAM(07-Dec-2017)-->
+  <sql-query name="SP_BLOverDrawnListing">
+    exec dbo.SP_BLOverDrawnListing :startDate,:endDate,:currency,:sourceBr
+  </sql-query>
+
+  <!--Added By HWKO (08-Dec-2017)-->
+  <sql-query name="SP_HP_ContractPrinting">
+    exec dbo.SP_HP_ContractPrinting :hpNo,:sourceBr
+  </sql-query>
+
+  <!--Added by HWKO (08-Dec-2017)-->
+  <sql-query name="SP_HP_GetHPNoByAcctNoAndSourceBr">
+    exec dbo.SP_HP_GetHPNoByAcctNoAndSourceBr :acctNo,:sourceBr
+  </sql-query>
+
+  <!--Added by HWKO (11-Dec-2017)-->
+  <sql-query name="SP_GetCustInfoByAcctNo">
+    exec dbo.SP_GetCustInfoByAcctNo :acctNo,:sourceBr
+  </sql-query>
+  <!--Added By HWKO (12-Dec-2017)-->
+  <sql-query name="SP_PL_ContractPrinting">
+    exec dbo.SP_PL_ContractPrinting :plNo,:sourceBr
+  </sql-query>
+
+  <!--Added by HWKO (15-Dec-2017)-->
+  <sql-query name="SP_BL_GetLNoByAcctNoAndSourceBr">
+    exec dbo.SP_BL_GetLNoByAcctNoAndSourceBr :acctNo,:sourceBr
+  </sql-query>
+
+  <!--Added By HWKO (13-Dec-2017)-->
+  <sql-query name="SP_BL_ContractPrinting_HP">
+    exec dbo.SP_BL_ContractPrinting_HP :lno,:sourceBr
+  </sql-query>
+
+  <!--Added By HWKO (13-Dec-2017)-->
+  <sql-query name="SP_BL_ContractPrinting_LB">
+    exec dbo.SP_BL_ContractPrinting_LB :lno,:sourceBr
+  </sql-query>
+
+  <!--Added By HWKO (13-Dec-2017)-->
+  <sql-query name="SP_BL_ContractPrinting_PG">
+    exec dbo.SP_BL_ContractPrinting_PG :lno,:sourceBr
+  </sql-query>
+  
+  <!--//Endregion-->
+
+  <!--Added By AAM(13-Dec-2017)-->
+  <sql-query name="SP_LoansSummaryReportForBOM">
+    exec dbo.SP_LoansSummaryReportForBOM :date,:currency,:sourceBr
+  </sql-query>
+
+  <!--Added By AAM(15-Dec-2017)-->
+  <sql-query name="SP_LoansSummaryReportForBOM_LiveUnLive">
+    exec dbo.SP_LoansSummaryReportForBOM_LiveUnLive :date,:currency,:sourceBr
+  </sql-query>
+
+  <!--Added By AAM(26-Dec-2017)-->
+  <sql-query name="SP_HP_TOD_Repayment_Listing">
+    exec dbo.SP_HP_TOD_Repayment_Listing :startDate,:endDate,:currency,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_PL_TOD_Repayment_Listing">
+    exec dbo.SP_PL_TOD_Repayment_Listing :startDate,:endDate,:currency,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_BL_TOD_Repayment_Listing">
+    exec dbo.SP_BL_TOD_Repayment_Listing :startDate,:endDate,:currency,:sourceBr
+  </sql-query>
+
+  <!--Added By AAM(28-Dec-2017)-->
+  <sql-query name="SP_HP_AccountClosed_Listing">
+    exec dbo.SP_HP_AccountClosed_Listing :startDate,:endDate,:currency,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_PL_AccountClosed_Listing">
+    exec dbo.SP_PL_AccountClosed_Listing :startDate,:endDate,:currency,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_BL_AccountClosed_Listing">
+    exec dbo.SP_BL_AccountClosed_Listing :startDate,:endDate,:currency,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_Transfer_Transaction_Listing">
+    exec dbo.SP_Transfer_Transaction_Listing :dateOption,:startDate,:endDate,:voucherStatus,:requiredType,:reverseStatus,:currency,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_GetDealerName_HPLimitVou_Printing">
+    exec dbo.SP_GetDealerName_HPLimitVou_Printing :dealerNo
+  </sql-query>
+
+  <sql-query name="SP_Get_LimitVou_Lists">
+    exec dbo.SP_Get_LimitVou_Lists :eno
+  </sql-query>
+
+  <sql-query name="SP_Tran_Deposit_Listing_ALL">
+    exec dbo.SP_Tran_Deposit_Listing_ALL :sourceBr,:workstationId
+  </sql-query>
+
+  <!--Added by JZT (06-Feb-2018)-->
+  <sql-query name="SP_Tran_Withdrawl_Listing_ALLReport">
+    exec dbo.[SP_Tran_Withdrawl_Listing_ALLReport] :sourceBr,:workstationId
+  </sql-query>
+
+  <sql-query name="SP_Check_GroupNo_ValidationInMultiDepReverse">
+    exec dbo.SP_Check_GroupNo_ValidationInMultiDepReverse :groupNo,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_Check_EntryNo_MultipleDepReverse">
+    exec dbo.SP_Check_EntryNo_MultipleDepReverse :eno,:sourceBr,:groupNo
+  </sql-query>
+
+  <sql-query name="SP_Check_EntryNo_Individual_DepWdwReverse">
+	  exec dbo.SP_Check_EntryNo_Individual_DepWdwReverse :eno,:sourceBr,:ERRMESSAGE
+  </sql-query>
+
+  <sql-query name="SP_Get_HP_Information_For_Enquiry">
+    exec dbo.SP_Get_HP_Information_For_Enquiry :acctNo,:sourceBr
+  </sql-query>
+ 
+  <sql-query name="SP_HP_Registration_Reversal">
+    exec dbo.SP_HP_Registration_Reversal :hpNo,:reversalEno,:createdUserId,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_Get_HPCustomerInfo_By_HPNo">
+    exec dbo.SP_Get_HPCustomerInfo_By_HPNo :hpNo
+  </sql-query>
+
+  <sql-query name="SP_Get_COA_Lists">
+    exec dbo.SP_Get_COA_Lists :sourceBr
+  </sql-query>
+
+  <sql-query name="SP_ImportingDeposit">
+    exec dbo.SP_ImportingDeposit :acWithOtherBank,:acctNoAndamount,:eno,:createdUserId,:sourceBr,:narration
+  </sql-query>
+
+  <sql-query name="SP_GetCustomerName_PLVoucher">
+    exec dbo.SP_GetCustomerName_PLVoucher :plNo
+  </sql-query>
+
+  <sql-query name="SP_SubLedgerDo_ForCashInHands">
+    exec dbo.SP_SubLedgerDo_ForCashInHands :aCode,:startDate,:endDate,:sourcebr,:workstation
+  </sql-query>
+
+  <sql-query name="SP_Get_SOFP_Report">
+    exec dbo.SP_Get_SOFP_Report :requiredMonth,:sourceBr
+  </sql-query>
+  
+  <!--For YearEnd Income Voucher-->
+  <sql-query name="SP_Check_AlreadyZerorizationForIncomeAC">
+	  exec dbo.SP_Check_AlreadyZerorizationForIncomeAC :plAC,:RetMsg output select :RetMsg
+  </sql-query>
+	
+  <sql-query name="SP_Get_Info_For_PNL_Zerorization_Income_ByPLAC">
+    exec dbo.SP_Get_Info_For_PNL_Zerorization_Income_ByPLAC :plAC,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_Get_PNL_Zerorization_Income_Info">
+    exec dbo.SP_Get_PNL_Zerorization_Income_Info :sourceBr
+  </sql-query>
+
+  <sql-query name="SP_For_PNL_Zerorization_Income_Voucher">
+    exec dbo.SP_For_PNL_Zerorization_Income_Voucher :plAC,:createdUserId,:sourceBr
+  </sql-query>
+
+  <!--For YearEnd Expense Voucher-->
+  <sql-query name="SP_Check_AlreadyZerorizationForExpenseAC">
+	  exec dbo.SP_Check_AlreadyZerorizationForExpenseAC :plAC,:RetMsg output select :RetMsg
+  </sql-query>
+	
+  <sql-query name="SP_Get_Info_For_Expn_Zerorization_Expense_ByExpnAC">
+    exec dbo.SP_Get_Info_For_Expn_Zerorization_Expense_ByExpnAC :expnAC,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_Get_Expn_Zerorization_Expense_Info">
+    exec dbo.SP_Get_Expn_Zerorization_Expense_Info :sourceBr
+  </sql-query>
+
+  <sql-query name="SP_For_Expn_Zerorization_Expense_Voucher">
+    exec dbo.SP_For_Expn_Zerorization_Expense_Voucher :expnAC,:createdUserId,:sourceBr
+  </sql-query>
+  
+  <sql-query name="Sp_CalculateHPTotalInterestFirstInstallment">
+    exec dbo.Sp_CalculateHPTotalInterestFirstInstallment :downPayPercent,:disburseAmt,:paymentDuration,:paymentOptionId,:rentalChgsPercent
+  </sql-query>
+
+  <sql-query name="SP_Get_HP_RepaymentInfo_PreCalculation">
+	  exec dbo.SP_Get_HP_RepaymentInfo_PreCalculation :DisburseAmt,:DownPayPercent,:RentalChgsPercent,:DealerCommissionPercent,:paymentDuration, :SourceBr
+  </sql-query>
+
+	<sql-query name="SP_BindLoansRepayInformationByRepaymentAmount">
+    exec dbo.SP_BindLoansRepayInformationByRepaymentAmount :DaysInyear,:Lno,:RepayAmount,:sourceBr
+  </sql-query>
+  <!--BLoans Repayment-->
+  <sql-query name="SP_BindLoansRepayInformationByRepaymentAmount_LC_Increase">
+    exec dbo.SP_BindLoansRepayInformationByRepaymentAmount_LC_Increase :DaysInyear,:Lno,:RepayAmount,:rate,:sourceBr
+  </sql-query>
+
+  <!--<sql-query name="SP_BL_UpdateBLDetails_LimitChangeDecrease">
+    exec dbo.SP_BL_UpdateBLDetails_LimitChangeDecrease :Lno,:Acctno,:LimitChangeAmt,:LimitChangeState,:DAYSINYEAR,:LCTermNo,:interestForBeforeLC,:CreatedUserId,
+    :UserName,:SourceBr,:Message output select :Message
+  </sql-query>-->
+  
+  <sql-query name="SP_BL_UpdateBLDetails_LimitChangeIncrease">
+    exec dbo.SP_BL_UpdateBLDetails_LimitChangeIncrease :Lno,:Acctno,:Eno,:LimitChangeAmt,:LimitChangeState,:DAYSINYEAR,:LCTermNo,
+    :ServiceCharges,:NewIntRate,:DocFee,:interestForBeforeLC,
+    :CreatedUserId,:UserName,:SourceBr,:Message output select :Message
+  </sql-query>
+
+  <sql-query name="SP_GetPersonalLoanInfo_ByAcctNo">
+    exec dbo.SP_GetPersonalLoanInfo_ByAcctNo :acctNo,:sourceBr
+  </sql-query>
+  
+  <sql-query name="SP_SavePersonalLoanInfoEdit_ByAcctNo">
+    exec dbo.SP_SavePersonalLoanInfoEdit_ByAcctNo :acctNo,:sourceBr,:companyName,:guaCompanyName,:guaName
+                                                  ,:guaNRC,:guaPhone,:createdUserId
+  </sql-query>
+  
+  <sql-query name="SP_CheckAccountForAccountClosed">
+    exec dbo.SP_CheckAccountForAccountClosed :acctNo,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_GetAccountInfoForAccountClosed">
+    exec dbo.SP_GetAccountInfoForAccountClosed :acctNo,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_Save_AccountClosed">
+    exec dbo.SP_Save_AccountClosed :acctNo,:createdUserId,:sourceBr,:noOfName,:noOfNRC
+  </sql-query>
+  
+  <sql-query name="SP_AccountClosedListing">
+    exec dbo.SP_AccountClosedListing :startDate,:endDate,:currency,:sourceBr,:acTypeFilter,:sortBy
+  </sql-query>
+
+  <sql-query name="SP_TransactionListing">
+    exec dbo.SP_TransactionListing :startDate,:endDate,:voucherType,:voucherStatus,:optFilter,:currency,:sourceBr
+  </sql-query>
+  
+  <!--Added by ZMS(15-JUN-2018)-->
+  <sql-query name="SP_GetNewInterestForNewRateLCIncrease">
+    exec dbo.SP_GetNewInterestForNewRateLCIncrease :intRate,:lno,:RepayAmt,:sourceBr
+  </sql-query>
+
+  <!--Added by ZMS(03-JUL-2018)-->
+  <sql-query name="SP_BLDailyPositionListing">
+    exec dbo.SP_BLDailyPositionListing :loanGroup,:sourceBr
+  </sql-query>
+
+  <!--Get All Customer Information Added by ZMS(04-JUL-2018)-->
+  <sql-query name="SP_AccountInformationEnquiry">
+    exec dbo.SP_AccountInformationEnquiry :name,:nrc,:isNameExact,:isNRCExact,:aCType,:searchType
+  </sql-query>
+
+  <!--Get Company Name Added by ZMS(12-JUL-2018)-->
+  <sql-query name="SP_GetCompanyName">
+    exec dbo.SP_GetCompanyName :acctno
+  </sql-query>
+  
+  <!--Added By AAM (10_Sep_2018)-->
+  <sql-query name="SP_CheckODLimitChange">
+    exec dbo.SP_CheckODLimitChange :blNo,:sourceBr
+  </sql-query>
+
+  <!--sp_BudInfo For Budget End  Added by ZMS(17-Sep-2018)-->
+  <sql-query name="sp_BudInfo">
+    exec dbo.sp_BudInfo :service,:pDate,:branchCode,:Return output select :Return
+  </sql-query>
+
+  <sql-query name="GetBLFInfoByStartDate">
+    exec dbo.GetBLFInfoByStartDate :pDate,:sourceBr
+  </sql-query>
+  
+  <!--Added By AAM(19_Sep_2018),For Year End Process-->
+  <sql-query name="SP_GetBLFByActiveBudget">
+    exec dbo.SP_GetBLFByActiveBudget :sourceBr
+  </sql-query>
+
+  <sql-query name="SP_AfterDayCloseAtYearEndProcess">
+    exec dbo.SP_AfterDayCloseAtYearEndProcess :budget,:createdUserId,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_AfterDayCloseAtYearEndProcess_BudgetStartMonth">
+    exec dbo.SP_AfterDayCloseAtYearEndProcess_BudgetStartMonth :createdUserId,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_AfterDayCloseAtYearEndProcess_NotBudgetStartMonth">
+    exec dbo.SP_AfterDayCloseAtYearEndProcess_NotBudgetStartMonth :month,:createdUserId,:sourceBr
+  </sql-query>
+
+  <!--Added By AAM(20_Sep_2018),For Year End Process-->
+  <sql-query name="SP_AfterDayCloseAtYearEndProcess_UpdateLiQBal">
+    exec dbo.SP_AfterDayCloseAtYearEndProcess_UpdateLiQBal :quarterMonth,:createdUserId,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_YearlyPostingProcess">
+    exec dbo.SP_YearlyPostingProcess :budget,:createdUserId,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_YearlyPostingProcess_CurYearInitial">
+    exec dbo.SP_YearlyPostingProcess_CurYearInitial :createdUserId,:sourceBr
+  </sql-query>
+
+  <sql-query name="SP_CheckingYearlyPostingRunDate">
+    exec dbo.SP_CheckingYearlyPostingRunDate :postingDate
+  </sql-query>
+
+  <!--Added by ZMS For PL Contract Printing Close and open account-->
+  <sql-query name="SP_SelectAccountInfoFromCledgerForPLContractPrinting">
+    exec dbo.SP_SelectAccountInfoFromCledgerForPLContractPrinting :acctNo,:sourceBranchCode
+  </sql-query>
+
+  <!--Added by ZMS For Black List Internal Customer 26.11.18-->
+  <sql-query name="SP_BlackListInternalCustomerByAcctno">
+    exec dbo.SP_BlackListInternalCustomerByAcctno :acctNo
+  </sql-query>
+
+  <sql-query name="SP_BlackListCustomerSave">
+    exec dbo.SP_BlackListCustomerSave :acctNo,:name,:nrc,:fName,:cName,:absentTerm,:dOB,:address,:userId,:sourceBr
+  </sql-query>
+  <!--**-->
+
+  <!--Added by ZMS For Black List External Customer 28.11.18-->
+  <sql-query name="SP_BlackListExternalCustomerSave">
+    exec dbo.SP_BlackListExternalCustomerSave :name,:nrc,:fName,:cName,:dOB,:address,:userId,:sourceBr
+  </sql-query>
+  <!--**-->
+
+  <!--Added by ZMS For Select All Black List Customer 29.11.18-->
+  <sql-query name="SP_SelectAllBlackListsForApproveReject">
+    exec dbo.SP_SelectAllBlackListsForApproveReject
+  </sql-query>
+  <!--**-->
+
+  <!--Added by YMP For Select All Warning List Customer 06.05.19-->
+  <sql-query name="SP_SelectAllWarningListsForApproveReject">
+    exec dbo.SP_SelectAllWarningListsForApproveReject
+  </sql-query>
+  <!--**-->
+
+  <!--Added by ZMS For Save Black List Approve/Reject Customer 07.12.18--> 
+  <sql-query name="SP_BlackListsApproveRejectSave">
+    exec dbo.SP_BlackListsApproveRejectSave :idArray,:userId,:branchCode,:approveReject
+  </sql-query>
+  <!--**-->
+
+  <!--Added by YMP For Save Warning List Approve/Reject Customer 06.05.19-->
+  <sql-query name="SP_WarningListsApproveRejectSave">
+    exec dbo.SP_WarningListsApproveRejectSave :idArray,:userId,:branchCode,:approveReject
+  </sql-query>
+  <!--**-->
+
+  <!--Added by ZMS For Save Black List Remove Customer -->
+  <sql-query name="SP_BlackListsRemoveSave">
+    exec dbo.SP_BlackListsRemoveSave :idArray,:userId,:branchCode,:remove
+  </sql-query>
+  <sql-query name="SP_SelectAllBlackListsForRemove">
+    exec dbo.SP_SelectAllBlackListsForRemove
+  </sql-query>
+  <!--**-->
+
+  <!--Added by YMP For Save Warning List Remove Customer -->
+  <sql-query name="SP_WarningListsRemoveSave">
+    exec dbo.SP_WarningListsRemoveSave :idArray,:userId,:branchCode,:remove
+  </sql-query>
+  <sql-query name="SP_SelectAllWarningListsForRemove">
+    exec dbo.SP_SelectAllWarningListsForRemove
+  </sql-query>
+  <!--**-->
+  
+  <!--Added by ZMS For Black List Listing -->
+  <sql-query name="SP_SelectAllBlackListByACTypeAndDate">
+    exec dbo.SP_SelectAllBlackListByACTypeAndDate :typeofCust,:accountType,:startDate,:endDate,:sourceBr
+  </sql-query>
+
+  <!--Added by YMP For Warning List Listing -->
+  <sql-query name="SP_SelectAllWarningListByACTypeAndDate">
+    exec dbo.SP_SelectAllWarningListByACTypeAndDate :accountType,:startDate,:endDate,:sourceBr
+  </sql-query>
+
+  <!--Added by ZMS For Black List Listing -->
+  <sql-query name="SP_SelectAllBlackListHistoryByACTypeAndDate">
+    exec dbo.SP_SelectAllBlackListHistoryByACTypeAndDate :typeofCust,:accountType,:startDate,:endDate,:sourceBr
+  </sql-query>
+
+  <!--Added by ZMS For Black List Entry Approve user Entry -->
+  <sql-query name="SP_SelectAllUser">
+    exec dbo.SP_SelectAllUser :sourceBr
+  </sql-query>
+  <sql-query name="SP_SelectAllBlackListMakerCheckerUser">
+    exec dbo.SP_SelectAllBlackListMakerCheckerUser :sourceBr
+  </sql-query>
+  <sql-query name="SP_BlackListMakerCheckerUserSave">
+    exec dbo.SP_BlackListMakerCheckerUserSave :userName,:CurrentUserID,:sourceBr,:approveType
+  </sql-query>
+  <sql-query name="SP_BlackListMakerCheckerUserDelete">
+    exec dbo.SP_BlackListMakerCheckerUserDelete :idArray,:CurrentUserID,:sourceBr
+  </sql-query>
+
+  <!--Added by ZMS to get maker checker user lists -->
+  <sql-query name="SP_SelectUserMakerCheckerApproveByUserId">
+    exec dbo.SP_SelectUserMakerCheckerApproveByUserId :userId,:sourceBr
+  </sql-query>
+  <!--**-->
+
+  <!--Added by YMP to save Warning List Entry -->
+  <sql-query name="SP_WarningListCustomerSave">
+    exec dbo.SP_WarningListCustomerSave :acctNo,:name,:nrc,:fName,:cName,:absentTerm,:dOB,:address,:userId,:sourceBr
+  </sql-query>
+  <!--**-->
+  
+  <!--Added by ZMS to get last day of month(not holiday)-->
+  <sql-query name="SP_GetLastDayofMonth">
+    exec dbo.SP_GetLastDayofMonth :requiredate
+  </sql-query>
+  <!--**-->
+
+  <!--Added by ZMS for PL Registartion Reversal -->
+  <sql-query name="SP_Get_PLCustomerInfo_By_PLNo">
+    exec dbo.SP_Get_PLCustomerInfo_By_PLNo :plNo
+  </sql-query>
+
+  <sql-query name="SP_PL_Registration_Reversal">
+    exec dbo.SP_PL_Registration_Reversal :plNo,:createdUserId,:sourceBr,:formatCode,:valueCount,:valueStr
+  </sql-query>
+  <!--**-->
+
+  <!--Added by ZMS -->
+  <sql-query name="SP_BlackListsCustomerSelectByCustId">
+    exec dbo.SP_BlackListsCustomerSelectByCustId :custId,:branchCode
+  </sql-query>
+  <!--**-->
+  
+  <!--Added by ZMS -->
+  <sql-query name="SP_CheckNRCForExternalBlackListCustomer">
+    exec dbo.SP_CheckNRCForExternalBlackListCustomer :nrc,:branchCode
+  </sql-query>
+  <!--**-->
+
+  <!--Added by YMP For Warning List History Listing -->
+  <sql-query name="SP_SelectAllWarningListHistoryByACTypeAndDate">
+    exec dbo.SP_SelectAllWarningListHistoryByACTypeAndDate :accountType,:startDate,:endDate,:sourceBr
+  </sql-query>
+
+  <!--Added by YMP For Late Fee Exception -->
+  <sql-query name="SP_GetInfoForLateFeeException">
+    exec dbo.SP_GetInfoForLateFeeException :acctno,:sourcebr
+  </sql-query>
+
+  
+  <!--Added by YMP For Late Fee Exception -->
+  <sql-query name="SP_UpdateLateFeeException">
+    exec dbo.SP_UpdateLateFeeException :acctno,:termno,:checkerid,:approvereject
+  </sql-query>
+
+  <!--Added by YMP For Late Fee Exception -->
+  <sql-query name="SP_SaveToLateFeeException">
+	  exec dbo.SP_SaveToLateFeeException :lno,:acctno,:termno,:cur,:sourcebr,:makerid, :Interest_PTOD_Status ,:LateFee_PTOD_Status ,:LateFee_ITOD_Status ,:TotalLateFee_Status 
+  </sql-query>
+
+  <!--Added by YMP For Late Fee Exception (Checker) -->
+  <sql-query name="SP_GetInfoForLateFeeExceptionForChecker">
+    exec dbo.SP_GetInfoForLateFeeExceptionForChecker
+  </sql-query>
+
+  <!--Added by HMW to show group no at "Deposit Listing (By Grade)" report-->
+  <sql-query name="SP_Tran_Deposit_Listing_ByAmount">
+	exec dbo.SP_Tran_Deposit_Listing_ByAmount :minimumAmount,:maximumAmount,:sourceBr,:workstationId
+  </sql-query>
+
+  <!--Added by HMW for "Multiple Deposit/Withdraw Reversal"-->
+  <sql-query name="SP_Check_EntryNo_Multiple_DepWdwReverse">
+	  exec dbo.SP_Check_EntryNo_Multiple_DepWdwReverse :groupNo,:eno,:sourceBr,:ERRMESSAGE
+  </sql-query>
+
+  <!--Added by HMW for "Multiple Deposit/Withdraw Reversal"-->
+  <sql-query name="SP_GetTransactionInfoByEnoANDGroupNo">
+	  exec dbo.SP_GetTransactionInfoByEnoANDGroupNo :groupNo,:eno,:sourceBr
+  </sql-query>
+
+  <!--Added by HMW for "Business Loan Registration Reversal"-->
+  <sql-query name="SP_Get_BLCustomerInfo_By_BLNo">
+	  exec dbo.SP_Get_BLCustomerInfo_By_BLNo :blNo
+  </sql-query>
+
+  <!--Added by HMW for "Business Loan Registration Reversal"-->
+  <sql-query name="SP_BL_Registration_Reversal">
+	  exec dbo.SP_BL_Registration_Reversal :blNo,:formatCode,:createdUserId,:sourceBr
+  </sql-query>
+
+  <!--Added by YMP For Limit Extend List Listing -->
+  <sql-query name="SP_GetBLLimitEntendList">
+	  exec dbo.SP_GetBLLimitEntendList :date,:acctno
+  </sql-query>
+ 
+  <!--Added by YMP For Limit Extend Entry (Select Data) -->
+  <sql-query name="SP_GetNeedToExtendAccountInfo">
+	exec dbo.SP_GetNeedToExtendAccountInfo :acctno
+  </sql-query>
+
+  <!--Added by YMP For Limit Extend Entry (Save Data) -->
+  <sql-query name="SP_SaveExtendListInfo">
+	exec dbo.SP_SaveExtendListInfo :extduration,:acctno,:docfee,:intrate,:userid,:sourcebr,:preextend,:scharge
+  </sql-query>
+
+  <!--Added by HMW For Limit Extend Entry -->
+  <sql-query name="SP_GetSanctionAmountInfo">
+	  exec dbo.SP_GetSanctionAmountInfo :acctno,:sourcebr
+  </sql-query>
+
+  <!--Added by HMW For Limit Extend Entry -->
+  <sql-query name="SP_BL_OD_AND_LateFee_Outstanding_Listing_ByAccount">
+	  exec dbo.SP_BL_OD_AND_LateFee_Outstanding_Listing_ByAccount :acctno,:sourcebr
+  </sql-query>
+
+  <!--Added by HMW to fix "Server Header Data Receving Error" at PL Ledger Balance Listing -->
+  <sql-query name="SP_AccountLedger">
+	  exec dbo.SP_AccountLedger :acSign,:workstation,:sourceCur
+  </sql-query>
+
+  <!--Return message(This account no has already taken Loan!Please register the new account no! ) for LB, PL, HP -->
+  <sql-query name="SP_CountofLoan_byAccountNo">
+	  exec dbo.SP_CountofLoan_byAccountNo :Acctno,:TranName
+  </sql-query>
+
+  <!--Added by HMW to fix "Server Header Data Receving Error" at PL Interest Due Pre Listing -->	
+  <sql-query name="SP_PLInterest_Due_PreListing">
+	  exec dbo.SP_PLInterest_Due_PreListing :startDate,:endDate,:cur,:sourcebr
+  </sql-query>
+
+</hibernate-mapping>
+

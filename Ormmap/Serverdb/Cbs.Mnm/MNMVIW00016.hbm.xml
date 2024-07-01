@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00042, Ace.Cbs.Pfm.Dmd" rename="report_tlfDto"/>
+  <class name="MNMVIW00016" table="VW_TRIALSHEET" mutable="false">
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+    <property name="ACode">
+      <column name="ACODE" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="CBMACode">
+      <column name="CBMACODE" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="ACName">
+      <column name="ACNAME" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="ACType">
+      <column name="ACTYPE" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="Status">
+      <column name="STATUS" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="Cur">
+      <column name="CUR" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="Amount">
+      <column name="AMOUNT" sql-type="numeric" not-null="true"/>
+    </property>
+    <property name="HomeAmount">
+      <column name="HOMEAMOUNT" sql-type="numeric" not-null="true"/>
+    </property>
+    <property name="Reversal">
+      <column name="REVERSAL" sql-type="int" not-null="true"/>
+    </property>
+    <property name="Date_Time">
+      <column name="DATE_TIME" sql-type="datetime" not-null="true"/>
+    </property>
+    <property name="SettlementDate">
+      <column name="SETTLEMENTDATE" sql-type="datetime" not-null="true"/>
+    </property>
+    <property name="Workstation">
+      <column name="WORKSTATION" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="SourceBr">
+      <column name="SOURCEBR" sql-type="varchar" not-null="true"/>
+    </property>
+  </class>
+  <query name="MNMVIW00016.SelectTrialSheetWithReversal">
+    select new report_tlfDto
+    (
+    t.ACode,
+    t.CBMACode,
+    t.ACName,
+    t.ACType,
+    t.Status,
+    t.Cur,
+    t.Amount,
+    t.HomeAmount,
+    t.Reversal,
+    t.Date_Time,
+    t.SettlementDate,
+    t.Workstation,
+    t.SourceBr
+    )
+    from MNMVIW00016 as t
+    where t.Cur = :cur and t.Workstation = :workstation and t.SourceBr =  :sourceBr
+  </query>
+
+  <query name="MNMVIW00016.SelectTrialSheetWithoutReversal">
+    select new report_tlfDto
+    (
+    t.ACode,
+    t.CBMACode,
+    t.ACName,
+    t.ACType,
+    t.Status,
+    t.Cur,
+    t.Amount,
+    t.HomeAmount,
+    t.Reversal,
+    t.Date_Time,
+    t.SettlementDate,
+    t.Workstation,
+    t.SourceBr
+    )
+    from MNMVIW00016 as t
+    where t.Cur = :cur and t.Workstation = :workstation and t.SourceBr =  :sourceBr and t.Reversal = 0
+  </query>
+</hibernate-mapping>

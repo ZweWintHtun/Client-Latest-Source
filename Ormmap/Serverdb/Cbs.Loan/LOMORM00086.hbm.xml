@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00086, Ace.Cbs.Loan.Dmd" rename="loanRecordDTO"/>
+
+  <class name="LOMORM00086" table="LoanRecord" >
+    <id name="Id" type="int" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+
+    <property name="Eno">
+      <column name="Eno" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="LoanType">
+      <column name="LoanType" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="BusinessTypeUM">
+      <column name="BusinessTypeUM" sql-type="varchar" not-null="true" />
+    </property>    
+    
+    <property name="TownshipCode" >
+      <column name="TownshipCode" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="VillageCode" >
+      <column name="VillageCode" sql-type="varchar" not-null="true" />
+    </property>
+    
+    <property name="FinancialYear">
+      <column name="FinancialYear" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="BusinessCode">
+      <column name="BusinessCode" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="SuspendDate">
+      <column name="SuspendDate" sql-type="datetime" not-null="true" />
+    </property>
+
+    <property name="SuspendAmu">
+      <column name="SuspendAmu" sql-type="numeric" not-null="true" />
+    </property>
+    
+    <property name="DeliverDate">
+      <column name="DeliverDate" sql-type="datetime" not-null="true" />
+    </property>
+    
+    <property name="TotalGroup">
+      <column name="TotalGroup" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Population">
+      <column name="Population" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Acre">
+      <column name="Acre" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="SanctionAmu">
+      <column name="SanctionAmu" sql-type="numeric" not-null="true" />
+    </property>
+
+    <property name="RefundDate">
+      <column name="RefundDate" sql-type="datetime" not-null="true" />
+    </property>
+
+    <property name="RefundAmu">
+      <column name="RefundAmu" sql-type="numeric" not-null="true" />
+    </property>
+    
+    <property name="RefundVrNo">
+      <column name="RefundVrNo" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Date_Time">
+      <column name="DateTime" sql-type="datetime" not-null="true" />
+    </property>
+
+    <property name="UserNo">
+      <column name="UserNo" sql-type="varchar" not-null="false" />
+    </property>
+
+
+    <property name="SourceBr">
+      <column name="SourceBr" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+  </class>  
+  <query name="LRDAO.UpdateLoanRecord">
+    update LOMORM00086 b
+    set
+    b.TownshipCode =: townshipCode,
+    b.VillageCode =: villageCode,
+    b.FinancialYear =: financialYear,
+    b.BusinessCode =: businessCode,
+    b.SuspendDate =: suspendDate,
+    b.SuspendAmu =: suspendAmu,
+    b.DeliverDate =: deliverDate,
+    b.TotalGroup =: totalGroup,
+    b.Population =: population,
+    b.Acre =: acre,
+    b.SanctionAmu =: sanctionAmu,
+    b.RefundDate =: refundDate,
+    b.RefundAmu =: refundAmu,
+    b.UpdatedDate =: updatedDate,
+    b.UpdatedUserId =: updatedUserId,
+    b.Active = true,
+    b.BusinessTypeUM =: businessTypeUM
+    where b.Eno =: eno
+  </query>
+  <query name="LRDAO.GetLoanRecordByLoanNo">
+    select new loanRecordDTO
+    (
+    b.Id,
+    b.Eno,
+    b.LoanType,
+    b.TownshipCode,
+    b.VillageCode,
+    b.FinancialYear,
+    b.BusinessCode,
+    b.SuspendDate,
+    b.SuspendAmu,
+    b.DeliverDate,
+    b.TotalGroup,
+    b.Population,
+    b.Acre,
+    b.SanctionAmu,
+    b.RefundDate,
+    b.RefundAmu,
+    b.RefundVrNo,
+    b.Date_Time,
+    b.UserNo,
+    b.SourceBr,
+    b.Active,
+    b.TS,
+    b.BusinessTypeUM
+    )
+    from LOMORM00086 as b
+    where b.Active = true and b.Eno =: eno
+  </query>
+
+  <query name="LRDAO.DeleteLoanRecord">
+    update LOMORM00086 b
+    set
+    b.Active = false,
+    b.UpdatedUserId =: updatedUserId,
+    b.UpdatedDate =: updatedDate
+    where b.Eno =: eno
+  </query>
+</hibernate-mapping>

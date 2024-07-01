@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Windows.Ix.DataModel" namespace="Ace.Windows.Ix.DataModel" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Windows.Ix.Core.DataModel.ComponentMetaDataItem, Ace.Windows.Ix.Core" rename="cmetadataitem"/>
+  <import class="Ace.Cbs.Cen.Dto.CENDTO00004, Ace.Cbs.Cen.Dto" rename="cendto04"/>
+  <import class="Ace.Cbs.Cen.Dto.CENDTO00002, Ace.Cbs.Cen.Dto" rename="cendto02"/>
+  <class name="ComponentVersionItem" table="[ComponentVersionItem]" >
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+    <property name="ComponentVersionHeaderId">
+      <column name="ComponentVersionHeaderId" sql-type="int" not-null="true" />
+    </property>
+    <property name="ComponentFileName">
+      <column name="ComponentFileName" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="ComponentType">
+      <column name="ComponentType" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="ComponentFilePath">
+      <column name="ComponentFilePath" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Active" not-null="true" />
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+	 <many-to-one name="ComponentVersionHeader" column="[ComponentVersionHeaderId]" class="ComponentVersionHeader" insert="false" update="false"></many-to-one>
+	 <many-to-one name="CreatedUser" column="[CreatedUserId]" class="Ace.Windows.Admin.DataModel.User" insert="false" update="false"></many-to-one>
+	 <many-to-one name="UpdatedUser" column="[UpdatedUserId]" class="Ace.Windows.Admin.DataModel.User" insert="false" update="false"></many-to-one>
+
+	  <bag name="ComponentFileDownloadedHistory" inverse="true" lazy="false" cascade="none">
+		  <key column="ComponentVersionItemId" />
+		  <one-to-many class="ComponentFileDownloadedHistory" />
+	  </bag>
+	  
+  </class>
+
+  <query name="ComponentVersionItemDAO.SelectComponentVersionItemByHeaderId">
+    select new cmetadataitem(
+    cvi.Id,
+    cvi.ComponentFileName,
+    cvi.ComponentType,
+    cvi.ComponentFilePath)
+    from ComponentVersionItem as cvi
+    where cvi.ComponentVersionHeaderId = :headerId and cvi.Active = true
+  </query>
+  <query name="ComponentVersionItemDAO.SelectComponentVersionByHeaderId">
+		select new cendto04(
+		cvi.Id,
+		cvi.ComponentFileName,
+		cvi.ComponentType,
+		cvi.ComponentFilePath)
+		from ComponentVersionItem as cvi
+		where cvi.ComponentVersionHeaderId = :componentversionheaderid
+		and cvi.Active = true
+  </query>
+</hibernate-mapping>

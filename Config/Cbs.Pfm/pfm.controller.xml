@@ -1,0 +1,918 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    Controller Objects Settings
+  </description>
+    
+  <!--//Print User Entry//-->
+  <object id="PrintUserController" type="Ace.Cbs.Pfm.Ptr.PFMCTL00007, Ace.Cbs.Pfm.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="PrintUserErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="PrintUserEntryValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtAuthorizeName">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="UserName"/>
+          </object>
+        </entry>
+        <entry key="txtOldPassword">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="OldPassword"/>
+            <property name="CustomValidatingMethod" value="txtOldPassword_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtNewPassword">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Password"/>
+          </object>
+        </entry>
+        <entry key="txtConfirmPassword">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="ConfirmPassword"/>
+          </object>
+        </entry>               
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//FReceipt//-->
+  <object id ="FReceiptController" type="Ace.Cbs.Pfm.Ptr.PFMCTL00027, Ace.Cbs.Pfm.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="FReceiptErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="FReceipt.Validator"/>
+      </object>
+    </property>
+    
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="mtxtAccountNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="AccountNo"/>
+            <property name="CustomValidatingMethod" value="mtxtAccountNo_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="ntxtAmount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Amount"/>
+            <property name="CustomValidatingMethod" value="ntxtAmount_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="cboDurationDesp">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Duration"/>
+          </object>
+        </entry>
+        <entry key="ntxtInterestRate">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="InterestRate"/>
+          </object>
+        </entry>
+        <entry key="mtxtInterestTakenAccount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="ToAccountNo"/>
+            <property name ="CustomValidatingMethod" value="mtxtInterestTakenAccount_CustomValidating" />
+          </object>
+        </entry>
+    
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//CurrentCompanyOpening-->
+  <object id="CurrentCompanyController" type="Ace.Cbs.Pfm.Ptr.PFMCTL00002, Ace.Cbs.Pfm.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="CurrentCompanyErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="CompanyAccount.Validator"/>
+        <property name="CustomValidatingMethod" value="gvCustomer_CustomValidating"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+		  
+        <entry key="txtNameOfFirm">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="NameOfFirm"/>
+          </object>
+        </entry>
+        <entry key="txtEmail">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Email"/>
+          </object>
+        </entry>
+        <entry key="txtAddress">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Address"/>
+          </object>
+        </entry>
+        <entry key="cboCity">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CityCode"/>
+          </object>
+        </entry>
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CurrencyCode"/>
+          </object>
+        </entry>
+        <entry key="mtxtPhone">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Phone"/>
+          </object>
+        </entry>
+        <entry key="mtxtFax">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Fax"/>
+          </object>
+        </entry>
+        <entry key="cboTownship">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="TownshipCode"/>
+          </object>
+        </entry>
+        <entry key="cboState">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="StateCode"/>
+          </object>
+        </entry>
+        <entry key="txtNoPersonSign">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="NoOfPersonSign"/>
+            <property name="CustomValidatingMethod" value="txtNoOfPersonSign_CustomValidating"/>  
+          </object>
+        </entry>
+        <entry key="txtBusiness">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Business"/>
+			  <property name="CustomValidatingMethod" value="txtBusiness_CustomValidating"/>
+          </object>
+        </entry>
+		  <entry key="txtReceiptNo">
+			  <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+				  <property name="Providers" value="Business"/>
+				  <property name="CustomValidatingMethod" value="txtReceiptNo_CustomValidating"/>
+			  </object>
+		  </entry>
+        <entry key="txtLinkLimit">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="DebitLimit"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+    </object>
+
+  <object id ="JointController" type="Ace.Cbs.Pfm.Ptr.PFMCTL00003, Ace.Cbs.Pfm.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="JointErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="JointAccount.Validator"/>
+        <property name="CustomValidatingMethod" value="gvCustomer_CustomValidating"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CurrencyCode"/>
+          </object>
+        </entry>
+        <entry key="txtNoPersonSign">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="NoOfPersonSign"/>
+            <property name="CustomValidatingMethod" value="txtNoOfPersonSign_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtLinkLimit">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="DebitLimit"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <object id ="IndividualController" type="Ace.Cbs.Pfm.Ptr.PFMCTL00001, Ace.Cbs.Pfm.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="IndividualErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="IndividualAccount.Validator"/>
+        <property name="CustomValidatingMethod" value="InputData_CustomValidating"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="mtxtCustomerID">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="CustomValidatingMethod" value="mtxtCustomerId_CustomValidating" />
+          </object>
+        </entry>
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CurrencyCode"/>
+          </object>
+        </entry>
+        <entry key="txtBusiness">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Business"/>
+          </object>
+        </entry>
+        <entry key="txtNameofFirm">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="NameOfFirm"/>
+          </object>
+        </entry>
+        <entry key="txtLinkLimit">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="DebitLimit"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--// StopChequeController//-->
+  <object id="StopChequeController" type="Ace.Cbs.Pfm.Ptr.PFMCTL00014, Ace.Cbs.Pfm.Ptr" parent="AbstractController" singleton="false" >
+    <property name="ErrorProvider">
+      <object id="StopChequeErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="StopChequeValidator"/>
+        
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="mtxtAccountNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="AccountNo"/>
+            <property name="CustomValidatingMethod" value ="mtxtAccountNo_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtChequeBookNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="ChequeBookNo"/>
+			  <property name="CustomValidatingMethod" value ="txtChequeBookNo_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtRemark">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Remark"/>
+          </object>
+        </entry>
+        <entry key="txtStartSerialNo">
+					  <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						  <property name="Providers" value="StartNo"/>
+              <property name="CustomValidatingMethod" value ="ChequeStartNo_CustomValidating"/>
+					  </object>
+				  </entry>
+				  <entry key="txtEndSerialNo">
+					  <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						  <property name="Providers" value="EndNo"/>
+              <property name="CustomValidatingMethod" value ="ChequeEndNo_CustomValidating"/>
+					  </object>
+				  </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--// Print Record Controlller // Passbook - Entity Trnasaction//-->
+ <object id="PrintRecordController" type= "Ace.Cbs.Pfm.Ptr.PFMCTL00008, Ace.Cbs.Pfm.Ptr" parent="AbstractController" singleton="false" >
+     <property name="ErrorProvider">
+      <object id="PrintRecordErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="TransactionPrintingValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="mtxtAccountNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="AcctNo"/>
+            <property name="CustomValidatingMethod" value ="mtxtAccountNo_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="mtxtDeposit">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CAmt"/>
+            <!--<property name="CustomValidatingMethod" value ="mtxtDeposit_CustomValidating"/>-->
+          </object>
+        </entry>
+        <entry key="mtxtWithdrawl">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="DAmt"/>
+            <!--<property name="CustomValidatingMethod" value ="mtxtWithdrawl_CustomValidating"/>-->
+          </object>
+        </entry>
+        <entry key="txtReference">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Reference"/>
+          </object>
+        </entry>
+        <entry key="mtxtBalance">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Balance"/>
+            <property name="CustomValidatingMethod" value ="mtxtBalance_CustomValidating" />
+          </object>
+        </entry>
+
+      </dictionary>
+    </property>
+  </object>
+
+  <!--// Cheque Issue Controller//-->
+  <object id="ChequeController" type="Ace.Cbs.Pfm.Ptr.PFMCTL00013, Ace.Cbs.Pfm.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="ChequeErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="ChequeIssueEntryValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="mtxtAccountNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="AccountNo"/>
+			      <property name="CustomValidatingMethod" value="mtxtAccountNo_CustomValidating"/>  
+          </object>
+        </entry>
+        <entry key="txtChequeBookNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="ChequeBookNo"/>
+            <property name="CustomValidatingMethod" value="txtChequeBookNo_CustomValidating"/>
+		  </object>
+        </entry>
+        <entry key="txtStartNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="StartNo"/>
+			  <property name="CustomValidatingMethod" value="txtStartNo_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtEndNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="EndNo"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+
+  </object>
+
+  <!--// CustomerId  Entry-->
+  <object id="CustomerIdController" type="Ace.Cbs.Pfm.Ptr.PFMCTL00004, Ace.Cbs.Pfm.Ptr" parent="AbstractController" singleton ="false">
+    <property name="ErrorProvider">
+      <object id="CustomerIdErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="CustomerIdEntryValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="mtxtCustomerId" >
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CustomerId"/>
+            <property name="CustomValidatingMethod" value="CustomerId_CustomValidating" />
+          </object>
+        </entry>
+       
+        <entry key="txtName">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="NameOnly"/>
+          </object>
+        </entry>
+        <entry key="txtNRC">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="NRC"/>
+            <property name="CustomValidatingMethod" value="txtNRC_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="cboStateCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="StateCodeForNRC"/>
+            <property name="CustomValidatingMethod" value="cboStateCode_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="cboTownshipCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="TownshipCodeForNRC"/>
+            <property name="CustomValidatingMethod" value="cboTownshipCode_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="cboNationalityCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="NationalityCodeForNRC"/>
+            <property name="CustomValidatingMethod" value="cboNationalityCode_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtNRCNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="NRCNo"/>
+            <property name="CustomValidatingMethod" value="txtNRCNo_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="cboFatherStateCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="FatherStateCodeForNRC"/>
+            <property name="CustomValidatingMethod" value="cboFatherStateCode_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="cboFatherTownshipCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="FatherTownshipCodeForNRC"/>
+            <property name="CustomValidatingMethod" value="cboFatherTownshipCode_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="cboFatherNationalityCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="FatherNationalityCodeForNRC"/>
+            <property name="CustomValidatingMethod" value="cboFatherNationalityCode_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtFatherNRCNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="FatherNRCNo"/>
+            <property name="CustomValidatingMethod" value="txtFatherNRCNo_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtGuardianshipName">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="GuardianName"/>
+            <property name="CustomValidatingMethod" value="txtGuardianshipName_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtFatherGuardianNRC">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="GuardianNRCNo"/>
+            <property name="CustomValidatingMethod" value="txtFatherGuardianNRC_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="cboInitial">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Initial"/>
+          </object>
+        </entry>
+        <entry key="dtpDOB">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="DateOfBirth"/>
+            <property name="CustomValidatingMethod" value="DateOfBirthd_CustomValidating" />
+          </object>
+        </entry>
+        <entry key="cboOccupation">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="OccupationCode"/>
+          </object>
+        </entry>
+        <entry key="cboCity">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CityCode"/>
+          </object>
+        </entry>
+        <entry key="cboState">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="StateCode"/>
+          </object>
+        </entry>
+        <entry key="cboTownship">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="TownshipCode"/>
+          </object>
+        </entry>
+        <entry key="cboNationality">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Nationality"/>
+          </object>
+        </entry>
+        <entry key="txtAddress">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Address"/>
+          </object>
+        </entry>
+        <entry key="txtFatherName">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="FatherName"/>
+          </object>
+        </entry>
+        <entry key="cboGender">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Gender"/>
+          </object>
+        </entry>
+       
+        <entry key="txtPhone">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="PhoneNo"/>
+          </object>
+        </entry>
+        <entry key="txtEmail">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Email"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--Saving Withdrawal Controller-->
+  <object id="SavingWithdrawalController" type="Ace.Cbs.Pfm.Ptr.PFMCTL00021, Ace.Cbs.Pfm.Ptr" parent="AbstractController" singleton ="false">
+	  <property name="ErrorProvider">
+		  <object id="SavingWithdrawalErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+			  <property name="Validator" ref="SavingWithdrawalValidator"/>
+		  </object>
+	  </property>
+	  <property name="ControlProvider">
+		  <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+			  <entry key="mtxtOLSAccountNo">
+				  <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+					  <property name="Providers" value="OLSACNo"/>
+					  <property name="CustomValidatingMethod" value="mtxtOLSAccountNo_CustomValidating"/>
+				  </object>
+			  </entry>
+			  <entry key="mtxtAccountNo">
+				  <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+					  <property name="Providers" value="AccountNo"/>
+					  <property name="CustomValidatingMethod" value="mtxtAccountNo_CustomValidating"/>
+				  </object>
+			  </entry>
+        <entry key="txtName">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Name"/>
+          </object>
+        </entry>
+        <entry key="txtNRC">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="NRC"/>
+          </object>
+        </entry>
+        <entry key="txtAmount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Amount"/>
+            <property name="CustomValidatingMethod" value="txtAmount_CustomValidating"/>
+          </object>
+        </entry>
+      </dictionary>
+	  </property>
+  </object>
+
+  <!--//CustomerIdSearch//-->
+  <object id="CustomerIdSearchController" type="Ace.Cbs.Pfm.Ptr.PFMCTL00005, Ace.Cbs.Pfm.Ptr" parent="AbstractController" singleton ="false">
+  </object>
+
+  <!--// Editing -> Entity Transaction -> Print Line Entry//-->
+  <object id="PrintLineEntryController" type="Ace.Cbs.Pfm.Ptr.PFMCTL00009, Ace.Cbs.Pfm.Ptr" parent="AbstractController" singleton ="false">
+    <property name="ErrorProvider">
+      <object id="PrintLineEntry.Validator" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="PrintLineEntry.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtLineNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="PrintLineNo"/>
+            <property name="CustomValidatingMethod" value="txtLineNo_CustomValidating"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property> 
+  </object>
+
+  <!--//PrintChequeController//-->
+  <object id="PrintChequeController" type="Ace.Cbs.Pfm.Ptr.PFMCTL00015, Ace.Cbs.Pfm.Ptr" parent="AbstractController" singleton="false" >
+    <property name="ErrorProvider">
+      <object id="PrintChequeErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="ChequePrintEntryValidator"/>        
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="mtxtAccountNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="AccountNo"/>
+			  <property name="CustomValidatingMethod" value="mtxtAccountNo_CustomValidating"/>
+		  </object>
+        </entry>
+        <entry key="txtChequeBookNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="ChequeBookNo"/>
+			  <property name="CustomValidatingMethod" value="txtChequeBookNo_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtBranchNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBranchCode"/>
+          </object>
+        </entry>
+        <entry key="txtStartChequeNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="StartNo"/>
+          </object>
+        </entry>
+        <entry key="txtEndChequeNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="EndNo"/>
+			  <property name="CustomValidatingMethod" value="txtEndNo_CustomValidating"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+    
+
+  </object>
+
+  <!--// LinkAccount Controller//-->
+  <object id="LinkAccountController" type="Ace.Cbs.Pfm.Ptr.PFMCTL00012, Ace.Cbs.Pfm.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="LinkAccountErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="LinkAccountValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="mtxtCurrentAccountNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CurrentAccountNo"/>            
+            <property name="CustomValidatingMethod" value="mtxtCurrentAccountNo_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="mtxtSavingAccountNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SavingAccountNo"/>           
+            <property name="CustomValidatingMethod" value="mtxtSavingAccountNo_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="ntxtCurrentMinimunBalance">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="MinimumCurrentAccountBalance"/>
+          </object>
+        </entry>
+        <entry key="ntxtSavingMinimunBalance">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="MinimumSavingAccountBalance"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--// Current Account Close Controller//-->
+  <object id="CurrentAccountCloseController" type="Ace.Cbs.Pfm.Ptr.PFMCTL00011, Ace.Cbs.Pfm.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="CurrentAccountCloseErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="CurrentAccountCloseValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="mtxtAccountNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="AccountNo"/>
+            <property name="CustomValidatingMethod" value="mtxtAccountNo_Validating"/>
+          </object>
+        </entry>
+        <entry key="txtChequeNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="ChequeNo"/>
+            <property name="CustomValidatingMethod" value="txtChequeNo_Validating"/>
+          </object>
+        </entry>
+        <entry key="ntxtCharges">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="CustomValidatingMethod" value="ntxtCharges_Validating"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//SavingAccountClosing-->
+  <object id="SavingAccountClosingController" type="Ace.Cbs.Pfm.Ptr.PFMCTL00010, Ace.Cbs.Pfm.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="SavingAccountCloseErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="SavingAccountCloseValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="mtxtAccountNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="AccountNo"/>
+            <property name="CustomValidatingMethod" value="mtxtAccountNo_Validating"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+  
+  <!--//CurrentCompanyPrinting-->
+  <object id="CurrentCompanyPrintingController" type="Ace.Cbs.Pfm.Ptr.PFMCTL00019, Ace.Cbs.Pfm.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="CurrentCompanyPrintingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="CompanyAccountPrinting.Validator"/>
+        <property name="CustomValidatingMethod" value="gvCustomer_CustomValidating"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CurrencyCode"/>
+          </object>
+        </entry>
+        <entry key="txtNameOfFirm">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="NameOfFirm"/>
+          </object>
+        </entry>
+        <entry key="txtEmail">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Email"/>
+          </object>
+        </entry>
+        <entry key="txtAddress">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Address"/>
+          </object>
+        </entry>
+        <entry key="txtIntroducedBy">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="IntroducedBy"/>
+          </object>
+        </entry>
+        <entry key="mtxtPhone">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Phone"/>
+          </object>
+        </entry>
+        <entry key="mtxtFax">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Fax"/>
+          </object>
+        </entry>
+        <entry key="cboCity">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CityCode"/>
+          </object>
+        </entry>       
+        <entry key="cboTownship">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="TownshipCode"/>
+          </object>
+        </entry>
+        <entry key="cboState">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="StateCode"/>
+          </object>
+        </entry>
+        <entry key="txtNoPersonSign">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="NoOfPersonSign"/>
+            <property name="CustomValidatingMethod" value="txtNoOfPersonSign_CustomValidating"/>
+          </object>
+        </entry>
+
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//IndividualPrinting-->
+  <object id="IndividualPrintingController" type="Ace.Cbs.Pfm.Ptr.PFMCTL00017, Ace.Cbs.Pfm.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="IndividualPrintingControllerProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="IndividualAccountPrinting.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="mtxtCustomerId">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CustomerId"/>
+            <property name="CustomValidatingMethod" value="mtxtCustomerId_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtIntroducedBy">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="IntroducedBy"/>
+            <property name="CustomValidatingMethod" value="txtIntroducedBy_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Currency"/>
+          </object>
+        </entry>
+        <entry key="dtpDateOfBirth">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="DateOfBirth"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--  Opening Form Printing Joint -->
+  <object id ="OpeningFormPrintingJointController" type="Ace.Cbs.Pfm.Ptr.PFMCTL00018, Ace.Cbs.Pfm.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="OpeningFormPrintingJointErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="JointAccountPrinting.Validator"/>
+        <property name="CustomValidatingMethod" value="gvCustomer_CustomValidating"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CurrencyCode"/>
+          </object>
+        </entry>
+        <entry key="txtIntroducedBy">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="IntroducedBy"/>
+          </object>
+        </entry>
+        <entry key="txtNoPersonSign">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="NoOfPersonSign"/>
+            <property name="CustomValidatingMethod" value="txtNoOfPersonSign_CustomValidating"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--// SolidarityLendingEntryController-->
+  <object id="SolidarityLendingEntryController" type="Ace.Cbs.Pfm.Ptr.PFMCTL00078, Ace.Cbs.Pfm.Ptr" parent="AbstractController" singleton ="false">
+    
+    <property name="ErrorProvider">
+      <object id="SolidarityLendingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="SolidarityLendingEntryValidator"/>
+      </object>
+    </property>
+    
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        
+        <entry key="txtGroupNo" >
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="GroupNo"/>
+            <property name="CustomValidatingMethod" value="txtGroupNo_CustomValidating" />
+          </object>
+        </entry>
+        <entry key="txtName">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="NameOnly"/>
+          </object>
+        </entry>
+        <entry key="txtNRC">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="NRCNo"/>
+            <property name="CustomValidatingMethod" value="txtNRC_CustomValidating"/>
+          </object>
+        </entry>
+        
+        <entry key="cboStateCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="StateCodeForNRC"/>
+            <property name="CustomValidatingMethod" value="cboStateCode_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="cboTownshipCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="TownshipCodeForNRC"/>
+            <property name="CustomValidatingMethod" value="cboTownshipCode_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="cboNationalityCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="NationalityCodeForNRC"/>
+            <property name="CustomValidatingMethod" value="cboNationalityCode_CustomValidating"/>
+          </object>
+        </entry>        
+        <entry key="txtNRCNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="NRCNo"/>
+            <property name="CustomValidatingMethod" value="txtNRCNo_CustomValidating"/>
+          </object>
+        </entry>
+      
+        <entry key="txtAddress">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Address"/>
+          </object>
+        </entry>
+        <entry key="txtFatherName">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="FatherName"/>
+          </object>
+        </entry>
+        <entry key="cboVillage">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="VillageCode"/>
+            <property name="CustomValidatingMethod" value="cboVillage_CustomValidating"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!-- added by ZMS -->
+  <object id="Controller" type="Ace.Cbs.Pfm.Ptr.PFMCTL00080, Ace.Cbs.Pfm.Ptr" parent="AbstractController" singleton ="false">
+  </object>
+  
+</objects>

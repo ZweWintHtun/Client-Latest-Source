@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00040, Ace.Cbs.Pfm.Dmd" rename="sidto"/>
+
+  <class name="PFMORM00040" table="[SI]" >
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+    
+    <property name="AccountNo">
+      <column name="AcctNo" sql-type="varchar" not-null="true" />
+    </property>
+    
+    <property name="AccountSignature">
+      <column name="ACSign" sql-type="varchar" not-null="true" />
+    </property>
+    
+    <property name="CloseDate">
+      <column name="CloseDate" sql-type="datetime" not-null="false" />
+    </property>
+    
+    <property name="Status">
+      <column name="Status" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="Budget">  
+      <column name="Budget" sql-type="varchar" not-null="true" />
+    </property>
+    
+    <property name="LastInt">      
+      <column name="LastInt" sql-type="numeric(15,2)" not-null="true" />
+    </property>
+    
+    <property name="AccruedInt">
+      <column name="AccruedInt" sql-type="numeric(15,2)" not-null="false" />
+    </property>
+    
+    <property name="Month1">
+      <column name="M1" sql-type="numeric(15,2)" not-null="true" default="0" />
+    </property>
+    
+    <property name="Month2">
+      <column name="M2" sql-type="numeric(15,2)" not-null="true" default="0" />
+    </property>
+    
+    <property name="Month3">
+      <column name="M3" sql-type="numeric(15,2)" not-null="true" default="0" />
+    </property>
+    
+    <property name="Month4">
+      <column name="M4" sql-type="numeric(15,2)" not-null="true" default="0" />
+    </property>
+    
+    <property name="Month5">
+      <column name="M5" sql-type="numeric(15,2)" not-null="true" default="0" />
+    </property>
+    
+    <property name="Month6">
+      <column name="M6" sql-type="numeric(15,2)" not-null="true"  default="0"/>
+    </property>
+    
+    <property name="Month7">
+      <column name="M7" sql-type="numeric(15,2)" not-null="true"  default="0"/>
+    </property>
+    
+    <property name="Month8">
+      <column name="M8" sql-type="numeric(15,2)" not-null="true" default="0" />
+    </property>
+    
+    <property name="Month9">
+      <column name="M9" sql-type="numeric(15,2)" not-null="true"  default="0"/>
+    </property>
+    
+    <property name="Month10">
+      <column name="M10" sql-type="numeric(15,2)" not-null="true"  default="0"/>
+    </property>
+    
+    <property name="Month11">
+      <column name="M11" sql-type="numeric(15,2)" not-null="true"  default="0"/>
+    </property>
+    
+    <property name="Month12">
+      <column name="M12" sql-type="numeric(15,2)" not-null="true"  default="0"/>
+    </property>
+    
+    <property name="CurrencyCode">
+      <column name="Cur" sql-type="varchar" not-null="true" />
+    </property>
+     <property name="SourceBranchCode">
+      <column name="SourceBr" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="DATE_TIME">
+      <column name="DATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+    
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+	   <many-to-one name="Currency" column="[Cur]" class="Ace.Windows.Admin.DataModel.Currency" insert="false" update="false"></many-to-one>
+	  <many-to-one name="Branch" column="[SourceBr]" class="Ace.Windows.Admin.DataModel.Branch" insert="false" update="false"></many-to-one>
+
+  </class>
+
+
+  <!--//PFMDAO00040.SelectInterestByAccountNo//-->
+  <query name="PFMDAO00040.SelectInterestByAccountNo">
+    select new sidto(
+    si.AccruedInt
+    )
+    from PFMORM00040 as si
+    where si.AccountNo=:accountNo
+    and si.Active = true
+  </query>
+
+
+<!--//PFMDAO00040.SelectALL//-->
+	<query name="PFMDAO00040.SelectALL">
+		select new sidto(
+		si.Id,
+		si.AccountNo,
+		si.AccountSignature,
+		si.CloseDate,
+		si.Status,
+		si.Budget,
+		si.LastInt,
+		si.AccruedInt,
+		si.Month1,
+		si.Month2,
+		si.Month3,
+		si.Month4,
+		si.Month5,
+		si.Month6,
+		si.Month7,
+		si.Month8,
+		si.Month9,
+		si.Month10,
+		si.Month11,
+		si.Month12,
+		si.SourceBranchCode,
+		si.DATE_TIME,
+		si.CurrencyCode,
+		si.Active,
+		si.TS,
+		si.CreatedDate,
+		si.CreatedUserId,
+		si.UpdatedDate,
+		si.UpdatedUserId
+		)
+		from PFMORM00040 as si
+		where si.SourceBranchCode=:SourceBranchCode
+		and si.Active = true
+	</query>
+
+	<query name="PFMDAO00040.UpdateSi">
+		update PFMORM00040 si
+		set
+		si.AccruedInt=:accruedint,
+		si.Month1=:si_month,
+		si.Month2=:si_month,
+		si.Month3=:si_month,
+		si.Month4=:si_month,
+		si.Month5=:si_month,
+		si.Month6=:si_month,
+		si.Month7=:si_month,
+		si.Month8=:si_month,
+		si.Month9=:si_month,
+		si.Month10=:si_month,
+		si.Month11=:si_month,
+		si.Month12=:si_month,
+		si.Budget=:budget,
+		si.UpdatedUserId=:updatedUserId,
+		si.UpdatedDate = :updatedDate
+		where si.SourceBranchCode=:SourceBranchCode
+		and si.Active = true
+	</query>
+	
+  <!--//PFMDAO00040.UpdateCloseDate-->
+  <query name="PFMDAO00040.UpdateCloseDate">
+	  update PFMORM00040 si
+	  set
+	  si.CloseDate = :closeDate,
+	  si.UpdatedUserId = :updatedUserId,
+	  si.UpdatedDate = :updatedDate
+	  where si.AccountNo = :accountNo
+	  and si.Active = true
+  </query>
+
+  <!--//PFMDAO00040.SelectByAccountNo//-->          <!--NLKK-->
+  <query name="PFMDAO00040.SelectByCloseDate">
+	  select new sidto(
+	  si.Id,
+	  si.AccountNo,
+	  si.AccountSignature,
+	  si.CloseDate,
+	  si.Status,
+	  si.Budget,
+	  si.LastInt,
+	  si.AccruedInt,
+	  si.Month1,
+	  si.Month2,
+	  si.Month3,
+	  si.Month4,
+	  si.Month5,
+	  si.Month6,
+	  si.Month7,
+	  si.Month8,
+	  si.Month9,
+	  si.Month10,
+	  si.Month11,
+	  si.Month12,
+	  si.SourceBranchCode,
+	  si.DATE_TIME,
+	  si.CurrencyCode,
+	  si.Active,
+	  si.TS,
+	  si.CreatedDate,
+	  si.CreatedUserId,
+	  si.UpdatedDate,
+	  si.UpdatedUserId
+	  )
+	  from PFMORM00040 as si
+	  where (si.CloseDate = null or si.CloseDate = '')
+	  and si.SourceBranchCode = :sourceBr
+	  and si.CurrencyCode = :cur
+	  and si.Active = true
+
+  </query>
+
+  <query name="PFMDAO00040.SelectByBudgetYear">
+    select new sidto(
+    si.Id,
+    si.AccountNo,
+    si.AccountSignature,
+    si.CloseDate,
+    si.Status,
+    si.Budget,
+    si.LastInt,
+    si.AccruedInt,
+    si.Month1,
+    si.Month2,
+    si.Month3,
+    si.Month4,
+    si.Month5,
+    si.Month6,
+    si.Month7,
+    si.Month8,
+    si.Month9,
+    si.Month10,
+    si.Month11,
+    si.Month12,
+    si.SourceBranchCode,
+    si.DATE_TIME,
+    si.CurrencyCode,
+    si.Active,
+    si.TS,
+    si.CreatedDate,
+    si.CreatedUserId,
+    si.UpdatedDate,
+    si.UpdatedUserId
+    )
+    from PFMORM00040 as si
+    where (si.CloseDate = null or si.CloseDate = '')
+    and si.SourceBranchCode = :sourceBr
+    and si.CurrencyCode = :cur
+    and si.Active = true
+    and si.Budget = :Budget
+
+  </query>
+  
+  <!--PFMDAO00040.UpdateAccruedIntByAccountNo-->                 <!--NLKK-->
+  <query name="PFMDAO00040.UpdateAccruedIntByAccountNo">
+    update PFMORM00040 si
+    set si.AccruedInt = si.AccruedInt + :accruedInt,
+    si.UpdatedDate =: updateDate,
+    si.UpdatedUserId =: updatedUserId
+    where si.AccountNo =: accountNo
+    and si.Active = true
+  </query>
+  
+  <!--PFMDAO00040.SelectCurrency-->
+  <query name="PFMDAO00040.SelectCurrency">       <!--NLKK-->
+    select si.CurrencyCode
+    from PFMORM00040 as si
+    where (si.CloseDate = null or si.CloseDate = '')
+    and si.Active = true
+    and si.SourceBranchCode = :sourceBr
+    group by si.CurrencyCode
+  </query>
+  
+  <!--PFMDAO00040.UpdateAccruedIntTo0-->          <!--NLKK-->
+  <query name="PFMDAO00040.UpdateAccruedIntTo0">
+    update PFMORM00040 si
+    set si.AccruedInt = 0,
+    si.UpdatedDate =: updatedDate,
+    si.UpdatedUserId =: updatedUserId
+    where si.Active =true
+  </query>
+
+  <!--PFMDAO00040.UpdateAccruedIntTo0ByAccountNo-->
+  <query name="PFMDAO00040.UpdateAccruedIntTo0ByAccountNo">
+    update PFMORM00040 si
+    set si.AccruedInt = 0,
+    si.UpdatedDate =: updatedDate,
+    si.UpdatedUserId =: updatedUserId
+    where si.Active =true
+    and si.AccountNo =: accountNo
+  </query>
+
+	<query name="PFMDAO00040.UpdateAccruedByAccountNo">
+		update PFMORM00040 si
+		set si.AccruedInt = :amount,
+		si.UpdatedDate = :updatedDate,
+		si.UpdatedUserId = :updatedUserId
+		where si.Active =true
+		and si.AccountNo = :accountNo
+	</query>
+  
+</hibernate-mapping>

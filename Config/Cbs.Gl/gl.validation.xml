@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:v="http://www.springframework.net/validation">
+
+	<description>
+		Form Data Entity Validation Objects Injection
+	</description>
+
+	<!-- Monthly Budget Entry --><!--
+	<v:group id="MonthlyBudgetedEntry.Validator" >
+		
+	</v:group>-->
+
+	<!--Enquiry On Ledger Validator-->
+	<v:group id="EnquiryOnLedger.Validator">
+		<v:required id="EnquiryOnLedger.ACODE" test="ACODE">
+			<v:message id="MV00046" providers="ACODE"/>
+		</v:required>
+
+		<v:required id="EnquiryOnLedger.CUR" test="CUR">
+			<v:message id="MV00020" providers="CUR"/>
+		</v:required>
+	</v:group>
+
+  <!--OLS Total Validator-->
+  <v:group id="OLSTotal.Validator">
+    <v:required id="OLSTotal.CUR" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+  </v:group>
+
+  <!--Income Expenditure Validator-->
+  <v:group id="IncomeExpenditure.Validator">
+    <v:required id="IncomeExpenditure.Month" test="Month">
+      <v:message id="MV00221" providers="Month"/>
+    </v:required>
+    <v:required id="IncomeExpenditure.Year" test="Year">
+      <v:message id="MV30002" providers="Year"/>
+    </v:required>
+  </v:group>
+
+
+	<!--Report Format Entry Validator-->
+	<v:group id="ReportFormatEntry.Validator">
+		<v:required id="ReportFormatEntry.FormatType" test="FormatType">
+			<v:message id="MI30039" providers="FormatType"/>
+		</v:required>
+
+		<v:required id="ReportFormatEntry.FormatName" test="FormatName">
+			<v:message id="MI30039" providers="FormatName"/>
+		</v:required>
+	</v:group>
+
+
+  <!--Liabilities Account Code-->
+  <v:group id="LiabilitiesAccount.Validator">
+    <v:required id="LiabilitiesAccount.AccountName" test="AccountName">
+      <v:message id="MV00046" providers="AccountName"/>
+    </v:required>
+
+    <v:required id="LiabilitiesAccount.AccountNo" test="AccountNo">
+      <v:message id="MV00046" providers="AccountNo"/>
+    </v:required>
+  </v:group>
+
+  <!--Insert Range-->
+  <v:group id="InsertRange.Validator">
+    <v:required id="InsertRange.ACode" test="ACode">
+      <v:message id="MV00046" providers="ACode"/>
+    </v:required>
+
+    <v:required id="InsertRange.AccountName" test="AccountName">
+      <v:message id="MV00046" providers="AccountName"/>
+    </v:required>
+  </v:group>
+
+  <!--Delete Range-->
+  <v:group id="DeleteRange.Validator">
+    <v:required id="DeleteRange.Id" test="Id">
+      <v:message id="MV30026" providers="Id"/>
+    </v:required>
+
+    <v:required id="DeleteRange.LineNo" test="LineNo">
+      <v:message id="MV30026" providers="LineNo"/>
+    </v:required>
+  </v:group>
+
+  <!--Find Form--><!--
+  <v:group id="FindForm.Validator">
+    <v:required id="FindForm.LineNo" test="LineNo"  when="ACode == '' and DCode == ''">
+      <v:message id="MV30026" providers="LineNo"/>
+    </v:required>
+
+    <v:required id="FindForm.ACode" test="ACode" when="LineNo == 0 and DCode == ''"> 
+      <v:message id="MV00046" providers="ACode"/>
+    </v:required>
+
+    <v:required id="FindForm.DCode" test="DCode" when="LineNo == 0 and ACode == ''" >
+      <v:message id="MV90029" providers="DCode"/>
+    </v:required>
+  </v:group>-->
+
+  <!--Report Statement-->
+  <v:group id="ReportStatement.Validator">
+    <v:required id="ReportStatement.Month" test="Month">
+      <v:message id="MV30004" providers="Month"/>
+    </v:required>
+  </v:group>
+
+  <!--//StatementOfFinancialPosition.Validator// Created by HWKO (27-Sep-2017)-->
+  <v:group id="StatementOfFinancialPosition.Validator" >
+    <v:required id="StatementOfFinancialPositionCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="StatementOfFinancialPositionBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+  </v:group>
+	
+</objects>
+
+	

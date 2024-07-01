@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--FixIntPostingBefore-->
+<!-- 
+// <copyright file="MNMORM00026.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>NLKK</CreatedUser>
+// <CreatedDate>12/09/2013</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version></Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Mnm.Dmd.MNMDTO00026, Ace.Cbs.Mnm.Dmd" rename="fixIntPostingBeforeDto"/>
+  <class name="MNMORM00026" table="FixIntPostingBefore">
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+
+    <property name="AcctNo">
+      <column name="AcctNo" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="RNo">
+      <column name="RNo" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Amount">
+      <column name="Amount" sql-type="numeric" not-null="true" />
+    </property>
+
+    <property name="Date_Time">
+      <column name="Date_Time" sql-type="datetime" not-null="true" />
+    </property>
+
+    <property name="Budget">
+      <column name="Budget" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="UserNo">
+      <column name="UserNo" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="SourceBr">
+      <column name="SourceBr" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="Cur">
+      <column name="Cur" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  <!--//FixIntPostingBeforeDAO.SelectAll//-->
+  <query name="FixIntPostingBeforeDAO.SelectAll">
+    select new fixIntPostingBeforeDto(
+    f.Id,
+    f.AcctNo,
+    f.RNo,
+    f.Amount,
+    f.Date_Time,
+    f.Budget,
+    f.UserNo,
+    f.Active,
+    f.TS,
+    f.CreatedDate,
+    f.CreatedUserId,
+    f.UpdatedDate,
+    f.UpdatedUserId
+    )
+    from MNMORM00026 as f
+    where f.Active = true
+  </query>
+
+</hibernate-mapping>

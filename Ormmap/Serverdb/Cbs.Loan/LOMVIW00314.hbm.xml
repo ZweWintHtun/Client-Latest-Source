@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00314, Ace.Cbs.Loan.Dmd" rename="VW_ExpireLeaseLandListing_dto"/>
+  <class name="LOMVIW00314" table="VW_ExpireLeaseLandListing" mutable="false">    
+    <!--Created By HWKO (11-Jul-2017)-->
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+
+    <property name="Lno">
+      <column name="Lno" sql-type="varchar" not-null="true"/>
+    </property>
+
+    <property name="AcctNo">
+      <column name="AcctNo" sql-type="varchar" not-null="true"/>
+    </property>
+
+    <property name="SAmt">
+      <column name="SAmt" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="LandDesp">
+      <column name="LandDesp" sql-type="varchar" not-null="true"/>
+    </property>
+
+    <property name="EDate">
+      <column name="EDate" sql-type="datetime" not-null="false"/>
+    </property>
+
+    <property name="Capital">
+      <column name="Capital" sql-type="numeric" not-null="false" />
+    </property>    
+
+    <property name="LandLeaseSDate">
+      <column name="LandLeaseSDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="LandLeaseEDate">
+      <column name="LandLeaseEDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="IsDesp">
+      <column name="IsDesp" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="IsStartedDate">
+      <column name="IsStartedDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="IsExpiredDate">
+      <column name="IsExpiredDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="IsAmt">
+      <column name="IsAmt" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="CusName">
+      <column name="CusName" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="CusAddress">
+      <column name="CusAddress" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="CusPhone">
+      <column name="CusPhone" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="SourceBr">
+      <column name="SourceBr" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Active">
+      <column name="Active" sql-type="bit" not-null="true"/>
+    </property>
+
+    <property name="LoansBusinessTypeDesp">
+      <column name="LoansBusinessTypeDesp" sql-type="varchar" not-null="true"/>
+    </property>
+
+  </class>
+  <!--Updated By ZMS (15-Nov-2017)-->
+  <!--//ExpireLandLeaseListingDAO.SelectAll// Created By HWKO (11-Jul-2017)-->
+  <query name="ExpireLandLeaseListingDAO.SelectAll">
+    select new VW_ExpireLeaseLandListing_dto
+    (
+    b.Id,
+    b.Lno,
+    b.AcctNo,
+    b.SAmt,
+    b.LandDesp,
+    b.EDate,
+    b.Capital,
+    b.LandLeaseSDate,
+    b.LandLeaseEDate,
+    b.IsDesp,
+    b.IsStartedDate,
+    b.IsExpiredDate,
+    b.IsAmt,
+    b.CusName,
+    b.CusAddress,
+    b.CusPhone,
+    b.SourceBr,
+    b.Active,
+    b.LoansBusinessTypeDesp
+    )
+    from LOMVIW00314 as b
+    where b.SourceBr = :sourceBranchCode
+    and CONVERT(char(10),b.LandLeaseEDate,111) = CONVERT(char(10),:expireddate,111)
+    and b.Active = true
+  </query>
+
+</hibernate-mapping>

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Tel.Dmd" namespace="Ace.Cbs.Tel.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+	<import class="Ace.Cbs.Tel.Dmd.TLMDTO00017, Ace.Cbs.Tel.Dmd" rename="rdddto"/>
+
+	<class name="TLMVIW00015" table="VW_OUTSTANDING" mutable="false" >
+		<id name="Id" type="Int32" unsaved-value="0">
+		</id>
+
+		<property name="REGISTERNO">
+			<column name="REGISTERNO" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="ACCTNO">
+			<column name="ACCTNO" sql-type="varchar" not-null="false"/>
+		</property>
+		<property name="BR_ALIAS">
+			<column name="BR_ALIAS" sql-type="varchar" not-null="false"/>
+		</property>
+		<property name="TYPE">
+			<column name="TYPE" sql-type="varchar" not-null="false"/>
+		</property>	
+		<property name="DATE_TIME">
+			<column name="DATE_TIME" sql-type="datetime" not-null="false"/>
+		</property>
+		<property name="NAME">
+			<column name="NAME" sql-type="varchar" not-null="false"/>
+		</property>
+		<property name="NRC">
+			<column name="NRC" sql-type="varchar" not-null="false"/>
+		</property>
+		<property name="TONAME">
+			<column name="TONAME" sql-type="varchar" not-null="false"/>
+		</property>
+		<property name="TONRC">
+			<column name="TONRC" sql-type="varchar" not-null="false"/>
+		</property>
+		<property name="DBANK">
+			<column name="DBANK" sql-type="varchar" not-null="false"/>
+		</property>
+		<property name="COMMISSION">
+			<column name="COMMISSION" sql-type="numeric(15,2)" not-null="false"/>
+		</property>
+		<property name="AMOUNT">
+			<column name="AMOUNT" sql-type="numeric(15,2)" not-null="false"/>
+		</property>
+		<property name="RECEIPTDATE">
+			<column name="RECEIPTDATE" sql-type="datetime" not-null="false"/>
+		</property>
+		<property name="INCOMEDATE">
+			<column name="INCOMEDATE" sql-type="datetime" not-null="false"/>
+		</property>
+		<property name="CUR">
+			<column name="CUR" sql-type="varchar" not-null="false"/>
+		</property>
+		<property name="SOURCEBR">
+			<column name="SOURCEBR" sql-type="varchar" not-null="false"/>
+		</property>
+	</class>
+
+	<query name="TLMDAO00057.SelectDrawingRemittanceRegisterOutstanding">
+		select new rdddto (vw.REGISTERNO,vw.ACCTNO,vw.BR_ALIAS,vw.TYPE,vw.DATE_TIME,vw.NAME,vw.NRC,vw.DBANK,vw.COMMISSION,vw.AMOUNT,vw.RECEIPTDATE,vw.INCOMEDATE,vw.CUR,vw.SOURCEBR)
+		from TLMVIW00015 as vw
+		where (vw.RECEIPTDATE= null or vw.INCOMEDATE = null)
+		and vw.SOURCEBR = :sourceBr
+		order by vw.CUR asc,vw.DBANK asc,vw.REGISTERNO asc
+	</query>
+
+	<query name="TLMDAO00057.SelectDrawingRemittanceRegisterOutstandingByIncomeOutstanding">
+		select new rdddto (vw.REGISTERNO,vw.ACCTNO,vw.BR_ALIAS,vw.TYPE,vw.DATE_TIME,vw.NAME,vw.NRC,vw.DBANK,vw.COMMISSION,vw.AMOUNT,vw.RECEIPTDATE,vw.INCOMEDATE,vw.CUR)
+		from TLMVIW00015 as vw
+		where vw.INCOMEDATE = null
+		and vw.SOURCEBR = :sourceBr
+		order by vw.CUR asc,vw.DBANK asc,vw.REGISTERNO asc
+	</query>
+
+	<query name="TLMDAO00057.SelectDrawingRemittanceRegisterOutstandingByDrawingAmountOutstanding">
+		select new rdddto (vw.REGISTERNO,vw.ACCTNO,vw.BR_ALIAS,vw.TYPE,vw.DATE_TIME,vw.NAME,vw.NRC,vw.DBANK,vw.COMMISSION,vw.AMOUNT,vw.RECEIPTDATE,vw.INCOMEDATE,vw.CUR)
+		from TLMVIW00015 as vw
+		where vw.RECEIPTDATE = null
+		and vw.SOURCEBR = :sourceBr
+		order by vw.CUR asc,vw.DBANK asc,vw.REGISTERNO asc
+	</query>
+
+
+</hibernate-mapping>

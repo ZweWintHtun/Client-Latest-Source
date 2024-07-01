@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--VW_BANK_STATEMENT_BYDATE-->
+<!-- 
+// <copyright file="TLMVIW000A9.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser> Hsu Wai Htoo </CreatedUser>
+// <CreatedDate> 2013-09-12 </CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version>1.0</Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Tel.Dmd" namespace="Ace.Cbs.Tel.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00042, Ace.Cbs.Pfm.Dmd" rename="bankstatementdto"/>
+  <class name="TLMVIW000A9" table="VW_BANK_STATEMENT_BYDATE" mutable="false" >
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+
+    <property name="DateTime">
+      <column name="DATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+    
+    <property name="AccountNo">
+      <column name="ACCTNO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="Cheque">
+      <column name="CHEQUE" sql-type="varchar" not-null="false" />
+    </property>  
+
+    <property name="ReceiptNo">
+      <column name="RECEIPTNO" sql-type="varchar" not-null="false"/>
+    </property>
+
+    <property name="Description">
+      <column name="DESCRIPTION" sql-type="nvarchar" not-null="false"/>
+    </property>
+
+    <property name="WithdrawAmount">
+      <column name="WITHDRAWAMOUNT" sql-type="numeric" not-null="false"/>
+    </property>
+
+    <property name="DepositAmount">
+      <column name="DEPOSITAMOUNT" sql-type="numeric" not-null="false"/>
+    </property>
+
+    <property name="S">
+      <column name="S" sql-type="varchar" not-null="false"/>
+    </property>
+
+    <property name="Status">
+      <column name="STATUS" sql-type="varchar" not-null="false"/>
+    </property>
+
+    <property name="WorkStation">
+      <column name="WORKSTATION" sql-type="varchar" not-null="false"/>
+    </property>
+
+    <property name="ChkTime">
+      <column name="CHKTIME" sql-type="datetime" not-null="false"/>
+    </property>
+
+    <property name="OrgnEno">
+      <column name="ORGNENO" sql-type="string" not-null="false"/>
+    </property>
+
+    <property name="CreatedDate">
+      <column name="CREATEDDATE" sql-type="datetime" not-null="false"/>
+    </property>
+    
+  </class>
+ 
+</hibernate-mapping>

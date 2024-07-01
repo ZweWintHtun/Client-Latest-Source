@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00014, Ace.Cbs.Pfm.Dmd" rename="printchequedto"/>
+	
+	<class name="PFMORM00014" table="[PrintCheque]" >
+
+	  <id name="Id" type="Int32" unsaved-value="0">
+		  <generator class="increment">
+		  </generator>
+	  </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/> 
+    </version>
+
+    <property name="AccountNo">
+      <column name="AcctNo" sql-type="varchar" not-null="true" />
+    </property>  
+    
+     <property name="ChequeBookNo">
+      <column name="CBookNo" sql-type="varchar"  not-null="true"/>
+    </property>
+    
+    <property name="SourceBranchCode">
+      <column name="SourceBr" sql-type="varchar" not-null="true"/>
+    </property>
+    
+    <property name="BranchCode">
+      <column name="BranchCode" sql-type="varchar" not-null="false"/>
+    </property>
+		
+    <property name="DATE_TIME"/>
+
+    <property name="UserNo">
+      <column name="USERNO" sql-type="varchar" />
+    </property>
+    <property name="ChequeNo">
+      <column name="ChequeNo" sql-type="varchar" not-null="true"/>
+    </property>
+    
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+	<!--//PFMDAO00014.PrintCheque_SelectByChequeBookNo//-->
+	<query name="PFMDAO00014.PrintCheque_SelectByChequeBookNo">
+		select new printchequedto(
+		pc.AccountNo,
+		pc.ChequeBookNo,
+		pc.ChequeNo		
+		)
+		from PFMORM00014 as pc
+		where pc.AccountNo = :accountNo and
+		pc.ChequeBookNo = :chequeBookNo and 
+    pc.Active = true
+	</query>
+
+  <query name="CXSVE00006.SelectCountByStartNoAndEndNo">
+    select count(Id) from PFMORM00014
+    where AccountNo = :acctno
+    and ChequeNo between :startNo and :endNo
+    and SourceBranchCode = :branchCode
+    and ChequeBookNo = :chequeBookNo
+    and  Active = true
+  </query>
+
+	<query name="PFMDAO00006.SelectPrintedChequeByAccount">
+    select new printchequedto(
+    pc.AccountNo,
+    pc.ChequeBookNo,
+    pc.ChequeNo,
+    pc.DATE_TIME,
+    pc.SourceBranchCode
+    )
+    from PFMORM00014 as pc
+    where pc.AccountNo = :accountNo and
+    pc.SourceBranchCode=:branch and
+    pc.Active = true
+    order by pc.DATE_TIME
+  </query>
+
+	<query name="PFMDAO00006.SelectPrintedChequeByDate">
+    select new printchequedto(
+    pc.AccountNo,
+    pc.ChequeBookNo,
+    pc.ChequeNo,
+    pc.DATE_TIME,
+    pc.SourceBranchCode
+    )
+    from PFMORM00014 as pc
+    where convert(char(10),pc.DATE_TIME,111) between convert(char(10),:startDate,111) and convert(char(10),:endDate,111)
+    and pc.SourceBranchCode=:branch
+    and pc.Active = true
+    order by pc.DATE_TIME
+  </query>
+  
+</hibernate-mapping>

@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+  <!--//PenalFeeDAO//-->
+  <object id="PenalFeeDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00012, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//GJTypeDAO//-->
+  <object id="GJTypeDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00018, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//GJKindDAO//-->
+  <object id="GJKindDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00019, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//Land_BuildingDAO//-->
+  <object id="LandAndBuildingDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00015, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//PledgeDAO//-->
+  <object id="PledgeDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00016, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//HypothecationDAO//-->
+  <object id="HypothecationDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00017, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//TypeOfAdvanceDAO//-->
+  <object id="TypeOfAdvanceDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00002, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//BusinessDAO//-->
+  <object id="BusinessDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00001, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//CustomerCharacterDAO//-->
+  <object id="CustomerCharacterDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00003, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//GoodWillDAO//-->
+  <object id="GoodWillDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00006, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//LandDAO//-->
+  <object id="LandDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00005, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//GJTDAO//-->
+  <object id="GJTDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00007, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//GJKCode-->
+  <object id="GJKDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00008, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//INSURANDAO//-->
+  <object id="INSURANDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00004, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//StockDAO//-->
+  <object id="StockDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00009, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//KStockDAO//-->
+  <object id="KStockDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00010, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//LMT99DAO//-->
+  <object id="LMT99DAO" type="Ace.Cbs.Loan.Dao.LOMDAO00011, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+
+  <object id="LoanRepaymentDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00025, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+
+  <!--//Partial_LoansDAO//-->
+  <object id="Partial_LoansDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00023, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//LegalDAO//-->
+  <object id="LegalDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00013, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//OIDAO//-->
+  <object id="OIDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00020, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//LegalDAO//-->
+  <!--
+	<object id="LegalDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00013, Ace.Cbs.Loan.Dao" singleton="false">
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>-->
+
+  <!--//LrpLegalDAO//-->
+  <object id="LrpLegalDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00022, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+
+  <!--LoanRegistrationListingDAO-->
+  <object id="LoanRegistrationListingDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00034, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="BLInfoListingDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00096, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--LoansAccountCloseListingDAO-->
+  <!--<object id="LoansAccountCloseListingDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00042, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>-->
+
+  <!--LoanRegistrationListingDAO-->
+  <object id="ODRegistrationListingDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00035, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--LoansAccountCloseListingDAO-->
+  <object id="LoansAccountCloseListingDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00042, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--ODCalculationDAO-->
+  <object id="ODCalculationDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00044, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--LoansRepaymentScheduleByDateDAO-->
+  <object id="LoansRepaymentScheduleByDateDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00047, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--ExpireLoansListingDAO-->
+  <object id="ExpireLoansListingDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00051, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--ServiceChargesListingDAO-->
+  <object id="ServiceChargesListingDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00057, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--ODLimitChangeByDateListingDAO-->
+  <object id="ODLimitChangeByDateListingDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00059, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--NonPerformanceLoansCaseListingDAO-->
+  <object id="NonPerformanceLoansCaseListingDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00063, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--<object id="dealerInformationDAO.frmdealer" type="Ace.Cbs.Loan.Dao.LOMDAO00064, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  -->
+  <!--<object id="HirePurchaseRegistraionDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00080, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>-->
+  <!--
+
+  -->
+  <!--dealerInformationDAO-->
+  <!--
+  <object id="dealerInformationDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00080, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>-->
+
+  <!--DealerRegistrationEntryDAO-->
+  <object id="dealerRegistrationDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00064, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="dealerInformationDAO.frmdealer" type="Ace.Cbs.Loan.Dao.LOMDAO00064, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="HirePurchaseRegistraionDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00080, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="hpRegListsDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00096, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="Sys001DAO" type="Ace.Cbs.Loan.Dao.LOMDAO00096, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--dealerInformationDAO-->
+  <object id="dealerInformationDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00080, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//SeasonCodeDAO//-->
+  <object id="SeasonCodeDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00071, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//ProductCodeDAO//-->
+  <object id="ProductCodeDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00074, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//HirePurchaseStockGroupDAO//-->
+  <object id="StockGroupDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00068, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//HirePurchaseStockItemDAO//-->
+  <object id="StockItemDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00069, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//VillageGroupDAO//-->
+  <object id="VillageGroupDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00070, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//CropTypeDAO//-->
+  <object id="CropTypeDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00072, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//UMDAO//-->
+  <object id="UMDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00073, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//LSProductTypeItemDAO//-->
+  <object id="LSProductTypeItemDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00077, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//LiveStockTypeSetupDAO//-->
+  <object id="LiveStockTypeSetupDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00076, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//FarmLoanDAO// Created By Hwko-->
+  <object id="FarmLoanDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00078, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//PGOfFarmLoanDAO//-->
+  <object id="PGOfFarmLoanDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00079, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//FarmLiDAO// Created By Hwko-->
+  <object id="FarmLiDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00085, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//Prev_farmliDAO// Created By Hwko (16-Mar-2017)-->
+  <object id="Prev_farmliDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00302, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//FarmLoanPenalFeeDAO// Created By Hwko-->
+  <object id="FarmLoanPenalFeeDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00300, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//AGLoanProductTypeItemDAO//-->
+  <object id="AGLoanProductTypeItemDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00075, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="LoanRecordEntryDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00086, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="LoanRepaymentEntryDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00078, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="FarmLoanReportDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00093, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="LSFarmLoanReportDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00094, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="LoanType_BusinessTypeDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00099, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!-- LoanRecord Report -->
+  <object id="AllLoanRecordDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00102, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!-- Created By HWKO (22-Mar-2017) -->
+  <object id="FarmLoanOSTReportDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00303, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!-- OD Interest Calculation -->
+  <!--
+  <object id="ODInterestDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00400, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>-->
+
+
+  <!-- Created By HWKO (05-Apr-2017) -->
+  <object id="FarmLoanOSTByWithdrawDateReportDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00305, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!-- Created By HWKO (25-Apr-2017) -->
+  <object id="FarmLoanTotalDailyIncomeReportDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00307, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!-- Added By HWKO (27-Jun-2017) -->
+  <object id="PersonalLoanDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00311, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!-- Added By HWKO (27-Jun-2017) -->
+  <object id="PersonalLoanDetailDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00312, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!-- Added By HWKO (27-Jun-2017) -->
+  <object id="PL_GuanDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00313, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  <object id="OutstandingLoanBalanceDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00401, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="LRP9900DAO" type="Ace.Cbs.Loan.Dao.LOMDAO00402, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="BusinessLoansDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00403, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  <!-- Created By HWKO (11-Jul-2017) -->
+  <object id="ExpireLandLeaseListingDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00314, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  <!-- Created By HWKO (14-Jul-2017) -->
+  <object id="PLRepaymentScheduleListingDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00316, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  <!--Business Loans Interest Due PreListing  -->
+  <object id="BLInterestDuePreListingDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00405, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//* LoansBusiness_Type//-->
+  <object id="LoanBTypeDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00404, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//* Business_Loans_Details//-->
+  <object id="BLDetailsDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00406, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--Black Lists Manual (Internal Customer) Added by ZMS (26.11.2018)-->
+  <object id="BlackListInternalCustomerEntyDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00427, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  
+  <!--Warning Lists Added by YMP (02.05.2019)-->
+  <object id="WarningListCustomerEntyDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00435, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  
+  <!--Limit Extend Lists Listing Added by YMP (10.06.2019)-->
+  <object id="LimitExtendListListingDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00444, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//Personal Loan ProductCode Setup-->
+  <object id="PersonalLoanProductCodeDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00415, Ace.Cbs.Loan.Dao" singleton="false">
+  <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+</objects>

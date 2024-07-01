@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net"
+         >  
+  
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    Center Service Objects Settings
+  </description>
+
+  <!--Data Version Update Definition Service-->
+  <object id="CENSVE00007" type="Ace.Cbs.Cen.Sve.CENSVE00007, Ace.Cbs.Cen.Sve" singleton="false">
+    <property name="DataVersionDAO" ref="ClientDataVersionDAO"/>
+    <property name="DataVersionHeaderDAO" ref="ClientDataVersionHeaderDAO"/>
+    <property name="DataVersionItemDAO" ref="ClientDataVersionItemDAO"/>
+  </object>
+
+  <!--Region Installer-->
+  <object id="CENSVE00001" type="Ace.Cbs.Cen.Sve.CENSVE00001, Ace.Cbs.Cen.Sve" singleton="false">
+    <property name="ComponentVersionHeaderDAO" ref="ComponentVersionHeaderDAO"/>
+    <property name="ComponentVersionItemDAO" ref="ComponentVersionItemDAO"/>    
+  </object>
+  <!--EndRegion Installer-->
+  <object id="CENSVE00008" type="Ace.Cbs.Cen.Sve.CENSVE00008, Ace.Cbs.Cen.Sve" singleton="false">   
+    <property name="ClientDataVersionHeaderDAO" ref="ClientDataVersionHeaderDAO"/>
+    <property name="ClientDataVersionItemDAO" ref="ClientDataVersionItemDAO"/>
+  </object>
+  <object id="CENSVE00002" type="Ace.Cbs.Cen.Sve.CENSVE00002, Ace.Cbs.Cen.Sve" singleton="false">
+    <property name="ComponentVersionHeaderDAO" ref="ComponentVersionHeaderDAO"/>
+    <property name="ComponentVersionItemDAO" ref="ComponentVersionItemDAO"/>
+  </object>
+  <object id="CENSVE00004" type="Ace.Cbs.Cen.Sve.CENSVE00004, Ace.Cbs.Cen.Sve" singleton="false">
+    <property name="ComponentFileDownloadedHistoryDAO" ref="ComponentFileDownloadedHistoryDAO"/>
+	  <property name="ComponentVersionHeaderDAO" ref="ComponentVersionHeaderDAO"/>
+  </object>
+  <object id="CENSVE00005" type="Ace.Cbs.Cen.Sve.CENSVE00005, Ace.Cbs.Cen.Sve" singleton="false">
+    <property name="ComponentFileDownloadedHistoryDAO" ref="ComponentFileDownloadedHistoryDAO"/>
+	  <property name="ComponentVersionItemDAO" ref="ComponentVersionItemDAO"/>
+  </object>
+  <object id="CENSVE00006" type="Ace.Cbs.Cen.Sve.CENSVE00006, Ace.Cbs.Cen.Sve" singleton="false">
+    <property name="ComponentVersionInstalledHistoryDAO" ref="ComponentVersionInstalledHistoryDAO"/>    
+  </object>
+
+</objects>

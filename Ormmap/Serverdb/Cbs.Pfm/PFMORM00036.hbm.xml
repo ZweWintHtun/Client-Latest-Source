@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00036, Ace.Cbs.Pfm.Dmd" rename="csdto"/>
+
+  <class name="PFMORM00036" table="[CS99#00]" >
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <!--<generator class="increment">
+      </generator>-->
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+
+	  <property name="CurrencyCode">
+		  <column name="Cur" sql-type="varchar" not-null="false" />
+	  </property>
+
+	  <property name="Balance">
+		  <column name="Balance" sql-type="numeric" not-null="false" />
+	  </property>
+	  <property name="Date_Time">
+		  <column name="DATE_TIME" sql-type="datetime" not-null="false" />
+	  </property>
+	  <property name="HomeAmount">
+		  <column name="HomeAmount" sql-type="numeric" not-null="false" />
+	  </property>
+	  <property name="SourceBranchCode">
+		  <column name="SourceBr" sql-type="varchar" not-null="true" />
+	  </property>
+    
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+	<query name="CS99#00.SelectTopOneData">
+    select new csdto
+    (
+    cs.Balance,
+    cs.CurrencyCode,
+    cs.Date_Time,
+    cs.HomeAmount,
+    cs.SourceBranchCode
+    )
+    from PFMORM00036 as cs
+    where Convert(char(10),cs.Date_Time,111) = :datetime
+    and cs.CurrencyCode = :currencycode
+    and cs.SourceBranchCode = :sourcebr
+    and cs.Active = true
+
+  </query>
+	
+	<query name="CS99#00.SelectTopOneDataWithoutCurrency">
+    select new csdto
+    (
+    sum(cs.Balance)
+    )
+    from PFMORM00036 as cs
+    where convert(char(10),cs.Date_Time,111)= :datetime
+    and cs.SourceBranchCode = :sourcebr
+    and cs.Active = true
+
+  </query>
+
+  <query name="CS99#00.DeleteForCashClosing">
+    Delete from PFMORM00036 as cs
+    where convert(char(10),cs.Date_Time,111) between convert(char(10),:fromDate,111) and convert(char(10),:toDate,111)
+    and cs.Active = true
+    and cs.SourceBranchCode = :branchCode
+  </query>
+
+	<query name="selectByMaxID_CS99">
+		select new csdto
+		(
+		Max(c.Id)
+		)
+		from PFMORM00036 as c
+
+	</query>
+
+  <query name="CS99#00.SelectDateTime">
+    <![CDATA[ 
+    Select new csdto
+    (
+    cs.Balance,
+    cs.CurrencyCode,
+    cs.Date_Time,
+    cs.HomeAmount,
+    cs.SourceBranchCode
+    )
+    from PFMORM00036 as cs 
+    where convert(char(10),cs.Date_Time,111) <= :date_time and cs.SourceBranchCode = :sourceBr and cs.Active = true order by Date_Time desc
+    ]]>
+  </query>
+
+</hibernate-mapping>

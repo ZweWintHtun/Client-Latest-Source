@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00053, Ace.Cbs.Pfm.Dmd" rename="appsettingsdto"/>
+
+  <class name="PFMORM00053" table="AppSettings" >
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+
+    <property name="KeyName">
+      <column name="KeyName" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="KeyValue">
+      <column name="KeyValue" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Description">
+      <column name="Description" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Location">
+      <column name="Location" sql-type="int" not-null="true" />
+    </property>
+
+    <property name="Type">
+      <column name="Type" sql-type="int" not-null="true" />
+    </property>
+    <property name="BinaryValue">
+      <column name="BinaryValue" sql-type="image" not-null="true" />
+    </property>
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+</hibernate-mapping>

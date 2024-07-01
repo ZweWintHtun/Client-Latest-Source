@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Tcm.Dmd" namespace="Ace.Cbs.Tcm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Mnm.Dmd.MNMDTO00010, Ace.Cbs.Mnm.Dmd" rename="prevccoadto"/>
+	<class name="TCMVIW00009" table="VW_CCOA" mutable="false">
+
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+
+    <property name="ACODE">
+      <column name="ACODE" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="DCODE">
+      <column name="DCODE" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="CUR">
+      <column name="CUR" sql-type="varchar" not-null="false" />
+    </property>  
+
+		<property name="BF">
+			<column name="BF" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="OBAL">
+			<column name="OBAL" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="HOBAL">
+			<column name="HOBAL" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="CBAL">
+			<column name="CBAL" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="M1">
+			<column name="M1" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="M2">
+			<column name="M2" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="M3">
+			<column name="M3" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="M4">
+			<column name="M4" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="M5">
+			<column name="M5" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="M6">
+			<column name="M6" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="M7">
+			<column name="M7" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="M8">
+			<column name="M8" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="M9">
+			<column name="M9" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="M10">
+			<column name="M10" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="M11">
+			<column name="M11" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="M12">
+			<column name="M12" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="M13">
+			<column name="M13" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MSRC1">
+			<column name="MSRC1" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MSRC2">
+			<column name="MSRC2" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MSRC3">
+			<column name="MSRC3" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MSRC4">
+			<column name="MSRC4" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MSRC5">
+			<column name="MSRC5" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MSRC6">
+			<column name="MSRC6" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MSRC7">
+			<column name="MSRC7" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MSRC8">
+			<column name="MSRC8" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MSRC9">
+			<column name="MSRC9" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MSRC10">
+			<column name="MSRC10" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MSRC11">
+			<column name="MSRC11" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MSRC12">
+			<column name="MSRC12" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MSRC13">
+			<column name="MSRC13" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BF1">
+			<column name="BF1" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BF2">
+			<column name="BF2" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BF3">
+			<column name="BF3" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BF4">
+			<column name="BF4" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BF5">
+			<column name="BF5" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BF6">
+			<column name="BF6" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BF7">
+			<column name="BF7" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BF8">
+			<column name="BF8" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BF9">
+			<column name="BF9" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BF10">
+			<column name="BF10" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BF11">
+			<column name="BF11" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BF12">
+			<column name="BF12" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BF13">
+			<column name="BF13" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BFSRC1">
+			<column name="BFSRC1" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BFSRC2">
+			<column name="BFSRC2" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BFSRC3">
+			<column name="BFSRC3" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BFSRC4">
+			<column name="BFSRC4" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BFSRC5">
+			<column name="BFSRC5" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BFSRC6">
+			<column name="BFSRC6" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BFSRC7">
+			<column name="BFSRC7" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BFSRC8">
+			<column name="BFSRC8" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BFSRC9">
+			<column name="BFSRC9" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BFSRC10">
+			<column name="BFSRC10" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BFSRC11">
+			<column name="BFSRC11" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BFSRC12">
+			<column name="BFSRC12" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BFSRC13">
+			<column name="BFSRC13" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MREV1">
+			<column name="MREV1" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MREV2">
+			<column name="MREV2" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MREV3">
+			<column name="MREV3" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MREV4">
+			<column name="MREV4" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MREV5">
+			<column name="MREV5" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MREV6">
+			<column name="MREV6" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MREV7">
+			<column name="MREV7" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MREV8">
+			<column name="MREV8" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MREV9">
+			<column name="MREV9" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MREV10">
+			<column name="MREV10" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MREV11">
+			<column name="MREV11" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MREV12">
+			<column name="MREV12" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MREV13">
+			<column name="MREV13" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LYMSRC1">
+			<column name="LYMSRC1" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LYMSRC2">
+			<column name="LYMSRC2" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LYMSRC3">
+			<column name="LYMSRC3" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LYMSRC4">
+			<column name="LYMSRC4" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LYMSRC5">
+			<column name="LYMSRC5" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LYMSRC6">
+			<column name="LYMSRC6" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LYMSRC7">
+			<column name="LYMSRC7" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LYMSRC8">
+			<column name="LYMSRC8" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LYMSRC9">
+			<column name="LYMSRC9" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LYMSRC10">
+			<column name="LYMSRC10" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LYMSRC11">
+			<column name="LYMSRC11" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LYMSRC12">
+			<column name="LYMSRC12" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LYMSRC13">
+			<column name="LYMSRC13" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="SCCRBAL">
+			<column name="SCCRBAL" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="ACCRUED">
+			<column name="ACCRUED" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BUDGET">
+			<column name="BUDGET" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="UID">
+			<column name="UID" sql-type="char" not-null="false" />
+		</property>
+
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+
+  </class>
+
+  <query name ="SelectByBudgetMonth">
+    select new prevccoadto
+    (c.ACODE,
+    sum(c.M1),
+    sum(c.M2),
+    sum(c.M3),
+    sum(c.M4),
+    sum(c.M5),
+    sum(c.M6),
+    sum(c.M7),
+    sum(c.M8),
+    sum(c.M9),
+    sum(c.M10),
+    sum(c.M11),
+    sum(c.M12))
+    from  TCMVIW00009 as c
+    where c.CUR = :cur and c.ACODE = :acode and c.BUDGET = :budget and c.DCODE = :dcode and c.Active = true
+    group by c.ACODE
+  </query>	
+	
+
+	<query name ="GetHOBaLAndCBalForSubLedger_ByBudgetMonth">
+		select new prevccoadto
+		(c.ACODE,
+		sum(c.M1),
+		sum(c.M2),
+		sum(c.M3),
+		sum(c.M4),
+		sum(c.M5),
+		sum(c.M6),
+		sum(c.M7),
+		sum(c.M8),
+		sum(c.M9),
+		sum(c.M10),
+		sum(c.M11),
+		sum(c.M12),
+		sum(c.M13),
+		sum(c.MSRC1),
+		sum(c.MSRC2),
+		sum(c.MSRC3),
+		sum(c.MSRC4),
+		sum(c.MSRC5),
+		sum(c.MSRC6),
+		sum(c.MSRC7),
+		sum(c.MSRC8),
+		sum(c.MSRC9),
+		sum(c.MSRC10),
+		sum(c.MSRC11),
+		sum(c.MSRC12),
+		sum(c.MSRC13),
+		sum(c.HOBAL),
+		sum(c.CBAL))
+		from  TCMVIW00009 as c
+		where c.ACODE like :acode and c.BUDGET = :budget and c.DCODE = :dcode and c.Active = true
+		group by c.ACODE
+	</query>
+
+	<query name ="GetHOBaLAndCBalForSubLedger_ByBudgetMonthAndCur">
+		select new prevccoadto
+		(c.ACODE,
+		sum(c.M1),
+		sum(c.M2),
+		sum(c.M3),
+		sum(c.M4),
+		sum(c.M5),
+		sum(c.M6),
+		sum(c.M7),
+		sum(c.M8),
+		sum(c.M9),
+		sum(c.M10),
+		sum(c.M11),
+		sum(c.M12),
+		sum(c.M13),
+		sum(c.MSRC1),
+		sum(c.MSRC2),
+		sum(c.MSRC3),
+		sum(c.MSRC4),
+		sum(c.MSRC5),
+		sum(c.MSRC6),
+		sum(c.MSRC7),
+		sum(c.MSRC8),
+		sum(c.MSRC9),
+		sum(c.MSRC10),
+		sum(c.MSRC11),
+		sum(c.MSRC12),
+		sum(c.MSRC13),
+		sum(c.HOBAL),
+		sum(c.CBAL))
+		from  TCMVIW00009 as c
+		where c.CUR = :cur and c.ACODE like :acode and c.BUDGET = :budget and c.DCODE = :dcode and c.Active = true
+		group by c.ACODE
+	</query>
+
+</hibernate-mapping>

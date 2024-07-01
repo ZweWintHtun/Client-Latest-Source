@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--VW_FIXEDINT-->
+<!-- 
+// <copyright file="MNMORM00042.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>KSW</CreatedUser>
+// <CreatedDate>07/17/2014</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version></Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+	<import class="Ace.Cbs.Mnm.Dmd.MNMDTO00043,Ace.Cbs.Mnm.Dmd" rename="vwdto"/>
+	<class name="MNMVEW00036" table="VW_FIXEDINT">
+		<id name="Id" type="Int32" unsaved-value="0">
+		</id>
+		<property name="AcctNo">
+			<column name="AcctNo" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="Name">
+			<column name="Name" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="Fbal">
+			<column name="Fbal" sql-type="numeric" not-null="false" />
+		</property>
+		<property name="BudEndAcc">
+			<column name="BudEndAcc" sql-type="numeric" not-null="true" />
+		</property>
+		<property name="Duration">
+			<column name="Duration" sql-type="numeric" not-null="true" />
+		</property>
+		<property name="RDATE">
+			<column name="RDATE" sql-type="datetime" not-null="false" />
+		</property>
+		<property name="WDate">
+			<column name="WDate" sql-type="datetime" not-null="false" />
+		</property>
+		<property name="LasIntDate">
+			<column name="LasIntDate" sql-type="datetime" not-null="false" />
+		</property>
+		<property name="Amount">
+			<column name="Amount" sql-type="numeric" not-null="true" />
+		</property>
+		<property name="RNo">
+			<column name="RNo" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="Accrued">
+			<column name="Accrued" sql-type="numeric" not-null="true" />
+		</property>
+
+		<property name="DrAccured">
+			<column name="DrAccured" sql-type="numeric" not-null="false" />
+		</property>
+		<property name="SourceBr">
+			<column name="SourceBr" sql-type="varchar" not-null="true" />
+		</property>
+		<property name="Cur">
+			<column name="Cur" sql-type="varchar" not-null="true" />
+		</property>
+	</class>
+	<query name="VW_FIxedYEinterestList">
+		select new vwdto(
+		v.AcctNo,
+		v.Name,
+		v.Fbal,
+		v.BudEndAcc,
+		v.Duration,
+		v.RDATE,
+		v.WDate,
+		v.LasIntDate,
+		v.Amount,
+		v.RNo,
+		v.Accrued,
+		v.DrAccured,
+		v.SourceBr,
+		v.Cur
+		)
+		from MNMVEW00036 as v
+		where v.DrAccured >0 and v.WDate is null and v.LasIntDate is not null
+		and v.SourceBr=:SourceBr 
+
+	</query>
+
+</hibernate-mapping>

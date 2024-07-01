@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+	<import class="Ace.Cbs.Mnm.Dmd.MNMDTO00039, Ace.Cbs.Mnm.Dmd" rename="custIDByDateDTO"/>
+	<class name="MNMVIW00032" table="VW_FAOF_Name" mutable="false">
+
+		<id name="Id" type="Int32" unsaved-value="0">
+		</id>
+
+		<property name="AccountNo">
+			<column name="ACCTNO" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="Name">
+			<column name="NAME" sql-type="nvarchar" not-null="false" />
+		</property>
+
+		<property name="CustomerId">
+			<column name="CUSTID" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="Address">
+			<column name="ADDRESS" sql-type="nvarchar" not-null="true" />
+		</property>
+
+		<property name="PhoneNo">
+			<column name="PHONE" sql-type="nvarchar" not-null="false" />
+		</property>
+
+
+		<property name="FaxNo">
+			<column name="FAX" sql-type="nvarchar" not-null="false" />
+		</property>
+
+		<property name="OpenDate">
+			<column name="OPENDATE" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="AccountSign">
+			<column name="ACSIGN" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="NRC">
+			<column name="NRC" sql-type="nvarchar" not-null="false" />
+		</property>
+
+
+		<property name="Description">
+			<column name="DESP" sql-type="nvarchar" not-null="true" />
+		</property>
+
+
+		<property name="AccountType">
+			<column name="ACCOUNTTYPE" sql-type="varchar" not-null="true" />
+		</property>
+	</class>
+
+
+
+
+</hibernate-mapping>
+

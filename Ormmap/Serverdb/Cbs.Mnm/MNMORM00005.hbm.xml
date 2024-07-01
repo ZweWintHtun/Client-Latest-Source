@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--TOD_SCHARGE-->
+<!-- 
+// <copyright file="MNMORM00005.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>SSA</CreatedUser>
+// <CreatedDate>11/27/2013</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version></Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+	<import class="Ace.Cbs.Mnm.Dmd.MNMDTO00005, Ace.Cbs.Mnm.Dmd" rename="MNMDTO00005"/>
+	<class name="MNMORM00005" table="TOD_SCHARGE">
+
+		<id name="ID">
+			<column name="ID" sql-type="int" not-null="true" />
+		</id>
+
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="true"/>
+		</version>
+
+		<property name="Acctno">
+			<column name="Acctno" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="LNo">
+			<column name="LNo" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="S1">
+			<column name="S1" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="S2">
+			<column name="S2" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="S3">
+			<column name="S3" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="S4">
+			<column name="S4" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="S5">
+			<column name="S5" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="S6">
+			<column name="S6" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="S7">
+			<column name="S7" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="S8">
+			<column name="S8" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="S9">
+			<column name="S9" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="S10">
+			<column name="S10" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="S11">
+			<column name="S11" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="S12">
+			<column name="S12" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LastInt">
+			<column name="LastInt" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LastDate">
+			<column name="LastDate" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="Budget">
+			<column name="Budget" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="UserNo">
+			<column name="UserNo" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="CloseDate">
+			<column name="CloseDate" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="ACSign">
+			<column name="ACSign" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="TODCloseDate">
+			<column name="TODCloseDate" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="TOD_SDate">
+			<column name="TOD_SDate" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="SourceBr">
+			<column name="SourceBr" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="Cur">
+			<column name="Cur" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="UId">
+			<column name="UId" sql-type="char" not-null="false" />
+		</property>
+
+
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+
+	</class>
+
+	<!--//MNMDAO00005.SelectAll//-->
+	<query name="MNMDAO00005.SelectAll">
+		select new MNMDTO00005(
+		t.ID,
+		t.Acctno,
+		t.LNo,
+		t.S1,
+		t.S2,
+		t.S3,
+		t.S4,
+		t.S5,
+		t.S6,
+		t.S7,
+		t.S8,
+		t.S9,
+		t.S10,
+		t.S11,
+		t.S12,
+		t.LastInt,
+		t.LastDate,
+		t.Budget,
+		t.UserNo,
+		t.CloseDate,
+		t.ACSign,
+		t.TODCloseDate,
+		t.TOD_SDate,
+		t.SourceBr,
+		t.Cur,
+		t.UId,
+		t.Active,
+		t.TS,
+		t.CreatedDate,
+		t.CreatedUserId,
+		t.UpdatedDate,
+		t.UpdatedUserId
+		)
+		from MNMORM00005 as t
+		where t.Active = true
+		and t.SourceBr=:SourceBranchCode
+	</query>
+	
+	<!--//MNMDAO00005.UpdateTOD_SCHARGED//-->
+	<query name="MNMDAO00005.UpdateTOD_SCHARGED">
+    update MNMORM00005 t set
+    t.S1=:tod_month,
+    t.S2=:tod_month,
+    t.S3=:tod_month,
+    t.S4=:tod_month,
+    t.S5=:tod_month,
+    t.S6=:tod_month,
+    t.S7=:tod_month,
+    t.S8=:tod_month,
+    t.S9=:tod_month,
+    t.S10=:tod_month,
+    t.S11=:tod_month,
+    t.S12=:tod_month,
+    t.Budget=:budget,
+    t.UpdatedDate=:updatedDate,
+    t.UpdatedUserId=:updatedUserId
+    where (t.CloseDate=null or t.CloseDate='')
+    and t.SourceBr=:SourceBranchCode
+    and t.Active = true
+  </query>
+
+	<!--MNMDAO00005.SelectByAccountNo-->
+	<!--NLKK-->
+	<query name="MNMDAO00005.SelectByAccountNo">
+		select new MNMDTO00005(
+		t.ID,
+		t.Acctno,
+		t.LNo,
+		t.S1,
+		t.S2,
+		t.S3,
+		t.S4,
+		t.S5,
+		t.S6,
+		t.S7,
+		t.S8,
+		t.S9,
+		t.S10,
+		t.S11,
+		t.S12,
+		t.LastInt,
+		t.LastDate,
+		t.Budget,
+		t.UserNo,
+		t.CloseDate,
+		t.ACSign,
+		t.TODCloseDate,
+		t.TOD_SDate,
+		t.SourceBr,
+		t.Cur,
+		t.UId,
+		t.Active,
+		t.TS,
+		t.CreatedDate,
+		t.CreatedUserId,
+		t.UpdatedDate,
+		t.UpdatedUserId
+		)
+		from MNMORM00005 as t
+		where t.Acctno =: accountNo
+		and t.Active = true
+		and (t.CloseDate = null or t.CloseDate = '')
+	</query>
+
+</hibernate-mapping>

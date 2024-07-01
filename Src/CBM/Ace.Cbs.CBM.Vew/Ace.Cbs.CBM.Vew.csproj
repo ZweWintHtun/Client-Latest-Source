@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AD7A9382-631C-4BED-8BC3-0D0F75D0B1A7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ace.Cbs.CBM.Vew</RootNamespace>
+    <AssemblyName>Ace.Cbs.CBM.Vew</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ace.Cbs.CBM.Ctr">
+      <HintPath>..\..\..\Output\Ace.Cbs.CBM.Ctr.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Cx.Cle, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Cx.Cle.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Admin.DataModel">
+      <HintPath>..\..\..\Output\Ace.Windows.Admin.DataModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Core">
+      <HintPath>..\..\..\Output\Ace.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.CXClient">
+      <HintPath>..\..\..\Output\Ace.Windows.CXClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 10.0\ReportViewer\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\Output\Office.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core">
+      <HintPath>..\..\..\Output\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data">
+      <HintPath>..\..\..\Output\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate33">
+      <HintPath>..\..\..\Output\Spring.Data.NHibernate33.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CBMVEW00001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CBMVEW00001.Designer.cs">
+      <DependentUpon>CBMVEW00001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CBMVEW00002.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CBMVEW00002.Designer.cs">
+      <DependentUpon>CBMVEW00002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CBMVEW00003.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CBMVEW00003.Designer.cs">
+      <DependentUpon>CBMVEW00003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CBMVEW00004.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CBMVEW00004.Designer.cs">
+      <DependentUpon>CBMVEW00004.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CBMVEW00005.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CBMVEW00005.Designer.cs">
+      <DependentUpon>CBMVEW00005.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CBMVEW00006.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CBMVEW00006.Designer.cs">
+      <DependentUpon>CBMVEW00006.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CBMVEW00007.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CBMVEW00007.Designer.cs">
+      <DependentUpon>CBMVEW00007.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Cx\Ace.Cbs.Cx.Com\Ace.Cbs.Cx.Com.csproj">
+      <Project>{83A33F31-AFB5-4778-8AEF-42EB781DD861}</Project>
+      <Name>Ace.Cbs.Cx.Com</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Pfm\Ace.Cbs.Pfm.Dmd\Ace.Cbs.Pfm.Dmd.csproj">
+      <Project>{8F20F64D-FF47-47A3-87CA-30D8A12B5B75}</Project>
+      <Name>Ace.Cbs.Pfm.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tel\Ace.Cbs.Tel.Dmd\Ace.Cbs.Tel.Dmd.csproj">
+      <Project>{4AE62F74-E000-4768-90BC-DCBBB1B4C68C}</Project>
+      <Name>Ace.Cbs.Tel.Dmd</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CBMVEW00001.resx">
+      <DependentUpon>CBMVEW00001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CBMVEW00002.resx">
+      <DependentUpon>CBMVEW00002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CBMVEW00003.resx">
+      <DependentUpon>CBMVEW00003.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CBMVEW00004.resx">
+      <DependentUpon>CBMVEW00004.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CBMVEW00005.resx">
+      <DependentUpon>CBMVEW00005.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CBMVEW00006.resx">
+      <DependentUpon>CBMVEW00006.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CBMVEW00007.resx">
+      <DependentUpon>CBMVEW00007.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\CBMRDLC00002.rdlc" />
+    <EmbeddedResource Include="RDLC\CBMRDLC00003.rdlc" />
+    <EmbeddedResource Include="RDLC\CBMRDLC00004.rdlc" />
+    <EmbeddedResource Include="RDLC\CBMRDLC00005.rdlc" />
+    <EmbeddedResource Include="RDLC\CBMRDLC00006.rdlc" />
+    <EmbeddedResource Include="RDLC\CBMRDLC00007.rdlc" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

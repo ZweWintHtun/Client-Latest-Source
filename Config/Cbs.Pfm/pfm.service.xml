@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net"
+         >  
+  
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    Service Objects Settings
+  </description>
+  
+  <!--//CustomerId  Service//-->
+  <object id="PFMSVE00004" type="Ace.Cbs.Pfm.Sve.PFMSVE00004, Ace.Cbs.Pfm.Sve" singleton="false">
+    <property name="CustomerIdDAO" ref="CustomerIdDAO"/>
+    <property name="CustPhotoDAO" ref="CustomerPhotoDAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+  </object>
+
+  <!--//Saving Account Withdrawal Service//-->
+  <object id="PFMSVE00021" type="Ace.Cbs.Pfm.Sve.PFMSVE00021, Ace.Cbs.Pfm.Sve" singleton="false">
+    <property name="COADAO" ref="COADAO"/>
+	  <property name="CledgerDAO" ref="CledgerDAO"/>	
+  </object>
+
+  <object id="PFMSVE00027" type="Ace.Cbs.Pfm.Sve.PFMSVE00027,Ace.Cbs.Pfm.Sve" singleton="false">
+    <property name="FReceiptDAO" ref="FReceiptDAO"/>
+    <property name="FledgerDAO" ref="FledgerDAO" />
+	  <property name="CodeChecker" ref="CXSVE00006"/>
+  </object>
+
+  <!-- PrintUserEntity PFMSEV00007-->
+  <object id="PFMSVE00007" type="Ace.Cbs.Pfm.Sve.PFMSVE00007, Ace.Cbs.Pfm.Sve" singleton="false">
+    <property name="PrintUserDAO" ref="PrintUserDAO"/>
+  </object>
+
+  <!-- Print User Entity Transaction PFMSEV00008-->
+  <object id="PFMSVE00008" type="Ace.Cbs.Pfm.Sve.PFMSVE00008, Ace.Cbs.Pfm.Sve" singleton="false">
+    <property name="PrintRecordDAO" ref="PrintRecordDAO"/>
+    <property name="CodeChecker" ref="CXSVE00006"/>
+  </object>
+
+  <object id="PFMSVE00009" type="Ace.Cbs.Pfm.Sve.PFMSVE00009, Ace.Cbs.Pfm.Sve" singleton="false">
+    <property name="PrnDAO" ref="PrnDAO"/>
+    <property name="FPrnDAO" ref="FPrnDAO"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <property name="FledgerDAO" ref="FledgerDAO"/>
+  </object>
+
+  <object id="PFMSVE00001" type="Ace.Cbs.Pfm.Sve.PFMSVE00001, Ace.Cbs.Pfm.Sve" singleton="false">
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <property name="CaofDAO" ref="CaofDAO"/>
+    <property name="ChequeService" ref="PFMSVE00013"/>
+    <property name="BalanceDAO" ref="BalDAO"/>
+    <property name="CustomerIdDAO" ref="CustomerIdDAO"/>
+    <property name="SavingInterestDAO" ref="SIDAO"/>
+    <property name="SAOFDAO" ref="SaOfDAO"/>
+    <property name="FAOFDAO" ref="FAOFDAO"/>
+    <property name="FReceiptService" ref="PFMSVE00027"/>
+    <property name="FLedgerDAO" ref="FledgerDAO"/>
+    <property name="BLFDAO" ref="FrwAllDAO"/>
+  </object>
+
+  <!--//StopChequeService//-->
+  <object id="PFMSVE00014" type="Ace.Cbs.Pfm.Sve.PFMSVE00014, Ace.Cbs.Pfm.Sve" singleton="false">
+    <property name="StopChequeDAO" ref="StopChequeDAO"/>
+    <property name="CustomerIdDAO" ref="CustomerIdDAO"/>
+    <property name="ChequeDAO" ref="ChequeDAO"/>
+    <property name="StartEndDAO" ref="StartEndDAO"/>
+  </object>
+
+  <!--//Current Account Opening Service//-->
+  <object id="PFMSVE00002" type="Ace.Cbs.Pfm.Sve.PFMSVE00002, Ace.Cbs.Pfm.Sve" singleton="false">
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <property name="CaofDAO" ref="CaofDAO"/>
+    <property name="ChequeService" ref="PFMSVE00013"/>
+    <property name="BalanceDAO" ref="BalDAO"/>
+    <property name="CustomerIdDAO" ref="CustomerIdDAO"/>
+    <property name="SavingInterestDAO" ref="SIDAO"/>    
+    <property name="SAOFDAO" ref="SaOfDAO"/>
+    <property name="FAOFDAO" ref="FAOFDAO"/>
+    <property name="FReceiptService" ref="PFMSVE00027"/>
+    <property name="FLedgerDAO" ref="FledgerDAO"/>
+    <property name="BLFDAO" ref="FrwAllDAO"/>
+  </object>
+  <!-- Cheque Service -->
+  <object id="PFMSVE00013" type="Ace.Cbs.Pfm.Sve.PFMSVE00013, Ace.Cbs.Pfm.Sve"  singleton="false">
+    <property name="ChequeDAO" ref="ChequeDAO"/>
+  </object>
+
+  <!--//Print Cheque Service-->
+  <object id="PFMSVE00015" type="Ace.Cbs.Pfm.Sve.PFMSVE00015, Ace.Cbs.Pfm.Sve" singleton="false">
+    <property name="PrintChequeDAO" ref="PrintChequeDAO"/>
+    <property name="ChequeDAO" ref="ChequeDAO"/>
+    <property name="PrintingDAO" ref="PrintingDAO"/>
+	<property name="UCheckDAO" ref="UCheckDAO"/>
+  </object>
+
+
+  <object id="PFMSVE00003" type="Ace.Cbs.Pfm.Sve.PFMSVE00003, Ace.Cbs.Pfm.Sve"  singleton="false">
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <property name="CaofDAO" ref="CaofDAO"/>
+    <property name="ChequeService" ref="PFMSVE00013"/>
+    <property name="BalanceDAO" ref="BalDAO"/>
+    <property name="CustomerIdDAO" ref="CustomerIdDAO"/>
+    <property name="SavingInterestDAO" ref="SIDAO"/>
+    <property name="SAOFDAO" ref="SaOfDAO"/>
+    <property name="FAOFDAO" ref="FAOFDAO"/>
+    <property name="FReceiptService" ref="PFMSVE00027"/>
+    <property name="FLedgerDAO" ref="FledgerDAO"/>
+    <property name="BLFDAO" ref="FrwAllDAO"/>
+  </object>
+
+  <!-- LinkAccount Service -->
+  <object id="PFMSVE00012" type="Ace.Cbs.Pfm.Sve.PFMSVE00012, Ace.Cbs.Pfm.Sve"  singleton="false">
+    <property name="LinkAccountDAO" ref="LinkAccountDAO"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <property name="CodeChecker" ref="CXSVE00006"/>
+    <property name="CustomerIdDAO" ref="CustomerIdDAO"/>
+  </object>
+
+  <!--//CustomerId Search Service//-->
+  <object id="PFMSVE00005" type="Ace.Cbs.Pfm.Sve.PFMSVE00005, Ace.Cbs.Pfm.Sve" singleton="false">
+    <property name="CustomerIdDAO" ref="CustomerIdDAO"/>
+  </object>
+
+  <object id="PFMSVE00018" type="Ace.Cbs.Pfm.Sve.PFMSVE00018, Ace.Cbs.Pfm.Sve" singleton="false">
+    <property name="CustPhotoDAO" ref="CustPhotoDAO"/>
+  </object>
+
+  <object id="PFMSVE00011" type="Ace.Cbs.Pfm.Sve.PFMSVE00011, Ace.Cbs.Pfm.Sve" singleton="false">
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="CodeChecker" ref="CXSVE00006"/>
+    <property name="CLedgerDAO" ref="CledgerDAO"/>
+    <property name="UCheckDAO" ref="UCheckDAO"/>
+    <property name="BalanceDAO" ref="BalDAO"/>
+    <property name="CustomerDAO" ref="CustomerIdDAO"/>
+    <property name="CAOFDAO" ref="CaofDAO"/>
+    <property name="ChequeDAO" ref="ChequeDAO"/>
+    <property name="CloseBalanceDAO" ref="CloseBalanceDAO"/>
+	<property name="TLFDAO" ref="TLFDAO" />
+  </object>
+
+  <object id="PFMSVE00010" type="Ace.Cbs.Pfm.Sve.PFMSVE00010, Ace.Cbs.Pfm.Sve" singleton="false">
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="CodeChecker" ref="CXSVE00006"/>
+    <property name="CLedgerDAO" ref="CledgerDAO"/>
+    <property name="BalanceDAO" ref="BalDAO"/>
+    <property name="CustomerDAO" ref="CustomerIdDAO"/>
+    <property name="SAOFDAO" ref="SaOfDAO"/>
+    <property name="CloseBalanceDAO" ref="CloseBalanceDAO"/>
+    <property name="SIDAO" ref="SIDAO"/>
+    <property name="PRNFileDAO" ref="PrnDAO"/>
+	<property name="TLFDao" ref="TLFDAO" />
+  </object>
+
+  <!--//SolidarityLendingEntry Service//-->
+  <object id="PFMSVE00078" type="Ace.Cbs.Pfm.Sve.PFMSVE00078, Ace.Cbs.Pfm.Sve" singleton="false">
+    <property name="SolidarityLendingDAO" ref="SolidarityLendingEntryDAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <!--<property name="CodeGenerator" ref="CXSVE00002"/>-->
+  </object>
+</objects>

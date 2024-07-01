@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00003, Ace.Cbs.Pfm.Dmd" rename="intialdto"/>
+
+  <class name="PFMORM00003" table="[Initial]" >
+
+    <id name="Initial">
+      <column name="Initial" sql-type="varchar" not-null="true" />
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+    
+    <property name="Description">
+      <column name="Description" sql-type="nvarchar" not-null="true" />
+    </property>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+	  <many-to-one name="CreatedUser" column="[CreatedUserId]" class="Ace.Windows.Admin.DataModel.User" insert="false" update="false"></many-to-one>
+
+  </class>
+
+	<!--//Initial.CheckExist//-->
+	<query name="InitialDAO.CheckExist">
+		select new intialdto( i.Initial,i.Description )
+		from PFMORM00003 as i where ( i.Initial =: initial or i.Description =: description ) and  i.Active = true
+	</query>
+
+<!--//Initial.CheckExist2//-->
+<query name="InitialDAO.CheckExist2">
+		select new intialdto(
+		i.Initial,
+		i.Description,
+		i.Active,
+		i.TS,
+		i.CreatedDate,
+		i.CreatedUserId,
+		i.UpdatedDate,
+		i.UpdatedUserId		
+		)
+		from PFMORM00003 as i where ( i.Initial =: initial or i.Description =: description ) 
+	</query>
+<!--//InitialDAO.SelectAll//-->
+	<query name="InitialDAO.SelectAll">
+    select new intialdto(
+    i.Initial,
+    i.Description,
+    i.Active,
+    i.TS,
+    i.CreatedDate,
+    i.CreatedUserId,
+    i.UpdatedDate,
+    i.UpdatedUserId,
+    cu.UserName
+    )
+    from PFMORM00003 as i
+    inner join i.CreatedUser as cu with cu.Active = true
+    where i.Active = true
+    order by i.Initial
+  </query>
+	
+	
+		
+
+	<!--//InitialDAO.SelectByInitial//-->
+	<query name="InitialDAO.SelectByInitial">
+		select new intialdto(
+		i.Initial,
+		i.Description,
+		i.Active,
+		i.TS,
+		i.CreatedDate,
+		i.CreatedUserId,
+		i.UpdatedDate,
+		i.UpdatedUserId
+		)
+		from PFMORM00003 as i
+		where i.Initial = :initial
+		and i.Active = true
+	</query>
+
+</hibernate-mapping>

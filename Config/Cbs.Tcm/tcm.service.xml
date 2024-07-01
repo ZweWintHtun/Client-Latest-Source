@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+  <!--//Fixed Receipt Editing Service//-->
+  <object id="TCMSVE00013" type="Ace.Cbs.Tcm.Sve.TCMSVE00013, Ace.Cbs.Tcm.Sve" singleton="false">    
+    <property name="FReceiptDAO" ref="FReceiptDAO"/>
+    <property name="TLFDao" ref="TLFDAO"/>
+    <property name="CashDenoDAO" ref="CashDenoDAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+  </object>
+
+  <!--PO Issue By Transfer Service-->
+  <object id="TCMSVE00003" type="Ace.Cbs.Tcm.Sve.TCMSVE00003, Ace.Cbs.Tcm.Sve" singleton="false">    
+    <property name="CodeChecker" ref="CXSVE00006"/>
+    <property name="GetCodeGenerator" ref="CXSVE00002"/>  
+    <property name="DataGenerateSerice" ref="CXSVE00010"/>
+    <property name="ChequeDAO" ref="ChequeDAO"/>
+    <property name="AmtOamtService" ref="CXSVE00004"/> 
+    <property name="PrintService" ref="CXSVE00003"/> 
+    <property name="ViewsDAO" ref="ViewDAO"/>
+    <property name="PODAO" ref="PODAO"/>
+  </object>
+
+  <!--//Saving Interest Withdrawal/Transfer Service//-->
+  <object id="TCMSVE00005" type="Ace.Cbs.Tcm.Sve.TCMSVE00005, Ace.Cbs.Tcm.Sve" singleton="false">
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="CodeChecker" ref="CXSVE00006"/>
+    <property name="CoaDAO" ref="COADAO"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <property name="SIDAO" ref="SIDAO"/>
+    <property name="SIaccWitDAO" ref="SIAccWitDAO"/>
+    <property name="CashDenoDAO" ref="CashDenoDAO"/>
+    <property name="TLFDAO" ref="TLFDAO"/>
+    <property name="PrnDAO" ref="PrnDAO"/>
+  </object>
+
+  <!--//Fixed Deposit Interest Withdrawal/Transfer Service//-->
+  <object id="TCMSVE00006" type="Ace.Cbs.Tcm.Sve.TCMSVE00006, Ace.Cbs.Tcm.Sve" singleton="false">
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="CodeChecker" ref="CXSVE00006"/>
+    <property name="CoaDAO" ref="COADAO"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <property name="FixIntWithDAO" ref="FixInWithDAO"/>
+    <property name="CashDenoDAO" ref="CashDenoDAO"/>
+    <property name="TLFDAO" ref="TLFDAO"/>
+    <property name="PrnDAO" ref="PrnDAO"/>
+    <property name="FPrnDAO" ref="FPrnDAO"/>
+    <property name="FReceiptDAO" ref="FReceiptDAO"/>
+  </object>
+  
+  <!--//Cash Closing Service//-->
+  <object id="TCMSVE00016" type="Ace.Cbs.Tcm.Sve.TCMSVE00016, Ace.Cbs.Tcm.Sve" singleton="false">
+    <property name="SysDAO" ref="Sys001DAO"/>
+    <property name="FormatDefintionDAO" ref="FormatDefinitionDAO"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <property name="Cs99DAO" ref="CS99DAO"/>
+    <property name="CashSetupDAO" ref="CashSetupDAO"/>
+    <property name="CashDenoDAO" ref="CashDenoDAO"/>
+    <property name="CashClosingDAO" ref="CashClosingDAO"/>
+    <property name="NewSetupDAO" ref="NewSetupDAO"/> <!--Added by HWKO (25-Oct-2017)-->
+    <property name="CcoaDAO" ref="FrwAllDAO"/>    <!--Added by HWKO (25-Oct-2017)-->
+    <property name="Tod_ScharedDAO" ref="TOd_SchargedDAO"/>    <!--Added by HWKO (25-Oct-2017)-->
+  </object>
+
+  <!--//Fixed Deposit Transfer Service//-->
+  <object id="TCMSVE00001" type="Ace.Cbs.Tcm.Sve.TCMSVE00001, Ace.Cbs.Tcm.Sve" singleton="false">
+    <property name="FReceiptDAO" ref="FReceiptDAO"/>
+    <property name="TLFDAO" ref="TLFDAO"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <property name="FPrnDAO" ref="FPrnDAO"/>
+    <property name="PrnDAO" ref="PrnDAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="FledgerDAO" ref="FledgerDAO" />
+    <property name="UseChequeDAO" ref="UCheckDAO"/>
+    <property name="CodeChecker" ref="CXSVE00006"/>
+  </object>
+
+  <!--//Stop Payment Cheque Release Entry Service//-->
+	<object id="TCMSVE00012" type="Ace.Cbs.Tcm.Sve.TCMSVE00012, Ace.Cbs.Tcm.Sve" singleton="false">
+		<property name="CustomerIdDAO" ref="CustomerIdDAO"/>
+		<property name="SChequeDAO" ref="StopChequeDAO"/>
+		<property name="CodeChecker" ref="CXSVE00006"/>
+		
+    </object>
+
+	<!--//Minimum Balance Entry Service//-->
+	<object id="TCMSVE00020" type="Ace.Cbs.Tcm.Sve.TCMSVE00020, Ace.Cbs.Tcm.Sve" singleton="false">
+		<property name="MinBalDAO" ref="MinBalDAO"/>
+		<property name="CodeChecker" ref="CXSVE00006"/>
+		<property name="CustomerIdDAO" ref="CustomerIdDAO"/>
+		<property name="CledgerDAO" ref="CledgerDAO"/>
+	</object>
+
+
+
+  <!--//Clearing Posting Service//-->
+  <object id="TCMSVE00043" type="Ace.Cbs.Tcm.Sve.TCMSVE00043, Ace.Cbs.Tcm.Sve" singleton="false">
+    <property name="TLFDAO" ref="TLFDAO"/>
+    <property name="BalDAO" ref="BalDAO"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <property name="Sys001DAO" ref="Sys001DAO"/>
+    <property name="CodeChecker" ref="CXSVE00006"/>
+    <property name="CodeCheckerDAO" ref="CodeCheckerDAO"/>
+    <property name="PrintService" ref="CXSVE00003"/>
+  </object>
+
+  <!--//PO Printing Service//-->
+  <object id="TCMSVE00044" type="Ace.Cbs.Tcm.Sve.TCMSVE00044, Ace.Cbs.Tcm.Sve" singleton="false">
+    <property name="REDAO" ref="REDAO"/>  
+  </object>
+
+  
+	<!--//Stop Payment Cheque Release Entry Service//-->
+	<object id="TCMSVE00017" type="Ace.Cbs.Tcm.Sve.TCMSVE00017, Ace.Cbs.Tcm.Sve" singleton="false">
+		<property name="CashDenoDAO" ref="CashDenoDAO"/>
+		<property name="DepoDenoDAO" ref="DepoDenoDAO"/>
+		<property name="IblTlfDAO" ref="IBLTLFDAO"/>
+	</object>
+
+	<!--//DailyClosing.Clearing Service//-->
+	<object id="TCMSVE00027" type="Ace.Cbs.Tcm.Sve.TCMSVE00027, Ace.Cbs.Tcm.Sve" singleton="false">
+		<property name="ReportTlfDAO" ref="ReportTLFDAO"/>
+		<property name="DataGenerateService" ref="CXSVE00010"/>
+		<property name="ViewDAO" ref="ViewDAO"/>
+	</object>
+
+	<!--//DailyClosing.Clearing Service//-->
+	<object id="TCMSVE00029" type="Ace.Cbs.Tcm.Sve.TCMSVE00029, Ace.Cbs.Tcm.Sve" singleton="false">
+		<property name="ReportTlfDAO" ref="ReportTLFDAO"/>
+		<property name="DataGenerateService" ref="CXSVE00010"/>
+	</object>
+	
+	<!--//DailyClosing.Clearing Service//-->
+	<object id="TCMSVE00034" type="Ace.Cbs.Tcm.Sve.TCMSVE00034, Ace.Cbs.Tcm.Sve" singleton="false">
+		<property name="ReportTlfDAO" ref="ReportTLFDAO"/>
+		<property name="DataGenerateService" ref="CXSVE00010"/>
+	</object>
+
+	<!--Deactivate User Service-->
+	<object id="TCMSVE00022" type="Ace.Cbs.Tcm.Sve.TCMSVE00022, Ace.Cbs.Tcm.Sve" singleton="false">
+		<property name="UserDAO" ref="UserDAO"/>
+	</object>
+
+	<!--Customer Account Enquiry Service-->
+	<object id="TCMSVE00045" type="Ace.Cbs.Tcm.Sve.TCMSVE00045, Ace.Cbs.Tcm.Sve" singleton="false">
+		<property name="InformationService" ref="CXSVE00006"/>
+	</object>
+	
+	<!--Last Payment Denomination Entry Service-->
+	<object id="TCMSVE00007" type="Ace.Cbs.Tcm.Sve.TCMSVE00007, Ace.Cbs.Tcm.Sve" singleton="false">
+		<property name="CashDenoDAO" ref="CashDenoDAO"/>
+		<property name="TLFDAO" ref="TLFDAO"/>		
+	</object>
+	
+
+	<!--//Cash Decleration Entry Service//-->
+	<object id="TCMSVE00025" type="Ace.Cbs.Tcm.Sve.TCMSVE00025, Ace.Cbs.Tcm.Sve" singleton="false">
+		<property name="DataGenerateService" ref="CXSVE00010"/>
+		<property name="ReportTlfDAO" ref="ReportTLFDAO"/>
+	</object>
+
+
+	<object id="TCMSVE00014" type="Ace.Cbs.Tcm.Sve.TCMSVE00014, Ace.Cbs.Tcm.Sve" singleton="false">		
+		<property name="StartDAO" ref="TCMDAO00001"/>
+		<property name="SysDAO" ref="Sys001DAO"/>
+		<property name="CledgerDAO" ref="CledgerDAO"/>
+		<property name="RateInfoDAO" ref="RateInfoDAO"/>
+		<property name="RateFileDAO" ref="RateFileDAO"/>
+		<property name="LoansDAO" ref="LoansDAO"/>
+		<property name="NewsetupDAO" ref="NewSetupDAO"/>
+		<property name="SPDAO" ref="CXSVE00010"/>
+		<property name="LegalIntDAO" ref="LegalIntDAO"/>
+		<property name="CodeGenerator" ref="CXSVE00002"/>
+		<property name="ServiceChargesDAO" ref="ServiceChargesDAO"/>
+		<property name="NPLINTDAO" ref="NplIntDAO"/>
+		<property name="CodeCheckerDAO" ref="CXSVE00006"/>		
+	</object>
+
+
+	<!--//POIssueForEncashment Service//-->
+	<object id="TCMSVE00004" type="Ace.Cbs.Tcm.Sve.TCMSVE00004, Ace.Cbs.Tcm.Sve" singleton="false">
+		<property name="REDAO" ref="REDAO"/>
+		<property name="CodeGenerator" ref="CXSVE00002"/>
+		<property name="TLFDao" ref="TLFDAO"/>
+		<property name="PODao" ref ="PODAO"/>
+		<property name="TranTypeDao" ref="TranTypeDAO"/>
+	</object>
+
+
+  <!--//PO Printing Report Service//-->
+  <object id="TCMSVE00061" type="Ace.Cbs.Tcm.Sve.TCMSVE00061, Ace.Cbs.Tcm.Sve" singleton="false">
+    <property name="codeCheckerDAO" ref="CodeCheckerDAO"/>
+    <property name="REDAO" ref="REDAO"/>
+  </object>
+
+
+	<!--ChequeBookEditing Service-->
+	<object id="TCMSVE00008" type="Ace.Cbs.Tcm.Sve.TCMSVE00008, Ace.Cbs.Tcm.Sve" singleton="false">
+		<property name="ChequeDAO" ref="ChequeDAO"/>
+	</object>
+
+
+	<!--//Clean Cash Entry Service//-->
+	<object id="TCMSVE00026" type="Ace.Cbs.Tcm.Sve.TCMSVE00026, Ace.Cbs.Tcm.Sve" singleton="false">
+		<property name="DataGenerateService" ref="CXSVE00010"/>
+		<property name="ReportTlfDAO" ref="ReportTLFDAO"/>
+		<property name="ViewDAO" ref="ViewDAO"/>
+	</object>
+
+
+	<!--Day Book Summary Report Service-->
+	<object id="TCMSVE00028" type="Ace.Cbs.Tcm.Sve.TCMSVE00028, Ace.Cbs.Tcm.Sve" singleton="false">
+		<property name="ReportTlfDAO" ref="ReportTLFDAO"/>
+		<property name="DatagenerateDAO" ref="DataGenerateDAO"/>
+		<property name="DataGenerateService" ref="CXSVE00010"/>
+		<property name="CS99DAO" ref="CS99DAO"/>
+	</object>
+
+
+
+	<!--//Withdrawal Cheque Listing Service//-->
+	<object id="TCMSVE00032" type="Ace.Cbs.Tcm.Sve.TCMSVE00032, Ace.Cbs.Tcm.Sve" singleton="false">
+		<property name="ViewDAO" ref="ViewDAO"/>
+		<property name="UCheckDAO" ref="UCheckDAO"/>
+    </object>
+
+	<!--//-Issue/Stop/Print Cheque Listing Service//-->
+	<object id="TCMSVE00039" type="Ace.Cbs.Tcm.Sve.TCMSVE00039, Ace.Cbs.Tcm.Sve" singleton="false">
+		<property name="ChequeDAO" ref="ChequeDAO"/>
+		<property name="StopChequeDAO" ref="StopChequeDAO"/>
+		<property name="PrintChequeDAO" ref="PrintChequeDAO"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <property name="codeCheckerDAO" ref="CodeCheckerDAO"/>
+	</object>
+
+	<object id="TCMSVE00015" type="Ace.Cbs.Tcm.Sve.TCMSVE00015, Ace.Cbs.Tcm.Sve" singleton="false">
+		<property name="StartDAO" ref="TCMDAO00001"/>
+		<property name="CS99DAO" ref="CS99DAO"/>
+		<property name="SetUpDAO" ref="SetUpDAO"/>
+		<property name="Sys001DAO" ref="Sys001DAO"/>
+		<property name="CledgerDAO" ref="CledgerDAO"/>
+		<property name="AdjRemitOiDAO" ref="AdjRemitOiDAO"/>
+		<property name="AdjRemitSchargeDAO" ref="AdjRemitSchargeDAO"/>
+		<property name="AdjRemitTodSchargeDAO" ref="AdjRemitTodSchargeDAO"/>
+		<property name="SPDAO" ref="CXSVE00010"/>
+		<property name="ViewDAO" ref="ViewDAO"/>
+		<property name="PODAO" ref="PODAO"/>
+		<property name="LoanDAO" ref="LoansDAO"/>
+		<property name="FledgerDAO" ref="FledgerDAO"/>
+    <property name="FormatDefintionDAO" ref="FormatDefinitionDAO"/>
+	</object>
+
+  <object id="TCMSVE00002" type="Ace.Cbs.Tcm.Sve.TCMSVE00002, Ace.Cbs.Tcm.Sve" singleton="false">
+    <property name="CodeChecker" ref="CXSVE00006"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="TLFDAO" ref="TLFDAO"/>
+    <property name="PODAO" ref="PODAO"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <property name="TrantypeDAO" ref="TranTypeDAO"/>
+    <property name="PrintingDAO" ref="CXSVE00003"/>
+    <property name="BLFDAO" ref="FrwAllDAO"/>
+	  
+  </object>
+
+  <!--//Note Change Withdrawl Service//-->
+  <object id="TCMSVE00019" type="Ace.Cbs.Tcm.Sve.TCMSVE00019, Ace.Cbs.Tcm.Sve" singleton="false">
+    <property name="CashDenoDAO" ref="CashDenoDAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+  </object>
+
+  <!--//Group Cash Deposit Service//-->
+  <object id="TCMSVE00063" type="Ace.Cbs.Tcm.Sve.TCMSVE00063, Ace.Cbs.Tcm.Sve" singleton="false">
+    <property name="CodeChecker" ref="CXSVE00006"/>
+    <property name="CLedgerDAO" ref="CledgerDAO"/>
+    <property name="TLFDao" ref="TLFDAO"/>
+    <property name="CashDenoDAO" ref="CashDenoDAO"/>    
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="Dep_TLFDAO" ref="Dep_TLFDAO"/>
+  </object>
+  
+  <!--//Clearing Delivered Reversal Enquiry Service//-->
+  <object id="TCMSVE00036" type="Ace.Cbs.Tcm.Sve.TCMSVE00036, Ace.Cbs.Tcm.Sve" singleton="false">
+    <property name="ViewDAO" ref="ViewDAO"/>
+    <property name="DataGenerateService" ref="CXSVE00010"/>
+  </object>
+
+  <!--//Clearing Receipt Reversal Enquiry Service//-->
+  <object id="TCMSVE00037" type="Ace.Cbs.Tcm.Sve.TCMSVE00037, Ace.Cbs.Tcm.Sve" singleton="false">
+    <property name="ViewDAO" ref="ViewDAO"/>
+    <property name="DataGenerateService" ref="CXSVE00010"/>
+  </object>
+
+	<object id="TCMSVE00033" type="Ace.Cbs.Tcm.Sve.TCMSVE00033, Ace.Cbs.Tcm.Sve" singleton="false">
+		<property name="ReportTLFDAO" ref="ReportTLFDAO"/>
+		<property name="ViewDAO" ref="ViewDAO"/>
+	</object>
+  
+  <!--Daily Report-->
+  <object id="TCMSVE00052" type="Ace.Cbs.Tcm.Sve.TCMSVE00052, Ace.Cbs.Tcm.Sve" singleton="false">
+    <property name="DailyReportDAO" ref="DailyReportDAO"/>
+    <property name="ViewDAO" ref="DataGenerateDAO"/>
+  </object>	
+
+  <object id="TCMSVE00065" type="Ace.Cbs.Tcm.Sve.TCMSVE00065, Ace.Cbs.Tcm.Sve" singleton="false">
+    <property name="DailyReportDAO" ref="DailyReportDAO"/>
+    <property name="DataGenerateDAO" ref="DataGenerateDAO"/>
+  </object>
+
+  <object id="TCMSVE00066" type="Ace.Cbs.Tcm.Sve.TCMSVE00066, Ace.Cbs.Tcm.Sve" singleton="false">
+    <property name="VW_LedgerDAO" ref="LedgerBalanceDAO"/>
+    <property name="CXDAO" ref="ViewDAO"/>
+    <property name="DataGenerateService" ref="CXSVE00010"/>
+  </object>
+
+	<!--//IndividualDenominationDelete Service//-->
+	<object id="TCMSVE00011" type="Ace.Cbs.Tcm.Sve.TCMSVE00011, Ace.Cbs.Tcm.Sve" singleton="false">
+		<property name="CashDenoDAO" ref="CashDenoDAO"/>
+		<property name="CashDenoHistoryDAO" ref="CashDenoHistoryDAO"/>
+		
+	</object>
+
+	<!--//IndividualDenominationDelete Service//-->
+	<object id="TCMSVE00010" type="Ace.Cbs.Tcm.Sve.TCMSVE00010, Ace.Cbs.Tcm.Sve" singleton="false">
+		<property name="CashDenoDAO" ref="CashDenoDAO"/>
+		<property name="MultipleTransactionDenoOutstandingDAO" ref="MultipleTransactionDenoOutstandingDAO"/>
+		<property name="CodeGeneratorDAO" ref="CodeGeneratorDAO"/>		
+	</object>
+
+	<!--//Interest Edit Entry Service//-->
+	<object id="TCMSVE00009" type="Ace.Cbs.Tcm.Sve.TCMSVE00009, Ace.Cbs.Tcm.Sve" singleton="false">
+	    <property name="CLedgerDAO" ref="CledgerDAO"/>
+		<property name="LoansDAO" ref="LoansDAO"/>
+		<property name="OIDAO" ref="OIDAO"/>
+		<property name="CommitmentFeesDAO" ref="CommitDAO"/>
+		<property name="TODSChargeDAO" ref="TOd_SchargedDAO"/>
+		<property name="SChargeDAO" ref="SChargeDAO"/>
+	</object>
+
+	<!--//Cut Off//-->
+	<object id="TCMSVE00068" type="Ace.Cbs.Tcm.Sve.TCMSVE00068, Ace.Cbs.Tcm.Sve" singleton="false">
+		<property name="SysDAO" ref="Sys001DAO"/>
+		<property name="FormatDefintionDAO" ref="FormatDefinitionDAO"/>
+		<property name="CledgerDAO" ref="CledgerDAO"/>
+		<property name="HolidayDAO" ref="HOLIDAYDAO"/>
+	</object>
+
+  <!--//Database Backup Added by HWKO (15-May-2017)//-->
+  <object id="TCMSVE00071" type="Ace.Cbs.Tcm.Sve.TCMSVE00071, Ace.Cbs.Tcm.Sve" singleton="false">
+    <property name="BalDAO" ref="BalDAO"/>
+  </object>
+
+</objects>

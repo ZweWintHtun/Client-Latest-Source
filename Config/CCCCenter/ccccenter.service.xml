@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net"
+         >  
+  
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    CCOMCenter Service Objects Settings
+  </description>
+
+  <!--Data Version Update Definition Service-->
+  <object id="CENSVE00007" type="Ace.Window.CccCenter.Com.Service.CENSVE00007, Ace.Window.CccCenter.Com.Service" singleton="false">
+    <property name="DataVersionDAO" ref="ClientDataVersionDAO"/>
+    <property name="DataVersionHeaderDAO" ref="ClientDataVersionHeaderDAO"/>
+    <property name="DataVersionItemDAO" ref="ClientDataVersionItemDAO"/>
+  </object>
+
+  
+  <object id="CCCOMSVE00001" type="Ace.Window.CccCenter.Com.Service.CCCOMSVE00001, Ace.Window.CccCenter.Com.Service" singleton="false">
+    <property name="ComponentVersionHeaderDAO" ref="ComponentVersionHeaderDAO"/> 
+    <property name="WorkStationCurrentComponentVersionDAO" ref="WorkStationCurrentComponentVersionDAO"/>
+    <property name="WorkStationTypeDAO" ref="WorkStationTypeDAO"/>
+    <property name="HierarchyWorkStationDAO" ref="HierarchyWorkStationDAO"/>
+  </object>
+  
+  <object id="CCCOMSVE00002" type="Ace.Window.CccCenter.Com.Service.CCCOMSVE00002, Ace.Window.CccCenter.Com.Service" singleton="false">
+    <property name="ClientDataVersionHeaderDAO" ref="ClientDataVersionHeaderDAO"/>
+    <property name="WorkStationCurrentClientDataVersionDAO" ref="WorkStationCurrentClientDataVersionDAO"/>
+    <property name="HierarchyWorkStationDAO" ref="HierarchyWorkStationDAO"/>
+  </object>
+	
+	<object id="CCCOMSVE00005" type="Ace.Window.CccCenter.Com.Service.CCCOMSVE00005, Ace.Window.CccCenter.Com.Service" singleton="false">
+		<property name="WorkStationDAO" ref="HierarchyWorkStationDAO"/>
+		<property name="InstallerInWorkStationDAO" ref="InstallerInWorkStationDAO"/>
+		<property name="CCCComponentVersionDownloadedForClientDAO" ref="CCCComponentVersionDownloadedForClientDAO"/>
+		<property name="ComponentVersionHeaderDAO" ref="ComponentVersionHeaderDAO"/>
+	</object>
+
+	<object id="CCCOMSVE00004" type="Ace.Window.CccCenter.Com.Service.CCCOMSVE00004, Ace.Window.CccCenter.Com.Service" singleton="false">
+		<property name="WorkStationCurrentComponentVersionDAO" ref="WorkStationCurrentComponentVersionDAO"/>
+		<property name="WorkStationDAO" ref="HierarchyWorkStationDAO"/>
+		<property name="ComponentVersionInstalledHistoryDAO" ref="ComponentVersionInstalledHistoryDAO"/>
+		<property name="ComponentVersionHeaderDAO" ref="ComponentVersionHeaderDAO"/>
+		<property name="CCCComponentVersionDownloadedForClientDAO" ref="CCCComponentVersionDownloadedForClientDAO"/>    
+	</object>
+</objects>

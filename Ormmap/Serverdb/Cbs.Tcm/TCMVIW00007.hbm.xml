@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--VW_CLEANCASHREVERSAL-->
+<hibernate-mapping assembly="Ace.Cbs.Tcm.Dmd" namespace="Ace.Cbs.Tcm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+	<import class="Ace.Cbs.Pfm.Dmd.PFMDTO00042, Ace.Cbs.Pfm.Dmd" rename="reporttlfdto"/>
+
+	<class name="TCMVIW00007" table="VW_CLEANCASHREVERSAL" mutable="false" >
+
+		<id name="Id" type="Int32" unsaved-value="0">
+		</id>
+		<property name="Acode">
+			<column name="ACODE" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="Status">
+			<column name="STATUS" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="LocalAmt">
+			<column name="LOCALAMT" sql-type="numeric(15,2)" not-null="false" />
+		</property>
+
+		<property name="LocalOAmt">
+			<column name="LOCALOAMT" sql-type="numeric(15,2)" not-null="false"/>
+		</property>
+
+		<property name="Date_Time">
+			<column name="DATE_TIME" sql-type="datetime" not-null="false"/>
+		</property>
+
+		<property name="SettlementDate">
+			<column name=" SETTLEMENTDATE" sql-type="datetime" not-null="false"/>
+		</property>
+
+		<property name="SourceCur">
+			<column name="SOURCECUR" sql-type="varchar" not-null="false"/>
+		</property>
+
+		<property name="SourceBr">
+			<column name="SOURCEBR" sql-type="varchar" not-null="false"/>
+		</property>
+
+
+		<property name="WorkStation">
+			<column name="WORKSTATION" sql-type="varchar" not-null="false"/>
+		</property>
+
+	</class>
+
+	
+</hibernate-mapping>

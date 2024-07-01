@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{77567CFC-17CF-4B2D-8502-028AA5E1019F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ace.Cbs.Tcm.Ctr</RootNamespace>
+    <AssemblyName>Ace.Cbs.Tcm.Ctr</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ace.Cbs.Pfm.Dmd, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Pfm.Dmd.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Sam.Dmd, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Sam.Dmd.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Tcm.Dmd, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Tcm.Dmd.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Admin.DataModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Admin.DataModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.CXClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.CXClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Ix.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Ix.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dao\ITCMDAO00001.cs" />
+    <Compile Include="Dao\ITCMDAO00002.cs" />
+    <Compile Include="Dao\ITCMDAO00003.cs" />
+    <Compile Include="Dao\ITCMDAO00006.cs" />
+    <Compile Include="Dao\ITCMDAO00007.cs" />
+    <Compile Include="Dao\ITCMDAO00009.cs" />
+    <Compile Include="Dao\ITCMDAO00011.cs" />
+    <Compile Include="Dao\ITCMDAO00013.cs" />
+    <Compile Include="Dao\ITCMDAO00052.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ptr\ITCMCTL00001.cs" />
+    <Compile Include="Ptr\ITCMCTL00002.cs" />
+    <Compile Include="Ptr\ITCMCTL00003.cs" />
+    <Compile Include="Ptr\ITCMCTL00004.cs" />
+    <Compile Include="Ptr\ITCMCTL00005.cs" />
+    <Compile Include="Ptr\ITCMCTL00006.cs" />
+    <Compile Include="Ptr\ITCMCTL00007.cs" />
+    <Compile Include="Ptr\ITCMCTL00008.cs" />
+    <Compile Include="Ptr\ITCMCTL00009.cs" />
+    <Compile Include="Ptr\ITCMCTL00010.cs" />
+    <Compile Include="Ptr\ITCMCTL00011.cs" />
+    <Compile Include="Ptr\ITCMCTL00012.cs" />
+    <Compile Include="Ptr\ITCMCTL00013.cs" />
+    <Compile Include="Ptr\ITCMCTL00018.cs" />
+    <Compile Include="Ptr\ITCMCTL00019.cs" />
+    <Compile Include="Ptr\ITCMCTL00052.cs" />
+    <Compile Include="Ptr\ITCMCTL00032.cs" />
+    <Compile Include="Ptr\ITCMCTL00037.cs" />
+    <Compile Include="Ptr\ITCMCTL00033.cs" />
+    <Compile Include="Ptr\ITCMCTL00036.cs" />
+    <Compile Include="Ptr\ITCMCTL00039.cs" />
+    <Compile Include="Ptr\ITCMCTL00034.cs" />
+    <Compile Include="Ptr\ITCMCTL00043.cs" />
+    <Compile Include="Ptr\ITCMCTL00014.cs" />
+    <Compile Include="Ptr\ITCMCTL00015.cs" />
+    <Compile Include="Ptr\ITCMCTL00016.cs" />
+    <Compile Include="Ptr\ITCMCTL00017.cs" />
+    <Compile Include="Ptr\ITCMCTL00020.cs" />
+    <Compile Include="Ptr\ITCMCTL00022.cs" />
+    <Compile Include="Ptr\ITCMCTL00025.cs" />
+    <Compile Include="Ptr\ITCMCTL00026.cs" />
+    <Compile Include="Ptr\ITCMCTL00027.cs" />
+    <Compile Include="Ptr\ITCMCTL00028.cs" />
+    <Compile Include="Ptr\ITCMCTL00044.cs" />
+    <Compile Include="Ptr\ITCMCTL00045.cs" />
+    <Compile Include="Ptr\ITCMCTL00054.cs" />
+    <Compile Include="Ptr\ITCMCTL00061.cs" />
+    <Compile Include="Ptr\ITCMCTL00065.cs" />
+    <Compile Include="Ptr\ITCMCTL00063.cs" />
+    <Compile Include="Ptr\ITCMCTL00066.cs" />
+    <Compile Include="Ptr\ITCMCTL00068.cs" />
+    <Compile Include="Ptr\ITCMCTL00070.cs" />
+    <Compile Include="Ptr\ITCMCTL00071.cs" />
+    <Compile Include="Sve\ITCMSVE00002.cs" />
+    <Compile Include="Sve\ITCMSVE00007.cs" />
+    <Compile Include="Ptr\ITCMCTL00062.cs" />
+    <Compile Include="Sve\ITCMSVE00001.cs" />
+    <Compile Include="Ptr\ITCMCTL00029.cs" />
+    <Compile Include="Sve\ITCMSVE00003.cs" />
+    <Compile Include="Sve\ITCMSVE00004.cs" />
+    <Compile Include="Sve\ITCMSVE00005.cs" />
+    <Compile Include="Sve\ITCMSVE00006.cs" />
+    <Compile Include="Sve\ITCMSVE00008.cs" />
+    <Compile Include="Sve\ITCMSVE00009.cs" />
+    <Compile Include="Sve\ITCMSVE00010.cs" />
+    <Compile Include="Sve\ITCMSVE00011.cs" />
+    <Compile Include="Sve\ITCMSVE00012.cs" />
+    <Compile Include="Sve\ITCMSVE00013.cs" />
+    <Compile Include="Sve\ITCMSVE00019.cs" />
+    <Compile Include="Sve\ITCMSVE00052.cs" />
+    <Compile Include="Sve\ITCMSVE00032.cs" />
+    <Compile Include="Sve\ITCMSVE00033.cs" />
+    <Compile Include="Sve\ITCMSVE00036.cs" />
+    <Compile Include="Sve\ITCMSVE00037.cs" />
+    <Compile Include="Sve\ITCMSVE00039.cs" />
+    <Compile Include="Sve\ITCMSVE00043.cs" />
+    <Compile Include="Sve\ITCMSVE00014.cs" />
+    <Compile Include="Sve\ITCMSVE00015.cs" />
+    <Compile Include="Sve\ITCMSVE00016.cs" />
+    <Compile Include="Sve\ITCMSVE00017.cs" />
+    <Compile Include="Sve\ITCMSVE00020.cs" />
+    <Compile Include="Sve\ITCMSVE00022.cs" />
+    <Compile Include="Sve\ITCMSVE00025.cs" />
+    <Compile Include="Sve\ITCMSVE00026.cs" />
+    <Compile Include="Sve\ITCMSVE00027.cs" />
+    <Compile Include="Sve\ITCMSVE00028.cs" />
+    <Compile Include="Sve\ITCMSVE00029.cs" />
+    <Compile Include="Sve\ITCMSVE00034.cs" />
+    <Compile Include="Sve\ITCMSVE00044.cs" />
+    <Compile Include="Sve\ITCMSVE00045.cs" />
+    <Compile Include="Sve\ITCMSVE00061.cs" />
+    <Compile Include="Sve\ITCMSVE00065.cs" />
+    <Compile Include="Sve\ITCMSVE00063.cs" />
+    <Compile Include="Sve\ITCMSVE00066.cs" />
+    <Compile Include="Sve\ITCMSVE00068.cs" />
+    <Compile Include="Sve\ITCMSVE00071.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Cx\Ace.Cbs.Cx.Com\Ace.Cbs.Cx.Com.csproj">
+      <Project>{83A33F31-AFB5-4778-8AEF-42EB781DD861}</Project>
+      <Name>Ace.Cbs.Cx.Com</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Mnm\Ace.Cbs.Mnm.Dmd\Ace.Cbs.Mnm.Dmd.csproj">
+      <Project>{D8EA36A9-8BBC-4D2A-84C7-49BDA6006F94}</Project>
+      <Name>Ace.Cbs.Mnm.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tel\Ace.Cbs.Tel.Dmd\Ace.Cbs.Tel.Dmd.csproj">
+      <Project>{4AE62F74-E000-4768-90BC-DCBBB1B4C68C}</Project>
+      <Name>Ace.Cbs.Tel.Dmd</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

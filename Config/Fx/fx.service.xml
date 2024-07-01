@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net"
+         >
+
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    Service Objects Settings
+  </description>
+
+  <!--//Service Invoker//-->
+  <object id="myServiceInvoker" type="Ace.Windows.CXServer.Utt.CXServiceWrapper, Ace.Windows.CXServer" singleton="false">
+  </object>
+  
+  <!--//ActivateUserService//-->
+  <object id="ActivateUserService" type="Ace.Windows.Admin.Service.ActivateUserService, Ace.Windows.Admin.Service" singleton="false">
+    <property name="ActivateUserDao" ref="ActivateUserDAO"/>
+    <property name="UserPermissionDAO" ref="UserPermissionDAO"/>
+  </object>
+
+  <!--//UserService//-->
+  <object id="UserService" type="Ace.Windows.Admin.Service.UserService, Ace.Windows.Admin.Service" singleton="false">
+    <property name="UserDAO" ref="UserDAO"/>
+    <property name="UserPermissionDAO" ref="UserPermissionDAO"/>
+    <property name="CounterInfoDAO" ref="CounterInfoDAO"/>
+    <property name="ActivateUserDAO" ref="ActivateUserDAO"/>
+    <property name="activateUserService" ref="ActivateUserService"/>
+  </object>
+
+  <!--//GroupService//-->
+  <object id="GroupService" type="Ace.Windows.Admin.Service.GroupService, Ace.Windows.Admin.Service" singleton="false">
+    <property name="GroupDAO" ref="GroupDAO"/>
+  </object>
+
+  <!--//RoleService//-->
+  <object id="RoleService" type="Ace.Windows.Admin.Service.RoleService, Ace.Windows.Admin.Service" singleton="false">
+    <property name="RoleDAO" ref="RoleDAO"/>
+  </object>
+
+  <!--//MenuService//-->
+  <object id="MenuService" type="Ace.Windows.Admin.Service.MenuService, Ace.Windows.Admin.Service" singleton="false">
+    <property name="MenuDAO" ref="MenuDAO"/>
+    <property name="UserDAO" ref="UserDAO"/>
+    <property name="RoleDAO" ref="RoleDAO"/>
+    <property name="GroupDAO" ref="GroupDAO"/>
+    <property name="ProgramInMenuDAO" ref="ProgramInMenuDAO"/>
+    <property name="MenuInGroupDAO" ref="MenuInGroupDAO"/>
+    <property name="ClientDataVersionDAO" ref="ClientDataVersionDAO"/>
+  </object>
+
+  <!--//ProgramService//-->
+  <object id="ProgramService" type="Ace.Windows.Admin.Service.ProgramService, Ace.Windows.Admin.Service" singleton="false">
+    <property name="ProgramDAO" ref="ProgramDAO"/>
+  </object>
+
+  <!--//ProgramInMenuService//-->
+  <object id="ProgramInMenuService" type="Ace.Windows.Admin.Service.ProgramInMenuService, Ace.Windows.Admin.Service" singleton="false">
+    <property name="ProgramInMenuDAO" ref="ProgramInMenuDAO"/>
+  </object>
+
+  <!--//MenuInGroupService//-->
+  <object id="MenuInGroupService" type="Ace.Windows.Admin.Service.MenuInGroupService, Ace.Windows.Admin.Service" singleton="false">
+    <property name="MenuInGroupDAO" ref="MenuInGroupDAO"/>
+  </object>
+
+  <!--//ProgramInGroupService//-->
+  <object id="ProgramInGroupService" type="Ace.Windows.Admin.Service.ProgramInGroupService, Ace.Windows.Admin.Service" singleton="false">
+    <property name="ProgramInGroupDAO" ref="ProgramInGroupDAO"/>
+    <property name="UserDAO" ref="UserDAO"/>
+    <property name="ProgramDAO" ref="ProgramDAO"/>
+  </object>
+
+  <!--//Connect & Disconnect Update Service //-->
+  <object id="FXCXSVE00008" type="ACE.Windows.CXServer.SVE.FXCXSVE00008, ACE.Windows.CXServer" singleton="false" >
+  </object>
+  <!--//Get WorkStation Information Service //-->
+  <object id="FXCXSVE00001" type="ACE.Windows.CXServer.SVE.FXCXSVE00001, ACE.Windows.CXServer" singleton="false" >
+    <property name="DAO" ref="HierarchyWorkStationDAO"/>
+  </object>
+  <!--//StateCodeService//-->
+  <object id="StateService" type="Ace.Windows.Admin.Service.StateService, Ace.Windows.Admin.Service" singleton="false">
+    <property name="StateCodeDAO" ref="StateCodeDAO"/>
+  </object>
+
+  <!--//TownshipCodeService//-->
+  <object id="TownshipService" type="Ace.Windows.Admin.Service.TownshipService, Ace.Windows.Admin.Service" singleton="false">
+    <property name="TownshipCodeDAO" ref="TownshipCodeDAO"/>
+  </object>
+
+  <!--//CityCodeService//-->
+  <object id="CityService" type="Ace.Windows.Admin.Service.CityService, Ace.Windows.Admin.Service" singleton="false">
+    <property name="CityCodeDAO" ref="CityCodeDAO"/>
+  </object>
+
+  <!--//BranchService//-->
+  <object id="BranchService" type="Ace.Windows.Admin.Service.BranchService, Ace.Windows.Admin.Service" singleton="false">
+    <property name="BranchDAO" ref="BranchDAO"/>
+    <property name="COADAO" ref="COADAO"/>
+    <property name="CurrencyDAO" ref="CurDAO"/>
+    <property name="CCOADAO" ref="CCOADAO"/>
+    <property name="FormatDefinitionDAO" ref="FormatDefinitionDAO"/>
+  </object>
+
+  <!--//CounterInfoService//-->
+  <object id="CounterInfoService" type="Ace.Windows.Admin.Service.CounterInfoService, Ace.Windows.Admin.Service" singleton="false">
+    <property name="COUNTERINFODAO" ref="CounterInfoDAO"/>
+  </object>
+
+  <!--//WorkStationService//-->
+  <object id="WorkStationService" type="Ace.Windows.Admin.Service.WorkStationService, Ace.Windows.Admin.Service" singleton="false">
+    <property name="WorkStationDAO" ref="WorkStationDAO"/>
+  </object>
+
+  <!--//CounterTypeService//-->
+  <object id="CounterTypeService" type="Ace.Windows.Admin.Service.CounterTypeService, Ace.Windows.Admin.Service" singleton="false">
+    <property name="CounterTypeDAO" ref="CounterTypeDAO"/>
+  </object>
+
+  <!--/UserPermissionService//-->
+  <object id="UserPermissionService" type="Ace.Windows.Admin.Service.UserPermissionService, Ace.Windows.Admin.Service" singleton="false">
+    <property name="UserPermissionDAO" ref="UserPermissionDAO"/>
+    <property name="WorkStationDAO" ref="HierarchyWorkStationDAO"/>
+  </object>
+
+  <!--//CurService//-->
+  <object id="CurrencyService" type="Ace.Windows.Admin.Service.CurrencyService, Ace.Windows.Admin.Service" singleton="false">
+    <property name="CurDAO" ref="CurDAO"/>
+    <property name="COADAO" ref="COADAO"/>
+    <property name="BranchDAO" ref="BranchDAO"/>
+    <property name="CCOADAO" ref="CCOADAO"/>
+  </object>
+
+  <!--//COAService//-->
+  <object id="ChargeOfAccountService" type="Ace.Windows.Admin.Service.ChargeOfAccountService, Ace.Windows.Admin.Service" singleton="false">
+    <property name="COADAO" ref="COADAO"/>
+    <property name="BranchDAO" ref="BranchDAO"/>
+    <property name="CurrencyDAO" ref="CurDAO"/>
+    <property name="CCOADAO" ref="CCOADAO"/>
+  </object>
+
+  <!--//FormatService//-->
+  <object id="FormatService" type="Ace.Windows.Admin.Service.FormatService, Ace.Windows.Admin.Service" singleton="false">
+    <property name="FormatDAO" ref="FormatDAO"/>
+  </object>
+
+  <!--//FormatDefinitionService//-->
+  <object id="FormatDefinitionService" type="Ace.Windows.Admin.Service.FormatDefinitionService, Ace.Windows.Admin.Service" singleton="false">
+    <property name="FormatDefinitionDAO" ref="FormatDefinitionDAO"/>
+    <property name="BranchDAO" ref="BranchDAO"/>
+  </object>
+
+  <!--Region Installer-->
+  <!--//HierarchyWorkStationService//-->
+  <!--//GroupService//-->
+  <object id="CodeGeneratorService" type="Ace.Windows.Admin.Service.CodeGeneratorService, Ace.Windows.Admin.Service" singleton="false">
+    <property name="CodeGeneratorDAO" ref="FX.CodeGeneratorDAO"/>
+  </object>
+
+  <object id="HierarchyWorkStationService" type="Ace.Windows.Admin.Service.HierarchyWorkStationService, Ace.Windows.Admin.Service" singleton="false">
+    <property name="HierarchyWorkStationDAO" ref="HierarchyWorkStationDAO"/>
+  </object>
+
+
+  <object id="WorkStationTypeService" type="Ace.Windows.Admin.Service.WorkStationTypeService, Ace.Windows.Admin.Service" singleton="false">
+    <property name="WorkStationTypeDAO" ref="WorkStationTypeDAO"/>
+  </object>
+
+
+  <object id="CounterInformationService" type="Ace.Windows.Admin.Service.CounterInformationService, Ace.Windows.Admin.Service" singleton="false">
+    <property name="CounterInformationDAO" ref="CounterInformationDAO"/>
+    <property name="HierarchyWorkStationDAO" ref="HierarchyWorkStationDAO"/>
+  </object>
+
+  <!--//AppSetting Service //-->
+  <object id="FXCXSVE00009" type="ACE.Windows.CXServer.SVE.FXCXSVE00009, ACE.Windows.CXServer" singleton="false" >
+    <property name="AppSettingDAO" ref="AppSettingDAO"/>
+  </object>
+  <!--EndRegion Installer-->
+</objects>

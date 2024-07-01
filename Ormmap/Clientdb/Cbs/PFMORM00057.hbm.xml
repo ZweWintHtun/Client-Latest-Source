@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00057, Ace.Cbs.Pfm.Dmd" rename="newsetupdto"/>
+
+  <class name="PFMORM00057" table="[NewSetup]" >
+
+	  <id name="Variable">
+		  <column name="Variable" sql-type="varchar" not-null="true" />
+	  </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+   
+	  <property name="Value">
+		  <column name="Value" sql-type="varchar" not-null="true" />
+	  </property>
+	  <!--<property name="Status">
+		  <column name="Status" sql-type="int" not-null="true" />
+	  </property>-->
+	  
+   
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+
+  <query name ="NewSetup_SelectSDateEDate">
+    select new newsetupdto
+    (
+    nst.Variable,
+    nst.Value
+    )
+    from  PFMORM00057 as nst
+    where nst.Variable='BUDSDATE' and nst.Variable='BUDEDATE'
+	and nst.Active = true
+  </query>
+  
+</hibernate-mapping>

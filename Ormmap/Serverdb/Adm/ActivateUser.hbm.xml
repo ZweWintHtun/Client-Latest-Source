@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--ActivateUser Info-->
+<!-- 
+// <copyright file="ActivateUser.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>Haymar</CreatedUser>
+// <CreatedDate>2015-08-18</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version>1.0</Version>
+-->
+<hibernate-mapping assembly="Ace.Windows.Admin.DataModel" namespace="Ace.Windows.Admin.DataModel" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Windows.Admin.DataModel.ActivateUserDTO, Ace.Windows.Admin.DataModel" rename="activateUserdto"/>
+  <class name="ActivateUser" table="[ActivateUser]" >
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+    <property name="UserId">
+      <column name="UserId" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Date_Time">
+      <column name="Date_Time" sql-type="datetime" not-null="true" />
+    </property>
+
+    <property name="StartTime">
+      <column name="StartTime" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="EndTime">
+      <column name="EndTime" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="WorkStationName">
+      <column name="WorkStationName" sql-type="nvarchar" not-null="true" />
+    </property>
+
+    <property name="IPAddress">
+      <column name="IPAddress" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="SourceBranch">
+      <column name="SourceBranch" sql-type="nvarchar" not-null="true" />
+    </property>
+
+    <property name="LogInCount">
+      <column name="LoginCount" sql-type="int" not-null="true" />
+    </property>
+
+    <!--Support Fields-->
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+  </class>
+
+   <query name="ActivateUser.SelectDeactivateUserInfo">
+    select new activateUserdto
+    (
+    a.UserId,
+    a.Date_Time,
+    a.StartTime,
+    a.EndTime,
+    a.WorkStationName,
+    a.IPAddress,
+    a.LogInCount,
+    a.SourceBranch
+    )
+    from ActivateUser as a
+    where a.UserId = :hostName
+    and a.SourceBranch = :branchcode
+    <!--and a.WorkStationName = :workstationName-->
+    and a.Active = true
+  </query>
+
+  <query name="ActivateUser.SelectDeactivateUserInfoBySourceBr">
+    select new activateUserdto
+    (
+    a.UserId,
+    a.Date_Time,
+    a.StartTime,
+    a.EndTime,
+    a.WorkStationName,
+    a.IPAddress,
+    a.SourceBranch
+    )
+    from ActivateUser as a
+    where a.SourceBranch = :sourceBr
+    and a.Active = true
+  </query>
+
+  <query name="ActivateUser.UpdateForActivateUserByUserIdAndSourceBr">
+    update ActivateUser a
+    set a.Active = :isActive ,
+    a.UpdatedUserId = :updatedUserId,
+    a.UpdatedDate = :updatedDate
+    where a.UserId =: userName and a.SourceBranch = :sourceBr and a.Active = true
+  </query>
+
+<!--//"ActivateUser.UpdateForActivateUserByUserIdAndSourceBr"//-->
+  <query name="ActivateUser.UpdateLoggedCountByUserIdAndSourceBr">
+    update ActivateUser a
+    set a.LogInCount = :loggedCount ,
+    a.UpdatedUserId = :updatedUserId,
+    a.UpdatedDate = :updatedDate
+    where a.WorkStationName =: workStationName and a.SourceBranch = :sourceBr and a.Active = true
+  </query>
+</hibernate-mapping>

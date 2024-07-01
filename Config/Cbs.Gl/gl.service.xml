@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+	<!--//Monthly Budgeted Entry Service//-->
+	<object id="GLMSVE00004" type="Ace.Cbs.Gl.Sve.GLMSVE00004, Ace.Cbs.Gl.Sve" singleton="true">
+		<property name="MonthlyBudgetedEntryDAO" ref="MonthlyBudgetedEntryDAO"/>
+	</object>
+
+	<!--Enquiry On Ledger-->
+	<object id="GLMSVE00008" type="Ace.Cbs.Gl.Sve.GLMSVE00008, Ace.Cbs.Gl.Sve" singleton="false">
+		<property name="EnquiryOnLedgerDAO" ref="EnquiryOnLedgerDAO"/>
+	</object>
+
+  <!-- Chart of Account Listing-->
+  <object id="GLMSVE00013" type="Ace.Cbs.Gl.Sve.GLMSVE00013, Ace.Cbs.Gl.Sve" singleton="false">
+    <property name="CoADAO" ref="ChartofAccountDAO"/>
+  </object>
+
+  <!-- OLS Total Listing-->
+  <object id="GLMSVE00009" type="Ace.Cbs.Gl.Sve.GLMSVE00009, Ace.Cbs.Gl.Sve" singleton="false">
+    <property name="GLMDAO" ref="OLSTotalDAO"/>
+    <property name="NewSetupDAO" ref="NewSetupDAO"/>
+    <property name="CXDao" ref="ViewDAO"/>
+	  <property name="DataGenerateService" ref="CXSVE00010"/>
+  </object>
+
+  <!-- Income Expenditure Listing-->
+  <object id="GLMSVE00010" type="Ace.Cbs.Gl.Sve.GLMSVE00010, Ace.Cbs.Gl.Sve" singleton="true">
+    <property name="GetIncomeExpenditureDAO" ref="DataGenerateDAO"/>
+    <property name="BLFDAO" ref="FrwAllDAO"/>
+  </object>
+
+	<!--Opening Balance Entry-->
+	<object id="GLMSVE00002" type="Ace.Cbs.Gl.Sve.GLMSVE00002, Ace.Cbs.Gl.Sve" singleton="false">
+		<property name="OpeningBalanceDAO" ref="EnquiryOnLedgerDAO"/>
+	</object>
+  
+  <!--Monthly Currency Rate Entry-->
+  <object id="GLMSVE00001" type="Ace.Cbs.Gl.Sve.GLMSVE00001, Ace.Cbs.Gl.Sve" singleton="false">
+    <property name="CurrencyRateEntryDAO" ref="CurrencyRateEntryDAO"/>
+  </object>
+
+	<!--Yearly Budget Entry-->
+	<object id="GLMSVE00003" type="Ace.Cbs.Gl.Sve.GLMSVE00003, Ace.Cbs.Gl.Sve" singleton="false">
+		<property name="YearlyBudgetEntryDAO" ref="EnquiryOnLedgerDAO"/>
+	</object>
+
+
+	<!--Report Format Entry-->
+	<object id="GLMSVE00007" type="Ace.Cbs.Gl.Sve.GLMSVE00007, Ace.Cbs.Gl.Sve" singleton="false">
+		<property name="ReportFormatEntryDAO" ref="ReportFormatEntryDAO"/>
+	</object>
+
+	<!--Format And Formula Entry-->
+	<object id="GLMSVE00018" type="Ace.Cbs.Gl.Sve.GLMSVE00018, Ace.Cbs.Gl.Sve" singleton="false">
+		<property name="ReportFormatEntryDAO" ref="ReportFormatEntryDAO"/>
+	</object>
+
+
+
+	<!--Liabilities Account Code-->
+  <!--<object id="GLMSVE00012" type="Ace.Cbs.Gl.Sve.GLMSVE00012, Ace.Cbs.Gl.Sve" singleton="false">
+    <property name="CXCLEDAO" ref="CXClientDataCustomQueryHandler"/>
+  </object>-->
+	<object id="GLMSVE00012" type="Ace.Cbs.Gl.Sve.GLMSVE00012, Ace.Cbs.Gl.Sve" singleton="false">
+		<!--<property name="CXCLEDAO" ref="COADAO"/>-->
+	</object>
+
+  <!--Report Statement Controller-->
+  <object id="GLMSVE00011" type="Ace.Cbs.Gl.Sve.GLMSVE00011, Ace.Cbs.Gl.Sve" singleton="false">
+    <property name="FormatFileDAO" ref="ReportFormatEntryDAO"/>
+  </object>
+
+ <object id="GLMSVE00023" type="Ace.Cbs.Gl.Sve.GLMSVE00023, Ace.Cbs.Gl.Sve" singleton="false">
+    <property name="DataGenerateService" ref="CXSVE00010"/>
+    <property name="ReporttlfDAO" ref="ReporttlfDAO"/>
+    <!--<property name="vw_postingDAO" ref="ViewDAO"/>-->
+    <property name="CcoaDAO" ref="FrwAllDAO"/>
+    <property name="Sys001DAO" ref="Sys001DAO"/>
+    <property name="MonthlyccoaDAO " ref="MonthlyCOADAO"/>
+  </object>
+
+	<!--Monthly Report Controller-->
+	<object id="GLMSVE00027" type="Ace.Cbs.Gl.Sve.GLMSVE00027, Ace.Cbs.Gl.Sve" singleton="false">
+		<!--<property name="ViewDAO" ref="ViewDAO"/>-->
+		<property name="Sys001DAO" ref="Sys001DAO"/>
+		<property name="MonthlyccoaDAO " ref="MonthlyCOADAO"/>
+	</object>
+
+  <!--//Added by HWKO (27-Sep-2017)-->
+  <object id="GLMSVE00028" type="Ace.Cbs.Gl.Sve.GLMSVE00028, Ace.Cbs.Gl.Sve" singleton="false">
+    <!--<property name="ViewDAO" ref="ViewDAO"/>-->
+    <!--<property name="Sys001DAO" ref="Sys001DAO"/>-->
+    <property name="StatementOfFinancialPositionDAO " ref="StatementOfFinancialPositionDAO"/>
+    <property name="BLFDAO" ref="FrwAllDAO"/>
+  </object>
+</objects>

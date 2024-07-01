@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--PREV_TOD_SCHARGE-->
+<!-- 
+// <copyright file="MNMORM00005.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>SSA</CreatedUser>
+// <CreatedDate>11/27/2013</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version></Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+	<import class="Ace.Cbs.Mnm.Dmd.MNMDTO00006, Ace.Cbs.Mnm.Dmd" rename="MNMDTO00006"/>
+	<class name="MNMORM00006" table="[PREV_TOD_SCHARGE]">
+
+		<id name="ID">
+			<column name="ID" sql-type="int" not-null="true" />
+		</id>
+
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="true"/>
+		</version>
+
+		<property name="Acctno">
+			<column name="Acctno" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="LNo">
+			<column name="LNo" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="S1">
+			<column name="S1" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="S2">
+			<column name="S2" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="S3">
+			<column name="S3" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="S4">
+			<column name="S4" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="S5">
+			<column name="S5" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="S6">
+			<column name="S6" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="S7">
+			<column name="S7" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="S8">
+			<column name="S8" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="S9">
+			<column name="S9" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="S10">
+			<column name="S10" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="S11">
+			<column name="S11" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="S12">
+			<column name="S12" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LastInt">
+			<column name="LastInt" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LastDate">
+			<column name="LastDate" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="Budget">
+			<column name="Budget" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="UserNo">
+			<column name="UserNo" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="CloseDate">
+			<column name="CloseDate" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="ACSign">
+			<column name="ACSign" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="TODCloseDate">
+			<column name="TODCloseDate" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="TOD_SDate">
+			<column name="TOD_SDate" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="SourceBr">
+			<column name="SourceBr" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="Cur">
+			<column name="Cur" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="UId">
+			<column name="UId" sql-type="char" not-null="false" />
+		</property>
+
+
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+
+	</class>
+</hibernate-mapping>

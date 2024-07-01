@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Windows.Admin.DataModel" namespace="Ace.Windows.Admin.DataModel" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Windows.Admin.DataModel.ChargeOfAccountSetupDTO, Ace.Windows.Admin.DataModel" rename="coasetupdto"/>
+
+  <class name="ChargeOfAccountSetup" table="[COASetup]" >
+
+	  <id name="AccountNo">
+		  <column name="ACNo" sql-type="varchar" not-null="true" />
+	  </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>	 
+	  <property name="AccountName">
+		  <column name="ACNoName" sql-type="varchar" not-null="true" />	
+	  </property>
+	  <property name="TransactionType">
+		  <column name="TranType" sql-type="varchar" not-null="false" />
+	  </property>
+	  <property name="Channel">
+		  <column name="Channel" sql-type="varchar" not-null="false" />
+	  </property>
+	  <property name="CurrencyCode">
+		  <column name="Cur" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="SourceBranchCode">
+		  <column name="SourceBr" sql-type="varchar" not-null="true" />
+	  </property>
+	  <many-to-one name="Currency" column="[Cur]" class="Currency" insert="false" update="false"></many-to-one>
+	  <many-to-one name="Branch" column="[SourceBr]" class="Branch" insert="false" update="false"></many-to-one>
+	  <bag name="COAAccountName" inverse="true" lazy="true" cascade="all">
+		  <key column="AccountNo" />
+		  <one-to-many class="ChargeOfAccount" />
+	  </bag>
+	  <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  <query name="CXCOM00010.SelectCoaSetupAccountNo">
+    select coaSetup.AccountNo from ChargeOfAccountSetup as coaSetup
+    where
+    coaSetup.AccountName = :accountName and
+    coaSetup.SourceBranchCode = :branchCode and
+    coaSetup.CurrencyCode = :currencyCode and
+    coaSetup.Active = true
+  </query>
+
+  <query name="CXCOM00010.SelectAccountNo">
+    select coaSetup.AccountNo from ChargeOfAccountSetup as coaSetup
+    where
+    coaSetup.AccountName = :accountName and
+    coaSetup.SourceBranchCode = :branchCode and
+    coaSetup.CurrencyCode = :currencyCode and
+    coaSetup.Active = true
+  </query>
+
+<query name="CXCOM00010.SelectCoaSetupAccountNoByAccountName">
+    select new coasetupdto (coasetup.AccountNo)
+    from ChargeOfAccountSetup as coasetup
+    where coasetup.AccountName= :accountname and
+    coasetup.SourceBranchCode = :branchCode and
+    coasetup.Active = true
+  </query>
+  
+</hibernate-mapping>

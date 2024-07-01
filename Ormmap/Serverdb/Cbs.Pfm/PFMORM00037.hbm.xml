@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00037, Ace.Cbs.Pfm.Dmd" rename="branchdto"/>
+
+  <class name="PFMORM00037" table="[Branch]" >
+
+	  <id name="BranchCode">
+		  <column name="BranchCode" sql-type="varchar" not-null="true" />
+	  </id>
+
+	  <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+		  <column name="TS" sql-type="timestamp" not-null="true"/>
+	  </version>
+
+	  <property name="BranchAlias">
+		  <column name="Br_Alias" sql-type="varchar" not-null="true" />
+	  </property>
+
+	  <property name="BranchDescription">
+		  <column name="BranchDesp" sql-type="nvarchar" not-null="true" />
+	  </property>
+
+	  <property name="Address">
+		  <column name="Address" sql-type="nvarchar" not-null="true" />
+	  </property>
+
+	  <property name="Fax">
+		  <column name="Fax" sql-type="nvarchar" not-null="false" />
+	  </property>
+
+	  <property name="Phone">
+		  <column name="Phone" sql-type="nvarchar" not-null="true" />
+	  </property>
+
+	  <property name="Email">
+		  <column name="Email" sql-type="nvarchar" not-null="false" />
+	  </property>
+
+	  <property name="OtherBank">
+		  <column name="OtherBank" sql-type="bit" not-null="true" />
+	  </property>
+
+	  <property name="StateCode">
+		  <column name="StateCode" sql-type="varchar" not-null="true" />
+	  </property>
+
+	  <property name="CityCode">
+		  <column name="CityCode" sql-type="varchar" not-null="true" />
+	  </property>
+
+	  <property name="TownshipCode">
+		  <column name="TownshipCode" sql-type="varchar" not-null="true" />
+	  </property>
+
+
+	  <property name="Bank_Alias">
+		  <column name="Bank_Alias" sql-type="varchar" not-null="true" />
+	  </property>
+
+    <!--Relationship-->
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+  </class>
+
+	<!--//BranchCode.SelectAllBranch//-->
+	<query name="BranchCode.SelectAllBranch">
+		select new branchdto
+		(
+		b.BranchAlias
+		)
+		from PFMORM00037 as b
+		where b.OtherBank = 0
+		and b.Active = true
+	</query>
+
+	<query name="BranchCodeAndBranchDesp.SelectAllOthersBranch">
+		<![CDATA[
+   select new branchdto
+    (
+    b.BranchCode,
+    b.BranchDescription,
+    b.BranchAlias
+    )
+    from PFMORM00037 as b
+    where b.OtherBank = 0
+    and b.BranchCode <> :sourcebranchcode
+    and b.Active = true order by b.BranchCode
+    ]]>
+	</query>
+
+	<query name="BranchCodeAndBranchDesp.SelectAllOthersBranchByReconsileBranchcodelist">
+		<![CDATA[
+   select new branchdto
+    (
+    b.BranchCode,
+    b.BranchDescription,
+    b.BranchAlias
+    )
+    from PFMORM00037 as b
+    where b.OtherBank = 0
+    and b.BranchCode <> :sourcebranchcode
+    and b.BranchCode in (:branchcodelist)
+    and b.Active = true order by b.BranchCode
+    ]]>
+	</query>
+
+	<query name="BranchDAO.CheckExist">
+		select new branchdto(
+		b.BranchCode,
+		b.BranchAlias,
+		b.BranchDescription,
+		b.Address,
+		b.Fax,
+		b.Phone,
+		b.Email,
+		b.StateCode,
+		b.CityCode,
+		b.TownshipCode,
+		b.OtherBank,
+		b.Bank_Alias )
+		from PFMORM00037 as b
+		where ( b.BranchCode =: branchCode)
+		and  b.Active = true
+	</query>
+
+	<!--//BranchDAO.SelectAll//-->
+	<query name="BranchDAO.SelectAll">
+		select new branchdto(
+		b.BranchCode,
+		b.BranchAlias,
+		b.BranchDescription,
+		b.Address,
+		b.Fax,
+		b.Phone,
+		b.Email,
+		b.StateCode,
+		b.CityCode,
+		b.TownshipCode,
+		b.OtherBank,
+		b.Bank_Alias,
+		b.Active,
+		b.TS,
+		b.CreatedDate,
+		b.CreatedUserId,
+		b.UpdatedDate,
+		b.UpdatedUserId
+		)
+		from PFMORM00037 as b
+		where b.Active = true
+	</query>
+
+	<!--//BranchDAO.SelectByBranchCode//-->
+	<query name="BranchDAO.SelectByBranchCode">
+		select new branchdto(
+		b.BranchCode,
+		b.BranchAlias,
+		b.BranchDescription,
+		b.Address,
+		b.Fax,
+		b.Phone,
+		b.Email,
+		b.StateCode,
+		b.CityCode,
+		b.TownshipCode,
+		b.OtherBank,
+		b.Bank_Alias,
+		b.Active,
+		b.TS,
+		b.CreatedDate,
+		b.CreatedUserId,
+		b.UpdatedDate,
+		b.UpdatedUserId
+		)
+		from PFMORM00037 as b
+		where b.BranchCode = :branchCode
+		and b.Active = true
+	</query>
+
+</hibernate-mapping>

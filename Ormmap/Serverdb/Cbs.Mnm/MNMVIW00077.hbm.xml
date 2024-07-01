@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Mnm.Dmd.MNMDTO00033, Ace.Cbs.Mnm.Dmd" rename="transferdto"/>
+
+  <class name="MNMVIW00077" table="VW_TRANSFERSCROLL" mutable="false">
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+
+    <property name="ENO">
+      <column name="ENO" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="ACSIGN">
+      <column name="ACSIGN" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="STATUS">
+      <column name="STATUS" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="DATE_TIME">
+      <column name="DATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+
+    <property name="CRPARTICULAR">
+      <column name="CRPARTICULAR" sql-type="nvarchar" not-null="false" />
+    </property>
+
+    <property name="CR_CURRENT">
+      <column name="CR_CURRENT" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="CR_SAVING">
+      <column name="CR_SAVING" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="CR_CALL">
+      <column name="CR_CALL" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="CR_FIXED">
+      <column name="CR_FIXED" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="CR_DOMESTIC">
+      <column name="CR_DOMESTIC" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="DRPARTICULAR">
+      <column name="DRPARTICULAR" sql-type="nvarchar" not-null="false" />
+    </property>
+
+    <property name="DR_CURRENT">
+      <column name="DR_CURRENT" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="DR_SAVING">
+      <column name="DR_SAVING" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="DR_CALL">
+      <column name="DR_CALL" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="DR_FIXED">
+      <column name="DR_FIXED" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="DR_DOMESTIC">
+      <column name="DR_DOMESTIC" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="WORKSTATION">
+      <column name="WORKSTATION" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="SOURCECUR">
+      <column name="SOURCECUR" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="SOURCEBR">
+      <column name="SOURCEBR" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="SETTLEMENTDATE">
+      <column name="SETTLEMENTDATE" sql-type="datetime" not-null="false" />
+    </property>
+
+  </class>
+
+</hibernate-mapping>

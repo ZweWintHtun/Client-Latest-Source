@@ -1,0 +1,5054 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MC00001" xml:space="preserve">
+    <value>MC00001</value>
+    <comment>Are you sure you want to close?</comment>
+  </data>
+  <data name="MC000011" xml:space="preserve">
+    <value>MC00001</value>
+    <comment>Are you sure you want to close?</comment>
+  </data>
+  <data name="MC000012" xml:space="preserve">
+    <value>MC00001</value>
+    <comment>Are you sure you want to close?</comment>
+  </data>
+  <data name="MC00002" xml:space="preserve">
+    <value>MC00002</value>
+    <comment>Are you sure to print?</comment>
+  </data>
+  <data name="MC000021" xml:space="preserve">
+    <value>MC00002</value>
+    <comment>Are you sure to print?</comment>
+  </data>
+  <data name="MC000022" xml:space="preserve">
+    <value>MC00002</value>
+    <comment>Are you sure to print?</comment>
+  </data>
+  <data name="MC00008" xml:space="preserve">
+    <value>MC00008</value>
+    <comment>Are you sure to Refund PONo {0}?</comment>
+  </data>
+  <data name="MC000081" xml:space="preserve">
+    <value>MC00008</value>
+    <comment>Are you sure to Refund PONo {0}?</comment>
+  </data>
+  <data name="MC000082" xml:space="preserve">
+    <value>MC00008</value>
+    <comment>Are you sure to Refund PONo {0}?</comment>
+  </data>
+  <data name="MC00009" xml:space="preserve">
+    <value>MC00009</value>
+    <comment>Auto link transaction will process now.Do you want to process?</comment>
+  </data>
+  <data name="MC000091" xml:space="preserve">
+    <value>MC00009</value>
+    <comment>Auto link transaction will process now.Do you want to process?</comment>
+  </data>
+  <data name="MC000092" xml:space="preserve">
+    <value>MC00009</value>
+    <comment>Auto link transaction will process now.Do you want to process?</comment>
+  </data>
+  <data name="MC00014" xml:space="preserve">
+    <value>MC00014</value>
+    <comment>There is no cash opening balance for {date}.Do you want to continue?</comment>
+  </data>
+  <data name="MC000141" xml:space="preserve">
+    <value>MC00014</value>
+    <comment>There is no cash opening balance for {date}.Do you want to continue?</comment>
+  </data>
+  <data name="MC000142" xml:space="preserve">
+    <value>MC00014</value>
+    <comment>There is no cash opening balance for {date}.Do you want to continue?</comment>
+  </data>
+  <data name="MC00018" xml:space="preserve">
+    <value>MC00018</value>
+    <comment>Are you sure to save this deno data?</comment>
+  </data>
+  <data name="MC000181" xml:space="preserve">
+    <value>MC00018</value>
+    <comment>Are you sure to save this deno data?</comment>
+  </data>
+  <data name="MC000182" xml:space="preserve">
+    <value>MC00018</value>
+    <comment>Are you sure to save this deno data?</comment>
+  </data>
+  <data name="MC00021" xml:space="preserve">
+    <value>MC00021</value>
+    <comment>Are you sure you want to shutdown?</comment>
+  </data>
+  <data name="MC000211" xml:space="preserve">
+    <value>MC00021</value>
+    <comment>Are you sure you want to shutdown?</comment>
+  </data>
+  <data name="MC000212" xml:space="preserve">
+    <value>MC00021</value>
+    <comment>Are you sure you want to shutdown?</comment>
+  </data>
+  <data name="MC30001" xml:space="preserve">
+    <value>MC30001</value>
+    <comment>Are you sure to process Yearly Posting?</comment>
+  </data>
+  <data name="MC300011" xml:space="preserve">
+    <value>MC30001</value>
+    <comment>Are you sure to process Yearly Posting?</comment>
+  </data>
+  <data name="MC300012" xml:space="preserve">
+    <value>MC30001</value>
+    <comment>Are you sure to process Yearly Posting?</comment>
+  </data>
+  <data name="MC30002" xml:space="preserve">
+    <value>MC30002</value>
+    <comment>Are you sure to Post?</comment>
+  </data>
+  <data name="MC300021" xml:space="preserve">
+    <value>MC30002</value>
+    <comment>Are you sure to Post?</comment>
+  </data>
+  <data name="MC300022" xml:space="preserve">
+    <value>MC30002</value>
+    <comment>Are you sure to Post?</comment>
+  </data>
+  <data name="MC30003" xml:space="preserve">
+    <value>MC30003</value>
+    <comment>Do you want to carry on Currency Rate from {0}.</comment>
+  </data>
+  <data name="MC300031" xml:space="preserve">
+    <value>MC30003</value>
+    <comment>Do you want to carry on Currency Rate from {0}.</comment>
+  </data>
+  <data name="MC300032" xml:space="preserve">
+    <value>MC30003</value>
+    <comment>Do you want to carry on Currency Rate from {0}.</comment>
+  </data>
+  <data name="MC30004" xml:space="preserve">
+    <value>MC30004</value>
+    <comment>Today cash closing balance is not FOUND ".\n" Click No and Please run cash closing process ".\n" Or click Yes for Force Shut Down.</comment>
+  </data>
+  <data name="MC300041" xml:space="preserve">
+    <value>MC30004</value>
+    <comment>Today cash closing balance is not FOUND ".\n" Click No and Please run cash closing process ".\n" Or click Yes for Force Shut Down.</comment>
+  </data>
+  <data name="MC300042" xml:space="preserve">
+    <value>MC30004</value>
+    <comment>Today cash closing balance is not FOUND ".\n" Click No and Please run cash closing process ".\n" Or click Yes for Force Shut Down.</comment>
+  </data>
+  <data name="MC30005" xml:space="preserve">
+    <value>MC30005</value>
+    <comment>Do you want to Service Charges calculate FOR {0}.</comment>
+  </data>
+  <data name="MC300051" xml:space="preserve">
+    <value>MC30005</value>
+    <comment>Do you want to Service Charges calculate FOR {0}.</comment>
+  </data>
+  <data name="MC300052" xml:space="preserve">
+    <value>MC30005</value>
+    <comment>Do you want to Service Charges calculate FOR {0}.</comment>
+  </data>
+  <data name="MC30006" xml:space="preserve">
+    <value>MC30006</value>
+    <comment>Are you sure to calculate?</comment>
+  </data>
+  <data name="MC300061" xml:space="preserve">
+    <value>MC30006</value>
+    <comment>Are you sure to calculate?</comment>
+  </data>
+  <data name="MC300062" xml:space="preserve">
+    <value>MC30006</value>
+    <comment>Are you sure to calculate?</comment>
+  </data>
+  <data name="MC90001" xml:space="preserve">
+    <value>MC90001</value>
+    <comment>Are you sure you want to delete?</comment>
+  </data>
+  <data name="MC900011" xml:space="preserve">
+    <value>MC90001</value>
+    <comment>Are you sure want to delete?</comment>
+  </data>
+  <data name="MC900012" xml:space="preserve">
+    <value>MC90001</value>
+    <comment>Are you sure want to delete?</comment>
+  </data>
+  <data name="ME00001" xml:space="preserve">
+    <value>ME00001</value>
+    <comment>Error in Generating Account No.Please Try Again!</comment>
+  </data>
+  <data name="ME000011" xml:space="preserve">
+    <value>ME00001</value>
+    <comment>Error in Generating Account No.Please Try Again!</comment>
+  </data>
+  <data name="ME000012" xml:space="preserve">
+    <value>ME00001</value>
+    <comment>Error in Generating Account No.Please Try Again!</comment>
+  </data>
+  <data name="ME00002" xml:space="preserve">
+    <value>ME00002</value>
+    <comment>Deno Amount Checking Fail. Please input again.</comment>
+  </data>
+  <data name="ME000021" xml:space="preserve">
+    <value>ME00002</value>
+    <comment>Deno Amount Checking Fail. Please input again.</comment>
+  </data>
+  <data name="ME000022" xml:space="preserve">
+    <value>ME00002</value>
+    <comment>Deno Amount Checking Fail. Please input again.</comment>
+  </data>
+  <data name="ME00012" xml:space="preserve">
+    <value>ME00012</value>
+    <comment>Error in printing, transaction cannot be printed.</comment>
+  </data>
+  <data name="ME000121" xml:space="preserve">
+    <value>ME00012</value>
+    <comment>Error in printing, transaction cannot be printed.</comment>
+  </data>
+  <data name="ME000122" xml:space="preserve">
+    <value>ME00012</value>
+    <comment>Error in printing, transaction cannot be printed.</comment>
+  </data>
+  <data name="ME00018" xml:space="preserve">
+    <value>ME00018</value>
+    <comment>Transaction is not Success!</comment>
+  </data>
+  <data name="ME000181" xml:space="preserve">
+    <value>ME00018</value>
+    <comment>Transaction is not Success!</comment>
+  </data>
+  <data name="ME000182" xml:space="preserve">
+    <value>ME00018</value>
+    <comment>Transaction is not Success!</comment>
+  </data>
+  <data name="ME00021" xml:space="preserve">
+    <value>ME00021</value>
+    <comment>Client Data Not Found.</comment>
+  </data>
+  <data name="ME000211" xml:space="preserve">
+    <value>ME00021</value>
+    <comment>Client Data Not Found.</comment>
+  </data>
+  <data name="ME000212" xml:space="preserve">
+    <value>ME00021</value>
+    <comment>Client Data Not Found.</comment>
+  </data>
+  <data name="ME00022" xml:space="preserve">
+    <value>ME00022</value>
+    <comment>This Receipt No is already deposited!</comment>
+  </data>
+  <data name="ME000221" xml:space="preserve">
+    <value>ME00022</value>
+    <comment>This Receipt No is already deposited!</comment>
+  </data>
+  <data name="ME000222" xml:space="preserve">
+    <value>ME00022</value>
+    <comment>This Receipt No is already deposited!</comment>
+  </data>
+  <data name="ME00030" xml:space="preserve">
+    <value>ME00030</value>
+    <comment>Cann't find Branch Code in Zone file.</comment>
+  </data>
+  <data name="ME000301" xml:space="preserve">
+    <value>ME00030</value>
+    <comment>Cann't find Branch Code in Zone file.</comment>
+  </data>
+  <data name="ME000302" xml:space="preserve">
+    <value>ME00030</value>
+    <comment>Cann't find Branch Code in Zone file.</comment>
+  </data>
+  <data name="ME00031" xml:space="preserve">
+    <value>ME00031</value>
+    <comment>Can't find commission charges for Branch Code and Currency.</comment>
+  </data>
+  <data name="ME000311" xml:space="preserve">
+    <value>ME00031</value>
+    <comment>Can't find commission charges for Branch Code and Currency.</comment>
+  </data>
+  <data name="ME000312" xml:space="preserve">
+    <value>ME00031</value>
+    <comment>Can't find commission charges for Branch Code and Currency.</comment>
+  </data>
+  <data name="ME00032" xml:space="preserve">
+    <value>ME00032</value>
+    <comment>Can't find Income and Rate for this Branch Code.</comment>
+  </data>
+  <data name="ME000321" xml:space="preserve">
+    <value>ME00032</value>
+    <comment>Can't find Income and Rate for this Branch Code.</comment>
+  </data>
+  <data name="ME000322" xml:space="preserve">
+    <value>ME00032</value>
+    <comment>Can't find Income and Rate for this Branch Code.</comment>
+  </data>
+  <data name="ME00037" xml:space="preserve">
+    <value>ME00037</value>
+    <comment>Exchange Rate not fount in table.</comment>
+  </data>
+  <data name="ME000371" xml:space="preserve">
+    <value>ME00037</value>
+    <comment>Exchange Rate not fount in table.</comment>
+  </data>
+  <data name="ME000372" xml:space="preserve">
+    <value>ME00037</value>
+    <comment>Exchange Rate not fount in table.</comment>
+  </data>
+  <data name="ME00038" xml:space="preserve">
+    <value>ME00038</value>
+    <comment>AccountCode Format not found.</comment>
+  </data>
+  <data name="ME000381" xml:space="preserve">
+    <value>ME00038</value>
+    <comment>AccountCode Format not found.</comment>
+  </data>
+  <data name="ME000382" xml:space="preserve">
+    <value>ME00038</value>
+    <comment>AccountCode Format not found.</comment>
+  </data>
+  <data name="ME00039" xml:space="preserve">
+    <value>ME00039</value>
+    <comment>AccountCode Length Format not found.</comment>
+  </data>
+  <data name="ME000391" xml:space="preserve">
+    <value>ME00039</value>
+    <comment>AccountCode Length Format not found.</comment>
+  </data>
+  <data name="ME000392" xml:space="preserve">
+    <value>ME00039</value>
+    <comment>AccountCode Length Format not found.</comment>
+  </data>
+  <data name="ME00040" xml:space="preserve">
+    <value>ME00040</value>
+    <comment>TestKey Calculation Error.</comment>
+  </data>
+  <data name="ME000401" xml:space="preserve">
+    <value>ME00040</value>
+    <comment>TestKey Calculation Error.</comment>
+  </data>
+  <data name="ME000402" xml:space="preserve">
+    <value>ME00040</value>
+    <comment>TestKey Calculation Error.</comment>
+  </data>
+  <data name="ME00051" xml:space="preserve">
+    <value>ME00051</value>
+    <comment>Error in AutoLink Updating.</comment>
+  </data>
+  <data name="ME000511" xml:space="preserve">
+    <value>ME00051</value>
+    <comment>Error in AutoLink Updating.</comment>
+  </data>
+  <data name="ME000512" xml:space="preserve">
+    <value>ME00051</value>
+    <comment>Error in AutoLink Updating.</comment>
+  </data>
+  <data name="ME00054" xml:space="preserve">
+    <value>ME00054</value>
+    <comment>AccountNo not found in Cledger Table.</comment>
+  </data>
+  <data name="ME000541" xml:space="preserve">
+    <value>ME00054</value>
+    <comment>AccountNo not found in Cledger Table.</comment>
+  </data>
+  <data name="ME000542" xml:space="preserve">
+    <value>ME00054</value>
+    <comment>AccountNo not found in Cledger Table.</comment>
+  </data>
+  <data name="ME00056" xml:space="preserve">
+    <value>ME00056</value>
+    <comment>Cannot Find Server Information.</comment>
+  </data>
+  <data name="ME000561" xml:space="preserve">
+    <value>ME00056</value>
+    <comment>Cannot Find Server Information.</comment>
+  </data>
+  <data name="ME000562" xml:space="preserve">
+    <value>ME00056</value>
+    <comment>Cannot Find Server Information.</comment>
+  </data>
+  <data name="ME00059" xml:space="preserve">
+    <value>ME00059</value>
+    <comment>Error Occur While Saving Approve Amount.</comment>
+  </data>
+  <data name="ME000591" xml:space="preserve">
+    <value>ME00059</value>
+    <comment>Error Occur While Saving Approve Amount.</comment>
+  </data>
+  <data name="ME000592" xml:space="preserve">
+    <value>ME00059</value>
+    <comment>Error Occur While Saving Approve Amount.</comment>
+  </data>
+  <data name="MV00219" xml:space="preserve">
+    <value>MV00219</value>
+    <comment>PO No. Not Found.</comment>
+  </data>
+  <data name="ME00061" xml:space="preserve">
+    <value>ME00061</value>
+    <comment>Printing Error Occur.</comment>
+  </data>
+  <data name="ME000611" xml:space="preserve">
+    <value>ME00061</value>
+    <comment>Printing Error Occur.</comment>
+  </data>
+  <data name="ME000612" xml:space="preserve">
+    <value>ME00061</value>
+    <comment>Printing Error Occur.</comment>
+  </data>
+  <data name="ME00062" xml:space="preserve">
+    <value>ME00062</value>
+    <comment>ERROR FROM ENCASHMENT VOUCHER STORE PROCEDURE!...</comment>
+  </data>
+  <data name="ME000621" xml:space="preserve">
+    <value>ME00062</value>
+    <comment>ERROR FROM ENCASHMENT VOUCHER STORE PROCEDURE!...</comment>
+  </data>
+  <data name="ME000622" xml:space="preserve">
+    <value>ME00062</value>
+    <comment>ERROR FROM ENCASHMENT VOUCHER STORE PROCEDURE!...</comment>
+  </data>
+  <data name="ME00064" xml:space="preserve">
+    <value>ME00064</value>
+    <comment>System Start Up has not been run.</comment>
+  </data>
+  <data name="ME000641" xml:space="preserve">
+    <value>ME00064</value>
+    <comment>System Start Up has not been run.</comment>
+  </data>
+  <data name="ME000642" xml:space="preserve">
+    <value>ME00064</value>
+    <comment>System Start Up has not been run.</comment>
+  </data>
+  <data name="ME00065" xml:space="preserve">
+    <value>ME00065</value>
+    <comment>Error in Last Modified Rate.</comment>
+  </data>
+  <data name="ME000651" xml:space="preserve">
+    <value>ME00065</value>
+    <comment>Error in Last Modified Rate.</comment>
+  </data>
+  <data name="ME000652" xml:space="preserve">
+    <value>ME00065</value>
+    <comment>Error in Last Modified Rate.</comment>
+  </data>
+  <data name="ME00066" xml:space="preserve">
+    <value>ME00066</value>
+    <comment>Please change System Date to {0} and Shut Down First.</comment>
+  </data>
+  <data name="ME000661" xml:space="preserve">
+    <value>ME00066</value>
+    <comment>Please change System Date to {0} and Shut Down First.</comment>
+  </data>
+  <data name="ME000662" xml:space="preserve">
+    <value>ME00066</value>
+    <comment>Please change System Date to {0} and Shut Down First.</comment>
+  </data>
+  <data name="ME00067" xml:space="preserve">
+    <value>ME00067</value>
+    <comment>Error in Calculating CurRate.</comment>
+  </data>
+  <data name="ME000671" xml:space="preserve">
+    <value>ME00067</value>
+    <comment>Error in Calculating CurRate.</comment>
+  </data>
+  <data name="ME000672" xml:space="preserve">
+    <value>ME00067</value>
+    <comment>Error in Calculating CurRate.</comment>
+  </data>
+  <data name="ME00068" xml:space="preserve">
+    <value>ME00068</value>
+    <comment>Error in Start. COntact your Administrator.</comment>
+  </data>
+  <data name="ME000681" xml:space="preserve">
+    <value>ME00068</value>
+    <comment>Error in Start. COntact your Administrator.</comment>
+  </data>
+  <data name="ME000682" xml:space="preserve">
+    <value>ME00068</value>
+    <comment>Error in Start. COntact your Administrator.</comment>
+  </data>
+  <data name="ME30013" xml:space="preserve">
+    <value>ME30013</value>
+    <comment>NO PO Records are selected.</comment>
+  </data>
+  <data name="ME300131" xml:space="preserve">
+    <value>ME30013</value>
+    <comment>NO PO Records are selected.</comment>
+  </data>
+  <data name="ME300132" xml:space="preserve">
+    <value>ME30013</value>
+    <comment>NO PO Records are selected.</comment>
+  </data>
+  <data name="ME90000" xml:space="preserve">
+    <value>ME90000</value>
+    <comment>Saving Error.</comment>
+  </data>
+  <data name="ME900001" xml:space="preserve">
+    <value>ME90000</value>
+    <comment>Saving Error.</comment>
+  </data>
+  <data name="ME900002" xml:space="preserve">
+    <value>ME90000</value>
+    <comment>Saving Error.</comment>
+  </data>
+  <data name="ME90001" xml:space="preserve">
+    <value>ME90001</value>
+    <comment>Updating Error.</comment>
+  </data>
+  <data name="ME900011" xml:space="preserve">
+    <value>ME90001</value>
+    <comment>Updating Error.</comment>
+  </data>
+  <data name="ME900012" xml:space="preserve">
+    <value>ME90001</value>
+    <comment>Updating Error.</comment>
+  </data>
+  <data name="ME90002" xml:space="preserve">
+    <value>ME90002</value>
+    <comment>Deleting Error.</comment>
+  </data>
+  <data name="ME900021" xml:space="preserve">
+    <value>ME90002</value>
+    <comment>Deleting Error.</comment>
+  </data>
+  <data name="ME900022" xml:space="preserve">
+    <value>ME90002</value>
+    <comment>Deleting Error.</comment>
+  </data>
+  <data name="ME90003" xml:space="preserve">
+    <value>ME90003</value>
+    <comment>Scalar Value Selecting.</comment>
+  </data>
+  <data name="ME900031" xml:space="preserve">
+    <value>ME90003</value>
+    <comment>Scalar Value Selecting.</comment>
+  </data>
+  <data name="ME900032" xml:space="preserve">
+    <value>ME90003</value>
+    <comment>Scalar Value Selecting.</comment>
+  </data>
+  <data name="ME90004" xml:space="preserve">
+    <value>ME90004</value>
+    <comment>List Value Selecting.</comment>
+  </data>
+  <data name="ME900041" xml:space="preserve">
+    <value>ME90004</value>
+    <comment>List Value Selecting.</comment>
+  </data>
+  <data name="ME900042" xml:space="preserve">
+    <value>ME90004</value>
+    <comment>List Value Selecting.</comment>
+  </data>
+  <data name="ME90005" xml:space="preserve">
+    <value>ME90005</value>
+    <comment>Value Clause Error.</comment>
+  </data>
+  <data name="ME900051" xml:space="preserve">
+    <value>ME90005</value>
+    <comment>Value Clause Error.</comment>
+  </data>
+  <data name="ME900052" xml:space="preserve">
+    <value>ME90005</value>
+    <comment>Value Clause Error.</comment>
+  </data>
+  <data name="ME90006" xml:space="preserve">
+    <value>ME90006</value>
+    <comment>Value Clause must have at least one fields.</comment>
+  </data>
+  <data name="ME900061" xml:space="preserve">
+    <value>ME90006</value>
+    <comment>Value Clause must have at least one fields.</comment>
+  </data>
+  <data name="ME900062" xml:space="preserve">
+    <value>ME90006</value>
+    <comment>Value Clause must have at least one fields.</comment>
+  </data>
+  <data name="ME90007" xml:space="preserve">
+    <value>ME90007</value>
+    <comment>Unkown type to convert.</comment>
+  </data>
+  <data name="ME900071" xml:space="preserve">
+    <value>ME90007</value>
+    <comment>Unkown type to convert.</comment>
+  </data>
+  <data name="ME900072" xml:space="preserve">
+    <value>ME90007</value>
+    <comment>Unkown type to convert.</comment>
+  </data>
+  <data name="ME90008" xml:space="preserve">
+    <value>ME90008</value>
+    <comment>Value Clause isn't compatible with Property Clause.</comment>
+  </data>
+  <data name="ME900081" xml:space="preserve">
+    <value>ME90008</value>
+    <comment>Value Clause isn't compatible with Property Clause.</comment>
+  </data>
+  <data name="ME900082" xml:space="preserve">
+    <value>ME90008</value>
+    <comment>Value Clause isn't compatible with Property Clause.</comment>
+  </data>
+  <data name="ME90009" xml:space="preserve">
+    <value>ME90009</value>
+    <comment>Account No must not be blank.</comment>
+  </data>
+  <data name="ME900091" xml:space="preserve">
+    <value>ME90009</value>
+    <comment>Account No must not be blank.</comment>
+  </data>
+  <data name="ME900092" xml:space="preserve">
+    <value>ME90009</value>
+    <comment>Account No must not be blank.</comment>
+  </data>
+  <data name="ME90010" xml:space="preserve">
+    <value>ME90010</value>
+    <comment>Account No And Perdefined Prime Array Do Not Match.</comment>
+  </data>
+  <data name="ME900101" xml:space="preserve">
+    <value>ME90010</value>
+    <comment>Account No And Perdefined Prime Array Do Not Match.</comment>
+  </data>
+  <data name="ME900102" xml:space="preserve">
+    <value>ME90010</value>
+    <comment>Account No And Perdefined Prime Array Do Not Match.</comment>
+  </data>
+  <data name="ME90011" xml:space="preserve">
+    <value>ME90011</value>
+    <comment>There is some error while CheckDigit number is generating.</comment>
+  </data>
+  <data name="ME900111" xml:space="preserve">
+    <value>ME90011</value>
+    <comment>There is some error while CheckDigit number is generating.</comment>
+  </data>
+  <data name="ME900112" xml:space="preserve">
+    <value>ME90011</value>
+    <comment>There is some error while CheckDigit number is generating.</comment>
+  </data>
+  <data name="ME90012" xml:space="preserve">
+    <value>ME90012</value>
+    <comment>There is some error while code format is validating.</comment>
+  </data>
+  <data name="ME900121" xml:space="preserve">
+    <value>ME90012</value>
+    <comment>There is some error while code format is validating.</comment>
+  </data>
+  <data name="ME900122" xml:space="preserve">
+    <value>ME90012</value>
+    <comment>There is some error while code format is validating.</comment>
+  </data>
+  <data name="ME90013" xml:space="preserve">
+    <value>ME90013</value>
+    <comment>AppSettings Reading Error.</comment>
+  </data>
+  <data name="ME900131" xml:space="preserve">
+    <value>ME90013</value>
+    <comment>AppSettings Reading Error.</comment>
+  </data>
+  <data name="ME900132" xml:space="preserve">
+    <value>ME90013</value>
+    <comment>AppSettings Reading Error.</comment>
+  </data>
+  <data name="ME90014" xml:space="preserve">
+    <value>ME90014</value>
+    <comment>AppSettings Updating Error.</comment>
+  </data>
+  <data name="ME900141" xml:space="preserve">
+    <value>ME90014</value>
+    <comment>AppSettings Updating Error.</comment>
+  </data>
+  <data name="ME900142" xml:space="preserve">
+    <value>ME90014</value>
+    <comment>AppSettings Updating Error.</comment>
+  </data>
+  <data name="ME90015" xml:space="preserve">
+    <value>ME90015</value>
+    <comment>Client Version Data Scalar Value Selecting Error.</comment>
+  </data>
+  <data name="ME900151" xml:space="preserve">
+    <value>ME90015</value>
+    <comment>Client Version Data Scalar Value Selecting Error.</comment>
+  </data>
+  <data name="ME900152" xml:space="preserve">
+    <value>ME90015</value>
+    <comment>Client Version Data Scalar Value Selecting Error.</comment>
+  </data>
+  <data name="ME90016" xml:space="preserve">
+    <value>ME90016</value>
+    <comment>Client Version Data List Value Selecting Error.</comment>
+  </data>
+  <data name="ME900161" xml:space="preserve">
+    <value>ME90016</value>
+    <comment>Client Version Data List Value Selecting Error.</comment>
+  </data>
+  <data name="ME900162" xml:space="preserve">
+    <value>ME90016</value>
+    <comment>Client Version Data List Value Selecting Error.</comment>
+  </data>
+  <data name="ME90017" xml:space="preserve">
+    <value>ME90017</value>
+    <comment>Where clause and parameter value aren't compatible.</comment>
+  </data>
+  <data name="ME900171" xml:space="preserve">
+    <value>ME90017</value>
+    <comment>Where clause and parameter value aren't compatible.</comment>
+  </data>
+  <data name="ME900172" xml:space="preserve">
+    <value>ME90017</value>
+    <comment>Where clause and parameter value aren't compatible.</comment>
+  </data>
+  <data name="ME90018" xml:space="preserve">
+    <value>ME90018</value>
+    <comment>Invalid Parameter Value.</comment>
+  </data>
+  <data name="ME900181" xml:space="preserve">
+    <value>ME90018</value>
+    <comment>Invalid Parameter Value.</comment>
+  </data>
+  <data name="ME900182" xml:space="preserve">
+    <value>ME90018</value>
+    <comment>Invalid Parameter Value.</comment>
+  </data>
+  <data name="ME90019" xml:space="preserve">
+    <value>ME90019</value>
+    <comment>Invalid Parameter Count.</comment>
+  </data>
+  <data name="ME900191" xml:space="preserve">
+    <value>ME90019</value>
+    <comment>Invalid Parameter Count.</comment>
+  </data>
+  <data name="ME900192" xml:space="preserve">
+    <value>ME90019</value>
+    <comment>Invalid Parameter Count.</comment>
+  </data>
+  <data name="ME90020" xml:space="preserve">
+    <value>ME90020</value>
+    <comment>Empty FormatDefinition for this FormatCode.</comment>
+  </data>
+  <data name="ME900201" xml:space="preserve">
+    <value>ME90020</value>
+    <comment>Empty FormatDefinition for this FormatCode.</comment>
+  </data>
+  <data name="ME900202" xml:space="preserve">
+    <value>ME90020</value>
+    <comment>Empty FormatDefinition for this FormatCode.</comment>
+  </data>
+  <data name="ME90021" xml:space="preserve">
+    <value>ME90021</value>
+    <comment>Invalid FormatCode.</comment>
+  </data>
+  <data name="ME900211" xml:space="preserve">
+    <value>ME90021</value>
+    <comment>Invalid FormatCode.</comment>
+  </data>
+  <data name="ME900212" xml:space="preserve">
+    <value>ME90021</value>
+    <comment>Invalid FormatCode.</comment>
+  </data>
+  <data name="ME90022" xml:space="preserve">
+    <value>ME90022</value>
+    <comment>Code Generating Error.</comment>
+  </data>
+  <data name="ME900221" xml:space="preserve">
+    <value>ME90022</value>
+    <comment>Code Generating Error.</comment>
+  </data>
+  <data name="ME900222" xml:space="preserve">
+    <value>ME90022</value>
+    <comment>Code Generating Error.</comment>
+  </data>
+  <data name="ME90023" xml:space="preserve">
+    <value>ME90023</value>
+    <comment>Serial Number Calculating Error.</comment>
+  </data>
+  <data name="ME900231" xml:space="preserve">
+    <value>ME90023</value>
+    <comment>Serial Number Calculating Error.</comment>
+  </data>
+  <data name="ME900232" xml:space="preserve">
+    <value>ME90023</value>
+    <comment>Serial Number Calculating Error.</comment>
+  </data>
+  <data name="ME90024" xml:space="preserve">
+    <value>ME90024</value>
+    <comment>Maximum serial number updating Error.</comment>
+  </data>
+  <data name="ME900241" xml:space="preserve">
+    <value>ME90024</value>
+    <comment>Maximum serial number updating Error.</comment>
+  </data>
+  <data name="ME900242" xml:space="preserve">
+    <value>ME90024</value>
+    <comment>Maximum serial number updating Error.</comment>
+  </data>
+  <data name="ME90025" xml:space="preserve">
+    <value>ME90025</value>
+    <comment>Message Description Reading Error.</comment>
+  </data>
+  <data name="ME900251" xml:space="preserve">
+    <value>ME90025</value>
+    <comment>Message Description Reading Error.</comment>
+  </data>
+  <data name="ME900252" xml:space="preserve">
+    <value>ME90025</value>
+    <comment>Message Description Reading Error.</comment>
+  </data>
+  <data name="ME90026" xml:space="preserve">
+    <value>ME90026</value>
+    <comment>Server Header Data Receiving Error.</comment>
+  </data>
+  <data name="ME900261" xml:space="preserve">
+    <value>ME90026</value>
+    <comment>Server Header Data Receiving Error.</comment>
+  </data>
+  <data name="ME900262" xml:space="preserve">
+    <value>ME90026</value>
+    <comment>Server Header Data Receiving Error.</comment>
+  </data>
+  <data name="ME90027" xml:space="preserve">
+    <value>ME90027</value>
+    <comment>Server Body Data Receiving Error.</comment>
+  </data>
+  <data name="ME900271" xml:space="preserve">
+    <value>ME90027</value>
+    <comment>Server Body Data Receiving Error.</comment>
+  </data>
+  <data name="ME900272" xml:space="preserve">
+    <value>ME90027</value>
+    <comment>Server Body Data Receiving Error.</comment>
+  </data>
+  <data name="ME90028" xml:space="preserve">
+    <value>ME90028</value>
+    <comment>Server Sending Error.</comment>
+  </data>
+  <data name="ME900281" xml:space="preserve">
+    <value>ME90028</value>
+    <comment>Server Sending Error.</comment>
+  </data>
+  <data name="ME900282" xml:space="preserve">
+    <value>ME90028</value>
+    <comment>Server Sending Error.</comment>
+  </data>
+  <data name="ME90029" xml:space="preserve">
+    <value>ME90029</value>
+    <comment>Data Length Limit Exceed.</comment>
+  </data>
+  <data name="ME900291" xml:space="preserve">
+    <value>ME90029</value>
+    <comment>Data Length Limit Exceed.</comment>
+  </data>
+  <data name="ME900292" xml:space="preserve">
+    <value>ME90029</value>
+    <comment>Data Length Limit Exceed.</comment>
+  </data>
+  <data name="ME90030" xml:space="preserve">
+    <value>ME90030</value>
+    <comment>Column Count miss match for this Row.</comment>
+  </data>
+  <data name="ME900301" xml:space="preserve">
+    <value>ME90030</value>
+    <comment>Column Count miss match for this Row.</comment>
+  </data>
+  <data name="ME900302" xml:space="preserve">
+    <value>ME90030</value>
+    <comment>Column Count miss match for this Row.</comment>
+  </data>
+  <data name="ME90031" xml:space="preserve">
+    <value>ME90031</value>
+    <comment>No Printing Format for this line.</comment>
+  </data>
+  <data name="ME900311" xml:space="preserve">
+    <value>ME90031</value>
+    <comment>No Printing Format for this line.</comment>
+  </data>
+  <data name="ME900312" xml:space="preserve">
+    <value>ME90031</value>
+    <comment>No Printing Format for this line.</comment>
+  </data>
+  <data name="ME90032" xml:space="preserve">
+    <value>ME90032</value>
+    <comment>No Printing Format for this data.</comment>
+  </data>
+  <data name="ME900321" xml:space="preserve">
+    <value>ME90032</value>
+    <comment>No Printing Format for this data.</comment>
+  </data>
+  <data name="ME900322" xml:space="preserve">
+    <value>ME90032</value>
+    <comment>No Printing Format for this data.</comment>
+  </data>
+  <data name="ME90033" xml:space="preserve">
+    <value>ME90033</value>
+    <comment>No Data for Report.</comment>
+  </data>
+  <data name="ME900331" xml:space="preserve">
+    <value>ME90033</value>
+    <comment>No Data for Report.</comment>
+  </data>
+  <data name="ME900332" xml:space="preserve">
+    <value>ME90033</value>
+    <comment>No Data for Report.</comment>
+  </data>
+  <data name="ME90034" xml:space="preserve">
+    <value>ME90034</value>
+    <comment>Invalid Printing Parameter Value.</comment>
+  </data>
+  <data name="ME900341" xml:space="preserve">
+    <value>ME90034</value>
+    <comment>Invalid Printing Parameter Value.</comment>
+  </data>
+  <data name="ME900342" xml:space="preserve">
+    <value>ME90034</value>
+    <comment>Invalid Printing Parameter Value.</comment>
+  </data>
+  <data name="ME90035" xml:space="preserve">
+    <value>ME90035</value>
+    <comment>Column Count miss match.</comment>
+  </data>
+  <data name="ME900351" xml:space="preserve">
+    <value>ME90035</value>
+    <comment>Column Count miss match.</comment>
+  </data>
+  <data name="ME900352" xml:space="preserve">
+    <value>ME90035</value>
+    <comment>Column Count miss match.</comment>
+  </data>
+  <data name="ME90036" xml:space="preserve">
+    <value>ME90036</value>
+    <comment>Error Occur!!! Please contact your administrator.</comment>
+  </data>
+  <data name="ME900361" xml:space="preserve">
+    <value>ME90036</value>
+    <comment>Error Occur!!! Please contact your administrator.</comment>
+  </data>
+  <data name="ME900362" xml:space="preserve">
+    <value>ME90036</value>
+    <comment>Error Occur!!! Please contact your administrator.</comment>
+  </data>
+  <data name="ME90037" xml:space="preserve">
+    <value>ME90037</value>
+    <comment>Connection Error Occur.</comment>
+  </data>
+  <data name="ME900371" xml:space="preserve">
+    <value>ME90037</value>
+    <comment>Connection Error Occur.</comment>
+  </data>
+  <data name="ME900372" xml:space="preserve">
+    <value>ME90037</value>
+    <comment>Connection Error Occur.</comment>
+  </data>
+  <data name="ME90038" xml:space="preserve">
+    <value>ME90038</value>
+    <comment>Connection TimeOut.</comment>
+  </data>
+  <data name="ME900381" xml:space="preserve">
+    <value>ME90038</value>
+    <comment>Connection TimeOut.</comment>
+  </data>
+  <data name="ME900382" xml:space="preserve">
+    <value>ME90038</value>
+    <comment>Connection TimeOut.</comment>
+  </data>
+  <data name="ME90039" xml:space="preserve">
+    <value>ME90039</value>
+    <comment>Database Error Occur.</comment>
+  </data>
+  <data name="ME900391" xml:space="preserve">
+    <value>ME90039</value>
+    <comment>Database Error Occur.</comment>
+  </data>
+  <data name="ME900392" xml:space="preserve">
+    <value>ME90039</value>
+    <comment>Database Error Occur.</comment>
+  </data>
+  <data name="ME90040" xml:space="preserve">
+    <value>ME90040</value>
+    <comment>Service Error Occur.</comment>
+  </data>
+  <data name="ME900401" xml:space="preserve">
+    <value>ME90040</value>
+    <comment>Service Error Occur.</comment>
+  </data>
+  <data name="ME900402" xml:space="preserve">
+    <value>ME90040</value>
+    <comment>Service Error Occur.</comment>
+  </data>
+  <data name="ME90041" xml:space="preserve">
+    <value>ME90041</value>
+    <comment>Configuration Error Occur.</comment>
+  </data>
+  <data name="ME900411" xml:space="preserve">
+    <value>ME90041</value>
+    <comment>Configuration Error Occur.</comment>
+  </data>
+  <data name="ME900412" xml:space="preserve">
+    <value>ME90041</value>
+    <comment>Configuration Error Occur.</comment>
+  </data>
+  <data name="ME90042" xml:space="preserve">
+    <value>ME90042</value>
+    <comment>Data Access Error Occur.</comment>
+  </data>
+  <data name="ME900421" xml:space="preserve">
+    <value>ME90042</value>
+    <comment>Data Access Error Occur.</comment>
+  </data>
+  <data name="ME900422" xml:space="preserve">
+    <value>ME90042</value>
+    <comment>Data Access Error Occur.</comment>
+  </data>
+  <data name="ME90043" xml:space="preserve">
+    <value>ME90043</value>
+    <comment>Unexpected Error Occur.</comment>
+  </data>
+  <data name="ME900431" xml:space="preserve">
+    <value>ME90043</value>
+    <comment>Unexpected Error Occur.</comment>
+  </data>
+  <data name="ME900432" xml:space="preserve">
+    <value>ME90043</value>
+    <comment>Unexpected Error Occur.</comment>
+  </data>
+  <data name="ME90044" xml:space="preserve">
+    <value>ME90044</value>
+    <comment>There is no update folder for that version.</comment>
+  </data>
+  <data name="ME900441" xml:space="preserve">
+    <value>ME90044</value>
+    <comment>There is no update folder for that version.</comment>
+  </data>
+  <data name="ME900442" xml:space="preserve">
+    <value>ME90044</value>
+    <comment>There is no update folder for that version.</comment>
+  </data>
+  <data name="ME90045" xml:space="preserve">
+    <value>ME90045</value>
+    <comment>There is no update file for that version.</comment>
+  </data>
+  <data name="ME900451" xml:space="preserve">
+    <value>ME90045</value>
+    <comment>There is no update file for that version.</comment>
+  </data>
+  <data name="ME900452" xml:space="preserve">
+    <value>ME90045</value>
+    <comment>There is no update file for that version.</comment>
+  </data>
+  <data name="MI00001" xml:space="preserve">
+    <value>MI00001</value>
+    <comment>Generated Customer ID is {0}.</comment>
+  </data>
+  <data name="MI000011" xml:space="preserve">
+    <value>MI00001</value>
+    <comment>Generated Customer ID is {0}.</comment>
+  </data>
+  <data name="MI000012" xml:space="preserve">
+    <value>MI00001</value>
+    <comment>Generated Customer ID is {0}.</comment>
+  </data>
+  <data name="MI00002" xml:space="preserve">
+    <value>MI00002</value>
+    <comment>Total records {0} found.But show {1} records in grid view.</comment>
+  </data>
+  <data name="MI000021" xml:space="preserve">
+    <value>MI00002</value>
+    <comment>Total records {0} found.But show {1} records in grid view.</comment>
+  </data>
+  <data name="MI000022" xml:space="preserve">
+    <value>MI00002</value>
+    <comment>Total records {0} found.But show {1} records in grid view.</comment>
+  </data>
+  <data name="MI00003" xml:space="preserve">
+    <value>MI00003</value>
+    <comment>Generated Account No.....{0}</comment>
+  </data>
+  <data name="MI000031" xml:space="preserve">
+    <value>MI00003</value>
+    <comment>Generated Account No.....{0}</comment>
+  </data>
+  <data name="MI000032" xml:space="preserve">
+    <value>MI00003</value>
+    <comment>Generated Account No.....{0}</comment>
+  </data>
+  <data name="MI00004" xml:space="preserve">
+    <value>MI00004</value>
+    <comment>Generated Receipt No.....{0}.</comment>
+  </data>
+  <data name="MI000041" xml:space="preserve">
+    <value>MI00004</value>
+    <comment>Generated Receipt No.....{0}.</comment>
+  </data>
+  <data name="MI000042" xml:space="preserve">
+    <value>MI00004</value>
+    <comment>Generated Receipt No.....{0}.</comment>
+  </data>
+  <data name="MI00005" xml:space="preserve">
+    <value>MI00005</value>
+    <comment>Please verify your old Password.</comment>
+  </data>
+  <data name="MI000051" xml:space="preserve">
+    <value>MI00005</value>
+    <comment>Please verify your old Password.</comment>
+  </data>
+  <data name="MI000052" xml:space="preserve">
+    <value>MI00005</value>
+    <comment>Please verify your old Password.</comment>
+  </data>
+  <data name="MI00006" xml:space="preserve">
+    <value>MI00006</value>
+    <comment>Account  No ({0}) has been successfully closed.</comment>
+  </data>
+  <data name="MI000061" xml:space="preserve">
+    <value>MI00006</value>
+    <comment>Account  No ({0}) has been successfully closed.</comment>
+  </data>
+  <data name="MI000062" xml:space="preserve">
+    <value>MI00006</value>
+    <comment>Account  No ({0}) has been successfully closed.</comment>
+  </data>
+  <data name="MI00007" xml:space="preserve">
+    <value>MI00007</value>
+    <comment>Total Printing {0} for Account No {1}{2}{3}</comment>
+  </data>
+  <data name="MI000071" xml:space="preserve">
+    <value>MI00007</value>
+    <comment>Total Printing {0} for Account No {1}{2}{3}</comment>
+  </data>
+  <data name="MI000072" xml:space="preserve">
+    <value>MI00007</value>
+    <comment>Total Printing {0} for Account No {1}{2}{3}</comment>
+  </data>
+  <data name="MI00008" xml:space="preserve">
+    <value>MI00008</value>
+    <comment>Printed Line Deleting Failure.Please Try Again!</comment>
+  </data>
+  <data name="MI000081" xml:space="preserve">
+    <value>MI00008</value>
+    <comment>Printed Line Deleting Failure.Please Try Again!</comment>
+  </data>
+  <data name="MI000082" xml:space="preserve">
+    <value>MI00008</value>
+    <comment>Printed Line Deleting Failure.Please Try Again!</comment>
+  </data>
+  <data name="MI00009" xml:space="preserve">
+    <value>MI00009</value>
+    <comment>Print Line No Updating Failure.Please Try Again!</comment>
+  </data>
+  <data name="MI000091" xml:space="preserve">
+    <value>MI00009</value>
+    <comment>Print Line No Updating Failure.Please Try Again!</comment>
+  </data>
+  <data name="MI000092" xml:space="preserve">
+    <value>MI00009</value>
+    <comment>Print Line No Updating Failure.Please Try Again!</comment>
+  </data>
+  <data name="MI00010" xml:space="preserve">
+    <value>MI00010</value>
+    <comment>Do Not Printing at this Time.</comment>
+  </data>
+  <data name="MI000101" xml:space="preserve">
+    <value>MI00010</value>
+    <comment>Do Not Printing at this Time.</comment>
+  </data>
+  <data name="MI000102" xml:space="preserve">
+    <value>MI00010</value>
+    <comment>Do Not Printing at this Time.</comment>
+  </data>
+  <data name="MI00011" xml:space="preserve">
+    <value>MI00011</value>
+    <comment>Do Not Saving at this Time.</comment>
+  </data>
+  <data name="MI000111" xml:space="preserve">
+    <value>MI00011</value>
+    <comment>Do Not Saving at this Time.</comment>
+  </data>
+  <data name="MI000112" xml:space="preserve">
+    <value>MI00011</value>
+    <comment>Do Not Saving at this Time.</comment>
+  </data>
+  <data name="MI00013" xml:space="preserve">
+    <value>MI00013</value>
+    <comment>No Rate For this Currency.</comment>
+  </data>
+  <data name="MI000131" xml:space="preserve">
+    <value>MI00013</value>
+    <comment>No Rate For this Currency.</comment>
+  </data>
+  <data name="MI000132" xml:space="preserve">
+    <value>MI00013</value>
+    <comment>No Rate For this Currency.</comment>
+  </data>
+  <data name="MI00017" xml:space="preserve">
+    <value>MI00017</value>
+    <comment>Please insert passbook for {0}.</comment>
+  </data>
+  <data name="MI000171" xml:space="preserve">
+    <value>MI00017</value>
+    <comment>Please insert passbook for {0}.</comment>
+  </data>
+  <data name="MI000172" xml:space="preserve">
+    <value>MI00017</value>
+    <comment>Please insert passbook for {0}.</comment>
+  </data>
+  <data name="MI00018" xml:space="preserve">
+    <value>MI00018</value>
+    <comment>Transaction is Limitted.</comment>
+  </data>
+  <data name="MI000181" xml:space="preserve">
+    <value>MI00018</value>
+    <comment>Transaction is Limitted.</comment>
+  </data>
+  <data name="MI000182" xml:space="preserve">
+    <value>MI00018</value>
+    <comment>Transaction is Limitted.</comment>
+  </data>
+  <data name="MI00023" xml:space="preserve">
+    <value>MI00023</value>
+    <comment>Last Withdraw is already finished.</comment>
+  </data>
+  <data name="MI000231" xml:space="preserve">
+    <value>MI00023</value>
+    <comment>Last Withdraw is already finished.</comment>
+  </data>
+  <data name="MI000232" xml:space="preserve">
+    <value>MI00023</value>
+    <comment>Last Withdraw is already finished.</comment>
+  </data>
+  <data name="MI00027" xml:space="preserve">
+    <value>MI00027</value>
+    <comment>Pay Slip No. is --&gt; {0}.</comment>
+  </data>
+  <data name="MI000271" xml:space="preserve">
+    <value>MI00027</value>
+    <comment>Pay Slip No. is --&gt; {0}.</comment>
+  </data>
+  <data name="MI000272" xml:space="preserve">
+    <value>MI00027</value>
+    <comment>Pay Slip No. is --&gt; {0}.</comment>
+  </data>
+  <data name="MI00033" xml:space="preserve">
+    <value>MI00033</value>
+    <comment>P.O Refund Process is Successfully finished. Generated Voucher No is {0}.</comment>
+  </data>
+  <data name="MI000331" xml:space="preserve">
+    <value>MI00033</value>
+    <comment>P.O Refund Process is Successfully finished. Generated Voucher No is {0}.</comment>
+  </data>
+  <data name="MI000332" xml:space="preserve">
+    <value>MI00033</value>
+    <comment>P.O Refund Process is Successfully finished. Generated Voucher No is {0}.</comment>
+  </data>
+  <data name="MI00038" xml:space="preserve">
+    <value>MI00038</value>
+    <comment>Clearing Voucher No. {0} is Saving Successfully.</comment>
+  </data>
+  <data name="MI000381" xml:space="preserve">
+    <value>MI00038</value>
+    <comment>Clearing Voucher No. {0} is Saving Successfully.</comment>
+  </data>
+  <data name="MI000382" xml:space="preserve">
+    <value>MI00038</value>
+    <comment>Clearing Voucher No. {0} is Saving Successfully.</comment>
+  </data>
+  <data name="MI00044" xml:space="preserve">
+    <value>MI00044</value>
+    <comment>No Cashier Entry No is selected.</comment>
+  </data>
+  <data name="MI000441" xml:space="preserve">
+    <value>MI00044</value>
+    <comment>No Cashier Entry No is selected.</comment>
+  </data>
+  <data name="MI000442" xml:space="preserve">
+    <value>MI00044</value>
+    <comment>No Cashier Entry No is selected.</comment>
+  </data>
+  <data name="MI00045" xml:space="preserve">
+    <value>MI00045</value>
+    <comment>Approved amount are successfully deposit to center table.</comment>
+  </data>
+  <data name="MI000451" xml:space="preserve">
+    <value>MI00045</value>
+    <comment>Approved amount are successfully deposit to center table.</comment>
+  </data>
+  <data name="MI000452" xml:space="preserve">
+    <value>MI00045</value>
+    <comment>Approved amount are successfully deposit to center table.</comment>
+  </data>
+  <data name="MI00047" xml:space="preserve">
+    <value>MI00047</value>
+    <comment>No transactions to print.</comment>
+  </data>
+  <data name="MI000471" xml:space="preserve">
+    <value>MI00047</value>
+    <comment>No transactions to print.</comment>
+  </data>
+  <data name="MI000472" xml:space="preserve">
+    <value>MI00047</value>
+    <comment>No transactions to print.</comment>
+  </data>
+  <data name="MI00051" xml:space="preserve">
+    <value>MI00051</value>
+    <comment>Saving Successful. Generated {0} is {1}.</comment>
+  </data>
+  <data name="MI000511" xml:space="preserve">
+    <value>MI00051</value>
+    <comment>Saving Successful. Generated {0} is {1}.</comment>
+  </data>
+  <data name="MI000512" xml:space="preserve">
+    <value>MI00051</value>
+    <comment>Saving Successful. Generated {0} is {1}.</comment>
+  </data>
+  <data name="MI00055" xml:space="preserve">
+    <value>MI00055</value>
+    <comment>There is no RegisterNo.</comment>
+  </data>
+  <data name="MI000551" xml:space="preserve">
+    <value>MI00055</value>
+    <comment>There is no RegisterNo.</comment>
+  </data>
+  <data name="MI000552" xml:space="preserve">
+    <value>MI00055</value>
+    <comment>There is no RegisterNo.</comment>
+  </data>
+  <data name="MI00058" xml:space="preserve">
+    <value>MI00058</value>
+    <comment>Insufficient Balance in Link Account.</comment>
+  </data>
+  <data name="MI000581" xml:space="preserve">
+    <value>MI00058</value>
+    <comment>Insufficient Balance in Link Account.</comment>
+  </data>
+  <data name="MI000582" xml:space="preserve">
+    <value>MI00058</value>
+    <comment>Insufficient Balance in Link Account.</comment>
+  </data>
+  <data name="MI00061" xml:space="preserve">
+    <value>MI00061</value>
+    <comment>Last Withdrawal Account.</comment>
+  </data>
+  <data name="MI00132" xml:space="preserve">
+    <value>MI00132</value>
+    <comment>This Voucher No {0} is already approved by other.</comment>
+  </data>
+  <data name="MI001321" xml:space="preserve">
+    <value>MI00132</value>
+    <comment>This Voucher No {0} is already approved by other.</comment>
+  </data>
+  <data name="MI001322" xml:space="preserve">
+    <value>MI00132</value>
+    <comment>This Voucher No {0} is already approved by other.</comment>
+  </data>
+  <data name="MI00142" xml:space="preserve">
+    <value>MI00142</value>
+    <comment>Service Charges have been calculated !</comment>
+  </data>
+  <data name="MI001421" xml:space="preserve">
+    <value>MI00142</value>
+    <comment>Service Charges have been calculated !</comment>
+  </data>
+  <data name="MI001422" xml:space="preserve">
+    <value>MI00142</value>
+    <comment>Service Charges have been calculated !</comment>
+  </data>
+  <data name="MI30001" xml:space="preserve">
+    <value>MI30001</value>
+    <comment>No need to run yearly posting.Please contact your system adminisrator.</comment>
+  </data>
+  <data name="MI300011" xml:space="preserve">
+    <value>MI30001</value>
+    <comment>No need to run yearly posting.Please contact your system adminisrator.</comment>
+  </data>
+  <data name="MI300012" xml:space="preserve">
+    <value>MI30001</value>
+    <comment>No need to run yearly posting.Please contact your system adminisrator.</comment>
+  </data>
+  <data name="MI30002" xml:space="preserve">
+    <value>MI30002</value>
+    <comment>Yearly posting is successfully finished.</comment>
+  </data>
+  <data name="MI300021" xml:space="preserve">
+    <value>MI30002</value>
+    <comment>Yearly posting is successfully finished.</comment>
+  </data>
+  <data name="MI300022" xml:space="preserve">
+    <value>MI30002</value>
+    <comment>Yearly posting is successfully finished.</comment>
+  </data>
+  <data name="MI30003" xml:space="preserve">
+    <value>MI30003</value>
+    <comment>Please post balances for the year first.</comment>
+  </data>
+  <data name="MI300031" xml:space="preserve">
+    <value>MI30003</value>
+    <comment>Please post balances for the year first.</comment>
+  </data>
+  <data name="MI300032" xml:space="preserve">
+    <value>MI30003</value>
+    <comment>Please post balances for the year first.</comment>
+  </data>
+  <data name="MI30004" xml:space="preserve">
+    <value>MI30004</value>
+    <comment>Yearly posting is already finished.Please contact your administrator.</comment>
+  </data>
+  <data name="MI300041" xml:space="preserve">
+    <value>MI30004</value>
+    <comment>Yearly posting is already finished.Please contact your administrator.</comment>
+  </data>
+  <data name="MI300042" xml:space="preserve">
+    <value>MI30004</value>
+    <comment>Yearly posting is already finished.Please contact your administrator.</comment>
+  </data>
+  <data name="MI30039" xml:space="preserve">
+    <value>MI30039</value>
+    <comment>Please add data before save.</comment>
+  </data>
+  <data name="MI300391" xml:space="preserve">
+    <value>MI30039</value>
+    <comment>Please add data before save.</comment>
+  </data>
+  <data name="MI300392" xml:space="preserve">
+    <value>MI30039</value>
+    <comment>Please add data before save.</comment>
+  </data>
+  <data name="MI30042" xml:space="preserve">
+    <value>MI30042</value>
+    <comment>PO Refund By Transfer is Successfully Finished.</comment>
+  </data>
+  <data name="MI50003" xml:space="preserve">
+    <value>MI50003</value>
+    <comment>Generated Account No is {0}.</comment>
+  </data>
+  <data name="MI500031" xml:space="preserve">
+    <value>MI50003</value>
+    <comment>Generated Account No is {0}.</comment>
+  </data>
+  <data name="MI500032" xml:space="preserve">
+    <value>MI50003</value>
+    <comment>Generated Account No is {0}.</comment>
+  </data>
+  <data name="MI50004" xml:space="preserve">
+    <value>MI50004</value>
+    <comment>Start Up Successfully Finished.</comment>
+  </data>
+  <data name="MI500041" xml:space="preserve">
+    <value>MI50004</value>
+    <comment>Start Up Successfully Finished.</comment>
+  </data>
+  <data name="MI500042" xml:space="preserve">
+    <value>MI50004</value>
+    <comment>Start Up Successfully Finished.</comment>
+  </data>
+  <data name="MI50005" xml:space="preserve">
+    <value>MI50005</value>
+    <comment>No Record to Calculate for Hire Purchase.</comment>
+  </data>
+  <data name="MI500051" xml:space="preserve">
+    <value>MI50005</value>
+    <comment>No Record to Calculate for Hire Purchase.</comment>
+  </data>
+  <data name="MI500052" xml:space="preserve">
+    <value>MI50005</value>
+    <comment>No Record to Calculate for Hire Purchase.</comment>
+  </data>
+  <data name="MI50006" xml:space="preserve">
+    <value>MI50006</value>
+    <comment>Shutdown Process Successfully Finished!</comment>
+  </data>
+  <data name="MI500061" xml:space="preserve">
+    <value>MI50006</value>
+    <comment>Shutdown Process Successfully Finished!</comment>
+  </data>
+  <data name="MI500062" xml:space="preserve">
+    <value>MI50006</value>
+    <comment>Shutdown Process Successfully Finished!</comment>
+  </data>
+  <data name="MI90001" xml:space="preserve">
+    <value>MI90001</value>
+    <comment>Saving successful.</comment>
+  </data>
+  <data name="MI900011" xml:space="preserve">
+    <value>MI90001</value>
+    <comment>Saving successful.</comment>
+  </data>
+  <data name="MI900012" xml:space="preserve">
+    <value>MI90001</value>
+    <comment>Saving successful.</comment>
+  </data>
+  <data name="MI90002" xml:space="preserve">
+    <value>MI90002</value>
+    <comment>Update Successful.</comment>
+  </data>
+  <data name="MI900021" xml:space="preserve">
+    <value>MI90002</value>
+    <comment>Update Successful.</comment>
+  </data>
+  <data name="MI900022" xml:space="preserve">
+    <value>MI90002</value>
+    <comment>Update Successful.</comment>
+  </data>
+  <data name="MI90003" xml:space="preserve">
+    <value>MI90003</value>
+    <comment>Delete Successful.</comment>
+  </data>
+  <data name="MI900031" xml:space="preserve">
+    <value>MI90003</value>
+    <comment>Delete Successful.</comment>
+  </data>
+  <data name="MI900032" xml:space="preserve">
+    <value>MI90003</value>
+    <comment>Delete Successful.</comment>
+  </data>
+  <data name="MI90009" xml:space="preserve">
+    <value>MI90009</value>
+    <comment>Processing Successful</comment>
+  </data>
+  <data name="MI900091" xml:space="preserve">
+    <value>MI90009</value>
+    <comment>Processing Successful</comment>
+  </data>
+  <data name="MV00001" xml:space="preserve">
+    <value>MV00001</value>
+    <comment>Invalid Initial.</comment>
+  </data>
+  <data name="MV000011" xml:space="preserve">
+    <value>MV00001</value>
+    <comment>Invalid Initial.</comment>
+  </data>
+  <data name="MV000012" xml:space="preserve">
+    <value>MV00001</value>
+    <comment>Invalid Initial.</comment>
+  </data>
+  <data name="MV00002" xml:space="preserve">
+    <value>MV00002</value>
+    <comment>Invalid Name.</comment>
+  </data>
+  <data name="MV000021" xml:space="preserve">
+    <value>MV00002</value>
+    <comment>Invalid Name.</comment>
+  </data>
+  <data name="MV000022" xml:space="preserve">
+    <value>MV00002</value>
+    <comment>Invalid Name.</comment>
+  </data>
+  <data name="MV00003" xml:space="preserve">
+    <value>MV00003</value>
+    <comment>Invalid Nationality.</comment>
+  </data>
+  <data name="MV000031" xml:space="preserve">
+    <value>MV00003</value>
+    <comment>Invalid Nationality.</comment>
+  </data>
+  <data name="MV000032" xml:space="preserve">
+    <value>MV00003</value>
+    <comment>Invalid Nationality.</comment>
+  </data>
+  <data name="MV00004" xml:space="preserve">
+    <value>MV00004</value>
+    <comment>Invalid NRC No.</comment>
+  </data>
+  <data name="MV000041" xml:space="preserve">
+    <value>MV00004</value>
+    <comment>Invalid NRC No.</comment>
+  </data>
+  <data name="MV000042" xml:space="preserve">
+    <value>MV00004</value>
+    <comment>Invalid NRC No.</comment>
+  </data>
+  <data name="MV00005" xml:space="preserve">
+    <value>MV00005</value>
+    <comment>Invalid Father Name.</comment>
+  </data>
+  <data name="MV000051" xml:space="preserve">
+    <value>MV00005</value>
+    <comment>Invalid Father Name.</comment>
+  </data>
+  <data name="MV000052" xml:space="preserve">
+    <value>MV00005</value>
+    <comment>Invalid Father Name.</comment>
+  </data>
+  <data name="MV00006" xml:space="preserve">
+    <value>MV00006</value>
+    <comment>Invalid Occupation.</comment>
+  </data>
+  <data name="MV000061" xml:space="preserve">
+    <value>MV00006</value>
+    <comment>Invalid Occupation.</comment>
+  </data>
+  <data name="MV000062" xml:space="preserve">
+    <value>MV00006</value>
+    <comment>Invalid Occupation.</comment>
+  </data>
+  <data name="MV00007" xml:space="preserve">
+    <value>MV00007</value>
+    <comment>Invalid City.</comment>
+  </data>
+  <data name="MV000071" xml:space="preserve">
+    <value>MV00007</value>
+    <comment>Invalid City.</comment>
+  </data>
+  <data name="MV000072" xml:space="preserve">
+    <value>MV00007</value>
+    <comment>Invalid City.</comment>
+  </data>
+  <data name="MV00008" xml:space="preserve">
+    <value>MV00008</value>
+    <comment>Invalid Township.</comment>
+  </data>
+  <data name="MV000081" xml:space="preserve">
+    <value>MV00008</value>
+    <comment>Invalid Township.</comment>
+  </data>
+  <data name="MV000082" xml:space="preserve">
+    <value>MV00008</value>
+    <comment>Invalid Township.</comment>
+  </data>
+  <data name="MV00009" xml:space="preserve">
+    <value>MV00009</value>
+    <comment>Invalid State.</comment>
+  </data>
+  <data name="MV000091" xml:space="preserve">
+    <value>MV00009</value>
+    <comment>Invalid State.</comment>
+  </data>
+  <data name="MV000092" xml:space="preserve">
+    <value>MV00009</value>
+    <comment>Invalid State.</comment>
+  </data>
+  <data name="MV00010" xml:space="preserve">
+    <value>MV00010</value>
+    <comment>Invalid Address.</comment>
+  </data>
+  <data name="MV000101" xml:space="preserve">
+    <value>MV00010</value>
+    <comment>Invalid Address.</comment>
+  </data>
+  <data name="MV000102" xml:space="preserve">
+    <value>MV00010</value>
+    <comment>Invalid Address.</comment>
+  </data>
+  <data name="MV00011" xml:space="preserve">
+    <value>MV00011</value>
+    <comment>Invalid Phone No.</comment>
+  </data>
+  <data name="MV000111" xml:space="preserve">
+    <value>MV00011</value>
+    <comment>Invalid Phone No.</comment>
+  </data>
+  <data name="MV000112" xml:space="preserve">
+    <value>MV00011</value>
+    <comment>Invalid Phone No.</comment>
+  </data>
+  <data name="MV00012" xml:space="preserve">
+    <value>MV00012</value>
+    <comment>Invalid Gender</comment>
+  </data>
+  <data name="MV000121" xml:space="preserve">
+    <value>MV00012</value>
+    <comment>Invalid Gender.</comment>
+  </data>
+  <data name="MV000122" xml:space="preserve">
+    <value>MV00012</value>
+    <comment>Invalid Gender.</comment>
+  </data>
+  <data name="MV00013" xml:space="preserve">
+    <value>MV00013</value>
+    <comment>Invalid Guardian Ship's NRC No.</comment>
+  </data>
+  <data name="MV000131" xml:space="preserve">
+    <value>MV00013</value>
+    <comment>Invalid Guardian Ship's NRC No.</comment>
+  </data>
+  <data name="MV000132" xml:space="preserve">
+    <value>MV00013</value>
+    <comment>Invalid Guardian Ship's NRC No.</comment>
+  </data>
+  <data name="MV00014" xml:space="preserve">
+    <value>MV00014</value>
+    <comment>Invalid Guardianship's Name.</comment>
+  </data>
+  <data name="MV000141" xml:space="preserve">
+    <value>MV00014</value>
+    <comment>Invalid Guardianship's Name.</comment>
+  </data>
+  <data name="MV000142" xml:space="preserve">
+    <value>MV00014</value>
+    <comment>Invalid Guardianship's Name.</comment>
+  </data>
+  <data name="MV00015" xml:space="preserve">
+    <value>MV00015</value>
+    <comment>Duplicated NRC No.</comment>
+  </data>
+  <data name="MV000151" xml:space="preserve">
+    <value>MV00015</value>
+    <comment>Duplicated NRC No.</comment>
+  </data>
+  <data name="MV000152" xml:space="preserve">
+    <value>MV00015</value>
+    <comment>Duplicated NRC No.</comment>
+  </data>
+  <data name="MV00016" xml:space="preserve">
+    <value>MV00016</value>
+    <comment>Invalid Customer Id.</comment>
+  </data>
+  <data name="MV000161" xml:space="preserve">
+    <value>MV00016</value>
+    <comment>Invalid Customer Id.</comment>
+  </data>
+  <data name="MV000162" xml:space="preserve">
+    <value>MV00016</value>
+    <comment>Invalid Customer Id.</comment>
+  </data>
+  <data name="MV00017" xml:space="preserve">
+    <value>MV00017</value>
+    <comment>Date of Birth must be less than today date.</comment>
+  </data>
+  <data name="MV000171" xml:space="preserve">
+    <value>MV00017</value>
+    <comment>Date of Birth must be less than today date.</comment>
+  </data>
+  <data name="MV000172" xml:space="preserve">
+    <value>MV00017</value>
+    <comment>Date of Birth must be less than today date.</comment>
+  </data>
+  <data name="MV00018" xml:space="preserve">
+    <value>MV00018</value>
+    <comment>Invalid file format.Please re-choose again!</comment>
+  </data>
+  <data name="MV000181" xml:space="preserve">
+    <value>MV00018</value>
+    <comment>Invalid file format.Please re-choose again!</comment>
+  </data>
+  <data name="MV000182" xml:space="preserve">
+    <value>MV00018</value>
+    <comment>Invalid file format.Please re-choose again!</comment>
+  </data>
+  <data name="MV00019" xml:space="preserve">
+    <value>MV00019</value>
+    <comment>Customer not found.</comment>
+  </data>
+  <data name="MV000191" xml:space="preserve">
+    <value>MV00019</value>
+    <comment>Customer not found.</comment>
+  </data>
+  <data name="MV000192" xml:space="preserve">
+    <value>MV00019</value>
+    <comment>Customer not found.</comment>
+  </data>
+  <data name="MV00020" xml:space="preserve">
+    <value>MV00020</value>
+    <comment>Invalid Currency Code.</comment>
+  </data>
+  <data name="MV000201" xml:space="preserve">
+    <value>MV00020</value>
+    <comment>Invalid Currency Code.</comment>
+  </data>
+  <data name="MV000202" xml:space="preserve">
+    <value>MV00020</value>
+    <comment>Invalid Currency Code.</comment>
+  </data>
+  <data name="MV00021" xml:space="preserve">
+    <value>MV00021</value>
+    <comment>Invalid Business.</comment>
+  </data>
+  <data name="MV000211" xml:space="preserve">
+    <value>MV00021</value>
+    <comment>Invalid Business.</comment>
+  </data>
+  <data name="MV000212" xml:space="preserve">
+    <value>MV00021</value>
+    <comment>Invalid Business.</comment>
+  </data>
+  <data name="MV00022" xml:space="preserve">
+    <value>MV00022</value>
+    <comment>Invalid Receipt No.</comment>
+  </data>
+  <data name="MV000221" xml:space="preserve">
+    <value>MV00022</value>
+    <comment>Invalid Receipt No.</comment>
+  </data>
+  <data name="MV000222" xml:space="preserve">
+    <value>MV00022</value>
+    <comment>Invalid Receipt No.</comment>
+  </data>
+  <data name="MV00023" xml:space="preserve">
+    <value>MV00023</value>
+    <comment>Invalid Name of Firm.</comment>
+  </data>
+  <data name="MV000231" xml:space="preserve">
+    <value>MV00023</value>
+    <comment>Invalid Name of Firm.</comment>
+  </data>
+  <data name="MV000232" xml:space="preserve">
+    <value>MV00023</value>
+    <comment>Invalid Name of Firm.</comment>
+  </data>
+  <data name="MV00024" xml:space="preserve">
+    <value>MV00024</value>
+    <comment>Date of Birth should not be greater than 18.</comment>
+  </data>
+  <data name="MV000241" xml:space="preserve">
+    <value>MV00024</value>
+    <comment>Date of Birth should not be greater than 18.</comment>
+  </data>
+  <data name="MV000242" xml:space="preserve">
+    <value>MV00024</value>
+    <comment>Date of Birth should not be greater than 18.</comment>
+  </data>
+  <data name="MV00025" xml:space="preserve">
+    <value>MV00025</value>
+    <comment>Duplicate Cheque Book No or Cheque No. Please enter New Cheque Book No and Cheque No.</comment>
+  </data>
+  <data name="MV000251" xml:space="preserve">
+    <value>MV00025</value>
+    <comment>Duplicate Cheque Book No or Cheque No. Please enter New Cheque Book No and Cheque No.</comment>
+  </data>
+  <data name="MV000252" xml:space="preserve">
+    <value>MV00025</value>
+    <comment>Duplicate Cheque Book No or Cheque No. Please enter New Cheque Book No and Cheque No.</comment>
+  </data>
+  <data name="MV00026" xml:space="preserve">
+    <value>MV00026</value>
+    <comment>Invalid Debit Link AccountNo.</comment>
+  </data>
+  <data name="MV000261" xml:space="preserve">
+    <value>MV00026</value>
+    <comment>Invalid Debit Link AccountNo.</comment>
+  </data>
+  <data name="MV000262" xml:space="preserve">
+    <value>MV00026</value>
+    <comment>Invalid Debit Link AccountNo.</comment>
+  </data>
+  <data name="MV00027" xml:space="preserve">
+    <value>MV00027</value>
+    <comment>Invalid Link Limit Amount.</comment>
+  </data>
+  <data name="MV000271" xml:space="preserve">
+    <value>MV00027</value>
+    <comment>Invalid Link Limit Amount.</comment>
+  </data>
+  <data name="MV000272" xml:space="preserve">
+    <value>MV00027</value>
+    <comment>Invalid Link Limit Amount.</comment>
+  </data>
+  <data name="MV00028" xml:space="preserve">
+    <value>MV00028</value>
+    <comment>Invalid No of Person to Sign.</comment>
+  </data>
+  <data name="MV000281" xml:space="preserve">
+    <value>MV00028</value>
+    <comment>Invalid No of Person to Sign.</comment>
+  </data>
+  <data name="MV000282" xml:space="preserve">
+    <value>MV00028</value>
+    <comment>Invalid No of Person to Sign.</comment>
+  </data>
+  <data name="MV00029" xml:space="preserve">
+    <value>MV00029</value>
+    <comment>Duplicated Customer Id.</comment>
+  </data>
+  <data name="MV000291" xml:space="preserve">
+    <value>MV00029</value>
+    <comment>Duplicated Customer Id.</comment>
+  </data>
+  <data name="MV000292" xml:space="preserve">
+    <value>MV00029</value>
+    <comment>Duplicated Customer Id.</comment>
+  </data>
+  <data name="MV00030" xml:space="preserve">
+    <value>MV00030</value>
+    <comment>Invalid Email.</comment>
+  </data>
+  <data name="MV000301" xml:space="preserve">
+    <value>MV00030</value>
+    <comment>Invalid Email.</comment>
+  </data>
+  <data name="MV000302" xml:space="preserve">
+    <value>MV00030</value>
+    <comment>Invalid Email.</comment>
+  </data>
+  <data name="MV00031" xml:space="preserve">
+    <value>MV00031</value>
+    <comment>Invalid Fax.</comment>
+  </data>
+  <data name="MV000311" xml:space="preserve">
+    <value>MV00031</value>
+    <comment>Invalid Fax.</comment>
+  </data>
+  <data name="MV000312" xml:space="preserve">
+    <value>MV00031</value>
+    <comment>Invalid Fax.</comment>
+  </data>
+  <data name="MV00032" xml:space="preserve">
+    <value>MV00032</value>
+    <comment>This Account must at least two persons.</comment>
+  </data>
+  <data name="MV000321" xml:space="preserve">
+    <value>MV00032</value>
+    <comment>This Account must at least two persons.</comment>
+  </data>
+  <data name="MV000322" xml:space="preserve">
+    <value>MV00032</value>
+    <comment>This Account must at least two persons.</comment>
+  </data>
+  <data name="MV00033" xml:space="preserve">
+    <value>MV00033</value>
+    <comment>Invalid Fixed Account No.</comment>
+  </data>
+  <data name="MV000331" xml:space="preserve">
+    <value>MV00033</value>
+    <comment>Invalid Fixed Account No.</comment>
+  </data>
+  <data name="MV000332" xml:space="preserve">
+    <value>MV00033</value>
+    <comment>Invalid Fixed Account No.</comment>
+  </data>
+  <data name="MV00034" xml:space="preserve">
+    <value>MV00034</value>
+    <comment>Invalid Duration.</comment>
+  </data>
+  <data name="MV000341" xml:space="preserve">
+    <value>MV00034</value>
+    <comment>Invalid Duration.</comment>
+  </data>
+  <data name="MV000342" xml:space="preserve">
+    <value>MV00034</value>
+    <comment>Invalid Duration.</comment>
+  </data>
+  <data name="MV00035" xml:space="preserve">
+    <value>MV00035</value>
+    <comment>Invalid Interest Rate.</comment>
+  </data>
+  <data name="MV000351" xml:space="preserve">
+    <value>MV00035</value>
+    <comment>Invalid Interest Rate.</comment>
+  </data>
+  <data name="MV000352" xml:space="preserve">
+    <value>MV00035</value>
+    <comment>Invalid Interest Rate.</comment>
+  </data>
+  <data name="MV00036" xml:space="preserve">
+    <value>MV00036</value>
+    <comment>Invalid Interest Taken Account No</comment>
+  </data>
+  <data name="MV000361" xml:space="preserve">
+    <value>MV00036</value>
+    <comment>Invalid Interest Taken Account No</comment>
+  </data>
+  <data name="MV000362" xml:space="preserve">
+    <value>MV00036</value>
+    <comment>Invalid Interest Taken Account No</comment>
+  </data>
+  <data name="MV00037" xml:space="preserve">
+    <value>MV00037</value>
+    <comment>Invalid Amount.</comment>
+  </data>
+  <data name="MV000371" xml:space="preserve">
+    <value>MV00037</value>
+    <comment>Invalid Amount.</comment>
+  </data>
+  <data name="MV000372" xml:space="preserve">
+    <value>MV00037</value>
+    <comment>Invalid Amount.</comment>
+  </data>
+  <data name="MV00038" xml:space="preserve">
+    <value>MV00038</value>
+    <comment>Fixed Amount must be greater than minimum balance.</comment>
+  </data>
+  <data name="MV000381" xml:space="preserve">
+    <value>MV00038</value>
+    <comment>Fixed Amount must be greater than minimum balance.</comment>
+  </data>
+  <data name="MV000382" xml:space="preserve">
+    <value>MV00038</value>
+    <comment>Fixed Amount must be greater than minimum balance.</comment>
+  </data>
+  <data name="MV00039" xml:space="preserve">
+    <value>MV00039</value>
+    <comment>Invalid Authorized Name.</comment>
+  </data>
+  <data name="MV000391" xml:space="preserve">
+    <value>MV00039</value>
+    <comment>Invalid Authorized Name.</comment>
+  </data>
+  <data name="MV000392" xml:space="preserve">
+    <value>MV00039</value>
+    <comment>Invalid Authorized Name.</comment>
+  </data>
+  <data name="MV00040" xml:space="preserve">
+    <value>MV00040</value>
+    <comment>Invalid New Password</comment>
+  </data>
+  <data name="MV000401" xml:space="preserve">
+    <value>MV00040</value>
+    <comment>Invalid New Password</comment>
+  </data>
+  <data name="MV000402" xml:space="preserve">
+    <value>MV00040</value>
+    <comment>Invalid New Password</comment>
+  </data>
+  <data name="MV00041" xml:space="preserve">
+    <value>MV00041</value>
+    <comment>Invalid Confirm Password.</comment>
+  </data>
+  <data name="MV000411" xml:space="preserve">
+    <value>MV00041</value>
+    <comment>Invalid Confirm Password.</comment>
+  </data>
+  <data name="MV000412" xml:space="preserve">
+    <value>MV00041</value>
+    <comment>Invalid Confirm Password.</comment>
+  </data>
+  <data name="MV00042" xml:space="preserve">
+    <value>MV00042</value>
+    <comment>Password and Comfirm Password must equal</comment>
+  </data>
+  <data name="MV000421" xml:space="preserve">
+    <value>MV00042</value>
+    <comment>Password and Comfirm Password must equal</comment>
+  </data>
+  <data name="MV000422" xml:space="preserve">
+    <value>MV00042</value>
+    <comment>Password and Comfirm Password must equal</comment>
+  </data>
+  <data name="MV00043" xml:space="preserve">
+    <value>MV00043</value>
+    <comment>Invalid Password.</comment>
+  </data>
+  <data name="MV000431" xml:space="preserve">
+    <value>MV00043</value>
+    <comment>Invalid Password.</comment>
+  </data>
+  <data name="MV000432" xml:space="preserve">
+    <value>MV00043</value>
+    <comment>Invalid Password.</comment>
+  </data>
+  <data name="MV00044" xml:space="preserve">
+    <value>MV00044</value>
+    <comment>Account No has been closed.</comment>
+  </data>
+  <data name="MV000441" xml:space="preserve">
+    <value>MV00044</value>
+    <comment>Account No has been closed.</comment>
+  </data>
+  <data name="MV000442" xml:space="preserve">
+    <value>MV00044</value>
+    <comment>Account No has been closed.</comment>
+  </data>
+  <data name="MV00045" xml:space="preserve">
+    <value>MV00045</value>
+    <comment>Invalid Print Line No.</comment>
+  </data>
+  <data name="MV000451" xml:space="preserve">
+    <value>MV00045</value>
+    <comment>Invalid Print Line No.</comment>
+  </data>
+  <data name="MV000452" xml:space="preserve">
+    <value>MV00045</value>
+    <comment>Invalid Print Line No.</comment>
+  </data>
+  <data name="MV00046" xml:space="preserve">
+    <value>MV00046</value>
+    <comment>Invalid Account No.</comment>
+  </data>
+  <data name="MV000461" xml:space="preserve">
+    <value>MV00046</value>
+    <comment>Invalid Account No.</comment>
+  </data>
+  <data name="MV000462" xml:space="preserve">
+    <value>MV00046</value>
+    <comment>Invalid Account No.</comment>
+  </data>
+  <data name="MV00047" xml:space="preserve">
+    <value>MV00047</value>
+    <comment>Balance should not be less than Deposit Amount.</comment>
+  </data>
+  <data name="MV000471" xml:space="preserve">
+    <value>MV00047</value>
+    <comment>Balance should not be less than Deposit Amount.</comment>
+  </data>
+  <data name="MV000472" xml:space="preserve">
+    <value>MV00047</value>
+    <comment>Balance should not be less than Deposit Amount.</comment>
+  </data>
+  <data name="MV00048" xml:space="preserve">
+    <value>MV00048</value>
+    <comment>Invalid Reference.</comment>
+  </data>
+  <data name="MV000481" xml:space="preserve">
+    <value>MV00048</value>
+    <comment>Invalid Reference.</comment>
+  </data>
+  <data name="MV000482" xml:space="preserve">
+    <value>MV00048</value>
+    <comment>Invalid Reference.</comment>
+  </data>
+  <data name="MV00049" xml:space="preserve">
+    <value>MV00049</value>
+    <comment>Please enter Withdraw or Deposit Amount.</comment>
+  </data>
+  <data name="MV000491" xml:space="preserve">
+    <value>MV00049</value>
+    <comment>Please enter Withdraw or Deposit Amount.</comment>
+  </data>
+  <data name="MV000492" xml:space="preserve">
+    <value>MV00049</value>
+    <comment>Please enter Withdraw or Deposit Amount.</comment>
+  </data>
+  <data name="MV00050" xml:space="preserve">
+    <value>MV00050</value>
+    <comment>Invalid Balance.</comment>
+  </data>
+  <data name="MV000501" xml:space="preserve">
+    <value>MV00050</value>
+    <comment>Invalid Balance.</comment>
+  </data>
+  <data name="MV000502" xml:space="preserve">
+    <value>MV00050</value>
+    <comment>Invalid Balance.</comment>
+  </data>
+  <data name="MV00051" xml:space="preserve">
+    <value>MV00051</value>
+    <comment>Invalid Saving Account No.</comment>
+  </data>
+  <data name="MV000511" xml:space="preserve">
+    <value>MV00051</value>
+    <comment>Invalid Saving Account No.</comment>
+  </data>
+  <data name="MV000512" xml:space="preserve">
+    <value>MV00051</value>
+    <comment>Invalid Saving Account No.</comment>
+  </data>
+  <data name="MV00052" xml:space="preserve">
+    <value>MV00052</value>
+    <comment>Insufficient Balance to charge.</comment>
+  </data>
+  <data name="MV000521" xml:space="preserve">
+    <value>MV00052</value>
+    <comment>Insufficient Balance to charge.</comment>
+  </data>
+  <data name="MV000522" xml:space="preserve">
+    <value>MV00052</value>
+    <comment>Insufficient Balance to charge.</comment>
+  </data>
+  <data name="MV00053" xml:space="preserve">
+    <value>MV00053</value>
+    <comment>This Account is already fixed interest taken account.</comment>
+  </data>
+  <data name="MV000531" xml:space="preserve">
+    <value>MV00053</value>
+    <comment>This Account is already fixed interest taken account.</comment>
+  </data>
+  <data name="MV000532" xml:space="preserve">
+    <value>MV00053</value>
+    <comment>This Account is already fixed interest taken account.</comment>
+  </data>
+  <data name="MV00054" xml:space="preserve">
+    <value>MV00054</value>
+    <comment>This Account is already loan account.</comment>
+  </data>
+  <data name="MV000541" xml:space="preserve">
+    <value>MV00054</value>
+    <comment>This Account is already loan account.</comment>
+  </data>
+  <data name="MV000542" xml:space="preserve">
+    <value>MV00054</value>
+    <comment>This Account is already loan account.</comment>
+  </data>
+  <data name="MV00055" xml:space="preserve">
+    <value>MV00055</value>
+    <comment>This Account {0} is guarantee for loans.</comment>
+  </data>
+  <data name="MV000551" xml:space="preserve">
+    <value>MV00055</value>
+    <comment>This Account {0} is guarantee for loans.</comment>
+  </data>
+  <data name="MV000552" xml:space="preserve">
+    <value>MV00055</value>
+    <comment>This Account {0} is guarantee for loans.</comment>
+  </data>
+  <data name="MV00056" xml:space="preserve">
+    <value>MV00056</value>
+    <comment>This Account is already Link Account.</comment>
+  </data>
+  <data name="MV000561" xml:space="preserve">
+    <value>MV00056</value>
+    <comment>This Account is already Link Account.</comment>
+  </data>
+  <data name="MV000562" xml:space="preserve">
+    <value>MV00056</value>
+    <comment>This Account is already Link Account.</comment>
+  </data>
+  <data name="MV00057" xml:space="preserve">
+    <value>MV00057</value>
+    <comment>This Account is already freezed.</comment>
+  </data>
+  <data name="MV000571" xml:space="preserve">
+    <value>MV00057</value>
+    <comment>This Account is already freezed.</comment>
+  </data>
+  <data name="MV000572" xml:space="preserve">
+    <value>MV00057</value>
+    <comment>This Account is already freezed.</comment>
+  </data>
+  <data name="MV00058" xml:space="preserve">
+    <value>MV00058</value>
+    <comment>Invalid Current Account No.</comment>
+  </data>
+  <data name="MV000581" xml:space="preserve">
+    <value>MV00058</value>
+    <comment>Invalid Current Account No.</comment>
+  </data>
+  <data name="MV000582" xml:space="preserve">
+    <value>MV00058</value>
+    <comment>Invalid Current Account No.</comment>
+  </data>
+  <data name="MV00059" xml:space="preserve">
+    <value>MV00059</value>
+    <comment>Invalid Cheque No.</comment>
+  </data>
+  <data name="MV000591" xml:space="preserve">
+    <value>MV00059</value>
+    <comment>Invalid Cheque No.</comment>
+  </data>
+  <data name="MV000592" xml:space="preserve">
+    <value>MV00059</value>
+    <comment>Invalid Cheque No.</comment>
+  </data>
+  <data name="MV00060" xml:space="preserve">
+    <value>MV00060</value>
+    <comment>This Cheque No is already stopped.</comment>
+  </data>
+  <data name="MV000601" xml:space="preserve">
+    <value>MV00060</value>
+    <comment>This Cheque No is already stopped.</comment>
+  </data>
+  <data name="MV000602" xml:space="preserve">
+    <value>MV00060</value>
+    <comment>This Cheque No is already stopped.</comment>
+  </data>
+  <data name="MV00061" xml:space="preserve">
+    <value>MV00061</value>
+    <comment>This Cheque No is already used.</comment>
+  </data>
+  <data name="MV000611" xml:space="preserve">
+    <value>MV00061</value>
+    <comment>This Cheque No is already used.</comment>
+  </data>
+  <data name="MV000612" xml:space="preserve">
+    <value>MV00061</value>
+    <comment>This Cheque No is already used.</comment>
+  </data>
+  <data name="MV00062" xml:space="preserve">
+    <value>MV00062</value>
+    <comment>Total minimum balance can't be greater than ledger balance.</comment>
+  </data>
+  <data name="MV000621" xml:space="preserve">
+    <value>MV00062</value>
+    <comment>Total minimum balance can't be greater than ledger balance.</comment>
+  </data>
+  <data name="MV000622" xml:space="preserve">
+    <value>MV00062</value>
+    <comment>Total minimum balance can't be greater than ledger balance.</comment>
+  </data>
+  <data name="MV00063" xml:space="preserve">
+    <value>MV00063</value>
+    <comment>Currency of Current Account and Saving Account should be same.</comment>
+  </data>
+  <data name="MV000631" xml:space="preserve">
+    <value>MV00063</value>
+    <comment>Currency of Current Account and Saving Account should be same.</comment>
+  </data>
+  <data name="MV000632" xml:space="preserve">
+    <value>MV00063</value>
+    <comment>Currency of Current Account and Saving Account should be same.</comment>
+  </data>
+  <data name="MV00064" xml:space="preserve">
+    <value>MV00064</value>
+    <comment>Invalid Cheque Book No and Cheque No.</comment>
+  </data>
+  <data name="MV000641" xml:space="preserve">
+    <value>MV00064</value>
+    <comment>Invalid Cheque Book No and Cheque No.</comment>
+  </data>
+  <data name="MV000642" xml:space="preserve">
+    <value>MV00064</value>
+    <comment>Invalid Cheque Book No and Cheque No.</comment>
+  </data>
+  <data name="MV00065" xml:space="preserve">
+    <value>MV00065</value>
+    <comment>Invalid Start Cheque No.</comment>
+  </data>
+  <data name="MV000651" xml:space="preserve">
+    <value>MV00065</value>
+    <comment>Invalid Start Cheque No.</comment>
+  </data>
+  <data name="MV000652" xml:space="preserve">
+    <value>MV00065</value>
+    <comment>Invalid Start Cheque No.</comment>
+  </data>
+  <data name="MV00066" xml:space="preserve">
+    <value>MV00066</value>
+    <comment>Invalid Cheque No for Cheque Book No ({0}).</comment>
+  </data>
+  <data name="MV000661" xml:space="preserve">
+    <value>MV00066</value>
+    <comment>Invalid Cheque No for Cheque Book No ({0}).</comment>
+  </data>
+  <data name="MV000662" xml:space="preserve">
+    <value>MV00066</value>
+    <comment>Invalid Cheque No for Cheque Book No ({0}).</comment>
+  </data>
+  <data name="MV00067" xml:space="preserve">
+    <value>MV00067</value>
+    <comment>Invalid Cheque Book No.</comment>
+  </data>
+  <data name="MV000671" xml:space="preserve">
+    <value>MV00067</value>
+    <comment>Invalid Cheque Book No.</comment>
+  </data>
+  <data name="MV000672" xml:space="preserve">
+    <value>MV00067</value>
+    <comment>Invalid Cheque Book No.</comment>
+  </data>
+  <data name="MV00068" xml:space="preserve">
+    <value>MV00068</value>
+    <comment>Invalid Remark.</comment>
+  </data>
+  <data name="MV000681" xml:space="preserve">
+    <value>MV00068</value>
+    <comment>Invalid Remark.</comment>
+  </data>
+  <data name="MV000682" xml:space="preserve">
+    <value>MV00068</value>
+    <comment>Invalid Remark.</comment>
+  </data>
+  <data name="MV00069" xml:space="preserve">
+    <value>MV00069</value>
+    <comment>This Cheque No are already printed.</comment>
+  </data>
+  <data name="MV000691" xml:space="preserve">
+    <value>MV00069</value>
+    <comment>This Cheque No are already printed.</comment>
+  </data>
+  <data name="MV000692" xml:space="preserve">
+    <value>MV00069</value>
+    <comment>This Cheque No are already printed.</comment>
+  </data>
+  <data name="MV00070" xml:space="preserve">
+    <value>MV00070</value>
+    <comment>Invalid Branch.</comment>
+  </data>
+  <data name="MV000701" xml:space="preserve">
+    <value>MV00070</value>
+    <comment>Invalid Branch.</comment>
+  </data>
+  <data name="MV000702" xml:space="preserve">
+    <value>MV00070</value>
+    <comment>Invalid Branch.</comment>
+  </data>
+  <data name="MV00071" xml:space="preserve">
+    <value>MV00071</value>
+    <comment>Start Cheque No is not greater than End Cheque No.</comment>
+  </data>
+  <data name="MV000711" xml:space="preserve">
+    <value>MV00071</value>
+    <comment>Start Cheque No is not greater than End Cheque No.</comment>
+  </data>
+  <data name="MV000712" xml:space="preserve">
+    <value>MV00071</value>
+    <comment>Start Cheque No is not greater than End Cheque No.</comment>
+  </data>
+  <data name="MV00072" xml:space="preserve">
+    <value>MV00072</value>
+    <comment>Invalid End Cheque No.</comment>
+  </data>
+  <data name="MV000721" xml:space="preserve">
+    <value>MV00072</value>
+    <comment>Invalid End Cheque No.</comment>
+  </data>
+  <data name="MV000722" xml:space="preserve">
+    <value>MV00072</value>
+    <comment>Invalid End Cheque No.</comment>
+  </data>
+  <data name="MV00073" xml:space="preserve">
+    <value>MV00073</value>
+    <comment>Please Choose Form Type.</comment>
+  </data>
+  <data name="MV000731" xml:space="preserve">
+    <value>MV00073</value>
+    <comment>Please Choose Form Type.</comment>
+  </data>
+  <data name="MV000732" xml:space="preserve">
+    <value>MV00073</value>
+    <comment>Please Choose Form Type.</comment>
+  </data>
+  <data name="MV00074" xml:space="preserve">
+    <value>MV00074</value>
+    <comment>Invalid Introducer Name.</comment>
+  </data>
+  <data name="MV000741" xml:space="preserve">
+    <value>MV00074</value>
+    <comment>Invalid Introducer Name.</comment>
+  </data>
+  <data name="MV000742" xml:space="preserve">
+    <value>MV00074</value>
+    <comment>Invalid Introducer Name.</comment>
+  </data>
+  <data name="MV00075" xml:space="preserve">
+    <value>MV00075</value>
+    <comment>Please choose Transaction Type.</comment>
+  </data>
+  <data name="MV000751" xml:space="preserve">
+    <value>MV00075</value>
+    <comment>Please choose Transaction Type.</comment>
+  </data>
+  <data name="MV000752" xml:space="preserve">
+    <value>MV00075</value>
+    <comment>Please choose Transaction Type.</comment>
+  </data>
+  <data name="MV00076" xml:space="preserve">
+    <value>MV00076</value>
+    <comment>Invalid OLS Account No.</comment>
+  </data>
+  <data name="MV000761" xml:space="preserve">
+    <value>MV00076</value>
+    <comment>Invalid OLS Account No.</comment>
+  </data>
+  <data name="MV000762" xml:space="preserve">
+    <value>MV00076</value>
+    <comment>Invalid OLS Account No.</comment>
+  </data>
+  <data name="MV00077" xml:space="preserve">
+    <value>MV00077</value>
+    <comment>Fixed Account and Interest Taken Account must be same Currency.</comment>
+  </data>
+  <data name="MV000771" xml:space="preserve">
+    <value>MV00077</value>
+    <comment>Fixed Account and Interest Taken Account must be same Currency.</comment>
+  </data>
+  <data name="MV000772" xml:space="preserve">
+    <value>MV00077</value>
+    <comment>Fixed Account and Interest Taken Account must be same Currency.</comment>
+  </data>
+  <data name="MV00078" xml:space="preserve">
+    <value>MV00078</value>
+    <comment>Please add one record to print at least.</comment>
+  </data>
+  <data name="MV000781" xml:space="preserve">
+    <value>MV00078</value>
+    <comment>Please add one record to print at least.</comment>
+  </data>
+  <data name="MV000782" xml:space="preserve">
+    <value>MV00078</value>
+    <comment>Please add one record to print at least.</comment>
+  </data>
+  <data name="MV00079" xml:space="preserve">
+    <value>MV00079</value>
+    <comment>Date of Birth should be greater than 18.</comment>
+  </data>
+  <data name="MV000791" xml:space="preserve">
+    <value>MV00079</value>
+    <comment>Date of Birth should be greater than 18.</comment>
+  </data>
+  <data name="MV000792" xml:space="preserve">
+    <value>MV00079</value>
+    <comment>Date of Birth should be greater than 18.</comment>
+  </data>
+  <data name="MV00080" xml:space="preserve">
+    <value>MV00080</value>
+    <comment>Currency of Fixed Account and Interest Taken Account should be same.</comment>
+  </data>
+  <data name="MV000801" xml:space="preserve">
+    <value>MV00080</value>
+    <comment>Currency of Fixed Account and Interest Taken Account should be same.</comment>
+  </data>
+  <data name="MV000802" xml:space="preserve">
+    <value>MV00080</value>
+    <comment>Currency of Fixed Account and Interest Taken Account should be same.</comment>
+  </data>
+  <data name="MV00081" xml:space="preserve">
+    <value>MV00081</value>
+    <comment>Allowing Maximun Amount Length is {0} and Maximun Decimal Length is {1}.</comment>
+  </data>
+  <data name="MV000811" xml:space="preserve">
+    <value>MV00081</value>
+    <comment>Allowing Maximun Amount Length is {0} and Maximun Decimal Length is {1}.</comment>
+  </data>
+  <data name="MV000812" xml:space="preserve">
+    <value>MV00081</value>
+    <comment>Allowing Maximun Amount Length is {0} and Maximun Decimal Length is {1}.</comment>
+  </data>
+  <data name="MV00082" xml:space="preserve">
+    <value>MV00082</value>
+    <comment>Duplicated Printing User.</comment>
+  </data>
+  <data name="MV000821" xml:space="preserve">
+    <value>MV00082</value>
+    <comment>Duplicated Printing User.</comment>
+  </data>
+  <data name="MV000822" xml:space="preserve">
+    <value>MV00082</value>
+    <comment>Duplicated Printing User.</comment>
+  </data>
+  <data name="MV00083" xml:space="preserve">
+    <value>MV00083</value>
+    <comment>Branch Code of Link Accounts must be same.</comment>
+  </data>
+  <data name="MV000831" xml:space="preserve">
+    <value>MV00083</value>
+    <comment>Branch Code of Link Accounts must be same.</comment>
+  </data>
+  <data name="MV000832" xml:space="preserve">
+    <value>MV00083</value>
+    <comment>Branch Code of Link Accounts must be same.</comment>
+  </data>
+  <data name="MV00084" xml:space="preserve">
+    <value>MV00084</value>
+    <comment>Cheque No already reached it's maximum limit.</comment>
+  </data>
+  <data name="MV000841" xml:space="preserve">
+    <value>MV00084</value>
+    <comment>Cheque No already reached it's maximum limit.</comment>
+  </data>
+  <data name="MV000842" xml:space="preserve">
+    <value>MV00084</value>
+    <comment>Cheque No already reached it's maximum limit.</comment>
+  </data>
+  <data name="MV00085" xml:space="preserve">
+    <value>MV00085</value>
+    <comment>Receipt No for this Account is already reached it's maximum limit.</comment>
+  </data>
+  <data name="MV000851" xml:space="preserve">
+    <value>MV00085</value>
+    <comment>Receipt No for this Account is already reached it's maximum limit.</comment>
+  </data>
+  <data name="MV000852" xml:space="preserve">
+    <value>MV00085</value>
+    <comment>Receipt No for this Account is already reached it's maximum limit.</comment>
+  </data>
+  <data name="MV00086" xml:space="preserve">
+    <value>MV00086</value>
+    <comment>Currency of this account should be {0}.</comment>
+  </data>
+  <data name="MV000861" xml:space="preserve">
+    <value>MV00086</value>
+    <comment>Currency of this account should be {0}.</comment>
+  </data>
+  <data name="MV000862" xml:space="preserve">
+    <value>MV00086</value>
+    <comment>Currency of this account should be {0}.</comment>
+  </data>
+  <data name="MV00088" xml:space="preserve">
+    <value>MV00088</value>
+    <comment>There is no Receipt No to Deposit in this Account.</comment>
+  </data>
+  <data name="MV000881" xml:space="preserve">
+    <value>MV00088</value>
+    <comment>There is no Receipt No to Deposit in this Account.</comment>
+  </data>
+  <data name="MV000882" xml:space="preserve">
+    <value>MV00088</value>
+    <comment>There is no Receipt No to Deposit in this Account.</comment>
+  </data>
+  <data name="MV00091" xml:space="preserve">
+    <value>MV00091</value>
+    <comment>Invalid Account No for Branch {0}.</comment>
+  </data>
+  <data name="MV00224" xml:space="preserve">
+    <value>MV00224</value>
+    <comment>Invalid Account No {0} for Branch {1}.</comment>
+  </data>
+  <data name="MV00098" xml:space="preserve">
+    <value>MV00098</value>
+    <comment>Invalid Debit Amount.</comment>
+  </data>
+  <data name="MV000981" xml:space="preserve">
+    <value>MV00098</value>
+    <comment>Invalid Debit Amount.</comment>
+  </data>
+  <data name="MV000982" xml:space="preserve">
+    <value>MV00098</value>
+    <comment>Invalid Debit Amount.</comment>
+  </data>
+  <data name="MV00099" xml:space="preserve">
+    <value>MV00099</value>
+    <comment>Invalid Paid Bank.</comment>
+  </data>
+  <data name="MV000991" xml:space="preserve">
+    <value>MV00099</value>
+    <comment>Invalid Paid Bank.</comment>
+  </data>
+  <data name="MV000992" xml:space="preserve">
+    <value>MV00099</value>
+    <comment>Invalid Paid Bank.</comment>
+  </data>
+  <data name="MV00100" xml:space="preserve">
+    <value>MV00100</value>
+    <comment>Invalid Other bank Cheque No.</comment>
+  </data>
+  <data name="MV001001" xml:space="preserve">
+    <value>MV00100</value>
+    <comment>Invalid Other bank Cheque No.</comment>
+  </data>
+  <data name="MV001002" xml:space="preserve">
+    <value>MV00100</value>
+    <comment>Invalid Other bank Cheque No.</comment>
+  </data>
+  <data name="MV00101" xml:space="preserve">
+    <value>MV00101</value>
+    <comment>Invalid Received Account No.</comment>
+  </data>
+  <data name="MV001011" xml:space="preserve">
+    <value>MV00101</value>
+    <comment>Invalid Received Account No.</comment>
+  </data>
+  <data name="MV001012" xml:space="preserve">
+    <value>MV00101</value>
+    <comment>Invalid Received Account No.</comment>
+  </data>
+  <data name="MV00104" xml:space="preserve">
+    <value>MV00104</value>
+    <comment>Invalid Budget For this PO.</comment>
+  </data>
+  <data name="MV001041" xml:space="preserve">
+    <value>MV00104</value>
+    <comment>Invalid Budget For this PO.</comment>
+  </data>
+  <data name="MV001042" xml:space="preserve">
+    <value>MV00104</value>
+    <comment>Invalid Budget For this PO.</comment>
+  </data>
+  <data name="MV00107" xml:space="preserve">
+    <value>MV00107</value>
+    <comment>At least one records must be exist to save.</comment>
+  </data>
+  <data name="MV001071" xml:space="preserve">
+    <value>MV00107</value>
+    <comment>At least one records must be exist to save.</comment>
+  </data>
+  <data name="MV001072" xml:space="preserve">
+    <value>MV00107</value>
+    <comment>At least one records must be exist to save.</comment>
+  </data>
+  <data name="MV00108" xml:space="preserve">
+    <value>MV00108</value>
+    <comment>Duplicate Register</comment>
+  </data>
+  <data name="MV001081" xml:space="preserve">
+    <value>MV00108</value>
+    <comment>Duplicate Register</comment>
+  </data>
+  <data name="MV001082" xml:space="preserve">
+    <value>MV00108</value>
+    <comment>Duplicate Register</comment>
+  </data>
+  <data name="MV00109" xml:space="preserve">
+    <value>MV00109</value>
+    <comment>Insufficient Balance.</comment>
+  </data>
+  <data name="MV001091" xml:space="preserve">
+    <value>MV00109</value>
+    <comment>Insufficient Balance.</comment>
+  </data>
+  <data name="MV001092" xml:space="preserve">
+    <value>MV00109</value>
+    <comment>Insufficient Balance.</comment>
+  </data>
+  <data name="MV00110" xml:space="preserve">
+    <value>MV00110</value>
+    <comment>Invalid Transaction Type.Please reenter!</comment>
+  </data>
+  <data name="MV001101" xml:space="preserve">
+    <value>MV00110</value>
+    <comment>Invalid Transaction Type.Please reenter!</comment>
+  </data>
+  <data name="MV001102" xml:space="preserve">
+    <value>MV00110</value>
+    <comment>Invalid Transaction Type.Please reenter!</comment>
+  </data>
+  <data name="MV00114" xml:space="preserve">
+    <value>MV00114</value>
+    <comment>Invalid Check Digit No.</comment>
+  </data>
+  <data name="MV001141" xml:space="preserve">
+    <value>MV00114</value>
+    <comment>Invalid Check Digit No.</comment>
+  </data>
+  <data name="MV001142" xml:space="preserve">
+    <value>MV00114</value>
+    <comment>Invalid Check Digit No.</comment>
+  </data>
+  <data name="MV00117" xml:space="preserve">
+    <value>MV00117</value>
+    <comment>No Transaction to print !</comment>
+  </data>
+  <data name="MV001171" xml:space="preserve">
+    <value>MV00117</value>
+    <comment>No Transaction to print !</comment>
+  </data>
+  <data name="MV001172" xml:space="preserve">
+    <value>MV00117</value>
+    <comment>No Transaction to print !</comment>
+  </data>
+  <data name="MV00120" xml:space="preserve">
+    <value>MV00120</value>
+    <comment>Missing Remittance Information for Branch.</comment>
+  </data>
+  <data name="MV001201" xml:space="preserve">
+    <value>MV00120</value>
+    <comment>Missing Remittance Information for Branch.</comment>
+  </data>
+  <data name="MV001202" xml:space="preserve">
+    <value>MV00120</value>
+    <comment>Missing Remittance Information for Branch.</comment>
+  </data>
+  <data name="MV00122" xml:space="preserve">
+    <value>MV00122</value>
+    <comment>Invalid Amount and Overdraft Amount Checking.</comment>
+  </data>
+  <data name="MV001221" xml:space="preserve">
+    <value>MV00122</value>
+    <comment>Invalid Amount and Overdraft Amount Checking.</comment>
+  </data>
+  <data name="MV001222" xml:space="preserve">
+    <value>MV00122</value>
+    <comment>Invalid Amount and Overdraft Amount Checking.</comment>
+  </data>
+  <data name="MV00126" xml:space="preserve">
+    <value>MV00126</value>
+    <comment>Please Re_Enter Clearing Account Only!</comment>
+  </data>
+  <data name="MV001261" xml:space="preserve">
+    <value>MV00126</value>
+    <comment>Please Re_Enter Clearing Account Only!</comment>
+  </data>
+  <data name="MV001262" xml:space="preserve">
+    <value>MV00126</value>
+    <comment>Please Re_Enter Clearing Account Only!</comment>
+  </data>
+  <data name="MV00129" xml:space="preserve">
+    <value>MV00129</value>
+    <comment>Start Date must not be greater than today.</comment>
+  </data>
+  <data name="MV001291" xml:space="preserve">
+    <value>MV00129</value>
+    <comment>Start Date must not be greater than today.</comment>
+  </data>
+  <data name="MV001292" xml:space="preserve">
+    <value>MV00129</value>
+    <comment>Start Date must not be greater than today.</comment>
+  </data>
+  <data name="MV00130" xml:space="preserve">
+    <value>MV00130</value>
+    <comment>End Date must not be greater than today.</comment>
+  </data>
+  <data name="MV001301" xml:space="preserve">
+    <value>MV00130</value>
+    <comment>End Date must not be greater than today.</comment>
+  </data>
+  <data name="MV001302" xml:space="preserve">
+    <value>MV00130</value>
+    <comment>End Date must not be greater than today.</comment>
+  </data>
+  <data name="MV00131" xml:space="preserve">
+    <value>MV00131</value>
+    <comment>Start Date must not be greater than End Date.</comment>
+  </data>
+  <data name="MV001311" xml:space="preserve">
+    <value>MV00131</value>
+    <comment>Start Date must not be greater than End Date.</comment>
+  </data>
+  <data name="MV001312" xml:space="preserve">
+    <value>MV00131</value>
+    <comment>Start Date must not be greater than End Date.</comment>
+  </data>
+  <data name="MV00132" xml:space="preserve">
+    <value>MV00132</value>
+    <comment>Sorry not allow group coa code.</comment>
+  </data>
+  <data name="MV001321" xml:space="preserve">
+    <value>MV00132</value>
+    <comment>Sorry not allow group coa code.</comment>
+  </data>
+  <data name="MV001322" xml:space="preserve">
+    <value>MV00132</value>
+    <comment>Sorry not allow group coa code.</comment>
+  </data>
+  <data name="MV00135" xml:space="preserve">
+    <value>MV00135</value>
+    <comment>Not Allow Saving debit transaction for more than one time in a week.</comment>
+  </data>
+  <data name="MV001351" xml:space="preserve">
+    <value>MV00135</value>
+    <comment>Not Allow Saving debit transaction for more than one time in a week.</comment>
+  </data>
+  <data name="MV001352" xml:space="preserve">
+    <value>MV00135</value>
+    <comment>Not Allow Saving debit transaction for more than one time in a week.</comment>
+  </data>
+  <data name="MV00137" xml:space="preserve">
+    <value>MV00137</value>
+    <comment>This Account is in Legal Case.</comment>
+  </data>
+  <data name="MV001371" xml:space="preserve">
+    <value>MV00137</value>
+    <comment>This Account is in Legal Case.</comment>
+  </data>
+  <data name="MV001372" xml:space="preserve">
+    <value>MV00137</value>
+    <comment>This Account is in Legal Case.</comment>
+  </data>
+  <data name="MV00143" xml:space="preserve">
+    <value>MV00143</value>
+    <comment>This P.O No. {0}  is already received.</comment>
+  </data>
+  <data name="MV001431" xml:space="preserve">
+    <value>MV00143</value>
+    <comment>This P.O No. {0}  is already received.</comment>
+  </data>
+  <data name="MV001432" xml:space="preserve">
+    <value>MV00143</value>
+    <comment>This P.O No. {0}  is already received.</comment>
+  </data>
+  <data name="MV00145" xml:space="preserve">
+    <value>MV00145</value>
+    <comment>Warning… {0} Account has not deposit.</comment>
+  </data>
+  <data name="MV001451" xml:space="preserve">
+    <value>MV00145</value>
+    <comment>Warning… {0} Account has not deposit.</comment>
+  </data>
+  <data name="MV001452" xml:space="preserve">
+    <value>MV00145</value>
+    <comment>Warning… {0} Account has not deposit.</comment>
+  </data>
+  <data name="MV00147" xml:space="preserve">
+    <value>MV00147</value>
+    <comment>Receipt No {0}  has Already Withdrawn.</comment>
+  </data>
+  <data name="MV001471" xml:space="preserve">
+    <value>MV00147</value>
+    <comment>Receipt No {0}  has Already Withdrawn.</comment>
+  </data>
+  <data name="MV001472" xml:space="preserve">
+    <value>MV00147</value>
+    <comment>Receipt No {0}  has Already Withdrawn.</comment>
+  </data>
+  <data name="MV00150" xml:space="preserve">
+    <value>MV00150</value>
+    <comment>This P.O No. {0} is already exist in this grid.</comment>
+  </data>
+  <data name="MV001501" xml:space="preserve">
+    <value>MV00150</value>
+    <comment>This P.O No. {0} is already exist in this grid.</comment>
+  </data>
+  <data name="MV001502" xml:space="preserve">
+    <value>MV00150</value>
+    <comment>This P.O No. {0} is already exist in this grid.</comment>
+  </data>
+  <data name="MV00151" xml:space="preserve">
+    <value>MV00151</value>
+    <comment>The currency of this P.O No. is not {0}.</comment>
+  </data>
+  <data name="MV001511" xml:space="preserve">
+    <value>MV00151</value>
+    <comment>The currency of this P.O No. is not {0}.</comment>
+  </data>
+  <data name="MV001512" xml:space="preserve">
+    <value>MV00151</value>
+    <comment>The currency of this P.O No. is not {0}.</comment>
+  </data>
+  <data name="MV00156" xml:space="preserve">
+    <value>MV00156</value>
+    <comment>Please re-enter Clearing Account only.</comment>
+  </data>
+  <data name="MV001561" xml:space="preserve">
+    <value>MV00156</value>
+    <comment>Please re-enter Clearing Account only.</comment>
+  </data>
+  <data name="MV001562" xml:space="preserve">
+    <value>MV00156</value>
+    <comment>Please re-enter Clearing Account only.</comment>
+  </data>
+  <data name="MV00159" xml:space="preserve">
+    <value>MV00159</value>
+    <comment>Start Date  cannot be greater than End Date.</comment>
+  </data>
+  <data name="MV001591" xml:space="preserve">
+    <value>MV00159</value>
+    <comment>Start Date  cannot be greater than End Date.</comment>
+  </data>
+  <data name="MV00160" xml:space="preserve">
+    <value>MV00160</value>
+    <comment>Required Date {0} cannot be greater than Today.</comment>
+  </data>
+  <data name="MV001601" xml:space="preserve">
+    <value>MV00160</value>
+    <comment>Required Date {0} cannot be greater than Today.</comment>
+  </data>
+  <data name="MV001602" xml:space="preserve">
+    <value>MV00160</value>
+    <comment>Required Date {0} cannot be greater than Today.</comment>
+  </data>
+  <data name="MV00163" xml:space="preserve">
+    <value>MV00163</value>
+    <comment>Exceed {0} amount.It must be less than {1} Kyats.</comment>
+  </data>
+  <data name="MV001631" xml:space="preserve">
+    <value>MV00163</value>
+    <comment>Exceed {0} amount.It must be less than {1} Kyats.</comment>
+  </data>
+  <data name="MV001632" xml:space="preserve">
+    <value>MV00163</value>
+    <comment>Exceed {0} amount.It must be less than {1} Kyats.</comment>
+  </data>
+  <data name="MV00165" xml:space="preserve">
+    <value>MV00165</value>
+    <comment>This AccountNo should be {0} account.</comment>
+  </data>
+  <data name="MV001651" xml:space="preserve">
+    <value>MV00165</value>
+    <comment>This AccountNo should be {0} account.</comment>
+  </data>
+  <data name="MV001652" xml:space="preserve">
+    <value>MV00165</value>
+    <comment>This AccountNo should be {0} account.</comment>
+  </data>
+  <data name="MV00166" xml:space="preserve">
+    <value>MV00166</value>
+    <comment>Debit and Credit Amount must be equal to Journal Type.</comment>
+  </data>
+  <data name="MV001661" xml:space="preserve">
+    <value>MV00166</value>
+    <comment>Debit and Credit Amount must be equal to Journal Type.</comment>
+  </data>
+  <data name="MV001662" xml:space="preserve">
+    <value>MV00166</value>
+    <comment>Debit and Credit Amount must be equal to Journal Type.</comment>
+  </data>
+  <data name="MV00167" xml:space="preserve">
+    <value>MV00167</value>
+    <comment>Blank Registerno not allowed.</comment>
+  </data>
+  <data name="MV001671" xml:space="preserve">
+    <value>MV00167</value>
+    <comment>Blank Registerno not allowed.</comment>
+  </data>
+  <data name="MV001672" xml:space="preserve">
+    <value>MV00167</value>
+    <comment>Blank Registerno not allowed.</comment>
+  </data>
+  <data name="MV00168" xml:space="preserve">
+    <value>MV00168</value>
+    <comment>Invalid Register No.</comment>
+  </data>
+  <data name="MV001681" xml:space="preserve">
+    <value>MV00168</value>
+    <comment>Invalid Register No.</comment>
+  </data>
+  <data name="MV001682" xml:space="preserve">
+    <value>MV00168</value>
+    <comment>Invalid Register No.</comment>
+  </data>
+  <data name="MV00169" xml:space="preserve">
+    <value>MV00169</value>
+    <comment>Invalid Testkey ! Please Re Enter Again</comment>
+  </data>
+  <data name="MV001691" xml:space="preserve">
+    <value>MV00169</value>
+    <comment>Invalid Testkey ! Please Re Enter Again</comment>
+  </data>
+  <data name="MV001692" xml:space="preserve">
+    <value>MV00169</value>
+    <comment>Invalid Testkey ! Please Re Enter Again</comment>
+  </data>
+  <data name="MV00170" xml:space="preserve">
+    <value>MV00170</value>
+    <comment>It cannot save now.First edit.</comment>
+  </data>
+  <data name="MV001701" xml:space="preserve">
+    <value>MV00170</value>
+    <comment>It cannot save now.First edit.</comment>
+  </data>
+  <data name="MV001702" xml:space="preserve">
+    <value>MV00170</value>
+    <comment>It cannot save now.First edit.</comment>
+  </data>
+  <data name="MV00171" xml:space="preserve">
+    <value>MV00171</value>
+    <comment>Grid Record must has at least one.</comment>
+  </data>
+  <data name="MV001711" xml:space="preserve">
+    <value>MV00171</value>
+    <comment>Grid Record must has at least one.</comment>
+  </data>
+  <data name="MV001712" xml:space="preserve">
+    <value>MV00171</value>
+    <comment>Grid Record must has at least one.</comment>
+  </data>
+  <data name="MV00174" xml:space="preserve">
+    <value>MV00174</value>
+    <comment>Invalid Link  Account.</comment>
+  </data>
+  <data name="MV001741" xml:space="preserve">
+    <value>MV00174</value>
+    <comment>Invalid Link  Account.</comment>
+  </data>
+  <data name="MV001742" xml:space="preserve">
+    <value>MV00174</value>
+    <comment>Invalid Link  Account.</comment>
+  </data>
+  <data name="MV00175" xml:space="preserve">
+    <value>MV00175</value>
+    <comment>Account No not found!</comment>
+  </data>
+  <data name="MV001751" xml:space="preserve">
+    <value>MV00175</value>
+    <comment>Account No. Not Found.</comment>
+  </data>
+  <data name="MV001752" xml:space="preserve">
+    <value>MV00175</value>
+    <comment>Account No. Not Found.</comment>
+  </data>
+  <data name="MV00176" xml:space="preserve">
+    <value>MV00176</value>
+    <comment>Invalid Received Bank.</comment>
+  </data>
+  <data name="MV001761" xml:space="preserve">
+    <value>MV00176</value>
+    <comment>Invalid Received Bank.</comment>
+  </data>
+  <data name="MV001762" xml:space="preserve">
+    <value>MV00176</value>
+    <comment>Invalid Received Bank.</comment>
+  </data>
+  <data name="MV00190" xml:space="preserve">
+    <value>MV00190</value>
+    <comment>ERROR IN TRANCODE (WITHDRAW)</comment>
+  </data>
+  <data name="MV001901" xml:space="preserve">
+    <value>MV00190</value>
+    <comment>ERROR IN TRANCODE (WITHDRAW)</comment>
+  </data>
+  <data name="MV001902" xml:space="preserve">
+    <value>MV00190</value>
+    <comment>ERROR IN TRANCODE (WITHDRAW)</comment>
+  </data>
+  <data name="MV00191" xml:space="preserve">
+    <value>MV00191</value>
+    <comment>AUTO LINK WITHDRAW PROCESS COMPLETE!...</comment>
+  </data>
+  <data name="MV001911" xml:space="preserve">
+    <value>MV00191</value>
+    <comment>AUTO LINK WITHDRAW PROCESS COMPLETE!...</comment>
+  </data>
+  <data name="MV001912" xml:space="preserve">
+    <value>MV00191</value>
+    <comment>AUTO LINK WITHDRAW PROCESS COMPLETE!...</comment>
+  </data>
+  <data name="MV00192" xml:space="preserve">
+    <value>MV00192</value>
+    <comment>SUCCESSFULLY WITHDRAW TRANSACTION!...</comment>
+  </data>
+  <data name="MV001921" xml:space="preserve">
+    <value>MV00192</value>
+    <comment>SUCCESSFULLY WITHDRAW TRANSACTION!...</comment>
+  </data>
+  <data name="MV001922" xml:space="preserve">
+    <value>MV00192</value>
+    <comment>SUCCESSFULLY WITHDRAW TRANSACTION!...</comment>
+  </data>
+  <data name="MV00195" xml:space="preserve">
+    <value>MV00195</value>
+    <comment>Branch No {0} Remittance Info is missing</comment>
+  </data>
+  <data name="MV001951" xml:space="preserve">
+    <value>MV00195</value>
+    <comment>Branch No {0} Remittance Info is missing</comment>
+  </data>
+  <data name="MV001952" xml:space="preserve">
+    <value>MV00195</value>
+    <comment>Branch No {0} Remittance Info is missing</comment>
+  </data>
+  <data name="MV00196" xml:space="preserve">
+    <value>MV00196</value>
+    <comment>Total Amount is not equal to sum of Each Amount</comment>
+  </data>
+  <data name="MV001961" xml:space="preserve">
+    <value>MV00196</value>
+    <comment>Total Amount is not equal to sum of Each Amount</comment>
+  </data>
+  <data name="MV001962" xml:space="preserve">
+    <value>MV00196</value>
+    <comment>Total Amount is not equal to sum of Each Amount</comment>
+  </data>
+  <data name="MV00197" xml:space="preserve">
+    <value>MV00197</value>
+    <comment>Invalid Current, Saving and Chart of Account.</comment>
+  </data>
+  <data name="MV001971" xml:space="preserve">
+    <value>MV00197</value>
+    <comment>Invalid Current, Saving and Chart of Account.</comment>
+  </data>
+  <data name="MV001972" xml:space="preserve">
+    <value>MV00197</value>
+    <comment>Invalid Current, Saving and Chart of Account.</comment>
+  </data>
+  <data name="MV00198" xml:space="preserve">
+    <value>MV00198</value>
+    <comment>Invalid Current and Chart of Account.</comment>
+  </data>
+  <data name="MV001981" xml:space="preserve">
+    <value>MV00198</value>
+    <comment>Invalid Current and Chart of Account.</comment>
+  </data>
+  <data name="MV001982" xml:space="preserve">
+    <value>MV00198</value>
+    <comment>Invalid Current and Chart of Account.</comment>
+  </data>
+  <data name="MV00199" xml:space="preserve">
+    <value>MV00199</value>
+    <comment>Incompleted Account No.</comment>
+  </data>
+  <data name="MV001991" xml:space="preserve">
+    <value>MV00199</value>
+    <comment>Incompleted Account No.</comment>
+  </data>
+  <data name="MV001992" xml:space="preserve">
+    <value>MV00199</value>
+    <comment>Incompleted Account No.</comment>
+  </data>
+  <data name="MV00201" xml:space="preserve">
+    <value>MV00201</value>
+    <comment>Account No {0} has been closed.</comment>
+  </data>
+  <data name="MV002011" xml:space="preserve">
+    <value>MV00201</value>
+    <comment>Account No {0} has been closed.</comment>
+  </data>
+  <data name="MV00210" xml:space="preserve">
+    <value>MV00210</value>
+    <comment>Multi Transaction has already reached its limit.</comment>
+  </data>
+  <data name="MV002101" xml:space="preserve">
+    <value>MV00210</value>
+    <comment>Multi Transaction has already reached its limit.</comment>
+  </data>
+  <data name="MV002102" xml:space="preserve">
+    <value>MV00210</value>
+    <comment>Multi Transaction has already reached its limit.</comment>
+  </data>
+  <data name="MV00211" xml:space="preserve">
+    <value>MV00211</value>
+    <comment>{0} Only</comment>
+  </data>
+  <data name="MV002111" xml:space="preserve">
+    <value>MV00211</value>
+    <comment>{0} Only</comment>
+  </data>
+  <data name="MV002112" xml:space="preserve">
+    <value>MV00211</value>
+    <comment>{0} Only</comment>
+  </data>
+  <data name="MV00215" xml:space="preserve">
+    <value>MV00215</value>
+    <comment>Need to Run Back Date Fixed Deposit Auto Renewal.</comment>
+  </data>
+  <data name="MV002151" xml:space="preserve">
+    <value>MV00215</value>
+    <comment>Need to Run Back Date Fixed Deposit Auto Renewal.</comment>
+  </data>
+  <data name="MV002152" xml:space="preserve">
+    <value>MV00215</value>
+    <comment>Need to Run Back Date Fixed Deposit Auto Renewal.</comment>
+  </data>
+  <data name="MV00217" xml:space="preserve">
+    <value>MV00217</value>
+    <comment>This Register No. {0} is already received</comment>
+  </data>
+  <data name="MV00218" xml:space="preserve">
+    <value>MV00218</value>
+    <comment>Invalid Register No.</comment>
+  </data>
+  <data name="MV002181" xml:space="preserve">
+    <value>MV00218</value>
+    <comment>Invalid Register No.</comment>
+  </data>
+  <data name="MV00220" xml:space="preserve">
+    <value>MV00220</value>
+    <comment>Start Date  cannot be greater than End Date.</comment>
+  </data>
+  <data name="MV002201" xml:space="preserve">
+    <value>MV00220</value>
+    <comment>Start Date  cannot be greater than End Date.</comment>
+  </data>
+  <data name="MV20023" xml:space="preserve">
+    <value>MV20023</value>
+    <comment>Not Allow Back Date</comment>
+  </data>
+  <data name="MV200231" xml:space="preserve">
+    <value>MV20023</value>
+    <comment>Not Allow Back Date</comment>
+  </data>
+  <data name="MV200232" xml:space="preserve">
+    <value>MV20023</value>
+    <comment>Not Allow Back Date</comment>
+  </data>
+  <data name="MV20047" xml:space="preserve">
+    <value>MV20047</value>
+    <comment>Invalid Counter Type.</comment>
+  </data>
+  <data name="MV200471" xml:space="preserve">
+    <value>MV20047</value>
+    <comment>Invalid Counter Type.</comment>
+  </data>
+  <data name="MV200472" xml:space="preserve">
+    <value>MV20047</value>
+    <comment>Invalid Counter Type.</comment>
+  </data>
+  <data name="MV20054" xml:space="preserve">
+    <value>MV20054</value>
+    <comment>Invalid Account Type.</comment>
+  </data>
+  <data name="MV200541" xml:space="preserve">
+    <value>MV20054</value>
+    <comment>Invalid Account Type.</comment>
+  </data>
+  <data name="MV200542" xml:space="preserve">
+    <value>MV20054</value>
+    <comment>Invalid Account Type.</comment>
+  </data>
+  <data name="MV20059" xml:space="preserve">
+    <value>MV20059</value>
+    <comment>Invalid Zone Type.</comment>
+  </data>
+  <data name="MV200591" xml:space="preserve">
+    <value>MV20059</value>
+    <comment>Invalid Zone Type.</comment>
+  </data>
+  <data name="MV200592" xml:space="preserve">
+    <value>MV20059</value>
+    <comment>Invalid Zone Type.</comment>
+  </data>
+  <data name="MV20070" xml:space="preserve">
+    <value>MV20070</value>
+    <comment>Account has no Interest.</comment>
+  </data>
+  <data name="MV200701" xml:space="preserve">
+    <value>MV20070</value>
+    <comment>Account has no Interest.</comment>
+  </data>
+  <data name="MV200702" xml:space="preserve">
+    <value>MV20070</value>
+    <comment>Account has no Interest.</comment>
+  </data>
+  <data name="MV20075" xml:space="preserve">
+    <value>MV20075</value>
+    <comment>Must add at leaset one record to save!</comment>
+  </data>
+  <data name="MV200751" xml:space="preserve">
+    <value>MV20075</value>
+    <comment>Must add at leaset one record to save!</comment>
+  </data>
+  <data name="MV200752" xml:space="preserve">
+    <value>MV20075</value>
+    <comment>Must add at leaset one record to save!</comment>
+  </data>
+  <data name="MV20076" xml:space="preserve">
+    <value>MV20076</value>
+    <comment>System is Already Start Up !</comment>
+  </data>
+  <data name="MV200761" xml:space="preserve">
+    <value>MV20076</value>
+    <comment>System is Already Start Up !</comment>
+  </data>
+  <data name="MV200762" xml:space="preserve">
+    <value>MV20076</value>
+    <comment>System is Already Start Up !</comment>
+  </data>
+  <data name="MV20077" xml:space="preserve">
+    <value>MV20077</value>
+    <comment>System Is Already Shutdown.</comment>
+  </data>
+  <data name="MV200771" xml:space="preserve">
+    <value>MV20077</value>
+    <comment>System Is Already Shutdown.</comment>
+  </data>
+  <data name="MV200772" xml:space="preserve">
+    <value>MV20077</value>
+    <comment>System Is Already Shutdown.</comment>
+  </data>
+  <data name="MV20078" xml:space="preserve">
+    <value>MV20078</value>
+    <comment>No data to deduct service charges for expired overdraft.</comment>
+  </data>
+  <data name="MV200781" xml:space="preserve">
+    <value>MV20078</value>
+    <comment>No data to deduct service charges for expired overdraft.</comment>
+  </data>
+  <data name="MV200782" xml:space="preserve">
+    <value>MV20078</value>
+    <comment>No data to deduct service charges for expired overdraft.</comment>
+  </data>
+  <data name="MV20080" xml:space="preserve">
+    <value>MV20080</value>
+    <comment>Please run After Day Close Program.</comment>
+  </data>
+  <data name="MV200801" xml:space="preserve">
+    <value>MV20080</value>
+    <comment>Please run After Day Close Program.</comment>
+  </data>
+  <data name="MV200802" xml:space="preserve">
+    <value>MV20080</value>
+    <comment>Please run After Day Close Program.</comment>
+  </data>
+  <data name="MV90001" xml:space="preserve">
+    <value>MV90001</value>
+    <comment>Data Already Exist.</comment>
+  </data>
+  <data name="MV900011" xml:space="preserve">
+    <value>MV90001</value>
+    <comment>Data Already Exist.</comment>
+  </data>
+  <data name="MV900012" xml:space="preserve">
+    <value>MV90001</value>
+    <comment>Data Already Exist.</comment>
+  </data>
+  <data name="MV90002" xml:space="preserve">
+    <value>MV90002</value>
+    <comment>Incorrect Password.</comment>
+  </data>
+  <data name="MV900021" xml:space="preserve">
+    <value>MV90002</value>
+    <comment>Incorrect Password.</comment>
+  </data>
+  <data name="MV900022" xml:space="preserve">
+    <value>MV90002</value>
+    <comment>Incorrect Password.</comment>
+  </data>
+  <data name="MV90003" xml:space="preserve">
+    <value>MV90003</value>
+    <comment>At least Select one Parent Menu!!!</comment>
+  </data>
+  <data name="MV900031" xml:space="preserve">
+    <value>MV90003</value>
+    <comment>At least Select one Parent Menu!!!</comment>
+  </data>
+  <data name="MV900032" xml:space="preserve">
+    <value>MV90003</value>
+    <comment>At least Select one Parent Menu!!!</comment>
+  </data>
+  <data name="MV90004" xml:space="preserve">
+    <value>MV90004</value>
+    <comment>Shortcut Key is already used.Please choose another!!!</comment>
+  </data>
+  <data name="MV900041" xml:space="preserve">
+    <value>MV90004</value>
+    <comment>Shortcut Key is already used.Please choose another!!!</comment>
+  </data>
+  <data name="MV900042" xml:space="preserve">
+    <value>MV90004</value>
+    <comment>Shortcut Key is already used.Please choose another!!!</comment>
+  </data>
+  <data name="MV90005" xml:space="preserve">
+    <value>MV90005</value>
+    <comment>Description is required.</comment>
+  </data>
+  <data name="MV900051" xml:space="preserve">
+    <value>MV90005</value>
+    <comment>Description is required.</comment>
+  </data>
+  <data name="MV900052" xml:space="preserve">
+    <value>MV90005</value>
+    <comment>Description is required.</comment>
+  </data>
+  <data name="MV90006" xml:space="preserve">
+    <value>MV90006</value>
+    <comment>Email Format is incorrect.</comment>
+  </data>
+  <data name="MV900061" xml:space="preserve">
+    <value>MV90006</value>
+    <comment>Email Format is incorrect.</comment>
+  </data>
+  <data name="MV900062" xml:space="preserve">
+    <value>MV90006</value>
+    <comment>Email Format is incorrect.</comment>
+  </data>
+  <data name="MV90007" xml:space="preserve">
+    <value>MV90007</value>
+    <comment>Group Name is required.</comment>
+  </data>
+  <data name="MV900071" xml:space="preserve">
+    <value>MV90007</value>
+    <comment>Group Name is required.</comment>
+  </data>
+  <data name="MV900072" xml:space="preserve">
+    <value>MV90007</value>
+    <comment>Group Name is required.</comment>
+  </data>
+  <data name="MV90008" xml:space="preserve">
+    <value>MV90008</value>
+    <comment>MenuName is required.</comment>
+  </data>
+  <data name="MV900081" xml:space="preserve">
+    <value>MV90008</value>
+    <comment>MenuName is required.</comment>
+  </data>
+  <data name="MV900082" xml:space="preserve">
+    <value>MV90008</value>
+    <comment>MenuName is required.</comment>
+  </data>
+  <data name="MV90009" xml:space="preserve">
+    <value>MV90009</value>
+    <comment>Password is required.</comment>
+  </data>
+  <data name="MV900091" xml:space="preserve">
+    <value>MV90009</value>
+    <comment>Password is required.</comment>
+  </data>
+  <data name="MV900092" xml:space="preserve">
+    <value>MV90009</value>
+    <comment>Password is required.</comment>
+  </data>
+  <data name="MV90010" xml:space="preserve">
+    <value>MV90010</value>
+    <comment>Program Name is required.</comment>
+  </data>
+  <data name="MV900101" xml:space="preserve">
+    <value>MV90010</value>
+    <comment>Program Name is required.</comment>
+  </data>
+  <data name="MV900102" xml:space="preserve">
+    <value>MV90010</value>
+    <comment>Program Name is required.</comment>
+  </data>
+  <data name="MV90011" xml:space="preserve">
+    <value>MV90011</value>
+    <comment>User Name is required.</comment>
+  </data>
+  <data name="MV900111" xml:space="preserve">
+    <value>MV90011</value>
+    <comment>User Name is required.</comment>
+  </data>
+  <data name="MV900112" xml:space="preserve">
+    <value>MV90011</value>
+    <comment>User Name is required.</comment>
+  </data>
+  <data name="MV90012" xml:space="preserve">
+    <value>MV90012</value>
+    <comment>Please Select at least one record.</comment>
+  </data>
+  <data name="MV900121" xml:space="preserve">
+    <value>MV90012</value>
+    <comment>Please Select at least one record.</comment>
+  </data>
+  <data name="MV900122" xml:space="preserve">
+    <value>MV90012</value>
+    <comment>Please Select at least one record.</comment>
+  </data>
+  <data name="MV90013" xml:space="preserve">
+    <value>MV90013</value>
+    <comment>Password and Comfirm Password must equal.</comment>
+  </data>
+  <data name="MV900131" xml:space="preserve">
+    <value>MV90013</value>
+    <comment>Password and Comfirm Password must equal.</comment>
+  </data>
+  <data name="MV900132" xml:space="preserve">
+    <value>MV90013</value>
+    <comment>Password and Comfirm Password must equal.</comment>
+  </data>
+  <data name="MV90014" xml:space="preserve">
+    <value>MV90014</value>
+    <comment>Confirm Password is required.</comment>
+  </data>
+  <data name="MV900141" xml:space="preserve">
+    <value>MV90014</value>
+    <comment>Confirm Password is required.</comment>
+  </data>
+  <data name="MV900142" xml:space="preserve">
+    <value>MV90014</value>
+    <comment>Confirm Password is required.</comment>
+  </data>
+  <data name="MV90015" xml:space="preserve">
+    <value>MV90015</value>
+    <comment>Current Password is required.</comment>
+  </data>
+  <data name="MV900151" xml:space="preserve">
+    <value>MV90015</value>
+    <comment>Current Password is required.</comment>
+  </data>
+  <data name="MV900152" xml:space="preserve">
+    <value>MV90015</value>
+    <comment>Current Password is required.</comment>
+  </data>
+  <data name="MV90016" xml:space="preserve">
+    <value>MV90016</value>
+    <comment>Confirm Password is invalid.</comment>
+  </data>
+  <data name="MV900161" xml:space="preserve">
+    <value>MV90016</value>
+    <comment>Confirm Password is invalid.</comment>
+  </data>
+  <data name="MV900162" xml:space="preserve">
+    <value>MV90016</value>
+    <comment>Confirm Password is invalid.</comment>
+  </data>
+  <data name="MV90017" xml:space="preserve">
+    <value>MV90017</value>
+    <comment>There is no record to save changes.</comment>
+  </data>
+  <data name="MV900171" xml:space="preserve">
+    <value>MV90017</value>
+    <comment>There is no record to save changes.</comment>
+  </data>
+  <data name="MV900172" xml:space="preserve">
+    <value>MV90017</value>
+    <comment>There is no record to save changes.</comment>
+  </data>
+  <data name="MV90018" xml:space="preserve">
+    <value>MV90018</value>
+    <comment>This Login User has no Accesses permission.</comment>
+  </data>
+  <data name="MV900181" xml:space="preserve">
+    <value>MV90018</value>
+    <comment>This Login User has no Accesses permission.</comment>
+  </data>
+  <data name="MV900182" xml:space="preserve">
+    <value>MV90018</value>
+    <comment>This Login User has no Accesses permission.</comment>
+  </data>
+  <data name="MV90019" xml:space="preserve">
+    <value>MV90019</value>
+    <comment>Program Path is required.</comment>
+  </data>
+  <data name="MV900191" xml:space="preserve">
+    <value>MV90019</value>
+    <comment>Program Path is required.</comment>
+  </data>
+  <data name="MV900192" xml:space="preserve">
+    <value>MV90019</value>
+    <comment>Program Path is required.</comment>
+  </data>
+  <data name="MV90027" xml:space="preserve">
+    <value>MV90027</value>
+    <comment>Invalid Entry No</comment>
+  </data>
+  <data name="MV900271" xml:space="preserve">
+    <value>MV90027</value>
+    <comment>Invalid Entry No</comment>
+  </data>
+  <data name="MV900272" xml:space="preserve">
+    <value>MV90027</value>
+    <comment>Invalid Entry No</comment>
+  </data>
+  <data name="ME00036" xml:space="preserve">
+    <value>ME00036</value>
+    <comment>PO rate not found.</comment>
+  </data>
+  <data name="MI50007" xml:space="preserve">
+    <value>MI50007</value>
+    <comment>Expired OD/Loans service charges has been already calculated.</comment>
+  </data>
+  <data name="MI30024" xml:space="preserve">
+    <value>MI30024</value>
+    <comment>Coa Setup Account Not Found.</comment>
+  </data>
+  <data name="MC00020" xml:space="preserve">
+    <value>MC00020</value>
+    <comment>Are you sure to release?</comment>
+  </data>
+  <data name="MI30043" xml:space="preserve">
+    <value>MI30043</value>
+    <comment>PO Transaction is Successfully Progress.</comment>
+  </data>
+  <data name="MI00039" xml:space="preserve">
+    <value>MI00039</value>
+    <comment>No data for Report.</comment>
+  </data>
+  <data name="ME30002" xml:space="preserve">
+    <value>ME30002</value>
+    <comment>Not Allowed Back Date Transaction!</comment>
+  </data>
+  <data name="MV00222" xml:space="preserve">
+    <value>MV00222</value>
+    <comment>Invalid Entry No for Saving Interest Reversal.</comment>
+  </data>
+  <data name="MI00062" xml:space="preserve">
+    <value>MI00062</value>
+    <comment>Interest Cash Withdrawal Reversal is successfully completed.</comment>
+  </data>
+  <data name="MI00063" xml:space="preserve">
+    <value>MI00063</value>
+    <comment>Interest Transfer Reversal process complete!</comment>
+  </data>
+  <data name="MV00223" xml:space="preserve">
+    <value>MV00223</value>
+    <comment>Not allow reversal for close account transaction!</comment>
+  </data>
+  <data name="MV00214" xml:space="preserve">
+    <value>MV00214</value>
+    <comment>Invalid Interest Taken Account No. for Branch {0}.</comment>
+  </data>
+  <data name="MI00012" xml:space="preserve">
+    <value>MI00012</value>
+    <comment>Print Successfully.</comment>
+  </data>
+  <data name="ME30016" xml:space="preserve">
+    <value>ME30016</value>
+    <comment>No Error Found.</comment>
+  </data>
+  <data name="MV30027" xml:space="preserve">
+    <value>MV30027</value>
+    <comment>Invalid Formula.{0}</comment>
+  </data>
+  <data name="MC30008" xml:space="preserve">
+    <value>MC30008</value>
+    <comment>Are you sure to save changes?</comment>
+  </data>
+  <data name="MV30028" xml:space="preserve">
+    <value>MV30028</value>
+    <comment>Format Type should not be duplicate.</comment>
+  </data>
+  <data name="MI30049" xml:space="preserve">
+    <value>MI30049</value>
+    <comment>Account Code Not Found In  COA Not Found! DetailPosting Cannot Finish.</comment>
+  </data>
+  <data name="MI30050" xml:space="preserve">
+    <value>MI30050</value>
+    <comment>Account Code Not Found In  COA Not Found! GroupPosting Cannot Finish.</comment>
+  </data>
+  <data name="MV30026" xml:space="preserve">
+    <value>MV30026</value>
+    <comment>Invalid Line No.</comment>
+  </data>
+  <data name="MV90029" xml:space="preserve">
+    <value>MV90029</value>
+    <comment>Invalid Branch Code</comment>
+  </data>
+  <data name="MV00173" xml:space="preserve">
+    <value>MV00173</value>
+    <comment>Required Date : {0} cannot be less than Today Date : {1}.</comment>
+  </data>
+  <data name="MC30009" xml:space="preserve">
+    <value>MC30009</value>
+    <comment>Do you want to print Denomination reports before delete ?</comment>
+  </data>
+  <data name="MI00064" xml:space="preserve">
+    <value>MI00064</value>
+    <comment>Go listing menu,Please print the reports</comment>
+  </data>
+  <data name="MV30033" xml:space="preserve">
+    <value>MV30033</value>
+    <comment>{0} should not be today date to delete transaction.</comment>
+  </data>
+  <data name="MV00226" xml:space="preserve">
+    <value>MV00226</value>
+    <comment>Invalid already stopped Cheque Book No.</comment>
+  </data>
+  <data name="MV30034" xml:space="preserve">
+    <value>MV30034</value>
+    <comment>Start Year cannot be {0} End Year.</comment>
+  </data>
+  <data name="MV30035" xml:space="preserve">
+    <value>MV30035</value>
+    <comment>Year : {0} cannot be greater than Current {1}.</comment>
+  </data>
+  <data name="MI00016" xml:space="preserve">
+    <value>MI00016</value>
+    <comment>No record to delete.</comment>
+  </data>
+  <data name="MV20083" xml:space="preserve">
+    <value>MV20083</value>
+    <comment>This is not Overdraft Account.</comment>
+  </data>
+  <data name="MI00040" xml:space="preserve">
+    <value>MI00040</value>
+    <comment>No data for Report for Account No {0}.</comment>
+  </data>
+  <data name="MV30036" xml:space="preserve">
+    <value>MV30036</value>
+    <comment>Not allow to edit Encashment PO.</comment>
+  </data>
+  <data name="MV30037" xml:space="preserve">
+    <value>MV30037</value>
+    <comment>This PO has been cleared</comment>
+  </data>
+  <data name="MI30051" xml:space="preserve">
+    <value>MI30051</value>
+    <comment>No need to run for this month!</comment>
+  </data>
+  <data name="MI30052" xml:space="preserve">
+    <value>MI30052</value>
+    <comment>Fixed Year End Interest Calculation Process is already Calculated</comment>
+  </data>
+  <data name="MI30053" xml:space="preserve">
+    <value>MI30053</value>
+    <comment>No Fixed Deposit Account to Calculate Interest</comment>
+  </data>
+  <data name="MI30054" xml:space="preserve">
+    <value>MI30054</value>
+    <comment>Fixed Year End Interest Calculation Process is Successfully Completed!</comment>
+  </data>
+  <data name="MI00065" xml:space="preserve">
+    <value>MI00065</value>
+    <comment>This Entry No. is made by last payment!</comment>
+  </data>
+  <data name="MI00066" xml:space="preserve">
+    <value>MI00066</value>
+    <comment>Denomination has been entered!</comment>
+  </data>
+  <data name="MC30010" xml:space="preserve">
+    <value>MC30010</value>
+    <comment>Are you sure to Fixed Interest Prev_Posting again?</comment>
+  </data>
+  <data name="MC00016" xml:space="preserve">
+    <value>MC00016</value>
+    <comment>Do you want to print Transactions?</comment>
+  </data>
+  <data name="MI30056" xml:space="preserve">
+    <value>MI30056</value>
+    <comment>Cut off process is successful.</comment>
+  </data>
+  <data name="MI50009" xml:space="preserve">
+    <value>MI50009</value>
+    <comment>Adjustment Vouchers are already prepared.  You must re-enter the voucher entry for this Register No.</comment>
+  </data>
+  <data name="MV90046" xml:space="preserve">
+    <value>MV90046</value>
+    <comment>Multiple Transfer Transaction is not allowed.</comment>
+  </data>
+  <data name="MI30055" xml:space="preserve">
+    <value>MI30055</value>
+    <comment>Please go to Certificate Printing.</comment>
+  </data>
+  <data name="MV30038" xml:space="preserve">
+    <value>MV30038</value>
+    <comment>Amount must be registered amount</comment>
+  </data>
+  <data name="MV30029" xml:space="preserve">
+    <value>Multiple PO Refund Reversal Group No. Only</value>
+    <comment>Multiple PO Refund Reversal Group No. Only</comment>
+  </data>
+  <data name="MI30040" xml:space="preserve">
+    <value>MI30040</value>
+    <comment>Successfully Reversal Transaction.</comment>
+  </data>
+  <data name="MV20024" xml:space="preserve">
+    <value>MV20024</value>
+    <comment>Invalid Value</comment>
+  </data>
+  <data name="MV20061" xml:space="preserve">
+    <value>MV20061</value>
+    <comment>Invalid  Drawing Account.</comment>
+  </data>
+  <data name="MV20062" xml:space="preserve">
+    <value>MV20062</value>
+    <comment>Invalid Encash Account.</comment>
+  </data>
+  <data name="MV20063" xml:space="preserve">
+    <value>MV20063</value>
+    <comment>Invalid Commission Account.</comment>
+  </data>
+  <data name="MV20064" xml:space="preserve">
+    <value>MV20064</value>
+    <comment>Invalid IR PO Account.</comment>
+  </data>
+  <data name="MV20065" xml:space="preserve">
+    <value>MV20065</value>
+    <comment>Invalid Telex Account.</comment>
+  </data>
+  <data name="MV30039" xml:space="preserve">
+    <value>MV30039</value>
+    <comment>Invalid Branch Transaction.Please Check Branch Code.</comment>
+  </data>
+  <data name="MV30040" xml:space="preserve">
+    <value>MV30040</value>
+    <comment>Not Allowed Local Transaction!</comment>
+  </data>
+  <data name="MV90047" xml:space="preserve">
+    <value>MV90047</value>
+    <comment>Already released Cheque Book No.!</comment>
+  </data>
+  <data name="MV90048" xml:space="preserve">
+    <value>MV90048</value>
+    <comment>Only Single PO No</comment>
+  </data>
+  <data name="MV90049" xml:space="preserve">
+    <value>MV90049</value>
+    <comment>Pay in Slip No. already Posted.</comment>
+  </data>
+  <data name="MV90050" xml:space="preserve">
+    <value>MV90050</value>
+    <comment>First ,Please Entry Drawing Remittance Denomination Entry</comment>
+  </data>
+  <data name="ME30017" xml:space="preserve">
+    <value>ME30017</value>
+    <comment>Not Allowed Back Data Transaction</comment>
+  </data>
+  <data name="MV30010" xml:space="preserve">
+    <value>MV30010</value>
+    <comment>This Register No is not Today Transaction</comment>
+  </data>
+  <data name="MV00230" xml:space="preserve">
+    <value>MV00230</value>
+    <comment>This drawing register no is already made denomination entry</comment>
+  </data>
+  <data name="MI90010" xml:space="preserve">
+    <value>MI90010</value>
+    <comment>Cash closing process is successful!.Please check daily closing reports.</comment>
+  </data>
+  <data name="MI90011" xml:space="preserve">
+    <value>MI90011</value>
+    <comment>Counter No.{0} has cash balance amount{1} This Counter is not supposed to have cash balance because there is no vault.Please check it again.</comment>
+  </data>
+  <data name="MV00231" xml:space="preserve">
+    <value>MV00231</value>
+    <comment>A/C No must be equal to register A/C  No</comment>
+  </data>
+  <data name="MV00227" xml:space="preserve">
+    <value>MV00227</value>
+    <comment>This Cheque Book No is already used.</comment>
+  </data>
+  <data name="MV90051" xml:space="preserve">
+    <value>MV90051</value>
+    <comment>Monthly Closing Successfully Finished.</comment>
+  </data>
+  <data name="MV20035" xml:space="preserve">
+    <value>MV20035</value>
+    <comment>Account Code not found in file.</comment>
+  </data>
+  <data name="MI30057" xml:space="preserve">
+    <value>MI30057</value>
+    <comment>Please Deposit for Fixed Account again.</comment>
+  </data>
+  <data name="MI90013" xml:space="preserve">
+    <value>MI90013</value>
+    <comment>Please Enter GroupNo for Multiple Transaction</comment>
+  </data>
+  <data name="MI30029" xml:space="preserve">
+    <value>MI30029</value>
+    <comment>After Day Close Finished.</comment>
+  </data>
+  <data name="MI90014" xml:space="preserve">
+    <value>MI90014</value>
+    <comment>Before Day Close Finished.</comment>
+  </data>
+  <data name="MI00143" xml:space="preserve">
+    <value>MI00143</value>
+    <comment>Please Deposit for Fixed Account again.</comment>
+  </data>
+  <data name="MV90052" xml:space="preserve">
+    <value>MV90052</value>
+    <comment>Receipt No is not issued or it is already  withdrawal </comment>
+  </data>
+  <data name="MV90053" xml:space="preserve">
+    <value>MV90053</value>
+    <comment>Invalid Quota.</comment>
+  </data>
+  <data name="MV90054" xml:space="preserve">
+    <value>MV90054</value>
+    <comment>Invalid Quantity.</comment>
+  </data>
+  <data name="MI90015" xml:space="preserve">
+    <value>MI90015</value>
+    <comment>Incomplete data for current row!</comment>
+  </data>
+  <data name="MV90061" xml:space="preserve">
+    <value>MV90061</value>
+    <comment>Duplicate Loan No. !</comment>
+  </data>
+  <data name="MV90055" xml:space="preserve">
+    <value>MV90055</value>
+    <comment>Invalid Loan No.</comment>
+  </data>
+  <data name="MV90056" xml:space="preserve">
+    <value>MV90056</value>
+    <comment>Overdraft Only.</comment>
+  </data>
+  <data name="MV90057" xml:space="preserve">
+    <value>MV90057</value>
+    <comment>Loan No. Already Closed!</comment>
+  </data>
+  <data name="MV90058" xml:space="preserve">
+    <value>MV90058</value>
+    <comment>Can't change OD limit, service charges already has been taken from this account.</comment>
+  </data>
+  <data name="MV90059" xml:space="preserve">
+    <value>MV90059</value>
+    <comment>This loan no. is expired!</comment>
+  </data>
+  <data name="MV90060" xml:space="preserve">
+    <value>MV90060</value>
+    <comment>Sanction amount must be less than 10,000,000,000.</comment>
+  </data>
+  <data name="MV90062" xml:space="preserve">
+    <value>MV90062</value>
+    <comment>Invalid New Amount.</comment>
+  </data>
+  <data name="MC90006" xml:space="preserve">
+    <value>MC90006</value>
+    <comment>Are you sure you want to change Amount {0} TO {1}</comment>
+  </data>
+  <data name="MV90063" xml:space="preserve">
+    <value>MV90063</value>
+    <comment>Service Charges {0} will be deducted from Account no.: {1}</comment>
+  </data>
+  <data name="MI90017" xml:space="preserve">
+    <value>MI90017</value>
+    <comment>Overdraft Limit has successfully changed.</comment>
+  </data>
+  <data name="MI30037" xml:space="preserve">
+    <value>MI30037</value>
+    <comment>{0}Posting Finished.</comment>
+  </data>
+  <data name="MI90012" xml:space="preserve">
+    <value>MI90012</value>
+    <comment>Monthly Closing Successfully Finished.</comment>
+  </data>
+  <data name="MV90064" xml:space="preserve">
+    <value>MV90064</value>
+    <comment>NPL Case Is Already Exist.</comment>
+  </data>
+  <data name="MV90065" xml:space="preserve">
+    <value>MV90065</value>
+    <comment>Loan No.{0} is not in Non Performance Loan Case.</comment>
+  </data>
+  <data name="MC90007" xml:space="preserve">
+    <value>MC90007</value>
+    <comment>Are you sure to release this NPL Loans?</comment>
+  </data>
+  <data name="MI90018" xml:space="preserve">
+    <value>MI90018</value>
+    <comment>This loan is now release from NPL case.</comment>
+  </data>
+  <data name="MV90066" xml:space="preserve">
+    <value>MV90066</value>
+    <comment>Legal Case is already exist !!!</comment>
+  </data>
+  <data name="MI90019" xml:space="preserve">
+    <value>MI90019</value>
+    <comment>There is No Data to show in GridView.\n  Please Insert Report Format Entry First.!</comment>
+  </data>
+  <data name="MV90067" xml:space="preserve">
+    <value>MV90067</value>
+    <comment>Incomplete data to save !</comment>
+  </data>
+  <data name="MV90068" xml:space="preserve">
+    <value>MV90068</value>
+    <comment>Invalid interest rate for loan registration !</comment>
+  </data>
+  <data name="MI90020" xml:space="preserve">
+    <value>MI90020</value>
+    <comment>There is no Loans Account</comment>
+  </data>
+  <data name="MI90021" xml:space="preserve">
+    <value>MI90021</value>
+    <comment>Not Allow to Debit from Saving A/C, Call Deposit A/C and Chart of Account</comment>
+  </data>
+  <data name="MV90070" xml:space="preserve">
+    <value>MV90070</value>
+    <comment>Require A/C No. is not available in Loans Int. file</comment>
+  </data>
+  <data name="MI90022" xml:space="preserve">
+    <value>MI90022</value>
+    <comment>No Record to Calculate. Please carefully check data associated with this loans no.</comment>
+  </data>
+  <data name="MC90009" xml:space="preserve">
+    <value>MC90009</value>
+    <comment>Do you want to make full settlement?</comment>
+  </data>
+  <data name="MI90026" xml:space="preserve">
+    <value>MI90026</value>
+    <comment>Loan Repayment Failed</comment>
+  </data>
+  <data name="MV90079" xml:space="preserve">
+    <value>MV90079</value>
+    <comment>Invalid Repayment Amount.</comment>
+  </data>
+  <data name="MV90085" xml:space="preserve">
+    <value>MV90085</value>
+    <comment>Loan Account Type Only</comment>
+  </data>
+  <data name="MV90086" xml:space="preserve">
+    <value>MV90085</value>
+    <comment>Loan Account has been Closed.</comment>
+  </data>
+  <data name="MV90087" xml:space="preserve">
+    <value>MV90087</value>
+    <comment>Not Vouchered Yet</comment>
+  </data>
+  <data name="MC90005" xml:space="preserve">
+    <value>MC90005</value>
+    <comment>Are you sure you want to edit?</comment>
+  </data>
+  <data name="MI20002" xml:space="preserve">
+    <value>MI20002</value>
+    <comment>{0}  is successfully editing.</comment>
+  </data>
+  <data name="MC90008" xml:space="preserve">
+    <value>MC90008</value>
+    <comment>Are you sure you want to cancel the legal case loan ?</comment>
+  </data>
+  <data name="MI90068" xml:space="preserve">
+    <value>MI90068</value>
+    <comment>Legal Case Cancelling Process Complete!</comment>
+  </data>
+  <data name="MV90082" xml:space="preserve">
+    <value>MV90082</value>
+    <comment>Legal Overdraft type only...</comment>
+  </data>
+  <data name="MV00092" xml:space="preserve">
+    <value>MV00092</value>
+    <comment>Currency of debit A/C and credit A/C should be same.</comment>
+  </data>
+  <data name="MI90067" xml:space="preserve">
+    <value>MI90067</value>
+    <comment>Loans No. not found in Interest File.</comment>
+  </data>
+  <data name="MV90073" xml:space="preserve">
+    <value>MV90073</value>
+    <comment>This Legal Case Loan is already closed.</comment>
+  </data>
+  <data name="MI90023" xml:space="preserve">
+    <value>MI90023</value>
+    <comment>This loan is now release from legal case.</comment>
+  </data>
+  <data name="MV90074" xml:space="preserve">
+    <value>MV90074</value>
+    <comment>This legal case loan is already released.</comment>
+  </data>
+  <data name="MV90075" xml:space="preserve">
+    <value>MV90075</value>
+    <comment>This loan No has not Legal Case.!</comment>
+  </data>
+  <data name="MV90077" xml:space="preserve">
+    <value>MV90077</value>
+    <comment>Loan No. already accepted...</comment>
+  </data>
+  <data name="MV90078" xml:space="preserve">
+    <value>MV90078</value>
+    <comment>Legal Loans type only...</comment>
+  </data>
+  <data name="MI90024" xml:space="preserve">
+    <value>MI90024</value>
+    <comment>Loan Interest Calculation Successfully Finished.</comment>
+  </data>
+  <data name="MI90025" xml:space="preserve">
+    <value>MI90025</value>
+    <comment>Loan Interest Calculation Failed.</comment>
+  </data>
+  <data name="MV00144" xml:space="preserve">
+    <value>MV00144</value>
+    <comment>Invalid Budget Year.</comment>
+  </data>
+  <data name="MV90084" xml:space="preserve">
+    <value>MV90084</value>
+    <comment>From Budget Year could not be greater than To Budget Year.</comment>
+  </data>
+  <data name="MI00025" xml:space="preserve">
+    <value>MI00025</value>
+    <comment>No Data to Save</comment>
+  </data>
+  <data name="MV90093" xml:space="preserve">
+    <value>MV90093</value>
+    <comment>First,Please Insert For Cash Payment Denomination Entry</comment>
+  </data>
+  <data name="MV90092" xml:space="preserve">
+    <value>MV90092</value>
+    <comment>Invalid Deposit Amount.</comment>
+  </data>
+  <data name="MI90069" xml:space="preserve">
+    <value>MI90069</value>
+    <comment>Not Vouchered Yet.</comment>
+  </data>
+  <data name="MV90094" xml:space="preserve">
+    <value>MV90094</value>
+    <comment>Repayment Amount should not be greater than Total Outstanding Amount!.</comment>
+  </data>
+  <data name="MV90095" xml:space="preserve">
+    <value>MV90095</value>
+    <comment>Repayment Amount should not be greater than Sanction Amount!.</comment>
+  </data>
+  <data name="MI90071" xml:space="preserve">
+    <value>MI90071</value>
+    <comment>PO is already refund."\n" Sorry,it is not allowed to edit."\n" Please PO Refund Reversal first.</comment>
+  </data>
+  <data name="MV00206" xml:space="preserve">
+    <value>MV00206</value>
+    <comment>Invalid Credit Amount.</comment>
+  </data>
+  <data name="MV30022" xml:space="preserve">
+    <value>MV30022</value>
+    <comment>Month {0} cannot be greater than Today {1}.</comment>
+  </data>
+  <data name="MI90072" xml:space="preserve">
+    <value>MI90072</value>
+    <comment>Incompleted Township Code.</comment>
+  </data>
+  <data name="MV20004" xml:space="preserve">
+    <value>MV20004</value>
+    <comment>Invalid State/Division Code</comment>
+  </data>
+  <data name="MV20005" xml:space="preserve">
+    <value>MV20005</value>
+    <comment>Invalid Township Code</comment>
+  </data>
+  <data name="MV20039" xml:space="preserve">
+    <value>MV20039</value>
+    <comment>Invalid Township Description .</comment>
+  </data>
+  <data name="MV90102" xml:space="preserve">
+    <value>MV90102</value>
+    <comment>Year is required.</comment>
+  </data>
+  <data name="MV90103" xml:space="preserve">
+    <value>MV90103</value>
+    <comment>Month is required.</comment>
+  </data>
+  <data name="MI90073" xml:space="preserve">
+    <value>MI90073</value>
+    <comment>Total records {0} found!</comment>
+  </data>
+  <data name="MV90104" xml:space="preserve">
+    <value>MV90104</value>
+    <comment>Interest Taken Account should not be fixed account.</comment>
+  </data>
+  <data name="MV90105" xml:space="preserve">
+    <value>MV90105</value>
+    <comment>Group code is required.</comment>
+  </data>
+  <data name="MV90106" xml:space="preserve">
+    <value>MV90106</value>
+    <comment>Sub code is required.</comment>
+  </data>
+  <data name="MV90107" xml:space="preserve">
+    <value>MV90107</value>
+    <comment>Prefix is required.</comment>
+  </data>
+  <data name="MV90108" xml:space="preserve">
+    <value>MV90108</value>
+    <comment>Product type is required.</comment>
+  </data>
+  <data name="MV90109" xml:space="preserve">
+    <value>MV90109</value>
+    <comment>Livestock type is required.</comment>
+  </data>
+  <data name="MV90110" xml:space="preserve">
+    <value>MV90110</value>
+    <comment>UM is required.</comment>
+  </data>
+  <data name="MV90111" xml:space="preserve">
+    <value>MV90111</value>
+    <comment>Duration months is required.</comment>
+  </data>
+  <data name="MV90112" xml:space="preserve">
+    <value>MV90112</value>
+    <comment>Season Type is required.</comment>
+  </data>
+  <data name="MV90113" xml:space="preserve">
+    <value>MV90113</value>
+    <comment>Start Month is required.</comment>
+  </data>
+  <data name="MV90114" xml:space="preserve">
+    <value>MV90114</value>
+    <comment>Start Day is required.</comment>
+  </data>
+  <data name="MV90115" xml:space="preserve">
+    <value>MV90115</value>
+    <comment>End Month is required.</comment>
+  </data>
+  <data name="MV90116" xml:space="preserve">
+    <value>MV90116</value>
+    <comment>End Day is required.</comment>
+  </data>
+  <data name="MV90117" xml:space="preserve">
+    <value>MV90117</value>
+    <comment>Dead Line Month is required.</comment>
+  </data>
+  <data name="MV90118" xml:space="preserve">
+    <value>MV90118</value>
+    <comment>Dead Line Day is required.</comment>
+  </data>
+  <data name="MP00078" xml:space="preserve">
+    <value>MP00078</value>
+    <comment>Solidarity must be 3 users!</comment>
+  </data>
+  <data name="MP00079" xml:space="preserve">
+    <value>MP00079</value>
+    <comment>This memeber is already exist!</comment>
+  </data>
+  <data name="MP00080" xml:space="preserve">
+    <value>MP00080</value>
+    <comment>Solidarity Lending Entry must be 3 users!</comment>
+  </data>
+  <data name="MP00081" xml:space="preserve">
+    <value>MP00081</value>
+    <comment>Invalid Village Code</comment>
+  </data>
+  <data name="MV90119" xml:space="preserve">
+    <value>MV90119</value>
+    <comment>Invalid Group No.</comment>
+  </data>
+  <data name="MV90120" xml:space="preserve">
+    <value>MV90120</value>
+    <comment>Invalid Group No {0} for Branch {1}.</comment>
+  </data>
+  <data name="MI90076" xml:space="preserve">
+    <value>MI90076</value>
+    <comment>No Record to Calculate Interest.</comment>
+  </data>
+  <data name="MV90129" xml:space="preserve">
+    <value>MV90129</value>
+    <comment>Refund Vr No is not exist!</comment>
+  </data>
+  <data name="MV90130" xml:space="preserve">
+    <value>MV90130</value>
+    <comment>Value should not be "0"</comment>
+  </data>
+  <data name="MC00004" xml:space="preserve">
+    <value>MC00004</value>
+    <comment>Are you sure to Save?</comment>
+  </data>
+  <data name="MI90074" xml:space="preserve">
+    <value>MI90074</value>
+    <comment>Dealer Registration is successfully updated!.</comment>
+  </data>
+  <data name="MI90075" xml:space="preserve">
+    <value>MI90075</value>
+    <comment>Dealer Registration is successfully deleted!.</comment>
+  </data>
+  <data name="MV90134" xml:space="preserve">
+    <value>MV90134</value>
+    <comment>Invalid Village Code</comment>
+  </data>
+  <data name="ME90050" xml:space="preserve">
+    <value>ME90050</value>
+    <comment>Cannot delete. Used by another record.</comment>
+  </data>
+  <data name="MV90121" xml:space="preserve">
+    <value>MV90121</value>
+    <comment>Suspend Amount is required!</comment>
+  </data>
+  <data name="MV90122" xml:space="preserve">
+    <value>MV90122</value>
+    <comment>Total Group is required!</comment>
+  </data>
+  <data name="MV90123" xml:space="preserve">
+    <value>MV90123</value>
+    <comment>Population is required!</comment>
+  </data>
+  <data name="MV90124" xml:space="preserve">
+    <value>MV90124</value>
+    <comment>Acre is required!</comment>
+  </data>
+  <data name="MV90125" xml:space="preserve">
+    <value>MV90125</value>
+    <comment>Sanction Amount is required!</comment>
+  </data>
+  <data name="MV90126" xml:space="preserve">
+    <value>MV90126</value>
+    <comment>Refund Amount is required!</comment>
+  </data>
+  <data name="MV90127" xml:space="preserve">
+    <value>MV90127</value>
+    <comment>Refund Vr No is required!</comment>
+  </data>
+  <data name="MV90140" xml:space="preserve">
+    <value>MV90140</value>
+    <comment>Invalid penal fee for farm loan!</comment>
+  </data>
+  <data name="MI90078" xml:space="preserve">
+    <value>MI90078</value>
+    <comment>There is no unclosed loans to calculate interest for selected budget year.</comment>
+  </data>
+  <data name="MI90107" xml:space="preserve">
+    <value>MI90107</value>
+    <comment>Dealer Number is successfully generated!.</comment>
+  </data>
+  <data name="MI90108" xml:space="preserve">
+    <value>MI90108</value>
+    <comment>Dealer Registration is successfully updated!.</comment>
+  </data>
+  <data name="MI90109" xml:space="preserve">
+    <value>MI90109</value>
+    <comment>Dealer Registration is successfully deleted!.</comment>
+  </data>
+  <data name="MI90110" xml:space="preserve">
+    <value>MI90110</value>
+    <comment>Hire Purchase Registration is successfully saved!.</comment>
+  </data>
+  <data name="MI90111" xml:space="preserve">
+    <value>MI90111</value>
+    <comment>HP Manual Repayment Process is successfully finished!.</comment>
+  </data>
+  <data name="MV30041" xml:space="preserve">
+    <value>MV30041</value>
+    <comment>Please Check Server (Hard Disk) Free Space To Do After Backup!</comment>
+  </data>
+  <data name="MV30042" xml:space="preserve">
+    <value>MV30042</value>
+    <comment>Database Backup Successfully.</comment>
+  </data>
+  <data name="MV30043" xml:space="preserve">
+    <value>MV30043</value>
+    <comment>Are you sure to do After Backup!</comment>
+  </data>
+  <data name="MV90138" xml:space="preserve">
+    <value>MV90138</value>
+    <comment>Repayment amount must be less than Total Outstanding amount</comment>
+  </data>
+  <data name="MV90141" xml:space="preserve">
+    <value>MV90141</value>
+    <comment>Loan account no is required!</comment>
+  </data>
+  <data name="MV90142" xml:space="preserve">
+    <value>MV90142</value>
+    <comment>Loan interest account no is required!</comment>
+  </data>
+  <data name="MV90143" xml:space="preserve">
+    <value>MV90143</value>
+    <comment>Loan penalities account no is required!</comment>
+  </data>
+  <data name="MV90147" xml:space="preserve">
+    <value>MV90147</value>
+    <comment>Invalid Repayment Amount</comment>
+  </data>
+  <data name="MV90148" xml:space="preserve">
+    <value>MV90148</value>
+    <comment>Interest Code is required!</comment>
+  </data>
+  <data name="MV90149" xml:space="preserve">
+    <value>MV90149</value>
+    <comment>Penalties Code is required!</comment>
+  </data>
+  <data name="MV90151" xml:space="preserve">
+    <value>MV90151</value>
+    <comment>Group No is required!</comment>
+  </data>
+  <data name="MI900241" xml:space="preserve">
+    <value>MI900241</value>
+    <comment>Farm Loan Penalties Calculation Successfully Finished.</comment>
+  </data>
+  <data name="MI900242" xml:space="preserve">
+    <value>MI900242</value>
+    <comment>Farm Loan Penalties Calculation Failed.</comment>
+  </data>
+  <data name="MV90152" xml:space="preserve">
+    <value>MV90152</value>
+    <comment>Village is required!</comment>
+  </data>
+  <data name="MV90153" xml:space="preserve">
+    <value>MV90153</value>
+    <comment>Township is required!</comment>
+  </data>
+  <data name="MI90112" xml:space="preserve">
+    <value>MI90112</value>
+    <comment>HP Monthly Auto Payment Process is finished successfully!</comment>
+  </data>
+  <data name="MV90150" xml:space="preserve">
+    <value>MV90150</value>
+    <comment>No Records to run HP Monthly Auto Payment Process!</comment>
+  </data>
+  <data name="MV90158" xml:space="preserve">
+    <value>MV90158</value>
+    <comment>Pls Check Domestic Account Code For HP Process!</comment>
+  </data>
+  <data name="MV90154" xml:space="preserve">
+    <value>MV90154</value>
+    <comment>Already Run HP Auto Payment Process!</comment>
+  </data>
+  <data name="MV90155" xml:space="preserve">
+    <value>MV90155</value>
+    <comment>No need to run auto pay process in this date!</comment>
+  </data>
+  <data name="MV90156" xml:space="preserve">
+    <value>MV90156</value>
+    <comment>Invalid HP Number. Pls enter valid HP Numeber !</comment>
+  </data>
+  <data name="MV90157" xml:space="preserve">
+    <value>MV90157</value>
+    <comment>Already Paid Term! Pls check again!</comment>
+  </data>
+  <data name="MI90113" xml:space="preserve">
+    <value>MI90113</value>
+    <comment>No Data to show!</comment>
+  </data>
+  <data name="MV90159" xml:space="preserve">
+    <value>MV90159</value>
+    <comment>InSufficient Balance in Customer Account !</comment>
+  </data>
+  <data name="MV90160" xml:space="preserve">
+    <value>MV90160</value>
+    <comment>Overdraft in Customer Ledger!</comment>
+  </data>
+  <data name="MI40001" xml:space="preserve">
+    <value>MI40001</value>
+    <comment>Database Backup Successfully Finished!</comment>
+  </data>
+  <data name="MI40002" xml:space="preserve">
+    <value>MI40002</value>
+    <comment>You do not have permission for this function.</comment>
+  </data>
+  <data name="MV40001" xml:space="preserve">
+    <value>MV40001</value>
+    <comment>Please select one of the backup devices!</comment>
+  </data>
+  <data name="MI90114" xml:space="preserve">
+    <value>MI90114</value>
+    <comment>HP Late Fees Calculation Process is successfully finshed!.</comment>
+  </data>
+  <data name="MV90165" xml:space="preserve">
+    <value>MV90165</value>
+    <comment>Please Run Business Loan Auto Payment Process Firstly!</comment>
+  </data>
+  <data name="MV90166" xml:space="preserve">
+    <value>MV90166</value>
+    <comment>Please Run Cut Off Process Firstly!</comment>
+  </data>
+  <data name="MV90167" xml:space="preserve">
+    <value>MV90167</value>
+    <comment>Business Loans LateFees Calculation is successfully finished!</comment>
+  </data>
+  <data name="MV90168" xml:space="preserve">
+    <value>MV90168</value>
+    <comment>Business Loans Late Fees Calculation Fail!</comment>
+  </data>
+  <data name="MV90171" xml:space="preserve">
+    <value>MV90171</value>
+    <comment>Already Run Business Loan Auto Payment Process!.</comment>
+  </data>
+  <data name="MV90172" xml:space="preserve">
+    <value>MV90172</value>
+    <comment>No Records to run Business Loan Monthly Auto Payment Process!</comment>
+  </data>
+  <data name="MV90173" xml:space="preserve">
+    <value>MV90173</value>
+    <comment>No Records to run BL Auto Payment Process!</comment>
+  </data>
+  <data name="MV90164" xml:space="preserve">
+    <value>MV90164</value>
+    <comment>Please Run HP Auto Payment Process Firtly!.</comment>
+  </data>
+  <data name="MI90115" xml:space="preserve">
+    <value>MI90115</value>
+    <comment>Personal Loan Auto Payment Process is successfully finished.</comment>
+  </data>
+  <data name="MV90161" xml:space="preserve">
+    <value>MV90161</value>
+    <comment>Already Run Personal Loan Auto Payment Process!</comment>
+  </data>
+  <data name="MV90162" xml:space="preserve">
+    <value>MV90162</value>
+    <comment>No Records to run personal loan monthly auto payment process!</comment>
+  </data>
+  <data name="MI90116" xml:space="preserve">
+    <value>MI90116</value>
+    <comment>Personal Loan Late Fees Calculation Process is successfully finished!</comment>
+  </data>
+  <data name="MV90163" xml:space="preserve">
+    <value>MV90163</value>
+    <comment>Process Fail!</comment>
+  </data>
+  <data name="MI90117" xml:space="preserve">
+    <value>MI90117</value>
+    <comment>HP Late Fees Repayment Process is successfully!</comment>
+  </data>
+  <data name="MV90170" xml:space="preserve">
+    <value>MV90170</value>
+    <comment>This HP account is not TOD,so has no late fees.!</comment>
+  </data>
+  <data name="MV90169" xml:space="preserve">
+    <value>MV90169</value>
+    <comment>Date must not be greater than today.</comment>
+  </data>
+  <data name="MV90175" xml:space="preserve">
+    <value>MV90175</value>
+    <comment>There is no due Business Loans during required days.</comment>
+  </data>
+  <data name="MV90176" xml:space="preserve">
+    <value>MV90176</value>
+    <comment>Business Loan Daily Interest Calculation Successfully Finished!</comment>
+  </data>
+  <data name="MV90174" xml:space="preserve">
+    <value>MV90174</value>
+    <comment>Invalid Company Name.</comment>
+  </data>
+  <data name="MI90123" xml:space="preserve">
+    <value>MI90123</value>
+    <comment>Please Run Business Loan Auto Payment Process First!</comment>
+  </data>
+  <data name="MI90118" xml:space="preserve">
+    <value>MI90118</value>
+    <comment>Please Run Hire Purchase Loan Auto Payment Process First!</comment>
+  </data>
+  <data name="MI90119" xml:space="preserve">
+    <value>MI90119</value>
+    <comment>Please Run Personal Loan Auto Payment Process First!</comment>
+  </data>
+  <data name="MI90120" xml:space="preserve">
+    <value>MI90120</value>
+    <comment>Please Run Business Loan Late Fee Auto Voucher Process First!</comment>
+  </data>
+  <data name="MI90121" xml:space="preserve">
+    <value>MI90121</value>
+    <comment>Please Run Hire Purchase Loan Late Fee Auto Voucher Process First!</comment>
+  </data>
+  <data name="MI90122" xml:space="preserve">
+    <value>MI90122</value>
+    <comment>Please Run Personal Loan Late Fee Auto Voucher Process First!</comment>
+  </data>
+  <data name="MV90178" xml:space="preserve">
+    <value>MV90178</value>
+    <comment>Invalid Maximum Amount.!</comment>
+  </data>
+  <data name="MV90177" xml:space="preserve">
+    <value>MV90177</value>
+    <comment>Please Run Business Loans Daily Interest Calculation Process Firstly!</comment>
+  </data>
+  <data name="MV90179" xml:space="preserve">
+    <value>MV90179</value>
+    <comment>Invalid Minimum Amount.!</comment>
+  </data>
+  <data name="MV90181" xml:space="preserve">
+    <value>MV90181</value>
+    <comment>Invalid Business LoansNo!</comment>
+  </data>
+  <data name="MV90180" xml:space="preserve">
+    <value>MV90180</value>
+    <comment>No need to run late fees calculation in this date!.</comment>
+  </data>
+  <data name="MV90183" xml:space="preserve">
+    <value>MV90183</value>
+    <comment>Business Loans Late Fees Calculation Already Calculated!</comment>
+  </data>
+  <data name="MV90182" xml:space="preserve">
+    <value>MV90182</value>
+    <comment>Please Run PL Late Fees Auto Voucher Process Firstly!</comment>
+  </data>
+  <data name="MV00172" xml:space="preserve">
+    <value>MV00172</value>
+    <comment>Invalid Manager Permission.</comment>
+  </data>
+  <data name="MI90124" xml:space="preserve">
+    <value>MI90124</value>
+    <comment>Business Loan AutoPayment Process Successfully Finished.</comment>
+  </data>
+  <data name="MI90125" xml:space="preserve">
+    <value>MI90125</value>
+    <comment>Business Loans LateFees Calculation is successfully finished!</comment>
+  </data>
+  <data name="MV90184" xml:space="preserve">
+    <value>MV90184</value>
+    <comment>Credit amount must equal to interest amount of related account.</comment>
+  </data>
+  <data name="MV90185" xml:space="preserve">
+    <value>MV90185</value>
+    <comment>There is no hire puchase loan for given account.</comment>
+  </data>
+  <data name="MI90127" xml:space="preserve">
+    <value>MI90127</value>
+    <comment>HP Late Fees Auto Voucher Process is successfully finshed!.</comment>
+  </data>
+  <data name="MV90186" xml:space="preserve">
+    <value>MV90186</value>
+    <comment>HP Late Fees Auto Voucher Process is failed!.</comment>
+  </data>
+  <data name="MV90188" xml:space="preserve">
+    <value>MV90188</value>
+    <comment>Already Run HP Late Fees Auto Voucher Process!.</comment>
+  </data>
+  <data name="MI90126" xml:space="preserve">
+    <value>MI90126</value>
+    <comment>Selected year and month cannot greater than current year and month.</comment>
+  </data>
+  <data name="MV90191" xml:space="preserve">
+    <value>MV90191</value>
+    <comment>Limit Change Not Allowed After Installment Auto Pay Process!</comment>
+  </data>
+  <data name="MV90195" xml:space="preserve">
+    <value>MV90195</value>
+    <comment>Business Loans Late Fees Auto Voucher Process is successfully finshed!</comment>
+  </data>
+  <data name="MV90196" xml:space="preserve">
+    <value>MV90196</value>
+    <comment>Already Run Business Loans Late Fees Auto Voucher Process!</comment>
+  </data>
+  <data name="MV90197" xml:space="preserve">
+    <value>MV90197</value>
+    <comment>Business Loans Late Fees Auto Voucher Process is failed!</comment>
+  </data>
+  <data name="MI90128" xml:space="preserve">
+    <value>MI90128</value>
+    <comment>PL Manual Prepayment Process is successfully finished!</comment>
+  </data>
+  <data name="MV90187" xml:space="preserve">
+    <value>MV90187</value>
+    <comment>Invalid PL Number. Pls enter valid PL Numeber !</comment>
+  </data>
+  <data name="MI90129" xml:space="preserve">
+    <value>MI90129</value>
+    <comment>PL Late Fees Auto Voucher Process is successfully finshed!</comment>
+  </data>
+  <data name="MV90189" xml:space="preserve">
+    <value>MV90189</value>
+    <comment>Already Run PL Late Fees Auto Voucher Process!</comment>
+  </data>
+  <data name="MV90190" xml:space="preserve">
+    <value>MV90190</value>
+    <comment>PL Late Fees Auto Voucher Process is failed!</comment>
+  </data>
+  <data name="MV90198" xml:space="preserve">
+    <value>MV90198</value>
+    <comment>Please Run Business Loans LateFee Auto Voucher Process Firstly!</comment>
+  </data>
+  <data name="MC90010" xml:space="preserve">
+    <value>MC90010</value>
+    <comment>Are you sure you want to cancel?</comment>
+  </data>
+  <data name="ME30012" xml:space="preserve">
+    <value>ME30012</value>
+    <comment>Data Not Found.</comment>
+  </data>
+  <data name="MV00213" xml:space="preserve">
+    <value>MV00213</value>
+    <comment>Invalid Entry No.</comment>
+  </data>
+  <data name="MV90199" xml:space="preserve">
+    <value>MV90199</value>
+    <comment>Invalid Entry No for Business Loans!</comment>
+  </data>
+  <data name="MV90200" xml:space="preserve">
+    <value>MV90200</value>
+    <comment>Invalid Entry No for Personal Loans!</comment>
+  </data>
+  <data name="ME30003" xml:space="preserve">
+    <value>ME30003</value>
+    <comment>Not allowed already reversal.</comment>
+  </data>
+  <data name="MV90201" xml:space="preserve">
+    <value>MV90201</value>
+    <comment>Not Allow Multiple Deposit/Withdraw Transaction!</comment>
+  </data>
+  <data name="MV90202" xml:space="preserve">
+    <value>MV90202</value>
+    <comment>Not Allow Individuals Deposit/Withdraw Transaction!</comment>
+  </data>
+  <data name="MI90130" xml:space="preserve">
+    <value>MI90130</value>
+    <comment>Hire Purchase Registration Reversal Process is successfully finshed!</comment>
+  </data>
+  <data name="MV90203" xml:space="preserve">
+    <value>MV90203</value>
+    <comment>This HP Registration is already reversed!</comment>
+  </data>
+  <data name="MI90131" xml:space="preserve">
+    <value>MI90131</value>
+    <comment>Deposit Importing Process is successfully finshed!</comment>
+  </data>
+  <data name="MI90132" xml:space="preserve">
+    <value>MI90132</value>
+    <comment>Personal Loan Registration Reversal Process is successfully finshed!</comment>
+  </data>
+  <data name="MV90204" xml:space="preserve">
+    <value>MV90204</value>
+    <comment>This Personal Loan Registration is already reversed!</comment>
+  </data>
+  <data name="MI90134" xml:space="preserve">
+    <value>MI90134</value>
+    <comment>Profit and Loss Balance Zerorization For Income Amount is successfully finished!</comment>
+  </data>
+  <data name="MI90135" xml:space="preserve">
+    <value>MI90135</value>
+    <comment>Profit and Loss Balance Zerorization For Expense Amount is successfully finished!</comment>
+  </data>
+  <data name="MI90136" xml:space="preserve">
+    <value>MI90136</value>
+    <comment>Personal Loan Registration Editing is success!</comment>
+  </data>
+  <data name="MI90137" xml:space="preserve">
+    <value>MI90137</value>
+    <comment>Account Close is successfully finished!</comment>
+  </data>
+  <data name="MV90205" xml:space="preserve">
+    <value>MV90205</value>
+    <comment>This Account is already hp account.</comment>
+  </data>
+  <data name="MV90206" xml:space="preserve">
+    <value>MV90206</value>
+    <comment>This Dealer Account is already hp account.</comment>
+  </data>
+  <data name="MV90207" xml:space="preserve">
+    <value>MV90207</value>
+    <comment>Please withdraw the account first!</comment>
+  </data>
+  <data name="MV90208" xml:space="preserve">
+    <value>MV90208</value>
+    <comment>Please repay the OD and late fee amount first!</comment>
+  </data>
+  <data name="MI90133" xml:space="preserve">
+    <value>MI90133</value>
+    <comment>Business Loan Registration Reversal Process is successfully finshed!</comment>
+  </data>
+  <data name="MV90210" xml:space="preserve">
+    <value>MV90210</value>
+    <comment>Reversal cannot be done for back date transaction!</comment>
+  </data>
+  <data name="MV90211" xml:space="preserve">
+    <value>MV90211</value>
+    <comment>Please run the busiess loan late fee auto pay first!</comment>
+  </data>
+  <data name="MV90212" xml:space="preserve">
+    <value>MV90212</value>
+    <comment>Please extend the limit first!</comment>
+  </data>
+  <data name="MV90213" xml:space="preserve">
+    <value>MV90213</value>
+    <comment>This HP No has OD.Please Run HP Late Fee Auto Pay Process First!</comment>
+  </data>
+  <data name="MV90214" xml:space="preserve">
+    <value>MV90214</value>
+    <comment>Start Term No should not greater than End Term No!</comment>
+  </data>
+  <data name="MV90215" xml:space="preserve">
+    <value>MV90215</value>
+    <comment>This customer is already in Black List.</comment>
+  </data>
+  <data name="MV90230" xml:space="preserve">
+    <value>MV90230</value>
+    <comment>This customer is already in Warning List.</comment>
+  </data>
+  <data name="MV90216" xml:space="preserve">
+    <value>MV90216</value>
+    <comment>Black List Customer Approved Successfully!</comment>
+  </data>
+  <data name="MV90217" xml:space="preserve">
+    <value>MV90217</value>
+    <comment>Black List Customer Reject Successfully!</comment>
+  </data>
+  <data name="MV90218" xml:space="preserve">
+    <value>MV90218</value>
+    <comment>Black List Customer Remove Successfully!</comment>
+  </data>
+  <data name="MV90021" xml:space="preserve">
+    <value>MV90021</value>
+    <comment>Invalid User!</comment>
+  </data>
+  <data name="MV90219" xml:space="preserve">
+    <value>MV90219</value>
+    <comment>Select Branch Code!</comment>
+  </data>
+  <data name="MV90220" xml:space="preserve">
+    <value>MV90220</value>
+    <comment>Select Loans Type!</comment>
+  </data>
+  <data name="MV90221" xml:space="preserve">
+    <value>MV90221</value>
+    <comment>Black List Maker Checker User Entry Successful!</comment>
+  </data>
+  <data name="MV90222" xml:space="preserve">
+    <value>MV90222</value>
+    <comment>Black List Maker Checker User Delete Successful!</comment>
+  </data>
+  <data name="MV90223" xml:space="preserve">
+    <value>MV90223</value>
+    <comment>This PL No has OD.Please Run PL Late Fee Auto Pay Process First!</comment>
+  </data>
+  <data name="MV90224" xml:space="preserve">
+    <value>MV90224</value>
+    <comment>Repayment term no should not greater than the total term no!</comment>
+  </data>
+  <data name="MV90225" xml:space="preserve">
+    <value>MV90225</value>
+    <comment>Personal Loan Registration Reversal Process is successfully finshed!</comment>
+  </data>
+  <data name="MV90226" xml:space="preserve">
+    <value>MV90226</value>
+    <comment>This Personal Loan Registration is already reversed!</comment>
+  </data>
+  <data name="MV90227" xml:space="preserve">
+    <value>MV90227</value>
+    <comment>Invalid Term No!</comment>
+  </data>
+  <data name="MI90139" xml:space="preserve">
+    <value>MI90139</value>
+    <comment>Reversal Successful.\n Generated {0} is {1}.!</comment>
+  </data>
+  <data name="MV90228" xml:space="preserve">
+    <value>MV90228</value>
+    <comment>For Company Account, please select at least one customer!</comment>
+  </data>
+  <data name="MV90229" xml:space="preserve">
+    <value>MV90229</value>
+    <comment>This customer is a Black List Customer!Please select the other customer.</comment>
+  </data>
+  <data name="MV00225" xml:space="preserve">
+    <value>MV00225</value>
+    <comment>Date of Birth should be greater than 18.</comment>
+  </data>
+  <data name="MI90140" xml:space="preserve">
+    <value>MI90140</value>
+    <comment>[Black List Customer] is approved successfully!</comment>
+  </data>
+  <data name="MI90141" xml:space="preserve">
+    <value>MI90141</value>
+    <comment>[Warning List Customer] is approved successfully!</comment>
+  </data>
+  <data name="MI90142" xml:space="preserve">
+    <value>MI90142</value>
+    <comment>[Warning List Customer] Reject Successfully!</comment>
+  </data>
+  <data name="MI90143" xml:space="preserve">
+    <value>MI90143</value>
+    <comment>Black List Customer Reject Successfully!</comment>
+  </data>
+  <data name="MI90144" xml:space="preserve">
+    <value>MI90144</value>
+    <comment>[Warning List Customer] Remove Successfully!</comment>
+  </data>
+  <data name="MI90145" xml:space="preserve">
+    <value>MI90145</value>
+    <comment>Approve Successfully!</comment>
+  </data>
+  <data name="MI90146" xml:space="preserve">
+    <value>MI90146</value>
+    <comment>Reject Successfully!</comment>
+  </data>
+  <data name="MI50010" xml:space="preserve">
+    <value>MI50010</value>
+    <comment>System has already shut down.\nPlease startup first.</comment>
+  </data>
+  <data name="MI50011" xml:space="preserve">
+    <value>MI50011</value>
+    <comment>Not Allowed Reversal!\nAuto Pay Process has been Run.</comment>
+  </data>
+  <data name="MI50012" xml:space="preserve">
+    <value>MI50012</value>
+    <comment>Already Cut Off!\nNot Allowed Reversal for "Before Cut Off" Transactions.</comment>
+  </data>
+  <data name="ME30018" xml:space="preserve">
+    <value>ME30018</value>
+    <comment>Not Allowed Reversal for Invaid Date!</comment>
+  </data>
+  <data name="ME90047" xml:space="preserve">
+    <value>ME90047</value>
+    <comment>System Start Up File has no record.</comment>
+  </data>
+  <data name="MI50013" xml:space="preserve">
+    <value>MI50013</value>
+    <comment>You have no permission.\n"Back Date EOD Process" needs to be completed!</comment>
+  </data>
+  <data name="ME00070" xml:space="preserve">
+    <value>ME00070</value>
+    <comment>Please check the "System Date" and "Settlement Date" First!</comment>
+  </data>
+  <data name="ME00024" xml:space="preserve">
+    <value>ME00024</value>
+    <comment>Cannot find other branch information.</comment>
+  </data>
+  <data name="MI50014" xml:space="preserve">
+    <value>MI50014</value>
+    <comment>Already Cut Off!\nNot Allowed Reversal for "Cash Transactions".</comment>
+  </data>
+  <data name="ME00071" xml:space="preserve">
+    <value>ME00071</value>
+    <comment>Cannot cut off!</comment>
+  </data>
+  <data name="MC00022" xml:space="preserve">
+    <value>MC00022</value>
+    <comment>Before "Business Loan Installment Auto Pay Process,\nDo you decrease the business loan limit"?</comment>
+  </data>
+  <data name="MV90231" xml:space="preserve">
+    <value>MV90231</value>
+    <comment>No late fee for this account!</comment>
+  </data>
+  <data name="MI30058" xml:space="preserve">
+    <value>MI30058</value>
+    <comment>Already finished Profit and Loss Balance Zerorization for 'Income Amount'!</comment>
+  </data>
+  <data name="MI30059" xml:space="preserve">
+    <value>MI30059</value>
+    <comment>Already finished Profit and Loss Balance Zerorization for 'Expense Amount'!</comment>
+  </data>
+  <data name="MI30060" xml:space="preserve">
+    <value>MI30060</value>
+    <comment>Already run "After Day Close"!</comment>
+  </data>
+  <data name="MI30061" xml:space="preserve">
+    <value>MI30061</value>
+    <comment>Please run "Before Day Close" first!</comment>
+  </data>
+  <data name="MI90147" xml:space="preserve">
+    <value>MI90147</value>
+    <comment>Limit Extend Successfully!</comment>
+  </data>
+  <data name="MI90148" xml:space="preserve">
+    <value>MI90148</value>
+    <comment>Installment Auto Pay Process has been run for the "Term-{0}"\nPlease inform to System Administrator to do manual instruction for "Term-{1}".\nLoan limit will extend successfully!</comment>
+  </data>
+  <data name="ME00072" xml:space="preserve">
+    <value>ME00072</value>
+    <comment>Already entered Maker Entry! Please proceed Checker Entry!</comment>
+  </data>
+  <data name="MV90232" xml:space="preserve">
+    <value>MV90232</value>
+    <comment>No OD and Late Fee Information!</comment>
+  </data>
+  <data name="MV90233" xml:space="preserve">
+    <value>MV90233</value>
+    <comment>This account no has already taken Loan! Please register the new account no!</comment>
+  </data>
+  <data name="MV90234" xml:space="preserve">
+    <value>MV90234</value>
+    <comment>Holiday date should be greater than System Date!
+         \n Please contact your administrator!</comment>
+  </data>
+  <data name="MV30044" xml:space="preserve">
+    <value>MV30044</value>
+    <comment>Invalid Title Name!\nPlease select to the original one!</comment>
+  </data>
+  <data name="MV90235" xml:space="preserve">
+    <value>MV90235</value>
+    <comment>Active Loan Info Not Found!</comment>
+  </data>
+  <data name="MV90236" xml:space="preserve">
+    <value>MV90236</value>
+    <comment>Insufficient Total Late Fees in some account!
+         \n Please do the Late Fee Exception First!</comment>
+  </data>
+  <data name="MV90209" xml:space="preserve">
+    <value>MV90209</value>
+    <comment>This Business Loan Registration is already reversed!</comment>
+  </data>
+  <data name="MV002321" xml:space="preserve">
+    <value>MV00232</value>
+    <comment>Please upload a valid photo.</comment>
+  </data>
+  <data name="MV002322" xml:space="preserve">
+    <value>MV00232</value>
+    <comment>Please upload a valid photo.</comment>
+  </data>
+  <data name="MV00232" xml:space="preserve">
+    <value>Please upload a valid photo.</value>
+    <comment>Please upload a valid photo.</comment>
+  </data>
+  <data name="MV00233" xml:space="preserve">
+    <value>Please upload a valid Signature photo.</value>
+    <comment>Please upload a valid Signature photo.</comment>
+  </data>
+  <data name="MV002331" xml:space="preserve">
+    <value>MV00233</value>
+    <comment>Please upload a valid Signature photo.</comment>
+  </data>
+  <data name="MV002332" xml:space="preserve">
+    <value>MV00233</value>
+    <comment>Please upload a valid Signature photo.</comment>
+  </data>
+</root>

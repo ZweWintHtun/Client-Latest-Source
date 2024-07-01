@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00075, Ace.Cbs.Loan.Dmd" rename="AGLoanProductTypeItemdto"/>
+
+  <class name="LOMORM00075" table="AGLoanProductTypeItem" >
+
+    <id name="AGLoanProductTypeItemId">
+      <column name="AGLoanProductTypeItemId" sql-type="char" not-null="true" />
+    </id>
+    
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+
+    <property name="ProductCode">
+      <column name="ProductCode" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="SeasonCode">
+      <column name="SeasonCode" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="UMCode">
+      <column name="UMCode" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="SDay">
+      <column name="SDay" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="SMonth">
+      <column name="SMonth" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="EDay">
+      <column name="EDay" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="EMonth">
+      <column name="EMonth" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="DeadLineDay">
+      <column name="DeadLineDay" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="DeadLineMonth">
+      <column name="DeadLineMonth" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="USERNO">
+      <column name="USERNO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="DATE_TIME">
+      <column name="DATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  <!--//AGLoanProductTypeItemDAO.CheckExist//-->
+  <query name="AGLoanProductTypeItemDAO.CheckExist">
+    select new AGLoanProductTypeItemdto
+    (
+    a.AGLoanProductTypeItemId,
+    a.ProductCode,
+    a.SeasonCode,
+    a.UMCode,
+    a.SDay,
+    a.SMonth,
+    a.EDay,
+    a.EMonth,
+    a.DeadLineDay,
+    a.DeadLineMonth,
+    a.USERNO,
+    a.DATE_TIME)
+    from LOMORM00075 as a
+    where ( a.SeasonCode =: seasonCode)
+    and  a.Active = true
+  </query>
+
+  <!--//AGLoanProductTypeItemDAO.CheckExist2//-->
+  <query name="AGLoanProductTypeItemDAO.CheckExist2">
+    select new AGLoanProductTypeItemdto(
+    a.AGLoanProductTypeItemId,
+    a.ProductCode,
+    a.SeasonCode,
+    a.UMCode,
+    a.SDay,
+    a.SMonth,
+    a.EDay,
+    a.EMonth,
+    a.DeadLineDay,
+    a.DeadLineMonth,
+    a.USERNO,
+    a.DATE_TIME,
+    a.Active,
+    a.TS,
+    a.CreatedDate,
+    a.CreatedUserId,
+    a.UpdatedDate,
+    a.UpdatedUserId
+    )
+    from LOMORM00075 as a
+    where (a.SeasonCode =: seasonCode)
+  </query>
+
+  <!--//AGLoanProductTypeItemDAO.SelectAll//-->
+  <query name="AGLoanProductTypeItemDAO.SelectAll">
+    select new AGLoanProductTypeItemdto(
+    a.AGLoanProductTypeItemId,
+    a.ProductCode,
+    a.SeasonCode,
+    a.UMCode,
+    a.SDay,
+    a.SMonth,
+    a.EDay,
+    a.EMonth,
+    a.DeadLineDay,
+    a.DeadLineMonth,
+    a.USERNO,
+    a.DATE_TIME,
+    a.Active,
+    a.TS,
+    a.CreatedDate,
+    a.CreatedUserId,
+    a.UpdatedDate,
+    a.UpdatedUserId
+    )
+    from LOMORM00075 as a
+    where a.Active = true
+    order by a.ProductCode desc
+  </query>
+
+  <!--//AGLoanProductTypeItemDAO.SelectByProductCode//-->
+  <query name="AGLoanProductTypeItemDAO.SelectByAGLoanProductTypeItemSeasonCode">
+    select new AGLoanProductTypeItemdto(
+    a.AGLoanProductTypeItemId,
+    a.ProductCode,
+    a.SeasonCode,
+    a.UMCode,
+    a.SDay,
+    a.SMonth,
+    a.EDay,
+    a.EMonth,
+    a.DeadLineDay,
+    a.DeadLineMonth,
+    a.USERNO,
+    a.DATE_TIME,
+    a.Active,
+    a.TS,
+    a.CreatedDate,
+    a.CreatedUserId,
+    a.UpdatedDate,
+    a.UpdatedUserId
+    )
+    from LOMORM00075 as a
+    where a.SeasonCode = :seasonCode
+    and a.Active = true
+  </query>
+
+</hibernate-mapping>

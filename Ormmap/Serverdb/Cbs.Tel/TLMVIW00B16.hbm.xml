@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--VW_PREVRE_RE-->
+<!-- 
+// <copyright file="TLMVIW00B16.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser> Hsu Wai Htoo </CreatedUser>
+// <CreatedDate> 2013-09-19 </CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version>1.0</Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Tel.Dmd" namespace="Ace.Cbs.Tel.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  
+  <import class="Ace.Cbs.Tel.Dmd.TLMDTO00001, Ace.Cbs.Tel.Dmd" rename="redto"/>
+  
+  <class name="TLMVIW00B16" table="VW_PREVRE_RE" mutable="false" >
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+
+    <property name="RegisterNo">
+      <column name="REGISTERNO" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="EncashNo">
+      <column name="ENCASHNO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="EBank">
+      <column name="EBANK" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="Br_Alias">
+      <column name="BR_ALIAS" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="Type">
+      <column name="TYPE" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="Name">
+      <column name="NAME" sql-type="nvarchar" not-null="false" />
+    </property>
+
+    <property name="NRC">
+      <column name="NRC" sql-type="nvarchar" not-null="false" />
+    </property>
+    
+    <property name="ToAccountNo">
+      <column name="TOACCTNO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="ToName">
+      <column name="TONAME" sql-type="nvarchar" not-null="false" />
+    </property>
+
+    <property name="ToNRC">
+      <column name="TONRC" sql-type="nvarchar" not-null="false" />
+    </property>
+
+    <property name="ToAddress">
+      <column name="TOADDRESS" sql-type="nvarchar" not-null="false" />
+    </property>
+
+    <property name="TestKey">
+      <column name="TESTKEY" sql-type="numeric" not-null="false" />
+    </property>
+    
+    <property name="Amount">
+      <column name="AMOUNT" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="DateTime">
+      <column name="DATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="IssueDate">
+      <column name="ISSUEDATE" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="ACSign">
+      <column name="ACSIGN" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="UserNo">
+      <column name="USERNO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="Budget">
+      <column name="BUDGET" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Currency">
+      <column name="CUR" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="SettlementDate">
+      <column name="SETTLEMENTDATE" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="OtherBank">
+      <column name="OTHERBANK" sql-type="bit" not-null="false" />
+    </property>
+
+    <property name="BankAlias">
+      <column name="BANK_ALIAS" sql-type="varchar" not-null="false" />
+    </property>
+    
+  </class>
+  
+  
+</hibernate-mapping>

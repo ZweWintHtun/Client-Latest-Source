@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--TownshipCode-->
+<!-- 
+// <copyright file="PFMORM00005.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>Hay Mar</CreatedUser>
+// <CreatedDate>07/23/2013</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version></Version>
+-->
+<hibernate-mapping assembly="Ace.Windows.Admin.DataModel" namespace="Ace.Windows.Admin.DataModel" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Windows.Admin.DataModel.TownshipDTO, Ace.Windows.Admin.DataModel" rename="townshipCodedto"/>
+
+  <class name="Township" table="[TownshipCode]">
+
+    <id name="TownshipCode">
+      <column name="TownshipCode" sql-type="varchar" not-null="true" />
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+    
+    <property name="Description">
+      <column name="Desp" sql-type="nvarchar" not-null="true" />
+    </property>
+    
+    <property name="UserNo">
+      <column name="USERNO" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="Date_Time">
+      <column name="DATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+    
+    <property name="EditDate_Time">
+      <column name="EDITDATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+    
+    <property name="EditUser">
+      <column name="EDITUSER" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="Edit_Type">
+      <column name="EDITTYPE" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  <!--//TownshipCode.CheckExist//-->
+  <query name="TownshipCodeDAO.CheckExist">
+    select new townshipCodedto(
+    t.TownshipCode,
+    t.Description,
+    t.UserNo,
+    t.Date_Time,
+    t.EditDate_Time,
+    t.EditUser,
+    t.Edit_Type )
+    from Township as t
+    where (t.TownshipCode =: townshipCode or t.Description =: desp)
+    and t.Active = true
+  </query>
+ 
+  <!--//TownshipCodeDAO.SelectAll//-->
+  <query name="TownshipCodeDAO.SelectAll">
+    select new townshipCodedto(
+    t.TownshipCode,
+    t.TS,
+    t.Description,
+    t.UserNo,
+    t.Date_Time,
+    t.EditDate_Time,
+    t.EditUser,
+    t.Edit_Type,
+    t.Active,
+    t.CreatedDate,
+    t.CreatedUserId,
+    t.UpdatedDate,
+    t.UpdatedUserId
+    )
+    from Township as t
+    where t.Active = true
+  </query>
+ 
+  <!--//TownshipCodeDAO.SelectByTownshipCode//-->
+  <query name="TownshipCodeDAO.SelectByTownshipCode">
+    select new townshipCodedto(
+    t.TownshipCode,
+    t.TS,
+    t.Description,
+    t.UserNo,
+    t.Date_Time,
+    t.EditDate_Time,
+    t.EditUser,
+    t.Edit_Type,
+    t.Active,
+    t.CreatedDate,
+    t.CreatedUserId,
+    t.UpdatedDate,
+    t.UpdatedUserId
+    )
+    from Township as t
+    where t.TownshipCode  = :townshipCode
+    and t.Active = true
+  </query>
+
+<!--//TownshipCode.CheckExist2//-->
+	<query name="TownshipCodeDAO.CheckExist2">
+		select new townshipCodedto(
+		t.TownshipCode,
+		t.TS,
+		t.Description,
+		t.UserNo,
+		t.Date_Time,
+		t.EditDate_Time,
+		t.EditUser,
+		t.Edit_Type,
+		t.Active,
+		t.CreatedDate,
+		t.CreatedUserId,
+		t.UpdatedDate,
+		t.UpdatedUserId )
+		from Township as t
+		where (t.TownshipCode =: townshipCode or t.Description =: desp)
+		and t.Active = true
+	</query>
+  <!--//TownshipCode.selectTownshipDesp//-->
+  <query name="Township.SelectTownshipDesp">
+    select new townshipCodedto
+    (
+    t.TownshipCode,
+    t.Description
+    )
+    from Township as t
+    where t.TownshipCode=:townshipCode
+    and t.Active = true
+  </query>
+  
+</hibernate-mapping>

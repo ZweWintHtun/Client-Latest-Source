@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00020, Ace.Cbs.Pfm.Dmd" rename="uchequedto"/>
+
+  <class name="Ace.Cbs.Pfm.Dmd.PFMORM00020, Ace.Cbs.Pfm.Dmd" table="[UCheck]" >
+
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+
+    <property name="ChequeNo">
+      <column name="CheckNo" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="AccountNo">
+      <column name="AcctNo" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="AccountSignature">
+      <column name="ACSign" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Channel">
+      <column name="Channel" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="DATE_TIME">
+      <column name="DATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="USERNO">
+      <column name="USERNO" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="SourceBranchCode">
+      <column name="SourceBr" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+  </class>
+
+  <query name="CXDAO00006.UCheque.SelectCountByChequeNo">
+	  select count(ucheque.ChequeNo)
+	  from PFMORM00020 as ucheque
+	  where
+	  ucheque.ChequeNo between :startNo and :endNo and
+	  ucheque.SourceBranchCode = :branchCode and
+	  ucheque.AccountNo = :accountNo and
+	  ucheque.Active = true
+  </query>
+  
+  <query name="CXDAO00006.UCheque.SelectCountByAccountNoAndChequeNo">
+    select count(ucheque.ChequeNo)
+    from PFMORM00020 as ucheque
+    where
+    ucheque.AccountNo = :accountNo and
+    ucheque.ChequeNo between :startNo and :endNo and
+    ucheque.SourceBranchCode = :branchCode and
+    ucheque.Active = true
+  </query>
+
+  <query name="CXDAO00006.UCheque.CheckUchequeByAccountNoChequeNo">
+    select new uchequedto
+    (
+    ucheque.ChequeNo
+    )
+    from PFMORM00020 as ucheque
+    where
+    ucheque.AccountNo = :AccountNo and
+    ucheque.ChequeNo = :ChequeNo and
+    ucheque.SourceBranchCode = :ActiveBranch and
+    ucheque.Active = true
+  </query>
+
+  <query name="CXDAO00006.DeletefromUCheckbyChequeNoAccountNo">
+    update PFMORM00020 ucheck
+    set
+    ucheck.Active=false,
+    ucheck.UpdatedUserId= :UpdatedUserId,
+    ucheck.UpdatedDate= :UpdatedDate
+    where
+    ucheck.AccountNo = :AccountNo
+    and ucheck.ChequeNo = :ChequeNo
+    and ucheck.SourceBranchCode = :SourceBranchCode
+    and ucheck.Active=true
+  </query>
+
+  <query name="PFMDAO00020.DeletefromUCheckbyId">
+    update PFMORM00020 ucheck
+    set
+    ucheck.Active=false,
+    ucheck.UpdatedUserId= :UpdatedUserId,
+    ucheck.UpdatedDate= :UpdatedDate
+    where
+    ucheck.Id = :id
+    and ucheck.Active=true
+  </query>
+
+  <query name="PFMDAO00020.UpdateUsedChequeNo">
+    update PFMORM00020 ucheck
+    set
+    ucheck.ChequeNo = :chequeNo,
+    ucheck.UpdatedUserId= :UpdatedUserId,
+    ucheck.UpdatedDate= :UpdatedDate
+    where
+    ucheck.AccountNo = :AccountNo
+    and ucheck.ChequeNo = :ChequeNo
+    and ucheck.SourceBranchCode = :SourceBranchCode
+    and ucheck.Active=true
+  </query>
+
+	<query name="PFMDAO00020.SelectUCheckData">
+		select new uchequedto
+		(
+		ChequeNo,AccountNo,AccountSignature,DATE_TIME,USERNO
+		)
+		from PFMORM00020 as ucheque
+		where convert(char(10),ucheque.DATE_TIME,111) between convert(char(10),:startDate,111) and convert(char(10),:endDate,111)
+		and ucheque.SourceBranchCode = :branch 
+		and ucheque.Active = true
+	</query>
+
+	<query name="PFMDAO00020.UCheque.SelectUchequeByAccountNoChequeNo">
+		select new uchequedto
+		(
+		ucheque.Id,
+		ucheque.ChequeNo,
+		ucheque.AccountNo,
+		ucheque.AccountSignature,
+		ucheque.Channel,
+		ucheque.DATE_TIME,
+		ucheque.USERNO,
+		ucheque.SourceBranchCode,
+		ucheque.Active,
+		ucheque.CreatedDate,
+		ucheque.CreatedUserId,
+		ucheque.UpdatedDate,
+		ucheque.UpdatedUserId
+		)
+		from PFMORM00020 as ucheque
+		where
+		ucheque.AccountNo = :AccountNo and
+		<!--ucheque.ChequeNo = :ChequeNo and-->
+		ucheque.SourceBranchCode = :ActiveBranch and
+		ucheque.Active = true
+	</query>
+
+</hibernate-mapping>

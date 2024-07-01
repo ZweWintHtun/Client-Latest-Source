@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+	<import class="Ace.Cbs.Loan.Dmd.LOMDTO00009, Ace.Cbs.Loan.Dmd" rename="StockDto"/>
+
+	<class name="LOMORM00009" table="STOCK" >
+
+		<id name="StockNo">
+			<column name="STOCKNO" sql-type="varchar" not-null="true" />
+		</id>
+
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="true"/>
+		</version>
+
+		<property name="Name">
+			<column name="STOCKNAME" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+
+	</class>
+
+	<!--//StockDAO.CheckExist//-->
+	<query name="StockDAO.CheckExist">
+    select new StockDto
+    (
+    s.StockNo,
+    s.Name
+    )
+    from LOMORM00009 as s
+    where (s.StockNo =: stockNo or s.Name =: name)
+    and  s.Active = true
+  </query>
+
+
+  <!--//StockDAO.CheckExist2//-->
+  <query name="StockDAO.CheckExist2">
+    select new StockDto
+    (
+    s.StockNo,
+    s.Name,
+    s.Active,
+    s.TS,
+    s.CreatedDate,
+    s.CreatedUserId,
+    s.UpdatedDate,
+    s.UpdatedUserId
+    )
+    from LOMORM00009 as s
+    where (s.StockNo =: stockNo or s.Name =: stockName)
+
+  </query>
+
+	<!--//StockDAO.SelectAll//-->
+	<query name="StockDAO.SelectAll">
+		select new StockDto
+		(
+		s.StockNo,
+		s.Name,
+		s.Active,
+		s.TS,
+		s.CreatedDate,
+		s.CreatedUserId,
+		s.UpdatedDate,
+		s.UpdatedUserId
+		)
+		from LOMORM00009 as s
+		where s.Active = true
+	</query>
+
+	<!--//StockDAO.SelectById//-->
+	<query name="StockDAO.SelectByCode">
+    select new StockDto(
+    s.StockNo,
+    s.Name,
+    s.Active,
+    s.TS,
+    s.CreatedDate,
+    s.CreatedUserId,
+    s.UpdatedDate,
+    s.UpdatedUserId
+    )
+    from LOMORM00009 as s
+    where s.StockNo = :stockNo
+    and s.Active = true
+  </query>
+
+</hibernate-mapping>

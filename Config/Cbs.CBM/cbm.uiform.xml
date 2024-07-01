@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<objects xmlns="http://www.springframework.net">
+  <description>
+    UIForm Objects Settings
+  </description>
+
+  <!--//Cash In Hand Position//-->
+  <object id="frmCashInHand" type="Ace.Cbs.CBM.Vew.frmCBMVEW00001, Ace.Cbs.CBM.Vew" parent="NonSecureBaseForm" singleton="false">
+    <property name="Controller" ref="CashInHandController"/>
+    <property name="FormName" value="CashInHand"/>
+  </object>
+
+  <!--//Cash Flow//-->
+  <object id="frmCashFlow" type="Ace.Cbs.CBM.Vew.frmCBMVEW00001, Ace.Cbs.CBM.Vew" parent="NonSecureBaseForm" singleton="false">
+    <property name="Controller" ref="CashInHandController"/>
+    <property name="FormName" value="CashFlow"/>
+  </object>
+
+  <!--//Daily Position//-->
+  <object id="frmDailyPosition" type="Ace.Cbs.CBM.Vew.frmCBMVEW00001, Ace.Cbs.CBM.Vew" parent="NonSecureBaseForm" singleton="false">
+    <property name="Controller" ref="CashInHandController"/>
+    <property name="FormName" value="DailyPosition"/>
+  </object>
+
+  <!--//Daily Improvement//-->
+  <object id="frmDailyImprovement" type="Ace.Cbs.CBM.Vew.frmCBMVEW00001, Ace.Cbs.CBM.Vew" parent="NonSecureBaseForm" singleton="false">
+    <property name="Controller" ref="CashInHandController"/>
+    <property name="FormName" value="DailyImprovement"/>
+  </object>
+
+  <!--//DailyProgress//-->
+  <object id="frmDailyProgress" type="Ace.Cbs.CBM.Vew.frmCBMVEW00001, Ace.Cbs.CBM.Vew" parent="NonSecureBaseForm" singleton="false">
+    <property name="Controller" ref="CashInHandController"/>
+    <property name="FormName" value="DailyProgress"/>
+  </object>
+
+  <!--//Liquidity Ratio//-->
+  <object id="frmLiquidityRatio" type="Ace.Cbs.CBM.Vew.frmCBMVEW00001, Ace.Cbs.CBM.Vew" parent="NonSecureBaseForm" singleton="false">
+    <property name="Controller" ref="CashInHandController"/>
+    <property name="FormName" value="LiquidityRatio"/>
+  </object>
+
+  <!--//Financial Statement//-->
+  <object id="frmFinancialStatement" type="Ace.Cbs.CBM.Vew.frmCBMVEW00001, Ace.Cbs.CBM.Vew" parent="NonSecureBaseForm" singleton="false">
+    <property name="Controller" ref="CashInHandController"/>
+    <property name="FormName" value="FinancialStatement"/>
+  </object>
+
+  <!--//Cash Flow Report Viewer//-->
+  <object id="frmCBMVEW00002CashFlowRptViewer" type="Ace.Cbs.CBM.Vew.CBMVEW00002, Ace.Cbs.CBM.Vew" parent="NonSecureDockForm" singleton="false">
+   </object>
+
+  <!--//Daily Position Report Viewer//-->
+  <object id="frmCBMVEW00003_DailyPositionRptViewer" type="Ace.Cbs.CBM.Vew.CBMVEW00003, Ace.Cbs.CBM.Vew" parent="NonSecureDockForm" singleton="false">
+  </object>
+
+  <!--//Daily Improvement Report Viewer//-->
+  <object id="frmCBMVEW00004_ImprovementRptViewer" type="Ace.Cbs.CBM.Vew.CBMVEW00004, Ace.Cbs.CBM.Vew" parent="NonSecureDockForm" singleton="false">
+  </object>
+
+  <!--//Financial Statement Report Viewer//-->
+  <object id="frmCBMVEW00005_FinancialRptViewer" type="Ace.Cbs.CBM.Vew.CBMVEW00005, Ace.Cbs.CBM.Vew" parent="NonSecureDockForm" singleton="false">
+  </object>
+
+  <!--//DailyProgress Report Viewer//-->
+  <object id="frmCBMVEW00006_DailyProgressRptViewer" type="Ace.Cbs.CBM.Vew.CBMVEW00006, Ace.Cbs.CBM.Vew" parent="NonSecureDockForm" singleton="false">
+  </object>
+
+  <!--//Liquidity Ratio Report Viewer//-->
+  <object id="frmCBMVEW00007_LR_RptViewer" type="Ace.Cbs.CBM.Vew.CBMVEW00007, Ace.Cbs.CBM.Vew" parent="NonSecureDockForm" singleton="false">
+  </object>
+  
+  </objects>

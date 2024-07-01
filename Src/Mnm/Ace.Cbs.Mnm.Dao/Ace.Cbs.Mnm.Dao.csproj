@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E6AF9F1E-E325-4336-840E-AF89522463EB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ace.Cbs.Mnm.Dao</RootNamespace>
+    <AssemblyName>Ace.Cbs.Mnm.Dao</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ace.Cbs.Cx.Com, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Cx.Com.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Mnm.Dmd, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Mnm.Dmd.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Pfm.Dmd, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Pfm.Dmd.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Tcm.Dmd, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Tcm.Dmd.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Tel.Dmd, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Tel.Dmd.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Admin.DataModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Admin.DataModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging">
+      <HintPath>..\..\..\Libs\Other\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Log4Net">
+      <HintPath>..\..\..\Libs\Other\Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\Libs\Other\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\..\Libs\Other\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Aop">
+      <HintPath>..\..\..\Libs\Other\Spring.Aop.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core">
+      <HintPath>..\..\..\Libs\Other\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data">
+      <HintPath>..\..\..\Libs\Other\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate33">
+      <HintPath>..\..\..\Libs\Other\Spring.Data.NHibernate33.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormatDao.cs" />
+    <Compile Include="MNMDAO00003.cs" />
+    <Compile Include="MNMDAO00004.cs" />
+    <Compile Include="MNMDAO00012.cs" />
+    <Compile Include="MNMDAO00001.cs" />
+    <Compile Include="MNMDAO00002.cs" />
+    <Compile Include="MNMDAO00005.cs" />
+    <Compile Include="MNMDAO00006.cs" />
+    <Compile Include="MNMDAO00007.cs" />
+    <Compile Include="MNMDAO00008.cs" />
+    <Compile Include="MNMDAO00009.cs" />
+    <Compile Include="MNMDAO00010.cs" />
+    <Compile Include="MNMDAO00011.cs" />
+    <Compile Include="MNMDAO00013.cs" />
+    <Compile Include="MNMDAO00014.cs" />
+    <Compile Include="MNMDAO00015.cs" />
+    <Compile Include="MNMDAO00016.cs" />
+    <Compile Include="MNMDAO00017.cs" />
+    <Compile Include="MNMDAO00018.cs" />
+    <Compile Include="MNMDAO00019.cs" />
+    <Compile Include="MNMDAO00020.cs" />
+    <Compile Include="MNMDAO00021.cs" />
+    <Compile Include="MNMDAO00022.cs" />
+    <Compile Include="MNMDAO00023.cs" />
+    <Compile Include="MNMDAO00024.cs" />
+    <Compile Include="MNMDAO00026.cs" />
+    <Compile Include="MNMDAO00027.cs" />
+    <Compile Include="MNMDAO00030.cs" />
+    <Compile Include="MNMDAO00031.cs" />
+    <Compile Include="MNMDAO00025.cs" />
+    <Compile Include="MNMDAO00041.cs" />
+    <Compile Include="MNMDAO00042.cs" />
+    <Compile Include="MNMDAO00046.cs" />
+    <Compile Include="MNMDAO00076.cs" />
+    <Compile Include="MNMDAO00081.cs" />
+    <Compile Include="MNMDAO00129.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Loan\Ace.Cbs.Loan.Dmd\Ace.Cbs.Loan.Dmd.csproj">
+      <Project>{9D836AEE-6202-4573-B5CD-EB5D6F0F50FA}</Project>
+      <Name>Ace.Cbs.Loan.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ace.Cbs.Mnm.Ctr\Ace.Cbs.Mnm.Ctr.csproj">
+      <Project>{5793ACFC-ED60-4E4E-86F3-221487DD0C8F}</Project>
+      <Name>Ace.Cbs.Mnm.Ctr</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

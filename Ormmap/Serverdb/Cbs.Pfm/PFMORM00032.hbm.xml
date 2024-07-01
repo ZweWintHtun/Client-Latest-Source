@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00032, Ace.Cbs.Pfm.Dmd" rename="freceiptdto"/>
+  <import class="Ace.Cbs.Mnm.Dmd.MNMDTO00081, Ace.Cbs.Mnm.Dmd" rename="fdto"/>
+  <class name="PFMORM00032" table="[FReceipt]" >
+    
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+    
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+
+    <property name="AccountNo">
+      <column name="AcctNo" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="ReceiptNo">
+      <column name="RNo" sql-type="varchar(50)" not-null="true" />
+    </property>
+
+    <property name="Amount">
+      <column name="Amount" sql-type="char(6)" not-null="true" />
+    </property>
+
+    <property name="Duration">
+      <column name="Duration" sql-type="numeric" not-null="true" />
+    </property>
+
+    <property name="WithdrawDate">
+      <column name="WDate" sql-type="DateTime" not-null="false" />
+    </property>
+
+    <property name="LastInterestDate">
+      <column name="LasIntDate" sql-type="DateTime" not-null="false" />
+    </property>
+
+    <property name="PrintTime">
+      <column name="PrnTime" sql-type="int" not-null="false" default="0"/>
+    </property>
+
+    <property name="LastPrintBalance">
+      <column name="LastPrnBal" sql-type="numeric" not-null="true"  default="0"/>
+    </property>
+
+    <property name="BudgetEndAccount">
+      <column name="BudEndAcc" sql-type="numeric" not-null="true" default="0" />
+    </property>
+
+    <property name="BudgetEndTax">
+      <column name="BudEndTax" sql-type="numeric" not-null="true" default="0" />
+    </property>
+
+    <property name="Accrued">
+      <column name="Accrued" sql-type="numeric" not-null="true" default="0" />
+    </property>
+
+    <property name="DebitAccrued">
+      <column name="DrAccured" sql-type="numeric" not-null="false" default="0" />
+    </property>
+
+    <property name="AuthorizedPerson">
+      <column name="APerson" sql-type="nvarchar(100)" not-null="false" />
+    </property>
+
+    <property name="AccountSign">
+      <column name="ACsign" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="InterestRate">
+      <column name="IntRate" sql-type="numeric" not-null="true" />
+    </property>
+
+    <property name="AccuredStatus">
+      <column name="AccruedStatus" sql-type="varchar(50)" not-null="true" />
+    </property>
+
+    <property name="FirstReceiptNo">
+      <column name="FirstRNo" sql-type="char(10)" not-null="true" />
+    </property>
+
+    <property name="ToAccountNo">
+      <column name="ToAcctNo" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="RDate">
+      <column name="RDATE" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="UserNo">
+      <column name="USERNO" sql-type="varchar(50)" not-null="false" />
+    </property>
+
+    <property name="SourceBranchCode">
+      <column name="SourceBr" sql-type="varchar" not-null="true" />
+    </property>
+ 
+    <property name="CurrencyCode">
+      <column name="Cur" sql-type="varchar" not-null="false" />
+    </property>
+
+	  <property name="LastAccruedDate">
+		  <column name="LastAccruedDate" sql-type="date" not-null="false" />
+	  </property> 
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  <!--//FReceiptDAO.GetFixedReceiptByAccountNo//-->
+  <query name="PFMDAO00032.GetFixedReceiptByAccountNo">
+	  select new freceiptdto(
+	  f.AccountNo,
+	  f.ReceiptNo
+	  )
+	  from PFMORM00032 as f
+	  where f.AccountNo = :AccountNo and f.Duration = :Duration
+	  and f.Active = true
+  </query>
+
+  <query name="CXDAO00006.GetToAccountNoCountByAccountNo">
+    select count(Id)
+    from PFMORM00032
+    where ToAccountNo = :toAccountNo and Active = true
+  </query>
+
+	<query name="PFMDAO00032.SelectDepositReceiptNoByAccountNo">
+		select new freceiptdto(f.ReceiptNo,f.Amount,f.Duration,f.CurrencyCode)
+		from PFMORM00032 as f
+		where f.AccountNo = :accountNo and (f.LastInterestDate = null or f.LastInterestDate = '')
+		and (f.WithdrawDate = null or f.WithdrawDate = '') and f.Active = true
+		order by f.ReceiptNo
+	</query>
+
+	<query name="PFMDAO00032.UpdateFreceiptWithdraw">
+		update PFMORM00032 f set
+		f.WithdrawDate = :withdrawDate,
+		f.UpdatedUserId = :updatedUserId,
+		f.UpdatedDate = :updatedDate
+		where f.AccountNo = :accountNo and f.ReceiptNo=:receiptNo and  f.Active = true
+	</query>
+
+	<query name="PFMDAO00032.UpdateLastIntDate">
+		update PFMORM00032 f set
+		f.LastInterestDate = :updatedDate,
+		f.UpdatedUserId = :updatedUserId,
+		f.UpdatedDate = :updatedDate
+		where f.AccountNo = :accountNo and f.ReceiptNo=:receiptNo and  f.Active = true
+	</query>
+
+	<query name="PFMDAO00032.GetReceiptInfoNoByAccountNo">
+		select new freceiptdto(ReceiptNo,Amount,Duration,CurrencyCode)
+		from PFMORM00032 freceipt
+		where freceipt.AccountNo = :accountNo and (freceipt.LastInterestDate=null or freceipt.LastInterestDate='')
+		and (freceipt.WithdrawDate=null or freceipt.WithdrawDate='') and freceipt.Active = true
+	</query>
+
+
+	<query name="PFMDAO00032.SelectWithdrawalReceiptNoByAccountNo">
+		select new freceiptdto(ReceiptNo,Amount,Duration,CurrencyCode,LastInterestDate,Accrued,AccuredStatus,InterestRate)
+		from PFMORM00032
+		where AccountNo = :accountNo and (LastInterestDate != null or LastInterestDate != '')
+		and (WithdrawDate=null or WithdrawDate='') and Active= true
+	</query>
+  
+  <query name="PFMDAO00032.UpdateReversalFReceipt">
+    update PFMORM00032 f set    
+    f.Amount = :Amount,
+    f.UpdatedUserId = :updatedUserId,
+    f.UpdatedDate = :updatedDate
+    where f.AccountNo = :accountNo and f.ReceiptNo=:receiptNo and  f.Active = true
+  </query>
+  
+
+  <!--SelectFReceiptListByAccountNo-->
+  <query name="PFMDAO00032.SelectFReceiptListByAccountNo">
+    select new freceiptdto(
+    ReceiptNo,
+    AccountSign,
+    Amount,
+    Duration,
+    CurrencyCode,
+    LastInterestDate,
+    WithdrawDate,
+    AccuredStatus,
+    InterestRate,
+    SourceBranchCode,
+    ToAccountNo)
+    from PFMORM00032
+    where AccountNo = :accountNo and Active= true
+  </query>
+
+  <query name="PFMDAO00032.GetReceiptNoByAccountNo">
+	  select new freceiptdto(ReceiptNo)
+	  from PFMORM00032 freceipt
+	  where freceipt.AccountNo = :accountNo
+	  and freceipt.Active = true
+  </query>
+
+  <!--//FReceiptDAO.DeleteFixedReceipt//-->
+  <query name="PFMDAO00032.DeleteFixedReceipt">
+	  update PFMORM00032 as f
+	  set f.Active = false,
+	  f.UpdatedUserId =:updatedUserId,
+	  f.UpdatedDate =:updatedDate
+	  where f.AccountNo = :accountNo and f.ReceiptNo = :receiptNo
+	  and (f.LastInterestDate = null or f.LastInterestDate = '') and f.Active = true
+  </query>
+
+  <!--//FReceiptDAO.UpdateFixedReceipt//-->
+  <query name="PFMDAO00032.UpdateFixedReceipt">
+    update PFMORM00032 f set
+    f.Amount = :amount,
+    f.ReceiptNo = :receiptNo,
+    f.Duration = :duration,
+    f.InterestRate=:interestRate,
+    f.AccuredStatus = :accuredStatus,
+    f.ToAccountNo = :toAccountNo,
+    f.UpdatedUserId = :updatedUserId,
+    f.UpdatedDate = :updatedDate
+    where f.AccountNo = :accountNo and f.ReceiptNo=:oldReceiptNo and  f.Active = true
+  </query>
+  
+  <!--FReceiptDAO.SelectFixedReceiptByWDateIsNull-->              <!--NLKK-->
+  <query name="FReceiptDAO.SelectFixedReceiptByWDateIsNull">
+    select new freceiptdto
+    (
+    f.AccountNo,
+    f.ReceiptNo,
+    f.Amount,
+    f.Duration,
+    f.RDate,
+    f.WithdrawDate,
+    f.LastInterestDate,
+    f.BudgetEndAccount,
+    f.Accrued,
+    f.AccountSign,
+    f.InterestRate,
+    f.AccuredStatus,
+    f.ToAccountNo,
+    f.CurrencyCode,
+    f.DebitAccrued
+    )
+    from PFMORM00032 as f where (f.WithdrawDate = null or f.WithdrawDate = '') and f.Active = true and f.DebitAccrued != 0 and f.SourceBranchCode = :sourceBr
+  </query>
+
+  <!--FReceiptDAO.UpdateBudgetEndAcAndDrAccrued-->                    <!--NLKK-->
+  <query name="FReceiptDAO.UpdateBudgetEndAcAndDrAccrued">
+	  update PFMORM00032 f
+	  set
+	  f.BudgetEndAccount = f.BudgetEndAccount + :budgetEndAc,
+	  f.DebitAccrued = 0,
+	  f.UpdatedUserId =:updatedUserId,
+	  f.UpdatedDate =:updatedDate
+	  where
+	  f.AccountNo = :acctNo and f.ReceiptNo = :rNo
+	  and f.Active = true
+  </query>
+
+  <!--//FReceiptDAO.GetAccruedInterestByAccountNo//-->
+  <query name="PFMDAO00032.GetAccruedInterestByAccountNo">
+	  select new freceiptdto(
+	  Sum(f.Accrued)
+	  )
+	  from PFMORM00032 as f
+	  where f.AccountNo = :accountNo and f.Accrued>0 and (f.WithdrawDate = null or f.WithdrawDate = '')
+	  and f.Active= true and f.AccuredStatus='12' and (f.ToAccountNo = null or f.ToAccountNo = '')
+	  group by f.CurrencyCode
+  </query>
+
+  <!--//PFMDAO00032.UpdateFreceiptInterestWithdraw//-->
+  <query name="PFMDAO00032.UpdateFreceiptInterestWithdraw">
+	  update PFMORM00032 f set
+	  f.Accrued = 0,
+	  f.UpdatedUserId = :updatedUserId,
+	  f.UpdatedDate = :updatedDate
+	  where f.AccountNo = :accountNo and f.Accrued>0 and (f.WithdrawDate = null or f.WithdrawDate = '')
+	  and f.Active= true and f.AccuredStatus='12' and (f.ToAccountNo = null or f.ToAccountNo = '') and f.CurrencyCode = :currency
+  </query>
+
+  <!--//PFMDAO00032.GetFirstReceiptNoByAccountNo//-->
+  <query name="PFMDAO00032.GetFirstReceiptNoByAccountNo">
+    select new freceiptdto(f.FirstReceiptNo)
+    from PFMORM00032 as f
+    where f.AccountNo = :accountNo and f.Active = true
+  </query>
+  
+  <query name="PFMDAO00032.CheckFixedReceipt">
+    select new freceiptdto
+    (
+    AccountNo,
+    ReceiptNo,
+    LastInterestDate,
+    WithdrawDate
+    )
+    from PFMORM00032 as f where f.AccountNo = :accountNo and f.ReceiptNo=:receiptNo and f.SourceBranchCode= :branch and f.Active = true
+  </query>
+
+	<query name="PFMDAO00032.GetFReceipts">
+    select new freceiptdto
+    (
+    f.AccountNo,
+    f.ReceiptNo,
+    f.Amount,
+    f.Duration,
+    f.RDate,
+    f.WithdrawDate,
+    f.LastInterestDate,
+    f.BudgetEndAccount,
+    f.Accrued,
+    f.AccountSign,
+    f.InterestRate,
+    f.AccuredStatus,
+    f.ToAccountNo,
+    f.CurrencyCode
+    )
+    from PFMORM00032 as f where Convert(char(10),f.RDate,111) = Convert(char(10),:date,111) and f.Active = true and f.SourceBranchCode = :sourceBranch
+    order by f.AccountNo,f.ReceiptNo
+  </query>
+
+	<!--<query name="TownshipCodeDAO.SelectTownshipCodeByCustId">
+		select new freceiptdto(
+		t.Township_Code,
+		t.Description,
+		t.UserNo
+		)
+		from Township as t,PFMORM00001 as c
+		where t.Township_Code  = c.TownshipCode
+		and c.CustomerId=:custId
+		and t.Active = true
+	</query>-->
+
+	<query name="PFMDAO00032.CheckForComingAccrue">
+		select new freceiptdto
+		(
+		f.AccountNo,
+		vw.Name,
+		f.ReceiptNo,
+		f.Amount,
+		f.Duration,
+		f.WithdrawDate,
+		f.LastInterestDate,
+		f.InterestRate,
+		f.AccuredStatus,
+		f.ToAccountNo,
+		f.RDate,
+		f.CurrencyCode
+		)
+		from PFMORM00032 as f , MNMVIW00027 as vw
+		where f.WithdrawDate is null and f.LastInterestDate is not null
+		and f.AccountNo = vw.AcctNo
+		and f.AccuredStatus = '12' and f.CurrencyCode = :currency
+		and f.Active = true and f.SourceBranchCode = :sourceBranch
+		order by f.AccountNo,f.ReceiptNo
+	</query>
+
+	<query name="PFMDAO00032.CheckForComingInterest">
+		select new freceiptdto
+		(
+		f.AccountNo,
+		vw.Name,
+		f.ReceiptNo,
+		f.Amount,
+		f.Duration,
+		f.WithdrawDate,
+		f.LastInterestDate,
+		f.InterestRate,
+		f.AccuredStatus,
+		f.ToAccountNo,
+		f.RDate,
+		f.CurrencyCode
+		)
+		from PFMORM00032 as f , MNMVIW00027 as vw
+		where f.WithdrawDate is null and f.LastInterestDate is not null
+		and f.AccountNo = vw.AcctNo
+		and f.CurrencyCode = :currency
+		and f.Active = true and f.SourceBranchCode = :sourceBranch
+		order by f.AccountNo,f.ReceiptNo
+	</query>
+
+  <query name="PFMORM00032.InterestOutstanding">
+    select new fdto
+    (
+    f.AccountNo,
+    vw.Name,
+    f.ReceiptNo,
+    f.Accrued,
+    f.BudgetEndAccount
+    )
+    from PFMORM00032 as f , MNMVIW00027 as vw
+    where f.WithdrawDate is null and f.LastInterestDate is not null
+    and f.AccountNo = vw.AcctNo
+    and f.Accrued > 0
+    and f.Active = true and f.SourceBranchCode = :sourceBranch
+    order by f.AccountNo,f.ReceiptNo
+  </query>
+
+	<query name="SelectFreceiptByLIntDate">
+		<![CDATA[
+		select new freceiptdto
+		(
+		f.Id,
+		f.AccountNo,
+		f.ReceiptNo,
+		f.Amount,
+		f.Duration,
+		f.WithdrawDate,
+		f.LastInterestDate,
+		f.PrintTime,
+		f.LastPrintBalance,
+		f.BudgetEndAccount,
+		f.BudgetEndTax,
+		f.Accrued,
+		f.DebitAccrued,
+		f.AuthorizedPerson,
+		f.AccountSign,
+		f.InterestRate,
+		f.AccuredStatus,
+		f.FirstReceiptNo,
+		f.ToAccountNo,
+		f.RDate,
+		f.UserNo,
+		f.SourceBranchCode,
+		f.CurrencyCode,
+		f.LastAccruedDate,
+		f.Active,
+		f.CreatedDate,
+		f.CreatedUserId,
+		f.UpdatedDate,
+		f.UpdatedUserId
+		)
+		from PFMORM00032 as f
+		where (f.WithdrawDate is null or f.WithdrawDate = '') and
+		Convert(char(10),f.LastInterestDate,111) <= Convert(char(10),:date,111)
+		and f.SourceBranchCode=:sourceBr and f.Active = true
+			]]>
+		</query>
+	
+
+</hibernate-mapping>
+
+
+
+
+

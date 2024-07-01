@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00005, Ace.Cbs.Pfm.Dmd" rename="townshipCodedto"/>
+
+  <class name="Township" table="[TownshipCode]">
+
+    <id name="Township_Code">
+      <column name="TownshipCode" sql-type="varchar" not-null="true" />
+    </id>
+
+    <property name="TS" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </property>
+    
+    <property name="Description">
+      <column name="Desp" sql-type="nvarchar" not-null="true" />
+    </property>
+    
+    <property name="UserNo">
+      <column name="USERNO" sql-type="varchar" not-null="true" />
+    </property>
+    
+    <property name="Date_Time">
+      <column name="DATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+    
+    <property name="EditDate_Time">
+      <column name="EDITDATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+    
+    <property name="EditUser">
+      <column name="EDITUSER" sql-type="varchar" not-null="true" />
+    </property>
+    
+    <property name="Edit_Type">
+      <column name="EDITTYPE" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+	<!--//TownshipCode.CheckExist//-->
+	<query name="TownshipCodeDAO.CheckExist">
+		select new townshipCodedto(
+		t.Township_Code,
+		t.Description,
+		t.UserNo,
+		t.Date_Time,
+		t.EditDate_Time,
+		t.EditUser,
+		t.Edit_Type )
+		from PFMORM00005 as t
+		where (t.Township_Code =: townshipCode or t.Description =: desp)
+		and t.Active = true
+	</query>
+
+	<!--//TownshipCodeDAO.SelectAll//-->
+	<query name="TownshipCodeDAO.SelectAll">
+		select new townshipCodedto(
+		t.Township_Code,
+		t.TS,
+		t.Description,
+		t.UserNo,
+		t.Date_Time,
+		t.EditDate_Time,
+		t.EditUser,
+		t.Edit_Type,
+		t.Active,
+		t.CreatedDate,
+		t.CreatedUserId,
+		t.UpdatedDate,
+		t.UpdatedUserId
+		)
+		from PFMORM00005 as t
+		where t.Active = true
+	</query>
+
+	<!--//TownshipCodeDAO.SelectByTownshipCode//-->
+	<query name="TownshipCodeDAO.SelectByTownshipCode">
+		select new townshipCodedto(
+		t.Township_Code,
+		t.TS,
+		t.Description,
+		t.UserNo,
+		t.Date_Time,
+		t.EditDate_Time,
+		t.EditUser,
+		t.Edit_Type,
+		t.Active,
+		t.CreatedDate,
+		t.CreatedUserId,
+		t.UpdatedDate,
+		t.UpdatedUserId
+		)
+		from PFMORM00005 as t
+		where t.Township_Code  = :townshipCode
+		and t.Active = true
+	</query>
+
+	<!--//OccupationCode.CheckExist//-->
+	<query name="OccupationCodeDAO.CheckExist">
+		select new occupationCodedto( o.Occupation_Code,o.Description,o.UserNo,o.Date_Time,o.EditDate_Time,o.EditUser,o.EditType,o.Defaults )
+		from PFMORM00004 as o where ( o.Occupation_Code =: occupationCode or o.Description =: desp ) and  o.Active = true
+	</query>
+
+	<!--//OccupationCodeDAO.SelectAll//-->
+	<query name="OccupationCodeDAO.SelectAll">
+		select new occupationCodedto(
+		o.Occupation_Code,
+		o.Description,
+		o.UserNo,
+		o.Date_Time,
+		o.EditDate_Time,
+		o.EditUser,
+		o.EditType,
+		o.Defaults,
+		o.Active,
+		o.TS,
+		o.CreatedDate,
+		o.CreatedUserId,
+		o.UpdatedDate,
+		o.UpdatedUserId
+		)
+		from PFMORM00004 as o
+		where o.Active = true
+	</query>
+
+	<!--//OccupationCodeDAO.SelectByOccupationCode//-->
+	<query name="OccupationCodeDAO.SelectByOccupationCode">
+		select new occupationCodedto(
+		o.Occupation_Code,
+		o.Description,
+		o.UserNo,
+		o.Date_Time,
+		o.EditDate_Time,
+		o.EditUser,
+		o.EditType,
+		o.Defaults,
+		o.Active,
+		o.TS,
+		o.CreatedDate,
+		o.CreatedUserId,
+		o.UpdatedDate,
+		o.UpdatedUserId
+		)
+		from PFMORM00004 as o
+		where o.Occupation_Code = :occupationCode
+		and o.Active = true
+	</query>
+
+	<!--//TownshipCodeDAO.SelectTownshipCodeByCustId//-->
+	<!--<query name="TownshipCodeDAO.SelectTownshipCodeByCustId">
+		select new townshipCodedto(
+		t.Township_Code,
+		t.Description
+		)
+		from PFMORM00005 as t,PFMORM00001 as c
+		where t.Township_Code  = c.TownshipCode
+		and c.CustomerId=:custId
+		and t.Active = true
+	</query>-->
+	
+</hibernate-mapping>

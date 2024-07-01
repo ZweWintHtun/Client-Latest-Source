@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+	
+	<import class="Ace.Cbs.Tel.Dmd.TLMDTO00017, Ace.Cbs.Tel.Dmd" rename="drawingremittancedto"/>
+
+	<class name="MNMVIW00031" table="VW_MOB831" mutable="false" >
+		<id name="Id" type="Int32" unsaved-value="0">
+		</id>
+
+		<property name="DrawingNo">
+			<column name="DRAWINGNO" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="RegisterNo">
+			<column name="REGISTERNO" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="Br_Alias">
+			<column name="BR_ALIAS" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="Type">
+			<column name="TYPE" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="NRC">
+			<column name="NRC" sql-type="nvarchar" not-null="false" />
+		</property>
+
+		<property name="ToName">
+			<column name="TONAME" sql-type="nvarchar" not-null="false" />
+		</property>
+
+		<property name="ToNRC">
+			<column name="TONRC" sql-type="nvarchar" not-null="false" />
+		</property>
+
+		<property name="TLXCharges">
+			<column name="TLXCHARGES" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="Comission">
+			<column name="COMMISSION" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="DBank">
+			<column name="DBANK" sql-type="nvarchar" not-null="false" />
+		</property>
+
+		<property name="ReceiptDate">
+			<column name="RECEIPTDATE" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="AccountNo">
+			<column name="ACCTNO" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="Amount">
+			<column name="AMOUNT" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="DateTime">
+			<column name="DATE_TIME" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="Currency">
+			<column name="CUR" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="SettlementDate">
+			<column name="SETTLEMENTDATE" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="OtherBank">
+			<column name="OTHERBANK" sql-type="bit" not-null="false" />
+		</property>
+
+		<property name="BankAlias">
+			<column name="BANK_ALIAS" sql-type="varchar" not-null="false" />
+		</property>
+
+    <property name="SourceBr">
+      <column name="SOURCEBR" sql-type="varchar" not-null="true" />
+    </property>
+	</class>
+
+	<!--ByReceiptDate-->
+	<query name="MNMVIW00031.DailyDrawingRemittanceListing_ByReceiptDate">
+    select new drawingremittancedto
+    (
+    vw.DrawingNo,
+    vw.RegisterNo,
+    vw.Br_Alias,
+    vw.Type,
+    vw.NRC,
+    vw.ToName,
+    vw.ToNRC,
+    vw.TLXCharges,
+    vw.Comission,
+    vw.DBank,
+    vw.ReceiptDate,
+    vw.AccountNo,
+    vw.Amount,
+    vw.DateTime,
+    vw.Currency,
+    vw.SettlementDate,
+    vw.OtherBank,
+    vw.BankAlias
+    )
+    from MNMVIW00031 as vw
+    where convert(Char(10),vw.ReceiptDate,111) = :date
+    and vw.DBank = :dBank
+    and vw.SourceBr = :SourceBr
+  </query>
+
+	<query name="MNMVIW00031.DailyDrawingRemittanceListing_BySettlementDate">
+    select new drawingremittancedto
+    (
+    vw.DrawingNo,
+    vw.RegisterNo,
+    vw.Br_Alias,
+    vw.Type,
+    vw.NRC,
+    vw.ToName,
+    vw.ToNRC,
+    vw.TLXCharges,
+    vw.Comission,
+    vw.DBank,
+    vw.ReceiptDate,
+    vw.AccountNo,
+    vw.Amount,
+    vw.DateTime,
+    vw.Currency,
+    vw.SettlementDate,
+    vw.OtherBank,
+    vw.BankAlias
+    )
+    from MNMVIW00031 as vw
+    where convert(Char(10),vw.SettlementDate,111) = :date
+    and vw.DBank = :dBank
+    and vw.SourceBr = :SourceBr
+  </query>
+
+</hibernate-mapping>

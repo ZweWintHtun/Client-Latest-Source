@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<hibernate-mapping assembly="Ace.Cbs.Tel.Dmd" namespace="Ace.Cbs.Tel.Dmd" xmlns="urn:nhibernate-mapping-2.2">	
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00042, Ace.Cbs.Pfm.Dmd" rename="reportTLFDTO"/>
+	
+  <class name="TLMVIW00021" table="VW_MOB334_ALL" mutable="false" >
+	  
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+    <property name="ENO">
+      <column name="ENO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="AccNo">
+      <column name="ACCTNO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="Desp">
+      <column name="DESP" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="Amount">
+      <column name="AMOUNT" sql-type="numeric(15,2)" not-null="false"/>
+    </property>
+
+    <property name="UserNo">
+      <column name="USERNO" sql-type="varchar" not-null="false"/>
+    </property>
+
+    <property name="Date_Time">
+      <column name="DATE_TIME" sql-type="datetime" not-null="false"/>
+    </property>
+
+    <property name="Time">
+      <column name="TIME" sql-type="datetime" not-null="false"/>
+    </property>
+
+    <property name="AcSign">
+      <column name="ACSIGN" sql-type="varchar" not-null="false"/>
+    </property>
+
+    <property name="SourceCur">
+      <column name="SOURCECUR" sql-type="varchar" not-null="false"/>
+    </property>
+
+    <property name="WorkStation">
+      <column name="WORKSTATION" sql-type="varchar" not-null="false"/>
+    </property>
+
+    <property name="SourceBr">
+      <column name="SOURCEBR" sql-type="varchar" not-null="false"/>
+    </property>
+
+  </class>
+
+</hibernate-mapping>

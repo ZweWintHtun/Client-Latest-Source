@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Windows.Ix.DataModel" namespace="Ace.Windows.Ix.DataModel" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Cen.Dto.CENDTO00008, Ace.Cbs.Cen.Dto" rename="cendto08"/>
+  <import class="Ace.Windows.Ix.Core.DataModel.DataVersionMetaDataItem, Ace.Windows.Ix.Core" rename="dmetadataitem"/>
+
+  <class name="ClientDataVersionItem" table="[ClientDataVersionItem]" >
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+    <property name="ClientDataVersionHeaderId">
+      <column name="ClientDataVersionHeaderId" sql-type="int" not-null="true" />
+    </property>
+    <property name="ClientDataVersionId">
+      <column name="ClientDataVersionId" sql-type="int" not-null="true" />
+    </property>
+
+    <property name="Active" not-null="true" />
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+    <many-to-one name="CreatedUser" column="[CreatedUserId]" class="Ace.Windows.Admin.DataModel.User" insert="false" update="false"></many-to-one>
+    <many-to-one name="UpdatedUser" column="[UpdatedUserId]" class="Ace.Windows.Admin.DataModel.User" insert="false" update="false"></many-to-one>
+    <many-to-one name="ClientDataVersionHeader" column="[ClientDataVersionHeaderId]" class="Ace.Windows.Ix.DataModel.ClientDataVersionHeader" insert="false" update="false"></many-to-one>
+    <many-to-one name="ClientDataVersion" column="[ClientDataVersionId]" class="Ace.Windows.Ix.DataModel.ClientDataVersion" insert="false" update="false"></many-to-one>
+  </class>
+
+  <!--ClientDataVersionItemDAO.DisableActiveByHeaderId-->
+  <query name="ClientDataVersionItemDAO.DisableActiveByHeaderId">
+    update ClientDataVersionItem dvi
+    set
+    dvi.Active = :isActive,
+    dvi.UpdatedUserId = :updatedUserId,
+    dvi.UpdatedDate = :updatedDate
+    where dvi.ClientDataVersionHeaderId = :headerId and dvi.Active = true
+  </query>
+
+  <!--ClientDataVersionItemDAO.DeleteByHeaderId-->
+  <query name="ClientDataVersionItemDAO.DeleteByHeaderId">
+    delete from ClientDataVersionItem dvi    
+    where dvi.ClientDataVersionHeaderId = :headerId and dvi.Active = true
+  </query>
+
+  <!--ClientDataVersionItemDAO.SelectDataVersionItemByHeaderId-->
+  <query name="ClientDataVersionItemDAO.SelectDataVersionItemByHeaderId">
+    select new cendto08(
+    dvh.VersionDescription,
+    case
+    when dv.ActionStatus = 1 then 'Insert'
+    when dv.ActionStatus = 2 then 'Update'
+    when dv.ActionStatus = 3 then 'Delete'
+    when dv.ActionStatus = 5 then 'Run SQL Script' end,
+    dv.ChangeDataContents,
+    cu.UserName,
+    dvi.CreatedDate,
+    uu.UserName,
+    dvi.UpdatedDate)
+    from ClientDataVersionItem as dvi
+    inner join dvi.ClientDataVersionHeader as dvh with dvh.Active = true
+    inner join dvi.ClientDataVersion as dv with dv.Active = true
+    inner join dvi.CreatedUser as cu with cu.Active = true
+    left join dvi.UpdatedUser as uu with uu.Active = true
+    where dvi.ClientDataVersionHeaderId = :headerId and dvi.Active = true
+  </query>
+</hibernate-mapping>

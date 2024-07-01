@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00024, Ace.Cbs.Pfm.Dmd" rename="coadto"/>
+
+  <class name="PFMORM00024" table="[COA]" >
+
+    <id name="ACode" type="string" unsaved-value="0">
+      <column name="ACode" sql-type="varchar" not-null="true" />
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+
+    <property name="AccountName">
+      <column name="ACName" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="DCODE">
+      <column name="DCODE" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="ACType">
+      <column name="ACType" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="PDate">
+      <column name="PDate" sql-type="datetime" not-null="true" />
+    </property>
+
+
+    <property name="CBMACode">
+      <column name="CBMACode" sql-type="varchar" not-null="false" />
+    </property>
+
+    <!--Relationships-->
+
+    <!--<property name ="COAAccountName">
+		  <column name ="Acode" sql-type="varchar" not-null ="true"/>
+	  </property>-->
+
+    <many-to-one name="COAAccountName" column="[ACode]" class="PFMORM00025" insert="false" update="false"></many-to-one>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  <query name="COA_SelectByACode">
+    select new coadto(
+    c.ACode,
+    c.DCODE
+    )
+    from PFMORM00024 as c
+    where c.ACode = :aCode and
+    c.DCODE = :sourceBranchCode
+  </query>
+
+  <query name="COA.SelectAccountName">
+    select new coadto(
+
+    c.AccountName,cs.AccountName,c.DCODE
+
+    )
+    from PFMORM00024 as c
+    inner join c.COAAccountName as cs
+    where cs.AccountNo=:accountNo
+  </query>
+
+  <query name="TLMCTL00015.SelectAccountName">
+    select new coadto (c.AccountName)
+    from PFMORM00024 as c
+    where ACode = :acode and Active = true
+  </query>
+
+  <query name="CXCLE00001.SelectACode">
+    select new coadto(
+    c.ACode
+    )
+    from PFMORM00024 as c
+    inner join c.COAAccountName as cs
+    where cs.AccountName = :accountName and
+    cs.SourceBranchCode = :sourceBranchCode
+  </query>
+
+  <query name="TLMCTL00020.SelectDescription">
+    select new coadto(
+    c.AccountName
+    )
+    from PFMORM00024 as c
+    where ACode = :encashAccount
+  </query>
+
+  <query name="ZoneDAO.CheckAccountCode">
+    select new coadto(
+    c.ACode
+    )
+    from PFMORM00024 as c
+    where ACode = :aCode and Active = true
+  </query>
+
+  <!--//COA.CheckExist//-->
+  <query name="COADAO.CheckExist">
+    select new coadto( c.ACode )
+    from PFMORM00024 as c where ( c.ACode =: aCode and c.DCODE=: sourceBr and  c.Active = true ) or c.AccountName =: aCName
+  </query>
+
+  <!--//COADAO.SelectAll//-->
+  <query name="COADAO.SelectAll">
+    select new coadto(
+    c.ACode,
+    c.AccountName,
+    c.DCODE,
+    c.ACType,
+    c.PDate,
+    c.CBMACode,
+    c.Active,
+    c.TS,
+    c.CreatedDate,
+    c.CreatedUserId,
+    c.UpdatedDate,
+    c.UpdatedUserId
+    )
+    from PFMORM00024 as c
+    where c.Active = true
+  </query>
+
+  <!--//COADAO.SelectByACode//-->
+  <query name="COADAO.SelectByACode">
+    select new coadto(
+    c.ACode,
+    c.AccountName,
+    c.DCODE,
+    c.ACType,
+    c.PDate,
+    c.CBMACode,
+    c.Active,
+    c.TS,
+    c.CreatedDate,
+    c.CreatedUserId,
+    c.UpdatedDate,
+    c.UpdatedUserId
+    )
+    from PFMORM00024 as c
+    where c.ACode = :aCode
+    and c.Active = true
+  </query>
+
+
+  <query name="CCOA_SelectByACode">
+    select new coadto(
+    c.ACode,
+    c.AccountName,
+    c.DCODE,
+    c.ACType,
+    c.PDate,
+    c.CBMACode,
+    c.Active,
+    c.TS,
+    c.CreatedDate,
+    c.CreatedUserId,
+    c.UpdatedDate,
+    c.UpdatedUserId
+    )
+    from PFMORM00024 as c
+    where c.ACode = :aCode and
+    c.DCODE = :sourceBranchCode and c.Active = true
+  </query>
+
+	<query name="CXCLE00001.SelectCOAByCoaSetupAccountName">
+		select new coadto(
+		c.ACode,
+		c.AccountName,
+		c.CreatedUserId
+		)
+		from PFMORM00024 as c
+		inner join c.COAAccountName as cs
+		where cs.AccountName = :accountName
+		and cs.Currency=:currency
+		and c.DCODE = :sourceBranchCode and cs.SourceBranchCode = :sourceBranchCode
+		and c.Active = true and cs.Active = true
+	</query>
+
+	<query name="COA.SelectAccountNoAndAccountName">
+		select new coadto(
+		c.ACode,c.AccountName,cs.AccountName,c.DCODE,c.CreatedUserId
+		)
+		from PFMORM00024 as c
+		inner join c.COAAccountName as cs
+		where (cs.AccountName=:sourceBankAccountName or cs.AccountName=:otherBankAccountName)
+		and cs.Currency=:currency 
+		and c.DCODE = :sourceBranchCode and cs.SourceBranchCode = :sourceBranchCode
+		and c.Active = true and cs.Active = true
+	</query>
+
+  <query name="COA.SelectACodeForPOReceipt">
+    select new coadto(
+    c.AccountName,
+    c.Active
+    )
+    from PFMORM00024 as c
+    inner join c.COAAccountName as cs
+    where c.ACode = :acode
+    and cs.CurrencyCode = :currency
+    and cs.SourceBranchCode = :sourceBranchCode
+    and c.Active = true and cs.Active = true
+  </query>
+
+
+
+</hibernate-mapping>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Windows.Ix.DataModel" namespace="Ace.Windows.Ix.DataModel" xmlns="urn:nhibernate-mapping-2.2"> 
+<import class="Ace.Window.CccCenter.Com.Dto.CCCOMDTO00007, Ace.Window.CccCenter.Com.Dto" rename="ccomdto07"/>
+  <import class="Ace.Cbs.Cen.Dto.CENDTO00003, Ace.Cbs.Cen.Dto" rename="cendto03"/>
+  <class name="InstallerType" table="[InstallerType]" >
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>   
+    <property name="Code">
+      <column name="Code" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Name">
+      <column name="Name" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Description">
+      <column name="Description" sql-type="varchar" not-null="false" />
+    </property>
+  
+    <property name="Active" not-null="true" />
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+  </class>  
+</hibernate-mapping>

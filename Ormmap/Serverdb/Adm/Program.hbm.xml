@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Windows.Admin.DataModel" namespace="Ace.Windows.Admin.DataModel" xmlns="urn:nhibernate-mapping-2.2">
+  
+	<import class="Ace.Windows.Admin.DataModel.ProgramDTO" rename="programdto"/>
+	
+	<class name="Program" table="[Program]" >
+		
+		<id name="Id" type="Int32" unsaved-value="0">
+			<generator class="increment">
+			</generator>
+		</id>
+		
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="false"/>
+		</version>
+		
+		<property name="ProgramName">
+			<column name="ProgramName" sql-type="nvarchar" not-null="true" />
+		</property>
+		
+		<property name="ProgramPath">
+			<column name="ProgramPath" sql-type="nvarchar" not-null="true" />
+		</property>
+		
+		<bag name="Menus" inverse="true" cascade="none">
+			<key column="ProgramId" />
+			<one-to-many class="Menu" />
+		</bag>
+		
+		<bag name="ProgramInMenus" inverse="true" cascade="none">
+			<key column="ProgramId" />
+			<one-to-many class="ProgramInMenu" />
+		</bag>
+		
+		<property name="Active" not-null="true" />
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+		
+	</class>
+
+	<!--//ProgramDAO.CheckExist//-->
+	<query name="ProgramDAO.CheckExist">
+		select new programdto(p.Id, p.ProgramName) 
+		from Program as p 
+		where (p.ProgramName = :programName or p.ProgramPath = :programPath)
+		and p.Active = true
+	</query>
+
+	<!--//ProgramDAO.SelectAll//-->
+	<query name="ProgramDAO.SelectAll">
+		select new programdto(
+		p.Id,
+		p.ProgramName,
+		p.ProgramPath,
+		p.Active,
+		p.CreatedUserId,
+		p.CreatedDate,
+		p.TS,
+		p.UpdatedUserId,
+		p.UpdatedDate)
+		from Program as p
+		where p.Active = true order by p.ProgramPath
+	</query>
+
+	<!--//ProgramDAO.SelectById//-->
+	<query name="ProgramDAO.SelectById">
+		select new programdto(
+		p.Id,
+		p.ProgramName,
+		p.ProgramPath,
+		p.Active,
+		p.CreatedUserId,
+		p.CreatedDate,
+		p.TS,
+		p.UpdatedUserId,
+		p.UpdatedDate)
+		from Program as p
+		where p.Id = :id
+		and p.Active = true
+	</query>
+	
+  <query name="ProgramDAO.SelectIdByProgramPath">
+    select p.Id
+    from Program as p
+    where p.ProgramPath = :programPath
+    and p.Active = true
+  </query>
+</hibernate-mapping>

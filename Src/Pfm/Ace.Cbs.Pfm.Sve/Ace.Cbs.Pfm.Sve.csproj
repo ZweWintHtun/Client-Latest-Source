@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{48812444-A9A7-416B-98EB-E7AC986FB964}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ace.Cbs.Pfm.Sve</RootNamespace>
+    <AssemblyName>Ace.Cbs.Pfm.Sve</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ace.Windows.Admin.Contracts, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Admin.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Admin.DataModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Admin.DataModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.CXServer, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.CXServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Ix.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Ix.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\..\Libs\Other\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core">
+      <HintPath>..\..\..\Libs\Other\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data">
+      <HintPath>..\..\..\Libs\Other\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate33">
+      <HintPath>..\..\..\Libs\Other\Spring.Data.NHibernate33.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PFMSVE00004.cs" />
+    <Compile Include="PFMSVE00002.cs" />
+    <Compile Include="PFMSVE00003.cs" />
+    <Compile Include="PFMSVE00001.cs" />
+    <Compile Include="PFMSVE00005.cs" />
+    <Compile Include="PFMSVE00006.cs" />
+    <Compile Include="PFMSVE00007.cs" />
+    <Compile Include="PFMSVE00008.cs" />
+    <Compile Include="PFMSVE00009.cs" />
+    <Compile Include="PFMSVE00010.cs" />
+    <Compile Include="PFMSVE00011.cs" />
+    <Compile Include="PFMSVE00012.cs" />
+    <Compile Include="PFMSVE00013.cs" />
+    <Compile Include="PFMSVE00014.cs" />
+    <Compile Include="PFMSVE00015.cs" />
+    <Compile Include="PFMSVE00016.cs" />
+    <Compile Include="PFMSVE00017.cs" />
+    <Compile Include="PFMSVE00018.cs" />
+    <Compile Include="PFMSVE00019.cs" />
+    <Compile Include="PFMSVE00020.cs" />
+    <Compile Include="PFMSVE00021.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PFMSVE00022.cs" />
+    <Compile Include="PFMSVE00023.cs" />
+    <Compile Include="PFMSVE00024.cs" />
+    <Compile Include="PFMSVE00025.cs" />
+    <Compile Include="PFMSVE00026.cs" />
+    <Compile Include="PFMSVE00027.cs" />
+    <Compile Include="PFMSVE00028.cs" />
+    <Compile Include="PFMSVE00029.cs" />
+    <Compile Include="PFMSVE00030.cs" />
+    <Compile Include="PFMSVE00031.cs" />
+    <Compile Include="PFMSVE00032.cs" />
+    <Compile Include="PFMSVE00033.cs" />
+    <Compile Include="PFMSVE00034.cs" />
+    <Compile Include="PFMSVE00042.cs" />
+    <Compile Include="PFMSVE00078.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Cx\Ace.Cbs.Cx.Com\Ace.Cbs.Cx.Com.csproj">
+      <Project>{83A33F31-AFB5-4778-8AEF-42EB781DD861}</Project>
+      <Name>Ace.Cbs.Cx.Com</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Cx\Ace.Cbs.Cx.Ser\Ace.Cbs.Cx.Ser.csproj">
+      <Project>{4A8FE202-C6E6-4279-A1FD-E9F0BE3FCD9F}</Project>
+      <Name>Ace.Cbs.Cx.Ser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ace.Cbs.Pfm.Ctr\Ace.Cbs.Pfm.Ctr.csproj">
+      <Project>{A9887BFF-9218-4612-BA0A-BA3D5E6744E1}</Project>
+      <Name>Ace.Cbs.Pfm.Ctr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ace.Cbs.Pfm.Dao\Ace.Cbs.Pfm.Dao.csproj">
+      <Project>{B161F893-355B-4C51-8332-0B8F280FAACB}</Project>
+      <Name>Ace.Cbs.Pfm.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ace.Cbs.Pfm.Dmd\Ace.Cbs.Pfm.Dmd.csproj">
+      <Project>{8F20F64D-FF47-47A3-87CA-30D8A12B5B75}</Project>
+      <Name>Ace.Cbs.Pfm.Dmd</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

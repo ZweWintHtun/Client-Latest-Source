@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00072, Ace.Cbs.Loan.Dmd" rename="CropTypeDto"/>
+
+  <class name="LOMORM00072" table="CropType" >
+
+    <id name="CropCode">
+      <column name="CropCode" sql-type="varchar" not-null="true" />
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+
+    <property name="Desp">
+      <column name="Desp" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="USERNO">
+      <column name="USERNO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="DATE_TIME">
+      <column name="DATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  <!--//CropTypeDAO.CheckExist//-->
+  <query name="CropTypeDAO.CheckExist">
+    select new CropTypeDto
+    (
+    a.CropCode,
+    a.Desp,
+    a.USERNO,
+    a.DATE_TIME)
+    from LOMORM00072 as a
+    where (a.CropCode = :cropCode or a.Desp = :desp)
+    and  a.Active = true
+  </query>
+
+  <!--//CropTypeDAO.CheckExist2//-->
+  <query name="CropTypeDAO.CheckExist2">
+    select new CropTypeDto(
+    a.CropCode,
+    a.Desp,
+    a.USERNO,
+    a.DATE_TIME,
+    a.Active,
+    a.TS,
+    a.CreatedDate,
+    a.CreatedUserId,
+    a.UpdatedDate,
+    a.UpdatedUserId
+    )
+    from LOMORM00072 as a
+    where (a.CropCode = :cropCode or a.Desp = :desp)
+  </query>
+
+
+  <!--//CropTypeDAO.SelectAll//-->
+  <query name="CropTypeDAO.SelectAll">
+    select new CropTypeDto(
+    a.CropCode,
+    a.Desp,
+    a.USERNO,
+    a.DATE_TIME,
+    a.Active,
+    a.TS,
+    a.CreatedDate,
+    a.CreatedUserId,
+    a.UpdatedDate,
+    a.UpdatedUserId
+    )
+    from LOMORM00072 as a
+    where a.Active = true
+  </query>
+
+  <!--//CropTypeDAO.SelectByAdvanceCode//-->
+  <!--
+  <query name="CropTypeDAO.SelectByAdvanceCode">
+    select new Advancedto(
+    a.Code,
+    a.Description,
+    a.Active,
+    a.TS,
+    a.CreatedDate,
+    a.CreatedUserId,
+    a.UpdatedDate,
+    a.UpdatedUserId
+    )
+    from LOMORM00002 as a
+    where a.Code = :code
+    and a.Active = true
+  </query>-->
+
+</hibernate-mapping>

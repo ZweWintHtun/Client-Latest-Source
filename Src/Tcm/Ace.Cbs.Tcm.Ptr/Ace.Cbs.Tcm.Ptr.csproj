@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1EE54893-02CC-4901-BC9C-202DDA962851}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ace.Cbs.Tcm.Ptr</RootNamespace>
+    <AssemblyName>Ace.Cbs.Tcm.Ptr</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ace.Cbs.Cx.Cle, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Cx.Cle.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Cx.Com, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Cx.Com.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Pfm.Ctr, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Pfm.Ctr.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Pfm.Dmd, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Pfm.Dmd.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Sam.Dmd, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Sam.Dmd.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Tcm.Dmd, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Tcm.Dmd.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Tel.Dmd, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Tel.Dmd.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Admin.DataModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Admin.DataModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.CXClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.CXClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Ix.Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Ix.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Ix.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Ix.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Ix.DataModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Ix.DataModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Aop, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\Spring.Aop.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate33, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\Spring.Data.NHibernate33.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TCMCTL00001.cs" />
+    <Compile Include="TCMCTL00002.cs" />
+    <Compile Include="TCMCTL00003.cs" />
+    <Compile Include="TCMCTL00004.cs" />
+    <Compile Include="TCMCTL00005.cs" />
+    <Compile Include="TCMCTL00006.cs" />
+    <Compile Include="TCMCTL00007.cs" />
+    <Compile Include="TCMCTL00008.cs" />
+    <Compile Include="TCMCTL00009.cs" />
+    <Compile Include="TCMCTL00010.cs" />
+    <Compile Include="TCMCTL00011.cs" />
+    <Compile Include="TCMCTL00012.cs" />
+    <Compile Include="TCMCTL00013.cs" />
+    <Compile Include="TCMCTL00018.cs" />
+    <Compile Include="TCMCTL00019.cs" />
+    <Compile Include="TCMCTL00052.cs" />
+    <Compile Include="TCMCTL00032.cs" />
+    <Compile Include="TCMCTL00033.cs" />
+    <Compile Include="TCMCTL00034.cs" />
+    <Compile Include="TCMCTL00037.cs" />
+    <Compile Include="TCMCTL00036.cs" />
+    <Compile Include="TCMCTL00039.cs" />
+    <Compile Include="TCMCTL00043.cs" />
+    <Compile Include="TCMCTL00014.cs" />
+    <Compile Include="TCMCTL00015.cs" />
+    <Compile Include="TCMCTL00016.cs" />
+    <Compile Include="TCMCTL00017.cs" />
+    <Compile Include="TCMCTL00020.cs" />
+    <Compile Include="TCMCTL00022.cs" />
+    <Compile Include="TCMCTL00025.cs" />
+    <Compile Include="TCMCTL00026.cs" />
+    <Compile Include="TCMCTL00027.cs" />
+    <Compile Include="TCMCTL00028.cs" />
+    <Compile Include="TCMCTL00029.cs" />
+    <Compile Include="TCMCTL00044.cs" />
+    <Compile Include="TCMCTL00054.cs" />
+    <Compile Include="TCMCTL00061.cs" />
+    <Compile Include="TCMCTL00045.cs" />
+    <Compile Include="TCMCTL00062.cs" />
+    <Compile Include="TCMCTL00065.cs" />
+    <Compile Include="TCMCTL00063.cs" />
+    <Compile Include="TCMCTL00066.cs" />
+    <Compile Include="TCMCTL00068.cs" />
+    <Compile Include="TCMCTL00071.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Mnm\Ace.Cbs.Mnm.Ctr\Ace.Cbs.Mnm.Ctr.csproj">
+      <Project>{5793ACFC-ED60-4E4E-86F3-221487DD0C8F}</Project>
+      <Name>Ace.Cbs.Mnm.Ctr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tel\Ace.Cbs.Tel.Ctr\Ace.Cbs.Tel.Ctr.csproj">
+      <Project>{E940CDA8-DE03-44C7-BF69-37EB9ACCD7C6}</Project>
+      <Name>Ace.Cbs.Tel.Ctr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ace.Cbs.Tcm.Ctr\Ace.Cbs.Tcm.Ctr.csproj">
+      <Project>{77567CFC-17CF-4B2D-8502-028AA5E1019F}</Project>
+      <Name>Ace.Cbs.Tcm.Ctr</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

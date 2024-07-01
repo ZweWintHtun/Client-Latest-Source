@@ -1,0 +1,1031 @@
+D:\PRISTINE\20181102\201810101\20180531\Output\Ace.Cbs.Pfm.Vew.dll
+D:\PRISTINE\20181102\201810101\20180531\Output\Ace.Cbs.Pfm.Vew.pdb
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csprojResolveAssemblyReference.cache
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00001.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00004.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00002.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00005.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00006.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00008.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00009.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00011.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00012.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00013.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00003.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00007.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00010.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00014.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00015.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00016.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00017.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00018.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00019.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00020.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00021.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00024.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00025.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00026.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00023.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00027.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00022.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00028.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00029.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00030.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00031.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00032.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00033.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00034.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00035.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00078.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00079.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.Properties.Resources.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csproj.GenerateResource.Cache
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.cache
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.compiled
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.dll
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.pdb
+E:\WORKING\Pristine\Pristine Project\Output\Ace.Cbs.Pfm.Vew.dll
+E:\WORKING\Pristine\Pristine Project\Output\Ace.Cbs.Pfm.Vew.pdb
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csprojResolveAssemblyReference.cache
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00001.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00004.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00002.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00005.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00006.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00008.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00009.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00011.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00012.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00013.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00003.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00007.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00010.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00014.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00015.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00016.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00017.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00018.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00019.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00020.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00021.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00024.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00025.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00026.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00023.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00027.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00022.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00028.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00029.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00030.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00031.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00032.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00033.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00034.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00035.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00078.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00079.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00080.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.Properties.Resources.resources
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csproj.GenerateResource.Cache
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.cache
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.compiled
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.dll
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.pdb
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Output\Ace.Cbs.Pfm.Vew.dll
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Output\Ace.Cbs.Pfm.Vew.pdb
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csprojResolveAssemblyReference.cache
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00001.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00004.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00002.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00005.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00006.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00008.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00009.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00011.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00012.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00013.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00003.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00007.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00010.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00014.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00015.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00016.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00017.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00018.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00019.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00020.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00021.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00024.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00025.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00026.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00023.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00027.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00022.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00028.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00029.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00030.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00031.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00032.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00033.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00034.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00035.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00078.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00079.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00080.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.Properties.Resources.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csproj.GenerateResource.Cache
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.cache
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.compiled
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.dll
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.pdb
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csprojResolveAssemblyReference.cache
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00001.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00004.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00002.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00005.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00006.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00008.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00009.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00011.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00012.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00013.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00003.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00007.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00010.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00014.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00015.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00016.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00017.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00018.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00019.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00020.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00021.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00024.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00025.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00026.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00023.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00027.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00022.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00028.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00029.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00030.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00031.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00032.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00033.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00034.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00035.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00078.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00079.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00080.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.Properties.Resources.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csproj.GenerateResource.Cache
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.cache
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.compiled
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.pdb
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Output\Ace.Cbs.Pfm.Vew.dll
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Output\Ace.Cbs.Pfm.Vew.pdb
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.dll
+D:\02. Testing Version\My Latest\12092019\Output\Ace.Cbs.Pfm.Vew.dll
+D:\02. Testing Version\My Latest\12092019\Output\Ace.Cbs.Pfm.Vew.pdb
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csprojResolveAssemblyReference.cache
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00001.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00004.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00002.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00005.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00006.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00008.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00009.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00011.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00012.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00013.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00003.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00007.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00010.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00014.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00015.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00016.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00017.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00018.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00019.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00020.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00021.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00024.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00025.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00026.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00023.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00027.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00022.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00028.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00029.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00030.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00031.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00032.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00033.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00034.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00035.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00078.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00079.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00080.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.Properties.Resources.resources
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csproj.GenerateResource.Cache
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.cache
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.compiled
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.dll
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.pdb
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csprojResolveAssemblyReference.cache
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00001.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00004.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00002.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00005.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00006.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00008.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00009.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00011.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00012.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00013.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00003.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00007.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00010.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00014.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00015.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00016.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00017.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00018.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00019.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00020.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00021.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00024.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00025.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00026.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00023.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00027.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00022.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00028.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00029.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00030.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00031.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00032.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00033.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00034.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00035.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00078.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00079.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00080.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.Properties.Resources.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csproj.GenerateResource.Cache
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.cache
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.compiled
+D:\02. Testing Version\My Latest\Pristine Project\Output\Ace.Cbs.Pfm.Vew.dll
+D:\02. Testing Version\My Latest\Pristine Project\Output\Ace.Cbs.Pfm.Vew.pdb
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.dll
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.pdb
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Output\Ace.Cbs.Pfm.Vew.dll
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Output\Ace.Cbs.Pfm.Vew.pdb
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csprojResolveAssemblyReference.cache
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00001.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00004.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00002.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00005.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00006.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00008.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00009.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00011.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00012.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00013.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00003.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00007.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00010.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00014.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00015.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00016.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00017.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00018.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00019.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00020.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00021.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00024.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00025.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00026.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00023.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00027.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00022.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00028.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00029.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00030.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00031.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00032.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00033.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00034.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00035.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00078.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00079.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00080.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.Properties.Resources.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csproj.GenerateResource.Cache
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.cache
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.compiled
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.dll
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.pdb
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csprojResolveAssemblyReference.cache
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00001.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00004.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00002.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00005.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00006.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00008.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00009.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00011.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00012.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00013.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00003.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00007.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00010.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00014.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00015.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00016.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00017.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00018.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00019.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00020.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00021.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00024.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00025.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00026.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00023.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00027.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00022.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00028.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00029.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00030.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00031.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00032.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00033.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00034.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00035.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00078.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00079.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00080.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.Properties.Resources.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csproj.GenerateResource.Cache
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.cache
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.compiled
+E:\~WorkFromHome\Banking_02\Pristine Project\Output\Ace.Cbs.Pfm.Vew.dll
+E:\~WorkFromHome\Banking_02\Pristine Project\Output\Ace.Cbs.Pfm.Vew.pdb
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.dll
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.pdb
+D:\Saung\1.Pristine\Source code\Pristine Project\Output\Ace.Cbs.Pfm.Vew.dll
+D:\Saung\1.Pristine\Source code\Pristine Project\Output\Ace.Cbs.Pfm.Vew.pdb
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csprojResolveAssemblyReference.cache
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00001.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00004.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00002.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00005.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00006.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00008.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00009.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00011.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00012.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00013.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00003.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00007.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00010.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00014.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00015.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00016.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00017.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00018.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00019.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00020.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00021.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00024.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00025.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00026.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00023.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00027.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00022.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00028.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00029.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00030.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00031.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00032.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00033.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00034.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00035.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00078.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00079.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00080.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.Properties.Resources.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csproj.GenerateResource.Cache
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.dll
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.pdb
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Output\Ace.Cbs.Pfm.Vew.dll
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Output\Ace.Cbs.Pfm.Vew.pdb
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csprojResolveAssemblyReference.cache
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00001.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00004.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00002.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00005.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00006.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00008.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00009.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00011.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00012.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00013.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00003.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00007.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00010.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00014.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00015.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00016.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00017.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00018.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00019.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00020.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00021.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00024.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00025.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00026.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00023.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00027.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00022.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00028.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00029.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00030.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00031.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00032.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00033.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00034.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00035.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00078.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00079.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00080.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.Properties.Resources.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csproj.GenerateResource.Cache
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.dll
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.pdb
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.cache
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.compiled
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Output\Ace.Cbs.Pfm.Vew.dll
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Output\Ace.Cbs.Pfm.Vew.pdb
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csprojResolveAssemblyReference.cache
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00001.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00004.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00002.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00005.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00006.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00008.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00009.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00011.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00012.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00013.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00003.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00007.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00010.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00014.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00015.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00016.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00017.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00018.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00019.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00020.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00021.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00024.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00025.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00026.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00023.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00027.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00022.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00028.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00029.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00030.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00031.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00032.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00033.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00034.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00035.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00078.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00079.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00080.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.Properties.Resources.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csproj.GenerateResource.Cache
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.cache
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.compiled
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.dll
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.pdb
+D:\Pristine Source Code\Copy of CBS SourceCode\Output\Ace.Cbs.Pfm.Vew.dll
+D:\Pristine Source Code\Copy of CBS SourceCode\Output\Ace.Cbs.Pfm.Vew.pdb
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csprojResolveAssemblyReference.cache
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00001.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00004.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00002.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00005.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00006.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00008.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00009.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00011.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00012.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00013.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00003.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00007.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00010.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00014.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00015.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00016.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00017.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00018.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00019.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00020.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00021.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00024.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00025.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00026.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00023.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00027.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00022.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00028.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00029.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00030.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00031.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00032.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00033.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00034.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00035.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00078.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00079.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00080.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.Properties.Resources.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csproj.GenerateResource.Cache
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.cache
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.compiled
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.dll
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.pdb
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Output\Ace.Cbs.Pfm.Vew.dll
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Output\Ace.Cbs.Pfm.Vew.pdb
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csprojResolveAssemblyReference.cache
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00001.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00004.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00002.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00005.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00006.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00008.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00009.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00011.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00012.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00013.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00003.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00007.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00010.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00014.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00015.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00016.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00017.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00018.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00019.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00020.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00021.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00024.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00025.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00026.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00023.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00027.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00022.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00028.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00029.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00030.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00031.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00032.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00033.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00034.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00035.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00078.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00079.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00080.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.Properties.Resources.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csproj.GenerateResource.Cache
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.cache
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.compiled
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.dll
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.pdb
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Vew.dll
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Vew.pdb
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csprojResolveAssemblyReference.cache
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00001.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00004.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00002.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00005.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00006.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00008.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00009.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00011.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00012.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00013.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00003.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00007.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00010.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00014.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00015.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00016.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00017.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00018.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00019.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00020.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00021.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00024.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00025.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00026.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00023.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00027.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00022.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00028.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00029.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00030.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00031.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00032.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00033.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00034.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00035.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00078.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00079.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00080.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.Properties.Resources.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csproj.GenerateResource.Cache
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.cache
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.compiled
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.dll
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.pdb
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Vew.dll
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Vew.pdb
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csprojResolveAssemblyReference.cache
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00001.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00004.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00002.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00005.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00006.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00008.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00009.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00011.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00012.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00013.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00003.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00007.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00010.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00014.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00015.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00016.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00017.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00018.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00019.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00020.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00021.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00024.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00025.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00026.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00023.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00027.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00022.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00028.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00029.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00030.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00031.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00032.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00033.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00034.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00035.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00078.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00079.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00080.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.Properties.Resources.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csproj.GenerateResource.Cache
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.cache
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.compiled
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.dll
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.pdb
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Vew.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Vew.pdb
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csprojResolveAssemblyReference.cache
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00001.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00004.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00002.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00005.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00006.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00008.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00009.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00011.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00012.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00013.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00003.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00007.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00010.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00014.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00015.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00016.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00017.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00018.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00019.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00020.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00021.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00024.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00025.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00026.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00023.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00027.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00022.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00028.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00029.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00030.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00031.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00032.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00033.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00034.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00035.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00078.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00079.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00080.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.Properties.Resources.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csproj.GenerateResource.Cache
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.cache
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.compiled
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.pdb
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Vew.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Vew.pdb
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csprojResolveAssemblyReference.cache
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00001.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00004.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00002.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00005.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00006.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00008.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00009.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00011.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00012.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00013.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00003.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00007.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00010.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00014.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00015.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00016.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00017.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00018.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00019.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00020.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00021.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00024.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00025.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00026.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00023.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00027.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00022.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00028.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00029.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00030.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00031.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00032.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00033.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00034.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00035.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00078.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00079.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00080.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.Properties.Resources.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csproj.GenerateResource.Cache
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.cache
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.compiled
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.pdb
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Vew.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Vew.pdb
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csprojResolveAssemblyReference.cache
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00001.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00004.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00002.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00005.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00006.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00008.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00009.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00011.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00012.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00013.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00003.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00007.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00010.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00014.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00015.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00016.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00017.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00018.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00019.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00020.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00021.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00024.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00025.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00026.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00023.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00027.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00022.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00028.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00029.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00030.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00031.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00032.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00033.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00034.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00035.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00078.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00079.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00080.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.Properties.Resources.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csproj.GenerateResource.Cache
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.cache
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.compiled
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.pdb
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Vew.dll
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Vew.pdb
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csprojResolveAssemblyReference.cache
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00001.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00004.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00002.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00005.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00006.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00008.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00009.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00011.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00012.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00013.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00003.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00007.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00010.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00014.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00015.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00016.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00017.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00018.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00019.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00020.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00021.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00024.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00025.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00026.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00023.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00027.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00022.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00028.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00029.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00030.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00031.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00032.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00033.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00034.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00035.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00078.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00079.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00080.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.Properties.Resources.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csproj.GenerateResource.Cache
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.cache
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.compiled
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.dll
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.pdb
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Vew.dll
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Vew.pdb
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csprojResolveAssemblyReference.cache
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00001.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00004.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00002.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00005.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00006.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00008.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00009.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00011.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00012.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00013.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00003.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00007.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00010.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00014.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00015.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00016.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00017.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00018.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00019.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00020.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00021.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00024.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00025.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00026.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00023.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00027.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00022.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00028.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00029.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00030.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00031.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00032.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00033.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00034.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00035.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00078.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00079.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00080.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.Properties.Resources.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csproj.GenerateResource.Cache
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.cache
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.compiled
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.dll
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.pdb
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Output\Ace.Cbs.Pfm.Vew.dll
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Output\Ace.Cbs.Pfm.Vew.pdb
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csprojResolveAssemblyReference.cache
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00001.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00004.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00002.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00005.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00006.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00008.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00009.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00011.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00012.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00013.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00003.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00007.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00010.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00014.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00015.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00016.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00017.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00018.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00019.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00020.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00021.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00024.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00025.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00026.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00023.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00027.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00022.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00028.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00029.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00030.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00031.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00032.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00033.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00034.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00035.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00078.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00079.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00080.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.Properties.Resources.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csproj.GenerateResource.Cache
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.cache
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\RdlCompile.compiled
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.dll
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.pdb
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Output\Ace.Cbs.Pfm.Vew.dll
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Output\Ace.Cbs.Pfm.Vew.pdb
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00001.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00004.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00002.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00005.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00006.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00008.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00009.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00011.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00012.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00013.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00003.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00007.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00010.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00014.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00015.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00016.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00017.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00018.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00019.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00020.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00021.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00024.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00025.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00026.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00023.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00027.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00022.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00028.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00029.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00030.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00031.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00032.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00033.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00034.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00035.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.frmPFMVEW00078.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00079.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.PFMVEW00080.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.Properties.Resources.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csproj.GenerateResource.Cache
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.dll
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.pdb
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csproj.AssemblyReference.cache
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csproj.CoreCompileInputs.cache
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Vew\obj\Debug\Ace.Cbs.Pfm.Vew.csproj.CopyComplete

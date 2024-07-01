@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly=" Ace.Windows.Admin.DataModel" namespace=" Ace.Windows.Admin.DataModel" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Windows.Admin.DataModel.QuickAccessMenuDTO" rename="quickaccessmenudto"/>
+  
+  <class name="QuickAccessMenu" table="QuickAccessMenu" lazy="true" >
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+    
+    <property name="UserId">
+      <column name="UserId" sql-type="int" not-null="true" />
+    </property>
+    <property name="MenuId">
+      <column name="MenuId" sql-type="int" not-null="true" />
+    </property>
+    
+    <many-to-one name="Menu" column="MenuId" class="Menu" insert="false" update="false"></many-to-one>
+    
+    <property name="ParentMenuId">
+      <column name="ParentMenuId" sql-type="int" not-null="false" />
+    </property>
+    
+    <property name="Active">
+      <column name="Active" sql-type="bit" not-null="true" />
+    </property>
+    
+    <property name="CreatedDate">
+      <column name="CreatedDate" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="CreatedUserId">
+      <column name="CreatedUserId" sql-type="int" not-null="true" />
+    </property>
+    <property name="UpdatedDate">
+      <column name="Updateddate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="UpdatedUserId">
+      <column name="UpdatedUserId" sql-type="int" not-null="false" />
+    </property>
+  </class>
+
+  <!--<query name="MenuDAO.GetQuickAccessMenuByUserId">
+    select new menudto(
+    m.Id,
+    m.MenuName,
+    m.Description,
+    m.ShortcutKey,
+    m.ParentMenuId,
+    m.ProgramId,
+    m.SerialNo,
+    m.Image,
+    p.ProgramName,
+    p.ProgramPath,
+    qam.ParentMenuId
+    )
+    from
+    QuickAccessMenu as qam
+    left join qam.Menu as m
+    left join m.Program as p
+    where qam.Active = true and
+    qam.UserId = :userid and
+    m.Id in
+    (select distinct mg.MenuId
+    from User as u
+    inner join u.Roles as r
+    inner join r.Group as g
+    inner join g.MenuInGroups as mg
+    where u.Id = :userid
+    and mg.CanView = true)
+    order by qam.ParentMenuId, m.SerialNo
+  </query>-->
+
+  <!--MenuDAO.GetQuickAccessMenuByUserId-->
+  <query name="MenuDAO.GetQuickAccessMenuByUserId">
+    select new menudto(
+    m.Id,
+    m.MenuName,
+    m.Description,
+    m.ShortcutKey,
+    m.ParentMenuId,
+    m.ProgramId,
+    m.SerialNo,
+    m.Image,
+    g.GroupName,
+    p.ProgramName,
+    p.ProgramPath,
+    qam.ParentMenuId
+    )
+    from User as u
+    inner join u.Roles as r with r.Active = true
+    inner join r.Group as g with g.Active = true
+    inner join g.MenuInGroups as mg with mg.Active = true
+    inner join mg.Menu as m with m.Active = true
+    inner join m.QuickAccessMenus as qam with qam.Active = true
+    Left join m.Program as p with p.Active = true
+    where u.Active = true and u.Id = :userid and mg.CanView = true
+    order by qam.ParentMenuId, m.SerialNo
+  </query>
+  
+  <query name="MenuDAO.GetQuickAccessMenuForEntryByUserId">
+    select new menudto(
+    m.Id,
+    m.MenuName,
+    m.ParentMenuId,
+    qam.Id,
+    qam.ParentMenuId
+    )
+    from
+    Menu as m
+    left join m.QuickAccessMenus as qam
+    where m.Active = true and
+    m.Id in
+    (select distinct mg.MenuId
+    from User as u
+    inner join u.Roles as r
+    inner join r.Group as g
+    inner join g.MenuInGroups as mg
+    where u.Id = :userid
+    and mg.CanView = true)
+  </query>
+
+  <query name="MenuDAO.QuickAccessMenuDeleteByUserId">
+    delete from QuickAccessMenu where UserId = :userid and Active = true
+  </query>
+  
+</hibernate-mapping>

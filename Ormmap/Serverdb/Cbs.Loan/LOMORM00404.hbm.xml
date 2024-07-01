@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00001, Ace.Cbs.Loan.Dmd" rename="LoansBusiness_Typedto"/>
+
+  <class name="LOMORM00404" table="LoansBusiness_Type" >
+
+    <id name="Code">
+      <column name="LoansBusinessTypeCode" sql-type="varchar" not-null="true" />
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+
+    <property name="Description">
+      <column name="LoansBusinessTypeDesp" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="RelatedGLACode">
+      <column name="RelatedGLACode" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  <!--//LoansBusiness_TypeDAO.CheckExist//-->
+  <query name="LoanBTypeDAO.CheckExist">
+    select new LoansBusiness_Typedto
+    (
+    b.Code,
+    b.Description,
+    b.RelatedGLACode
+    )
+    from LOMORM00404 as b
+    where (b.Code =: code or b.Description =: description or b.RelatedGLACode = :acode)
+    and  b.Active = true
+  </query>
+
+  <!--//LoansBusiness_TypeDAO.CheckExist2//-->
+  <query name="LoanBTypeDAO.CheckExist2">
+    select new LoansBusiness_Typedto
+    (
+    b.Code,
+    b.Description,
+    b.RelatedGLACode,
+    b.Active,
+    b.TS,
+    b.CreatedDate,
+    b.CreatedUserId,
+    b.UpdatedDate,
+    b.UpdatedUserId
+    )
+    from LOMORM00404 as b
+    where (b.Code =: code or b.Description =: description or b.RelatedGLACode = :acode)
+  </query>
+
+  <!--//LoansBusiness_TypeDAO.SelectAll//-->
+  <query name="LoanBTypeDAO.SelectAll">
+    select new LoansBusiness_Typedto
+    (
+    b.Code,
+    b.Description,
+    b.RelatedGLACode,
+    b.Active,
+    b.TS,
+    b.CreatedDate,
+    b.CreatedUserId,
+    b.UpdatedDate,
+    b.UpdatedUserId
+    )
+    from LOMORM00404 as b
+    where b.Active = true
+  </query>
+
+  <!--//LoansBusiness_TypeDAO.SelectById//-->
+  <query name="LoanBTypeDAO.SelectByCode">
+    select new LoansBusiness_Typedto(
+    b.Code,
+    b.Description,
+    b.RelatedGLACode,
+    b.Active,
+    b.TS,
+    b.CreatedDate,
+    b.CreatedUserId,
+    b.UpdatedDate,
+    b.UpdatedUserId
+    )
+    from LOMORM00404 as b
+    where b.Code = :code
+    and b.Active = true
+  </query>
+
+</hibernate-mapping>
+

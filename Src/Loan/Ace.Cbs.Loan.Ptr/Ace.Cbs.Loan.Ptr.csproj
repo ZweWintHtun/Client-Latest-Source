@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{667A1224-1AE3-4AF6-8E0D-02E5772B947C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ace.Cbs.Loan.Ptr</RootNamespace>
+    <AssemblyName>Ace.Cbs.Loan.Ptr</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ace.Cbs.Cx.Cle, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Cx.Cle.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Cx.Com, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Pfm.Dmd, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Pfm.Dmd.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Admin.DataModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Admin.DataModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.CXClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.CXClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Ix.Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Ix.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Ix.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Ix.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Office, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Spring.Aop, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\Spring.Aop.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate33, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\Spring.Data.NHibernate33.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LOMCTL00030.cs" />
+    <Compile Include="LOMCTL00025.cs" />
+    <Compile Include="LOMCTL00001.cs" />
+    <Compile Include="LOMCTL00002.cs" />
+    <Compile Include="LOMCTL00003.cs" />
+    <Compile Include="LOMCTL00004.cs" />
+    <Compile Include="LOMCTL00005.cs" />
+    <Compile Include="LOMCTL00006.cs" />
+    <Compile Include="LOMCTL00007.cs" />
+    <Compile Include="LOMCTL00008.cs" />
+    <Compile Include="LOMCTL00009.cs" />
+    <Compile Include="LOMCTL00010.cs" />
+    <Compile Include="LOMCTL00012.cs" />
+    <Compile Include="LOMCTL00011.cs" />
+    <Compile Include="LOMCTL00013.cs" />
+    <Compile Include="LOMCTL00014.cs" />
+    <Compile Include="LOMCTL00015.cs" />
+    <Compile Include="LOMCTL00016.cs" />
+    <Compile Include="LOMCTL00020.cs" />
+    <Compile Include="LOMCTL00021.cs" />
+    <Compile Include="LOMCTL00023.cs" />
+    <Compile Include="LOMCTL00024.cs" />
+    <Compile Include="LOMCTL00027.cs" />
+    <Compile Include="LOMCTL00028.cs" />
+    <Compile Include="LOMCTL00029.cs" />
+    <Compile Include="LOMCTL00031.cs" />
+    <Compile Include="LOMCTL00032.cs" />
+    <Compile Include="LOMCTL00034.cs" />
+    <Compile Include="LOMCTL00035.cs" />
+    <Compile Include="LOMCTL00040.cs" />
+    <Compile Include="LOMCTL00042.cs" />
+    <Compile Include="LOMCTL00044.cs" />
+    <Compile Include="LOMCTL00045.cs" />
+    <Compile Include="LOMCTL00047.cs" />
+    <Compile Include="LOMCTL00049.cs" />
+    <Compile Include="LOMCTL00051.cs" />
+    <Compile Include="LOMCTL00054.cs" />
+    <Compile Include="LOMCTL00057.cs" />
+    <Compile Include="LOMCTL00059.cs" />
+    <Compile Include="LOMCTL00061.cs" />
+    <Compile Include="LOMCTL00063.cs" />
+    <Compile Include="LOMCTL00065.cs" />
+    <Compile Include="LOMCTL00066.cs" />
+    <Compile Include="LOMCTL00068.cs" />
+    <Compile Include="LOMCTL00069.cs" />
+    <Compile Include="LOMCTL00070.cs" />
+    <Compile Include="LOMCTL00071.cs" />
+    <Compile Include="LOMCTL00072.cs" />
+    <Compile Include="LOMCTL00073.cs" />
+    <Compile Include="LOMCTL00074.cs" />
+    <Compile Include="LOMCTL00075.cs" />
+    <Compile Include="LOMCTL00076.cs" />
+    <Compile Include="LOMCTL00077.cs" />
+    <Compile Include="LOMCTL00078.cs" />
+    <Compile Include="LOMCTL00080.cs" />
+    <Compile Include="LOMCTL00081.cs" />
+    <Compile Include="LOMCTL00086.cs" />
+    <Compile Include="LOMCTL00087.cs" />
+    <Compile Include="LOMCTL00088.cs" />
+    <Compile Include="LOMCTL00089.cs" />
+    <Compile Include="LOMCTL00090.cs" />
+    <Compile Include="LOMCTL00091.cs" />
+    <Compile Include="LOMCTL00092.cs" />
+    <Compile Include="LOMCTL00093.cs" />
+    <Compile Include="LOMCTL00096.cs" />
+    <Compile Include="LOMCTL00100.cs" />
+    <Compile Include="LOMCTL00102.cs" />
+    <Compile Include="LOMCTL00104.cs" />
+    <Compile Include="LOMCTL00200.cs" />
+    <Compile Include="LOMCTL00201.cs" />
+    <Compile Include="LOMCTL00202.cs" />
+    <Compile Include="LOMCTL00203.cs" />
+    <Compile Include="LOMCTL00204.cs" />
+    <Compile Include="LOMCTL00205.cs" />
+    <Compile Include="LOMCTL00206.cs" />
+    <Compile Include="LOMCTL00207.cs" />
+    <Compile Include="LOMCTL00208.cs" />
+    <Compile Include="LOMCTL00209.cs" />
+    <Compile Include="LOMCTL00210.cs" />
+    <Compile Include="LOMCTL00211.cs" />
+    <Compile Include="LOMCTL00212.cs" />
+    <Compile Include="LOMCTL00213.cs" />
+    <Compile Include="LOMCTL00214.cs" />
+    <Compile Include="LOMCTL00215.cs" />
+    <Compile Include="LOMCTL00216.cs" />
+    <Compile Include="LOMCTL00217.cs" />
+    <Compile Include="LOMCTL00218.cs" />
+    <Compile Include="LOMCTL00219.cs" />
+    <Compile Include="LOMCTL00220.cs" />
+    <Compile Include="LOMCTL00221.cs" />
+    <Compile Include="LOMCTL00222.cs" />
+    <Compile Include="LOMCTL00223.cs" />
+    <Compile Include="LOMCTL00224.cs" />
+    <Compile Include="LOMCTL00225.cs" />
+    <Compile Include="LOMCTL00227.cs" />
+    <Compile Include="LOMCTL00228.cs" />
+    <Compile Include="LOMCTL00229.cs" />
+    <Compile Include="LOMCTL00230.cs" />
+    <Compile Include="LOMCTL00231.cs" />
+    <Compile Include="LOMCTL00232.cs" />
+    <Compile Include="LOMCTL00233.cs" />
+    <Compile Include="LOMCTL00234.cs" />
+    <Compile Include="LOMCTL00235.cs" />
+    <Compile Include="LOMCTL00236.cs" />
+    <Compile Include="LOMCTL00237.cs" />
+    <Compile Include="LOMCTL00238.cs" />
+    <Compile Include="LOMCTL00300.cs" />
+    <Compile Include="LOMCTL00301.cs" />
+    <Compile Include="LOMCTL00303.cs" />
+    <Compile Include="LOMCTL00305.cs" />
+    <Compile Include="LOMCTL00307.cs" />
+    <Compile Include="LOMCTL00309.cs" />
+    <Compile Include="LOMCTL00311.cs" />
+    <Compile Include="LOMCTL00312.cs" />
+    <Compile Include="LOMCTL00313.cs" />
+    <Compile Include="LOMCTL00314.cs" />
+    <Compile Include="LOMCTL00316.cs" />
+    <Compile Include="LOMCTL00318.cs" />
+    <Compile Include="LOMCTL00320.cs" />
+    <Compile Include="LOMCTL00322.cs" />
+    <Compile Include="LOMCTL00323.cs" />
+    <Compile Include="LOMCTL00325.cs" />
+    <Compile Include="LOMCTL00326.cs" />
+    <Compile Include="LOMCTL00327.cs" />
+    <Compile Include="LOMCTL00328.cs" />
+    <Compile Include="LOMCTL00330.cs" />
+    <Compile Include="LOMCTL00332.cs" />
+    <Compile Include="LOMCTL00334.cs" />
+    <Compile Include="LOMCTL00336.cs" />
+    <Compile Include="LOMCTL00338.cs" />
+    <Compile Include="LOMCTL00340.cs" />
+    <Compile Include="LOMCTL00342.cs" />
+    <Compile Include="LOMCTL00403.cs" />
+    <Compile Include="LOMCTL00404.cs" />
+    <Compile Include="LOMCTL00405.cs" />
+    <Compile Include="LOMCTL00407.cs" />
+    <Compile Include="LOMCTL00408.cs" />
+    <Compile Include="LOMCTL00410.cs" />
+    <Compile Include="LOMCTL00412.cs" />
+    <Compile Include="LOMCTL00414.cs" />
+    <Compile Include="LOMCTL00415.cs" />
+    <Compile Include="LOMCTL00416.cs" />
+    <Compile Include="LOMCTL00418.cs" />
+    <Compile Include="LOMCTL00419.cs" />
+    <Compile Include="LOMCTL00421.cs" />
+    <Compile Include="LOMCTL00422.cs" />
+    <Compile Include="LOMCTL00423.cs" />
+    <Compile Include="LOMCTL00425.cs" />
+    <Compile Include="LOMCTL00426.cs" />
+    <Compile Include="LOMCTL00427.cs" />
+    <Compile Include="LOMCTL00428.cs" />
+    <Compile Include="LOMCTL00429.cs" />
+    <Compile Include="LOMCTL00430.cs" />
+    <Compile Include="LOMCTL00431.cs" />
+    <Compile Include="LOMCTL00433.cs" />
+    <Compile Include="LOMCTL00434.cs" />
+    <Compile Include="LOMCTL00435.cs" />
+    <Compile Include="LOMCTL00436.cs" />
+    <Compile Include="LOMCTL00437.cs" />
+    <Compile Include="LOMCTL00438.cs" />
+    <Compile Include="LOMCTL00440.cs" />
+    <Compile Include="LOMCTL00441.cs" />
+    <Compile Include="LOMCTL00442.cs" />
+    <Compile Include="LOMCTL00444.cs" />
+    <Compile Include="LOMCTL00446.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Mnm\Ace.Cbs.Mnm.Ctr\Ace.Cbs.Mnm.Ctr.csproj">
+      <Project>{5793ACFC-ED60-4E4E-86F3-221487DD0C8F}</Project>
+      <Name>Ace.Cbs.Mnm.Ctr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Mnm\Ace.Cbs.Mnm.Dmd\Ace.Cbs.Mnm.Dmd.csproj">
+      <Project>{D8EA36A9-8BBC-4D2A-84C7-49BDA6006F94}</Project>
+      <Name>Ace.Cbs.Mnm.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Pfm\Ace.Cbs.Pfm.Ctr\Ace.Cbs.Pfm.Ctr.csproj">
+      <Project>{A9887BFF-9218-4612-BA0A-BA3D5E6744E1}</Project>
+      <Name>Ace.Cbs.Pfm.Ctr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Pfm\Ace.Cbs.Pfm.Dmd\Ace.Cbs.Pfm.Dmd.csproj">
+      <Project>{8F20F64D-FF47-47A3-87CA-30D8A12B5B75}</Project>
+      <Name>Ace.Cbs.Pfm.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tcm\Ace.Cbs.Tcm.Ctr\Ace.Cbs.Tcm.Ctr.csproj">
+      <Project>{77567CFC-17CF-4B2D-8502-028AA5E1019F}</Project>
+      <Name>Ace.Cbs.Tcm.Ctr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tcm\Ace.Cbs.Tcm.Dmd\Ace.Cbs.Tcm.Dmd.csproj">
+      <Project>{F4D9433A-689F-4964-857C-D3C14355A870}</Project>
+      <Name>Ace.Cbs.Tcm.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tel\Ace.Cbs.Tel.Ctr\Ace.Cbs.Tel.Ctr.csproj">
+      <Project>{E940CDA8-DE03-44C7-BF69-37EB9ACCD7C6}</Project>
+      <Name>Ace.Cbs.Tel.Ctr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tel\Ace.Cbs.Tel.Dmd\Ace.Cbs.Tel.Dmd.csproj">
+      <Project>{4AE62F74-E000-4768-90BC-DCBBB1B4C68C}</Project>
+      <Name>Ace.Cbs.Tel.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tel\Ace.Cbs.Tel.Dmd\Ace.Cbs.Tel.Dmd.csproj">
+      <Project>{4AE62F74-E000-4768-90BC-DCBBB1B4C68C}</Project>
+      <Name>Ace.Cbs.Tel.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ace.Cbs.Loan.Ctr\Ace.Cbs.Loan.Ctr.csproj">
+      <Project>{8E57EAE3-7397-490E-B276-123DAC52B728}</Project>
+      <Name>Ace.Cbs.Loan.Ctr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ace.Cbs.Loan.Dmd\Ace.Cbs.Loan.Dmd.csproj">
+      <Project>{9D836AEE-6202-4573-B5CD-EB5D6F0F50FA}</Project>
+      <Name>Ace.Cbs.Loan.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ace.Cbs.Loan.Sve\Ace.Cbs.Loan.Sve.csproj">
+      <Project>{C82405FD-E802-4B13-8353-C95619118BCE}</Project>
+      <Name>Ace.Cbs.Loan.Sve</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

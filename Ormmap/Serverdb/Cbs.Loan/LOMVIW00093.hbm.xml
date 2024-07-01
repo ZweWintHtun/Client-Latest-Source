@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00093, Ace.Cbs.Loan.Dmd" rename="vw_farmloanreport_dto"/>
+  <class name="LOMVIW00093" table="VW_FARMLOANREPORT" mutable="false">
+
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+
+    <property name="Name">
+      <column name="Name" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="FatherName">
+      <column name="FatherName" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="Lno">
+      <column name="Lno" sql-type="varchar" not-null="true"/>
+    </property>
+
+    <property name="AcctNo">
+      <column name="AcctNo" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="LoanType">
+      <column name="LoanType" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="LoanProductType">
+      <column name="LoanProductType" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="SeasonCode">
+      <column name="SeasonCode" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="SeasonDesp">
+      <column name="SeasonDesp" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="VillageCode">
+      <column name="VillageCode" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="VillageDesp">
+      <column name="VillageDesp" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="CropCode">
+      <column name="CropCode" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="CropDesp">
+      <column name="CropDesp" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="SAmt">
+      <column name="SAmt" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="ExpireDate">
+      <column name="ExpireDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="IntRate">
+      <column name="IntRate" sql-type="numeric" not-null="false" />
+    </property>
+    
+    <property name="Penalties">
+      <column name="Penalties" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="GroupNo">
+      <column name="GroupNo" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="WithdrawDate">
+      <column name="WithdrawDate" sql-type="datetime" not-null="false" />
+    </property>
+    
+    <property name="LoanAmtPerAcre">
+      <column name="LoanAmtPerAcre" sql-type="numeric" not-null="true" />
+    </property>
+    
+    <property name="TotalAcre">
+      <column name="TotalAcre" sql-type="numeric" not-null="true" />
+    </property>
+
+    <property name="Cur">
+      <column name="Cur" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="SourceBr">
+      <column name="SourceBr" sql-type="varchar" not-null="true" />
+    </property>
+        
+    <property name="Active">
+      <column name="Active" sql-type="bit" not-null="true"/>
+    </property>
+    
+  </class>
+
+  <!--//FarmLoanReportDAO.SelectAllByLoanType//-->
+  <query name="FarmLoanReportDAO.SelectAllByLoanType">
+    select new vw_farmloanreport_dto
+    (
+    b.Name,
+    b.FatherName,
+    b.Lno,
+    b.VillageDesp,
+    b.SeasonDesp,
+    b.CropDesp,
+    b.LoanProductType,
+    b.GroupNo,
+    b.WithdrawDate,
+    b.ExpireDate,
+    b.IntRate,
+    b.Penalties,
+    b.LoanAmtPerAcre,
+    b.TotalAcre,
+    b.SAmt,
+    b.SourceBr,
+    b.Cur
+    )
+    from LOMVIW00093 as b
+    where CONVERT(char(10),b.WithdrawDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and b.Cur = :cur
+    and b.SourceBr = :sourceBranchCode
+    and b.LoanType = :loanType
+    and b.Active = true
+  </query>
+
+  <!--//FarmLoanReportDAO.SelectAllByLoanTypeBySeasonType//-->
+  <query name="FarmLoanReportDAO.SelectAllByLoanTypeBySeasonType">
+    select new vw_farmloanreport_dto
+    (
+    b.Name,
+    b.FatherName,
+    b.Lno,
+    b.VillageDesp,
+    b.SeasonDesp,
+    b.CropDesp,
+    b.LoanProductType,
+    b.GroupNo,
+    b.WithdrawDate,
+    b.ExpireDate,
+    b.IntRate,
+    b.Penalties,
+    b.LoanAmtPerAcre,
+    b.TotalAcre,
+    b.SAmt,
+    b.SourceBr,
+    b.Cur
+    )
+    from LOMVIW00093 as b
+    where CONVERT(char(10),b.WithdrawDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and b.Cur = :cur
+    and b.SourceBr = :sourceBranchCode
+    and b.SeasonCode = :seasonType
+    and b.LoanType = :loanType
+    and b.Active = true
+  </query>
+
+  <!--//FarmLoanReportDAO.SelectAllByLoanTypeByCropType//-->
+  <query name="FarmLoanReportDAO.SelectAllByLoanTypeByCropType">
+    select new vw_farmloanreport_dto
+    (
+    b.Name,
+    b.FatherName,
+    b.Lno,
+    b.VillageDesp,
+    b.SeasonDesp,
+    b.CropDesp,
+    b.LoanProductType,
+    b.GroupNo,
+    b.WithdrawDate,
+    b.ExpireDate,
+    b.IntRate,
+    b.Penalties,
+    b.LoanAmtPerAcre,
+    b.TotalAcre,
+    b.SAmt,
+    b.SourceBr,
+    b.Cur
+    )
+    from LOMVIW00093 as b
+    where CONVERT(char(10),b.WithdrawDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and b.Cur = :cur
+    and b.SourceBr = :sourceBranchCode
+    and b.CropCode = :businessType
+    and b.LoanType = :loanType
+    and b.Active = true
+  </query>
+
+  <!--//FarmLoanReportDAO.SelectAll//-->
+  <query name="FarmLoanReportDAO.SelectAll">
+    select new vw_farmloanreport_dto
+    (
+    b.Name,
+    b.FatherName,
+    b.Lno,
+    b.VillageDesp,
+    b.SeasonDesp,
+    b.CropDesp,
+    b.LoanProductType,
+    b.GroupNo,
+    b.WithdrawDate,
+    b.ExpireDate,
+    b.IntRate,
+    b.Penalties,
+    b.LoanAmtPerAcre,
+    b.TotalAcre,
+    b.SAmt,
+    b.SourceBr,
+    b.Cur
+    )
+    from LOMVIW00093 as b
+    where CONVERT(char(10),b.WithdrawDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and b.Cur = :cur
+    and b.SourceBr = :sourceBranchCode
+    and b.Active = true
+  </query>
+
+  <!--//FarmLoanReportDAO.SelectAllBySeasonType//-->
+  <query name="FarmLoanReportDAO.SelectAllBySeasonType">
+    select new vw_farmloanreport_dto
+    (
+    b.Name,
+    b.FatherName,
+    b.Lno,
+    b.VillageDesp,
+    b.SeasonDesp,
+    b.CropDesp,
+    b.LoanProductType,
+    b.GroupNo,
+    b.WithdrawDate,
+    b.ExpireDate,
+    b.IntRate,
+    b.Penalties,
+    b.LoanAmtPerAcre,
+    b.TotalAcre,
+    b.SAmt,
+    b.SourceBr,
+    b.Cur
+    )
+    from LOMVIW00093 as b
+    where CONVERT(char(10),b.WithdrawDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and b.Cur = :cur
+    and b.SourceBr = :sourceBranchCode
+    and b.SeasonCode = :seasonType
+    and b.Active = true
+  </query>
+
+  <!--//FarmLoanReportDAO.SelectAllByCropType//-->
+  <query name="FarmLoanReportDAO.SelectAllByCropType">
+    select new vw_farmloanreport_dto
+    (
+    b.Name,
+    b.FatherName,
+    b.Lno,
+    b.VillageDesp,
+    b.SeasonDesp,
+    b.CropDesp,
+    b.LoanProductType,
+    b.GroupNo,
+    b.WithdrawDate,
+    b.ExpireDate,
+    b.IntRate,
+    b.Penalties,
+    b.LoanAmtPerAcre,
+    b.TotalAcre,
+    b.SAmt,
+    b.SourceBr,
+    b.Cur
+    )
+    from LOMVIW00093 as b
+    where CONVERT(char(10),b.WithdrawDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and b.Cur = :cur
+    and b.SourceBr = :sourceBranchCode
+    and b.CropCode = :businessType
+    and b.Active = true
+  </query>
+
+</hibernate-mapping>

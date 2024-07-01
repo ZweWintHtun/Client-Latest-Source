@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--VW_BANKING_CLEARING_LC Report-->
+<!-- 
+// <copyright file="TCMVIW00001.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser> Ye Mann Aung </CreatedUser>
+// <CreatedDate> 2013-12-06 </CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version>1.0</Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Tcm.Dmd" namespace="Ace.Cbs.Tcm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+	<import class="Ace.Cbs.Pfm.Dmd.PFMDTO00042, Ace.Cbs.Pfm.Dmd" rename="reporttlfdto"/>
+	<class name="TCMVIW00001" table="VW_BANKING_CLEARING_LC" mutable="false" >
+		<id name="Id" type="Int32" unsaved-value="0">
+		</id>
+
+		<property name="AccountNo">
+			<column name="ACCTNO" sql-type="varchar" not-null="false"/>
+		</property>
+		<property name="Particular">
+			<column name="PARTICULAR" sql-type="varchar" not-null="false"/>
+		</property>
+		<property name="Debit">
+			<column name="DEBIT" sql-type="numeric" not-null="false"/>
+		</property>
+		<property name="Credit">
+			<column name="CREDIT" sql-type="numeric" not-null="false"/>
+		</property>
+		<property name="Date_Time">
+			<column name="DATE_TIME" sql-type="datetime" not-null="true"/>
+		</property>
+		<property name="Eno">
+			<column name="ENO" sql-type="varchar" not-null="false"/>
+		</property>
+		<property name="SettlementDate">
+			<column name="SETTLEMENTDATE" sql-type="datetime" not-null="false"/>
+		</property>
+		<property name="Currency">
+			<column name="SOURCECUR" sql-type="varchar" not-null="false"/>
+		</property>
+		<property name="WorkStation">
+			<column name="WORKSTATION" sql-type="datetime" not-null="false"/>
+		</property>
+	</class>
+</hibernate-mapping>

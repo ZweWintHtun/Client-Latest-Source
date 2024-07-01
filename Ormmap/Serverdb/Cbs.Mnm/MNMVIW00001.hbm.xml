@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+	<import class="Ace.Cbs.Mnm.Dmd.MNMDTO00023, Ace.Cbs.Mnm.Dmd" rename="postingdto"/>
+	<class name="MNMVIW00001" table="VW_TLF_POSTING" mutable="false">
+		<id name="Id" type="Int32" unsaved-value="0">
+		</id>
+		
+		<property name="ACODE">
+			<column name="ACODE" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="Status_Letter_One">
+			<column name="Status_Letter_One" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="SOURCECUR">
+			<column name="SourceCur" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="SOURCEBR">
+			<column name="SourceBr" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="WorkStation">
+			<column name="WorkStation" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="DATE_TIME">
+			<column name="DATE_TIME" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="CheckTime">
+			<column name="ChkTime" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="LocalAmt">
+			<column name="LocalAmt" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="HomeAmt">
+			<column name="HomeAmt" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LocalOAmt">
+			<column name="LocalOAmt" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="HomeOAmt">
+			<column name="HomeOAmt" sql-type="numeric" not-null="false" />
+		</property>
+		
+		<property name="Clearing_Amount">
+			<column name="Clearing_Amount" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="Clearing_HomeAmount">
+			<column name="Clearing_HomeAmount" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="Cash_LocalAmt">
+			<column name="Cash_LocalAmt" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="Cash_HomeAmt">
+			<column name="Cash_HomeAmt" sql-type="numeric" not-null="false" />
+		</property>
+
+	</class>
+	<query name="VW_SelectAll">
+    select new postingdto
+    (
+    p.ACODE,
+    p.Status_Letter_One,
+    p.SOURCECUR,
+    sum(p.LocalAmt) as LocalAmt,
+    sum(p.HomeAmt) as HomeAmt,
+    sum(p.LocalOAmt) as LocalOAmt,
+    sum(p.HomeOAmt) as HomeOAmt,
+    sum(p.Clearing_Amount) as Clearing_Amount,
+    sum(p.Clearing_HomeAmount) as Clearing_HomeAmount,
+    sum(p.Cash_LocalAmt) as Cash_LocalAmt,
+    sum(p.Cash_HomeAmt) as Cash_HomeAmt,
+    p.SOURCEBR
+    )
+    from  MNMVIW00001 as p
+    where convert(char(10),p.DATE_TIME,111) between convert(char(10),:startdate,111) and convert(char(10),:enddate,111)
+    and p.SOURCEBR=:sourceBr
+    and p.WorkStation=:workStation
+    <!--and p.CheckTime is not null and p.WorkStation=:workStation-->
+		Group By p.ACODE,p.Status_Letter_One,p.SOURCECUR,p.SOURCEBR
+	</query>
+	</hibernate-mapping>

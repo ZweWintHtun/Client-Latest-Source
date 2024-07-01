@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Windows.Ix.DataModel" namespace="Ace.Windows.Ix.DataModel" xmlns="urn:nhibernate-mapping-2.2">
+
+<import class="Ace.Windows.Ix.Core.DataModel.ClientDataVersionDTO, Ace.Windows.Ix.Core" rename="clientDataVersionDTO"/>	
+  <import class="Ace.Cbs.Cen.Dto.CENDTO00008, Ace.Cbs.Cen.Dto" rename="cendto08"/>
+	
+  <class name="ClientDataVersion" table="[ClientDataVersion]" >
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+    <property name="ORMName">
+      <column name="ORMName" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="DataIdValue">
+      <column name="DataIdValue" sql-type="varchar" not-null="true" />
+    </property>   
+    <property name="ChangeDataContents">
+      <column name="ChangeDataContents" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="ActionStatus">
+      <column name="ActionStatus" sql-type="int" not-null="true" />
+    </property>
+    <property name="IsDefinedVersion" >
+      <column name="IsDefinedVersion" sql-type="bit" not-null="true" default="0" />
+    </property>
+    
+    <property name="Active" not-null="true" />
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+    
+    <many-to-one name="ClientDataEntity" column="[ORMName]" class="ClientDataEntity" insert="false" update="false"></many-to-one>
+    <many-to-one name="CreatedUser" column="[CreatedUserId]" class="Ace.Windows.Admin.DataModel.User" insert="false" update="false"></many-to-one>
+    <many-to-one name="UpdatedUser" column="[UpdatedUserId]" class="Ace.Windows.Admin.DataModel.User" insert="false" update="false"></many-to-one>
+  </class>
+
+  <!--ClientDataVersionDAO.SelectUndefineDataVersionForEdit-->
+  <query name="ClientDataVersionDAO.SelectUndefineDataVersion">
+    select new cendto08(
+    dv.Id,
+    ce.ORMDescription,
+    dv.DataIdValue,
+    case
+    when dv.ActionStatus = 1 then 'Insert'
+    when dv.ActionStatus = 2 then 'Update'
+    when dv.ActionStatus = 3 then 'Delete' end,
+    case when dv.UpdatedUserId is null then cu.UserName else uu.UserName end,
+    case when dv.UpdatedDate is null then dv.CreatedDate else dv.UpdatedDate end,
+    dv.ChangeDataContents,
+    dv.IsDefinedVersion,
+    dv.TS)
+    from ClientDataVersion as dv
+    inner join dv.ClientDataEntity as ce with ce.Active = true
+    inner join dv.CreatedUser as cu with cu.Active = true
+    left join dv.UpdatedUser as uu with uu.Active = true
+    where dv.IsDefinedVersion = false and dv.Active = true
+	order by dv.ORMName,dv.DataIdValue,dv.ActionStatus
+  </query>
+
+  <!--ClientDataVersionDAO.SelectDefinedDataVersionByClientDataVersionHeaderId--><!--
+  <query name="ClientDataVersionDAO.SelectDefinedDataVersionByClientDataVersionHeaderId">
+    select new cendto08(
+    dv.Id,
+    ce.ORMDescription,
+    dv.DataIdValue,
+    case
+    when dv.ActionStatus = 1 then 'Insert'
+    when dv.ActionStatus = 2 then 'Update'
+    when dv.ActionStatus = 3 then 'Delete'
+    when dv.ActionStatus = 5 then '5' end,
+    case when dv.UpdatedUserId is null then cu.UserName else uu.UserName end,
+    case when dv.UpdatedDate is null then dv.CreatedDate else dv.UpdatedDate end,
+    dv.ChangeDataContents,
+    icu.UserName,
+    dvi.CreatedDate,
+    dv.IsDefinedVersion,
+    dv.TS)
+    from ClientDataVersionItem as dvi
+    inner join dvi.ClientDataVersionHeader as dvh with dvh.Active = true
+    inner join dvi.ClientDataVersion as dv with dv.Active = true
+    inner join dv.ClientDataEntity as ce with ce.Active = true
+    inner join dv.CreatedUser as cu with cu.Active = true
+    left join dv.UpdatedUser as uu with uu.Active = true
+    inner join dvi.CreatedUser as icu with icu.Active = true
+    where dv.IsDefinedVersion = true and dvi.Active = true
+    and dvi.ClientDataVersionHeaderId = :headerid
+  </query>-->
+
+	<!--ClientDataVersionDAO.SelectDefinedDataVersionByClientDataVersionHeaderId-->
+	<query name="ClientDataVersionDAO.SelectDefinedDataVersionByClientDataVersionHeaderId">
+		select new cendto08(
+		dv.Id,
+		ce.ORMDescription,
+		dv.DataIdValue,
+		case
+		when dv.ActionStatus = 1 then 'Insert'
+		when dv.ActionStatus = 2 then 'Update'
+		when dv.ActionStatus = 3 then 'Delete'
+		when dv.ActionStatus = 5 then '5'
+		when dv.ActionStatus = 6 then '6' end,
+		case when dv.UpdatedUserId is null then cu.UserName else uu.UserName end,
+		case when dv.UpdatedDate is null then dv.CreatedDate else dv.UpdatedDate end,
+		dv.ChangeDataContents,
+		icu.UserName,
+		dvi.CreatedDate,
+		dv.IsDefinedVersion,
+		dv.TS,
+		dvi.Id,
+		dv.CreatedDate,
+		dv.CreatedUserId,
+		dvi.CreatedUserId,
+		dvi.TS,
+		dv.ORMName
+		)
+		from ClientDataVersionItem as dvi
+		inner join dvi.ClientDataVersion as dv with dv.Active = true
+		inner join dv.ClientDataEntity as ce with ce.Active = true
+		inner join dv.CreatedUser as cu with cu.Active = true
+		left join dv.UpdatedUser as uu with uu.Active = true
+		inner join dvi.CreatedUser as icu with icu.Active = true
+		where dv.IsDefinedVersion = true and dvi.Active = true
+		and dvi.ClientDataVersionHeaderId = :headerid
+	order by dv.ORMName,dv.DataIdValue,dv.ActionStatus
+	</query>
+
+  <!--ClientDataVersionDAO.UpdateIsDefinedVersionById-->
+  <query name="ClientDataVersionDAO.UpdateIsDefinedVersionById">
+    update ClientDataVersion dv
+    set
+    dv.IsDefinedVersion = :isDefinedVersion,
+    dv.UpdatedUserId = :updatedUserId,
+    dv.UpdatedDate = :updatedDate
+    where dv.Id = :id and dv.TS = :ts and dv.Active = true
+  </query>
+
+	<!--ClientDataVersionDAO.SelectByORMNameAndDataIdValueAndActionStatus-->
+	<query name="ClientDataVersionDAO.SelectByORMNameAndDataIdValueAndActionStatus">
+		select new clientDataVersionDTO
+		(cdv.Id,		
+		cdv.ChangeDataContents,
+		cdv.TS)
+		from ClientDataVersion as cdv
+		where cdv.ORMName = :ormName and
+		cdv.DataIdValue = :dataIdValue and
+		cdv.IsDefinedVersion = false and
+		cdv.Active = true and
+		cdv.ActionStatus = :actionStatus
+	</query>
+	
+
+	<!--ClientDataVersionDAO.UpdateByORMNameAndDataIdValueAndActionStatus-->
+	<query name="ClientDataVersionDAO.UpdateByORMNameAndDataIdValueAndActionStatus">
+		update ClientDataVersion cdv
+		set
+		cdv.ChangeDataContents = :changeDataContents,
+		cdv.UpdatedUserId = :updatedUserId,
+		cdv.UpdatedDate = :updatedDate
+		where cdv.Id = :id and
+		cdv.TS = :ts and
+		cdv.ActionStatus = :actionStatus and
+		cdv.ORMName = :ormName and
+		cdv.DataIdValue = :dataIdValue and
+		cdv.Active = true and
+		cdv.IsDefinedVersion = false 
+	</query>
+  <!--ClientDataVersionDAO.SelectUndefineDataVersionCount-->
+  <query name="ClientDataVersionDAO.SelectUndefineDataVersionCount">
+    select count(dv.Id)
+    from ClientDataVersion as dv
+    where dv.IsDefinedVersion = false and dv.Active = true
+  </query>
+  <!--ClientDataVersionDAO.UpdateIsDefinedVersionForSQLScriptFileById-->
+  <query name="ClientDataVersionDAO.UpdateIsActiveForSQLScriptFileById">
+    update ClientDataVersion dv
+    set
+    dv.UpdatedUserId = :updatedUserId,
+    dv.UpdatedDate = :updatedDate,
+    dv.Active = :isActive
+    where dv.Id = :id and dv.TS = :ts and dv.Active = true
+  </query>
+	
+</hibernate-mapping>

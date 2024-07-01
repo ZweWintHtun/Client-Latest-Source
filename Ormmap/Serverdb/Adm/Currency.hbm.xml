@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Windows.Admin.DataModel" namespace="Ace.Windows.Admin.DataModel" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Windows.Admin.DataModel.CurrencyDTO, Ace.Windows.Admin.DataModel" rename="curdto"/>
+  <import class="Ace.Cbs.Cx.Com.Dmd.CXDMD00013, Ace.Cbs.Cx.Com" rename="commonDTO"/>
+
+  <class name="Currency" table="[Cur]" >
+
+    <id name="Cur">
+      <column name="Cur" sql-type="varchar" not-null="true" />
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+    
+    <property name="Description">
+      <column name="Desp" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Symbol">
+      <column name="Symbol" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="FirstInWord">
+      <column name="InwordDesp1" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="SecondInWord">
+      <column name="InwordDesp2" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="IsHomeCur">
+      <column name="IsHomeCur" sql-type="bit" not-null="true" />
+    </property>
+    <property name="Month1Ammount">
+      <column name="M1" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="Month2Ammount">
+      <column name="M2" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="Month3Ammount">
+      <column name="M3" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="Month4Ammount">
+      <column name="M4" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="Month5Ammount">
+      <column name="M5" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="Month6Ammount">
+      <column name="M6" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="Month7Ammount">
+      <column name="M7" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="Month8Ammount">
+      <column name="M8" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="Month9Ammount">
+      <column name="M9" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="Month10Ammount">
+      <column name="M10" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="Month11Ammount">
+      <column name="M11" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="Month12Ammount">
+      <column name="M12" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="Month13Ammount">
+      <column name="M13" sql-type="numeric" not-null="true" />
+    </property>
+	  <property name="CodeForCOA">
+		  <column name="ACode" sql-type="varchar" not-null="false" />
+	  </property>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+  <!--Select All Currency Rate-->
+  <query name="GLMDAO00001.SelectAllCurrencyRate">
+    select new commonDTO(
+    c.Cur,
+    c.Description,
+    c.Symbol,
+    c.Month1Ammount,
+    c.Month2Ammount,
+    c.Month3Ammount,
+    c.Month4Ammount,
+    c.Month5Ammount,
+    c.Month6Ammount,
+    c.Month7Ammount,
+    c.Month8Ammount,
+    c.Month9Ammount,
+    c.Month10Ammount,
+    c.Month11Ammount,
+    c.Month12Ammount)
+    from Currency as c where c.Active = true
+  </query>
+  
+  <!--Update Currency Rate By Cur-->
+  <query name="GLMDAO00001.UpdateCurrencyRateByCur">
+    update Currency c
+    set
+    c.Month1Ammount = :month1Amount,
+    c.Month2Ammount = :month2Amount,
+    c.Month3Ammount = :month3Amount,
+    c.Month4Ammount = :month4Amount,
+    c.Month5Ammount = :month5Amount,
+    c.Month6Ammount = :month6Amount,
+    c.Month7Ammount = :month7Amount,
+    c.Month8Ammount = :month8Amount,
+    c.Month9Ammount = :month9Amount,
+    c.Month10Ammount = :month10Amount,
+    c.Month11Ammount = :month11Amount,
+    c.Month12Ammount = :month12Amount,
+    c.UpdatedUserId = :updatedUserId,
+    c.UpdatedDate = :updatedDate
+    where
+    c.Cur = :cur and c.Symbol =:symbol and c.Active = true
+  </query>
+  
+  <!--Delete Currency Rate By Cur-->
+  <query name="GLMDAO00001.DeleteCurrencyRateByCur">
+    update Currency c
+    set
+    c.Month1Ammount = 0,
+    c.Month2Ammount = 0,
+    c.Month3Ammount = 0,
+    c.Month4Ammount = 0,
+    c.Month5Ammount = 0,
+    c.Month6Ammount = 0,
+    c.Month7Ammount = 0,
+    c.Month8Ammount = 0,
+    c.Month9Ammount = 0,
+    c.Month10Ammount = 0,
+    c.Month11Ammount = 0,
+    c.Month12Ammount = 0,
+    c.UpdatedUserId = :updatedUserId,
+    c.UpdatedDate = :updatedDate
+    where
+    c.Cur = :cur and c.Symbol =:symbol and c.Active = true
+  </query>
+<!--Delete All Currency Rate-->
+  <query name="GLMDAO00001.DeleteAllCurrencyRate">
+    update Currency c
+    set
+    c.Month1Ammount = 0,
+    c.Month2Ammount = 0,
+    c.Month3Ammount = 0,
+    c.Month4Ammount = 0,
+    c.Month5Ammount = 0,
+    c.Month6Ammount = 0,
+    c.Month7Ammount = 0,
+    c.Month8Ammount = 0,
+    c.Month9Ammount = 0,
+    c.Month10Ammount = 0,
+    c.Month11Ammount = 0,
+    c.Month12Ammount = 0,
+    c.UpdatedUserId = :updatedUserId,
+    c.UpdatedDate = :updatedDate
+    where
+    c.Active = true
+  </query>
+
+  
+  
+  <!--//PORate.SelectCurrency//-->
+	<query name="PORate.SelectCurrency">
+    select new curdto(c.Cur)
+    from Currency as c where c.Active = true order by c.Cur
+  </query>
+
+	<!--//Cur.CheckExist//-->
+	<query name="CurDAO.CheckExist">
+    select new curdto( c.Cur,c.Description,c.Symbol,c.FirstInWord,c.SecondInWord,c.IsHomeCur,c.CodeForCOA )
+    from Currency as c where ( c.Cur =: cur or c.Description =: desp or c.Symbol =: symbol ) and  c.Active = true
+  </query>
+
+  <query name="CurDAO.CheckExist2">
+    select new curdto(
+    c.Cur,
+    c.Description,
+    c.Symbol,
+    c.FirstInWord,
+    c.SecondInWord,
+    c.IsHomeCur,
+    c.CodeForCOA,
+    c.Active,
+    c.TS,
+    c.CreatedDate,
+    c.CreatedUserId,
+    c.UpdatedDate,
+    c.UpdatedUserId
+    )
+    from Currency as c where ( c.Cur =: cur or c.Description =: desp )
+  </query>
+  
+	<!--//CurDAO.SelectAll//-->
+	<query name="CurDAO.SelectAll">
+    select new curdto(
+    c.Cur,
+    c.Description,
+    c.Symbol,
+    c.FirstInWord,
+    c.SecondInWord,
+    c.IsHomeCur,
+    c.CodeForCOA,
+    c.Active,
+    c.TS,
+    c.CreatedDate,
+    c.CreatedUserId,
+    c.UpdatedDate,
+    c.UpdatedUserId
+    )
+    from Currency as c
+    where c.Active = true
+  </query>
+
+	<!--//CurDAO.SelectByCur//-->
+	<query name="CurDAO.SelectByCur">
+    select new curdto(
+    c.Cur,
+    c.Description,
+    c.Symbol,
+    c.FirstInWord,
+    c.SecondInWord,
+    c.IsHomeCur,
+    c.CodeForCOA,
+    c.Active,
+    c.TS,
+    c.CreatedDate,
+    c.CreatedUserId,
+    c.UpdatedDate,
+    c.UpdatedUserId
+    )
+    from Currency as c
+    where c.Cur = :cur
+    and c.Active = true
+  </query>
+
+	<!--//CurDAO.CheckHomeCur//-->
+	<query name="CurDAO.CheckHomeCur">
+    select new curdto(
+    c.Cur,
+    c.Description,
+    c.Symbol,
+    c.FirstInWord,
+    c.SecondInWord,
+    c.IsHomeCur,
+    c.CodeForCOA,
+    c.Active,
+    c.TS,
+    c.CreatedDate,
+    c.CreatedUserId,
+    c.UpdatedDate,
+    c.UpdatedUserId
+    )
+    from Currency as c
+    where c.Active = true and c.IsHomeCur = true
+  </query>
+
+</hibernate-mapping>

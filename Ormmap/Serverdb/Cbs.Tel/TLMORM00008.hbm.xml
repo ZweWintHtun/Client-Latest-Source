@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--DEP_TLF-->
+<!-- 
+// <copyright file="TLMORM00008.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>KoKoTun</CreatedUser>
+// <CreatedDate>01/24/2014</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version></Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Tel.Dmd" namespace="Ace.Cbs.Tel.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Tel.Dmd.TLMDTO00008, Ace.Cbs.Tel.Dmd" rename="dep_tlfdto"/>
+  <class name="TLMORM00008" table="DEP_TLF">
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <!--<generator class="hilo">
+        <param name="table">ID_GEN</param>
+        <param name="column">NextHi</param>
+        <param name="where">TableName='DEP_TLF_Gen'</param>
+        <param name="max_lo">1</param>
+      </generator>-->
+      <generator class="increment">
+      </generator>
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+
+    <property name="ENO">
+      <column name="ENO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="DepositCode">
+      <column name="DEPCODE" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="AccountNo">
+      <column name="ACCTNO" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="NAME">
+      <column name="NAME" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Quantity">
+      <column name="QTY" sql-type="numeric" not-null="true" />
+    </property>
+
+    <property name="AMOUNT">
+      <column name="AMOUNT" sql-type="numeric" not-null="true" />
+    </property>
+
+    <property name="QUOTANO">
+      <column name="QUOTANO" sql-type="numeric" not-null="true" />
+    </property>
+
+    <property name="DATE_TIME">
+      <column name="DATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="STATUS">
+      <column name="STATUS" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="UID">
+      <column name="UID" sql-type="uniqueidentifier" not-null="true" />
+    </property>
+
+    <property name="SourceBranchCode">
+      <column name="SOURCEBR" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="CurrencyCode">
+      <column name="CUR" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="RATE">
+      <column name="RATE" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="SETTLEMENTDATE">
+      <column name="SETTLEMENTDATE" sql-type="datetime" not-null="false" />
+    </property>
+
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  <!--//DEP_TLF.CheckExist//--><!--
+  <query name="DEP_TLFDAO.CheckExist">
+    select new TLMDTO00008( d.Id,d.ENO,d.DepositCode,d.AccountNo,d.NAME,d.Quantity,d.AMOUNT,d.QUOTANO,d.DATE_TIME,d.STATUS,d.UID,d.SourceBranchCode,d.CurrencyCode,d.RATE,d.SETTLEMENTDATE )
+    from TLMORM00008 as d where ( d.ENO =: eNO or d.DepositCode =: dEPCODE or d.AccountNo =: aCCTNO or d.NAME =: nAME or d.Quantity =: qUANTITY or d.AMOUNT =: aMOUNT or d.QUOTANO =: qUOTANO or d.UID =: uID  ) and  d.Active = true
+  </query>
+
+  --><!--//DEP_TLFDAO.SelectAll//--><!--
+  <query name="DEP_TLFDAO.SelectAll">
+    select new TLMDTO00008(
+    d.Id,
+    d.ENO,
+    d.DepositCode,
+    d.AccountNo,
+    d.NAME,
+    d.Quantity,
+    d.AMOUNT,
+    d.QUOTANO,
+    d.DATE_TIME,
+    d.STATUS,
+    d.UID,
+    d.SourceBranchCode,
+    d.CurrencyCode,
+    d.RATE,
+    d.SETTLEMENTDATE,
+    d.Active,
+    d.TS,
+    d.CreatedDate,
+    d.CreatedUserId,
+    d.UpdatedDate,
+    d.UpdatedUserId
+    )
+    from TLMORM00008 as d
+    where d.Active = true
+  </query>
+
+  --><!--//DEP_TLFDAO.SelectById//--><!--
+  <query name="DEP_TLFDAO.SelectById">
+    select new TLMDTO00008(
+    d.Id,
+    d.ENO,
+    d.DepositCode,
+    d.AccountNo,
+    d.NAME,
+    d.Quantity,
+    d.AMOUNT,
+    d.QUOTANO,
+    d.DATE_TIME,
+    d.STATUS,
+    d.UID,
+    d.SourceBranchCode,
+    d.CurrencyCode,
+    d.RATE,
+    d.SETTLEMENTDATE,
+    d.Active,
+    d.TS,
+    d.CreatedDate,
+    d.CreatedUserId,
+    d.UpdatedDate,
+    d.UpdatedUserId
+    )
+    from TLMORM00008 as d
+    where d.Id = :id
+    and d.Active = true
+  </query>-->
+
+
+</hibernate-mapping>

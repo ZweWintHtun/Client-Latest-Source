@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00006, Ace.Cbs.Pfm.Dmd" rename="chequedto"/>
+
+  <class name="PFMORM00006" table="[Cheque]" >
+
+	  <id name="Id" type="Int32" unsaved-value="0">
+		  <generator class="increment">
+		  </generator>
+	  </id>
+
+	  <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+		  <column name="TS" sql-type="timestamp" not-null="false"/>
+	  </version>
+	  
+	<property name="ChequeBookNo">
+		<column name="CBookNo" sql-type="varchar" not-null="true" />
+   </property>
+	  
+    <property name="AccountSign">
+      <column name="ACSign" sql-type="varchar" not-null="true" />
+    </property>
+    
+    <property name="StartNo">
+      <column name="StartNo" sql-type="varchar" not-null="true" />
+    </property>
+    
+    <property name="EndNo">
+      <column name="EndNo" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="CloseDate">
+      <column name="CloseDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="IssueDate">
+      <column name="Idate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="UserNo">
+      <column name="UserNo" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <!--RelationShip-->    
+    
+	  <property name="CurrencyCode">
+		  <column name="Cur" sql-type="varchar" not-null="true" />
+	  </property>
+
+	  <many-to-one name="Currency" column="[Cur]" class="Ace.Windows.Admin.DataModel.Currency" insert="false" update="false"></many-to-one>
+
+	  <property name="AccountNo">
+		  <column name="Acctno" sql-type="varchar" not-null="true" />
+	  </property>
+
+	  <many-to-one name="Cledger" column="[Acctno]" class="PFMORM00028" insert="false" update="false"></many-to-one>
+
+	  <property name="SourceBranchCode">
+		  <column name="SourceBr" sql-type="varchar" not-null="true" />
+	  </property>
+
+	  <many-to-one name="Branch" column="[SourceBr]" class="Ace.Windows.Admin.DataModel.Branch, Ace.Windows.Admin.DataModel" insert="false" update="false"></many-to-one>
+
+	<!--Supportfields-->
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+	
+	<query name="CXDAO00006.Cheque.SelectCountByAccountNoAndChequeBookNoAndStartNoAndEndNo">
+		select count(cheque.ChequeBookNo)
+		from PFMORM00006 as cheque
+		where
+		cheque.AccountNo = :accountNo and
+		cheque.ChequeBookNo = :chequeBookNo and
+		cheque.SourceBranchCode = :branchCode and
+		:startNo between cheque.StartNo and cheque.EndNo and
+		:endNo between cheque.StartNo and cheque.EndNo and
+		cheque.CurrencyCode= :currency and
+		cheque.Active = true
+	</query>
+
+  <query name="CXDAO00006.Cheque.SelectCountByAccountNoAndChequeNo">
+    select count(cheque.ChequeBookNo)
+    from PFMORM00006 as cheque
+    where
+    cheque.AccountNo = :accountNo and
+    :chequeNo between cheque.StartNo and cheque.EndNo and
+    cheque.SourceBranchCode = :branchCode and
+    cheque.Active = true
+  </query>
+
+  <query name="CXDAO00006.CheckStartChequeNo">
+    select new chequedto
+    (
+    cheque.AccountNo,
+    cheque.ChequeBookNo,
+    cheque.StartNo,
+    cheque.EndNo
+    )
+    from PFMORM00006 as cheque
+    where
+    cheque.AccountNo = :accountNo and
+    cheque.ChequeBookNo = :chequeBookNo and
+    :chequeNo between cheque.StartNo and cheque.EndNo and
+    cheque.SourceBranchCode = :branchCode and
+    cheque.Active = true
+  </query>
+
+  <query name="PFMDAO00006.CheckStartChequeNo">
+    select new chequedto
+    (
+    cheque.AccountNo,
+    cheque.ChequeBookNo,
+    cheque.StartNo,
+    cheque.EndNo
+    )
+    from PFMORM00006 as cheque
+    where
+    cheque.AccountNo = :accountNo and
+    :chequeNo between cheque.StartNo and cheque.EndNo and
+    cheque.SourceBranchCode = :branchCode and
+    cheque.Active = true
+  </query>
+
+  <query name="CXDAO00006.CheckEndChequeNo">
+    select new chequedto
+    (
+    cheque.AccountNo,
+    cheque.ChequeBookNo,
+    cheque.StartNo,
+    cheque.EndNo
+    )
+    from PFMORM00006 as cheque
+    where
+    cheque.AccountNo = :accountNo and
+    cheque.ChequeBookNo = :chequeBookNo and
+    :chequeNo between cheque.StartNo and cheque.EndNo and
+    cheque.SourceBranchCode = :branchCode and
+    cheque.Active = true
+  </query>
+  
+  <query name="CXDAO00006.Cheque.SelectCountByChequeBookNoAndStartNoAndEndNo">
+	  select count(cheque.ChequeBookNo)
+	  from PFMORM00006 as cheque
+	  where
+	  (cheque.ChequeBookNo = :chequeBookNo and
+	  :startNo between cheque.StartNo and cheque.EndNo and
+	  :endNo between cheque.StartNo and cheque.EndNo) and
+	  cheque.SourceBranchCode = :branchCode and
+	  cheque.CurrencyCode = :currency and
+	  cheque.Active = true
+  </query>
+
+  <query name="CXDAO00006.Cheque.SelectCountByChequeBookNoAndSourceBr">
+	  select count(cheque.ChequeBookNo)
+	  from PFMORM00006 as cheque
+	  where
+	  cheque.ChequeBookNo = :chequeBookNo and
+	  cheque.SourceBranchCode = :branchCode and
+	  cheque.CurrencyCode = :currency and 
+	  cheque.Active = true
+  </query>
+	
+  <!--//PFMDAO00006.SelectByChequeBookNo//-->
+  <!--<query name="PFMDAO00006.SelectByChequeBookNo">
+    select new chequedto
+    (
+    cq.ChequeBookNo,
+    cq.StartNo,
+    cq.EndNo
+    )
+    from PFMORM00006 as cq where cq.ChequeBookNo=:ChequeBookNo
+
+  </query>-->
+
+  <!--//PFMDAO00006.SelectByStartNoAndEndNo//--><!--
+  <query name="PFMDAO00006.SelectByStartNoandEndNo">
+    select new chequedto(
+    c.StartNo,
+    c.EndNo)
+    from PFMORM00006 as c
+    where c.StartNo = :StartNo and
+    c.EndNo = :EndNo
+  </query>-->
+
+	<!--//PFMDAO00006.SelectByChequeBookNo//-->
+	<query name="PFMDAO00006.SelectStartNoandEndNoByAcctno">
+		select new chequedto
+		(
+		cq.StartNo,
+		cq.EndNo
+		)
+		from PFMORM00006 as cq
+		where cq.AccountNo = :accountNo
+        and cq.Active = true
+	</query>
+
+	<!--//PFMDAO00006.SelectByChequeBookNoByAccountNo//-->
+	<query name="PFMDAO00006.SelectByChequeBookNoByAccountNo">
+		select new chequedto
+		(
+		cq.ChequeBookNo,
+		cq.StartNo,
+		cq.EndNo
+		)
+		from PFMORM00006 as cq
+		where cq.AccountNo = :accountNo
+		and cq.Active = true
+	</query>
+
+
+	<query name="PFMDAO00006.UpdateCloseDate">
+		update PFMORM00006 as cheque set
+		cheque.CloseDate = :closeDate,
+		cheque.UpdatedDate = :updatedDate,
+		cheque.UpdatedUserId = :updatedUserId
+		where cheque.AccountNo = :accountNo
+		and cheque.Active = true
+	</query>
+
+
+	<!--//PFMDAO00006.SelectStartNoAndEndNoByChequeBookNo//-->
+	<query name="PFMDAO00006.SelectStartNoAndEndNoByChequeBookNo">
+		select new chequedto(cheque.AccountNo,cheque.ChequeBookNo,cheque.StartNo,cheque.EndNo,cheque.CurrencyCode)
+		from PFMORM00006 as cheque
+		where cheque.AccountNo = :accountNo and
+		cheque.ChequeBookNo = :chequeBookNo
+		and cheque.Active = true
+	</query>
+
+	<!-- PFMDAO00006.Select.ChequeInfoByChequeBookNo-->
+	<query name="PFMDAO00006.Select.ChequeInfoByChequeBookNo">
+    select new chequedto
+    (
+    cq.AccountNo,
+    cq.IssueDate,
+    cq.ChequeBookNo,
+    cq.StartNo,
+    cq.EndNo,
+    cq.CloseDate,
+    cq.Active
+    )
+    from PFMORM00006 as cq
+    where cq.ChequeBookNo = :chequebookno
+    and cq.SourceBranchCode = :branchCode
+    and cq.Active=true
+
+  </query>
+
+	<!-- TLMDAO00001.UpdateReInfo-->
+
+	<query name="PFMDAO00006.UpdateChequeInfoByChequeBookNo">
+
+    update PFMORM00006 cheque
+    set
+    cheque.ChequeBookNo = :chequebookno,
+    cheque.StartNo = :startno,
+    cheque.EndNo = :endno,
+    cheque.UpdatedUserId = :updatedUserId,
+    cheque.UpdatedDate = :updatedDate
+    where cheque.ChequeBookNo = :chequebookno
+    and cheque.Active = true and cheque.SourceBranchCode=:sourcebr
+  </query>
+
+	<!-- PFMDAO00006.SelectIssuedChequeByDate-->
+	<query name="PFMDAO00006.SelectIssuedChequeByDate">
+    select new chequedto
+    (
+    cq.AccountNo,
+    cq.IssueDate,
+    cq.ChequeBookNo,
+    cq.StartNo,
+    cq.EndNo,
+    cq.Active
+    )
+    from PFMORM00006 as cq
+    where convert(char(10),cq.IssueDate,111) between convert(char(10),:startDate,111) and convert(char(10),:endDate,111)
+    and cq.SourceBranchCode = :branch
+    and cq.Active=true
+    order by cq.IssueDate
+
+  </query>
+
+	<!-- PFMDAO00006.SelectIssuedChequeByAccount-->
+	<query name="PFMDAO00006.SelectIssuedChequeByAccount">
+    select new chequedto
+    (
+    cq.AccountNo,
+    cq.IssueDate,
+    cq.ChequeBookNo,
+    cq.StartNo,
+    cq.EndNo,
+    cq.Active
+    )
+    from PFMORM00006 as cq
+    where cq.AccountNo=:accountNo
+    and cq.SourceBranchCode = :branch
+    and cq.Active=true
+    order by cq.IssueDate
+
+  </query>
+
+</hibernate-mapping>

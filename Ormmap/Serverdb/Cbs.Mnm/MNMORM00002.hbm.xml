@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--PREV_PO-->
+<!-- 
+// <copyright file="MNMORM00002.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>KoKoTun</CreatedUser>
+// <CreatedDate>11/15/2013</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version></Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Mnm.Dmd.MNMDTO00002, Ace.Cbs.Mnm.Dmd" rename="MNMDTO00002"/>
+  <class name="MNMORM00002" table="PREV_PO">
+
+	  <id name="PONo">
+		  <column name="PONo" sql-type="varchar" not-null="true" />
+	  </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+
+    <property name="AMOUNT">
+      <column name="AMOUNT" sql-type="AMOUNT" not-null="false" />
+    </property>
+
+    <property name="ACCTNO">
+      <column name="ACCTNO" sql-type="ACCTNO" not-null="false" />
+    </property>
+
+    <property name="ADATE">
+      <column name="ADATE" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="IDATE">
+      <column name="IDATE" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="STATUS">
+      <column name="STATUS" sql-type="char" not-null="false" />
+    </property>
+
+    <property name="TOACCTNO">
+      <column name="TOACCTNO" sql-type="ACCTNO" not-null="false" />
+    </property>
+
+    <property name="CHECKNO">
+      <column name="CHECKNO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="INCOME">
+      <column name="INCOME" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="USERNO">
+      <column name="USERNO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="ACSIGN">
+      <column name="ACSIGN" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="CHARGES">
+      <column name="CHARGES" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="ACODE">
+      <column name="ACODE" sql-type="char" not-null="false" />
+    </property>
+
+    <property name="BUDGET">
+      <column name="BUDGET" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="UID">
+      <column name="UID" sql-type="uniqueidentifier" not-null="false" />
+    </property>
+
+    <property name="SOURCEBR">
+      <column name="SOURCEBR" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="CUR">
+      <column name="CUR" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="RATE">
+      <column name="RATE" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="SETTLEMENTDATE">
+      <column name="SETTLEMENTDATE" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="REFUNDSDATE">
+      <column name="REFUNDSDATE" sql-type="datetime" not-null="false" />
+    </property>
+
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+</hibernate-mapping>

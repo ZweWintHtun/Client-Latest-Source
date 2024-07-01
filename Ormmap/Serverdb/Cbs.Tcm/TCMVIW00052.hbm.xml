@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<hibernate-mapping assembly="Ace.Cbs.Tcm.Dmd" namespace="Ace.Cbs.Tcm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Tcm.Dmd.TCMDTO00052, Ace.Cbs.Tcm.Dmd" rename="TCMDTO00052"/>
+  <class name="TCMVIW00052" table="MODIFY_DAILYREPORT_VW" mutable="false"> 
+
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+
+    <property name="Cur">
+      <column name="Cur" sql-type="string" not-null="true" />
+    </property>
+
+    <property name="ReceiptCash">
+      <column name="ReceiptCash" sql-type="decimal" not-null="true" />
+    </property>
+
+    <property name="ReceiptCashVou">
+      <column name="ReceiptCashVou" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="ReceiptTransfer">
+      <column name="ReceiptTransfer" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="ReceiptTransferVou">
+      <column name="ReceiptTransferVou" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="ReceiptClearing">
+      <column name="ReceiptClearing" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="ReceiptClearingVou">
+      <column name="ReceiptClearingVou" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="PaymentCash">
+      <column name="PaymentCash" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="PaymentCashVou">
+      <column name="PaymentCashVou" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="PaymentTransfer">
+      <column name="PaymentTransfer" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="PaymentTransferVou">
+      <column name="PaymentTransferVou" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="PaymentClearing">
+      <column name="PaymentClearing" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="PaymentClearingVou">
+      <column name="PaymentClearingVou" sql-type="decimal" not-null="true" />
+    </property>
+
+    <property name="DrawingCash">
+      <column name="DrawingCash" sql-type="decimal" not-null="true" />
+    </property>
+
+    <property name="DrawingCashVou">
+      <column name="DrawingCashVou" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="DrawingTransfer">
+      <column name="DrawingTransfer" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="DrawingTransferVou">
+      <column name="DrawingTransferVou" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="EncashCash">
+      <column name="EncashCash" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="EncashCashVou">
+      <column name="EncashCashVou" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="EncashTransfer">
+      <column name="EncashTransfer" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="EncashTransferVou">
+      <column name="EncashTransferVou" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CashInHand">
+      <column name="CashInHand" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CashWithCBM">
+      <column name="CashWithCBM" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="ACWithOthBank">
+      <column name="ACWithOthBank" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CurOpened">
+      <column name="CurOpened" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CurClosed">
+      <column name="CurClosed" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CurTotal">
+      <column name="CurTotal" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CurOBal">
+      <column name="CurOBal" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CurDep">
+      <column name="CurDep" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CurWith">
+      <column name="CurWith" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="SavOpened">
+      <column name="SavOpened" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="SavClosed">
+      <column name="SavClosed" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="SavTotal">
+      <column name="SavTotal" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="SavOBal">
+      <column name="SavOBal" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="SavDep">
+      <column name="SavDep" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="SavWith">
+      <column name="SavWith" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CalOpened">
+      <column name="CalOpened" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CalClosed">
+      <column name="CalClosed" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CalTotal">
+      <column name="CalTotal" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CalOBal">
+      <column name="CalOBal" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CalDep">
+      <column name="CalDep" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CalWith">
+      <column name="CalWith" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="FixOpened">
+      <column name="FixOpened" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="FixClosed">
+      <column name="FixClosed" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="FixTotal">
+      <column name="FixTotal" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="FixOBal">
+      <column name="FixOBal" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="FixDep">
+      <column name="FixDep" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="FixWith">
+      <column name="FixWith" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="Date_Time">
+      <column name="Date_Time" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="D1_OTHERLOAN">
+      <column name="D1_OTHERLOAN" sql-type="string" not-null="false" />
+    </property>
+
+    <property name="D1_CNGLOAN">
+      <column name="D1_CNGLOAN" sql-type="string" not-null="false" />
+    </property>
+    
+    <property name="D1_OD">
+      <column name="D1_OD" sql-type="string" not-null="false" />
+    </property>
+    
+    <property name="D1_STAFFLOAN">
+      <column name="D1_STAFFLOAN" sql-type="string" not-null="false" />
+    </property>
+    
+    <property name="B_OTHERLOAN">
+      <column name="B_OTHERLOAN" sql-type="int" not-null="false" />
+    </property>
+    
+    <property name="B_CNGLOAN">
+      <column name="B_CNGLOAN" sql-type="int" not-null="false" />
+    </property>
+    
+    <property name="B_OD">
+      <column name="B_OD" sql-type="int" not-null="false" />
+    </property>
+    
+    <property name="B_STAFFLOAN">
+      <column name="B_STAFFLOAN" sql-type="int" not-null="false" />
+    </property>
+    
+    <property name="R_0_OTHERLOAN">
+      <column name="R_0_OTHERLOAN" sql-type="decimal" not-null="false" />
+    </property>
+    
+    <property name="R_0_CNGLOAN">
+      <column name="R_0_CNGLOAN" sql-type="decimal" not-null="false" />
+    </property>
+    
+    <property name="R_0_OD">
+      <column name="R_0_OD" sql-type="decimal" not-null="false" />
+    </property>
+    
+    <property name="R_0_STAFFLOAN">
+      <column name="R_0_STAFFLOAN" sql-type="decimal" not-null="false" />
+    </property>
+    
+    <property name="R_1_OTHERLOAN">
+      <column name="R_1_OTHERLOAN" sql-type="decimal" not-null="false" />
+    </property>
+    
+    <property name="R_1_CNGLOAN">
+      <column name="R_1_CNGLOAN" sql-type="decimal" not-null="false" />
+    </property>
+    
+    <property name="R_1_OD">
+      <column name="R_1_OD" sql-type="decimal" not-null="false" />
+    </property>
+    
+    <property name="R_1_STAFFLOAN">
+      <column name="R_1_STAFFLOAN" sql-type="decimal" not-null="false" />
+    </property>
+    
+    <property name="R_2_OTHERLOAN">
+      <column name="R_2_OTHERLOAN" sql-type="decimal" not-null="false" />
+    </property>
+    
+    <property name="R_2_CNGLOAN">
+      <column name="R_2_CNGLOAN" sql-type="decimal" not-null="false" />
+    </property>
+    
+    <property name="R_2_OD">
+      <column name="R_2_OD" sql-type="decimal" not-null="false" />
+    </property>
+    
+    <property name="R_2_STAFFLOAN">
+      <column name="R_2_STAFFLOAN" sql-type="decimal" not-null="false" />
+    </property>
+    
+    <property name="A1_OUTSTANDING">
+      <column name="A1_OUTSTANDING" sql-type="decimal" not-null="false" />
+    </property>
+    
+    <property name="A2_CNGLOAN">
+      <column name="A2_CNGLOAN" sql-type="decimal" not-null="false" />
+    </property>
+    
+    <property name="A3_OD">
+      <column name="A3_OD" sql-type="decimal" not-null="false" />
+    </property>
+    
+    <property name="A4_OUTSTANDING">
+      <column name="A4_OUTSTANDING" sql-type="decimal" not-null="false" />
+    </property>  
+
+  </class>
+
+  <!--<query name="TCMVIW00052.Update">
+    Update TCMVIW00052
+    Set
+    Date_Time =:datetime,
+    UpdatedDate=:updatedDate,
+    UpdatedUserId=:updatedUserId
+    where Active = true
+  </query>-->
+
+</hibernate-mapping>

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+	<import class="Ace.Cbs.Pfm.Dmd.PFMDTO00051, Ace.Cbs.Pfm.Dmd" rename="formatdto"/>
+	<class name="PFMORM00051" table="[Format]" >
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="false"/>
+		</version>
+
+		<property name="Code">
+			<column name="Code" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="Description">
+			<column name="Description " sql-type="nvarchar" not-null="true" />
+		</property>
+		<property name="CodeFormat">
+			<column name="CodeFormat" sql-type="int" not-null="false" />
+		</property>
+
+		<bag name="FormatDefinitions" inverse="true" lazy="true" cascade="all">
+			<key column="FormatId" />
+			<one-to-many class="PFMORM00052" />
+		</bag>
+
+		<property name="Active" not-null="true" />
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+
+	</class>
+
+	<!--//Format.CheckExist//-->
+	<query name="FormatDAO.CheckExist">
+		select new formatdto
+		( f.Id,
+		f.Code,
+		f.Description,
+		f.CodeFormat )
+		from PFMORM00051 as f
+		where (f.Code =: code or f.Description =: description)
+		and  f.Active = true
+	</query>
+
+	<!--//FormatDAO.SelectAll//-->
+	<query name="FormatDAO.SelectAll">
+		select new formatdto(
+		f.Id,
+		f.Code,
+		f.Description,
+		f.CodeFormat,
+		f.Active,
+		f.TS,
+		f.CreatedDate,
+		f.CreatedUserId,
+		f.UpdatedDate,
+		f.UpdatedUserId
+		)
+		from PFMORM00051 as f
+		where f.Active = true
+	</query>
+
+	<!--//FormatDAO.SelectById//-->
+	<query name="FormatDAO.SelectById">
+		select new formatdto(
+		f.Id,
+		f.Code,
+		f.Description,
+		f.CodeFormat,
+		f.Active,
+		f.TS,
+		f.CreatedDate,
+		f.CreatedUserId,
+		f.UpdatedDate,
+		f.UpdatedUserId
+		)
+		from PFMORM00051 as f
+		where f.Id = :id
+		and f.Active = true
+	</query>
+
+</hibernate-mapping>

@@ -1,0 +1,2063 @@
+﻿<?xml version="1.0" encoding="utf-8"?> 
+<!--Store Procedure of Database-->
+<!-- 
+// <copyright file="ViewList.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>♠ Ye Mann Aung ♠</CreatedUser>
+// <CreatedDate>2013-09-21</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version>1.0</Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Tel.Dmd" namespace="Ace.Cbs.Tel.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+	<!--REGION Import Classes-->
+	<import class="Ace.Cbs.Pfm.Dmd.PFMDTO00054, Ace.Cbs.Pfm.Dmd" rename="tlfdto"/>
+	<import class="Ace.Cbs.Tel.Dmd.TLMDTO00009, Ace.Cbs.Tel.Dmd" rename="depodenodto"/>
+	<import class="Ace.Cbs.Tel.Dmd.TLMDTO00004, Ace.Cbs.Tel.Dmd" rename="ibldto"/>
+	<import class="Ace.Cbs.Tel.Dmd.TLMDTO00037, Ace.Cbs.Tel.Dmd" rename="branchkeydto"/>
+	<import class="Ace.Cbs.Pfm.Dmd.PFMDTO00033, Ace.Cbs.Pfm.Dmd" rename="baldto"/>
+	<import class="Ace.Cbs.Tel.Dmd.TLMDTO00017, Ace.Cbs.Tel.Dmd" rename="rddto"/>
+	<import class="Ace.Cbs.Pfm.Dmd.PFMDTO00042, Ace.Cbs.Pfm.Dmd" rename="reportgeneratedto"/>
+	<import class="Ace.Cbs.Tel.Dmd.TLMDTO00058, Ace.Cbs.Tel.Dmd" rename="daybookdto"/>
+	<import class="Ace.Cbs.Tel.Dmd.TLMDTO00001, Ace.Cbs.Tel.Dmd" rename="redto"/>
+	<import class="Ace.Cbs.Tel.Dmd.TLMDTO00016, Ace.Cbs.Tel.Dmd" rename="podto"/>
+    <import class="Ace.Cbs.Mnm.Dmd.MNMDTO00037, Ace.Cbs.Mnm.Dmd" rename="ClosedAccountDTO"/>
+    <import class="Ace.Cbs.Mnm.Dmd.MNMDTO00039, Ace.Cbs.Mnm.Dmd" rename="custIDByDateDTO"/>
+    <import class="Ace.Cbs.Mnm.Dmd.MNMDTO00040, Ace.Cbs.Mnm.Dmd" rename="LedgerBalanceByGradeDTO"/>
+    <import class="Ace.Cbs.Tcm.Dmd.TCMDTO00052, Ace.Cbs.Tcm.Dmd" rename="TCMDTO00052"/>
+	<import class="Ace.Cbs.Loan.Dmd.LOMDTO00013, Ace.Cbs.Loan.Dmd" rename="LegalDto"/>
+  <import class="Ace.Cbs.Sam.Dmd.SAMDTO00056,Ace.Cbs.Sam.Dmd" rename="vintratedto"/>
+ 
+
+	<!--Endregion-->
+
+	<!--REGION Query List-->
+
+	<!--REGION Teller Module -->
+	<!--REGION TLMDAO00056.SelectDenoOutstandingReport-->
+	<query name="TLMDAO00056.SelectDenoOutstandingReport">
+    select new tlfdto (vw.ENo,vw.Narration,vw.Amount,vw.Date_Time,vw.SourceCurrency,vw.SourceBranch,vw.AcctNo)
+    from TLMVIW00001 as vw
+    where vw.SourceBranch=:sourceBr
+  </query>
+	<!--Endregion-->
+
+	<!--REGION TLMDAO00009.SelectMultiTransactionalDenoOutstandingReport-->
+	<query name="TLMDAO00009.SelectMultiTransactionalDenoOutstandingReport">
+		select new depodenodto (vw.TLF_ENO,vw.Entry_NO,vw.AccountType,vw.Amount,vw.Currency,vw.SourceBranch)
+		from TLMVIW00002 as vw
+		where vw.SourceBranch=:sourceBr
+	</query>
+	<!--Endregion-->
+
+  <!--REGION PODAO.POOutstandingNormalReport-->
+  <query name="PODAO.POOutstandingNormalReport">
+    select new podto(vw.PoNo,vw.Acode,vw.ADate,vw.Amount)
+    from TLMVIW00003 as vw
+    where vw.SourceBranchCode=:SourceBranchCode
+  </query>
+
+ <!--Endregion-->
+
+	<!--Region Income Listing For Home Transaction-->
+	<query name="IncomeListingForHome.SelectByAllBranch">
+		select new ibldto(
+		ibl.FROMBRANCH,
+		ibl.TOBRANCH,
+		ibl.ACCTNO,
+		ibl.AMOUNT,
+		ibl.TRANTYPE,
+		ibl.DATE_TIME,
+		ibl.INOUT,
+		ibl.SUCCESS,
+		ibl.ENO,
+		ibl.USERNO,
+		ibl.CHEQUE,
+		ibl.INCOME,
+		ibl.COMMUCHARGE,
+		ibl.REVERSAL,
+		ibl.INCOMETYPE,
+		ibl.RELATEDAC,
+		ibl.RELATEDBRANCH,
+		ibl.SOURCEBR,
+		ibl.CURRENCY,
+		br.BranchCode,
+		br.BranchAlias,
+		br.BranchDescription
+		)
+		from TLMVIW00006 as ibl join ibl.FromBranchRelation as br
+		where
+		ibl.INCOME>0 and
+		ibl.COMMUCHARGE>0 and
+		ibl.REVERSAL = 0 and
+		SubString(ltrim(ibl.TRANTYPE), 2, 1) = 'D' and
+		ibl.TOBRANCH != :sourceBr and
+		ibl.FROMBRANCH = :sourceBr and
+		ibl.INCOMETYPE = 2 and
+		ibl.SOURCEBR= :sourceBr and
+		convert(char(10),ibl.DATE_TIME,111) between convert(char(10),:startDate,111) and convert(char(10),:endDate,111)
+	</query>
+	<!--Endregion-->
+
+	<!--Region Income Listing For Active Transaction-->
+	<query name="IncomeListingForActive.SelectByAllBranch">
+		select new ibldto(
+		ibl.FROMBRANCH,
+		ibl.TOBRANCH,
+		ibl.ACCTNO,
+		ibl.AMOUNT,
+		ibl.TRANTYPE,
+		ibl.DATE_TIME,
+		ibl.INOUT,
+		ibl.SUCCESS,
+		ibl.ENO,
+		ibl.USERNO,
+		ibl.CHEQUE,
+		ibl.INCOME,
+		ibl.COMMUCHARGE,
+		ibl.REVERSAL,
+		ibl.INCOMETYPE,
+		ibl.RELATEDAC,
+		ibl.RELATEDBRANCH,
+		ibl.SOURCEBR,
+		ibl.CURRENCY,
+		br.BranchCode,
+		br.BranchAlias,
+		br.BranchDescription
+		)
+		from TLMVIW00006 as ibl join ibl.ToBranchRelation as br
+		where
+		ibl.INCOME>0 and
+		ibl.COMMUCHARGE>0 and
+		ibl.REVERSAL = 0 and
+		ibl.FROMBRANCH = :sourceBr and
+		ibl.SOURCEBR= :sourceBr and
+		convert(char(10),ibl.DATE_TIME,111) between convert(char(10),:startDate,111) and convert(char(10),:endDate,111)
+	</query>
+	<!--Endregion-->
+
+	<!--Region OnlineTransaction Listing For Home Transaction-->
+	<query name="OnlineTransactionListingForHome.SelectByAllBranch">
+    select new ibldto(
+    ibl.FROMBRANCH,
+    ibl.TOBRANCH,
+    ibl.ACCTNO,
+    ibl.AMOUNT,
+    ibl.TRANTYPE,
+    ibl.DATE_TIME,
+    ibl.INOUT,
+    ibl.SUCCESS,
+    ibl.ENO,
+    ibl.USERNO,
+    ibl.CHEQUE,
+    ibl.INCOME,
+    ibl.COMMUCHARGE,
+    ibl.REVERSAL,
+    ibl.INCOMETYPE,
+    ibl.RELATEDAC,
+    ibl.RELATEDBRANCH,
+    ibl.SOURCEBR,
+    ibl.CURRENCY,
+    br.BranchCode,
+    br.BranchAlias,
+    br.BranchDescription
+    )
+    from TLMVIW00006 as ibl join ibl.FromBranchRelation as br
+    where ibl.SOURCEBR=:sourceBranch and
+    ibl.FROMBRANCH = :branch and
+    ibl.INOUT = 1 and
+    ibl.AMOUNT>0 and
+    ibl.TRANTYPE != 'ATL' and
+    br.Active =1 and
+    convert(char(10),ibl.DATE_TIME,111) between convert(char(10),:startDate,111) and convert(char(10),:endDate,111)
+    order by ibl.ENO,ibl.ACCTNO,ibl.AMOUNT,SubString(ltrim(ibl.TRANTYPE), 2, 1) desc
+  </query>
+	<!--Endregion-->
+
+	<!--Region OnlineTransaction Listing For Active Transaction-->
+	<query name="OnlineTransactionListingForActive.SelectByAllBranch">
+    select new ibldto(
+    ibl.FROMBRANCH,
+    ibl.TOBRANCH,
+    ibl.ACCTNO,
+    ibl.AMOUNT,
+    ibl.TRANTYPE,
+    ibl.DATE_TIME,
+    ibl.INOUT,
+    ibl.SUCCESS,
+    ibl.ENO,
+    ibl.USERNO,
+    ibl.CHEQUE,
+    ibl.INCOME,
+    ibl.COMMUCHARGE,
+    ibl.REVERSAL,
+    ibl.INCOMETYPE,
+    ibl.RELATEDAC,
+    ibl.RELATEDBRANCH,
+    ibl.SOURCEBR,
+    ibl.CURRENCY,
+    br.BranchCode,
+    br.BranchAlias,
+    br.BranchDescription
+    )
+    from TLMVIW00006 as ibl join ibl.ToBranchRelation as br
+    where ibl.TOBRANCH = :branch and
+    ibl.SOURCEBR=:sourceBranch and
+    ibl.INOUT = 0 and
+    ibl.AMOUNT>0 and
+    ibl.TRANTYPE != 'ATL' and
+    ibl.REVERSAL = 0 and
+    br.Active =1 and
+    convert(char(10),ibl.DATE_TIME,111) between convert(char(10),:startDate,111) and convert(char(10),:endDate,111)
+    order by ibl.ENO,ibl.ACCTNO,ibl.AMOUNT,SubString(ltrim(ibl.TRANTYPE), 2, 1) desc
+  </query>
+	<!--Endregion-->
+
+  <!--Region OnlineTransaction Listing For Active Transaction with ReversalCase-->
+  <query name="OnlineTransactionListingForActiveWithReversal.SelectByAllBranch">
+    select new ibldto(
+    ibl.FROMBRANCH,
+    ibl.TOBRANCH,
+    ibl.ACCTNO,
+    ibl.AMOUNT,
+    ibl.TRANTYPE,
+    ibl.DATE_TIME,
+    ibl.INOUT,
+    ibl.SUCCESS,
+    ibl.ENO,
+    ibl.USERNO,
+    ibl.CHEQUE,
+    ibl.INCOME,
+    ibl.COMMUCHARGE,
+    ibl.REVERSAL,
+    ibl.INCOMETYPE,
+    ibl.RELATEDAC,
+    ibl.RELATEDBRANCH,
+    ibl.SOURCEBR,
+    ibl.CURRENCY,
+    br.BranchCode,
+    br.BranchAlias,
+    br.BranchDescription
+    )
+    from TLMVIW00006 as ibl join ibl.ToBranchRelation as br
+    where ibl.TOBRANCH = :branch and
+    ibl.SOURCEBR=:sourceBranch and
+    ibl.INOUT = 0 and
+    ibl.AMOUNT>0 and
+    ibl.TRANTYPE != 'ATL' and ibl.TRANTYPE not like 'R%' and
+    convert(char(10),ibl.DATE_TIME,111) between convert(char(10),:startDate,111) and convert(char(10),:endDate,111)
+    order by ibl.ENO,ibl.ACCTNO,ibl.AMOUNT,SubString(ltrim(ibl.TRANTYPE), 2, 1) desc
+  </query>
+  <!--Endregion-->
+
+	<!--Region Home Transaction Listing By Branch-->
+	<query name="HomeTransactionByBranchListing">
+		select new ibldto(
+		ibl.FROMBRANCH,
+		ibl.TOBRANCH,
+		ibl.ACCTNO,
+		ibl.AMOUNT,
+		ibl.TRANTYPE,
+		ibl.DATE_TIME,
+		ibl.INOUT,
+		ibl.SUCCESS,
+		ibl.ENO,
+		ibl.USERNO,
+		ibl.CHEQUE,
+		ibl.INCOME,
+		ibl.COMMUCHARGE,
+		ibl.REVERSAL,
+		ibl.INCOMETYPE,
+		ibl.RELATEDAC,
+		ibl.RELATEDBRANCH,
+		ibl.SOURCEBR,
+		ibl.CURRENCY
+		)
+		from TLMVIW00006 as ibl
+		where convert(char(10),ibl.DATE_TIME,111) between convert(char(10),:startDate,111) and convert(char(10),:endDate,111) and
+		
+		ibl.FROMBRANCH=:branch and
+		ibl.SOURCEBR=:sourceBranch and
+		ibl.INOUT = 1
+		order by ibl.TOBRANCH asc,ibl.ACCTNO asc,ibl.ENO asc
+	</query>
+	<!--<query name="HomeTransactionByBranchListing">
+		select new ibldto(
+		ibl.FROMBRANCH,
+		ibl.TOBRANCH,
+		ibl.ACCTNO,
+		ibl.AMOUNT,
+		ibl.TRANTYPE,
+		ibl.DATE_TIME,
+		ibl.INOUT,
+		ibl.SUCCESS,
+		ibl.ENO,
+		ibl.USERNO,
+		ibl.CHEQUE,
+		ibl.INCOME,
+		ibl.COMMUCHARGE,
+		ibl.REVERSAL,
+		ibl.INCOMETYPE,
+		ibl.RELATEDAC,
+		ibl.RELATEDBRANCH,
+		ibl.SOURCEBR,
+		ibl.CURRENCY,
+		br.BranchCode,
+		br.BranchAlias,
+		br.BranchDescription
+		)
+		from TLMVIW00006 as ibl join ibl.FromBranchRelation as br
+		where ibl.FROMBRANCH = br.BranchCode and
+		ibl.INOUT = 1 and
+		convert(char(10),ibl.DATE_TIME,111) between convert(char(10),:startDate,111) and convert(char(10),:endDate,111)
+		order by ibl.TOBRANCH asc,ibl.ACCTNO asc,ibl.ENO asc
+	</query>-->
+	<!--Endregion-->
+
+	<!--Region Active Transaction Listing By Branch-->
+	<query name="ActiveTransactionByBranchListing">
+		select new ibldto(
+		ibl.FROMBRANCH,
+		ibl.TOBRANCH,
+		ibl.ACCTNO,
+		ibl.AMOUNT,
+		ibl.TRANTYPE,
+		ibl.DATE_TIME,
+		ibl.INOUT,
+		ibl.SUCCESS,
+		ibl.ENO,
+		ibl.USERNO,
+		ibl.CHEQUE,
+		ibl.INCOME,
+		ibl.COMMUCHARGE,
+		ibl.REVERSAL,
+		ibl.INCOMETYPE,
+		ibl.RELATEDAC,
+		ibl.RELATEDBRANCH,
+		ibl.SOURCEBR,
+		ibl.CURRENCY
+		)
+		from TLMVIW00006 as ibl
+		where convert(char(10),ibl.DATE_TIME,111) between convert(char(10),:startDate,111) and convert(char(10),:endDate,111) and
+		
+		ibl.TOBRANCH = :branch and
+		ibl.SOURCEBR=:sourceBranch and
+		ibl.INOUT = 0
+		order by ibl.TOBRANCH asc,ibl.ACCTNO asc,ibl.ENO asc
+	</query>
+	<!--<query name="ActiveTransactionByBranchListing">
+		select new ibldto(
+		ibl.FROMBRANCH,
+		ibl.TOBRANCH,
+		ibl.ACCTNO,
+		ibl.AMOUNT,
+		ibl.TRANTYPE,
+		ibl.DATE_TIME,
+		ibl.INOUT,
+		ibl.SUCCESS,
+		ibl.ENO,
+		ibl.USERNO,
+		ibl.CHEQUE,
+		ibl.INCOME,
+		ibl.COMMUCHARGE,
+		ibl.REVERSAL,
+		ibl.INCOMETYPE,
+		ibl.RELATEDAC,
+		ibl.RELATEDBRANCH,
+		ibl.SOURCEBR,
+		ibl.CURRENCY,
+		br.BranchCode,
+		br.BranchAlias,
+		br.BranchDescription
+		)
+		from TLMVIW00006 as ibl join ibl.ToBranchRelation as br
+		where ibl.TOBRANCH = br.BranchCode and
+		ibl.INOUT = 0 and
+		convert(char(10),ibl.DATE_TIME,111) between convert(char(10),:startDate,111) and convert(char(10),:endDate,111)
+		order by ibl.TOBRANCH asc,ibl.ACCTNO asc,ibl.ENO asc
+	</query>-->
+	<!--Endregion-->
+
+  <!--Select Information for ( Current Account And Saving Account ) of BankStatement Listing By Date <by HWH>-->
+  <query name="TLMDAO00A51.SelectDatasFromBankStatement">
+    select new bankstatementdto (vw.DateTime,vw.AccountNo,vw.Cheque,vw.Description,vw.WithdrawAmount,vw.DepositAmount,vw.CreatedDate)
+    from TLMVIW000A9 as vw
+    where vw.WorkStation = :workstation
+    and vw.AccountNo = :accountno
+    and (Convert(char(10),vw.DateTime,111) between :startdate and :enddate)
+    <!--order by vw.DateTime,vw.ChkTime-->
+  </query>
+  
+<!--Select Information for ( Current Account And Saving Account ) of BankStatement Listing By Date Without Reversal <by HWKO> (17-May-2017)-->
+<query name="TLMDAO00A51.SelectDatasFromBankStatementWithoutReversal">
+  select new bankstatementdto (vw.DateTime,vw.AccountNo,vw.Cheque,vw.Description,vw.WithdrawAmount,vw.DepositAmount,vw.CreatedDate)
+  from TLMVIW000A9 as vw
+  where vw.WorkStation = :workstation
+  and vw.AccountNo = :accountno
+  and (Convert(char(10),vw.DateTime,111) between :startdate and :enddate)
+  and vw.OrgnEno = null
+  <!--order by vw.DateTime,vw.ChkTime-->
+</query>
+  
+  <!--Withdrawal Amount and Deposit Amount for Opening Balance And CLosing Balance ( Current Account And Saving Account ) of BankStatement Listing By Date <By HWH>-->
+  <query name="TLMDAO00A51.SelectWithdrawAmountAndDepositAmountBankStatement">
+    select new reportgeneratedto (vw.WithdrawAmount,vw.DepositAmount)
+    from TLMVIW000A9 as vw
+    where vw.WorkStation = :workstation
+    and vw.AccountNo = :accountno
+    and (Convert(char(10),vw.DateTime,111) between Convert(char(10),:firstdate,111) and Convert(char(10),:seconddate,111))
+    order by vw.DateTime,vw.ChkTime
+  </query>
+
+  <!--Select Information for ( Fixed Account ) of BankStatement Listing By Date <by HWH>-->
+  <query name="TLMDAO00A52.SelectDatasFromBankStatement">
+    select new reportgeneratedto (vw.DateTime,vw.AccountNo,vw.Cheque,vw.Description,vw.WithdrawAmount,vw.DepositAmount)
+    from TLMVIW00A10 as vw
+    where vw.WorkStation = :workstation
+    and vw.AccountNo = :accountno
+    and (Convert(char(10),vw.DateTime,111) between :startdate and :enddate)   
+  </query>
+
+  <!--Withdrawal Amount and Deposit Amount for Opening Balance And CLosing Balance ( Fixed Account ) of BankStatement Listing By Date <By HWH>-->
+  <query name="TLMDAO00A52.SelectWithdrawAmountAndDepositAmountBankStatement">
+    select new reportgeneratedto (vw.WithdrawAmount,vw.DepositAmount)
+    from TLMVIW00A10 as vw
+    where vw.WorkStation = :workstation
+    and vw.AccountNo = :accountno
+    and (Convert(char(10),vw.DateTime,111) between Convert(char(10),:firstdate,111) and Convert(char(10),:seconddate,111))
+    order by vw.DateTime,vw.ChkTime
+  </query>
+
+  <query name="TLMDAO00048.SelectIBLTestKeyListingReport">
+		select new branchkeydto (vw.Code,vw.Value,vw.Start_Date,vw.Status)
+		from TLMVIW00008 as vw
+	</query>
+
+	<query name="TLMDAO00048.SelectMaxDate">
+		<![CDATA[
+    select max(vw.Start_Date)
+    from TLMVIW00008 as vw
+    where convert(char(10),vw.Start_Date,111) <= :datetime    
+    group by vw.Status
+		]]>
+	</query>
+
+	<query name="TLMDAO00048.SelectAllIBLTestKeyListingByMaxDate">
+    select new branchkeydto (vw.Id,vw.Code,vw.Value,vw.Start_Date,vw.Status, vw.Active)
+    from TLMVIW00008 as vw
+    where convert(char(10),vw.Start_Date,111) = :maxdate
+    and vw.Active = true
+  </query>
+
+	<query name="TLMDAO00051.SelectSumM1Data">
+		select new baldto(vw.M1)
+		from TLMVIW00009 as vw
+		where vw.AccountNo = :accountno
+		and vw.Budget = :budget
+	</query>
+
+	<query name="TLMDAO00051.SelectSumM2Data">
+		select new baldto(vw.M2,vw.M1)
+		from TLMVIW00009 as vw
+		where vw.AccountNo = :accountno
+		and vw.Budget = :budget
+	</query>
+
+	<query name="TLMDAO00051.SelectSumM3Data">
+		select new baldto(vw.M3,vw.M2,vw.M1)
+		from TLMVIW00009 as vw
+		where vw.AccountNo = :accountno
+		and vw.Budget = :budget
+	</query>
+
+	<query name="TLMDAO00051.SelectSumM4Data">
+		select new baldto(vw.M4,vw.M3,vw.M2,vw.M1)
+		from TLMVIW00009 as vw
+		where vw.AccountNo = :accountno
+		and vw.Budget = :budget
+	</query>
+
+	<query name="TLMDAO00051.SelectSumM5Data">
+		select new baldto(vw.M5,vw.M4,vw.M3,vw.M2,vw.M1)
+		from TLMVIW00009 as vw
+		where vw.AccountNo = :accountno
+		and vw.Budget = :budget
+	</query>
+
+	<query name="TLMDAO00051.SelectSumM6Data">
+		select new baldto(vw.M6,vw.M5,vw.M4,vw.M3,vw.M2,vw.M1)
+		from TLMVIW00009 as vw
+		where vw.AccountNo = :accountno
+		and vw.Budget = :budget
+	</query>
+
+	<query name="TLMDAO00051.SelectSumM7Data">
+		select new baldto(vw.M7,vw.M6,vw.M5,vw.M4,vw.M3,vw.M2,vw.M1)
+		from TLMVIW00009 as vw
+		where vw.AccountNo = :accountno
+		and vw.Budget = :budget
+	</query>
+
+	<query name="TLMDAO00051.SelectSumM8Data">
+		select new baldto(vw.M8,vw.M7,vw.M6,vw.M5,vw.M4,vw.M3,vw.M2,vw.M1)
+		from TLMVIW00009 as vw
+		where vw.AccountNo = :accountno
+		and vw.Budget = :budget
+	</query>
+
+	<query name="TLMDAO00051.SelectSumM9Data">
+		select new baldto(vw.M9,vw.M8,vw.M7,vw.M6,vw.M5,vw.M4,vw.M3,vw.M2,vw.M1)
+		from TLMVIW00009 as vw
+		where vw.AccountNo = :accountno
+		and vw.Budget = :budget
+	</query>
+
+	<query name="TLMDAO00051.SelectSumM10Data">
+		select new baldto(vw.M10,vw.M9,vw.M8,vw.M7,vw.M6,vw.M5,vw.M4,vw.M3,vw.M2,vw.M1)
+		from TLMVIW00009 as vw
+		where vw.AccountNo = :accountno
+		and vw.Budget = :budget
+	</query>
+
+	<query name="TLMDAO00051.SelectSumM11Data">
+		select new baldto(vw.M11,vw.M10,vw.M9,vw.M8,vw.M7,vw.M6,vw.M5,vw.M4,vw.M3,vw.M2,vw.M1)
+		from TLMVIW00009 as vw
+		where vw.AccountNo = :accountno
+		and vw.Budget = :budget
+	</query>
+
+	<query name="TLMDAO00051.SelectSumM12Data">
+		select new baldto(vw.M12,vw.M11,vw.M10,vw.M9,vw.M8,vw.M7,vw.M6,vw.M5,vw.M4,vw.M3,vw.M2,vw.M1)
+		from TLMVIW00009 as vw
+		where vw.AccountNo = :accountno
+		and vw.Budget = :budget
+	</query>
+
+	<query name="TLMDAO00063.SelecDepositListingByAll">
+    select new reportgeneratedto
+    (vw.Id,
+    vw.ENO,
+    vw.AccNo,
+    vw.Desp,
+    vw.Amount,
+    vw.UserNo,
+    vw.Date_Time,
+    vw.Time,
+    vw.AcSign,
+    vw.SourceCur,
+    vw.WorkStation,
+    vw.SourceBr)
+    from TLMVIW00021 as vw
+    where vw.SourceBr=:sourceBr and vw.WorkStation=:workstation
+  </query>
+
+	<query name="TLMDAO00063.SelecDepositListingByCounter">
+    select new reportgeneratedto
+    (vw.Id,
+    vw.ENO,
+    vw.AccNo,
+    vw.Desp,
+    vw.Amount,
+    vw.UserNo,
+    vw.Date_Time,
+    vw.Time,
+    vw.AcSign,
+    vw.SourceCur,
+    vw.WorkStation,
+    vw.SourceBr)
+    from TLMVIW00021 as vw
+    where vw.SourceBr=:sourceBr  and vw.UserNo = :counterNo and vw.WorkStation=:workstation
+  </query>
+
+	<query name="TLMDAO00064.SelecDepositListingByAccountNo">
+    select new reportgeneratedto
+    (vw.Id,
+    vw.ENO,
+    vw.AccNo,
+    vw.Desp,
+    vw.Amount,
+    vw.UserNo,
+    vw.Date_Time,
+    vw.Time,
+    vw.AcSign,
+    vw.SourceCur,
+    vw.SourceBr)
+    from TLMVIW00021 as vw
+    where vw.SourceBr=:sourceBr  and vw.AccNo = :accountNo and vw.WorkStation=:workstation
+  </query>
+
+	<!--<query name="TLMDAO00065.SelecDepositListingByAccountType">
+		select new reportgeneratedto
+		(vw.Id,
+		vw.ENO,
+		vw.AccNo,
+		vw.Desp,
+		vw.Amount,
+		vw.UserNo,
+		vw.Date_Time,
+		vw.Time,
+		vw.AcSign,
+		vw.SourceCur,
+		vw.WorkStation,
+    vw.SourceBr)
+		from TLMVIW00021 as vw
+		where vw.WorkStation=:workStation and vw.UserNo = :userNo
+	</query>-->
+
+	<query name="TLMDAO00065.SelecDepositListingByAccountType">
+    select new reportgeneratedto
+    (vw.Id,
+    vw.ENO,
+    vw.AccNo,
+    vw.Desp,
+    vw.Amount,
+    vw.UserNo,
+    vw.Date_Time,
+    vw.Time,
+    vw.AcSign,
+    vw.SourceCur,
+    vw.WorkStation,
+    vw.SourceBr)
+    from TLMVIW00021 as vw
+    where vw.SourceBr=:sourceBr and vw.WorkStation=:workstation and vw.AcSign like :acSign
+  </query>
+
+	<query name="TLMDAO00063.SelecDepositListingByGrade">
+    select new reportgeneratedto
+    (vw.Id,
+    vw.ENO,
+    vw.AccNo,
+    vw.Desp,
+    vw.Amount,
+    vw.UserNo,
+    vw.Date_Time,
+    vw.Time,
+    vw.AcSign,
+    vw.SourceCur,
+    vw.WorkStation,
+    vw.SourceBr)
+    from TLMVIW00021 as vw
+    where		vw.AcSign like :acSign and 
+    vw.SourceBr = :sourceBr and vw.WorkStation=:workstation
+    <!--and
+    convert(char(10),vw.Date_Time,111) between convert(char(10),:startDate,111) and convert(char(10),:endDate,111)-->
+  </query>
+
+  <query name="TLMDAO00066.SelectWithdrawalListingAllReport">
+    select new reportgeneratedto (vw.ENO,vw.AccNo,vw.Desp,vw.Amount,vw.UserNo,vw.Date_Time,vw.Time,vw.AcSign,vw.SourceCur,vw.WorkStation)
+    from TLMVIW00024 as vw
+    where convert(char(10),vw.Date_Time,111) between :startDate and :endDate and vw.SourceBr=:sourcebr and vw.WorkStation=:workstationId
+  </query>
+
+  <query name="TLMDAO00066.SelectWithdrawalListingByAccountTypeReport">
+    select new reportgeneratedto (vw.ENO,vw.AccNo,vw.Desp,vw.Amount,vw.UserNo,vw.Date_Time,vw.Time,vw.AcSign,vw.SourceCur,vw.WorkStation)
+    from TLMVIW00024 as vw
+    where convert(char(10),vw.Date_Time,111) between :startDate and :endDate
+    and vw.AcSign Like :acsign and vw.SourceBr=:sourcebr and vw.WorkStation=:workstation
+  </query>
+
+  <query name="TLMDAO00067.SelectWithdrawalListingByCounterNoReport">
+    select new reportgeneratedto (vw.ENO,vw.AccNo,vw.Desp,vw.Amount,vw.UserNo,vw.Date_Time,vw.Time,vw.AcSign,vw.SourceCur,vw.WorkStation)
+    from TLMVIW00024 as vw
+    where convert(char(10),vw.Date_Time,111) between :startDate and :endDate
+    and vw.SourceBr=:sourcebr and vw.WorkStation=:workstationId  and vw.UserNo=:userno
+  </query>
+
+  <query name="TLMDAO00068.SelectWithdrawalListingByAccountNoReport">
+    select new reportgeneratedto (vw.ENO,vw.AccNo,vw.Desp,vw.Amount,vw.UserNo,vw.Date_Time,vw.Time,vw.AcSign,vw.SourceCur,vw.WorkStation)
+    from TLMVIW00024 as vw
+    where convert(char(10),vw.Date_Time,111) between :startDate and :endDate
+    and vw.AccNo=:accountno and vw.SourceBr=:sourcebr and vw.WorkStation=:workstation
+  </query>
+
+	<query name="TLMDAO00052.SelectAllByBankCashWithReversalTransactionDate">
+    select new reportgeneratedto
+    (
+    vw.ACode,
+    Sum(vw.HomeAmt),
+    Sum(vw.HomeOAmt),
+    vw.Status,
+    vw.Narration,
+    vw.WorkStation
+    )
+    from TLMVIW00052 as vw
+    where convert(char(10),vw.Date_Time,111)= :datetime
+    and vw.sourcebr=:sourcebr
+    and vw.WorkStation = :workstation
+    group by vw.ACode,vw.Status,vw.Narration,vw.WorkStation
+    order by vw.ACode
+  </query>
+
+<query name="TLMDAO00052.SelectAllByBankCashWithReversalSettlementDate">
+  select new reportgeneratedto
+  (
+  vw.ACode,
+  Sum(vw.HomeAmt),
+  Sum(vw.HomeOAmt),
+  vw.Status,
+  vw.Narration,
+  vw.WorkStation
+  )
+  from TLMVIW00052 as vw
+  where convert(char(10),vw.SettlementDate,111)= :datetime
+  and vw.sourcebr=:sourcebr
+  and vw.WorkStation = :workstation
+  group by vw.ACode,vw.Status,vw.Narration,vw.WorkStation
+  order by vw.ACode
+</query>
+
+	<query name="TLMDAO00052.SelectAllByBankCashWithReversalByCurCodeTransactionDate">
+    select new reportgeneratedto
+    (
+    vw.ACode,
+    Sum(vw.HomeAmt),
+    Sum(vw.HomeOAmt),
+    vw.Status,
+    vw.Narration,
+    vw.WorkStation
+    )
+    from TLMVIW00052 as vw
+    where convert(char(10),vw.Date_Time,111)= :datetime
+    and vw.sourcebr=:sourcebr
+    and vw.SourceCur=:currency
+    and vw.WorkStation = :workstation
+    group by vw.ACode,vw.Status,vw.Narration,vw.WorkStation
+    order by vw.ACode
+  </query>
+
+	<query name="TLMDAO00052.SelectAllByBankCashWithReversalByCurCodeSettlementDate">
+    select new reportgeneratedto
+    (
+    vw.ACode,
+    Sum(vw.HomeAmt),
+    Sum(vw.HomeOAmt),
+    vw.Status,
+    vw.Narration,
+    vw.WorkStation
+    )
+    from TLMVIW00052 as vw
+    where convert(char(10),vw.SettlementDate,111)= :datetime
+    and vw.sourcebr=:sourcebr
+    and vw.SourceCur=:currency
+    group by vw.ACode,vw.Status,vw.Narration,vw.WorkStation
+    order by vw.ACode
+  </query>
+
+	<query name="TLMDAO00A53.SelectDayBookCurrent">
+		select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+		from TLMVIW00A11 as vw
+		where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.Date_Time,111) = convert(char(10),:requireDate,111)
+		order by vw.Sort_Date_Time asc
+	</query>
+
+  <query name="TLMDAO00A53.SelectDayBookCurrentBySettlementDate">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00A11 as vw
+    where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.SettlementDate,111) = convert(char(10),:requireDate,111)
+    order by vw.Sort_Date_Time asc
+  </query>
+  
+  <!--//Added by HWKO (14-Aug-2017)-->
+  <query name="TLMDAO00A53.SelectDayBookCurrentAll">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00D17 as vw
+    where vw.ACSign Like :acsign and vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.Date_Time,111) = convert(char(10),:requireDate,111)
+    order by vw.Sort_Date_Time asc
+  </query>
+
+  <!--//Added by ZMS (19.12.2017)-->
+  <query name="TLMDAO00A53.SelectDayBookCurrentAll_SortByAccountNo">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00D17 as vw
+    where vw.ACSign Like :acsign and vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.Date_Time,111) = convert(char(10),:requireDate,111)
+    order by vw.Account_No asc
+  </query>
+
+  <query name="TLMDAO00A53.SelectDayBookCurrentAllBySettlementDate">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00D17 as vw
+    where  vw.ACSign Like :acsign and vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.SettlementDate,111) = convert(char(10),:requireDate,111)
+    order by vw.Sort_Date_Time asc
+  </query>
+
+  <!--//Added by ZMS (19.12.2017)-->
+  <query name="TLMDAO00A53.SelectDayBookCurrentAllBySettlementDate_SortByAccountNo">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00D17 as vw
+    where  vw.ACSign Like :acsign and vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.SettlementDate,111) = convert(char(10),:requireDate,111)
+    order by vw.Account_No asc
+  </query>
+  <!--End Region-->
+
+	<query name="TLMDAO00A54.SelectDayBookSavings">
+		select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+		from TLMVIW00A12 as vw
+		where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.Date_Time,111) = convert(char(10),:requireDate,111)
+		order by vw.Sort_Date_Time asc
+	</query>
+
+  <!--Updated by ZMS (21-JUN-2018)-->
+	<query name="TLMDAO00A55.SelectDayBookDomestic">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00A13 as vw
+    where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.Date_Time,111) = convert(char(10),:requireDate,111)
+    order by vw.Account_No asc, vw.Sort_Date_Time asc
+  </query>
+
+  <query name="TLMDAO00A55.SelectDayBookDomestic_SortByAccountNo">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00A13 as vw
+    where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.Date_Time,111) = convert(char(10),:requireDate,111)
+    order by vw.Account_No asc
+  </query>
+
+	<query name="TLMDAO00058.SelectDataForDrawingRemittanceAllByTransactionDate">
+    select new rddto(vw.DrawingNo,vw.RegisterNo,vw.Br_Alias,vw.Type,vw.NRC,vw.Name,vw.ToName,vw.ToNRC,vw.TLxCharges,vw.Commission,vw.DBank,vw.ReceiptDate,
+    vw.AccountNo,vw.Amount,vw.DateTime,vw.Currency,vw.SettlementDate,vw.OtherBank,vw.Bank_Alias,vw.IncomeType,vw.RDType)
+    from TLMVIW00A16 as vw
+    where Convert(char(10),vw.DateTime,111) between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.SourceBr = :sourceBr
+    order by vw.RegisterNo
+  </query>
+
+	<query name="TLMDAO00058.SelectDataForDrawingRemittanceAllBySettlementDate">
+    select new rddto(vw.DrawingNo,vw.RegisterNo,vw.Br_Alias,vw.Type,vw.NRC,vw.Name,vw.ToName,vw.ToNRC,vw.TLxCharges,vw.Commission,vw.DBank,vw.ReceiptDate,
+    vw.AccountNo,vw.Amount,vw.DateTime,vw.Currency,vw.SettlementDate,vw.OtherBank,vw.Bank_Alias,vw.RDType)
+    from TLMVIW00A16 as vw
+    where Convert(char(10),vw.SettlementDate,111) between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.SourceBr = :sourceBr
+  </query>
+
+	<query name="TLMDAO00058.SelectDataForDrawingRemittanceByBranchByTransactionDate">
+    select new rddto(vw.DrawingNo,vw.RegisterNo,vw.Br_Alias,vw.Type,vw.NRC,vw.Name,vw.ToName,vw.RDType,vw.TLxCharges,vw.Commission,vw.DBank,vw.ReceiptDate,
+    vw.AccountNo,vw.Amount,vw.DateTime,vw.Currency,vw.SettlementDate,vw.OtherBank,vw.Bank_Alias)
+    from TLMVIW00A16 as vw
+    where Convert(char(10),vw.DateTime,111) between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.DBank = :dbank
+    and vw.SourceBr = :sourceBr
+  </query>
+
+	<query name="TLMDAO00058.SelectDataForDrawingRemittanceByBranchBySettlementDate">
+    select new rddto(vw.DrawingNo,vw.RegisterNo,vw.Br_Alias,vw.Type,vw.NRC,vw.Name,vw.ToName,vw.RDType,vw.TLxCharges,vw.Commission,vw.DBank,vw.ReceiptDate,
+    vw.AccountNo,vw.Amount,vw.DateTime,vw.Currency,vw.SettlementDate,vw.OtherBank,vw.Bank_Alias)
+    from TLMVIW00A16 as vw
+    where Convert(char(10),vw.SettlementDate,111) between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.DBank = :dbank
+    and vw.SourceBr = :sourceBr
+  </query>
+
+	<query name="TLMDAO00058.SelectAmountForDrawingRemittanceByTransactionDate">
+    select new rddto(vw.DrawingNo,vw.RegisterNo,vw.Br_Alias,vw.Type,vw.NRC,vw.Name,vw.ToName,vw.TLxCharges,vw.Commission,vw.DBank,vw.ReceiptDate,
+    vw.AccountNo,vw.Amount,vw.DateTime,vw.Currency,vw.SettlementDate,vw.RDType,vw.OtherBank,vw.Bank_Alias)
+    from TLMVIW00A16 as vw
+    where Convert(char(10),vw.DateTime,111) between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.Amount between :startamount and :endamount
+    and vw.SourceBr = :sourceBr
+  </query>
+
+	<query name="TLMDAO00058.SelectAmountForDrawingRemittanceBySettlementDate">
+    select new rddto(vw.DrawingNo,vw.RegisterNo,vw.Br_Alias,vw.Type,vw.Name,vw.ToName,vw.TLxCharges,vw.Commission,vw.DBank,vw.ReceiptDate,
+    vw.AccountNo,vw.Amount,vw.DateTime,vw.Currency,vw.SettlementDate,vw.RDType,vw.OtherBank,vw.Bank_Alias)
+    from TLMVIW00A16 as vw
+    where Convert(char(10),vw.SettlementDate,111) between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.Amount between :startamount and :endamount
+    and vw.SourceBr = :sourceBr
+  </query>  
+
+	<query name="TLMDAO00058.SelectNRCForDrawingRemittanceByTransactionDate">
+    select new rddto(vw.DrawingNo,vw.RegisterNo,vw.Br_Alias,vw.Type,vw.Name,vw.NRC,vw.TLxCharges,vw.Commission,vw.DBank,vw.ReceiptDate,
+    vw.AccountNo,vw.Amount,vw.DateTime,vw.Currency,vw.RDType)
+    from TLMVIW00A16 as vw
+    where Convert(char(10),vw.DateTime,111) between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.NRC Like :nrc
+  </query>
+
+	<query name="TLMDAO00058.SelectNRCForDrawingRemittanceBySettlementDate">
+    select new rddto(vw.DrawingNo,vw.RegisterNo,vw.Br_Alias,vw.Type,vw.Name,vw.NRC,vw.TLxCharges,vw.Commission,vw.ReceiptDate,
+    vw.AccountNo,vw.Amount,vw.Currency,vw.SettlementDate,vw.RDType)
+    from TLMVIW00A16 as vw
+    where Convert(char(10),vw.SettlementDate,111) between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.NRC Like :nrc
+  </query>
+
+	<query name="TLMDAO00058.SelectNRCExactlyForDrawingRemittanceByTransactionDate">
+    select new rddto(vw.DrawingNo,vw.RegisterNo,vw.Br_Alias,vw.Type,vw.Name,vw.NRC,vw.TLxCharges,vw.Commission,vw.DBank,vw.ReceiptDate,
+    vw.AccountNo,vw.Amount,vw.DateTime,vw.Currency,vw.RDType)
+    from TLMVIW00A16 as vw
+    where Convert(char(10),vw.DateTime,111) between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.NRC = :nrc
+  </query>
+
+	<query name="TLMDAO00058.SelectNRCExactlyForDrawingRemittanceBySettlementDate">
+    select new rddto(vw.DrawingNo,vw.RegisterNo,vw.Br_Alias,vw.Type,vw.Name,vw.NRC,vw.TLxCharges,vw.Commission,vw.ReceiptDate,
+    vw.AccountNo,vw.Amount,vw.Currency,vw.SettlementDate,vw.RDType)
+    from TLMVIW00A16 as vw
+    where Convert(char(10),vw.SettlementDate,111) between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.NRC = :nrc
+  </query>
+
+	<query name="TLMDAO00058.SelectNameForDrawingRemittanceByTransactionDate">
+    select new rddto(vw.DrawingNo,vw.RegisterNo,vw.Br_Alias,vw.Type,vw.Name,vw.NRC,vw.TLxCharges,vw.Commission,vw.DBank,vw.ReceiptDate,
+    vw.AccountNo,vw.Amount,vw.DateTime,vw.Currency,vw.RDType)
+    from TLMVIW00A16 as vw
+    where Convert(char(10),vw.DateTime,111) between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.Name Like :name
+  </query>
+
+	<query name="TLMDAO00058.SelectNameForDrawingRemittanceBySettlementDate">
+    select new rddto(vw.DrawingNo,vw.RegisterNo,vw.Br_Alias,vw.Type,vw.Name,vw.NRC,vw.TLxCharges,vw.Commission,vw.ReceiptDate,
+    vw.AccountNo,vw.Amount,vw.Currency,vw.SettlementDate,vw.RDType)
+    from TLMVIW00A16 as vw
+    where Convert(char(10),vw.SettlementDate,111) between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.Name Like :name
+  </query>
+
+	<query name="TLMDAO00058.SelectNameExactlyForDrawingRemittanceByTransactionDate">
+    select new rddto(vw.DrawingNo,vw.RegisterNo,vw.Br_Alias,vw.Type,vw.Name,vw.NRC,vw.TLxCharges,vw.Commission,vw.DBank,vw.ReceiptDate,
+    vw.AccountNo,vw.Amount,vw.DateTime,vw.Currency,vw.RDType)
+    from TLMVIW00A16 as vw
+    where Convert(char(10),vw.DateTime,111) between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.Name = :name
+  </query>
+
+	<query name="TLMDAO00058.SelectNameExactlyForDrawingRemittanceBySettlementDate">
+    select new rddto(vw.DrawingNo,vw.RegisterNo,vw.Br_Alias,vw.Type,vw.Name,vw.NRC,vw.TLxCharges,vw.Commission,vw.ReceiptDate,
+    vw.AccountNo,vw.Amount,vw.Currency,vw.SettlementDate,vw.RDType)
+    from TLMVIW00A16 as vw
+    where Convert(char(10),vw.SettlementDate,111) between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.Name = :name
+  </query>
+
+	<query name="TLMDAO00A52.SelectTranDateWithReversalByForAllBranchAndSourceCur">
+    select new reportgeneratedto
+    (
+    vw.ACode,
+    Sum(vw.LocalAmt),
+    Sum(vw.LocalOAmt),
+    vw.Status,
+    vw.Narration,
+    vw.sourcebr,
+    vw.WorkStation
+    )
+    from TLMVIW00A52 as vw
+    where convert(char(10),vw.Date_Time,111)= :datetime
+    <!--and vw.sourcebr=:sourcebr-->
+    and vw.SourceCur=:currency
+    and vw.WorkStation = :workstation
+    group by vw.ACode,vw.Status,vw.Narration,vw.sourcebr,vw.WorkStation
+    order by vw.ACode
+  </query>
+
+	<query name="TLMDAO00A52.SelectWithReversalByForAllBranchAndSourceCurBySettlementDate">
+    select new reportgeneratedto
+    (
+    vw.ACode,
+    Sum(vw.LocalAmt),
+    Sum(vw.LocalOAmt),
+    vw.Status,
+    vw.Narration,
+    vw.sourcebr,
+    vw.WorkStation
+    )
+    from TLMVIW00A52 as vw
+    where convert(char(10),vw.SettlementDate,111)= :datetime
+    <!--and vw.sourcebr=:sourcebr-->
+    and vw.SourceCur=:currency
+    and vw.WorkStation = :workstation
+    group by vw.ACode,vw.Status,vw.Narration,vw.sourcebr,vw.WorkStation
+    order by vw.ACode
+  </query>
+
+	<query name="TLMDAO00B53.SelectDayBookCurrentReversal">
+		select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+		from TLMVIW00B11 as vw
+		where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.Date_Time,111) = convert(char(10),:requireDate,111)
+		order by vw.Sort_Date_Time asc
+	</query>
+
+  <query name="TLMDAO00B53.SelectDayBookCurrentReversalBySettlementDate">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00B11 as vw
+    where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.SettlementDate,111) = convert(char(10),:requireDate,111)
+    order by vw.Sort_Date_Time asc
+  </query>
+
+  <!--//Added by HWKO (14-Aug-2017)-->
+  <query name="TLMDAO00B53.SelectDayBookCurrentAllReversal">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00D18 as vw
+    where  vw.ACSign Like :acsign and vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.Date_Time,111) = convert(char(10),:requireDate,111)
+    order by vw.Sort_Date_Time asc
+  </query>
+
+  <query name="TLMDAO00B53.SelectDayBookCurrentAllReversalBySettlementDate">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00D18 as vw
+    where  vw.ACSign Like :acsign and vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.SettlementDate,111) = convert(char(10),:requireDate,111)
+    order by vw.Sort_Date_Time asc
+  </query>
+  <!--//End Region-->
+
+  <query name="TLMDAO00B54.SelectDayBookSavings_Reversal">
+		select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+		from TLMVIW00B12 as vw
+		where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.Date_Time,111) = convert(char(10),:requireDate,111)
+		order by vw.Sort_Date_Time asc
+	</query>
+
+  <!--Updated by ZMS (21-JUN-2018)-->
+	<query name="TLMDAO00A55.SelectDayBookDomesticReversal">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00B13 as vw
+    where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.Date_Time,111) = convert(char(10),:requireDate,111)
+    order by vw.Account_No asc, vw.Sort_Date_Time asc
+  </query>
+
+  <query name="TLMDAO00A55.SelectDayBookDomesticReversal_SortByAccountNo">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00B13 as vw
+    where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.Date_Time,111) = convert(char(10),:requireDate,111)
+    order by vw.Account_No asc
+  </query>
+
+	<query name="TLMDAO00B52.SelectAllByBankCashWithoutReversalTransactionDate">
+    select new reportgeneratedto
+    (
+    vw.ACode,
+    Sum(vw.HomeAmt),
+    Sum(vw.HomeOAmt),
+    vw.Status,
+    vw.Narration,
+    vw.WorkStation
+    )
+    from TLMVIW00B52 as vw
+    where convert(char(10),vw.Date_Time,111)= :datetime
+    and vw.sourcebr=:sourcebr
+    group by vw.ACode,vw.Status,vw.Narration,vw.WorkStation
+    order by vw.ACode
+  </query>
+  
+  <!--Edited by HOW (To get source branch code-->
+	<query name="TLMDAO00B52.SelectByBankCashWithoutReversalByCurCodeTransactionDate">
+    select new reportgeneratedto
+    (
+    vw.ACode,
+    Sum(vw.HomeAmt),
+    Sum(vw.HomeOAmt),
+    vw.Status,
+    vw.Narration,
+    vw.sourcebr,
+    vw.SourceCur,
+    vw.WorkStation
+    )
+    from TLMVIW00052 as vw
+    where convert(char(10),vw.Date_Time,111)= :datetime
+    and vw.sourcebr=:sourcebr
+    and vw.SourceCur=:currency
+    group by vw.ACode,vw.Status,vw.Narration,vw.sourcebr,vw.SourceCur, vw.WorkStation
+    order by vw.ACode
+  </query>
+
+	<query name="TLMDAO00B52.SelectAllByBankCashWithoutReversalSettlementDate">
+    select new reportgeneratedto
+    (
+    vw.ACode,
+    Sum(vw.HomeAmt),
+    Sum(vw.HomeOAmt),
+    vw.Status,
+    vw.Narration,
+    vw.WorkStation
+    )
+    from TLMVIW00B52 as vw
+    where convert(char(10),vw.SettlementDate,111)= :datetime
+    and vw.sourcebr=:sourcebr
+    group by vw.ACode,vw.Status,vw.Narration,vw.WorkStation
+    order by vw.ACode
+  </query>
+
+	<query name="TLMDAO00B52.SelectByBankCashWithoutReversalByCurCodeSettlementDate">
+    select new reportgeneratedto
+    (
+    vw.ACode,
+    Sum(vw.HomeAmt),
+    Sum(vw.HomeOAmt),
+    vw.Status,
+    vw.Narration,
+    vw.WorkStation
+    )
+    from TLMVIW00052 as vw
+    where convert(char(10),vw.SettlementDate,111)= :datetime
+    and vw.sourcebr=:sourcebr
+    and vw.SourceCur=:currency
+    and vw.WorkStation = :workstation
+    group by vw.ACode,vw.Status,vw.Narration,vw.WorkStation
+    order by vw.ACode
+  </query>
+
+	<query name="TLMDAO00C53.SelectDayBookCurrent_Home">
+		select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+		from TLMVIW00C11 as vw
+		where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.Date_Time,111) = convert(char(10),:requireDate,111)
+		order by vw.Sort_Date_Time asc
+	</query>  
+
+  <query name="TLMDAO00C53.SelectDayBookCurrent_HomeBySettlementDate">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00C11 as vw
+    where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.SettlementDate,111) = convert(char(10),:requireDate,111)
+    order by vw.Sort_Date_Time asc
+  </query>
+
+  <!--//Added by HWKO (14-Aug-2017)-->
+  <query name="TLMDAO00C53.SelectDayBookCurrentAll_Home">
+	  select new daybookdto (vw.Eno,vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+	  from TLMVIW00D15 as vw
+	  where  vw.Acsign Like :acsign and vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.Date_Time,111) = convert(char(10),:requireDate,111)
+	  order by vw.Sort_Date_Time asc,vw.Eno asc <!--Added by HMW for "Seperating EOD Process: Day Book" to order by eno for the same date time back date TXNs-->
+  </query>
+
+  <query name="TLMDAO00C53.SelectDayBookCurrentAll_Home_SortByAccountNo">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00D15 as vw
+    where  vw.Acsign Like :acsign and vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.Date_Time,111) = convert(char(10),:requireDate,111)
+    order by vw.Account_No asc
+  </query>
+  
+  <query name="TLMDAO00C53.SelectDayBookCurrentAll_HomeBySettlementDate">
+	  select new daybookdto (vw.Eno,vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+	  from TLMVIW00D15 as vw
+	  where  vw.Acsign Like :acsign and vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.SettlementDate,111) = convert(char(10),:requireDate,111)
+	  order by vw.Sort_Date_Time asc,vw.Eno asc <!--Added by HMW for "Seperating EOD Process: Day Book" to order by eno for the same date time back date TXNs-->
+  </query>
+
+  <query name="TLMDAO00C53.SelectDayBookCurrentAll_HomeBySettlementDate_SortByAccountNo">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00D15 as vw
+    where  vw.Acsign Like :acsign and vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.SettlementDate,111) = convert(char(10),:requireDate,111)
+    order by vw.Account_No asc
+  </query>
+  <!--//End Region-->
+
+	<query name="TLMDAO00C54.SelectDayBookFixed">
+		select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+		from TLMVIW00C12 as vw
+		where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.Date_Time,111) = convert(char(10),:requireDate,111)
+		order by vw.Sort_Date_Time asc
+	</query>
+
+  <!--Updated by ZMS (20-JUN-2018)-->
+	<query name="TLMDAO00C53.SelectDayBookDomesticHome">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00C13 as vw
+    where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.Date_Time,111) = convert(char(10),:requireDate,111)
+    order by vw.Account_No asc, vw.Sort_Date_Time asc
+  </query>
+
+  <query name="TLMDAO00C53.SelectDayBookDomesticHome_SortByAccountNo">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00C13 as vw
+    where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.Date_Time,111) = convert(char(10),:requireDate,111)
+    order by vw.Account_No asc
+  </query>
+
+	<query name="TLMDAO00A58.SelectDataForEncashRemittanceAllByTransactionDate">
+    select new redto(vw.EncashNo,vw.RegisterNo,vw.Name,vw.NRC,vw.Br_Alias,vw.Type,vw.ToName,vw.ToAcctNo,vw.ToNRC,vw.ToAddress,vw.EBank,vw.IssueDate,vw.Amount,
+    vw.DateTime,vw.Currency,vw.SettlementDate,vw.OtherBank,vw.BankAlias)
+    from TLMVIW00C16 as vw
+    where Convert(char(10),vw.DateTime,111) between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.SourceBr = :sourceBr
+  </query>
+
+	<query name="TLMDAO00A58.SelectDataForEncashRemittanceAllBySettlementDate">
+    select new redto(vw.EncashNo,vw.RegisterNo,vw.Name,vw.NRC,vw.Br_Alias,vw.Type,vw.ToName,vw.ToAcctNo,vw.ToNRC,vw.ToAddress,vw.EBank,vw.IssueDate,vw.Amount,
+    vw.DateTime,vw.Currency,vw.SettlementDate,vw.OtherBank)
+    from TLMVIW00C16 as vw
+    where Convert(char(10),vw.SettlementDate,111) between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.SourceBr = :sourceBr
+  </query>
+<!--******-->
+	<query name="TLMDAO00A58.SelectDataForEncashRemittanceByBranchByTransactionDate">
+    select new redto(vw.EncashNo,vw.RegisterNo,vw.Name,vw.NRC,vw.Br_Alias,vw.Type,vw.ToNRC,vw.ToName,vw.ToAcctNo,vw.ToAddress,vw.EBank,vw.IssueDate,vw.Amount,
+    vw.DateTime,vw.Currency,vw.SettlementDate,vw.SourceBr)
+    from TLMVIW00C16 as vw
+    where Convert(char(10),vw.DateTime,111) between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.EBank = :ebank and vw.SourceBr = :sourceBr
+  </query>
+  <!--******-->
+	<query name="TLMDAO00A58.SelectDataForEncashRemittanceByBranchBySettlementDate">
+    select new redto(vw.EncashNo,vw.RegisterNo,vw.Name,vw.NRC,vw.Br_Alias,vw.Type,vw.ToName,vw.ToAcctNo,vw.ToNRC,vw.EBank,vw.IssueDate,vw.Amount,
+    vw.DateTime,vw.Currency,vw.SettlementDate,vw.SourceBr)
+    from TLMVIW00C16 as vw
+    where Convert(char(10),vw.SettlementDate,111) between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.EBank = :ebank and vw.SourceBr = :sourceBr
+  </query>
+
+	<query name="TLMDAO00A58.SelectAmountForEncashRemittanceBySettlementDate">
+    select new redto(vw.EncashNo,vw.RegisterNo,vw.Name,vw.NRC,vw.Br_Alias,vw.Type,vw.ToName,vw.ToAcctNo,vw.EBank,vw.IssueDate,vw.Amount,
+    vw.DateTime,vw.Currency,vw.SettlementDate,vw.SourceBr)
+    from TLMVIW00C16 as vw
+    where Convert(char(10),vw.SettlementDate,111) between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.Amount between :startamount and :endamount and vw.SourceBr = :sourceBr
+  </query>
+
+	<query name="TLMDAO00A58.SelectAmountForEncashRemittanceByTransactionDate">
+    select new redto(vw.EncashNo,vw.RegisterNo,vw.Name,vw.Br_Alias,vw.Type,vw.ToName,vw.ToAcctNo,vw.EBank,vw.IssueDate,vw.Amount,
+    vw.DateTime,vw.Currency,vw.SettlementDate,vw.SourceBr)
+    from TLMVIW00C16 as vw
+    where Convert(char(10),vw.DateTime,111) between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.Amount between :startamount and :endamount and vw.SourceBr = :sourceBr
+  </query>
+
+	<query name="TLMDAO00A58.SelectNRCForEncashRemittanceByTransactionDate">
+    select new redto(vw.EncashNo,vw.RegisterNo,vw.Name,vw.Br_Alias,vw.Type,vw.ToName,vw.ToAcctNo,vw.EBank,vw.IssueDate,vw.Amount,
+    vw.DateTime,vw.Currency,vw.SettlementDate)
+    from TLMVIW00C16 as vw
+    where Convert(char(10),vw.DateTime,111) between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.NRC Like :nrc
+  </query>
+
+	<query name="TLMDAO00A58.SelectNRCForEncashRemittanceBySettlementDate">
+    select new redto(vw.EncashNo,vw.RegisterNo,vw.Name,vw.Br_Alias,vw.Type,vw.ToName,vw.ToAcctNo,vw.EBank,vw.IssueDate,vw.Amount,
+    vw.DateTime,vw.Currency,vw.SettlementDate)
+    from TLMVIW00C16 as vw
+    where Convert(char(10),vw.SettlementDate,111) between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.NRC Like :nrc
+  </query>
+
+	<query name="TLMDAO00A58.SelectNRCExactlyForEncashRemittanceByTransactionDate">
+    select new redto(vw.EncashNo,vw.RegisterNo,vw.Name,vw.Br_Alias,vw.Type,vw.ToName,vw.ToAcctNo,vw.EBank,vw.IssueDate,vw.Amount,
+    vw.DateTime,vw.Currency,vw.SettlementDate)
+    from TLMVIW00C16 as vw
+    where Convert(char(10),vw.DateTime,111) between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.NRC = :nrc
+  </query>
+
+	<query name="TLMDAO00A58.SelectNRCExactlyForEncashRemittanceBySettlementDate">
+    select new redto(vw.EncashNo,vw.RegisterNo,vw.Name,vw.Br_Alias,vw.Type,vw.ToName,vw.ToAcctNo,vw.EBank,vw.IssueDate,vw.Amount,
+    vw.DateTime,vw.Currency,vw.SettlementDate)
+    from TLMVIW00C16 as vw
+    where Convert(char(10),vw.SettlementDate,111) between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.NRC = :nrc
+  </query>
+
+	<query name="TLMDAO00A58.SelectNameForEncashRemittanceByTransactionDate">
+    select new redto(vw.EncashNo,vw.RegisterNo,vw.Name,vw.Br_Alias,vw.Type,vw.ToName,vw.ToAcctNo,vw.EBank,vw.IssueDate,vw.Amount,
+    vw.DateTime,vw.Currency,vw.SettlementDate)
+    from TLMVIW00C16 as vw
+    where Convert(char(10),vw.DateTime,111)  between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.Name Like :name
+  </query>
+
+	<query name="TLMDAO00A58.SelectNameForEncashRemittanceBySettlementDate">
+    select new redto(vw.EncashNo,vw.RegisterNo,vw.Name,vw.Br_Alias,vw.Type,vw.ToName,vw.ToAcctNo,vw.EBank,vw.IssueDate,vw.Amount,
+    vw.DateTime,vw.Currency,vw.SettlementDate)
+    from TLMVIW00C16 as vw
+    where Convert(char(10),vw.SettlementDate,111) between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.Name Like :name
+  </query>
+
+	<query name="TLMDAO00A58.SelectNameExactlyForEncashRemittanceByTransactionDate">
+    select new redto(vw.EncashNo,vw.RegisterNo,vw.Name,vw.Br_Alias,vw.Type,vw.ToName,vw.ToAcctNo,vw.EBank,vw.IssueDate,vw.Amount,
+    vw.DateTime,vw.Currency,vw.SettlementDate)
+    from TLMVIW00C16 as vw
+    where Convert(char(10),vw.DateTime,111)  between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.Name = :name
+  </query>
+
+	<query name="TLMDAO00A58.SelectNameExactlyForEncashRemittanceBySettlementDate">
+    select new redto(vw.EncashNo,vw.RegisterNo,vw.Name,vw.Br_Alias,vw.Type,vw.ToName,vw.ToAcctNo,vw.EBank,vw.IssueDate,vw.Amount,
+    vw.DateTime,vw.Currency,vw.SettlementDate)
+    from TLMVIW00C16 as vw
+    where Convert(char(10),vw.SettlementDate,111) between Convert(char(10),:startdate,111) and Convert(char(10),:enddate,111)
+    and vw.Name = :name
+  </query>
+
+	<!--For Transaction Date-->
+	<query name="TLMDAO00C52.SelecteWithoutReversalByForAllBranchAndSourceCurTransactionDate">
+    select new reportgeneratedto
+    (
+    vw.ACode,
+    Sum(vw.LocalAmt),
+    Sum(vw.LocalOAmt),
+    vw.Status,
+    vw.Narration,
+    vw.SourceBr,
+    vw.WorkStation
+    )
+    from TLMVIW00C52 as vw
+    where convert(char(10),vw.Date_Time,111)= convert(char(10),:datetime,111)
+    and vw.WorkStation=:workstation
+    and vw.SourceCur=:currency
+    group by vw.ACode,vw.Status,vw.Narration,vw.SourceBr,vw.WorkStation
+    order by vw.ACode
+  </query>
+
+	<!--For Settlement Date-->
+	<query name="TLMDAO00C52.SelecteWithoutReversalByForAllBranchAndSourceCurSettlementDate">
+    select new reportgeneratedto
+    (
+    vw.ACode,
+    Sum(vw.LocalAmt),
+    Sum(vw.LocalOAmt),
+    vw.Status,
+    vw.Narration,
+    vw.SourceBr,
+    vw.WorkStation
+    )
+    from TLMVIW00C52 as vw
+    where convert(char(10),vw.SettlementDate,111)= convert(char(10),:datetime,111)
+    and vw.WorkStation=:workstation
+    and vw.SourceCur=:currency
+    group by vw.ACode,vw.Status,vw.Narration,vw.SourceBr,vw.WorkStation
+    order by vw.ACode
+  </query>
+
+	<query name="TLMDAO00D53.SelectDayBookCurrent_Home_Reversal">
+		select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+		from TLMVIW00D11 as vw
+		where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.Date_Time,111) = convert(char(10),:requireDate,111)
+		order by vw.Sort_Date_Time asc
+	</query>
+
+  <query name="TLMDAO00D53.SelectDayBookCurrent_Home_Reversal_SortByAccountNo">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00D11 as vw
+    where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.Date_Time,111) = convert(char(10),:requireDate,111)
+    order by vw.Account_No asc
+  </query>
+
+  <query name="TLMDAO00D53.SelectDayBookCurrent_Home_ReversalBySettlementDate">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00D11 as vw
+    where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.SettlementDate,111) = convert(char(10),:requireDate,111)
+    order by vw.Sort_Date_Time asc
+  </query>
+  
+  <query name="TLMDAO00D53.SelectDayBookCurrent_Home_ReversalBySettlementDate_SortByAccountNo">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00D11 as vw
+    where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.SettlementDate,111) = convert(char(10),:requireDate,111)
+    order by vw.Account_No asc
+  </query>
+  
+  <!--//Added by HWKO (14-Aug-2017)-->
+  <query name="TLMDAO00D53.SelectDayBookCurrentALL_Home_Reversal">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00D16 as vw
+    where vw.ACSign Like :acsign and vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.Date_Time,111) = convert(char(10),:requireDate,111)
+    order by vw.Sort_Date_Time asc
+  </query>
+
+  <!--//Added by ZMS (14/12/2017)-->
+  <query name="TLMDAO00D53.SelectDayBookCurrentALL_Home_Reversal_SortByAccountNo">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00D16 as vw
+    where vw.ACSign Like :acsign and vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.Date_Time,111) = convert(char(10),:requireDate,111)
+    order by vw.Account_No asc
+  </query>
+
+  <query name="TLMDAO00D53.SelectDayBookCurrentALL_Home_ReversalBySettlementDate">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00D16 as vw
+    where  vw.ACSign Like :acsign and vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.SettlementDate,111) = convert(char(10),:requireDate,111)
+    order by vw.Sort_Date_Time asc
+  </query>
+
+  <query name="TLMDAO00D53.SelectDayBookCurrentALL_Home_ReversalBySettlementDate_SortByAccountNo">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00D16 as vw
+    where  vw.ACSign Like :acsign and vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.SettlementDate,111) = convert(char(10),:requireDate,111)
+    order by vw.Account_No asc
+  </query>
+  <!--//End Region-->
+
+	<query name="TLMDAO00D54.SelectDayBookFixed_Reversal">
+		select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+		from TLMVIW00D12 as vw
+		where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.Date_Time,111) = convert(char(10),:requireDate,111)
+		order by vw.Sort_Date_Time asc
+	</query>
+
+  <!--Updated by ZMS (21-JUN-2018)-->
+	<query name="TLMDAO00055.SelectDayBookDomesticHomeReversal">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00D13 as vw
+    where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.Date_Time,111) = convert(char(10),:requireDate,111)
+    order by vw.Account_No asc, vw.Sort_Date_Time asc
+  </query>
+
+  <!--//Added by ZMS (19/12/2017)-->
+  <query name="TLMDAO00055.SelectDayBookDomesticHomeReversal_SortByAccountNo">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00D13 as vw
+    where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.Date_Time,111) = convert(char(10),:requireDate,111)
+    order by vw.Account_No asc
+  </query>
+	<!--Endregion-->
+
+	<!--REGION Transfer and Clearing Module -->
+	<query name ="Banking_Clearing_LC.TransactionDate">
+		select new reportgeneratedto
+		(
+		vw.Particular,vw.Debit,vw.Credit
+		)
+		from TCMVIW00001 as vw
+		where vw.WorkStation = :workstation
+		and Convert(char(10),vw.Date_Time,111) = :selecteddatetime
+		and vw.Currency = :selectedCurrency
+	</query>
+
+	<query name ="Banking_Clearing_LC.SettlementDate">
+		select new reportgeneratedto
+		(
+		vw.Particular,vw.Debit,vw.Credit
+		)
+		from TCMVIW00001 as vw
+		where vw.WorkStation = :workstation
+		and Convert(char(10),vw.SettlementDate,111) = :selecteddatetime
+		and vw.Currency = :selectedCurrency
+	</query>
+
+	<query name ="Banking_Clearing_LC_WithReversal.TransactionDate">
+		select new reportgeneratedto
+		(
+		vw.Particular,vw.Debit,vw.Credit
+		)
+		from TCMVIW00002 as vw
+		where vw.WorkStation = :workstation
+		and Convert(char(10),vw.Date_Time,111) = :selecteddatetime
+		and vw.Currency = :selectedCurrency
+	</query>
+
+	<query name ="Banking_Clearing_LC_WithReversal.SettlementDate">
+		select new reportgeneratedto
+		(
+		vw.Particular,vw.Debit,vw.Credit
+		)
+		from TCMVIW00002 as vw
+		where vw.WorkStation = :workstation
+		and Convert(char(10),vw.SettlementDate,111) = :selecteddatetime
+		and vw.Currency = :selectedCurrency
+	</query>
+
+	<query name ="BANKING_CLEARING_LD.TransactionDate">
+		select new reportgeneratedto
+		(
+		vw.Particular,vw.Debit,vw.Credit
+		)
+		from TCMVIW00003 as vw
+		where vw.WorkStation = :workstation
+		and Convert(char(10),vw.Date_Time,111) = :selecteddatetime
+		and vw.Currency = :selectedCurrency
+	</query>
+
+	<query name ="BANKING_CLEARING_LD.SettlementDate">
+		select new reportgeneratedto
+		(
+		vw.Particular,vw.Debit,vw.Credit
+		)
+		from TCMVIW00003 as vw
+		where vw.WorkStation = :workstation
+		and Convert(char(10),vw.SettlementDate,111) = :selecteddatetime
+		and vw.Currency = :selectedCurrency
+	</query>
+
+	<query name ="BANKING_CLEARING_LD_WithReversal.TransactionDate">
+		select new reportgeneratedto
+		(
+		vw.Particular,vw.Debit,vw.Credit
+		)
+		from TCMVIW00004 as vw
+		where vw.WorkStation = :workstation
+		and Convert(char(10),vw.Date_Time,111) = :selecteddatetime
+		and vw.Currency = :selectedCurrency
+	</query>
+
+	<query name ="BANKING_CLEARING_LD_Reversal.SettlementDate">
+		select new reportgeneratedto
+		(
+		vw.Particular,vw.Debit,vw.Credit
+		)
+		from TCMVIW00004 as vw
+		where vw.WorkStation = :workstation
+		and Convert(char(10),vw.SettlementDate,111) = :selecteddatetime
+		and vw.Currency = :selectedCurrency
+	</query>
+
+	<query name ="TCMVEW00026.SelectCleanCash">
+		select new reportgeneratedto
+		(
+		vw.Acode,vw.Status,vw.LocalAmt,vw.SourceCur,vw.SourceBr,vw.WorkStation
+		)
+		from TCMVIW00005 as vw
+		where vw.WorkStation = :workStation
+		and Convert(char(10),vw.SettlementDate,111) = :datetime
+		and vw.SourceCur = :currency
+		order by vw.Acode,vw.Status
+	</query>
+
+	<query name ="TCMVEW00026.SelectCleanCashByHomeCurrency">
+		select new reportgeneratedto
+		(
+		vw.Acode,vw.Status,vw.HomeAmt,vw.SourceCur,vw.SourceBr
+		)
+		from TCMVIW00006 as vw
+		where vw.WorkStation = :workStation
+		and Convert(char(10),vw.SettlementDate,111) = :datetime
+		and vw.SourceCur = :currency
+		order by vw.Acode,vw.Status
+	</query>
+
+	<query name ="TCMVEW00026.SelectCleanCashWithoutReversal">
+		select new reportgeneratedto
+		(
+		vw.Acode,vw.Status,vw.LocalAmt,vw.SourceCur,vw.SourceBr,vw.WorkStation
+		)
+		from TCMVIW00007 as vw
+		where vw.WorkStation = :workStation
+		and Convert(char(10),vw.SettlementDate,111) = :datetime
+		and vw.SourceCur = :currency
+		order by vw.Acode,vw.Status
+	</query>
+
+	<query name ="TCMVEW00026.SelectCleanCashWithoutReversalByHomeCurrency">
+		select new reportgeneratedto
+		(
+		vw.Acode,vw.Status,vw.HomeAmt,vw.SourceCur,vw.SourceBr
+		)
+		from TCMVIW00008 as vw
+		where vw.WorkStation = :workStation
+		and Convert(char(10),vw.SettlementDate,111) = :datetime
+		and vw.SourceCur = :currency
+		order by vw.Acode,vw.Status
+	</query>
+
+ 
+	<!--<query name ="TCMVEW00032.SelectCustomer">
+		select new caofdto
+		(
+		vw.AccountNo,vw.Name,vw.CustId,vw.Address,vw.Phone,vw.Fax,vw.OpenDate,
+		vw.AccountSign,vw.NRC,vw.Description,vw.Business,vw.SourceBr,vw.Currency
+		)
+		from TCMVIW00009 as vw
+		order by vw.AccountNo
+	</query> commented by YMA-->
+
+	<!--Endregion-->
+
+	<query name="TLMDAO00063.SelecWithdrawListingByGrade">
+    select new reportgeneratedto
+    (vw.Id,
+    vw.ENO,
+    vw.AccNo,
+    vw.Desp,
+    vw.Amount,
+    vw.UserNo,
+    vw.Date_Time,
+    vw.Time,
+    vw.AcSign,
+    vw.SourceCur,
+    vw.WorkStation)
+    from TLMVIW00024 as vw
+    where		vw.AcSign Like :acSign and
+    vw.SourceBr = :sourceBr  and
+    convert(char(10),vw.Date_Time,111) between convert(char(10),:startDate,111) and convert(char(10),:endDate,111) and
+    vw.WorkStation=:workstation
+  </query>
+
+
+  <query name="TLMDAO00A54.SelectDayBookSavingsBySettlementDate">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00A12 as vw
+    where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.SettlementDate,111) = convert(char(10),:requireDate,111)
+    order by vw.Sort_Date_Time asc
+  </query>
+
+  <query name="TLMDAO00B54.SelectDayBookSavings_ReversalBySettlementDate">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00B12 as vw
+    where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.SettlementDate,111) = convert(char(10),:requireDate,111)
+    order by vw.Sort_Date_Time asc
+  </query>
+
+  <query name="TLMDAO00C54.SelectDayBookFixedBySettlementDate">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00C12 as vw
+    where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.SettlementDate,111) = convert(char(10),:requireDate,111)
+    order by vw.Sort_Date_Time asc
+  </query>
+
+  <query name="TLMDAO00D54.SelectDayBookFixed_ReversalBySettlementDate">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00D12 as vw
+    where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.SettlementDate,111) = convert(char(10),:requireDate,111)
+    order by vw.Sort_Date_Time asc
+  </query>
+
+  <!--Updated by ZMS (21-JUN-2018)-->
+  <query name="TLMDAO00A55.SelectDayBookDomesticBySettlementDate">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00A13 as vw
+    where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.SettlementDate,111) = convert(char(10),:requireDate,111)
+    order by vw.Account_No asc, vw.Sort_Date_Time asc
+  </query>
+
+  <query name="TLMDAO00A55.SelectDayBookDomesticBySettlementDate_SortByAccountNo">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00A13 as vw
+    where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.SettlementDate,111) = convert(char(10),:requireDate,111)
+    order by vw.Account_No asc
+  </query>
+
+  <!--Updated by ZMS (21-JUN-2018)-->
+  <query name="TLMDAO00A55.SelectDayBookDomesticReversalBySettlementDate">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00B13 as vw
+    where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.SettlementDate,111) = convert(char(10),:requireDate,111)
+    order by vw.Account_No asc, vw.Sort_Date_Time asc
+  </query>
+
+  <query name="TLMDAO00A55.SelectDayBookDomesticReversalBySettlementDate_SortByAccountNo">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00B13 as vw
+    where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.SettlementDate,111) = convert(char(10),:requireDate,111)
+    order by vw.Account_No asc
+  </query>
+
+  <!--Updated by ZMS (21-JUN-2018)-->
+  <query name="TLMDAO00C53.SelectDayBookDomesticHomeBySettlementDate">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00C13 as vw
+    where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.SettlementDate,111) = convert(char(10),:requireDate,111)
+    order by vw.Account_No asc, vw.Sort_Date_Time asc
+  </query>
+
+  <query name="TLMDAO00C53.SelectDayBookDomesticHomeBySettlementDate_SortByAccountNo">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00C13 as vw
+    where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.SettlementDate,111) = convert(char(10),:requireDate,111)
+    order by vw.Account_No asc
+  </query>
+
+  <!--Updated by ZMS (21-JUN-2018)-->
+  <query name="TLMDAO00055.SelectDayBookDomesticHomeReversalBySettlementDate">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00D13 as vw
+    where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.SettlementDate,111) = convert(char(10),:requireDate,111)
+    order by vw.Account_No asc, vw.Sort_Date_Time asc
+  </query>
+
+  <query name="TLMDAO00055.SelectDayBookDomesticHomeReversalBySettlementDate_SortByAccountNo">
+    select new daybookdto (vw.Debit_Cash,vw.Debit_Transfer,vw.Debit_Clearing,vw.Debit_Total,vw.Account_No,vw.Credit_Cash,vw.Credit_Clearing,vw.Credit_Transfer,vw.Credit_Total,vw.Date_Time,vw.Sort_Date_Time,vw.WorkStation,vw.Rate,vw.SettlementDate,vw.SourceCur,vw.SourceBr)
+    from TLMVIW00D13 as vw
+    where  vw.WorkStation = :workStation and vw.SourceCur = :sourceCur and convert(char(10),vw.SettlementDate,111) = convert(char(10),:requireDate,111)
+    order by vw.Account_No asc
+  </query>
+  
+  <sql-query name="CurrentDate">
+    <![CDATA[
+    select DateAdd("d", -(DatePart("w", GETDATE()) - 2), GETDATE())
+  ]]>
+  </sql-query>
+
+  <query name="MNMVIW00015.CurrentSelectByDate">
+    select new ClosedAccountDTO(C.AcctNo, C.Name, C.CloseDate, C.CBal, C.Cur, C.SourceBr)
+    from MNMVIW00015 as C
+    where convert(char(10),C.CloseDate,111) between convert(char(10),:startDate,111) and convert(char(10),:endDate,111) and C.SourceBr=:branch
+  </query>
+
+  <query name="MNMVIW00022.SavingSelectByDate">
+    select new ClosedAccountDTO(C.AcctNo, C.Name, C.CloseDate, C.CBal, C.Cur, C.SourceBr)
+    from MNMVIW00022 as C
+    where convert(char(10),C.CloseDate,111) between convert(char(10),:startDate,111) and convert(char(10),:endDate,111) and C.SourceBr=:branch
+  </query>
+
+  <query name="MNMVIW00023.SelectByDate">
+    select distinct new custIDByDateDTO 
+    (
+    Cust.CustID,
+    Cust.Name,
+    Cust.Nrc,
+    Cust.FatherName,
+    Cust.Address,
+    Cust.TownShipDesp,
+    Cust.CityDesp,
+    Cust.StateDesp,
+    Cust.Phone
+    )
+    from MNMVIW00023 as Cust
+    where convert(char(10),Cust.Date_Time,111) between convert(char(10),:startDate,111) and convert(char(10),:endDate,111) and Cust.SourceBr=:sourceBranch 
+    <!--and Cust.Cur=:currency //Commented by HWKO (25-Aug-2017)-->
+  </query>
+
+  <query name="MNMVIW00023.SelectByTownship">
+    select distinct new custIDByDateDTO
+    (
+    Cust.CustID, 
+    Cust.Name, 
+    Cust.Nrc, 
+    Cust.FatherName, 
+    Cust.Address, 
+    Cust.TownShipDesp, 
+    Cust.CityDesp, 
+    Cust.StateDesp, 
+    Cust.Phone
+    )
+    from MNMVIW00023 as Cust
+    where convert(char(10),Cust.Date_Time,111) between convert(char(10),:startDate,111) and convert(char(10),:endDate,111) 
+    and Cust.SourceBr=:sourceBranch 
+    <!--and Cust.Cur=:currency //Commented by HWKO (25-Aug-2017)--> 
+    and Cust.TownShipDesp=:township
+  </query>
+
+
+  <query name="TCMVIW00011.VW_MOB18_ALL">
+    select new reportgeneratedto
+    (
+    mob.Eno,
+    mob.AccountNo,
+    mob.OrgneNo,
+    mob.Description,
+    mob.OtherBank,
+    mob.OtherBankChq,
+    mob.SourceCur,
+    mob.LocalAmount,
+    mob.DateTime
+    )
+    from TCMVIW00011 as mob
+    where Convert(char(10),mob.DateTime,111) between :startdate and :enddate and mob.TranCode=:trancode and mob.Status=:status and mob.WorkStation=:workstation and mob.SourceBr=:sourcebr and mob.Active=true
+  </query>
+
+ 
+
+
+
+  <query name="MNMVIW00025.SelectByGradeCurrentbyCurrency">
+    select new LedgerBalanceByGradeDTO
+    (
+    LB.AcctNo,
+    C.Name,
+    LB.CBal,
+    LB.OverDrawn_Amount,
+    LB.OvdLimit,
+    LB.Cur
+    )
+    from MNMVIW00025 as LB, MNMVIW00027 as C
+    where LB.AcctNo=C.AcctNo and  LB.CBal between :startAmount and :endAmount and LB.Cur=:currency and LB.SourceBr=:branch
+  </query>
+
+  <query name="MNMVIW00025.SelectByGradeCurrentbyAllCurrency">
+    select new LedgerBalanceByGradeDTO
+    (
+    LB.AcctNo,
+    C.Name,
+    LB.CBal,
+    LB.OverDrawn_Amount,
+    LB.OvdLimit,
+    LB.Cur
+    )
+    from MNMVIW00025 as LB, MNMVIW00027 as C
+    where LB.AcctNo=C.AcctNo and  LB.CBal between :startAmount and :endAmount and LB.SourceBr=:branch
+  </query>
+
+  <query name="MNMVIW00028.SelectByGradeSavingbyCurrency">
+    select new LedgerBalanceByGradeDTO
+    (
+    LB.AcctNo,
+    C.Name,
+    LB.CBal,
+    LB.OverDrawn_Amount,
+    LB.OvdLimit,
+    LB.Cur
+    )
+    from MNMVIW00028 as LB, MNMVIW00027 as C
+    where LB.AcctNo=C.AcctNo and  LB.CBal between :startAmount and :endAmount and LB.Cur=:currency and LB.SourceBr=:branch
+  </query>
+
+  <query name="MNMVIW00028.SelectByGradeSavingbyAllCurrency">
+    select new LedgerBalanceByGradeDTO
+    (
+    LB.AcctNo,
+    C.Name,
+    LB.CBal,
+    LB.OverDrawn_Amount,
+    LB.OvdLimit,
+    LB.Cur
+    )
+    from MNMVIW00028 as LB, MNMVIW00027 as C
+    where LB.AcctNo=C.AcctNo and  LB.CBal between :startAmount and :endAmount and LB.SourceBr=:branch
+  </query>
+
+  <query name="TCMVIW00052.MODIFY_DAILYREPORT_VW">
+    select new TCMDTO00052
+    (
+    D.Cur,
+    D.ReceiptCash,
+    D.ReceiptCashVou,
+    D.ReceiptTransfer,
+    D.ReceiptTransferVou,
+    D.ReceiptClearing,
+    D.ReceiptClearingVou,
+    D.PaymentCash,
+    D.PaymentCashVou,
+    D.PaymentTransfer,
+    D.PaymentTransferVou,
+    D.PaymentClearing,
+    D.PaymentClearingVou,
+    D.DrawingCash,
+    D.DrawingCashVou,
+    D.DrawingTransfer,
+    D.DrawingTransferVou,
+    D.EncashCash,
+    D.EncashCashVou,
+    D.EncashTransfer,
+    D.EncashTransferVou,
+    D.CashInHand,
+    D.CashWithCBM,
+    D.ACWithOthBank,
+    D.CurOpened,
+    D.CurClosed,
+    D.CurTotal,
+    D.CurOBal,
+    D.CurDep,
+    D.CurWith,
+    D.SavOpened,
+    D.SavClosed,
+    D.SavTotal,
+    D.SavOBal,
+    D.SavDep,
+    D.SavWith,
+    D.CalOpened,
+    D.CalClosed,
+    D.CalTotal,
+    D.CalOBal,
+    D.CalDep,
+    D.CalWith,
+    D.FixOpened,
+    D.FixClosed,
+    D.FixTotal,
+    D.FixOBal,
+    D.FixDep,
+    D.FixWith,
+    D.Date_Time,
+    D.D1_OTHERLOAN,
+    D.D1_CNGLOAN,
+    D.D1_OD,
+    D.D1_STAFFLOAN,
+    D.B_OTHERLOAN,
+    D.B_CNGLOAN,
+    D.B_OD,
+    D.B_STAFFLOAN,
+    D.R_0_OTHERLOAN,
+    D.R_0_CNGLOAN,
+    D.R_0_OD,
+    D.R_0_STAFFLOAN,
+    D.R_1_OTHERLOAN,
+    D.R_1_CNGLOAN,
+    D.R_1_OD,
+    D.R_1_STAFFLOAN,
+    D.R_2_OTHERLOAN,
+    D.R_2_CNGLOAN,
+    D.R_2_OD,
+    D.R_2_STAFFLOAN,
+    D.A1_OUTSTANDING,
+    D.A2_CNGLOAN,
+    D.A3_OD,
+    D.A4_OUTSTANDING
+    )
+    from TCMVIW00052 as D
+    Where D.Cur=:Cur and Convert(Char(10),D.Date_Time,111) = Convert(Char(10),:datetime,111)
+  </query>
+
+	<query name="MNMVIW00032.FAOFCustomerInfo">
+		select new custIDByDateDTO(vw.Name,vw.NRC,vw.CustomerId)
+		from MNMVIW00032 as vw
+		where vw.AccountNo=:accountNo
+	</query>
+
+	<query name="LOMVIW00001.GetLegalCaseListByAccountNo">
+		select new LegalDto
+		(
+		vw.AcctNo,
+		vw.Lno,
+		vw.AType,
+		vw.LegalDate,
+		vw.SAmt,
+		legal.Bal,
+		vw.LoansDesp,
+		vw.IntRate,
+		legal.OldInt,
+		legal.OldExtra,
+		legal.OldScharge,
+		legal.Interest,
+		legal.IntRate
+		)
+		from LOMVIW00001 as vw, LOMORM00013 as legal
+		where vw.AcctNo= :accountNo and legal.AcctNo = :accountNo and vw.Lno=legal.Lno
+		and vw.LegalCase=true and legal.CloseDate = null and vw.SourceBr= :sourceBr and legal.SourceBr= :sourceBr
+		and legal.Active=true
+	</query>
+
+	<query name="LOMVIW00002.SelectDataFromReportTlf">
+		select new reportgeneratedto
+		(
+		vw.AcctNo,
+		vw.Amount,
+		vw.DATE_TIME
+		)
+		from LOMVIW00002 as vw
+		where vw.AcctNo= :accountNo and vw.SourceBranch= :sourceBr
+		and Convert(Char(10),vw.DATE_TIME,111) between Convert(Char(10),:startDate,111) and Convert(Char(10),:endDate,111)
+		Order By Date_time
+	</query>
+
+  <query name="CXDAO00009.SelectDrawingRemittanceListByMonthlyClosingByReceiptDate">
+    select new rddto(vw.ReceiptDate,vw.DrawingNo,vw.RegisterNo,vw.Br_Alias,vw.Commision,vw.Amount,vw.DBank,vw.Total,vw.TLxCharges,vw.DateTime,vw.Currency,vw.SettlementDate,vw.OtherBank,
+    vw.Budget)
+    from MNMVIW00083 as vw
+    where vw.SourceBr = :sourceBr
+    and DATEPART(yyyy, vw.ReceiptDate)=:year
+    and DATEPART(MM, vw.ReceiptDate)=:month
+    and vw.Budget=:budget
+  </query>
+
+  <query name="CXDAO00009.SelectDrawingRemittanceListByMonthlyClosingBySettlementDate">
+    select new rddto(vw.ReceiptDate,vw.DrawingNo,vw.RegisterNo,vw.Br_Alias,vw.Commision,vw.Amount,vw.DBank,vw.Total,vw.TLxCharges,vw.DateTime,vw.Currency,vw.SettlementDate,vw.OtherBank,
+    vw.Budget)
+    from MNMVIW00083 as vw
+    where vw.SourceBr = :sourceBr
+    and DATEPART(yyyy, vw.SettlementDate)=:year
+    and DATEPART(MM, vw.SettlementDate)=:month
+    and vw.Budget=:budget
+  </query>
+
+  <query name="CXDAO00009.SelectEncashRemittanceListByMonthlyClosingByIssueDate">
+    select new redto(vw.IssueDate,vw.EncashNo,vw.Br_Alias,vw.RegisterNo,vw.Amount,vw.EBank,vw.DateTime,vw.Currency,vw.SettlementDate,vw.OtherBank,
+    vw.Budget)
+    from MNMVIW00084 as vw
+    where vw.SourceBr = :sourceBr
+    and DATEPART(yyyy, vw.IssueDate)=:year
+    and DATEPART(MM, vw.IssueDate)=:month
+    and vw.Budget=:budget
+  </query>
+
+  <query name="CXDAO00009.SelectEncashRemittanceListByMonthlyClosingBySettlementDate">
+    select new redto(vw.IssueDate,vw.EncashNo,vw.Br_Alias,vw.RegisterNo,vw.Amount,vw.EBank,vw.DateTime,vw.Currency,vw.SettlementDate,vw.OtherBank,
+    vw.Budget)
+    from MNMVIW00084 as vw
+    where vw.SourceBr = :sourceBr
+    and DATEPART(yyyy, vw.SettlementDate)=:year
+    and DATEPART(MM, vw.SettlementDate)=:month
+    and vw.Budget=:budget
+  </query>
+
+  <query name="CXDAO00009.SelectRateFileListByActive">
+    select new vintratedto(vw.CODE,vw.DURATION,vw.DESP,vw.RATE,vw.DATE_TIME,vw.USERNO,vw.STATUS)
+    from SAMVIW00001 as vw
+    where vw.STATUS = :status
+    order by vw.CODE
+  </query>
+ 
+  <query name="CXDAO00009.SelectRateFileList">
+    select new vintratedto(vw.CODE,vw.DURATION,vw.DESP,vw.RATE,vw.DATE_TIME,vw.USERNO,vw.STATUS)
+    from SAMVIW00001 as vw
+    where vw.CODE != ''
+  </query>
+  <query name="CXDAO00009.SelectRateFileListByRate">
+    select new vintratedto(vw.CODE,vw.DURATION,vw.DESP,vw.RATE,vw.DATE_TIME,vw.USERNO,vw.STATUS)
+    from SAMVIW00001 as vw
+    where vw.CODE = :rate
+  </query>
+
+	<query name="MNMVIW00071.SelectAll">
+		select new savingaccruedDTO
+		(
+		vw.AccountNo,
+		vw.CloseDate,
+		vw.CurrencyCode,
+		vw.Amount,
+		vw.ACNAME
+		)
+		from MNMVIW00071 as vw
+		where vw.Amount > 0 and
+		vw.CloseDate = null and vw.Active=true
+	</query>
+
+	<query name="MNMVIW00072.SelectAll">
+		select new savingaccruedDTO
+		(
+		vw.AcctNo,
+		vw.Type,
+		vw.Date_Time,
+		vw.Cur,
+		vw.Amount,
+		vw.ACNAME
+		)
+		from MNMVIW00072 as vw
+		where convert(char(10),vw.Date_Time,111) between convert(char(10),:startDate,111) and convert(char(10),:endDate,111)
+	</query>
+
+	<query name="MNMVIW00072.SelectByCash">
+		select new savingaccruedDTO
+		(
+		vw.AcctNo,
+		vw.Type,
+		vw.Date_Time,
+		vw.Cur,
+		vw.Amount,
+		vw.ACNAME
+		)
+		from MNMVIW00072 as vw
+		where convert(char(10),vw.Date_Time,111) between convert(char(10),:startDate,111) and convert(char(10),:endDate,111)
+		and vw.Type='C'
+	</query>
+
+	<query name="MNMVIW00072.SelectByTransfer">
+		select new savingaccruedDTO
+		(
+		vw.AcctNo,
+		vw.Type,
+		vw.Date_Time,
+		vw.Cur,
+		vw.Amount,
+		vw.ACNAME
+		)
+		from MNMVIW00072 as vw
+		where convert(char(10),vw.Date_Time,111) between convert(char(10),:startDate,111) and convert(char(10),:endDate,111)
+		and vw.Type='T'
+	</query>
+	<query name="MNMVIW00085.SelectByTransactionDate">
+		select new fixinwithdto
+		(
+		vw.AccountNo,
+		vw.Amount,
+		vw.Date_Time,
+		vw.CreditAccountNo,
+		vw.SourceBranchCode,
+		vw.Currency,
+		vw.SettlementDate
+		)
+		from MNMVIW00085 as vw
+		where convert(char(10),vw.Date_Time,111) between convert(char(10),:startDate,111) and convert(char(10),:endDate,111)
+		and vw.SourceBranchCode=:sourceBr
+	</query>
+
+	<query name="MNMVIW00085.SelectBySettlementDate">
+		select new fixinwithdto
+		(
+		vw.AccountNo,
+		vw.Amount,
+		vw.Date_Time,
+		vw.CreditAccountNo,
+		vw.SourceBranchCode,
+		vw.Currency,
+		vw.SettlementDate
+		)
+		from MNMVIW00085 as vw
+		where convert(char(10),vw.SettlementDate,111) between convert(char(10),:startDate,111) and convert(char(10),:endDate,111)
+		and vw.SourceBranchCode=:sourceBr
+	</query>
+	
+</hibernate-mapping>

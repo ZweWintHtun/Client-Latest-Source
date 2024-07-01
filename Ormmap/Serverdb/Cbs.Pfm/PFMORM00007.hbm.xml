@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00007, Ace.Cbs.Pfm.Dmd" rename="fixratedto"/>
+
+  <class name="PFMORM00007" table="[FixRate]">
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+
+    <property name="Description">
+      <column name="Desp" sql-type="nvarchar" not-null="true" />
+    </property>
+    
+    <property name="DATE_TIME">
+      <column name="DATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+    
+    <property name="IsLastModify">
+      <column name="LASTMODIFY" sql-type="bit" not-null="false" />
+    </property>
+    
+    <property name="UserNumber">
+      <column name="USERNO" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="Rate">
+      <column name="Rate" sql-type="numeric" not-null="true" />
+    </property>
+    
+    <property name="Duration">
+      <column name="Duration" sql-type="numeric" not-null="true" />
+    </property>
+    
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+	<!--//FixRate.CheckExist//-->
+	<query name="FixRateDAO.CheckExist">
+		select new fixratedto( f.Id,f.Description,f.DATE_TIME,f.IsLastModify,f.UserNumber,f.Rate,f.Duration )
+		from PFMORM00007 as f where ( f.Duration =: duration or f.Description =: desc)  and  f.Active = true
+		<!--from PFMORM00007 as f where ( f.Duration =: duration or f.Description =: desc or f.Rate =: rate )  and  f.Active = true-->
+	</query>
+
+	<!--//FixRate.CheckExist//
+	<query name="FixRateDAO.CheckExist">
+		select new fixratedto( f.Id,f.Description,f.DATE_TIME,f.IsLastModify,f.UserNumber,f.Rate,f.Duration )
+		from PFMORM00007 as f where ( f.Duration =: duration or f.Description =: desc)  and  f.Active = true
+	</query>-->
+
+	<!--//FixRateDAO.SelectAll//-->
+	<query name="FixRateDAO.SelectAll">
+    select new fixratedto(
+    f.Id,
+    f.Description,
+    f.DATE_TIME,
+    f.IsLastModify,
+    f.UserNumber,
+    f.Rate,
+    f.Duration,
+    f.Active,
+    f.TS,
+    f.CreatedDate,
+    f.CreatedUserId,
+    f.UpdatedDate,
+    f.UpdatedUserId
+    )
+    from PFMORM00007 as f
+    where f.Active = true
+    order by f.Duration
+  </query>
+
+	<!--//FixRateDAO.SelectById//-->
+	<query name="FixRateDAO.SelectById">
+		select new fixratedto(
+		f.Id,
+		f.Description,
+		f.DATE_TIME,
+		f.IsLastModify,
+		f.UserNumber,
+		f.Rate,
+		f.Duration,
+		f.Active,
+		f.TS,
+		f.CreatedDate,
+		f.CreatedUserId,
+		f.UpdatedDate,
+		f.UpdatedUserId
+		)
+		from PFMORM00007 as f
+		where f.Id = :id
+		and f.Active = true
+	</query>
+
+	<!--//FixRate.SelectDescription//-->
+	<query name="FixRateDAO.SelectDescription">
+		select new fixratedto(f.Description)
+		from PFMORM00007 as f where f.Duration =:duration and  f.Active = true
+	</query>
+	
+</hibernate-mapping>

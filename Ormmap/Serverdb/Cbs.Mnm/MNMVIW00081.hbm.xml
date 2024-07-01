@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  
+  <import class="Ace.Cbs.Mnm.Dmd.MNMDTO00035, Ace.Cbs.Mnm.Dmd" rename="freceiptdto"/>
+  <class name="MNMVIW00081" table="VW_FIXED_RENEWAL_STATUS" mutable="false">
+
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+
+    <property name="AcctNo">
+      <column name="ACCTNO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="Rno">
+      <column name="RNO" sql-type="numeric" not-null="true" />
+    </property>
+
+    <property name="RDate">
+      <column name="RDATE" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="Desp">
+      <column name="DESP" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="MDate">
+      <column name="MATUREDATE" sql-type="datetime" not-null="false" />
+    </property>
+
+
+    <property name="Cur">
+      <column name="CUR" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="Amount">
+      <column name="AMOUNT" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="Renstat">
+      <column name="RENSTAT" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="Accruedstatus">
+      <column name="ACCRUEDSTATUS" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="ToAccountNo">
+      <column name="TOACCTNO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="SourceBr">
+      <column name="SOURCEBR" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Active" not-null="true"/>
+  </class>
+
+
+
+  <!--//MNMVEW00152.SelectFixedRenewalByOnlyPrinciple//-->
+  <query name="MNMVIW00152.SelectFixedRenewalByOnlyPrinciple">
+    SELECT distinct new freceiptdto
+    (
+    fr.AcctNo,
+    fr.Rno,
+    fr.RDate,
+    fr.Desp,
+    fr.MDate,
+    fr.Amount,
+    fr.Renstat,
+    fr.ToAccountNo
+    )
+    From MNMVIW00081  as fr
+    Where CONVERT(char(10),fr.RDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and fr.Active=true
+    and Accruedstatus = :accruedstatus
+    and fr.SourceBr = :sourceBr
+    and fr.Cur = :cur
+    order by fr.AcctNo,fr.RDate,fr.Rno
+
+
+  </query>
+
+</hibernate-mapping>

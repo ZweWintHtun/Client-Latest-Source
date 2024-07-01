@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Windows.Admin.DataModel" namespace="Ace.Windows.Admin.DataModel" xmlns="urn:nhibernate-mapping-2.2">
+	<import class="Ace.Windows.Admin.DataModel.MenuDTO" rename="menudto"/>
+	
+	<class name="Menu" table="[Menu]"   >
+		<id name="Id" type="Int32" unsaved-value="0">
+			<generator class="increment">
+			</generator>
+		</id>
+		
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="false"/>
+		</version>
+		
+		<property name="MenuName">
+			<column name="MenuName" sql-type="nvarchar" not-null="true" />
+		</property>
+		
+		<property name="Description">
+			<column name="Description" sql-type="nvarchar" not-null="true" />
+		</property>
+		
+		<property name="ShortcutKey">
+			<column name="ShortcutKey" sql-type="nvarchar"/>
+		</property>
+		
+		<property name="Image">
+			<column name="Image" sql-type="image" not-null="false" />
+		</property>
+		
+		<property name="ParentMenuId">
+			<column name="ParentMenuId" sql-type="int"/>
+		</property>
+		
+		<many-to-one name="ParentMenu" column="ParentMenuId" insert="false" update="false"></many-to-one>
+
+		<property name="ProgramId">
+			<column name="ProgramId" sql-type="int"/>
+		</property>
+		
+		<many-to-one name="Program" column="ProgramId" class="Program" insert="false" update="false"></many-to-one>
+
+		<property name="SerialNo">
+			<column name="SerialNo" sql-type="int" not-null="true" />
+		</property>
+
+    <bag name="QuickAccessMenus" inverse="true" lazy="true" cascade="all">
+      <key column="MenuId" />
+      <one-to-many class="QuickAccessMenu" />
+    </bag>
+    
+		<bag name="MenuInGroups" inverse="true" cascade="all" >
+			<key column="MenuId" />
+			<one-to-many class="MenuInGroup" />
+		</bag>
+		
+		<bag name="ProgramInMenus" inverse="true" cascade="all" >
+			<key column="MenuId" />
+			<one-to-many class="ProgramInMenu" />
+		</bag>
+		
+		<property name="Active" not-null="true" />
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+		
+	</class>
+	
+	<!--//MenuDAO.CheckChildMenuExist//-->
+	<query name="MenuDAO.CheckChildMenuExist">
+		select new menudto(m.Id)
+		from Menu as m
+		where m.ParentMenuId = :parentMenuId
+		and m.MenuName = :menuname
+		and m.Active = true
+	</query>
+
+	<!--//MenuDAO.CheckParentMenuExist//-->
+	<query name="MenuDAO.CheckParentMenuExist">
+		select new menudto(m.Id)
+		from Menu as m
+		where m.ParentMenuId = null
+		and m.MenuName = :menuname
+		and m.Active = true
+	</query>
+
+	<!--//MenuDAO.GetMaxChildSerialNo//-->
+	<query name="MenuDAO.GetMaxChildSerialNo">
+		select max(m.SerialNo)
+		from Menu as m
+		where m.ParentMenuId = :parentMenuId
+		and m.Active = true		
+	</query>
+
+	<!--//MenuDAO.GetMaxParentSerialNo//-->
+	<query name="MenuDAO.GetMaxParentSerialNo">
+		select max(m.SerialNo)
+		from Menu as m
+		where m.ParentMenuId = null
+		and m.Active = true		
+	</query>
+	
+	<!--//MenuDAO.GetLowerAdjacentMenuForChild//-->
+	<query name="MenuDAO.GetLowerAdjacentMenuForChild">
+		from Menu as m
+		where m.ParentMenuId = :parentMenuId
+		and m.Id != :id
+		and m.SerialNo > :serialNo
+		and m.Active = true
+		order by m.SerialNo asc
+	</query>
+
+	<!--//MenuDAO.GetLowerAdjacentMenuForParent//-->
+	<query name="MenuDAO.GetLowerAdjacentMenuForParent">
+		from Menu as m
+		where m.ParentMenuId = null
+		and m.Id != :id
+		and m.SerialNo > :serialNo
+		and m.Active = true
+		order by m.SerialNo asc
+	</query>
+	
+	<!--//MenuDAO.GetUpperAdjacentMenuForChild//-->
+	<query name="MenuDAO.GetUpperAdjacentMenuForChild">
+    <![CDATA[
+		from Menu as m
+		where m.ParentMenuId = :parentMenuId
+		and m.Id != :id
+		and m.SerialNo < :serialNo
+		and m.Active = true
+		order by m.SerialNo desc
+    ]]>
+	</query>
+	
+	<!--//MenuDAO.GetUpperAdjacentMenuForParent//-->
+	<query name="MenuDAO.GetUpperAdjacentMenuForParent">
+		<![CDATA[
+		from Menu as m
+		where m.ParentMenuId = null
+		and m.Id != :id
+		and m.SerialNo < :serialNo
+		and m.Active = true
+		order by m.SerialNo desc
+		]]>
+	</query>
+	
+	<!--//MenuDAO.CheckShortCutKeyAvailable//-->
+	<query name="MenuDAO.CheckShortCutKeyAvailable">
+		select new menudto(m.Id)
+		from Menu as m
+		where m.ShortcutKey = :shortcutkey
+		and m.Active = true
+	</query>
+
+	<!--//MenuDAO.SelectMenuDTOById//-->
+	<query name="MenuDAO.SelectMenuDTOById">
+		select new menudto(
+		m.Id, 
+		m.MenuName, 
+		m.Description, 
+		m.ShortcutKey, 
+		m.ParentMenuId, 
+		m.ProgramId, 
+		m.SerialNo, 
+		m.Image, 
+		m.Active, 
+		m.CreatedUserId, 
+		m.CreatedDate, 
+		m.TS, 
+		m.UpdatedUserId, 
+		m.UpdatedDate)
+		from Menu as m
+		where m.Id = :id
+		and m.Active = true
+	</query>
+
+	<!--//MenuDAO.SelectById//-->
+	<query name="MenuDAO.SelectById">
+		from Menu as m
+		where m.Id = :id
+		and m.Active = true
+	</query>
+
+	<!--//MenuDAO.GetMenuByUserId//-->
+	<!--<query name="MenuDAO.GetMenuByUserId">
+		select new menudto(
+		m.Id,
+		m.MenuName,
+		m.Description,
+		m.ShortcutKey,
+		m.ParentMenuId,
+		m.ProgramId,
+		m.SerialNo,
+		m.Image,
+		p.ProgramName,
+		p.ProgramPath
+		)
+		from Menu as m	
+		left join m.Program as p
+		where m.Active = true
+		and m.Id in
+		(select distinct mg.MenuId
+		from User as u
+		inner join u.Roles as r
+		inner join r.Group as g
+		inner join g.MenuInGroups as mg
+		where u.Id = :userid
+		and mg.CanView = true)
+	</query>-->
+
+	<!--//MenuDAO.SelectList//-->
+	<query name="MenuDAO.SelectList">
+		select new menudto(
+		m.Id,
+		m.MenuName,
+		m.Description,
+		m.ProgramId,
+		m.CreatedDate,
+		m.UpdatedDate,
+		p.ProgramName,
+		p.ProgramPath
+		)
+		from Menu as m
+		left join m.Program as p
+		where m.Active = true
+                and p.Active = true
+		
+	</query>
+
+	<!--//MenuDAO.SelectForTreeView//-->
+	<query name="MenuDAO.SelectForTreeView">
+		select new menudto (
+		m.Id, 
+		m.MenuName, 
+		m.Description, 
+		m.ShortcutKey, 
+		m.ParentMenuId, 
+		m.ProgramId, 
+		m.SerialNo, 
+		m.Image)
+		from Menu as m
+		where m.Active = true
+		order by m.SerialNo asc, m.ParentMenuId asc
+	</query>
+	
+</hibernate-mapping>

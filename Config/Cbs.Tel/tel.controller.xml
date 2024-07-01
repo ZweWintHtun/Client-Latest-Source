@@ -1,0 +1,1114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+	<description>
+		Controller Objects Settings
+	</description>
+
+	<!-- Clearing Delivered & Receipt Entry -->
+	<object id="ClearingDeliveredReceiptController" type="Ace.Cbs.Tel.Ptr.TLMCTL00006, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="ClearingDeliveredReceiptErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="ClearingDeliveredReceipt.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="cboCurrency">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="CurrencyCode"/>
+					</object>
+				</entry>
+				<entry key="mtxtAccountNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="AccountNo"/>
+						<property name="CustomValidatingMethod" value="mtxtAccountNo_CustomValidating"/>
+					</object>
+				</entry>
+				<entry key="mtxtReceiptAccountNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="ReceiptAccountNo"/>
+						<property name="CustomValidatingMethod" value="mtxtReceiptAccountNo_CustomValidating"/>
+					</object>
+				</entry>
+				<entry key="cboOtherBank">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="OtherBank"/>
+						<property name="CustomValidatingMethod" value="cboOtherBank_CustomValidating"/>
+					</object>
+				</entry>
+				<entry key="txtAmount">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Amount"/>
+						<property name="CustomValidatingMethod" value="txtAmount_CustomValidating"/>
+					</object>
+				</entry>
+				<entry key="txtChequeNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="ChequeNo"/>
+						<property name="CustomValidatingMethod" value="txtChequeNo_CustomValidating"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+	<!--PO Issue Entry-->
+	<object id ="POIssueEntryController" type="Ace.Cbs.Tel.Ptr.TLMCTL00015, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<property name ="ErrorProvider">
+			<object id="POIssueEntryErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name ="Validator" ref="POIssueEntry.Validator"/>
+				<property name="DefaultErrorValidationType" value="Single"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="cboCurrency">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Currency"/>
+					</object>
+				</entry>
+				<entry key="txtAmount">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Amount"/>
+						<!--<property name="DefaultErrorValidationType" value="Single"/>
+						<property name="CustomValidatingMethod" value="mtxtAccountNo_CustomValidating"/>
+						<property name="DefaultErrorValidationType" value="Single"/>-->
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+	<!-- RemittanceCalculator Validator -->
+	<object id ="RemittanceCalculatorController" type="Ace.Cbs.Tel.Ptr.TLMCTL00008, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<property name ="ErrorProvider">
+			<object id="RemittanceCalculatorErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name ="Validator" ref="RemittanceCalcutator.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="cboBranchNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="SourceBranchCode"/>
+					</object>
+				</entry>
+				<entry key="cboCurrency">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="CurrencyCode"/>
+					</object>
+				</entry>
+				<entry key="txtAmount">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="CurrentBal"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+	<!-- Remittance Encash Validator -->
+	<object id ="EncashRemittanceController" type="Ace.Cbs.Tel.Ptr.TLMCTL00020, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<property name ="ErrorProvider">
+			<object id="EncashRemittanceErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name ="Validator" ref="EncashRemittance.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="cboRegisterNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="RegisterNo"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+	<!-- DrawingAndEncashPassing Validator -->
+	<object id ="DrawingAndEncashPassingController" type="Ace.Cbs.Tel.Ptr.TLMCTL00017, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<property name ="ErrorProvider">
+			<object id="DrawingAndEncashPassingeErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name ="Validator" ref="DrawingAndEncashPassing.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+			</dictionary>
+		</property>
+	</object>
+
+	<!-- Account Information Validator -->
+	<object id ="AccountInformationController" type="Ace.Cbs.Tel.Ptr.TLMCTL00042, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<property name ="ErrorProvider">
+			<object id="AccountInformationErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name ="Validator" ref="AccountInformation.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="txtEnquiryAccountNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="AccountNo"/>
+						<property name="CustomValidatingMethod" value="txtEnquiryAccountNo_CustomValidating"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+	<!--  Deposit Form -->
+	<object id ="DepositController" type="Ace.Cbs.Tel.Ptr.TLMCTL00010, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="DepositErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="Deposit.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<!--<entry key="gvDepositInformation">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="CustomValidatingMethod" value="gvDeposit_CustomValidating"/>
+					</object>
+				</entry>-->
+				<entry key="mtxtAccountNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="AccountNo"/>
+						<property name="CustomValidatingMethod" value="mtxtAccountNo_CustomValidating"/>
+					</object>
+				</entry>
+				<entry key="cboCurrency">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Currency"/>
+            <property name="CustomValidatingMethod" value="cboCurrency_CustomValidating"/>            
+          </object>
+				</entry>
+				<entry key="txtNarration">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Narration"/>
+					</object>
+				</entry>
+				<entry key="txtAmount">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Amount"/>
+						<property name="CustomValidatingMethod" value="txtAmount_CustomValidating"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+	<!--Deno From-->
+	<object id="DenoController" type="Ace.Cbs.Tel.Ptr.TLMCTL00011, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+	</object>
+
+	<!--Deno Refund From-->
+	<object id="DenoRefundController" type="Ace.Cbs.Tel.Ptr.TLMCTL00012, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+	</object>
+
+	<!--  Transfer Form -->
+	<object id ="TransferController" type="Ace.Cbs.Tel.Ptr.TLMCTL00003, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="TransferErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="Transfer.Validator"/>
+				<property name="CustomValidatingMethod" value="gvTransferInformation_CustomValidating"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="mtxtAccountNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="AccountNo"/>
+						<property name="CustomValidatingMethod" value="mtxtAccountNo_CustomValidating"/>
+					</object>
+				</entry>
+				<entry key="cboCurrency">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Currency"/>
+            <property name="CustomValidatingMethod" value="cboCurrency_CustomValidating"/>
+					</object>
+				</entry>
+				<entry key="txtNarration">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Narration"/>
+					</object>
+				</entry>
+				<entry key="txtChequeNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="ChequeNo"/>
+						<property name="CustomValidatingMethod" value="txtChequeNo_Validating" />
+					</object>
+				</entry>
+				<entry key="txtAmount">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Amount"/>
+						<property name="CustomValidatingMethod" value="txtAmount_CustomValidating"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+  <!--  HP Interest Prepayment Controller //Added by HWKO (13-Sep-2017) -->
+  <object id ="HPIntPrepaymentController" type="Ace.Cbs.Tel.Ptr.TLMCTL00081, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="HPIntPrepaymentErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="HPIntPrepayment.Validator"/>
+        <property name="CustomValidatingMethod" value="gvTransferInformation_CustomValidating"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="mtxtAccountNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="AccountNo"/>
+            <property name="CustomValidatingMethod" value="mtxtAccountNo_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Currency"/>
+            <property name="CustomValidatingMethod" value="cboCurrency_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtNarration">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Narration"/>
+          </object>
+        </entry>
+        <entry key="txtAmount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Amount"/>
+            <property name="CustomValidatingMethod" value="txtAmount_CustomValidating"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+	<!--  Domestic Vouncher Entry Form -->
+	<object id ="DomesticVoucherController" type="Ace.Cbs.Tel.Ptr.TLMCTL00001, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="DomesticVoucherErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="DomesticVoucher.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="cboCurrency">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="CurrencyCode"/>
+					</object>
+				</entry>
+				<entry key="mtxtAccountNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="AccountNo"/>
+						<property name="CustomValidatingMethod" value="mtxtAccountNo_CustomValidating"/>
+					</object>
+				</entry>
+				<entry key="txtNarration">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Narration"/>
+					</object>
+				</entry>
+				<entry key="txtAmount">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Amount"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+	<!--Fixed Deposit Withdrawal Form-->
+	<object id="FixedDepositWithdrawalController" type="Ace.Cbs.Tel.Ptr.TLMCTL00013, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="FixedDepositWithdrawErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="FixedDepositWithdraw.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="mtxtAccountNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="AccountNo"/>
+						<property name="CustomValidatingMethod" value="mtxtAccountNo_CustomValidating"/>
+					</object>
+				</entry>
+				<entry key="cboReceiptNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="ReceiptNo"/>
+            <property name="CustomValidatingMethod" value="cboReceiptNo_CustomValidating"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+	<!--Fixed Deposit Deposit Form-->
+	<object id="FixedDepositDepositController" type="Ace.Cbs.Tel.Ptr.TLMCTL00009, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="FixedDepositDepositErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="FixedDepositDeposit.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="mtxtAccountNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="AccountNo"/>
+						<property name="CustomValidatingMethod" value="mtxtAccountNo_CustomValidating"/>
+					</object>
+				</entry>
+				<entry key="cboReceiptNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="ReceiptNo"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+	<!--Clearing Voucher Controller-->
+	<object id="ClearingVoucherController" type="Ace.Cbs.Tel.Ptr.TLMCTL00021, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="ClearingVoucherErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="ClearingVoucher.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="mtxtAccountNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="AccountNo"/>
+						<property name="CustomValidatingMethod" value="mtxtAccountNo_CustomValidating"/>
+					</object>
+				</entry>
+				<entry key="cboCurrency">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="CurrencyCode"/>
+					</object>
+				</entry>
+				<entry key="txtNarration">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Narration"/>
+					</object>
+				</entry>
+				<entry key="txtAmount">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Amount"/>
+					</object>
+				</entry>
+
+			</dictionary>
+		</property>
+	</object>
+
+	<object id="POOutstandingNormalReportController" type="Ace.Cbs.Tel.Ptr.TLMCTL00045, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+	</object>
+
+	<!--Withdrawal Controller-->
+	<object id="WithdrawalController" type="Ace.Cbs.Tel.Ptr.TLMCTL00014, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="WithdrawEntryErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="WithdrawlEntry.Validator"/>
+				<!--<property name="CustomValidatingMethod" value="gvMultiAccountWithdrawl_CustomValidating"/>-->
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CurrencyCode"/>
+            <property name="CustomValidatingMethod" value="cboCurrency_CustomValidating"/>
+          </object>
+        </entry>
+				<entry key="mtxtAccountNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="AccountNo"/>
+						<property name="CustomValidatingMethod" value="mtxtAccountNo_CustomValidating"/>
+					</object>
+				</entry>
+        <!--<entry key="txtChequeNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="ChequeNo"/>
+            <property name="CustomValidatingMethod" value="txtChequeNo_CustomValidating"/>
+          </object>
+        </entry> // Comment by HWKO (17-Aug-2017)-->
+        <entry key="txtAmount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Amount"/>
+			  <property name="CustomValidatingMethod" value="txtAmount_CustomValidating"/>
+          </object>
+        </entry>				
+			</dictionary>
+		</property>
+
+	</object>
+
+	<object id="WithdrawalListingByAllController" type="Ace.Cbs.Tel.Ptr.TLMCTL00027, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="WithdrawalListingByAllErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="WithdrawalListingByAll.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="mtxtAccountNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="AcctNo"/>
+						<property name="CustomValidatingMethod" value="mtxtAccountNo_CustomValidating"/>
+					</object>
+				</entry>
+				<entry key="mtxtEnterTellerNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="CounterNo"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+	<!--Drawing Remittance Voucher Form-->
+	<object id="DrawingRemittanceVoucherController" type="Ace.Cbs.Tel.Ptr.TLMCTL00019, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<!--<property name="ErrorProvider">
+			<object id="DrawingRemittanceVoucherErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="DrawingRemittanceVoucher.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">	
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="cboRegisterNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="RegisterNo"/>
+						<property name="CustomValidatingMethod" value="cboRegisterNo_CustomValidating"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>-->
+	</object>
+
+	<!--PO Receipt Validators Start-->
+	<object id="POReceiptController" type="Ace.Cbs.Tel.Ptr.TLMCTL00007, Ace.Cbs.Tel.Ptr" parent="AbstractController"  singleton="false">
+		<property name="ErrorProvider">
+			<object id="POReceiptErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="POReceipt.Validator"/>
+			</object>
+      
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="txtPaymentOrderNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="PaymentOrderNo"/>
+            <!--<property name="CustomValidatingMethod" value="txtPaymentOrderNo_CustomValidating"/>-->
+            <property name="CustomValidatingMethod" value="txtBudgetYear_CustomValidating"/>
+					</object>
+				</entry>
+        <entry key="cboReceivedBank">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="OtherBank"/>
+          </object>
+        </entry>
+				<entry key="txtAmount">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Amount"/>
+						<property name="CustomValidatingMethod" value="txtAmount_CustomValidating"/>
+					</object>
+				</entry>
+				<entry key="mtxtReceivedAccountNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="OtherBankAcctNo"/>
+						<!--<property name="Providers" value="ReceivedAccountNo"/>-->
+					</object>
+				</entry>
+				<entry key="txtBudgetYear">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Budget"/>
+						<property name="CustomValidatingMethod" value="txtBudgetYear_CustomValidating"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+	<!--PO Receipt Validators End-->
+	<object id="BankstatementListingByDateController" type="Ace.Cbs.Tel.Ptr.TLMCTL00031, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="BankstatementListingByDateErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="BankStatementListingByDate.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="mtxtAccountNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="AccountNo"/>
+						<property name="CustomValidatingMethod" value="mtxtAccountNo_CustomValidating"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+	<!--PO Refund By Cash-->
+	<object id="PORefundByCashController" type="Ace.Cbs.Tel.Ptr.TLMCTL00016, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="PORefundByCashErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="PORefundByCash.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="cboCurrency">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="CurrencyCode"/>
+					</object>
+				</entry>
+				<entry key="txtPaymentOrderNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="PaymentOrderNo"/>
+            <property name="CustomValidatingMethod" value="txtBudgetYear_CustomValidating"/><!--Modified by HWH-->
+					<!--<property name="CustomValidatingMethod" value="txtPaymentOrderNo_CustomValidating"/> -->
+					</object>
+				</entry>
+				<entry key="txtBudgetYear">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="BudgetYear"/>
+						<property name="CustomValidatingMethod" value="txtBudgetYear_CustomValidating"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+	<object id="DrawingRemittanceEntryController" type="Ace.Cbs.Tel.Ptr.TLMCTL00018, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="DrawingRemittanceEntryErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="DrawingRemittanceEntry.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="cboCurrency">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="CurrencyCode"/>
+					</object>
+				</entry>
+
+				<entry key="txtName">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Name"/>
+					</object>
+				</entry>
+
+				<entry key="txtNRC">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="NRC"/>
+					</object>
+				</entry>
+				<entry key="txtAddress">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Address"/>
+					</object>
+				</entry>
+
+				<entry key="txtPhone">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="PhoneNo"/>
+					</object>
+				</entry>
+
+				<entry key="mtxtAccountNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="AccountNo"/>
+						<property name="CustomValidatingMethod" value="mtxtAccountNo_CustomValidating"/>
+					</object>
+				</entry>
+				<entry key="txtTotalAmount">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="TotalAmount"/>
+						<property name="CustomValidatingMethod" value="txtTotalAmount_CustomValidating"/>
+					</object>
+				</entry>
+
+				<entry key="txtChequeNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="ChequeNo"/>
+						<property name="CustomValidatingMethod" value="txtChequeNo_CustomValidating"/>
+					</object>
+				</entry>
+
+				<entry key="txtNarration">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Narration"/>
+					</object>
+				</entry>
+
+			</dictionary>
+		</property>
+	</object>
+
+	<!--Counter Withdrawal Entry-->
+	<object id="CounterWithdrawalEntryController" type="Ace.Cbs.Tel.Ptr.TLMCTL00005, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="CounterWithdrawalEntryErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="CounterWithdrawal.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="cboCurrency">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Currency"/>
+					</object>
+				</entry>
+				<entry key="ntxtAmount">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Amount"/>
+            <!--<property name="CustomValidatingMethod" value="ntxtAmount_CustomValidating"/>-->
+					</object>
+				</entry>
+
+			</dictionary>
+		</property>
+
+	</object>
+
+	<object id="IBLReconcileController" type="Ace.Cbs.Tel.Ptr.TLMCTL00033, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+	</object>
+
+	<!--Vault Withdrawl Denomination-->
+	<object id="VaultWithdrawlDenominationController" type="Ace.Cbs.Tel.Ptr.TLMCTL00004, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="VaultWithdrawlDenominationErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="VaultWithdrawlDenomination.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">				
+				<entry key="ntxtDebitFromAmount">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="DebitAmount"/>
+						<property name="CustomValidatingMethod" value="ntxtDebitFromAmount_CustomValidate"/>
+					</object>
+				</entry>
+        <entry key="ntxtCreditToAmount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CreditAmount"/>
+          </object>
+        </entry>
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Currency"/>
+          </object>
+        </entry>
+				<entry key="cboTo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="ToType"/>
+					</object>
+				</entry>
+				<entry key="cboFrom">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="FromType"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+	<object id="BankCashScrollController" type="Ace.Cbs.Tel.Ptr.TLMCTL00035, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="BankCashScrollErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="BankCashScroll.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="cboBranchNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="SourceBranch"/>
+					</object>
+				</entry>
+				<entry key="cboCurrency">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="CurCode"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+	<object id="CenterTableDepositApproveController" type="Ace.Cbs.Tel.Ptr.TLMCTL00041, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+	</object>
+
+	<object id="BankStatementListingReportController" type="Ace.Cbs.Tel.Ptr.TLMCTL00051, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+	</object>
+
+	<object id ="EncashRemitRegistrationController" type="Ace.Cbs.Tel.Ptr.TLMCTL00002, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="EncashRemitRegistrationErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="EncashRemitRegistration.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="cboPaidBank">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Ebank"/>
+						<property name="CustomValidatingMethod" value="cboPaidBank_CustomValidating"/>
+					</object>
+				</entry>
+				<entry key="cboCurrency">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Currency"/>
+						<property name="CustomValidatingMethod" value="cboCurrency_CustomValidating"/>
+					</object>
+				</entry>
+				<entry key="txtEncashAmount">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Amount"/>
+						<property name="CustomValidatingMethod" value="txtEncashAmount_CustomValidating"/>
+					</object>
+				</entry>
+				<entry key="txtRegisterNo">	
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="RegisterNo"/>
+						<property name="CustomValidatingMethod" value="txtRegisterNo_CustomValidating"/>
+				    </object>
+				</entry>
+				<entry key="txtRemitterName">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Name"/>
+					</object>
+				</entry>
+				<entry key="txtRemitterNRCNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="NRC"/>
+					</object>
+				</entry>
+				<entry key="txtRemitterPhone">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="PhoneNo"/>
+					</object>
+				</entry>
+				<entry key="txtPayeeName">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="ToName"/>
+					</object>
+				</entry>
+				<entry key="txtPayeeNRC">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="ToNRC"/>
+					</object>
+				</entry>
+				<entry key="txtPayeeAddress">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="ToAddress"/>
+					</object>
+				</entry>				
+			</dictionary>
+		</property>
+
+	</object>
+	
+  <object id="DenoOutstandingReportViewController" type="Ace.Cbs.Tel.Ptr.TLMCTL00043, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+	</object>
+
+	<object id="IBLTestKeyListingController" type="Ace.Cbs.Tel.Ptr.TLMCTL00050, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+	</object>
+
+	<object id="DenominationOutstandingMultipleTransactionController" type="Ace.Cbs.Tel.Ptr.TLMCTL00044, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+	</object>
+	
+  <object id="PrintRemainTransactionController" type="Ace.Cbs.Tel.Ptr.TLMCTL00072, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="PrintRemainTransactionErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="PrintRemainTransaction.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="mtxtAccountNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="AccountNo"/>
+						<property name="CustomValidatingMethod" value="mtxtAccountNo_CustomValidating"/>
+					</object>
+				</entry>
+
+			</dictionary>
+		</property>
+	</object>
+
+	<!--Region NMS-->
+	<object id="DepositByAllController" type="Ace.Cbs.Tel.Ptr.TLMCTL00063, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+	</object>
+
+	<object id="IncomeListingController" type="Ace.Cbs.Tel.Ptr.TLMCTL00048, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+	</object>
+
+	<object id="OnlineTransacionListingController" type="Ace.Cbs.Tel.Ptr.TLMCTL00047, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+	</object>
+
+	<object id="TransactionListingByBranchController" type="Ace.Cbs.Tel.Ptr.TLMCTL00046, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+	</object>
+
+	<object id="DepositByAccountNoController" type="Ace.Cbs.Tel.Ptr.TLMCTL00064, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+	</object>
+
+	<object id="DepositByAccountTypeController" type="Ace.Cbs.Tel.Ptr.TLMCTL00065, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+	</object>
+
+	<object id="EncashOutstandingController" type="Ace.Cbs.Tel.Ptr.TLMCTL00059, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+	</object>
+	<object id="DrawingOutstandingController" type="Ace.Cbs.Tel.Ptr.TLMCTL00057, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+	</object>
+
+  <object id="CurrentDayBookController" type="Ace.Cbs.Tel.Ptr.TLMCTL00053, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <object id="SavingDayBookController" type="Ace.Cbs.Tel.Ptr.TLMCTL00054, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <object id="DomesticDayBookController" type="Ace.Cbs.Tel.Ptr.TLMCTL00055, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+  </object>
+	<!-- EndRegion -->
+
+	<object id="DrawingEncashController" type="Ace.Cbs.Tel.Ptr.TLMCTL00038, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+	</object>
+
+  <object id="DrawingRemittanceEncashAmountController" type="Ace.Cbs.Tel.Ptr.TLMCTL00039, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <object id="DrawingRemittanceEncashNRCandNameController" type="Ace.Cbs.Tel.Ptr.TLMCTL00040, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+  </object>
+  
+  <object id="BankStatementListingByDateForFixedDepositACController" type="Ace.Cbs.Tel.Ptr.TLMCTL00073, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--Region DayBook Controller(NMS)-->
+	<object id="DayBookController" type="Ace.Cbs.Tel.Ptr.TLMCTL00036, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="DayBookErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="DayBook.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">				
+				<entry key="cboBranchNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="BranchCode"/>
+					</object>
+				</entry>
+				<!--<entry key="cboCurrency">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="SourceCur"/>
+					</object>
+				</entry>-->
+			</dictionary>
+		</property>
+	</object>
+<!--Endregion-->
+
+	<!--Region Deposit Listing Controller(NMS)-->
+	<object id="DepositListingController" type="Ace.Cbs.Tel.Ptr.TLMCTL00025, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="DepositListinErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="DepositListing.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="mtxtAccountNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="AcctNo"/>
+            <property name="CustomValidatingMethod" value="mtxtAccountNo_CustomValidating"/>
+					</object>
+				</entry>
+				<entry key="txtCounterNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="CounterNo"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+	<!--Endregion-->
+
+  <!--Region Cash Denomination Report Listing -->
+	<object id="CashDenomiantionController" type="Ace.Cbs.Tel.Ptr.TLMCTL00071, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+    <property name ="ErrorProvider">
+      <object id="CashDenomiantionReportListingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name ="Validator" ref="CashDenomiantionReportListing.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Currency"/>
+          </object>
+        </entry>
+        <entry key="cboCounterNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CounterNo"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+  <!--Endregion-->
+
+  <object id="DepositListingByGradeController" type="Ace.Cbs.Tel.Ptr.TLMCTL00026, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="DepositListinByGradeErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="DepositListingByGrade.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <!--<entry key="txtMinimumAmount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="MinimumAmount"/>
+           
+          </object>
+        </entry>-->
+        <entry key="txtMaximumAmount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="MaximumAmount"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+  
+	<!-- IBL Transaction Listing Enquiry Form Controller -->
+	<object id ="TransactionListingByBranchCodeController" type="Ace.Cbs.Tel.Ptr.TLMCTL00028, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<property name ="ErrorProvider">
+			<object id="TransactionListingByBranchErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name ="Validator" ref="TransactionListingByBranch.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="cboTransactionType">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="TransactionCode"/>
+					</object>
+				</entry>
+				<entry key="cboBranchNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="BranchName"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+  <object id="DrawingRegisterByReceiptDateController" type="Ace.Cbs.Tel.Ptr.TLMCTL00056, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+	<object id="TransactionListingController" type="Ace.Cbs.Tel.Ptr.TLMCTL00023, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+	</object>
+
+  <object id="CashPaymentDenominationController" type="Ace.Cbs.Tel.Ptr.TLMCTL00075, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="CashPaymentDenominationErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="CashPaymentDenomination.Validator"/>    
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtEntryNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Eno"/>
+            <!--<property name="CustomValidatingMethod" value="txtEntryNo_CustomValidating"/>-->
+          </object>
+        </entry>
+        </dictionary>
+      </property>
+  </object>
+
+  <object id="DrawingCashDepositDenominationController" type="Ace.Cbs.Tel.Ptr.TLMCTL00076, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="DrawingCashDepositDenominationErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="DrawingCashDepositDenomination.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtGroupNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="RegisterNo"/>
+            <property name="CustomValidatingMethod" value="txtGroupNo_CustomValidating"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <object id="CashDenoWithMultiTransactionController" type="Ace.Cbs.Tel.Ptr.TLMCTL00077, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+	<object id="NewCashPaymentController" type="Ace.Cbs.Tel.Ptr.TLMCTL00078, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="NewCashPaymentErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="NewCashPayment.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="txtEntryNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Eno"/>
+						<property name="CustomValidatingMethod" value="txtEntryNo_CustomValidating"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+  <!--Loans Deposit Form -->
+  <object id ="LoansDepositController" type="Ace.Cbs.Tel.Ptr.TLMCTL00080, Ace.Cbs.Tel.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="LoansDepositErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="Deposit.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <!--<entry key="gvDepositInformation">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="CustomValidatingMethod" value="gvDeposit_CustomValidating"/>
+					</object>
+				</entry>-->
+        <entry key="mtxtAccountNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="AccountNo"/>
+            <property name="CustomValidatingMethod" value="mtxtAccountNo_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Currency"/>
+            <property name="CustomValidatingMethod" value="cboCurrency_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtNarration">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Narration"/>
+          </object>
+        </entry>
+        <entry key="txtAmount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Amount"/>
+            <property name="CustomValidatingMethod" value="txtAmount_CustomValidating"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+</objects>

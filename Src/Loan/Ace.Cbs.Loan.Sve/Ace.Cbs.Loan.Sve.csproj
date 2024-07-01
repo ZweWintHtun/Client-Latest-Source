@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C82405FD-E802-4B13-8353-C95619118BCE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ace.Cbs.Loan.Sve</RootNamespace>
+    <AssemblyName>Ace.Cbs.Loan.Sve</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ace.Cbs.Cx.Cle, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Cx.Cle.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Loan.Dmd, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Loan.Dmd.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Admin.DataModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Ace.Windows.Admin.DataModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.CXServer, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.CXServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Ix.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Ix.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core">
+      <HintPath>..\..\..\Output\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data">
+      <HintPath>..\..\..\Output\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate33">
+      <HintPath>..\..\..\Output\Spring.Data.NHibernate33.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LOMSVE00011.cs" />
+    <Compile Include="LOMSVE00024.cs" />
+    <Compile Include="LOMSVE00030.cs" />
+    <Compile Include="LOMSVE00025.cs" />
+    <Compile Include="LOMSVE00001.cs" />
+    <Compile Include="LOMSVE00002.cs" />
+    <Compile Include="LOMSVE00003.cs" />
+    <Compile Include="LOMSVE00004.cs" />
+    <Compile Include="LOMSVE00005.cs" />
+    <Compile Include="LOMSVE00006.cs" />
+    <Compile Include="LOMSVE00007.cs" />
+    <Compile Include="LOMSVE00008.cs" />
+    <Compile Include="LOMSVE00009.cs" />
+    <Compile Include="LOMSVE00010.cs" />
+    <Compile Include="LOMSVE00012.cs" />
+    <Compile Include="LOMSVE00014.cs" />
+    <Compile Include="LOMSVE00015.cs" />
+    <Compile Include="LOMSVE00016.cs" />
+    <Compile Include="LOMSVE00020.cs" />
+    <Compile Include="LOMSVE00021.cs" />
+    <Compile Include="LOMSVE00027.cs" />
+    <Compile Include="LOMSVE00028.cs" />
+    <Compile Include="LOMSVE00029.cs" />
+    <Compile Include="LOMSVE00032.cs" />
+    <Compile Include="LOMSVE00034.cs" />
+    <Compile Include="LOMSVE00035.cs" />
+    <Compile Include="LOMSVE00042.cs" />
+    <Compile Include="LOMSVE00044.cs" />
+    <Compile Include="LOMSVE00047.cs" />
+    <Compile Include="LOMSVE00051.cs" />
+    <Compile Include="LOMSVE00057.cs" />
+    <Compile Include="LOMSVE00059.cs" />
+    <Compile Include="LOMSVE00063.cs" />
+    <Compile Include="LOMSVE00064.cs" />
+    <Compile Include="LOMSVE00068.cs" />
+    <Compile Include="LOMSVE00069.cs" />
+    <Compile Include="LOMSVE00070.cs" />
+    <Compile Include="LOMSVE00071.cs" />
+    <Compile Include="LOMSVE00072.cs" />
+    <Compile Include="LOMSVE00073.cs" />
+    <Compile Include="LOMSVE00074.cs" />
+    <Compile Include="LOMSVE00075.cs" />
+    <Compile Include="LOMSVE00076.cs" />
+    <Compile Include="LOMSVE00077.cs" />
+    <Compile Include="LOMSVE00078.cs" />
+    <Compile Include="LOMSVE00080.cs" />
+    <Compile Include="LOMSVE00085.cs" />
+    <Compile Include="LOMSVE00086.cs" />
+    <Compile Include="LOMSVE00089.cs" />
+    <Compile Include="LOMSVE00092.cs" />
+    <Compile Include="LOMSVE00093.cs" />
+    <Compile Include="LOMSVE00096.cs" />
+    <Compile Include="LOMSVE00102.cs" />
+    <Compile Include="LOMSVE00300.cs" />
+    <Compile Include="LOMSVE00301.cs" />
+    <Compile Include="LOMSVE00303.cs" />
+    <Compile Include="LOMSVE00305.cs" />
+    <Compile Include="LOMSVE00307.cs" />
+    <Compile Include="LOMSVE00309.cs" />
+    <Compile Include="LOMSVE00311.cs" />
+    <Compile Include="LOMSVE00314.cs" />
+    <Compile Include="LOMSVE00316.cs" />
+    <Compile Include="LOMSVE00325.cs" />
+    <Compile Include="LOMSVE00403.cs" />
+    <Compile Include="LOMSVE00405.cs" />
+    <Compile Include="LOMSVE00415.cs" />
+    <Compile Include="LOMSVE00427.cs" />
+    <Compile Include="LOMSVE00435.cs" />
+    <Compile Include="LOMSVE00444.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Cx\Ace.Cbs.Cx.Com\Ace.Cbs.Cx.Com.csproj">
+      <Project>{83A33F31-AFB5-4778-8AEF-42EB781DD861}</Project>
+      <Name>Ace.Cbs.Cx.Com</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Cx\Ace.Cbs.Cx.Ser\Ace.Cbs.Cx.Ser.csproj">
+      <Project>{4A8FE202-C6E6-4279-A1FD-E9F0BE3FCD9F}</Project>
+      <Name>Ace.Cbs.Cx.Ser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Mnm\Ace.Cbs.Mnm.Ctr\Ace.Cbs.Mnm.Ctr.csproj">
+      <Project>{5793ACFC-ED60-4E4E-86F3-221487DD0C8F}</Project>
+      <Name>Ace.Cbs.Mnm.Ctr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Mnm\Ace.Cbs.Mnm.Dmd\Ace.Cbs.Mnm.Dmd.csproj">
+      <Project>{D8EA36A9-8BBC-4D2A-84C7-49BDA6006F94}</Project>
+      <Name>Ace.Cbs.Mnm.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Pfm\Ace.Cbs.Pfm.Ctr\Ace.Cbs.Pfm.Ctr.csproj">
+      <Project>{A9887BFF-9218-4612-BA0A-BA3D5E6744E1}</Project>
+      <Name>Ace.Cbs.Pfm.Ctr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Pfm\Ace.Cbs.Pfm.Dmd\Ace.Cbs.Pfm.Dmd.csproj">
+      <Project>{8F20F64D-FF47-47A3-87CA-30D8A12B5B75}</Project>
+      <Name>Ace.Cbs.Pfm.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tcm\Ace.Cbs.Tcm.Ctr\Ace.Cbs.Tcm.Ctr.csproj">
+      <Project>{77567CFC-17CF-4B2D-8502-028AA5E1019F}</Project>
+      <Name>Ace.Cbs.Tcm.Ctr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tcm\Ace.Cbs.Tcm.Dmd\Ace.Cbs.Tcm.Dmd.csproj">
+      <Project>{F4D9433A-689F-4964-857C-D3C14355A870}</Project>
+      <Name>Ace.Cbs.Tcm.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tel\Ace.Cbs.Tel.Ctr\Ace.Cbs.Tel.Ctr.csproj">
+      <Project>{E940CDA8-DE03-44C7-BF69-37EB9ACCD7C6}</Project>
+      <Name>Ace.Cbs.Tel.Ctr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tel\Ace.Cbs.Tel.Dmd\Ace.Cbs.Tel.Dmd.csproj">
+      <Project>{4AE62F74-E000-4768-90BC-DCBBB1B4C68C}</Project>
+      <Name>Ace.Cbs.Tel.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ace.Cbs.Loan.Ctr\Ace.Cbs.Loan.Ctr.csproj">
+      <Project>{8E57EAE3-7397-490E-B276-123DAC52B728}</Project>
+      <Name>Ace.Cbs.Loan.Ctr</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Tel\Ace.Cbs.Tel.Ctr\Ace.Cbs.Tel.Ctr.csproj">
+      <Project>{E940CDA8-DE03-44C7-BF69-37EB9ACCD7C6}</Project>
+      <Name>Ace.Cbs.Tel.Ctr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tel\Ace.Cbs.Tel.Dmd\Ace.Cbs.Tel.Dmd.csproj">
+      <Project>{4AE62F74-E000-4768-90BC-DCBBB1B4C68C}</Project>
+      <Name>Ace.Cbs.Tel.Dmd</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

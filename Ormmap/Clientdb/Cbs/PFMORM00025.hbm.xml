@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd, Ace.Cbs.Pfm.Dmd" rename=""/>
+
+  <class name="PFMORM00025" table="[COASetup]" >
+
+	  <id name="AccountNo">
+		  <column name="ACNo" sql-type="varchar" not-null="true" />
+	  </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>	 
+	  <property name="AccountName">
+		  <column name="ACNoName" sql-type="varchar" not-null="true" />	
+	  </property>
+	  <property name="TransactionType">
+		  <column name="TranType" sql-type="varchar" not-null="false" />
+	  </property>
+	  <property name="Channel">
+		  <column name="Channel" sql-type="varchar" not-null="false" />
+	  </property>
+	  <property name="CurrencyCode">
+		  <column name="Cur" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="SourceBranchCode">
+		  <column name="SourceBr" sql-type="varchar" not-null="true" />
+	  </property>
+	  <many-to-one name="Currency" column="[Cur]" class="PFMORM00027" insert="false" update="false"></many-to-one>
+	  <many-to-one name="Branch" column="[SourceBr]" class="Ace.Windows.Admin.DataModel.Branch" insert="false" update="false"></many-to-one>
+
+	  <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  <query name="CXCOM00010.SelectAccountNo">
+    select coaSetup.AccountNo from PFMORM00025 as coaSetup
+    where
+    coaSetup.AccountName = :accountName and
+    coaSetup.SourceBranchCode = :branchCode and
+    coaSetup.CurrencyCode = :currencyCode and
+    coaSetup.Active = true
+  </query>
+  
+</hibernate-mapping>

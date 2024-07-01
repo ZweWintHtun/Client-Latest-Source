@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    UIForm Objects Settings
+  </description>
+
+  <object id="frmCXCLE00016" type="Ace.Cbs.Cx.Cle.frmCXCLE00016, Ace.Cbs.Cx.Cle" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="ManagerApproveFormController"/>
+  </object>
+
+</objects>	

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--INSURAN-->
+<!-- 
+// <copyright file="LONORM00004.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>KSW</CreatedUser>
+// <CreatedDate>08/18/2014</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version></Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+	<import class="Ace.Cbs.Loan.Dmd.LOMDTO00004, Ace.Cbs.Loan.Dmd" rename="InsuranDTO"/>
+	<class name="LOMORM00004" table="INSURAN">
+
+		<id name="INSUCODE">
+			<column name="INSUCODE" sql-type="varchar" not-null="true" />
+		</id>
+
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="true"/>
+		</version>
+
+		<property name="INSUDESP">
+			<column name="INSUDESP" sql-type="varchar" not-null="true" />
+		</property>
+
+
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+
+	</class>
+
+	<!--//INSURAN.CheckExist//-->
+	<query name="INSURANDAO.CheckExist">
+		select new InsuranDTO( i.INSUCODE,i.INSUDESP )
+		from LOMORM00004 as i where ( i.INSUCODE =: iNSUCODE ) and  i.Active = true
+	</query>
+
+	<!--//INSURANDAO.SelectAll//-->
+	<query name="INSURANDAO.SelectAll">
+		select new InsuranDTO(
+		i.INSUCODE,
+		i.INSUDESP,
+		i.TS,
+		i.CreatedDate,
+		i.CreatedUserId,
+		i.UpdatedDate,
+		i.UpdatedUserId
+		)
+		from LOMORM00004 as i
+		where i.Active = true
+	</query>
+
+	<!--//INSURANDAO.SelectByINSUCODE//-->
+	<query name="INSURANDAO.SelectByINSUCODE">
+		select new InsuranDTO(
+		i.INSUCODE,
+		i.INSUDESP,
+		i.TS,
+		i.CreatedDate,
+		i.CreatedUserId,
+		i.UpdatedDate,
+		i.UpdatedUserId
+		)
+		from LOMORM00004 as i
+		where i.INSUCODE = :iNSUCODE
+		and i.Active = true
+	</query>
+
+
+</hibernate-mapping>

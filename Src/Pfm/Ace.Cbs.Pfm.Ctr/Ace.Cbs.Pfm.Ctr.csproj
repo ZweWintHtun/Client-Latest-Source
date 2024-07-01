@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A9887BFF-9218-4612-BA0A-BA3D5E6744E1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ace.Cbs.Pfm.Ctr</RootNamespace>
+    <AssemblyName>Ace.Cbs.Pfm.Ctr</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ace.Windows.Admin.DataModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Admin.DataModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.CXClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.CXClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Ix.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Ix.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\IPFMDAO00001.cs" />
+    <Compile Include="DAO\IPFMDAO00002.cs" />
+    <Compile Include="DAO\IPFMDAO00003.cs" />
+    <Compile Include="DAO\IPFMDAO00004.cs" />
+    <Compile Include="DAO\IPFMDAO00006.cs" />
+    <Compile Include="DAO\IPFMDAO00007.cs" />
+    <Compile Include="DAO\IPFMDAO00009.cs" />
+    <Compile Include="DAO\IPFMDAO00010.cs" />
+    <Compile Include="DAO\IPFMDAO00011.cs" />
+    <Compile Include="DAO\IPFMDAO00014.cs" />
+    <Compile Include="DAO\IPFMDAO00015.cs" />
+    <Compile Include="DAO\IPFMDAO00016.cs" />
+    <Compile Include="DAO\IPFMDAO00017.cs" />
+    <Compile Include="DAO\IPFMDAO00018.cs" />
+    <Compile Include="DAO\IPFMDAO00019.cs" />
+    <Compile Include="DAO\IPFMDAO00020.cs" />
+    <Compile Include="DAO\IPFMDAO00021.cs" />
+    <Compile Include="DAO\IPFMDAO00022.cs" />
+    <Compile Include="DAO\IPFMDAO00023.cs" />
+    <Compile Include="DAO\IPFMDAO00024.cs" />
+    <Compile Include="DAO\IPFMDAO00026.cs" />
+    <Compile Include="DAO\IPFMDAO00028.cs" />
+    <Compile Include="DAO\IPFMDAO00029.cs" />
+    <Compile Include="DAO\IPFMDAO00030.cs" />
+    <Compile Include="DAO\IPFMDAO00031.cs" />
+    <Compile Include="DAO\IPFMDAO00032.cs" />
+    <Compile Include="DAO\IPFMDAO00033.cs" />
+    <Compile Include="DAO\IPFMDAO00034.cs" />
+    <Compile Include="DAO\IPFMDAO00035.cs" />
+    <Compile Include="DAO\IPFMDAO00036.cs" />
+    <Compile Include="DAO\IPFMDAO00038.cs" />
+    <Compile Include="DAO\IPFMDAO00039.cs" />
+    <Compile Include="DAO\IPFMDAO00040.cs" />
+    <Compile Include="DAO\IPFMDAO00041.cs" />
+    <Compile Include="DAO\IPFMDAO00042.cs" />
+    <Compile Include="DAO\IPFMDAO00043.cs" />
+    <Compile Include="DAO\IPFMDAO00044.cs" />
+    <Compile Include="DAO\IPFMDAO00045.cs" />
+    <Compile Include="DAO\IPFMDAO00046.cs" />
+    <Compile Include="DAO\IPFMDAO00047.cs" />
+    <Compile Include="DAO\IPFMDAO00048.cs" />
+    <Compile Include="DAO\IPFMDAO00053.cs" />
+    <Compile Include="DAO\IPFMDAO00054.cs" />
+    <Compile Include="DAO\IPFMDAO00056.cs" />
+    <Compile Include="DAO\IPFMDAO00057.cs" />
+    <Compile Include="DAO\IPFMDAO00058.cs" />
+    <Compile Include="DAO\IPFMDAO00075.cs" />
+    <Compile Include="DAO\IPFMDAO00078.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PTR\IPFMCTL00004.cs" />
+    <Compile Include="PTR\IPFMCTL00002.cs" />
+    <Compile Include="PTR\IPFMCTL00003.cs" />
+    <Compile Include="PTR\IPFMCTL00001.cs" />
+    <Compile Include="PTR\IPFMCTL00005.cs" />
+    <Compile Include="PTR\IPFMCTL00006.cs" />
+    <Compile Include="PTR\IPFMCTL00007.cs" />
+    <Compile Include="PTR\IPFMCTL00008.cs" />
+    <Compile Include="PTR\IPFMCTL00009.cs" />
+    <Compile Include="PTR\IPFMCTL00010.cs" />
+    <Compile Include="PTR\IPFMCTL00011.cs" />
+    <Compile Include="PTR\IPFMCTL00012.cs" />
+    <Compile Include="PTR\IPFMCTL00013.cs" />
+    <Compile Include="PTR\IPFMCTL00014.cs" />
+    <Compile Include="PTR\IPFMCTL00015.cs" />
+    <Compile Include="PTR\IPFMCTL00016.cs" />
+    <Compile Include="PTR\IPFMCTL00017.cs" />
+    <Compile Include="PTR\IPFMCTL00018.cs" />
+    <Compile Include="PTR\IPFMCTL00019.cs" />
+    <Compile Include="PTR\IPFMCTL00020.cs" />
+    <Compile Include="PTR\IPFMCTL00021.cs" />
+    <Compile Include="PTR\IPFMCTL00022.cs" />
+    <Compile Include="PTR\IPFMCTL00023.cs" />
+    <Compile Include="PTR\IPFMCTL00024.cs" />
+    <Compile Include="PTR\IPFMCTL00025.cs" />
+    <Compile Include="PTR\IPFMCTL00026.cs" />
+    <Compile Include="PTR\IPFMCTL00027.cs" />
+    <Compile Include="PTR\IPFMCTL00028.cs" />
+    <Compile Include="PTR\IPFMCTL00029.cs" />
+    <Compile Include="PTR\IPFMCTL00030.cs" />
+    <Compile Include="PTR\IPFMCTL00031.cs" />
+    <Compile Include="PTR\IPFMCTL00032.cs" />
+    <Compile Include="PTR\IPFMCTL00033.cs" />
+    <Compile Include="PTR\IPFMCTL00034.cs" />
+    <Compile Include="PTR\IPFMCTL00078.cs" />
+    <Compile Include="PTR\IPFMCTL00080.cs" />
+    <Compile Include="SVE\IPFMSVE00004.cs" />
+    <Compile Include="SVE\IPFMSVE00002.cs" />
+    <Compile Include="SVE\IPFMSVE00003.cs" />
+    <Compile Include="SVE\IPFMSVE00001.cs" />
+    <Compile Include="SVE\IPFMSVE00005.cs" />
+    <Compile Include="SVE\IPFMSVE00006.cs" />
+    <Compile Include="SVE\IPFMSVE00007.cs" />
+    <Compile Include="SVE\IPFMSVE00008.cs" />
+    <Compile Include="SVE\IPFMSVE00009.cs" />
+    <Compile Include="SVE\IPFMSVE00010.cs" />
+    <Compile Include="SVE\IPFMSVE00011.cs" />
+    <Compile Include="SVE\IPFMSVE00012.cs" />
+    <Compile Include="SVE\IPFMSVE00013.cs" />
+    <Compile Include="SVE\IPFMSVE00014.cs" />
+    <Compile Include="SVE\IPFMSVE00015.cs" />
+    <Compile Include="SVE\IPFMSVE00016.cs" />
+    <Compile Include="SVE\IPFMSVE00017.cs" />
+    <Compile Include="SVE\IPFMSVE00018.cs" />
+    <Compile Include="SVE\IPFMSVE00019.cs" />
+    <Compile Include="SVE\IPFMSVE00020.cs" />
+    <Compile Include="SVE\IPFMSVE00021.cs" />
+    <Compile Include="SVE\IPFMSVE00022.cs" />
+    <Compile Include="SVE\IPFMSVE00023.cs" />
+    <Compile Include="SVE\IPFMSVE00024.cs" />
+    <Compile Include="SVE\IPFMSVE00025.cs" />
+    <Compile Include="SVE\IPFMSVE00026.cs" />
+    <Compile Include="SVE\IPFMSVE00027.cs" />
+    <Compile Include="SVE\IPFMSVE00028.cs" />
+    <Compile Include="SVE\IPFMSVE00029.cs" />
+    <Compile Include="SVE\IPFMSVE00030.cs" />
+    <Compile Include="SVE\IPFMSVE00031.cs" />
+    <Compile Include="SVE\IPFMSVE00032.cs" />
+    <Compile Include="SVE\IPFMSVE00033.cs" />
+    <Compile Include="SVE\IPFMSVE00034.cs" />
+    <Compile Include="SVE\IPFMSVE00042.cs" />
+    <Compile Include="SVE\IPFMSVE00078.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Cx\Ace.Cbs.Cx.Com\Ace.Cbs.Cx.Com.csproj">
+      <Project>{83A33F31-AFB5-4778-8AEF-42EB781DD861}</Project>
+      <Name>Ace.Cbs.Cx.Com</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tel\Ace.Cbs.Tel.Dmd\Ace.Cbs.Tel.Dmd.csproj">
+      <Project>{4AE62F74-E000-4768-90BC-DCBBB1B4C68C}</Project>
+      <Name>Ace.Cbs.Tel.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ace.Cbs.Pfm.Dmd\Ace.Cbs.Pfm.Dmd.csproj">
+      <Project>{8F20F64D-FF47-47A3-87CA-30D8A12B5B75}</Project>
+      <Name>Ace.Cbs.Pfm.Dmd</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

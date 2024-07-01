@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00302, Ace.Cbs.Loan.Dmd" rename="PreFarmLIDto"/>
+
+  <class name="LOMORM00302" table="PREV_FARM_LI">
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+
+    <property name="LNo">
+      <column name="LNo" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="AcctNo">
+      <column name="AcctNo" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="ACSign">
+      <column name="ACSign" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="LoanProductCode">
+      <column name="LoanProductCode" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="CloseDate">
+      <column name="CloseDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="Budget">
+      <column name="Budget" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="PrincipalAmount">
+      <column name="PrincipalAmount" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="TotalInt">
+      <column name="TotalInt" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="LastInt">
+      <column name="LastInt" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="AccuredInt">
+      <column name="AccuredInt" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M1">
+      <column name="M1" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M2">
+      <column name="M2" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M3">
+      <column name="M3" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M4">
+      <column name="M4" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M5">
+      <column name="M5" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M6">
+      <column name="M6" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M7">
+      <column name="M7" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M8">
+      <column name="M8" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M9">
+      <column name="M9" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M10">
+      <column name="M10" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M11">
+      <column name="M11" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M12">
+      <column name="M12" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="Cur">
+      <column name="Cur" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="SourceBr">
+      <column name="SourceBr" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="DATE_TIME">
+      <column name="DATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  <!--<query name="PreFarmLiDAO.SelectAcctNoWhoseCloseDateIsNull">
+    select new PreFarmLIDto
+    (
+    b.LNo,
+    b.AcctNo,
+    b.ACSign,
+    b.LoanProductCode,
+    b.CloseDate,
+    b.Budget,
+    b.PrincipalAmount,
+    b.TotalInt,
+    b.LastInt,
+    b.AccuredInt,
+    b.M1,
+    b.M2,
+    b.M3,
+    b.M4,
+    b.M5,
+    b.M6,
+    b.M7,
+    b.M8,
+    b.M9,
+    b.M10,
+    b.M11,
+    b.M12,
+    b.Cur,
+    b.SourceBr
+    )
+    from LOMORM00302 as b
+    where (b.CloseDate = null or b.CloseDate = '')
+    and b.SourceBr = :sourceBr
+    and  b.Active = true
+  </query>-->
+
+  <!--<query name="PreFarmLiDAO.UpdateFarmLoanInterest">
+    update LOMORM00302 b
+    set
+    b.TotalInt = :totalInt,
+    b.LastInt = :lastInt,
+    b.M1 = :m1,
+    b.M2 = :m2,
+    b.M3 = :m3,
+    b.M4 = :m4,
+    b.M5 = :m5,
+    b.M6 = :m6,
+    b.M7 = :m7,
+    b.M8 = :m8,
+    b.M9 = :m9,
+    b.M10 = :m10,
+    b.M11 = :m11,
+    b.M12 = :m12,
+    b.UpdatedDate = :updatedDate,
+    b.UpdatedUserId = :updatedUserId
+    where b.LNo = :lno
+    and b.AcctNo = :acctNo
+    and b.SourceBr = :sourceBr
+    and b.Active = true
+  </query>-->
+
+  <!--<query name="PreFarmLiDAO.SelectFarmLIWhoseCloseDateIsNullAndBudgetYear">
+    select new PreFarmLIDto
+    (
+    b.LNo,
+    b.AcctNo,
+    b.ACSign,
+    b.LoanProductCode,
+    b.CloseDate,
+    b.Budget,
+    b.PrincipalAmount,
+    b.TotalInt,
+    b.LastInt,
+    b.AccuredInt,
+    b.M1,
+    b.M2,
+    b.M3,
+    b.M4,
+    b.M5,
+    b.M6,
+    b.M7,
+    b.M8,
+    b.M9,
+    b.M10,
+    b.M11,
+    b.M12,
+    b.Cur,
+    b.SourceBr
+    )
+    from LOMORM00302 as b
+    where (b.CloseDate = null or b.CloseDate = '')
+    and b.SourceBr = :sourceBr
+    and b.Budget = :budget
+    and b.Active = true
+  </query>-->
+
+  <!--<query name="PreFarmLiDAO.SelectFarmLiInfoByLnoAndSourceBr">
+    select new PreFarmLIDto
+    (
+    b.LNo,
+    b.AcctNo,
+    b.ACSign,
+    b.LoanProductCode,
+    b.CloseDate,
+    b.Budget,
+    b.PrincipalAmount,
+    b.TotalInt,
+    b.LastInt,
+    b.AccuredInt,
+    b.M1,
+    b.M2,
+    b.M3,
+    b.M4,
+    b.M5,
+    b.M6,
+    b.M7,
+    b.M8,
+    b.M9,
+    b.M10,
+    b.M11,
+    b.M12,
+    b.Cur,
+    b.SourceBr
+    )
+    from LOMORM00302 as b
+    where b.SourceBr = :sourceBr
+    and b.LNo = :lno
+    and b.Active = true
+  </query>-->
+
+</hibernate-mapping>

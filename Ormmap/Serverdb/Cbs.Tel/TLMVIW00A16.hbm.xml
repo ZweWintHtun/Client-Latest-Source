@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--VW_BY_NAME-->
+<!-- 
+// <copyright file="TLMVIW00A16.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser> Hsu Wai Htoo </CreatedUser>
+// <CreatedDate> 2013-09-18 </CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version>1.0</Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Tel.Dmd" namespace="Ace.Cbs.Tel.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Tel.Dmd.TLMDTO00017, Ace.Cbs.Tel.Dmd" rename="drawingremittancedto"/>
+  <class name="TLMVIW00A16" table="VW_BY_NAME" mutable="false" >
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+
+    <property name="DrawingNo">
+      <column name="DRAWINGNO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="RegisterNo">
+      <column name="REGISTERNO" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Br_Alias">
+      <column name="BR_ALIAS" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="Type">
+      <column name="TYPE" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="NRC">
+      <column name="NRC" sql-type="nvarchar" not-null="false" />
+    </property>
+
+    <property name="Name">
+      <column name="NAME" sql-type="nvarchar" not-null="false" />
+    </property>
+
+    <property name="ToName">
+      <column name="TONAME" sql-type="nvarchar" not-null="false" />
+    </property>
+
+    <property name="ToNRC">
+      <column name="TONRC" sql-type="nvarchar" not-null="false" />
+    </property>
+
+    <property name="TLxCharges">
+      <column name="TLXCHARGES" sql-type="numeric" not-null="false" />
+    </property>
+    
+    <property name="Commission">
+      <column name="COMMISSION" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="DBank">
+      <column name="DBANK" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="ReceiptDate">
+      <column name="RECEIPTDATE" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="AccountNo">
+      <column name="ACCTNO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="Amount">
+      <column name="AMOUNT" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="DateTime">
+      <column name="DATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="Currency">
+      <column name="CUR" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="SettlementDate">
+      <column name="SETTLEMENTDATE" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="OtherBank">
+      <column name="OTHERBANK" sql-type="bit" not-null="false" />
+    </property>
+
+    <property name="Bank_Alias">
+      <column name="BANK_ALIAS" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="IncomeType">
+      <column name="INCOMETYPE" sql-type="char" not-null="false" />
+    </property>
+    
+    <property name="RDType">
+      <column name="RDTYPE" sql-type="varchar" not-null="false" />
+    </property>
+
+	  <property name="SourceBr">
+		  <column name="SOURCEBR" sql-type="varchar" not-null="false" />
+	  </property>
+
+
+  </class>
+  
+</hibernate-mapping>

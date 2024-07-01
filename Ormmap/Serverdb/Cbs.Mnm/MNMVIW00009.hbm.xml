@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Mnm.Dmd.MNMDTO00034, Ace.Cbs.Mnm.Dmd" rename="interestDTO"/>
+  <class name="MNMVIW00009" table="VW_SING" mutable="false">
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+    <property name="Acctno">
+      <column name="ACCTNO" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="Name">
+      <column name="NAME" sql-type="varchar" not-null="false"/>
+    </property>
+    <property name="Cbal">
+      <column name="CBAL" sql-type="numeric" not-null="true"/>
+    </property>
+    <property name="I1">
+      <column name="I1" sql-type="numeric" not-null="false"/>
+    </property>
+    <property name="I2">
+      <column name="I2" sql-type="numeric" not-null="false"/>
+    </property>
+    <property name="I3">
+      <column name="I3" sql-type="numeric" not-null="false"/>
+    </property>
+    <property name="I4">
+      <column name="I4" sql-type="numeric" not-null="false"/>
+    </property>
+    <property name="Budget">
+      <column name="BUDGET" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="SourceBr">
+      <column name="SourceBr" sql-type="varchar" not-null="true"/>
+    </property>
+
+  </class>
+
+  <query name="MNMVIW00009.SelectInterest">
+    select new interestDTO
+    (
+    s.Acctno,
+    s.Name,
+    s.Cbal,
+    s.I1,
+    s.I2,
+    s.I3,
+    s.I4,
+    s.Budget,
+    s.SourceBr
+    ) from MNMVIW00009 as s where s.SourceBr = :sourceBr
+  </query>
+</hibernate-mapping>

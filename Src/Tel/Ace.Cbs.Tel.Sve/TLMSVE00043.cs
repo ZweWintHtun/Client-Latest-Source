@@ -1,0 +1,45 @@
+﻿//----------------------------------------------------------------------
+// <copyright file="TLMSVE00043.cs" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser> Hsu Wai Htoo </CreatedUser>
+// <CreatedDate>2013-08-21</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version></Version>
+//----------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Ace.Cbs.Cx.Com.Ctr;
+using Ace.Cbs.Cx.Com.Utt;
+using Ace.Cbs.Tel.Ctr.Dao;
+using Ace.Cbs.Pfm.Ctr.Dao;
+using Ace.Cbs.Tel.Ctr.Sve;
+using Ace.Cbs.Tel.Dmd;
+using Ace.Cbs.Pfm.Dmd;
+using Ace.Windows.Core.Service;
+using Ace.Windows.CXServer.Utt;
+
+using Spring.Transaction;
+using Spring.Transaction.Interceptor;
+
+namespace Ace.Cbs.Tel.Sve
+{
+    public class TLMSVE00043 : BaseService, ITLMSVE00043
+    {
+        #region DAO Properties   
+        public ICXDAO00009 ViewDAO { get; set; }
+      
+        #endregion
+
+        #region "Methods"
+        public IList<PFMDTO00054> SelectAllView(string sourceBr)
+        {
+            IList<PFMDTO00054> denoOutstandingReportView = new List<PFMDTO00054>();
+            denoOutstandingReportView = this.ViewDAO.SelectDenoOutstandingReport(sourceBr);
+            return denoOutstandingReportView;
+        }
+        #endregion
+    }
+}

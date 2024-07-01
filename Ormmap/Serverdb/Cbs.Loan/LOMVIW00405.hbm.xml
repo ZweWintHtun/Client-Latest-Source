@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--VW_BusinessLoansInterestDueListing-->
+<!-- 
+// <copyright file="LOMORM00405.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>ZMS</CreatedUser>
+// <CreatedDate>2017-07-17</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version>1.0</Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00405, Ace.Cbs.Loan.Dmd" rename="VW_BusinessLoansInterestDueListing_dto"/>
+  <class name="LOMVIW00405" table="VW_BusinessLoansInterestDueListing" mutable="false">
+
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+
+    <property name="LNO">
+      <column name="LNO" sql-type="varchar" not-null="true"/>
+    </property>
+
+    <property name="AccountNo">
+      <column name="AcctNo" sql-type="varchar" not-null="true"/>
+    </property>
+
+    <property name="NAME">
+      <column name="NAME" sql-type="varchar" not-null="false"/>
+    </property>
+
+    <property name="ADDRESS">
+      <column name="ADDRESS" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="PHONE">
+      <column name="PHONE" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="PaidStatus">
+      <column name="PaidStatus" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="IntPaidDate">
+      <column name="IntPaidDate" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="FirstDueDate">
+      <column name="FirstDueDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="FirstSAmt">
+      <column name="FirstSAmt" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="CurrentSanAmt">
+      <column name="CurrentSanAmt" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="IntRate">
+      <column name="IntRate" sql-type="numeric" not-null="true" />
+    </property>
+
+    <property name="SourceBr">
+      <column name="SourceBr" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="TotalLateFee">
+      <column name="TotalLateFee" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="TOD">
+      <column name="TOD" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="Cur">
+      <column name="Cur" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="VoucherDate">
+      <column name="VoucherDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="ExpireDate">
+      <column name="ExpireDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="TotalInt">
+      <column name="TotalInt" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="LastInt">
+      <column name="LastInt" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="SDate">
+      <column name="SDate" sql-type="datetime" not-null="false" />
+    </property>
+    
+    <property name="SCharges">
+      <column name="SCharges" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="isSCharge">
+      <column name="isSCharge" sql-type="bit" not-null="false" />
+    </property>
+
+    <property name="NPLCase">
+      <column name="NPLCase" sql-type="int" not-null="false" />
+    </property>
+    
+    <property name="NPLDate">
+      <column name="NPLDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="MarkNPLUser">
+      <column name="MarkNPLUser" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="NPLReleaseUser">
+      <column name="NPLReleaseUser" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="LedgerBalance">
+      <column name="LedgerBalance" sql-type="numeric" not-null="true" />
+    </property>
+    
+  </class>
+
+
+  <!--BLInterestDuePreListingDAO.SelectByDueDateForBLIntDuePreListing-->
+  <query name="BLInterestDuePreListingDAO.SelectByDueDateForBLIntDuePreListing">
+    select new VW_BusinessLoansInterestDueListing_dto
+    (
+    b.Id,
+    b.LNO,
+    b.AccountNo,
+    b.NAME,
+    b.ADDRESS,
+    b.PHONE,
+    b.PaidStatus,
+    b.IntPaidDate,
+    b.FirstDueDate,
+    b.FirstSAmt,
+    b.CurrentSanAmt,
+    b.IntRate,
+    b.SourceBr,
+    b.TotalLateFee,
+    b.TOD,
+    b.Cur,
+    b.VoucherDate,
+    b.ExpireDate,
+    b.TotalInt,
+    b.LastInt,
+    b.SDate,
+    b.SCharges,
+    b.isSCharge,
+    b.LedgerBalance <!--//Added by HWKO (15-Aug-2017)-->
+    )
+    from LOMVIW00405 as b
+    where CONVERT(char(10),b.FirstDueDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and b.Cur = :cur
+    and b.SourceBr = :sourceBranchCode
+  </query>
+
+  <!--BLInterestDuePreListingDAO.SelectBLlistingbyGrade-->
+  <query name="BLInterestDuePreListingDAO.SelectBLlistingbyGrade">
+    select new VW_BusinessLoansInterestDueListing_dto
+    (
+    b.Id,
+    b.LNO,
+    b.AccountNo,
+    b.NAME,
+    b.ADDRESS,
+    b.PHONE,
+    b.FirstSAmt,
+    b.CurrentSanAmt,
+    b.IntRate,
+    b.SourceBr,
+    b.Cur,
+    b.ExpireDate,
+    b.SDate
+    )
+    from LOMVIW00405 as b
+    where CONVERT(char(10),b.VoucherDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and b.Cur = :cur
+    and b.SourceBr = :sourceBranchCode
+    and b.FirstSAmt between :minimumAmt and :maximumAmt
+  </query>
+
+  <!--BLInterestDuePreListingDAO.SelectBLServiceChargeslistingByDate-->
+  <query name="BLInterestDuePreListingDAO.SelectBLServiceChargeslistingByDate">
+    select new VW_BusinessLoansInterestDueListing_dto
+    (
+    b.Id,
+    b.LNO,
+    b.AccountNo,
+    b.NAME,
+    b.ADDRESS,
+    b.PHONE,
+    b.FirstSAmt,
+    b.CurrentSanAmt,
+    b.IntRate,
+    b.SourceBr,
+    b.Cur,
+    b.ExpireDate,
+    b.SDate,
+    b.SCharges,
+    b.isSCharge,
+    b.VoucherDate
+    )
+    from LOMVIW00405 as b
+    where CONVERT(char(10),b.VoucherDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and b.Cur = :cur
+    and b.SourceBr = :sourceBranchCode
+    and b.isSCharge=1
+  </query>
+
+  <!--BLInterestDuePreListingDAO.SelectBLServiceChargeslistingByDate-->
+  <query name="BLInterestDuePreListingDAO.SelectBLInfolistingByBLNo">
+    select new VW_BusinessLoansInterestDueListing_dto
+    (
+    b.Id,
+    b.LNO,
+    b.AccountNo,
+    b.NAME,
+    b.ADDRESS,
+    b.PHONE,
+    b.FirstSAmt,
+    b.CurrentSanAmt,
+    b.IntRate,
+    b.SourceBr,
+    b.Cur,
+    b.ExpireDate,
+    b.SDate,
+    b.SCharges,
+    b.isSCharge,
+    b.VoucherDate,
+    b.IntPaidDate
+    )
+    from LOMVIW00405 as b
+    where b.LNO=:lno
+    and b.Cur = :cur
+    and b.SourceBr = :sourceBranchCode
+  </query>
+
+  <!--BLInterestDuePreListingDAO.SelectBLlistingbyGrade-->
+  <query name="BLInterestDuePreListingDAO.SelectBLNPLlistingbyNPLDate">
+    select new VW_BusinessLoansInterestDueListing_dto
+    (
+    b.Id,
+    b.LNO,
+    b.AccountNo,
+    b.NAME,
+    b.ADDRESS,
+    b.PHONE,
+    b.FirstSAmt,
+    b.CurrentSanAmt,
+    b.Cur,
+    b.ExpireDate,
+    b.VoucherDate,
+    b.NPLCase,
+    b.NPLDate,
+    b.MarkNPLUser,
+    b.NPLReleaseUser
+    )
+    from LOMVIW00405 as b
+    where CONVERT(char(10),b.NPLDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and b.Cur = :cur
+    and b.SourceBr = :sourceBranchCode
+  </query>
+
+</hibernate-mapping>

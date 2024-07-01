@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->               
+  <description>
+    Installer Client Common Module Objects Settings
+  </description>
+
+	<object id="GetChangedValueOfObject" type="Ace.Windows.Ix.Client.Utt.GetChangedValueOfObject, Ace.Windows.Ix.Client"   singleton="false" >
+	</object> 
+</objects>

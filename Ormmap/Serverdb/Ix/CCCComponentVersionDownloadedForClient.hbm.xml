@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Windows.Ix.DataModel" namespace="Ace.Windows.Ix.DataModel" xmlns="urn:nhibernate-mapping-2.2">
+  <!--<import class="Ace.Windows.Ix.DataModel.CCCComponentVersionDownloadedForClientDTO" rename="ccccomponentversiondownloadedforclientdto"/>-->
+	<import class="Ace.Windows.Ix.Core.DataModel.ManualUpgradeNewVersionDTO, Ace.Windows.Ix.Core" rename="manualUpgradeNewVersionDTO"/>
+	<import class="Ace.Window.CccCenter.Com.Dto.CCCOMDTO00004, Ace.Window.CccCenter.Com.Dto" rename="ccomdto04"/>
+	<import class="Ace.Window.CccCenter.Com.Dto.CCCOMDTO00005, Ace.Window.CccCenter.Com.Dto" rename="ccomdto05"/>
+	
+  <class name="CCCComponentVersionDownloadedForClient" table="[CCCComponentVersionDownloadedForClient]" >
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+    <property name="WorkStationId">
+      <column name="WorkStationId" sql-type="int" not-null="true" />
+    </property>
+    <property name="InstallerTypeId">
+      <column name="InstallerTypeId" sql-type="int" not-null="true" />
+    </property>
+    <property name="LastDownloadedVersionNo">
+      <column name="LastDownloadedVersionNo" sql-type="varchar" not-null="true" />
+    </property>
+	  <property name="Build">
+		  <column name="Build" sql-type="int" not-null="true" />
+	  </property>
+    <property name="IsManualUpdate" >
+      <column name="IsManualUpdate" sql-type="bit" not-null="true" default="0" />
+    </property>
+    <property name="Active" not-null="true" />
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+	  <many-to-one name="InstallerType" column="[InstallerTypeId]" class="Ace.Windows.Ix.DataModel.InstallerType" insert="false" update="false" ></many-to-one>
+	  <many-to-one name="CreatedUser" column="[CreatedUserId]" class="Ace.Windows.Admin.DataModel.User" insert="false" update="false"></many-to-one>
+	  <many-to-one name="WorkStation" column="[WorkStationId]" class="Ace.Windows.Admin.DataModel.WorkStation" insert="false" update="false" ></many-to-one>
+  </class>
+	
+  <!--CCCComponentVersionDownloadedForClientDAO.UpdateLastDownloadedVersionNo-->
+<query name="CCCComponentVersionDownloadedForClientDAO.UpdateLastDownloadedVersionNo">
+update CCCComponentVersionDownloadedForClient ccccvd
+	
+		set
+		ccccvd.LastDownloadedVersionNo = :lastDownloadedVersionNo,
+		ccccvd.Build = :build,
+		ccccvd.IsManualUpdate = :isManualUpdate,
+		ccccvd.UpdatedUserId = :updatedUserId,
+		ccccvd.UpdatedDate = :updatedDate
+		where ccccvd.Id = :id and ccccvd.TS = :ts and ccccvd.Active = true
+	</query>
+	
+		
+	
+<!--CCCComponentVersionDownloadedForClientDAO.SelectByWorkStationIdAndInstallerTypeId--><!--
+<query name="CCCComponentVersionDownloadedForClientDAO.SelectByWorkStationIdAndInstallerTypeId">
+		select new manualUpgradeNewVersionDTO(
+		ccc.Build,
+		ccc.LastDownloadedVersionNo)
+		from CCCComponentVersionDownloadedForClient as ccc
+		where ccc.WorkStationId = :workStationId
+		and ccc.InstallerTypeId = :installerTypeId
+		and ccc.Active = true
+		</query>-->	
+	<!--CCCComponentVersionDownloadedForClientDAO.IsAlreadyExist-->
+	<query name="CCCComponentVersionDownloadedForClientDAO.IsAlreadyExist">
+	select ccc.Id
+		from CCCComponentVersionDownloadedForClient as ccc
+		where ccc.WorkStationId = :workStationId
+		and ccc.InstallerTypeId = :installerTypeId
+		and ccc.Active = true
+	</query>
+	
+	<query name="CCCComponentVersionDownloadedForClientDAO.SelectCCCComponentVersionDownloadedforClientforDataExist">
+		select new ccomdto05
+		(cccvdc.Id)
+		from CCCComponentVersionDownloadedForClient cccvdc
+		where cccvdc.WorkStationId = :workStationId and
+		cccvdc.InstallerTypeId = :installerTypeId and
+		cccvdc.LastDownloadedVersionNo = :lastdownloadedVersionNo and
+		cccvdc.Build = :build and
+		cccvdc.Active = true
+	</query>
+	<query name="CCCComponentVersionDownloadedForClientDAO.UpdateByWorkStationIdAndInstallerTypeId">
+		update CCCComponentVersionDownloadedForClient cccvdc
+		set
+		cccvdc.WorkStationId = :workStationId,
+		cccvdc.InstallerTypeId = :installerTypeId,
+		cccvdc.LastDownloadedVersionNo = :lastdownloadedVersionNo,
+		cccvdc.Build = :build,
+		cccvdc.IsManualUpdate = true,
+		cccvdc.UpdatedUserId = :updatedUserId,
+		cccvdc.UpdatedDate = :updatedDate
+		where
+		cccvdc.Id = :id and
+		cccvdc.TS = :ts and
+		cccvdc.Active = true
+	</query>
+	<query name="CCCComponentVersionDownloadedForClientDAO.SelectBySourceBranchCode">
+		select new ccomdto04
+		(
+		cccvdc.Id,
+		cccvdc.LastDownloadedVersionNo,
+		cccvdc.CreatedDate,
+		cccvdc.TS,
+		u.UserName,
+		w.Code,
+		w.Name,
+		w.HostName,
+		w.IPAddress,
+		w.SourceBranchCode,
+		wt.Description,
+		i.Id,
+		i.Description
+		)
+		from CCCComponentVersionDownloadedForClient as cccvdc
+		inner join cccvdc.CreatedUser as u with u.Active = true
+		inner join cccvdc.WorkStation as w with w.Active = true
+		inner join w.WorkStationType as wt with wt.Active = true
+		inner join cccvdc.InstallerType as i with i.Active = true
+		where
+		cccvdc.Active = true and
+		w.SourceBranchCode = :sourbranchCode
+		order by w.SourceBranchCode asc, w.Code asc, cccvdc.InstallerTypeId asc ,cccvdc.Build desc
+	</query>	
+	
+
+
+</hibernate-mapping>

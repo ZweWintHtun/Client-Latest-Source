@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--LMT99#00-->
+<!-- 
+// <copyright file="LOMORM00016.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>HM</CreatedUser>
+// <CreatedDate>19/01/2015</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version></Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00016, Ace.Cbs.Loan.Dmd" rename="pledgeDto"/>
+  <class name="LOMORM00016" table="[Pledge]">
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+    
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+
+    <property name="LNo">
+      <column name="LNo" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="StockNo">
+      <column name="StockNo" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="StockQTY">
+      <column name="StockQTY" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="Market_VAL">
+      <column name="Market_VAL" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="CloseDate">
+      <column name="CloseDate" sql-type="datetime" not-null="false" />
+    </property>
+    
+    <property name="IsAMT">
+      <column name="IsAMT" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="IsType">
+      <column name="IsType" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="IsDate">
+      <column name="IsDate" sql-type="datetime" not-null="false" />
+    </property>
+   
+    <property name="IsExpiredDate">
+      <column name="IsExpiredDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="SourceBr">
+      <column name="SourceBr" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+
+  <!--//PledgeDAO.SelectMaxId//-->
+  <query name="PledgeDAO.SelectMaxId">
+    select new pledgeDto
+    (
+    MAX(t.Id)
+    )
+    from LOMORM00016 as t
+  </query>
+  
+  <!--TLMORM00018.UpdateLand_BuildingInfoByLoanNoAndSourceBr-->
+  <query name="LOMDAO00016.UpdatePledgeInfoByLoanNoAndSourceBr">
+    update LOMORM00016 l
+    set
+    l.Active = false
+    <!--l.StockNo = :stockNo,
+    l.StockQTY =:stockqty,
+    l.Market_VAL =:marketvalue,
+    l.IsType = :isType,
+    l.IsDate = :isDate,
+    l.IsExpiredDate = :isEdate,
+    l.IsAMT =:isAmt,
+    l.UpdatedDate = :updatedDate,
+    l.UpdatedUserId = :updatedUserId-->
+    where l.Id = :id
+    and l.LNo = :lno
+    and l.SourceBr = :sourcebr
+
+  </query>
+  
+  <!--Select Pledge Information By LoanNo and Sourcebr-->
+  <query name="SelectPledgeInfoByLoanNoandSourcebr">
+    select new pledgeDto
+    (
+    p.Id,
+    p.LNo,
+    p.StockNo,
+    p.StockQTY,
+    p.Market_VAL,
+    p.CloseDate,
+    p.IsAMT,
+    p.IsType,
+    p.IsDate,
+    p.IsExpiredDate,
+    p.SourceBr
+    )
+    from LOMORM00016 as p
+    where p.LNo = :lno
+    and p.SourceBr = :sourcebr
+    and p.Active = true
+  </query>
+  
+</hibernate-mapping>
+

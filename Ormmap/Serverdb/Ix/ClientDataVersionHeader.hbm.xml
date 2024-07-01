@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Windows.Ix.DataModel" namespace="Ace.Windows.Ix.DataModel" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Cen.Dto.CENDTO00007, Ace.Cbs.Cen.Dto" rename="cendto07"/>
+  <import class="Ace.Window.CccCenter.Com.Dto.CCCOMDTO00007, Ace.Window.CccCenter.Com.Dto" rename="ccomdto07"/>
+  <class name="ClientDataVersionHeader" table="[ClientDataVersionHeader]" >
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+    <property name="ClientDataVersionNo">
+      <column name="ClientDataVersionNo" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="VersionDescription">
+      <column name="VersionDescription" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="ReleaseDate">
+      <column name="ReleaseDate" sql-type="datetime" not-null="true" />
+    </property>
+
+    <property name="Active" not-null="true" />
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+    <many-to-one name="CreatedUser" column="[CreatedUserId]" class="Ace.Windows.Admin.DataModel.User" insert="false" update="false"></many-to-one>
+    <many-to-one name="UpdatedUser" column="[UpdatedUserId]" class="Ace.Windows.Admin.DataModel.User" insert="false" update="false"></many-to-one>
+
+  </class>
+
+  <!--ClientDataVersionHeaderDAO.IsAlreadyExist-->
+  <query name="ClientDataVersionHeaderDAO.IsAlreadyExist">
+    select dvh.Id
+    from ClientDataVersionHeader as dvh
+    where dvh.ClientDataVersionNo = :versionNo
+    and dvh.Active = true
+  </query>
+  
+  <!--ClientDataVersionHeaderDAO.SelectAllDataVersionHeaderForEdit-->
+  <query name="ClientDataVersionHeaderDAO.SelectAllDataVersionHeaderForEdit">
+    <![CDATA[select new cendto07(
+    dvh.Id,
+    dvh.ClientDataVersionNo)
+    from ClientDataVersionHeader as dvh
+    where dvh.ReleaseDate > :today and dvh.Active = true
+    ]]>
+  </query>
+ 
+  <!--ClientDataVersionHeaderDAO.SelectDataVersionHeaderById-->
+  <query name="ClientDataVersionHeaderDAO.SelectDataVersionHeaderById">
+    select new cendto07(
+    dvh.VersionDescription,
+    dvh.ReleaseDate,
+    dvh.TS)
+    from ClientDataVersionHeader as dvh
+    where dvh.Id = :id and dvh.Active = true
+  </query>
+
+  <!--ClientDataVersionHeaderDAO.DisableAcitveById-->
+  <query name="ClientDataVersionHeaderDAO.DisableAcitveById">
+    update ClientDataVersionHeader dvh
+    set
+    dvh.Active = :isActive,
+    dvh.UpdatedUserId = :updatedUserId,
+    dvh.UpdatedDate = :updatedDate
+    where dvh.Id = :id and dvh.TS = :ts and dvh.Active = true
+  </query>
+  <!--SelectDataVersionHeaderBetweenFromReleaseDateToReleaseDate-->
+  <query name="SelectDataVersionHeaderBetweenFromReleaseDateToReleaseDate">
+    select new cendto07(
+    dvh.Id,
+    dvh.ClientDataVersionNo,
+    dvh.VersionDescription,
+    dvh.ReleaseDate,
+    cu.UserName,
+    dvh.CreatedDate,
+    uu.UserName,
+    dvh.UpdatedDate)
+    from ClientDataVersionHeader as dvh
+    inner join dvh.CreatedUser as cu with cu.Active = true
+    left join dvh.UpdatedUser as uu with uu.Active = true
+    where dvh.ReleaseDate between :fromdate and :todate
+    and dvh.Active = true
+  </query>
+
+  <!--ClientDataVersionHeaderDAO.SelectDataVersionNoLists-->
+  <query name="ClientDataVersionHeaderDAO.SelectDataVersionNoLists">
+    <![CDATA[select new ccomdto07(
+    dvh.Id,
+    dvh.ClientDataVersionNo,
+    dvh.VersionDescription,
+    dvh.ReleaseDate
+    )
+    from ClientDataVersionHeader as dvh
+    where dvh.ReleaseDate <=:today and dvh.Active = true order by dvh.ClientDataVersionNo desc
+    ]]>
+  </query>
+</hibernate-mapping>

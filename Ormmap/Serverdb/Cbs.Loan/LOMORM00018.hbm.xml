@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--GJType-->
+<!-- 
+// <copyright file="LOMORM00018.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>HM</CreatedUser>
+// <CreatedDate>19/01/2015</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version></Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00018, Ace.Cbs.Loan.Dmd" rename="GJTDto"/>
+  <class name="LOMORM00018" table="[GJType]">
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+    
+    <property name="LNo">
+      <column name="LNo" sql-type="varchar" not-null="false" />
+    </property>   
+
+    <property name="GJType">
+      <column name="GJType" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="Quantity">
+      <column name="Quantity" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="Weight">
+      <column name="Weight" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="Value">
+      <column name="Value" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="CloseDate">
+      <column name="CloseDate" sql-type="datetime" not-null="false" />
+    </property>
+
+  
+    <property name="SourceBr">
+      <column name="SourceBr" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+  <!--Select Type of Gold And Jewellery  Information By LoanNo and Sourcebr-->
+  <query name="SelectGoldAndJewelleryTypeInfoByLoanNoandSourcebr">
+    select new GJTDto
+    (
+    g.Id,
+    g.LNo,
+    g.GJType,
+    g.Quantity,
+    g.Weight,
+    g.Value,
+    g.CloseDate,
+    g.SourceBr
+    )
+    from LOMORM00018 as g
+    where g.LNo = :lno
+    and g.SourceBr = :sourcebr
+    and g.Active = true
+  </query>
+
+  <!--"LOMDAO00018.UpdateGJTInfoByLoanNoAndSourceBr"-->
+  <query name="LOMDAO00018.UpdateGJTInfoByLoanNoAndSourceBr">
+    update LOMORM00018 l
+    set
+    l.Active = false
+    where l.Id = :id 
+    and l.LNo = :lno 
+    and l.SourceBr = :sourcebr
+
+  </query>
+
+  
+</hibernate-mapping>
+

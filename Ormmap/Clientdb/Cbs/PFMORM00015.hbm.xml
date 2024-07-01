@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00015, Ace.Cbs.Pfm.Dmd" rename="accounttypedto"/>
+
+  <class name="PFMORM00015" table="AccountType" >
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+    
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+
+    <property name="Code">
+      <column name="Code" sql-type="varchar" length="50" not-null="true" />
+    </property>
+    
+    <property name="Description">
+      <column name="Description" sql-type="varchar" length="100" not-null="true" />
+    </property>
+
+    <property name="Symbol">
+      <column name="Symbol" sql-type="varchar" length="10" not-null="true" />
+    </property>
+
+    <bag name="SubAccountTypes" lazy="true">
+      <key column="AccountTypeId" />
+      <one-to-many class="PFMORM00022" />
+    </bag>
+    
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  <query name="CXCOM00010.GetSymbolByAccountType">
+    select Symbol from PFMORM00015 where Code = :code
+	and Active = true
+  </query>
+
+</hibernate-mapping>

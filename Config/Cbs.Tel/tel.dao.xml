@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+	<!-- Referenced by main application context configuration file -->
+	<description>
+		DataAccess Objects Settings
+	</description>
+	
+  <!--//ZoneDAO//-->
+  <object id="ZoneDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00031, Ace.Cbs.Tel.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+	
+	<!--//Branch_SERVERLOGDAO//-->
+	<object id="SERVERLOGDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00027, Ace.Cbs.Tel.Dao" singleton="false">
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+                                                                  
+	<object id="ReconcileDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00025, Ace.Cbs.Tel.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<object id="ReconcileDWTDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00026, Ace.Cbs.Tel.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+  <!--//DepositCodeDAO//-->
+  <object id="DepositCodeDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00020, Ace.Cbs.Tel.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+	<object id="DenoOutstandingReportViewDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00056, Ace.Cbs.Tel.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<object id="MultipleTransactionDenoOutstandingDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00009, Ace.Cbs.Tel.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--PO DAO-->
+	<object id="PODAO" type="Ace.Cbs.Tel.Dao.TLMDAO00016, Ace.Cbs.Tel.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--DepositDeno DAO-->
+	<object id="DepoDenoDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00009, Ace.Cbs.Tel.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--CashDeno DAO-->
+	<object id="CashDenoDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00015, Ace.Cbs.Tel.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--CashDenoHistory DAO-->
+	<object id="CashDenoHistoryDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00056, Ace.Cbs.Tel.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--RemitBrIBL DAO-->	
+	<object id="RemitBrIBLDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00029, Ace.Cbs.Tel.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--Loans DAO-->
+	<object id="LoansDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00018, Ace.Cbs.Tel.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+  <!--FixInWith DAO-->
+  <object id="FixInWithDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00019, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//TranTypeDAO//-->
+	<object id="TranTypeDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00005, Ace.Cbs.Tel.Dao" singleton="false">
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--Remittance DAO-->
+	<object id="RemittanceEncashDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00001, Ace.Cbs.Tel.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--RD DAO -->
+	<object id="RDDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00017, Ace.Cbs.Tel.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+	
+	<!--RE DAO -->
+	<object id="REDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00001, Ace.Cbs.Tel.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--IBLTLF DAO -->	
+	<object id="IBLTLFDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00004, Ace.Cbs.Tel.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+  <!--//BCodeDAO//-->
+  <object id="BCodeDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00040, Ace.Cbs.Tel.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//DenoDAO//-->
+  <object id="DenoDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00012, Ace.Cbs.Tel.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="BankStatementMonthsDataDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00051, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="BankStatementWithdrawAmountAndDepositAmountDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00A51, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  
+  <object id="IBLTestKeyListingDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00050, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+	
+	
+		
+  <object id="DrawingRemittanceDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00058, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="EncashRemittanceDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00A58, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="EncashRemittanceNRCDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00A40, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="DrawingRemittanceNRCDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00B40, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="WithdrawlistngDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00066, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="WithdrawlistngCounterNoDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00067, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="WithdrawlistngAccountNoDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00068, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+	
+	<object id="VW_IBLTLFDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00048, Ace.Cbs.Tel.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<object id="DeposistListingByAllDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00063, Ace.Cbs.Tel.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<object id="DeposistListingByAccountNoDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00064, Ace.Cbs.Tel.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<object id="DeposistListingByTypeDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00065, Ace.Cbs.Tel.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+	<object id="EncashOutstandingDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00059, Ace.Cbs.Tel.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+	<object id="DrawingOutstandingDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00057, Ace.Cbs.Tel.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+  <object id="CashSetupDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00013, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="CurrentDayBookDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00A53, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  <object id="CurrentReversalDayBookDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00B53, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  <object id="CurrentHomeDayBookDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00C53, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  <object id="CurrentHomeReversalDayBookDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00D53, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="SavingDayBookDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00A54, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  <object id="SavingReversalDayBookDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00B54, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  <object id="FixedDayBookDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00C54, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  <object id="FixedReversalDayBookDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00D54, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="DomesticDayBookDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00A55, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  <object id="DomesticReversalDayBookDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00B55, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  <object id="DomesticHomeDayBookDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00C55, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  <object id="DomesticHomeReversalDayBookDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00D55, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  <!--Bank Cash Scroll DAO ....By HWH-->
+  <object id="BankCashCreditDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00052, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  
+  <object id="BankCashAllBranchAndSourceCurDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00A52, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="BankCashAllWithoutReversalByHomeCurDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00B52, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="BankCashAllWithoutReversalDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00C52, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+	<object id="Prev_IblTlfDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00024, Ace.Cbs.Tel.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+  <!--The End of Bank Cash Scroll DAO ....By HWH-->
+
+<!--Drawing Printing DAO-->
+   <object id="DrawingPrintingDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00021, Ace.Cbs.Tel.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+   </object>
+
+  <!--Dep_TLF DAO-->
+  <object id="Dep_TLFDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00008, Ace.Cbs.Tel.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--Added By AAM (16-Jan-2018)-->
+  <object id="hpRegListsDAO" type="Ace.Cbs.Loan.Dao.LOMDAO00096, Ace.Cbs.Loan.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+</objects>

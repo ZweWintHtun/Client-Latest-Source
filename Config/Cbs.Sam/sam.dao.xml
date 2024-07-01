@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+	<description>
+		DataAccess Objects Settings
+	</description>
+
+	<!--Region System Admin Module-->
+
+	<!--//HOLIDAYDAO//-->
+	<object id="HOLIDAYDAO" type="Ace.Cbs.Sam.Dao.SAMDAO00003, Ace.Cbs.Sam.Dao" singleton="false">
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+  <!--//BranchDAO//-->
+  <object id="BranchDAOForAll" type="Ace.Cbs.Sam.Dao.SAMDAO00004, Ace.Cbs.Sam.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+	<!--//FormatDefinitionDAO//-->
+	<object id="FormatDefinitionDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00052, Ace.Cbs.Pfm.Dao" singleton="false">
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--//AppSettingsDAO//-->
+	<object id="AppSettingsDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00053, Ace.Cbs.Pfm.Dao" singleton="false">
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--//RemitBrDAO//-->
+	<object id="RemitBrDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00028, Ace.Cbs.Tel.Dao" singleton="false">
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--//RmitRateDAO//-->
+	<object id="RmitRateDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00032, Ace.Cbs.Tel.Dao" singleton="false">
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--//RemitBrIblDAO//-->
+	<object id="RemitBrIblDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00029, Ace.Cbs.Tel.Dao" singleton="false">
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--//IblDwtRateDAO//-->
+	<object id="IblDwtRateDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00030, Ace.Cbs.Tel.Dao" singleton="false">
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--//PORateDAO//-->
+	<object id="PORateDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00003, Ace.Cbs.Tel.Dao" singleton="false">
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<object id="COASetupDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00025, Ace.Cbs.Pfm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+	<!--Endregion-->
+
+  <!--//DayKeyDAO//-->
+  <object id="DayKeyDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00034, Ace.Cbs.Tel.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//MonthKeyDAO//-->
+  <object id="MonthKeyDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00035, Ace.Cbs.Tel.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//AmountKeyDAO//-->
+  <object id="AmountKeyDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00036, Ace.Cbs.Tel.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//BranchKeyDAO//-->
+  <object id="BranchKeyDAO" type="Ace.Cbs.Tel.Dao.TLMDAO00037, Ace.Cbs.Tel.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+	<!--//NationalityCodeDAO//-->
+	<object id="NationalityCodeDAO" type="Ace.Cbs.Sam.Dao.SAMDAO00053, Ace.Cbs.Sam.Dao" singleton="false">
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+  <!--//NRCCodeDAO//-->
+  <object id="NRCCodeDAO" type="Ace.Cbs.Sam.Dao.SAMDAO00054, Ace.Cbs.Sam.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  
+</objects>

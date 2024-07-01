@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<hibernate-mapping assembly="Ace.Windows.Admin.DataModel" namespace="Ace.Windows.Admin.DataModel" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Windows.Admin.DataModel.MenuDTO" rename="menudto"/>
+  <import class="Ace.Windows.Admin.DataModel.UserDTO, Ace.Windows.Admin.DataModel" rename="userdto"/>
+
+  <class name="User" table="[User]" >
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+
+    <property name="UserName">
+      <column name="UserName" sql-type="nvarchar" not-null="true" />
+    </property>
+
+    <property name="Password">
+      <column name="Password" sql-type="nvarchar" not-null="true" />
+    </property>
+
+    <property name="FullName">
+      <column name="FullName" sql-type="nvarchar" not-null="false" />
+    </property>
+
+    <property name="BranchCode">
+      <column name="BranchCode" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="IsMultiUser">
+      <column name="IsMultiUser" sql-type="bit" not-null="false" />
+    </property>
+    
+    <property name="IsLogon">
+      <column name="IsLogon" sql-type="bit" not-null="false" />
+    </property>
+	  
+	  <property name="IsCounterUser">
+		  <column name="IsCounterUser" sql-type="bit" not-null="false" />
+	  </property>
+
+    <property name="Email">
+      <column name="Email" sql-type="nvarchar" not-null="false" />
+    </property>
+
+    <property name="IsNextLogonPasswordChanged">
+      <column name="IsNextLogonPasswordChanged" sql-type="bit" not-null="true" default="0" />
+    </property>
+
+    <property name="CanPasswordChanged">
+      <column name="CanPasswordChanged" sql-type="bit" not-null="true" default="0" />
+    </property>
+
+    <property name="CanPasswordExpired">
+      <column name="CanPasswordExpired" sql-type="bit" not-null="true" default="0" />
+    </property>
+
+    <property name="IsPasswordExpired">
+      <column name="IsPasswordExpired" sql-type="bit" not-null="true" default="0" />
+    </property>
+
+    <property name="PasswordExpiredDate">
+      <column name="PasswordExpiredDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="IsAccountDisabled">
+      <column name="IsAccountDisabled" sql-type="bit" not-null="true" default="0" />
+    </property>
+
+    <property name="FailedPasswordAttemptCount">
+      <column name="FailedPasswordAttemptCount" sql-type="int" not-null="true" default="0"/>
+    </property>
+
+    <property name="FailedPasswordAttemptWindowStart">
+      <column name="FailedPasswordAttemptWindowStart" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="LastAccountDisabledDate">
+      <column name="LastAccountDisabledDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="LastLogInDate">
+      <column name="LastLogInDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="LastLogOffDate">
+      <column name="LastLogOffDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <bag name="Roles" inverse="true" cascade="all">
+      <key column="UserId" />
+      <one-to-many class="Role" />
+    </bag>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  -->
+<!--//UserDAO.SelectByUsersName//--><!--
+  <query name="UserDAO.SelectByUsersName">
+    select new userdto(u.Id, u.UserName, u.Password)
+    from User as u
+    where u.UserName = :username
+    and u.Active = true
+  </query>
+
+  <query name="UserDAO.SelectByUsersId">
+    select new userdto(u.Id, u.UserName, u.Password)
+    from User as u
+    where u.Id = :id
+    and u.Active = true
+  </query>
+
+  --><!--//UserDAO.CheckExist//--><!--
+  <query name="UserDAO.CheckExist">
+    select new userdto(u.Id, u.UserName)
+    from User as u
+    where u.UserName = :username
+    and u.Active = true
+  </query>
+
+  --><!--//UserDAO.SelectAll//--><!--
+  <query name="UserDAO.SelectAll">
+    select new userdto(
+    u.Id,
+    u.UserName,
+    u.Password,
+    u.FullName,
+    u.Email,
+    u.BranchCode,
+    u.IsMultiUser,
+    u.IsLogon,
+    u.Active,
+    u.CreatedUserId,
+    u.CreatedDate,
+    u.TS,
+    u.UpdatedUserId,
+    u.UpdatedDate)
+    from User as u
+    where u.Active = true
+  </query>
+
+  --><!--//UserDAO.SelectById//--><!--
+  <query name="UserDAO.SelectById">
+	  select new userdto(
+	  u.Id,
+	  u.UserName,
+	  u.Password,
+	  u.FullName,
+	  u.Email,
+	  u.BranchCode,
+	  u.IsMultiUser,
+	  u.IsLogon,
+	  u.IsCounterUser,
+	  u.Active,
+	  u.CreatedUserId,
+	  u.CreatedDate,
+	  u.TS,
+	  u.UpdatedUserId,
+	  u.UpdatedDate)
+	  from User as u
+	  where u.Id = :id
+	  and u.Active = true
+  </query>
+
+  --><!--//UserDAO.SelectByBranchCode//--><!--
+  <query name="UserDAO.SelectByBranchCode">
+    select new userdto(
+    u.Id,
+    u.UserName,
+    u.Password,
+    u.FullName,
+    u.Email,
+    u.BranchCode,
+    u.IsMultiUser,
+    u.IsLogon,
+    u.Active,
+    u.CreatedUserId,
+    u.CreatedDate,
+    u.TS,
+    u.UpdatedUserId,
+    u.UpdatedDate)
+    from User as u
+    where u.BranchCode = :branchCode
+    and u.IsMultiUser = false and u.IsLogon = true
+    and u.Active = true
+  </query>
+
+  --><!--//UserDAO.UpdateByUserId//--><!--
+  <query name="UserDAO.UpdateByUserId">
+    update User as u
+    set u.IsLogon =:value,
+
+    u.LastLogInDate = case when :value = true then :updatedDate
+    else u.LastLogInDate end,
+
+    u.LastLogOffDate = case when :value = false then :updatedDate
+    else u.LastLogOffDate end,
+
+    u.UpdatedDate =:updatedDate,
+    u.UpdatedUserId =:updatedUserId
+    where u.Id = :userId and u.Active = true
+  </query>
+
+  --><!--//UserDAO.GetMenuByUserId//--><!--
+  <query name="UserDAO.GetMenuByUserId">
+    select new menudto(
+    m.Id,
+    m.MenuName,
+    m.Description,
+    m.ShortcutKey,
+    m.ParentMenuId,
+    m.ProgramId,
+    m.SerialNo,
+    m.Image,
+    g.GroupName,
+    p.ProgramName,
+    p.ProgramPath
+    )
+    from User as u
+    inner join u.Roles as r with r.Active = true
+    inner join r.Group as g with g.Active = true
+    inner join g.MenuInGroups as mg with mg.Active = true
+    inner join mg.Menu as m with m.Active = true
+    Left join m.Program as p with p.Active = true
+    where u.Active = true and u.Id = :userid and mg.CanView = true
+    order by g.CreatedDate
+  </query>
+
+	--><!--CheckUserNameandPassword--><!--
+	<query name="UserDAO.CheckUserNameandPassword">
+		select new userdto(u.Id, u.UserName, u.Password)
+		from User as u
+		where u.UserName = :username
+		and u.Password = :password
+		and u.Active = true
+	</query>
+  
+</hibernate-mapping>-->
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<hibernate-mapping assembly="Ace.Windows.Admin.DataModel" namespace="Ace.Windows.Admin.DataModel" xmlns="urn:nhibernate-mapping-2.2">
+	<import class="Ace.Windows.Admin.DataModel.MenuDTO" rename="menudto"/>
+	<import class="Ace.Windows.Admin.DataModel.UserDTO, Ace.Windows.Admin.DataModel" rename="userdto"/>
+
+	<class name="User" table="[User]" >
+
+		<id name="Id" type="Int32" unsaved-value="0">
+			<generator class="increment">
+			</generator>
+		</id>
+
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="false"/>
+		</version>
+
+		<property name="UserName">
+			<column name="UserName" sql-type="nvarchar" not-null="true" />
+		</property>
+
+		<property name="Password">
+			<column name="Password" sql-type="nvarchar" not-null="true" />
+		</property>
+
+		<property name="FullName">
+			<column name="FullName" sql-type="nvarchar" not-null="false" />
+		</property>
+
+		<property name="BranchCode">
+			<column name="BranchCode" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="IsMultiUser">
+			<column name="IsMultiUser" sql-type="bit" not-null="false" />
+		</property>
+
+		<property name="IsLogon">
+			<column name="IsLogon" sql-type="bit" not-null="false" />
+		</property>
+
+		<property name="IsCounterUser">
+			<column name="IsCounterUser" sql-type="bit" not-null="false" />
+		</property>
+
+		<property name="Email">
+			<column name="Email" sql-type="nvarchar" not-null="false" />
+		</property>
+
+		<property name="IsNextLogonPasswordChanged">
+			<column name="IsNextLogonPasswordChanged" sql-type="bit" not-null="true" default="0" />
+		</property>
+
+		<property name="CanPasswordChanged">
+			<column name="CanPasswordChanged" sql-type="bit" not-null="true" default="0" />
+		</property>
+
+		<property name="CanPasswordExpired">
+			<column name="CanPasswordExpired" sql-type="bit" not-null="true" default="0" />
+		</property>
+
+		<property name="IsPasswordExpired">
+			<column name="IsPasswordExpired" sql-type="bit" not-null="true" default="0" />
+		</property>
+
+		<property name="PasswordExpiredDate">
+			<column name="PasswordExpiredDate" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="IsAccountDisabled">
+			<column name="IsAccountDisabled" sql-type="bit" not-null="true" default="0" />
+		</property>
+
+		<property name="FailedPasswordAttemptCount">
+			<column name="FailedPasswordAttemptCount" sql-type="int" not-null="true" default="0"/>
+		</property>
+
+		<property name="FailedPasswordAttemptWindowStart">
+			<column name="FailedPasswordAttemptWindowStart" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="LastAccountDisabledDate">
+			<column name="LastAccountDisabledDate" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="LastLogInDate">
+			<column name="LastLogInDate" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="LastLogOffDate">
+			<column name="LastLogOffDate" sql-type="datetime" not-null="false" />
+		</property>
+
+		<bag name="Roles" inverse="true" cascade="all">
+			<key column="UserId" />
+			<one-to-many class="Role" />
+		</bag>
+
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+
+	</class>
+
+  <!--//UserDAO.SelectByUsersName//-->
+  <query name="UserDAO.SelectByUsersName">
+    select new userdto(u.Id, u.UserName, u.Password)
+    from User as u
+    where u.UserName = :username
+    and u.BranchCode=:branchcode
+    and u.Active = true
+  </query>
+  
+
+	<!--//UserDAO.CheckExist//-->
+	<query name="UserDAO.CheckExist">
+		select new userdto(u.Id, u.UserName)
+		from User as u
+		where (u.UserName = :username and u.BranchCode = :branchCode)
+		and u.Active = true
+	</query>
+
+  <!--//UserDAO.CheckExist//-->
+  <query name="UserDAO.CheckUser">
+    select new userdto(u.Id, u.UserName)
+    from User as u
+    where (u.UserName = :username and u.BranchCode = :branchCode)
+    and u.Active = true
+  </query>
+  
+	<!--//UserDAO.SelectAll//-->
+	<query name="UserDAO.SelectAll">
+		select new userdto(
+		u.Id,
+		u.UserName,
+		u.Password,
+		u.FullName,
+		u.Email,
+		u.BranchCode,
+		u.IsMultiUser,
+		u.IsLogon,
+		u.IsCounterUser,
+		u.Active,
+		u.CreatedUserId,
+		u.CreatedDate,
+		u.TS,
+		u.UpdatedUserId,
+		u.UpdatedDate)
+		from User as u
+		where u.Active = true
+	</query>
+
+	<!--//UserDAO.SelectById//-->
+	<query name="UserDAO.SelectById">
+		select new userdto(
+		u.Id,
+		u.UserName,
+		u.Password,
+		u.FullName,
+		u.Email,
+		u.BranchCode,
+		u.IsMultiUser,
+		u.IsLogon,
+		u.IsCounterUser,
+		u.Active,
+		u.CreatedUserId,
+		u.CreatedDate,
+		u.TS,
+		u.UpdatedUserId,
+		u.UpdatedDate)
+		from User as u
+		where u.Id = :id
+		and u.Active = true
+	</query>
+
+	<!--//UserDAO.SelectByBranchCode//-->
+	<query name="UserDAO.SelectByBranchCode">
+		select new userdto(
+		u.Id,
+		u.UserName,
+		u.Password,
+		u.FullName,
+		u.Email,
+		u.BranchCode,
+		u.IsMultiUser,
+		u.IsLogon,
+		u.IsCounterUser,
+		u.Active,
+		u.CreatedUserId,
+		u.CreatedDate,
+		u.TS,
+		u.UpdatedUserId,
+		u.UpdatedDate)
+		from User as u
+		where u.BranchCode = :branchCode
+		and u.IsMultiUser = false and u.IsLogon = true
+		and u.Active = true
+	</query>
+
+	<!--//UserDAO.UpdateByUserId//-->
+	<query name="UserDAO.UpdateByUserId">
+		update User as u
+		set u.IsLogon =:value,
+
+		u.LastLogInDate = case when :value = true then :updatedDate
+		else u.LastLogInDate end,
+
+		u.LastLogOffDate = case when :value = false then :updatedDate
+		else u.LastLogOffDate end,
+
+		u.UpdatedDate =:updatedDate,
+		u.UpdatedUserId =:updatedUserId
+		where u.Id = :userId and u.Active = true
+	</query>
+
+	<!--//UserDAO.GetMenuByUserId//-->
+	<query name="UserDAO.GetMenuByUserId">
+		select new menudto(
+		m.Id,
+		m.MenuName,
+		m.Description,
+		m.ShortcutKey,
+		m.ParentMenuId,
+		m.ProgramId,
+		m.SerialNo,
+		m.Image,
+		g.GroupName,
+		p.ProgramName,
+		p.ProgramPath
+		)
+		from User as u
+		inner join u.Roles as r with r.Active = true
+		inner join r.Group as g with g.Active = true
+		inner join g.MenuInGroups as mg with mg.Active = true
+		inner join mg.Menu as m with m.Active = true
+		Left join m.Program as p with p.Active = true
+		where u.Active = true and u.Id = :userid and mg.CanView = true
+		order by g.Id
+	</query>
+<query name="UserDAO.SelectByUsersId">
+    select new userdto(u.Id, u.UserName, u.Password)
+    from User as u
+    where u.Id = :id
+    and u.Active = true
+  </query>
+
+  <!--//UserDAO.SelectByUsersName//-->
+  <query name="UserDAO.SelectByUsersIdForUserNoReport">
+    select new userdto(u.Id, u.UserName, u.Password)
+    from User as u
+    where u.Id = :username
+    and u.Active = true
+  </query>
+
+  <!--//UserDAO.SelectByUsersNameForWithdrawlListingReport//-->
+  <query name="UserDAO.SelectByUserNameForUserNoReport">
+    select new userdto(u.Id, u.UserName, u.Password)
+    from User as u
+    where u.UserName = :username
+    and u.BranchCode=:branchcode
+    and u.Active = true
+  </query>
+  <!--CheckUserNameandPassword for loans voucher Approved Forms-->
+	<query name="UserDAO.CheckUserNameandPassword">
+    select new userdto(u.Id, u.UserName, u.Password)
+    from User as u
+    where u.UserName = :username
+    and u.Password = :password
+    and UPPER(u.FullName) = 'MANAGER'
+    <!--and UPPER(u.UserName) like '%MGR%'-->
+    and u.Active = true
+  </query>
+  
+</hibernate-mapping>

@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+	<import class="Ace.Cbs.Loan.Dmd.LOMDTO00013, Ace.Cbs.Loan.Dmd" rename="LegalDto"/>
+	<class name="LOMVIW00001" table="VW_LOANS_LEGAL_LIST" mutable="false" >
+		
+		<id name="Id" type="Int32" unsaved-value="0">
+		</id>
+	
+		<property name="AcctNo">
+			<column name="ACCTNO" sql-type="varchar" not-null="true" />
+		</property>
+		<property name="Lno">
+			<column name="LNO" sql-type="varchar" not-null="true"/>
+		</property>
+		<property name="Cur">
+			<column name="CUR" sql-type="varchar" not-null="true"/>
+		</property>
+		<property name="Name">
+			<column name="NAME" sql-type="nvarchar" not-null="false"/>
+		</property>
+		<property name="AType">
+			<column name="ATYPE" sql-type="varchar" not-null="false"/>
+		</property>
+		<property name="LoansDesp">
+			<column name="LOANSDESP" sql-type="varchar" not-null="true"/>
+		</property>
+		<property name="SAmt">
+			<column name="SAMT" sql-type="numeric" not-null="false"/>
+		</property>
+		<property name="SDate">
+			<column name="SDATE" sql-type="datetime" not-null="false"/>
+		</property>		
+		<property name="SourceBr">
+			<column name="SourceBr" sql-type="varchar" not-null="true"/>
+		</property>
+		<property name="ExpireDate">
+			<column name="EXPIREDATE" sql-type="datetime" not-null="false"/>
+		</property>
+		<property name="IntRate">
+			<column name="INTRATE" sql-type="numeric" not-null="false"/>
+		</property>	
+		<property name="LegalDate">
+			<column name="LEGALDATE" sql-type="datetime" not-null="false"/>
+		</property>
+		<property name="NplDate">
+			<column name="NPLDATE" sql-type="datetime" not-null="false"/>
+		</property>
+		<property name="LegalCase">
+			<column name="LEGALCASE" sql-type="bit" not-null="true"/>
+		</property>
+		<property name="NplCase">
+			<column name="NPLCASE" sql-type="bit" not-null="true"/>
+		</property>	
+	</class>
+
+  <!--//LOMDAO00063.SelectNonPerformanceLoansCase//-->
+  <query name="LOMDAO00063.SelectNonPerformanceLoansCase">
+    select new LegalDto (
+    h.Id,
+    h.AcctNo,
+    h.Lno,
+    h.Cur,
+    h.Name,
+    h.AType,
+    h.LoansDesp,
+    h.SAmt,
+    h.SDate,
+    h.SourceBr,
+    h.ExpireDate,
+    h.IntRate,
+    h.LegalDate,
+    h.NplDate,
+    h.LegalCase,
+    h.NplCase
+    )
+    from LOMVIW00001 as h
+    where h.NplCase = true
+    and h.SourceBr = :sourceBranchCode
+    and h.Cur = :cur
+  </query>
+
+  <!--//LOMDAO00063.SelectLegalSueCaseList//-->
+  <query name="LOMDAO00063.SelectLegalSueCaseList">
+    select new LegalDto (
+    h.Id,
+    h.AcctNo,
+    h.Lno,
+    h.Cur,
+    h.Name,
+    h.AType,
+    h.LoansDesp,
+    h.SAmt,
+    h.SDate,
+    h.SourceBr,
+    h.ExpireDate,
+    h.IntRate,
+    h.LegalDate,
+    h.NplDate,
+    h.LegalCase,
+    h.NplCase
+    )
+    from LOMVIW00001 as h,LOMORM00013 as g
+    where h.Lno = g.Lno
+    and h.LegalCase = true
+    and (g.CloseDate IS NULL OR g.CloseDate='')
+    and CONVERT(CHAR(10),h.LegalDate,111) BETWEEN CONVERT(CHAR(10),:startDate,111) and CONVERT(CHAR(10),:endDate,111)
+    and h.Cur = :cur
+    and h.SourceBr = :sourceBranchCode
+  </query>
+
+  <!--//LOMDAO00063.SelectLegalSueCaseClose//-->
+  <query name="LOMDAO00063.SelectLegalSueCaseClose">
+    select new LegalDto (
+    h.Id,
+    h.AcctNo,
+    h.Lno,
+    h.Cur,
+    h.Name,
+    h.AType,
+    h.LoansDesp,
+    h.SAmt,
+    h.SDate,
+    h.SourceBr,
+    h.ExpireDate,
+    h.IntRate,
+    h.LegalDate,
+    h.NplDate,
+    h.LegalCase,
+    h.NplCase
+    )
+    from LOMVIW00001 as h,LOMORM00013 as g
+    where h.Lno = g.Lno
+    and (g.CloseDate IS Not NULL OR g.CloseDate != '')
+    and CONVERT(CHAR(10),g.CloseDate,111) BETWEEN CONVERT(CHAR(10),:startDate,111) and CONVERT(CHAR(10),:endDate,111)
+    and h.Cur = :cur
+    and h.SourceBr = :sourceBranchCode
+  </query>
+
+</hibernate-mapping>

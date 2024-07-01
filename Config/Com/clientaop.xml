@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    Service Aop 
+  </description>
+
+  <object id="SpringApplicationContext" type=" Ace.Windows.Core.Utt.SpringApplicationContext, Ace.Windows.Core" singleton="true">
+  </object>
+  
+  <object id="aroundAdvice"
+              type="Ace.Windows.Client.Aop.LoggingAroundAdvice, Ace.Windows.Client.Aop" singleton="false" />
+
+  <object id="Ace.Windows.CXClient.CXClientWrapper"
+          type="Ace.Windows.CXClient.CXClientWrapper, Ace.Windows.CXClient" singleton="false" >
+    <property name="ClientControlCenterIPAddress" value="127.0.0.1"/>
+    <property name="ClientControlCenterPort" value="1011"/>
+    <property name="SendTimeOut" value="1000000"/>
+    <property name="ReceiveTimeOut" value="1000000"/>
+  </object>
+  
+  <object id="myClientInvoker" type="Spring.Aop.Framework.ProxyFactoryObject, Spring.Aop" >
+    <property name="Target" ref="Ace.Windows.CXClient.CXClientWrapper">
+    </property>
+    <property name="InterceptorNames">
+      <list>
+        
+      </list>
+    </property>
+  </object>
+
+  <object id="InstallerUpdateForm"
+              type="Ace.Windows.Main.Forms.ApplicationUpdateForm, Ace.Windows.Main" singleton="false" >
+  </object>
+
+  <object id="myApplicationUpdater" type="Ace.Windows.CXClient.CXApplicationUpdater, Ace.Windows.CXClient" singleton="false" >
+  </object>
+
+  <object id="FX.BinarySerializer" type="Ace.Windows.Core.Utt.BinarySerializer, Ace.Windows.Core" singleton="false" >
+    <property name="SerializeTypeList">
+      <list>
+        
+      </list>
+    </property>
+  </object>
+
+  <object id="FX.MapperConfig" type="Ace.Windows.Core.Utt.MapperConfig, Ace.Windows.Core" singleton="false" >
+    <property name="MapperObjects">
+      <dictionary key-type="string" value-type="string">
+        <entry key="Ace.Cbs.Pfm.Dmd.PFMDTO00001, Ace.Cbs.Pfm.Dmd" value="Ace.Cbs.Pfm.Dmd.PFMORM00001, Ace.Cbs.Pfm.Dmd" />
+        <entry key="Ace.Cbs.Pfm.Dmd.PFMDTO00006, Ace.Cbs.Pfm.Dmd" value="Ace.Cbs.Pfm.Dmd.PFMORM00006, Ace.Cbs.Pfm.Dmd" />
+        <entry key="Ace.Cbs.Pfm.Dmd.PFMDTO00010, Ace.Cbs.Pfm.Dmd" value="Ace.Cbs.Pfm.Dmd.PFMORM00010, Ace.Cbs.Pfm.Dmd" />
+        <entry key="Ace.Cbs.Pfm.Dmd.PFMDTO00011, Ace.Cbs.Pfm.Dmd" value="Ace.Cbs.Pfm.Dmd.PFMORM00011, Ace.Cbs.Pfm.Dmd" />
+        <entry key="Ace.Cbs.Pfm.Dmd.PFMDTO00029, Ace.Cbs.Pfm.Dmd" value="Ace.Cbs.Pfm.Dmd.PFMORM00029, Ace.Cbs.Pfm.Dmd" />
+        <entry key="Ace.Cbs.Pfm.Dmd.PFMDTO00032, Ace.Cbs.Pfm.Dmd" value="Ace.Cbs.Pfm.Dmd.PFMORM00032, Ace.Cbs.Pfm.Dmd" />
+        <entry key="Ace.Cbs.Pfm.Dmd.PFMDTO00043, Ace.Cbs.Pfm.Dmd" value="Ace.Cbs.Pfm.Dmd.PFMORM00043, Ace.Cbs.Pfm.Dmd" />
+        <entry key="Ace.Cbs.Pfm.Dmd.PFMDTO00044, Ace.Cbs.Pfm.Dmd" value="Ace.Cbs.Pfm.Dmd.PFMORM00044, Ace.Cbs.Pfm.Dmd" />
+        <entry key="Ace.Cbs.Pfm.Dmd.PFMDTO00045, Ace.Cbs.Pfm.Dmd" value="Ace.Cbs.Pfm.Dmd.PFMORM00045, Ace.Cbs.Pfm.Dmd" />
+        <entry key="Ace.Cbs.Pfm.Dmd.PFMDTO00058, Ace.Cbs.Pfm.Dmd" value="Ace.Cbs.Pfm.Dmd.PFMORM00058, Ace.Cbs.Pfm.Dmd" />        
+      </dictionary>
+    </property>
+  </object>
+
+	<object id="Ace.Windows.Ix.Core.Forms.frmManualUpgradeNewVersionforClient" type="Ace.Windows.Ix.Core.Forms.frmManualUpgradeNewVersion, Ace.Windows.Ix.Core" singleton="false" >
+	</object>
+	
+</objects>

@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<objects xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+	<description>
+		UIForm Objects Settings
+	</description>
+
+	<!--Region System Admin-->
+
+	<!--//AccountType//-->
+	<object id="frmSAMVEW00001" type="Ace.Cbs.Sam.Vew.SAMVEW00001, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="AccountTypeController"/>
+	</object>
+
+	<!--//SubAccountType//-->
+	<object id="frmSAMVEW00002" type="Ace.Cbs.Sam.Vew.SAMVEW00002, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="SubAccountTypeController"/>
+	</object>
+
+	<!--//OccupationCode//-->
+	<object id="frmSAMVEW00003" type="Ace.Cbs.Sam.Vew.SAMVEW00003, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="OccupationCodeController"/>
+	</object>
+
+	<!--//OtherBankCode//-->
+	<object id="frmSAMVEW00004" type="Ace.Cbs.Sam.Vew.SAMVEW00004, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="BCodeController"/>
+	</object>
+
+	<!--//HolidayEntry//-->
+	<object id="frmSAMVEW00007" type="Ace.Cbs.Sam.Vew.SAMVEW00007, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="HOLIDAYController"/>
+	</object>
+
+	<!--//DepositCodeEntry//-->
+	<object id="frmSAMVEW00008" type="Ace.Cbs.Sam.Vew.SAMVEW00008, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="DepositCodeController"/>
+	</object>
+
+	<!--//AppsettingEntry//-->
+	<object id="frmSAMVEW00010" type="Ace.Cbs.Sam.Vew.SAMVEW00010, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="AppSettingsController"/>
+	</object>
+
+	<!--//BranchCodeSetup//-->
+	<object id="frmSAMVEW00014" type="Ace.Cbs.Sam.Vew.SAMVEW00014, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="BranchController"/>
+	</object>
+
+	<!--//FixedRateSetup/ /-->
+	<object id="frmSAMVEW00015" type="Ace.Cbs.Sam.Vew.SAMVEW00015, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="FixRateController"/>
+	</object>
+
+	<!--//NewSetup//-->
+	<object id="frmSAMVEW00016" type="Ace.Cbs.Sam.Vew.SAMVEW00016, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="NewSetupController"/>
+	</object>
+
+	<!--//ZoneCodeSetup//-->
+	<object id="frmSAMVEW00017" type="Ace.Cbs.Sam.Vew.SAMVEW00017, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="ZoneController"/>
+	</object>
+
+	<!--//BranchKey//-->
+	<object id="frmSAMVEW00019.Branch" type="Ace.Cbs.Sam.Vew.SAMVEW00019, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="TestKeyController"/>
+		<property name="FormName" value="Branch Key"/>
+	</object>
+
+	<!--//DayKey//-->
+	<object id="frmSAMVEW00019.Day" type="Ace.Cbs.Sam.Vew.SAMVEW00019, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="TestKeyController"/>
+		<property name="FormName" value="Day Key"/>
+	</object>
+
+	<!--//MonthKey//-->
+	<object id="frmSAMVEW00019.Month" type="Ace.Cbs.Sam.Vew.SAMVEW00019, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="TestKeyController"/>
+		<property name="FormName" value="Month Key"/>
+	</object>
+
+	<!--//AmountKey//-->
+	<object id="frmSAMVEW00019.Amount" type="Ace.Cbs.Sam.Vew.SAMVEW00019, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="TestKeyController"/>
+		<property name="FormName" value="Amount Key"/>
+	</object>
+
+	<!--//BranchServerSetup//-->
+	<object id="frmSAMVEW00020" type="Ace.Cbs.Sam.Vew.SAMVEW00020, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="SERVERLOGController"/>
+	</object>
+
+	<!--//InitialCodeEntry//-->
+	<object id="frmSAMVEW00021" type="Ace.Cbs.Sam.Vew.SAMVEW00021, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="InitialCodeController"/>
+	</object>
+
+	<!--//PORateSetup//-->
+	<object id="frmSAMVEW00022" type="Ace.Cbs.Sam.Vew.SAMVEW00022, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="PORateController"/>
+	</object>
+
+	<!--//RateSetup//-->
+	<object id="frmSAMVEW00023" type="Ace.Cbs.Sam.Vew.SAMVEW00023, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="RateFileController"/>
+	</object>
+
+	<!--//DenominationSetup//-->
+	<object id="frmSAMVEW00024" type="Ace.Cbs.Sam.Vew.SAMVEW00024, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="DenosetupController"/>
+	</object>
+
+	<!--//RemittanceBranch&Rate//-->
+	<object id="frmSAMVEW00025" type="Ace.Cbs.Sam.Vew.SAMVEW00025, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="RateEntryController"/>
+	</object>
+
+	<!--//IBLRateEntry//-->
+	<object id="frmSAMVEW00026" type="Ace.Cbs.Sam.Vew.SAMVEW00026, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="IBLRateEntryController"/>
+	</object>
+
+	<!--//Sys001//-->
+	<object id="frmSAMVEW00049" type="Ace.Cbs.Sam.Vew.SAMVEW00049, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="Sys001Controller"/>
+	</object>
+
+	<!--//MessageList//-->
+	<object id="frmSAMVEW00050" type="Ace.Cbs.Sam.Vew.SAMVEW00050, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="MessageController"/>
+	</object>
+
+	<!--//TranType//-->
+	<object id="frmSAMVEW00052" type="Ace.Cbs.Sam.Vew.SAMVEW00052, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="TranTypeController"/>
+	</object>
+	
+	<!--//CurrencyRate//-->
+	<object id="frmSAMVEW00051" type="Ace.Cbs.Sam.Vew.SAMVEW00051, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="RateInfoController"/>
+	</object>
+
+	<!--//CCOA//-->
+	<object id="frmSAMVEW00047" type="Ace.Cbs.Sam.Vew.SAMVEW00047, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="CCOAController"/>
+	</object>
+
+	<!--//NationalityCodeSetup//-->
+	<object id="frmSAMVEW00053" type="Ace.Cbs.Sam.Vew.SAMVEW00053, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="NationalityCodeController"/>
+	</object>
+
+  <!--//NRCCodeSetup//-->
+  <object id="frmSAMVEW00064" type="Ace.Cbs.Sam.Vew.SAMVEW00064, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureBaseForm">
+    <property name="Controller" ref="NRCCodeController"/>
+  </object>
+
+	<!--//Branch Code Listing//-->
+	<object id="frmSAMVEW00054" type="Ace.Cbs.Sam.Vew.SAMVEW00054, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureBaseForm">
+		<property name="Controller" ref="BranchCodeController"/>
+	</object>
+
+	<!--//Code Listing//-->
+	<object id="frmSAMVEW00055" type="Ace.Cbs.Sam.Vew.SAMVEW00055, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureBaseForm">
+		<property name="Controller" ref="CodeListingController"/>
+	</object>
+
+	<object id="frmSAMVEW00056" type="Ace.Cbs.Sam.Vew.SAMVEW00056, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureBaseForm">		
+	</object>
+	<object id="frmSAMVEW00057" type="Ace.Cbs.Sam.Vew.SAMVEW00057, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureBaseForm">
+	</object>
+	<object id="frmSAMVEW00058" type="Ace.Cbs.Sam.Vew.SAMVEW00058, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureBaseForm">
+	</object>
+	<object id="frmSAMVEW00059" type="Ace.Cbs.Sam.Vew.SAMVEW00059, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureBaseForm">
+	</object>
+	<object id="frmSAMVEW00060" type="Ace.Cbs.Sam.Vew.SAMVEW00060, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureBaseForm">
+	</object>
+	<object id="frmSAMVEW00061" type="Ace.Cbs.Sam.Vew.SAMVEW00061, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureBaseForm">
+	</object>
+	<object id="frmSAMVEW00062" type="Ace.Cbs.Sam.Vew.SAMVEW00062, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureBaseForm">
+	</object>
+
+  <!--//Interest Rate File Listing//-->
+  <object id="frmSAMVEW00031" type="Ace.Cbs.Sam.Vew.SAMVEW00031, Ace.Cbs.Sam.Vew" singleton="false" parent="SecureBaseForm">
+    <property name="Controller" ref="InterestRateController"/>
+  </object>
+
+  <!--//Interest Rate File Report//-->
+  <object id="frmSAMVEW00063" type="Ace.Cbs.Sam.Vew.SAMVEW00063, Ace.Cbs.Sam.Vew" singleton="false" parent="NonSecureDockForm">
+    <!--<property name="Controller" ref="InterestRateController"/>-->
+  </object>
+	<!--Endregion-->
+
+</objects>

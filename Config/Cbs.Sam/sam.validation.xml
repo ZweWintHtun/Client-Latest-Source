@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:v="http://www.springframework.net/validation">
+
+	<description>
+		Form Data Entity Validation Objects Injection
+	</description>
+
+	<!--Region System Admin Module-->
+
+	<!--//AccountTypeValidation//-->
+	<v:group id="AccountTypeValidator" >
+
+		<v:required id="AccountType.codeValidator" test="Code">
+			<v:message id="MV20007" providers="Code"/>
+		</v:required>
+		<v:required id="AccountType.descriptionValidator" test="Description">
+			<v:message id="MV90005" providers="Description"/>
+		</v:required>
+		<v:required id="AccountType.symbolValidator" test="Symbol">
+			<v:message id="MV20008" providers="Symbol"/>
+		</v:required>
+
+	</v:group>
+
+	<!--//AppSettingsValidation//-->
+	<v:group id="AppSettings.Validator" >
+
+		<v:required id="AppSettings.keyNameValidator" test="KeyName">
+			<v:message id="MV20009" providers="KeyName"/>
+		</v:required>
+		<v:required id="AppSettings.keyValueValidator" test="KeyValue">
+			<v:message id="MV20010" providers="KeyValue"/>
+		</v:required>
+		<v:required id="AppSettings.descriptionValidator" test="Description">
+			<v:message id="MV90005" providers="Description"/>
+		</v:required>
+		<v:required id="AppSettings.locationValidator" test="Location">
+			<v:message id="MV20011" providers="Location"/>
+		</v:required>
+		<v:required id="AppSettings.typeValidator" test="Type">
+			<v:message id="MV20012" providers="Type"/>
+		</v:required>
+		<!--<v:required id="AppSettings.binaryValueValidator" test="BinaryValue">
+      <v:message id="MV00000" providers="BinaryValue"/>
+    </v:required>-->
+
+	</v:group>
+
+	<!--//SubAccountTypeValidation//-->
+	<v:group id="SubAccountTypeValidator" >
+
+		<v:required id="SubAccountType.accountTypeCodeValidator" test="AccountTypeId">
+			<v:message id="MV20054" providers="AccountTypeId"/>
+		</v:required>
+		<v:required id="SubAccountType.codeValidator" test="Code">
+			<v:message id="MV20021" providers="Code"/>
+		</v:required>
+		<v:required id="SubAccountType.descriptionValidator" test="Description">
+			<v:message id="MV20055" providers="Description"/>
+		</v:required>
+		<v:required id="SubAccountType.symbolValidator" test="Symbol">
+			<v:message id="MV20008" providers="Symbol"/>
+		</v:required>
+		<v:required id="SubAccountType.accountSignValidator" test="AccountSignature">
+			<v:message id="MV20027" providers="AccountSignature"/>
+		</v:required>
+	</v:group>
+
+	<!--//InitialValidation//-->
+	<v:group id="InitialCodeValidator" >
+
+		<v:required id="Initial.initialValidator" test="Initial">
+			<v:message id="MV20057" providers="Initial"/>
+		</v:required>
+		<v:required id="Initial.descriptionValidator" test="Description">
+			<v:message id="MV90005" providers="Description"/>
+		</v:required>
+
+	</v:group>
+
+	<!--//OccupationCodeValidation//-->
+	<v:group id="OccupationCodeValidator" >
+
+		<v:required id="OccupationCode.occupationCodeValidator" test="Occupation_Code">
+			<v:message id="MV20002" providers="Occupation_Code"/>
+		</v:required>
+		<v:required id="OccupationCode.despValidator" test="Description">
+			<v:message id="MV90005" providers="Description"/>
+		</v:required>
+
+	</v:group>
+
+	<!--//DEPOSITCODEValidation//-->
+	<v:group id="DEPOSITCODEValidator" >
+
+		<v:required id="DEPOSITCODE.dEPCODEValidator" test="DepositCode">
+			<v:message id="MV20006" providers="DepositCode"/>
+		</v:required>
+		<v:required id="DEPOSITCODE.dESPValidator" test="Description">
+			<v:message id="MV90005" providers="Description"/>
+		</v:required>
+	</v:group>
+
+	<!--//HOLIDAYValidation//-->
+	<v:group id="HOLIDAYValidator" >
+		<v:required id="HOLIDAY.dATEValidator" test="DATE">
+			<v:message id="MV00117" providers="DATE"/>
+		</v:required>
+		<v:required id="HOLIDAY.dESCRIPTIONValidator" test="DESCRIPTION">
+			<v:message id="MV90005" providers="DESCRIPTION"/>
+		</v:required>
+	</v:group>
+
+	<!--//BCodeValidation//-->
+	<v:group id="BCodeValidator" >
+
+		<v:required id="BCode.bCodeValidator" test="BCode">
+			<v:message id="MV00070" providers="BCode"/>
+		</v:required>
+		<v:required id="BCode.bDespValidator" test="BDesp">
+			<v:message id="MV20003" providers="BDesp"/>
+		</v:required>
+		<!--<v:required id="BCode.bAcctNoValidator" test="BAccountNo">
+			<v:message id="MV20021" providers="BAccountNo"/>
+		</v:required>-->
+
+	</v:group>
+
+	<!--//TestKeyValidation//-->
+	<v:group id="DayKeyValidator" >
+
+		<v:required id="DayKey.codeValidator" test="Code">
+			<v:message id="MV20007" providers="Code"/>
+		</v:required>
+		<v:required id="DayKey.valueValidator" test="Value">
+			<v:message id="MV20024" providers="Value"/>
+		</v:required>
+    <!--<v:required id="DayKey.start_DateValidator" test="StartDate">
+			<v:message id="MV00117" providers="StartDate"/>
+		</v:required>-->
+
+
+	</v:group>
+
+	<!--//ZoneValidation//-->
+	<v:group id="Zone.Validator" >
+
+		<v:required id="Zone.zONETYPEValidator" test="ZoneType">
+			<v:message id="MV20059" providers="ZoneType"/>
+		</v:required>
+		<v:required id="Zone.bRCODEValidator" test="BranchCode">
+			<v:message id="MV00070" providers="BranchCode"/>
+		</v:required>
+		<v:required id="Zone.aCODEValidator" test="AccountCode">
+			<v:message id="MV20021" providers="AccountCode"/>
+		</v:required>
+
+
+	</v:group>
+
+	<!--//FixRateValidation//-->
+	<v:group id="FixRate.Validator" >
+
+		<v:required id="FixRate.despValidator" test="Description">
+			<v:message id="MV90005" providers="Description"/>
+		</v:required>
+		<v:required id="FixRate.rateValidator" test="Rate">
+			<v:message id="MV20032" providers="Rate"/>
+		</v:required>
+		<v:required id="FixRate.durationValidator" test="Duration">
+			<v:message id="MV00034" providers="Duration"/>
+		</v:required>
+
+
+	</v:group>
+
+	<!--//PORateValidation//-->
+	<v:group id="PORate.Validator" >
+
+		<!--<v:required id="PORate.rateValidator" test="Rate">
+			<v:message id="MV20032" providers="Rate"/>
+		</v:required>
+		<v:required id="PORate.fixAmtValidator" test="FixAmount">
+			<v:message id="MV20033" providers="FixAmount"/>
+		</v:required>-->
+		<v:required id="PORate.startNoValidator" test="StartNo">
+			<v:message id="MV20030" providers="StartNo"/>
+		</v:required>
+		<!--<v:required id="PORate.endNoValidator" test="EndNo">
+			<v:message id="MV20031" providers="EndNo"/>
+		</v:required>-->
+		<v:required id="PORate.curValidator" test="Currency">
+			<v:message id="MV00020" providers="Currency"/>
+		</v:required>
+
+	</v:group>
+
+	<!--//RateFileValidation//-->
+	<v:group id="RateFile.Validator" >
+
+		<v:required id="RateFile.codeValidator" test="Code">
+			<v:message id="MV20066" providers="Code"/>
+		</v:required>
+		<v:required id="RateFile.despValidator" test="Description">
+			<v:message id="MV90005" providers="Description"/>
+		</v:required>
+		<v:required id="RateFile.dATE_TIMEValidator" test="DATE_TIME">
+			<v:message id="MV00117" providers="DATE_TIME"/>
+		</v:required>
+		<v:required id="RateFile.rateValidator" test="Rate">
+			<v:message id="MV20032" providers="Rate"/>
+		</v:required>
+
+	</v:group>
+
+	<!--//IBLRateValidation//-->
+	<v:group id="IBLRate.Validator" >
+
+		<v:required id="RemitBr.branchCodeValidator" test="BranchCode">
+			<v:message id="MV00070" providers="BranchCode"/>
+		</v:required>
+		<v:required id="RemitBr.tlxChargesValidator" test="TelaxCharges">
+			<v:message id="MV00106" providers="TelaxCharges"/>
+		</v:required>
+		<v:required id="RemitBr.drawAcValidator" test="DrawingAccount">
+			<v:message id="MV20061" providers="DrawingAccount"/>
+		</v:required>
+		<v:required id="RemitBr.encashAcValidator" test="EncashAccount">
+			<v:message id="MV20062" providers="EncashAccount"/>
+		</v:required>
+		<v:required id="RemitBr.iBSComAcValidator" test="IBSComAccount">
+			<v:message id="MV20063" providers="IBSComAccount"/>
+		</v:required>
+		<v:required id="RemitBr.telexAcValidator" test="TelaxAccount">
+			<v:message id="MV20065" providers="TelaxAccount"/>
+		</v:required>
+		<v:required id="RemitBr.iRPOACValidator" test="IRPOAccount">
+			<v:message id="MV20064" providers="IRPOAccount"/>
+		</v:required>
+		<v:required id="RemitBr.curValidator" test="Currency">
+			<v:message id="MV00020" providers="Currency"/>
+		</v:required>
+
+	</v:group>
+
+	<!--//IBLRateBrValidation//-->
+	<v:group id="IBLbrRate.Validator" >
+
+		<v:required id="RemitBrIbl.branchCodeValidator" test="BranchCode">
+			<v:message id="MV00070" providers="BranchCode"/>
+		</v:required>
+		<v:required id="RemitBrIbl.tlxChargesValidator" test="TelaxCharges">
+			<v:message id="MV00106" providers="TelaxCharges"/>
+		</v:required>
+		<v:required id="RemitBrIbl.drawAcValidator" test="DrawingAccount">
+			<v:message id="MV20061" providers="DrawingAccount"/>
+		</v:required>
+		<v:required id="RemitBrIbl.encashAcValidator" test="EncashAccount">
+			<v:message id="MV20062" providers="EncashAccount"/>
+		</v:required>
+		<v:required id="RemitBrIbl.iBSComAcValidator" test="IBSComAccount">
+			<v:message id="MV20063" providers="IBSComAccount"/>
+		</v:required>
+		<v:required id="RemitBrIbl.telexAcValidator" test="TelaxAccount">
+			<v:message id="MV20065" providers="TelaxAccount"/>
+		</v:required>
+		<v:required id="RemitBrIbl.iRPOACValidator" test="IRPOAccount">
+			<v:message id="MV20064" providers="IRPOAccount"/>
+		</v:required>
+		<v:required id="RemitBrIbl.curValidator" test="Currency">
+			<v:message id="MV00020" providers="Currency"/>
+		</v:required>
+
+	</v:group>
+
+	<!--//BranchServerValidation//-->
+	<v:group id="SERVERLOG.Validator" >
+
+		<v:required id="SERVERLOG.bRANCHNOValidator" test="BRANCHNO">
+			<v:message id="MV00070" providers="BRANCHNO"/>
+		</v:required>
+
+		<v:required id="SERVERLOG.sERVERNAMEValidator" test="SERVERNAME">
+			<v:message id="MV20025" providers="SERVERNAME"/>
+		</v:required>
+
+		<v:required id="SERVERLOG.iPADDRESSValidator" test="IPADDRESS">
+			<v:message id="MV20026" providers="IPADDRESS"/>
+		</v:required>
+
+		<v:required id="SERVERLOG.dBNAMEValidator" test="DBNAME">
+			<v:message id="MV20058" providers="DBNAME"/>
+		</v:required>
+
+	</v:group>
+
+	<!--//DenoValidation//-->
+	<v:group id="Deno.Validator" >
+
+		<v:required id="Deno.dESPValidator" test="Description">
+			<v:message id="MV90005" providers="Description"/>
+		</v:required>
+		<v:required id="Deno.d1Validator" test="D1">
+			<v:message id="MV20028" providers="D1"/>
+		</v:required>
+		<v:required id="Deno.d2Validator" test="D2">
+			<v:message id="MV20029" providers="D2"/>
+		</v:required>
+		<v:required id="Deno.cURValidator" test="Currency">
+			<v:message id="MV00020" providers="Currency"/>
+		</v:required>
+		<v:required id="Deno.sYMBOLValidator" test="Symbol">
+			<v:message id="MV20008" providers="Symbol"/>
+		</v:required>
+	</v:group>
+
+	<!--//NewSetupValidation//-->
+	<v:group id="NewSetup.Validator" >
+
+		<v:required id="NewSetup.variableValidator" test="Variable">
+			<v:message id="MV20046" providers="Variable"/>
+		</v:required>
+
+		<v:required id="NewSetup.valueValidator" test="Value">
+			<v:message id="MV20024" providers="Value"/>
+		</v:required>
+
+	</v:group>
+
+	<!--//Sys001Validation//-->
+	<v:group id="Sys001.Validator" >
+
+		<v:required id="Sys001.nameValidator" test="Name">
+			<v:message id="MV00002" providers="Name"/>
+		</v:required>
+
+	</v:group>
+
+	<!--//MessageValidation//-->
+	<v:group id="Message.Validator" >
+
+		<v:required id="Message.codeValidator" test="Code">
+			<v:message id="MV20007" providers="Code"/>
+		</v:required>
+		<v:required id="Message.descriptionValidator" test="Description">
+			<v:message id="MV90005" providers="Description"/>
+		</v:required>
+
+
+	</v:group>
+
+	<!--//RateInfoValidation//-->
+	<v:group id="RateInfo.Validator" >
+
+		<v:required id="RateInfo.curValidator" test="CurrencyCode">
+			<v:message id="MV00020" providers="CurrencyCode"/>
+		</v:required>
+		<v:required id="RateInfo.rateTypeValidator" test="RateType">
+			<v:message id="MV20060" providers="RateType"/>
+		</v:required>
+		<v:required id="RateInfo.rateValidator" test="Rate">
+			<v:message id="MV20032" providers="Rate"/>
+		</v:required>
+		<!--<v:required id="RateInfo.denoRateValidator" test="DenoRate">
+      <v:message id="MV00000" providers="DenoRate"/>
+    </v:required>-->
+		<v:required id="RateInfo.rDateValidator" test="RegisterDate">
+			<v:message id="MV00117" providers="RegisterDate"/>
+		</v:required>
+		<v:required id="RateInfo.toCurValidator" test="ToCurrencyCode">
+			<v:message id="MV00020" providers="ToCurrencyCode"/>
+		</v:required>
+
+	</v:group>
+
+	<!--//TranTypeValidation//-->
+	<v:group id="TranType.Validator" >
+
+		<v:required id="TranType.tranCodeValidator" test="TransactionCode">
+			<v:message id="MV20042" providers="TransactionCode"/>
+		</v:required>
+		<v:required id="TranType.despValidator" test="Description">
+			<v:message id="MV90005" providers="Description"/>
+		</v:required>
+		<v:required id="TranType.narrationValidator" test="Narration">
+			<v:message id="MV00087" providers="Narration"/>
+		</v:required>
+		<v:required id="TranType.statusValidator" test="Status">
+			<v:message id="MV20043" providers="Status"/>
+		</v:required>
+		<!--<v:required id="TranType.pBReferenceValidator" test="PBReference">
+			<v:message id="MV20044" providers="PBReference"/>
+		</v:required>
+		<v:required id="TranType.rVReferenceValidator" test="RVReference">
+			<v:message id="MV20045" providers="RVReference"/>
+		</v:required>-->
+
+	</v:group>
+  
+
+	<!--//CCOAValidation//-->
+	<v:group id="CCOA.Validator" >
+
+		<v:required id="CCOA.aCODEValidator" test="ACODE">
+			<v:message id="MV00000" providers="ACODE"/>
+		</v:required>
+		<v:required id="CCOA.dCODEValidator" test="DCODE">
+			<v:message id="MV00000" providers="DCODE"/>
+		</v:required>
+		<v:required id="CCOA.cURValidator" test="CUR">
+			<v:message id="MV00000" providers="CUR"/>
+		</v:required>
+		<v:required id="CCOA.bUDGETValidator" test="BUDGET">
+			<v:message id="MV00000" providers="BUDGET"/>
+		</v:required>
+	</v:group>
+
+	<!--//NationalityCodeValidation//-->
+	<v:group id="NationalityCodeValidator" >
+
+		<v:required id="NationalityCode.NationalityCodeValidator" test="Nationality_Code">
+			<v:message id="MV20003" providers="Nationality_Code"/>
+		</v:required>
+		<v:required id="NationalityCode.despValidator" test="Description">
+			<v:message id="MV90005" providers="Description"/>
+		</v:required>
+
+	</v:group>
+
+
+	<!--//Branch Code Listing//-->
+	<v:group id="BranchCodeValidator" >
+
+		<v:required id="BranchCodeValidator.StateCode" test="StateCode">
+			<v:message id="MV90029" providers="StateCode"/>
+		</v:required>
+	</v:group>
+
+	<!--//Code Listing//-->
+	<v:group id="CodeListingValidator" >
+
+		<v:required id="CodeListingValidator.CodeType" test="CodeType">
+			<v:message id="MV90071" providers="CodeType"/>
+		</v:required>
+	</v:group>
+
+  <!--//NRCCodeValidation//-->
+  <v:group id="NRCCodeValidator" >
+
+    <v:required id="NRCCodeValidator.StateCodeValidator" test="StateCode">
+      <v:message id="MV20004" providers="StateCode"/>
+    </v:required>
+    <v:required id="NRCCodeValidator.TownshipCodeValidator" test="TownshipCode">
+      <v:message id="MV20005" providers="TownshipCode"/>
+    </v:required>
+    <v:required id="NRCCodeValidator.TownshipDespValidator" test="TownshipDesp">
+      <v:message id="MV20039" providers="TownshipDesp"/>
+    </v:required>
+
+  </v:group>
+
+	<!--Endregion-->
+
+</objects>

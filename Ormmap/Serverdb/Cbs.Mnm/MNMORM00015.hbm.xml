@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--PREV_CI-->
+<!-- 
+// <copyright file="MNMORM00015.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>Banking</CreatedUser>
+// <CreatedDate>11/15/2013</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version></Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Mnm.Dmd.MNMDTO00015, Ace.Cbs.Mnm.Dmd" rename="MNMDTO00015"/>
+  <class name="MNMORM00015" table="PREV_CI">
+
+    <id name="ACCTNO">
+      <column name="ACCTNO" sql-type="ACCTNO" not-null="true" />
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+
+    <property name="M1">
+      <column name="M1" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M2">
+      <column name="M2" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M3">
+      <column name="M3" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M4">
+      <column name="M4" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M5">
+      <column name="M5" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M6">
+      <column name="M6" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M7">
+      <column name="M7" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M8">
+      <column name="M8" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M9">
+      <column name="M9" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M10">
+      <column name="M10" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M11">
+      <column name="M11" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M12">
+      <column name="M12" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="LASTDATE">
+      <column name="LASTDATE" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="LASTINT">
+      <column name="LASTINT" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="CLOSEDATE">
+      <column name="CLOSEDATE" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="DATE_TIME">
+      <column name="DATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="BUDGET">
+      <column name="BUDGET" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="UID">
+      <column name="UID" sql-type="uniqueidentifier" not-null="true" />
+    </property>
+
+    <property name="SOURCEBR">
+      <column name="SOURCEBR" sql-type="varchar" not-null="false" />
+    </property>
+
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  <!--//PREV_CI.CheckExist//-->
+  <query name="PREV_CIDAO.CheckExist">
+    select new MNMDTO00015( p.ACCTNO,p.M1,p.M2,p.M3,p.M4,p.M5,p.M6,p.M7,p.M8,p.M9,p.M10,p.M11,p.M12,p.LASTDATE,p.LASTINT,p.CLOSEDATE,p.DATE_TIME,p.BUDGET,p.UID,p.SOURCEBR )
+    from MNMORM00015 as p where ( p.ACCTNO =: aCCTNO or p.UID =: uID  ) and  p.Active = true
+  </query>
+
+  <!--//PREV_CIDAO.SelectAll//-->
+  <query name="PREV_CIDAO.SelectAll">
+    select new MNMDTO00015(
+    p.ACCTNO,
+    p.M1,
+    p.M2,
+    p.M3,
+    p.M4,
+    p.M5,
+    p.M6,
+    p.M7,
+    p.M8,
+    p.M9,
+    p.M10,
+    p.M11,
+    p.M12,
+    p.LASTDATE,
+    p.LASTINT,
+    p.CLOSEDATE,
+    p.DATE_TIME,
+    p.BUDGET,
+    p.UID,
+    p.SOURCEBR
+    )
+    from MNMORM00015 as p
+    where p.Active = true
+  </query>
+
+  <!--//PREV_CIDAO.SelectByACCTNO//-->
+  <query name="PREV_CIDAO.SelectByACCTNO">
+    select new MNMDTO00015(
+    p.ACCTNO,
+    p.M1,
+    p.M2,
+    p.M3,
+    p.M4,
+    p.M5,
+    p.M6,
+    p.M7,
+    p.M8,
+    p.M9,
+    p.M10,
+    p.M11,
+    p.M12,
+    p.LASTDATE,
+    p.LASTINT,
+    p.CLOSEDATE,
+    p.DATE_TIME,
+    p.BUDGET,
+    p.UID,
+    p.SOURCEBR
+    )
+    from MNMORM00015 as p
+    where p.ACCTNO = :aCCTNO
+    and p.Active = true
+  </query>
+
+
+</hibernate-mapping>

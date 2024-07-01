@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00316, Ace.Cbs.Loan.Dmd" rename="VW_PLRepaymentScheduleListing_dto"/>
+  <class name="LOMVIW00316" table="VW_PLRepaymentScheduleListing" mutable="false">
+    <!--Created By HWKO (13-Jul-2017)-->
+
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+
+    <property name="PLNO">
+      <column name="PLNO" sql-type="varchar" not-null="true"/>
+    </property>
+
+    <property name="ACNo">
+      <column name="ACNo" sql-type="varchar" not-null="true"/>
+    </property>
+
+    <property name="NAME">
+      <column name="NAME" sql-type="varchar" not-null="false"/>
+    </property>
+
+    <property name="MonthlyIncome">
+      <column name="MonthlyIncome" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="MonthlyRepayDate">
+      <column name="MonthlyRepayDate" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="ProductType">
+      <column name="ProductType" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="ActualInstallmentAmount">
+      <column name="ActualInstallmentAmount" sql-type="numeric" not-null="false" />
+    </property>
+    
+    <property name="InstallmentAmount">
+      <column name="InstallmentAmount" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="ADDRESS">
+      <column name="ADDRESS" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="FirstSAmt">
+      <column name="FirstSAmt" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="IntRate">
+      <column name="IntRate" sql-type="numeric" not-null="true" />
+    </property>
+
+    <property name="TermNo">
+      <column name="TermNo" sql-type="Int32" not-null="false" />
+    </property>
+
+    <property name="InterestAmount">
+      <column name="InterestAmount" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="DueDate">
+      <column name="DueDate" sql-type="datetime" not-null="false" />
+    </property>    
+
+    <property name="PaidDate">
+      <column name="PaidDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="SourceBr">
+      <column name="SourceBr" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="RemainingCapital">
+      <column name="RemainingCapital" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="PHONE">
+      <column name="PHONE" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="InterestDate">
+      <column name="InterestDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="TotalLateFees">
+      <column name="TotalLateFees" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="ODAmount">
+      <column name="ODAmount" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="Cur">
+      <column name="Cur" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Status">
+      <column name="Status" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="CompanyName">
+      <column name="CompanyName" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="LedgerBalance">
+      <column name="LedgerBalance" sql-type="numeric" not-null="true" />
+    </property>
+
+    <!--//Added by HWKO (27-Oct-2017)-->
+    <property name="NRC">
+      <column name="NRC" sql-type="varchar" not-null="false" />
+    </property>
+
+    <!--//Added by AAM (12-Apr-2018)-->
+    <property name="ActualRepaidDate">
+      <column name="ActualRepaidDate" sql-type="datetime" not-null="false" />
+    </property>
+
+  </class>
+
+  <!--//PLRepaymentScheduleListingDAO.SelectByPLNO// kkt-->
+  <sql-query name="PLRepaymentScheduleListingDAO.SelectByPLNO">
+	  SELECT Cast( ROW_NUMBER()OVER (ORDER BY PLDetails.PLNO,PLDetails.TermNo)AS int) Id,
+	  PLDetails.PLNO,
+	  PL.ACNo,
+	  VW_AOFCUSTID_NAME.NAME,
+	  PL.MonthlyIncome,
+	  PL.MonthlyRepayDate,<!--Added by KCM (02-02-2023)-->
+	  PL.ProductType,<!--Added by KCM (02-02-2023)-->
+    PLDetails.ActualInstallmentAmount, <!--Added by KCM (05-07-2023)-->
+    VW_CaofWithFullAddress.FullAddress ADDRESS,
+    PL.FirstSAmt,
+    PL.IntRate,
+    PLDetails.TermNo,
+    PLDetails.InstallmentAmount,
+    PLDetails.InterestAmount,
+    PLDetails.DueDate,<!--Added by HMW (02-02-2023)-->
+	  PLDetails.AutoPayDate,
+	  PLDetails.PaidDate,
+	  PL.SourceBr,
+	  PLDetails.RemainingCapital,
+	  VW_AOFCUSTID_NAME.PHONE,
+	  PLDetails.InterestDate,
+	  PLDetails.TotalLateFees,
+	  PLDetails.ODAmount,
+	  PL.Cur,
+	  PLDetails.[Status],
+	  PL.CompanyName,
+	  VW_AOFCUSTID_NAME.NRC
+	  FROM
+	  Personal_Loans_Details AS PLDetails WITH(NOLOCK)
+	  Inner JOIN Personal_Loans AS PL WITH (NOLOCK)
+	  ON PLDetails.PLNO = PL.PLNo
+	  INNER JOIN VW_AOFCUSTID_NAME WITH(NOLOCK)
+	  ON PL.ACNo = VW_AOFCUSTID_NAME.ACCTNO
+	  INNER JOIN VW_CaofWithFullAddress WITH(NOLOCK)
+	  ON PL.ACNo = VW_CaofWithFullAddress.AcctNo
+	  WHERE
+	  PL.ACNo =:acNo AND  PL.SourceBr = :sourceBranchCode and
+	  PL.TODCLOSEDATE IS NULL
+	  AND PL.Active = 1
+	  AND PLDetails.Active = 1
+
+
+	  <!-- select new VW_PLRepaymentScheduleListing_dto
+	  (
+	  b.Id,
+	  b.PLNO,
+	  b.ACNo,
+	  b.NAME,
+	  b.MonthlyIncome,
+	  b.ADDRESS,
+	  b.FirstSAmt,
+	  b.IntRate,
+	  b.TermNo,
+	  b.InstallmentAmount,
+	  b.InterestAmount,
+	  b.DueDate,
+	  b.PaidDate,
+	  b.SourceBr,
+	  b.RemainingCapital,
+	  b.PHONE,
+	  b.InterestDate,
+	  b.TotalLateFees,
+	  b.ODAmount,
+	  b.Cur,
+	  b.Status,
+	  b.CompanyName,
+	  b.NRC 
+    )
+    from LOMVIW00316 as b
+    where b.ACNo =:acNo
+    and b.SourceBr = :sourceBranchCode-->
+  </sql-query>
+  	
+  <!--//PLRepaymentScheduleListingDAO.SelectByDueDateForPLIntDuePreListing//kkt-->
+  <!--Currently Not Use >> Comment by HMW (20-03-2023) & change with stored procedure : For the preformance issue (Server Header Data Receving Error)-->
+  <!--
+  <sql-query name="PLRepaymentScheduleListingDAO.SelectByDueDateForPLIntDuePreListing">
+	  SELECT Cast(ROW_NUMBER()OVER (ORDER BY PLDetails.PLNO) as int)AS Id,
+	  PLDetails.PLNO,
+	  PL.ACNo,
+	  VW_AOFCUSTID_NAME.NAME,
+	  PL.MonthlyIncome,
+	  PL.FirstSAmt,
+	  PL.IntRate,
+	  PLDetails.TermNo,
+	  PLDetails.InstallmentAmount,
+	  PLDetails.InterestAmount,
+	  PLDetails.DueDate,
+	  PLDetails.PaidDate,
+	  PL.SourceBr,
+	  PLDetails.RemainingCapital,
+	  VW_AOFCUSTID_NAME.PHONE,
+	  PLDetails.InterestDate,
+	  cast( ISNULL( PLDetails.TotalLateFee_PTOD_OnIntRate,0) as decimal(18,2)) TotalLateFee_PTOD_OnIntRate,
+	  cast( ISNULL( PLDetails.TotalLateFee_PTOD_OnLateFeeRate,0) as decimal(18,2)) TotalLateFee_PTOD_OnLateFeeRate ,
+	  cast( ISNULL( PLDetails.TotalLateFee_ITOD_OnLateFeeRate,0)as decimal(18,2)) TotalLateFee_ITOD_OnLateFeeRate,
+	  ISNULL( PLDetails.TotalLateFees,0)TotalLateFees,
+	  ISNULL(PLDetails.Principal_TOD,0) Principal_TOD ,
+	  ISNULL(PLDetails.Interest_TOD,0) Interest_TOD,
+	  isnull(PLDetails.ODAmount,0) ODAmount,
+	  PL.Cur,
+	  PLDetails.[Status],
+	  PL.CompanyName,
+	  CLedger.CBal AS LedgerBalance,
+	  VW_AOFCUSTID_NAME.NRC,
+	  VW_PlAccountLastCreditTran.DATE_TIME ActualRepaidDate,
+	  (PLDetails.InstallmentAmount + PLDetails.InterestAmount + ISNULL( PLDetails.TotalLateFees,0) + ISNULL(PLDetails.ODAmount,0)) TotalAmount
+	  FROM Personal_Loans_Details AS PLDetails
+	  Inner JOIN Personal_Loans AS PL  ON PLDetails.PLNO = PL.PLNo
+	  INNER JOIN VW_AOFCUSTID_NAME ON PL.ACNo = VW_AOFCUSTID_NAME.ACCTNO
+	  Inner JOIN CLedger On PL.ACNo = CLedger.AcctNo
+	  INNER JOIN VW_PlAccountLastCreditTran  ON PL.ACNo = VW_PlAccountLastCreditTran.ACCTNO
+	  WHERE
+	  PL.TODCLOSEDATE IS NULL   AND PL.Active = 1   AND PLDetails.Active = 1
+	  AND CONVERT(char(10),PLDetails.DueDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+	  and PL.Cur = :cur
+	  and PL.SourceBr = :sourceBranchCode
+  </sql-query>
+  -->
+
+	<!--//PLRepaymentScheduleListingDAO.SelectCompanyName// Created By HWKO (17-Jul-2017)-->
+  <query name="PLRepaymentScheduleListingDAO.SelectCompanyName">
+    select new VW_PLRepaymentScheduleListing_dto
+    (
+    b.CompanyName
+    )
+    from LOMVIW00316 as b
+    group by b.CompanyName
+    order by b.CompanyName asc
+  </query>
+
+</hibernate-mapping>

@@ -1,0 +1,617 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:v="http://www.springframework.net/validation">
+
+  <description>
+    Form Data Entity Validation Objects Injection
+  </description>	
+
+  <!--Clearing Voucher Reversal Validation-->
+  <v:group id="BankStatementMonthly.Validator" >
+
+    <v:required id="BankStatementMonthly.YearValidator" test="Year">
+      <v:message id="MV30002" providers="Year" />
+    </v:required>
+  
+  </v:group>
+
+  <!--Clearing Voucher Reversal Validation-->
+  <v:group id="ClearingVoucherReversal.Validator" >
+
+    <v:required id="ClearingVoucher.EnoValidator" test="Eno">
+      <v:message id="MV90027" providers="Eno" />
+    </v:required>
+
+  </v:group>
+
+  <!--PO No.Editting -> Issue By Transfer Validation-->
+  <v:group id="POEdittingByTransfer.Validator" >
+    <v:required id="POEdittingByTransfer.AccountNo.Validator" test="AccountNo">
+      <v:message id="MV00046" providers="AccountNo"/>
+    </v:required>
+    <v:required id="POEdittingByTransfer.PONo.Validator" test="PONo">
+      <v:message id="MV00219" providers="PONo"/>
+    </v:required>
+    <v:required id="POIssueByTransfer.Currency.Validator" test="Currency">
+      <v:message id="MV00020" providers="Currency"/>
+    </v:required>
+    <v:required id="POEdittingByTransfer.ChequeNo.Validator" test="CheckNo">
+      <v:message id="MV00059" providers="CheckNo"/>
+    </v:required>
+    <v:required id="POEdittingByTransfer.POAmount.Validator" test="Amount">
+      <v:message id="MV00037" providers="Amount"/>
+    </v:required>
+    <v:required id="POEdittingByTransfer.Charges.Validator" test="Charges">
+      <v:message id="MV00106" providers="Charges"/>
+    </v:required>
+  </v:group>
+
+  <!--EncashNo Edit Validator-->
+  <v:group id="EncashNoEditValidator" >
+    <v:required id="EncashNoEditValidator.RegisterNoValidator" test="RegisterNo">
+      <v:message id="MV00168" providers="RegisterNo" />
+    </v:required>
+    <v:required id="EncashNoEditValidator.RegisterNo_OldValidator" test="RegisterNo_Old">
+      <v:message id="MV00168" providers="RegisterNo_Old" />
+    </v:required>
+  </v:group>
+
+  <!--//PO Issue for Encashment//-->
+  <v:group id="POEditForEncashmentValidator" >
+    <v:required id="PoEditforencashmentValidator.RegisterNoValidator" test="RegisterNo">
+      <v:message id="MV00168" providers="RegisterNo" />
+    </v:required>
+  </v:group>
+
+
+
+  <!--Fixed Depo Duration Listing-->
+  <v:group id="FixedDepoDurationListing.Validator" >
+
+    <v:required id="FixedDepoDurationListing.DurationValidator" test="Duration">
+      <v:message id="MV00034" providers="Duration" />
+    </v:required>
+
+  </v:group>
+  
+
+  <!--//JointAccountEditting-->
+  <v:group id="JointAccountTypeValidator">
+    <v:required id="JointAccount.AccountNoValidator" test="AccountNo">
+      <v:message id="MV00046" providers="AccountNo" />
+      </v:required>
+    <v:required id="JointAcount.NoofPersonSignValidator" test="NoOfPersonSign">
+      <v:message id="MV00028" providers="NoOfPersonSign" />
+    </v:required>
+    <v:required id="CurrencyValidator" test="CurrencyCode">
+      <v:message id="MV00020" providers="CurrencyCode" />
+    </v:required>
+ </v:group>
+
+  <!--//CustID Listing-->
+  <v:group id="CustIDListing.Validator">
+    <v:required id="CustIDListingCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur" />
+    </v:required>
+    <v:required id="CustIDListingSourceBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr" />
+    </v:required>
+    <v:required id="CustIDListingTownshipValidator" test="TownShipDesp" when="TransactionStatus == 'CustomerIDListing(ByTownship)'">
+      <v:message id="MV20039" providers="TownShipDesp" />
+    </v:required>
+  </v:group>
+
+  <!--//LedgerBalByGrade Listing-->
+  <v:group id="LedgerBalByGrade.Validator">
+    <v:required id="LedgerBalByGradeCurrencyValidator" test="Cur" when="Cur == null and IscheckAllCurrency==false">
+      <v:message id="MV00020" providers="Cur" />
+    </v:required>
+  </v:group>
+  
+  <!--//JointAccountEditting-->
+
+  <!--//FixedAccountListing-->
+  <v:group id="FixedAccountListing.Validator">
+  
+    <v:required id="FixedDepoCurrencyValidator" test="CurrencyCode">
+      <v:message id="MV00020" providers="CurrencyCode" />
+    </v:required>
+    
+  </v:group>
+
+  <!--//FixedReceiptListing.Validator-->
+  <v:group id="FixedReceiptListing.Validator">
+    
+    <v:required id="FixedReceiptListing.AccountNoValidator" test="AcctNo">
+      <v:message id="MV00046" providers="AcctNo" />
+    </v:required>
+    <v:required id="FixedReceiptListingCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur" />
+    </v:required>
+
+  </v:group>
+  
+
+  <!--//Cash Voucher-->
+  <v:group id="CashVoucherValidator">
+    
+    <v:required id="CashVoucher.EntryNoValidator" test="Eno">
+      <v:message id="MV90027" providers="Eno"/>
+    </v:required>
+    <v:required id="CashVoucher.NarrationValidator" test="Narration">
+      <v:message id="MV00087" providers="Narration" />
+    </v:required> 
+    
+  </v:group>
+
+  <!--//Saving Interest Withdraw Reversal-->
+  <v:group id="SavingIntWithReversalValidator">
+
+    <v:required id="SavingIntWithReversal.EntryNoValidator" test="Eno">
+      <v:message id="MV90027" providers="Eno"/>
+    </v:required>
+    <v:required id="SavingIntWithReversal.NarrationValidator" test="Narration">
+      <v:message id="MV00087" providers="Narration" />
+    </v:required>
+
+  </v:group>
+
+  <!--//InterestSchedule.Validator-->
+  <v:group id="InterestSchedule.Validator">
+    
+    <v:required id="InterestSchedule.RequiredYearValidator" test="Budget">
+      <v:message id="MV00104" providers="Budget"/>
+    </v:required>
+    <v:required id="InterestSchedule.CurrencyValidator" test="CurrencyCode">
+      <v:message id="MV00020" providers="CurrencyCode"/>
+    </v:required>
+    <v:required id="InterestSchedule.BranchValidator" test="SourceBranchCode">
+      <v:message id="MV90029" providers="SourceBranchCode"/>
+    </v:required>
+  </v:group>
+
+  <!--//Deliver and Receipt Reversal-->
+  <v:group id="DeliverandReceiptValidator">
+
+    <v:required id="DeliverandReceipt.EntryNoValidator" test="Eno">
+      <v:message id="MV30001" providers="Eno"/>
+    </v:required>
+    
+    <v:required id="DeliverandReceipt.AmountValidator" test="Amount">
+      <v:message id="MV00037" providers="Amount" />
+    </v:required>
+
+    <v:required id="DeliverandReceipt.AccountNoValidator" test="AccountNo">
+      <v:message id="MV00046" providers="AccountNo" />
+    </v:required>
+
+    <v:required id="DeliverandReceipt.OtherBankValidator" test="OtherBank">
+      <v:message id="MV00099" providers="OtherBank" />
+    </v:required>
+
+    <!--<v:required id="DeliverandReceipt.ReceiptNoValidator" test="ReceiptNo">
+      <v:message id="MV00100" providers="ReceiptNo" />
+    </v:required>-->
+
+  </v:group>
+
+    <!--POReceiptReversal.Validator-->
+	<v:group id="POReceiptReversal.Validator" >
+
+		<v:required id="POReceiptReversal.payslipnoValidator" test="Eno">
+			<v:message id="MV30001" providers="Eno"/>
+		</v:required>
+		<v:required id="POReceiptReversal.ponoValidator" test="PaymentOrderNo">
+			<v:message id="MV00103" providers="PaymentOrderNo"/>
+		</v:required>
+		<v:required id="POReceiptReversal.amountValidator" test="Amount">
+			<v:message id="MV00037" providers="Amount"/>
+		</v:required>
+    <v:required id="POReceiptReversal.budgetValidator" test="Budget">
+      <v:message id="MV00104" providers="Budget"/>
+    </v:required>
+    
+	</v:group>
+
+	<!--Current,Saving,Fixed Account Editing Validation-->
+	<v:group id="EditIndividualAccount.Validator" >
+
+		<v:required id="EditIndividualAccount.CurrencyCode.Validator" test="CurrencyCode">
+			<v:message id="MV00020" providers="CurrencyCode" />
+		</v:required>
+		
+		<v:required id="EditIndividualAccount.CustomerId.Validator" test="CustomerId">
+			<v:message id="MV00016" providers="CustomerId" />
+		</v:required>
+
+		<v:required id="EditIndividualAccount.AccountNo.Validator" test="AccountNo">
+			<v:message id="MV00046" providers="AccountNo" />
+		</v:required>
+
+	</v:group>
+
+	<!--Clearing Voucher Reversal Validation-->
+	<v:group id="AdjustmentVoucherReversal.Validator" >
+
+		<v:required id="AdjustmentVoucher.EnoValidator" test="Eno">
+			<v:message id="MV90027" providers="Eno" />
+		</v:required>
+
+	</v:group>
+
+	<!--Journal Voucher,Deposit,Withdraw,IBL Reversal Validation-->
+	<v:group id="ReversalVoucher.Validator" >
+
+		<v:required id="ReversalAdjustmentVoucher.EnoValidator" test="Eno">
+			<v:message id="MV90027" providers="Eno" />
+		</v:required>
+
+	</v:group>
+
+	<!-- Company Account Entry Validation -->
+	<v:group id="CompanyAccountEdit.Validator" >
+
+		<v:required id="AccountNoValidator" test="AccountNo">
+			<v:message id="MV00046" providers="AccountNo"/>
+		</v:required>
+		
+		<v:required id="NameofFirmValidator" test="NameOfFirm">
+			<v:message id="MV00023" providers="NameOfFirm"/>
+		</v:required>
+
+		<v:required id="PhoneNoValidator" test="Phone" >
+			<v:message id="MV00011" providers="Phone"/>
+		</v:required>
+
+		<!--<v:required id="EmailValidator" test="Email" >
+			<v:message id="MV00030" providers="Email"/>
+		</v:required>-->
+
+		<v:required id="FaxValidator" test="Fax" >
+			<v:message id="MV00031" providers="Fax"/>
+		</v:required>
+
+		<v:required id="AddressValidator" test="Address">
+			<v:message id="MV00010" providers="Address" />
+		</v:required>
+
+		<v:required id="NoofPersonSignValidator" test="NoOfPersonSign">
+			<v:message id="MV00028" providers="NoOfPersonSign" />
+		</v:required>
+
+		<v:required id="Currency.Validator" test="CurrencyCode">
+			<v:message id="MV00020" providers="CurrencyCode" />
+		</v:required>
+
+		<v:required id="TownshipValidator" test="TownshipCode">
+			<v:message id="MV00008" providers="TownshipCode" />
+		</v:required>
+
+		<v:required id="CityValidator" test="CityCode">
+			<v:message id="MV00007" providers="CityCode" />
+		</v:required>
+
+		<v:required id="StateValidator" test="StateCode">
+			<v:message id="MV00009" providers="StateCode" />
+		</v:required>
+
+		<v:required id="LinkLimit" test="DebitLimit" when="DebitLinkAccount != null">
+			<v:message id="MV00027" providers="DebitLimit" />
+		</v:required>
+
+	</v:group>
+  
+  <!--TrialBalanceListing.Validator-->
+  <v:group id="TrialBalanceListing.Validator" >
+
+    <v:required id="TriBalanceListing.BranchNoValidator" test="DCODE">
+      <v:message id="MV00070" providers="DCODE"/>
+    </v:required>
+    <v:required id="TriBalanceListing.CurrencyValidator" test="CUR">
+      <v:message id="MV00020" providers="CUR"/>
+    </v:required>
+    <v:required id="TriBalanceListing.YearValidator" test="BUDGET">
+      <v:message id="MV30002" providers="BUDGET"/>
+    </v:required>
+    <v:required id="TriBalanceListing.MonthValidator" test="Month">
+      <v:message id="MV00221" providers="Month"/>
+    </v:required>
+  </v:group>
+
+  <!--TriBalanceGroup.Validator-->
+  <v:group id="TriBalanceGroup.Validator" >
+
+    <v:required id="TriBalanceGroup.YearValidator" test="DCODE">
+      <v:message id="MV00070" providers="DCODE"/>
+    </v:required>
+    <v:required id="TriBalanceGroup.MonthValidator" test="CUR">
+      <v:message id="MV00020" providers="CUR"/>
+    </v:required>
+    <v:required id="TriBalanceGroup.BranchValidator" test="BUDGET">
+      <v:message id="MV30002" providers="BUDGET"/>
+    </v:required>
+    <v:required id="TriBalanceGroup.CurrencyValidator" test="Month">
+      <v:message id="MV00221" providers="Month"/>
+    </v:required>
+  </v:group>
+  
+
+  <!--TrialSheetListing.Validator-->
+  <v:group id="TrialSheetListing.Validator" >
+
+    <v:required id="TrialSheetListing.BranchNoValidator" test="SOURCEBR">
+      <v:message id="MV00070" providers="SOURCEBR"/>
+    </v:required>
+    <v:required id="TrialSheetListing.CurrencyValidator" test="SOURCECUR">
+      <v:message id="MV00020" providers="SOURCECUR"/>
+    </v:required>
+    
+  </v:group>
+
+  
+
+  <!--BalanceConfirmationAll.Validator-->
+  <v:group id="BalanceConfirmationAll.Validator" >
+
+    <v:required id="BalanceConfirmationAll.AcctnoValidator" test="AccountNo">
+      <v:message id="MV00046" providers="AccountNo"/>
+    </v:required>
+    <v:required id="BalanceConfirmationAll.DateTimeValidator" test="DATE_TIME">
+      <v:message id="MV00160" providers="DATE_TIME"/>
+    </v:required>
+    
+  </v:group>
+
+  <!--BalanceCertificates.Validator-->
+  <v:group id="BalanceCertificates.Validator" >
+
+    <v:required id="BalanceCertificates.AcctnoValidator" test="AccountNo">
+      <v:message id="MV30002" providers="AccountNo"/>
+    </v:required>
+  </v:group>
+
+  <!--SubLedgerCustomer.Validator-->
+  <v:group id="SubLedgerCustomer.Validator" >
+
+    <v:required id="SubLedgerCustomer.AcctnoValidator" test="AcctNo">
+      <v:message id="MV00046" providers="AcctNo"/>
+    </v:required>
+    
+  </v:group>
+
+	<!--CashControl.Validator-->
+	<v:group id="CashControl.Validator" >
+		<v:required id="CashControl.CurrencyValidator" test="Currency">
+			<v:message id="MV00020" providers="Currency"/>
+		</v:required>
+	</v:group>
+
+  <!--SubLedgerDomestic.Validator-->
+  <v:group id="SubLedgerDomestic.Validator" >
+
+    <v:required id="SubLedgerCustomer.SOURCECURValidator" test="CurrencyType">
+      <v:message id="MV00020" providers="CurrencyType"/>
+    </v:required>
+    <v:required id="SubLedgerCustomer.ACODEValidator" test="ACode">
+      <v:message id="MV00046" providers="ACode"/>
+    </v:required>
+
+  </v:group>
+  
+  <!--TransferScroll.Validator-->
+  <v:group id="TransferScroll.Validator">
+    <v:required id="TransferScroll.BranchNo" test="BranchName">
+      <v:message id="MV00070" providers="BranchName"/>
+    </v:required>
+    <v:required id="TransferScroll.Currency" test="CurrencyCode">
+      <v:message id="MV00020" providers="CurrencyCode"/>
+    </v:required>
+  </v:group>
+  
+  <!--RDPersonalInfoEdit.Validator-->
+  <v:group id="RDPersonalInfoEdit.Validator">
+    <v:required id="RDPersonalInfoEdit.RegisterNo" test="RegisterNo">
+      <v:message id="MV00168" providers="RegisterNo"/>
+    </v:required>
+    <v:required id="RDPersonalInfoEdit.Name" test="Name">
+      <v:message id="MV30012" providers="Name"/>
+    </v:required>
+    <v:required id="RDPersonalInfoEdit.NRC" test="NRC">
+      <v:message id="MV30013" providers="NRC"/>
+    </v:required>
+    <v:required id="RDPersonalInfoEdit.Address" test="Address">
+      <v:message id="MV30014" providers="Address"/>
+    </v:required>
+    <v:required id="RDPersonalInfoEdit.ToName" test="ToName">
+      <v:message id="MV30016" providers="ToName"/>
+    </v:required>
+    <v:required id="RDPersonalInfoEdit.ToNRC" test="ToNRC">
+      <v:message id="MV30017" providers="ToNRC"/>
+    </v:required>
+    <v:required id="RDPersonalInfoEdit.ToAddress" test="ToAddress">
+      <v:message id="MV30018" providers="ToAddress"/>
+    </v:required>
+  </v:group>
+  
+    <!--REPersonalInfoEdit.Validator-->
+    <v:group id="REPersonalInfoEdit.Validator">
+      <v:required id="REPersonalInfoEdit.RegisterNo" test="RegisterNo">
+        <v:message id="MV00168" providers="RegisterNo"/>
+      </v:required>
+      <v:required id="REPersonalInfoEdit.ToName" test="ToName">
+        <v:message id="MV30016" providers="ToName"/>
+      </v:required>
+      <v:required id="REPersonalInfoEdit.ToNRC" test="ToNRC">
+        <v:message id="MV30017" providers="ToNRC"/>
+      </v:required>
+      <v:required id="REPersonalInfoEdit.ToAddress" test="ToAddress">
+        <v:message id="MV30018" providers="ToAddress"/>
+      </v:required>
+      <v:required id="REPersonalInfoEdit.ToPhoneNo" test="ToPhoneNo">
+        <v:message id="MV30019" providers="ToPhoneNo"/>
+      </v:required>
+      <v:required id="REPersonalInfoEdit.Name" test="Name">
+        <v:message id="MV30012" providers="Name"/>
+      </v:required>
+      <v:required id="REPersonalInfoEdit.NRC" test="NRC">
+        <v:message id="MV30013" providers="NRC"/>
+      </v:required>
+      <v:required id="REPersonalInfoEdit.PhoneNo" test="PhoneNo">
+        <v:message id="MV30015" providers="PhoneNo"/>
+      </v:required>    
+  </v:group>
+
+  <!--REImportantInfoEdit.Validator-->
+  <v:group id="REImportantInfoEdit.Validator">
+    <v:required id="REImportantInfoEdit.RegisterNo" test="RegisterNo">
+      <v:message id="MV00168" providers="RegisterNo"/>
+    </v:required>
+	  <v:required id="REImportantInfoEdit.ToName" test="ToName">
+		  <v:message id="MV00002" providers="ToName"/>
+	  </v:required>
+	  <v:required id="REImportantInfoEdit.ToNRC" test="ToNRC">
+		  <v:message id="MV00004" providers="ToNRC"/>
+	  </v:required>
+	  <v:required id="REImportantInfoEdit.ToAddress" test="ToAddress">
+		  <v:message id="MV00010" providers="ToAddress"/>
+	  </v:required>
+	  <v:required id="REImportantInfoEdit.ToPhoneNo" test="ToPhoneNo">
+		  <v:message id="MV00011" providers="ToPhoneNo"/>
+	  </v:required>
+    <v:required id="REImportantInfoEdit.Amount" test="Amount">
+      <v:message id="MV00037" providers="Amount"/>
+    </v:required>
+  </v:group>
+
+  <!--REImportantInfoEdit.Validator-->
+  <v:group id="RDImportantInfoEdit.Validator">
+    <v:required id="RDImportantInfoEdit.RegisterNo" test="RegisterNo">
+      <v:message id="MV00168" providers="RegisterNo"/>
+    </v:required>
+    <v:required id="RDImportantInfoEdit.Amount" test="Amount">
+      <v:message id="MV00037" providers="Amount"/>
+    </v:required>
+  </v:group>
+
+	<!--AutoLinkSchedule.Validator-->
+	<v:group id="AutoLinkSchedule.Validator">
+		<v:required id="AutoLinkSchedule.Currency" test="CurrencyType">
+			<v:message id="MV00020" providers="CurrencyType"/>
+		</v:required>		
+	</v:group>
+  
+  <!--Drawing Remittance Adjustment Validator-->
+  <v:group id="DrawingRemittanceAdjustment.Validator">
+    <v:required id="DrawingRemittanceAdjustment.RegisterNo" test="RegisterNo">
+      <v:message id="MV00168" providers="RegisterNo"/>
+    </v:required>
+  </v:group>
+  
+  <!--Encash Remittance Adjustment Validator-->
+  <v:group id="EncashAdjustment.Validator">
+    <v:required id="EncashAdjustment.RegisterNo" test="RegisterNo">
+      <v:message id="MV00187" providers="RegisterNo"/>
+    </v:required>
+  </v:group>
+	
+	<!--Pass Book Printing Validator-->
+	<v:group id="PassBookPrinting.Validator">
+		<v:required id="PassBookPrinting.AccountNo" test="AccountNo">
+			<v:message id="MV00051" providers="AccountNo"/>
+		</v:required>
+	</v:group>
+
+	<!--PO Register By Cash Edit Validator-->
+	<v:group id="PORegisterByCashEdit.Validator">
+		<v:required id="PORegisterByCashEdit.GroupNo" test="GroupNo">
+			<v:message id="MV30020" providers="GroupNo"/>
+		</v:required>
+		<v:required id="PORegisterByCashEdit.PaymentOrderNo" test="PaymentOrderNo">
+			<v:message id="MV00103" providers="PaymentOrderNo"/>
+		</v:required>
+	</v:group>
+
+
+	<!--Drawing And Encashment Remittance By Branch Validator-->
+	<v:group id="RDandREListByBranch.Validator">
+		<v:required id="RDandREListByBranch.Ebank" test="Ebank">
+			<v:message id="MV00070" providers="Ebank"/>
+		</v:required>
+	</v:group>
+
+	<!--PO Refund Reversal Validator-->
+	<v:group id="PORefundReversal.Validator">
+		<v:required id="PORefundReversal.GroupNo" test="GroupNo">
+			<v:message id="MV30020" providers="GroupNo"/>
+		</v:required>
+		<v:required id="PORefundReversal.PaymentOrderNo" test="PaymentOrderNo">
+			<v:message id="MV00103" providers="PaymentOrderNo"/>
+		</v:required>
+	</v:group>
+
+	<!--Cash Denomination Edit-->
+	<v:group id="CashDenoEdit.Validator">
+		<v:required id="CashDenoEdit.TlfEntryNo" test="TlfEntryNo">
+			<v:message id="MV90027" providers="TlfEntryNo"/>
+		</v:required>
+	</v:group>
+
+	<!--Fixed Deposit Interest-->
+	<v:group id="FixedDeposit.Validator">
+		<v:required id="FixedDeposit.CurrencyType" test="CurrencyType">
+			<v:message id="MV00020" providers="CurrencyType"/>
+		</v:required>
+	</v:group>
+
+  <!--PO Register By Transfer Edit-->
+  <v:group id="PORegisterByTransferEdit.Validator">
+    <v:required id="PORegisterByTransferEdit.PONo" test="PONo">
+      <v:message id="MI30016" providers="PONo"/>
+    </v:required>
+  </v:group>
+
+	<!--CashControl by counter.Validator-->
+	<v:group id="CashByCounter.Validator" >
+		<v:required id="CashByCounter.CurrencyValidator" test="Currency">
+			<v:message id="MV00020" providers="Currency"/>
+		</v:required>
+	</v:group>
+
+	<!--CashControl.Validator-->
+	<v:group id="AutoLinkListingValidator" >
+		<v:required id="AutoLinkListing.CurrencyValidator" test="SourceCur">
+			<v:message id="MV00020" providers="SourceCur"/>
+		</v:required>
+	</v:group>
+
+
+  <!--FixedRenewalListing.Validator-->
+
+<v:group id="FixedRenewalListing.Validator" >
+  <v:required id="FixedRenewalListing.CurrencyValidator" test="CurrencyCode">
+    <v:message id="MV00020" providers="CurrencyCode"/>
+  </v:required>
+</v:group>
+
+  <v:group id="DrawingEncash.Validator" >
+    <v:required id="DrawingEncash.YearValidator" test="RequiredYear">
+      <v:message id="MV00020" providers="RequiredYear"/>
+    </v:required>
+  </v:group>
+
+  <!--Journal Voucher,Deposit,Withdraw,IBL Group Reversal Validation--><!--
+  <v:group id="GroupReversalVoucher.Validator" >
+
+    <v:required id="GroupAdjustmentVoucherReversal.EnoValidator" test="Eno">
+      <v:message id="MV90027" providers="Eno" />
+    </v:required>
+
+  </v:group>-->
+</objects>
+
+
+
+
+
+
+

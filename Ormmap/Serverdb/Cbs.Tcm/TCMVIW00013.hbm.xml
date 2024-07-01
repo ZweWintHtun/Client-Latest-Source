@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Tcm.Dmd" namespace="Ace.Cbs.Tcm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Tcm.Dmd.TCMDTO00013, Ace.Cbs.Tcm.Dmd" rename="TCMDTO00013"/>
+  <class name="TCMVIW00013" table="VW_LEDGER" mutable="false">
+
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+
+    <property name="ACCTNO">
+      <column name="ACCTNO" sql-type="string" not-null="true" />
+    </property>
+
+    <property name="CBAL">
+      <column name="CBAL" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="OVERDRAWN_AMOUNT">
+      <column name="OVERDRAWN_AMOUNT" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="OVDLIMIT">
+      <column name="OVDLIMIT" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="NAME">
+      <column name="name" sql-type="string" not-null="false" />
+    </property>
+
+    <property name="WORKSTATION">
+      <column name="WORKSTATION" sql-type="string" not-null="false" />
+    </property>
+
+    <property name="SOURCECUR">
+      <column name="SourceCur" sql-type="string" not-null="false" />
+    </property>
+
+    <property name="ACSign">
+      <column name="ACSign" sql-type="string" not-null="false" />
+    </property>
+    
+
+    
+  </class>
+
+  <query name="TCMVIW00013.SelectLedgerBalance">
+    select new TCMDTO00013 
+    (
+    VW_L.ACCTNO, 
+    VW_L.CBAL, 
+    VW_L.OVERDRAWN_AMOUNT, 
+    VW_L.OVDLIMIT, 
+    VW_L.NAME, 
+    VW_L.WORKSTATION, 
+    VW_L.SOURCECUR,
+    VW_L.ACSign
+    ) 
+    from TCMVIW00013 as VW_L
+    where VW_L.WORKSTATION = :workstation and VW_L.SOURCECUR = :cur
+  </query>
+
+</hibernate-mapping>

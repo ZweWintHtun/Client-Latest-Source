@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--PREV_BAL-->
+<!-- 
+// <copyright file="MNMORM00016.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>Banking</CreatedUser>
+// <CreatedDate>11/15/2013</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version></Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Mnm.Dmd.MNMDTO00016, Ace.Cbs.Mnm.Dmd" rename="MNMDTO00016"/>
+  <class name="MNMORM00016" table="PREV_BAL">
+
+	  <id name="Id" type="Int32" unsaved-value="0">
+		  <generator class="increment">
+		  </generator>
+	  </id>
+
+	  <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+		  <column name="TS" sql-type="timestamp" not-null="true"/>
+	  </version>
+
+	  <property name="AcctNo">
+		  <column name="AcctNo" sql-type="varchar" not-null="true" />
+	  </property>
+
+	  <property name="Cur">
+		  <column name="Cur" sql-type="varchar" not-null="true" />
+	  </property>
+
+	  <property name="DATE_TIME">
+		  <column name="DATE_TIME" sql-type="datetime" not-null="false" />
+	  </property>
+
+	  <property name="USERNO">
+		  <column name="USERNO" sql-type="varchar" not-null="false" />
+	  </property>
+
+	  <property name="CloseDate">
+		  <column name="CloseDate" sql-type="datetime" not-null="false" />
+	  </property>
+
+	  <property name="Budget">
+		  <column name="Budget" sql-type="varchar" not-null="true" />
+	  </property>
+
+	  <property name="ACSign">
+		  <column name="ACSign" sql-type="varchar" not-null="true" />
+	  </property>
+
+	  <property name="M1">
+		  <column name="M1" sql-type="numeric" not-null="true" />
+	  </property>
+
+	  <property name="TCount1">
+		  <column name="TCount1" sql-type="numeric" not-null="false" />
+	  </property>
+
+	  <property name="M2">
+		  <column name="M2" sql-type="numeric" not-null="true" />
+	  </property>
+
+	  <property name="TCount2">
+		  <column name="TCount2" sql-type="numeric" not-null="false" />
+	  </property>
+
+	  <property name="M3">
+		  <column name="M3" sql-type="numeric" not-null="true" />
+	  </property>
+
+	  <property name="TCount3">
+		  <column name="TCount3" sql-type="numeric" not-null="false" />
+	  </property>
+
+	  <property name="M4">
+		  <column name="M4" sql-type="numeric" not-null="true" />
+	  </property>
+
+	  <property name="TCount4">
+		  <column name="TCount4" sql-type="numeric" not-null="false" />
+	  </property>
+
+	  <property name="M5">
+		  <column name="M5" sql-type="numeric" not-null="true" />
+	  </property>
+
+	  <property name="TCount5">
+		  <column name="TCount5" sql-type="numeric" not-null="false" />
+	  </property>
+
+	  <property name="M6">
+		  <column name="M6" sql-type="numeric" not-null="true" />
+	  </property>
+
+	  <property name="TCount6">
+		  <column name="TCount6" sql-type="numeric" not-null="false" />
+	  </property>
+
+	  <property name="M7">
+		  <column name="M7" sql-type="numeric" not-null="true" />
+	  </property>
+
+	  <property name="TCount7">
+		  <column name="TCount7" sql-type="numeric" not-null="false" />
+	  </property>
+
+	  <property name="M8">
+		  <column name="M8" sql-type="numeric" not-null="true" />
+	  </property>
+
+	  <property name="TCount8">
+		  <column name="TCount8" sql-type="numeric" not-null="false" />
+	  </property>
+
+	  <property name="M9">
+		  <column name="M9" sql-type="numeric" not-null="true" />
+	  </property>
+
+	  <property name="TCount9">
+		  <column name="TCount9" sql-type="numeric" not-null="false" />
+	  </property>
+
+	  <property name="M10">
+		  <column name="M10" sql-type="numeric" not-null="true" />
+	  </property>
+
+	  <property name="TCount10">
+		  <column name="TCount10" sql-type="numeric" not-null="false" />
+	  </property>
+
+	  <property name="M11">
+		  <column name="M11" sql-type="numeric" not-null="true" />
+	  </property>
+
+	  <property name="TCount11">
+		  <column name="TCount11" sql-type="numeric" not-null="false" />
+	  </property>
+
+	  <property name="M12">
+		  <column name="M12" sql-type="numeric" not-null="true" />
+	  </property>
+
+	  <property name="TCount12">
+		  <column name="TCount12" sql-type="numeric" not-null="false" />
+	  </property>
+
+	  <property name="SourceBr">
+		  <column name="SourceBr" sql-type="varchar" not-null="true" />
+	  </property>
+
+
+	  <property name="Active" not-null="true"/>
+	  <property name="CreatedDate" not-null="true" update="false" />
+	  <property name="CreatedUserId" not-null="true" update="false"/>
+	  <property name="UpdatedDate" not-null="false" insert="false" />
+	  <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+</hibernate-mapping>

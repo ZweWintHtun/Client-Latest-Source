@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00004, Ace.Cbs.Pfm.Dmd" rename="occupationCodedto"/>
+
+  <class name="PFMORM00004" table="[OccupationCode]" >
+    
+    <id name="Occupation_Code">
+      <column name="OccupationCode" sql-type="varchar" not-null="true" />
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+
+    <property name="Description">
+      <column name="Desp" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="UserNo">
+      <column name="USERNO" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Date_Time">
+      <column name="DATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="EditDate_Time">
+      <column name="EDITDATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="EditUser">
+      <column name="EDITUSER" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="EditType">
+      <column name="EDITTYPE" sql-type="numeric" not-null="false" />
+    </property>
+    <property name="Defaults">
+      <column name="DEFAULTS" sql-type="bit" not-null="false" />
+    </property>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+	  <many-to-one name="CreatedUser" column="[CreatedUserId]" class="Ace.Windows.Admin.DataModel.User" insert="false" update="false"></many-to-one>
+  </class>
+
+  <!--//OccupationCode.CheckExist//-->
+  <query name="OccupationCodeDAO.CheckExist">
+    select new occupationCodedto( o.Occupation_Code,o.Description,o.UserNo,o.Date_Time,o.EditDate_Time,o.EditUser,o.EditType,o.Defaults )
+    from PFMORM00004 as o where ( o.Occupation_Code =: occupationCode or o.Description =: desp ) and  o.Active = true
+  </query>
+
+  <query name="OccupationCodeDAO.CheckExist2">
+    select new occupationCodedto(
+    o.Occupation_Code,
+    o.Description,
+    o.UserNo,
+    o.Date_Time,
+    o.EditDate_Time,
+    o.EditUser,
+    o.EditType,
+    o.Defaults,
+    o.Active,
+    o.TS,
+    o.CreatedDate,
+    o.CreatedUserId,
+    o.UpdatedDate,
+    o.UpdatedUserId
+    )
+    from PFMORM00004 as o where ( o.Occupation_Code =: occupationCode or o.Description =: desp )
+  </query>
+
+  <!--//OccupationCodeDAO.SelectAll//-->
+  <query name="OccupationCodeDAO.SelectAll">
+	  select new occupationCodedto(
+	  o.Occupation_Code,
+	  o.Description,
+	  o.UserNo,
+	  o.Date_Time,
+	  o.EditDate_Time,
+	  o.EditUser,
+	  o.EditType,
+	  o.Defaults,
+	  o.Active,
+	  o.TS,
+	  o.CreatedDate,
+	  o.CreatedUserId,
+	  o.UpdatedDate,
+	  o.UpdatedUserId
+	  )
+	  from PFMORM00004 as o
+	  <!--inner join o.CreatedUser as cu with cu.Active = true-->
+    where o.Active = true
+    order by o.Occupation_Code asc
+  </query>
+
+  <!--//OccupationCodeDAO.SelectByOccupationCode//-->
+  <query name="OccupationCodeDAO.SelectByOccupationCode">
+    select new occupationCodedto(
+    o.Occupation_Code,
+    o.Description,
+    o.UserNo,
+    o.Date_Time,
+    o.EditDate_Time,
+    o.EditUser,
+    o.EditType,
+    o.Defaults,
+    o.Active,
+    o.TS,
+    o.CreatedDate,
+    o.CreatedUserId,
+    o.UpdatedDate,
+    o.UpdatedUserId
+    )
+    from PFMORM00004 as o
+    where o.Occupation_Code = :occupationCode
+    and o.Active = true
+  </query>
+
+</hibernate-mapping>

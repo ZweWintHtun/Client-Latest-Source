@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:v="http://www.springframework.net/validation">
+
+  <description>
+    Form Data Entity Validation Objects Injection
+  </description>
+
+  <!--//LogInFormValidation//-->
+  <v:group id="LoginFormValidator" >
+
+    <v:required id="loginNameValidator" test="UserName">
+      <v:message id="MV90011" providers="UserName"/>
+    </v:required>
+
+    <v:required id="loginPasswordValidator" test="Password">
+      <v:message id="MV90009" providers="Password"/>
+    </v:required>
+  </v:group>
+
+  <!--//UserFormValidation//-->
+  <v:group id="UsersFormValidator" >
+
+    <v:required id="userNameValidator" test="UserName">
+      <v:message id="MV90011" providers="UserName"/>
+    </v:required>
+    <v:required id="userPasswordValidator" test="Password" >
+      <v:message id="MV90009" providers="Password"/>
+    </v:required>
+    <!--//Commented by HWKO (10-Nov-2017)-->
+    <!--<v:required id="userCurrentPasswordValidator" test="CurrentPassword" when="Status == 'Update'" >
+      <v:message id="MV90015" providers="CurrentPassword"/>
+    </v:required>-->
+    <v:required id="userConfirmPasswordValidator" test="ConfirmPassword" >
+      <v:message id="MV90014" providers="ConfirmPassword"/>
+    </v:required>
+    <v:condition id="userComparePasswordValidator" test="Password == ConfirmPassword">
+      <v:message id="MV90013" providers="ConfirmPassword"/>
+    </v:condition>
+    <v:regex id="userEmailValidator" test="Email" expression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">
+      <v:message id="MV90006" providers="Email"/>
+    </v:regex>
+
+  </v:group>
+
+  <!--//GroupFormValidation//-->
+  <v:group id="GroupValidator" >
+    <v:required id="groupNameValidator" test="GroupName">
+      <v:message id="MV90007" providers="GroupName"/>
+    </v:required>
+  </v:group>
+
+  <!--//ProgramFormValidation//-->
+  <v:group id="ProgramFormValidator" >
+
+    <v:required id="programNameValidator" test="ProgramName">
+      <v:message id="MV90010" providers="ProgramName"/>
+    </v:required>
+    <v:required id="programPathValidator" test="ProgramPath">
+      <v:message id="MV90019" providers="ProgramPath"/>
+    </v:required>
+
+  </v:group>
+
+  <!--//MenuEntryValidation//-->
+  <v:group id="MenuEntryValidator" >
+
+    <v:required id="menuNameValidator" test="MenuName">
+      <v:message id="MV90008" providers="MenuName"/>
+    </v:required>
+    <v:required id="descriptionValidator" test="Description">
+      <v:message id="MV90005" providers="Description"/>
+    </v:required>
+  </v:group>
+
+
+  <!--//CityCodeValidation//-->
+  <v:group id="CityCode.Validator" >
+
+    <v:required id="CityCode.cityCodeValidator" test="CityCode">
+      <v:message id="MV20001" providers="CityCode"/>
+    </v:required>
+    <v:required id="CityCode.despValidator" test="Description">
+      <v:message id="MV20036" providers="Description"/>
+    </v:required>
+
+  </v:group>
+
+  <!--//StateCodeValidation//-->
+  <v:group id="StateCode.Validator" >
+
+    <v:required id="StateCode.stateCodeValidator" test="StateCode">
+      <v:message id="MV20004" providers="StateCode"/>
+    </v:required>
+    <v:required id="StateCode.despValidator" test="Description">
+      <v:message id="MV20038" providers="Description"/>
+    </v:required>
+
+  </v:group>
+
+  <!--//TownshipCodeValidation//-->
+  <v:group id="TownshipCode.Validator" >
+
+    <v:required id="TownshipCode.townshipCodeValidator" test="TownshipCode">
+      <v:message id="MV20005" providers="TownshipCode"/>
+    </v:required>
+    <v:required id="TownshipCode.despValidator" test="Description">
+      <v:message id="MV20039" providers="Description"/>
+    </v:required>
+
+  </v:group>
+
+  <!--//BranchValidation//-->
+  <v:group id="Branch.Validator" >
+
+    <v:required id="Branch.branchCodeValidator" test="BranchCode">
+      <v:message id="MV00070" providers="BranchCode"/>
+    </v:required>
+    <v:required id="Branch.br_AliasValidator" test="BranchAlias">
+      <v:message id="MV20020" providers="BranchAlias"/>
+    </v:required>
+    <v:required id="Branch.branchDespValidator" test="BranchDescription">
+      <v:message id="MV20018" providers="BranchDescription"/>
+    </v:required>
+    <v:required id="Branch.addressValidator" test="Address">
+      <v:message id="MV00010" providers="Address"/>
+    </v:required>
+    <v:required id="Branch.faxValidator" test="Fax">
+      <v:message id="MV00031" providers="Fax"/>
+    </v:required>
+    <v:required id="Branch.phoneValidator" test="Phone">
+      <v:message id="MV00011" providers="Phone"/>
+    </v:required>
+    <!--<v:required id="Branch.emailValidator" test="Email">
+      <v:message id="MV00030" providers="Email"/>
+    </v:required>-->
+    <v:regex id="Branch.emailValidator" test="Email" expression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">
+      <v:message id="MV90006" providers="Email"/>
+    </v:regex>
+    <v:required id="Branch.stateCodeValidator" test="StateCode">
+      <v:message id="MV20004" providers="StateCode"/>
+    </v:required>
+    <v:required id="Branch.cityCodeValidator" test="CityCode">
+      <v:message id="MV20001" providers="CityCode"/>
+    </v:required>
+    <v:required id="Branch.townshipCodeValidator" test="TownshipCode">
+      <v:message id="MV20005" providers="TownshipCode"/>
+    </v:required>
+    <v:required id="Branch.otherBankValidator" test="OtherBank">
+      <v:message id="MV20041" providers="OtherBank"/>
+    </v:required>
+    <v:required id="Branch.bank_AliasValidator" test="Bank_Alias">
+      <v:message id="MV20019" providers="Bank_Alias"/>
+    </v:required>
+
+  </v:group>
+
+  <!--//CounterInfoValidation//-->
+  <v:group id="COUNTERINFO.Validator" >
+
+    <v:required id="COUNTERINFO.counterNoValidator" test="CounterNo">
+      <v:message id="MV00115" providers="CounterNo"/>
+    </v:required>
+
+    <v:required id="COUNTERINFO.descriptionValidator" test="Description">
+      <v:message id="MV90005" providers="Description"/>
+    </v:required>
+
+    <v:required id="COUNTERINFO.counterTypeValidator" test="CounterType">
+      <v:message id="MV20047" providers="CounterType"/>
+    </v:required>
+
+    <v:required id="COUNTERINFO.BranchCodeTypeValidator" test="SourceBranchCode">
+      <v:message id="MV00070" providers="SourceBranchCode"/>
+    </v:required>
+
+    <v:required id="COUNTERINFO.WorkStationValidator" test="WorkStationId">
+      <v:message id="MV20022" providers="WorkStationId"/>
+    </v:required>
+
+  </v:group>
+
+  <!--//WorkStationValidation//-->
+  <v:group id="WorkStation.Validator" >
+
+    <v:required id="WorkStation.nameValidator" test="Name">
+      <v:message id="MV20022" providers="Name"/>
+    </v:required>
+    <v:required id="WorkStation.iPAddressValidator" test="IPAddress">
+      <v:message id="MV20026" providers="IPAddress"/>
+    </v:required>
+    <v:required id="WorkStation.printerNameValidator" test="PrinterName">
+      <v:message id="MV20048" providers="PrinterName"/>
+    </v:required>
+    <v:required id="WorkStation.hostNameValidator" test="HostName">
+      <v:message id="MV20049" providers="HostName"/>
+    </v:required>
+    <v:required id="WorkStation.maskAddressValidator" test="MaskAddress">
+      <v:message id="MV20050" providers="MaskAddress"/>
+    </v:required>
+    <v:required id="WorkStation.SourceBranchCodeValidator" test="SourceBranchCode">
+      <v:message id="MV00070" providers="SourceBranchCode"/>
+    </v:required>
+
+  </v:group>
+
+  <!--//CounterTypeValidation//-->
+  <v:group id="CounterType.Validator" >
+
+    <v:required id="CounterType.counterTypeValidator" test="CounterType">
+      <v:message id="MV20047" providers="CounterType"/>
+    </v:required>
+    <v:required id="CounterType.counterDescriptionValidator" test="CounterDescription">
+      <v:message id="MV90005" providers="CounterDescription"/>
+    </v:required>
+
+  </v:group>
+
+  <!--//CurValidation//-->
+  <v:group id="Cur.Validator" >
+
+    <v:required id="Cur.curValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="Cur.despValidator" test="Description">
+      <v:message id="MV90005" providers="Description"/>
+    </v:required>
+    <v:required id="Cur.symbolValidator" test="Symbol">
+      <v:message id="MV20008" providers="Symbol"/>
+    </v:required>
+    <v:required id="Cur.inwordDesp1Validator" test="FirstInWord">
+      <v:message id="MV00000" providers="FirstInWord"/>
+    </v:required>
+    <v:required id="Cur.inwordDesp2Validator" test="SecondInWord">
+      <v:message id="MV00000" providers="SecondInWord"/>
+    </v:required>
+    <v:required id="Cur.aCodeValidator" test="CodeForCOA">
+      <v:message id="MV00000" providers="CodeForCOA"/>
+    </v:required>
+  </v:group>
+
+  <!--//COAValidation//-->
+  <v:group id="COA.Validator" >
+
+    <v:required id="COA.aCodeValidator" test="ACode">
+      <v:message id="MV20021" providers="ACode"/>
+    </v:required>
+    <v:required id="COA.aCNameValidator" test="AccountName">
+      <v:message id="MV20055" providers="AccountName"/>
+    </v:required>
+    <v:required id="COA.dCODEValidator" test="DCODE" when="IsAllBranch == false">
+      <v:message id="MV00070" providers="DCODE"/>
+    </v:required>
+    <v:required id="COA.aCTypeValidator" test="ACType">
+      <v:message id="MV20054" providers="ACType"/>
+    </v:required>
+    <!-- 
+    <v:required id="COA.cBMACodeValidator" test="CBMACode">
+      <v:message id="MV20056" providers="CBMACode"/>
+    </v:required>
+      -->
+  </v:group>
+
+  <!--//FormatValidation//-->
+  <v:group id="FormatValidator" >
+
+    <v:required id="Format.codeValidator" test="Code">
+      <v:message id="MV20007" providers="Code"/>
+    </v:required>
+    <v:required id="Format.descriptionValidator" test="Description">
+      <v:message id="MV90005" providers="Description"/>
+    </v:required>
+    <v:required id="Format.codeFormatValidator" test="CodeFormat">
+      <v:message id="MV20040" providers="CodeFormat"/>
+    </v:required>
+  </v:group>
+
+  <!--//FormatDefinitionValidation//-->
+  <v:group id="FormatDefinition.Validator" >
+
+    <v:required id="FormatDefinition.portionCodeValidator" test="PortionCode">
+      <v:message id="MV20015" providers="PortionCode"/>
+    </v:required>
+    <!--<v:required id="FormatDefinition.prefixValidator" test="Prefix">
+      <v:message id="MV20051" providers="Prefix"/>
+    </v:required>
+    <v:required id="FormatDefinition.suffixValidator" test="Suffix">
+      <v:message id="MV20052" providers="Suffix"/>
+    </v:required>-->
+    <v:required id="FormatDefinition.positionValidator" test="Position">
+      <v:message id="MV20053" providers="Position"/>
+    </v:required>
+    <v:required id="FormatDefinition.lengthValidator" test="Length">
+      <v:message id="MV20016" providers="Length"/>
+    </v:required>
+    <v:required id="FormatDefinition.FormatCodeValidator" test="FormatId">
+      <v:message id="MV20040" providers="FormatId"/>
+    </v:required>
+
+  </v:group>
+
+
+
+  <!--Region Installer -->
+
+  <!--Region HierarchyWorkStation-->
+
+  <v:group id="HierarchyWorkStationValidatior" >
+
+    <v:required id="HierarchyWorkStation.WorkStationTypeIdValidator" test="WorkStationTypeId">
+      <v:message id="MV90028" providers="WorkStationTypeId"/>
+    </v:required>
+    <v:required id="HierarchyWorkStation.SourceBranchCodeValidator" test="SourceBranchCode">
+      <v:message id="MV90029" providers="SourceBranchCode"/>
+    </v:required>
+    <v:required id="HierarchyWorkStation.WorkStationDescriptionValidator" test="WorkStationDescription">
+      <v:message id="MV90031" providers="WorkStationDescription"/>
+    </v:required>
+    <v:required id="HierarchyWorkStation.HostNameValidator" test="HostName">
+      <v:message id="MV90032" providers="HostName"/>
+    </v:required>
+    <v:required id="HierarchyWorkStation.IPAddressValidator" test="IPAddress">
+      <v:message id="MV90033" providers="IPAddress"/>
+    </v:required>
+    <v:required id="HierarchyWorkStation.MaskAddressValidator" test="MaskAddress">
+      <v:message id="MV90034" providers="MaskAddress"/>
+    </v:required>
+    <v:required id="HierarchyWorkStation.MacAddressValidator" test="MacAddress">
+      <v:message id="MV90035" providers="MacAddress"/>
+    </v:required>
+
+  </v:group>
+
+  <v:group id="CounterInformationValidatior" >
+
+    <v:required id="CounterInformation.CounterTypeIdValidator" test="CounterType">
+      <v:message id="MV90028" providers="CounterType"/>
+    </v:required>
+  </v:group>
+
+  <!--Endregion-->
+
+  <!--Endregion-->
+
+
+
+</objects>

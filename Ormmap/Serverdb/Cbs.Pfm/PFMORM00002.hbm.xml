@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00002, Ace.Cbs.Pfm.Dmd" rename="closebaldto"/>
+  <class name="PFMORM00002" table="[CloseBal]" >
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>    
+    <property name="AccountNo">
+      <column name="AcctNo" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Name">
+      <column name="Name" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="CloseBalance">
+      <column name="CBal" sql-type="numeric(15,2)" not-null="true" />
+    </property>
+    <property name="CloseDate"> 
+      <column name="CloseDate" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="CheckNo">
+      <column name="CheckNo" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="AccountSign">
+      <column name="ACSign" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="UserNo">
+      <column name="USERNO" sql-type="varchar" not-null="false" />
+    </property>
+	  <property name="Cur">
+		  <column name="Cur" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="SourceBranch">
+		  <column name="SourceBr" sql-type="varchar" not-null="true" />
+	  </property>
+
+	  <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+	  <property name="UpdatedDate" not-null="false" insert="false" />
+	  <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+	<!--Need to Add If FrameworkChange-->
+	<query name="CloseBal.SelectCloseBalanceByAccountNo">
+		select new  closebaldto
+		(cb.CloseBalance) from PFMORM00002 as cb
+		where cb.AccountNo = :accountNo
+		and cb.Active= true
+	</query>
+
+  <query name="CloseBal.SelectDataForLastWithdrawal">
+    select new  closebaldto(
+    cb.CloseBalance,
+    cb.CheckNo
+    )
+    from PFMORM00002 as cb
+    where cb.AccountNo = :accountNo
+    and cb.SourceBranch =:branchCode
+    and cb.Active= true
+  </query>
+
+  <query name="CloseBal.DeleteForLastWithdrawal">
+    Delete from PFMORM00002 as cb
+    where cb.AccountNo = :accountNo
+    and cb.Active= true
+  </query>
+
+</hibernate-mapping>

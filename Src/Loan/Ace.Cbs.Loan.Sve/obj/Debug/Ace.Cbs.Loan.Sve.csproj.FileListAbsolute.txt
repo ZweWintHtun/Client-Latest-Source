@@ -1,0 +1,122 @@
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\output\Ace.Cbs.Loan.Sve.dll
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\output\Ace.Cbs.Loan.Sve.pdb
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.csprojResolveAssemblyReference.cache
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.dll
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.pdb
+D:\PRISTINE\20181102\201810101\20180531\output\Ace.Cbs.Loan.Sve.dll
+D:\PRISTINE\20181102\201810101\20180531\output\Ace.Cbs.Loan.Sve.pdb
+D:\PRISTINE\20181102\201810101\20180531\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.csprojResolveAssemblyReference.cache
+D:\PRISTINE\20181102\201810101\20180531\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.dll
+D:\PRISTINE\20181102\201810101\20180531\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.pdb
+E:\WORKING\Pristine\Pristine Project\output\Ace.Cbs.Loan.Sve.dll
+E:\WORKING\Pristine\Pristine Project\output\Ace.Cbs.Loan.Sve.pdb
+E:\WORKING\Pristine\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.csprojResolveAssemblyReference.cache
+E:\WORKING\Pristine\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.dll
+E:\WORKING\Pristine\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.pdb
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\output\Ace.Cbs.Loan.Sve.dll
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\output\Ace.Cbs.Loan.Sve.pdb
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.csprojResolveAssemblyReference.cache
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.dll
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.pdb
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.csprojResolveAssemblyReference.cache
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.pdb
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\output\Ace.Cbs.Loan.Sve.dll
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\output\Ace.Cbs.Loan.Sve.pdb
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.dll
+D:\02. Testing Version\My Latest\12092019\output\Ace.Cbs.Loan.Sve.dll
+D:\02. Testing Version\My Latest\12092019\output\Ace.Cbs.Loan.Sve.pdb
+D:\02. Testing Version\My Latest\12092019\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.csprojResolveAssemblyReference.cache
+D:\02. Testing Version\My Latest\12092019\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.dll
+D:\02. Testing Version\My Latest\12092019\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.pdb
+D:\02. Testing Version\My Latest\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.csprojResolveAssemblyReference.cache
+D:\02. Testing Version\My Latest\Pristine Project\output\Ace.Cbs.Loan.Sve.dll
+D:\02. Testing Version\My Latest\Pristine Project\output\Ace.Cbs.Loan.Sve.pdb
+D:\02. Testing Version\My Latest\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.dll
+D:\02. Testing Version\My Latest\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.pdb
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\output\Ace.Cbs.Loan.Sve.dll
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\output\Ace.Cbs.Loan.Sve.pdb
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.csprojResolveAssemblyReference.cache
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.dll
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.pdb
+E:\~WorkFromHome\Banking_02\Pristine Project\Output\Ace.Cbs.Loan.Sve.dll
+E:\~WorkFromHome\Banking_02\Pristine Project\Output\Ace.Cbs.Loan.Sve.pdb
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.csprojResolveAssemblyReference.cache
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.dll
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.pdb
+D:\Saung\1.Pristine\Source code\Pristine Project\output\Ace.Cbs.Loan.Sve.dll
+D:\Saung\1.Pristine\Source code\Pristine Project\output\Ace.Cbs.Loan.Sve.pdb
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.csprojResolveAssemblyReference.cache
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.dll
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.pdb
+D:\Saung\1.Pristine\03.Source code\Pristine Project\output\Ace.Cbs.Loan.Sve.dll
+D:\Saung\1.Pristine\03.Source code\Pristine Project\output\Ace.Cbs.Loan.Sve.pdb
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.csprojResolveAssemblyReference.cache
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.dll
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.pdb
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\output\Ace.Cbs.Loan.Sve.dll
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\output\Ace.Cbs.Loan.Sve.pdb
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.csprojResolveAssemblyReference.cache
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.dll
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.pdb
+D:\Pristine Source Code\Copy of CBS SourceCode\output\Ace.Cbs.Loan.Sve.dll
+D:\Pristine Source Code\Copy of CBS SourceCode\output\Ace.Cbs.Loan.Sve.pdb
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.csprojResolveAssemblyReference.cache
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.dll
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.pdb
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\output\Ace.Cbs.Loan.Sve.dll
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\output\Ace.Cbs.Loan.Sve.pdb
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.csprojResolveAssemblyReference.cache
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.dll
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.pdb
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\output\Ace.Cbs.Loan.Sve.dll
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\output\Ace.Cbs.Loan.Sve.pdb
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.csprojResolveAssemblyReference.cache
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.dll
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.pdb
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\output\Ace.Cbs.Loan.Sve.dll
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\output\Ace.Cbs.Loan.Sve.pdb
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.csprojResolveAssemblyReference.cache
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.dll
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.pdb
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\output\Ace.Cbs.Loan.Sve.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\output\Ace.Cbs.Loan.Sve.pdb
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.csprojResolveAssemblyReference.cache
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.pdb
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\output\Ace.Cbs.Loan.Sve.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\output\Ace.Cbs.Loan.Sve.pdb
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.csprojResolveAssemblyReference.cache
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.pdb
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\output\Ace.Cbs.Loan.Sve.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\output\Ace.Cbs.Loan.Sve.pdb
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.csprojResolveAssemblyReference.cache
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.pdb
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\output\Ace.Cbs.Loan.Sve.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\output\Ace.Cbs.Loan.Sve.pdb
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.csprojResolveAssemblyReference.cache
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.pdb
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\output\Ace.Cbs.Loan.Sve.dll
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\output\Ace.Cbs.Loan.Sve.pdb
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.csprojResolveAssemblyReference.cache
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.dll
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.pdb
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\output\Ace.Cbs.Loan.Sve.dll
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\output\Ace.Cbs.Loan.Sve.pdb
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.csprojResolveAssemblyReference.cache
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.dll
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.pdb
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\output\Ace.Cbs.Loan.Sve.dll
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\output\Ace.Cbs.Loan.Sve.pdb
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.csprojResolveAssemblyReference.cache
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.dll
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.pdb
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\output\Ace.Cbs.Loan.Sve.dll
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\output\Ace.Cbs.Loan.Sve.pdb
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.dll
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.pdb
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.csproj.AssemblyReference.cache
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.csproj.CoreCompileInputs.cache
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Loan\Ace.Cbs.Loan.Sve\obj\Debug\Ace.Cbs.Loan.Sve.csproj.CopyComplete

@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--MonthKey-->
+<!-- 
+// <copyright file="TLMORM00035.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>Nyo Me San</CreatedUser>
+// <CreatedDate>2013-05-21</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version>1.0</Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Tel.Dmd" namespace="Ace.Cbs.Tel.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+	
+	<import class="Ace.Cbs.Tel.Dmd.TLMDTO00035, Ace.Cbs.Tel.Dmd" rename="monthkeydto"/>
+	
+	<class name="TLMORM00035" table="MonthKey" >
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+		
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="true"/>
+		</version>	
+
+		<property name="Code">
+			<column name="Code" sql-type="varchar" not-null="true" />
+		</property>
+		<property name="Value">
+			<column name="Value" sql-type="numeric" not-null="true" />
+		</property>
+		<property name="StartDate">
+			<column name="Start_Date" sql-type="datetime" not-null="false" />
+		</property>
+		<property name="UniqueId">
+			<column name="UId" sql-type="char" not-null="false" />
+		</property>
+		<!--Support fields-->
+		
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+
+	</class>
+
+	<query name="CXCLE00001.SelectMonthKey">
+	<![CDATA[
+    select new monthkeydto(
+    monthkey.Value
+    )
+    from TLMORM00035 as monthkey
+    where monthkey.Code=:Code
+    and monthkey.StartDate <= :todaydate
+    and monthkey.Active = true
+    order by monthkey.StartDate desc
+     ]]>
+	</query>
+
+  <!--//MonthKey.CheckExist//-->
+  <query name="MonthKeyDAO.CheckExist">
+    select new monthkeydto( m.Id,m.Code,m.Value,m.StartDate )
+    from TLMORM00035 as m where ( m.Value = :value or m.Code = :code ) and  m.Active = true
+  </query>
+
+  <!--//MonthKeyDAO.SelectAll//-->
+  <query name="MonthKeyDAO.SelectAll">
+    select new monthkeydto(
+    m.Id,
+    m.Code,
+    m.Value,
+    m.StartDate,
+    m.UniqueId,
+    m.Active,
+    m.TS,
+    m.CreatedDate,
+    m.CreatedUserId,
+    m.UpdatedDate,
+    m.UpdatedUserId
+    )
+    from TLMORM00035 as m
+    where m.Active = true
+    order by m.StartDate desc
+  </query>
+
+  <!--//MonthKeyDAO.SelectById//-->
+  <query name="MonthKeyDAO.SelectById">
+    select new monthkeydto(
+    m.Id,
+    m.Code,
+    m.Value,
+    m.StartDate,
+    m.UniqueId,
+    m.Active,
+    m.TS,
+    m.CreatedDate,
+    m.CreatedUserId,
+    m.UpdatedDate,
+    m.UpdatedUserId
+    )
+    from TLMORM00035 as m
+    where m.Id = :id
+    and m.Active = true
+  </query>
+
+</hibernate-mapping>

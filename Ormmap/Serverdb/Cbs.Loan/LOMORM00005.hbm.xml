@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+	<import class="Ace.Cbs.Loan.Dmd.LOMDTO00001, Ace.Cbs.Loan.Dmd" rename="LandDto"/>
+
+	<class name="LOMORM00005" table="LAND" >
+
+		<id name="Code">
+			<column name="LandCode" sql-type="varchar" not-null="true" />
+		</id>
+
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="true"/>
+		</version>
+
+		<property name="Description">
+			<column name="LandDescription" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+
+	</class>
+
+	<!--//LandDAO.CheckExist//-->
+	<query name="LandDAO.CheckExist">
+		select new LandDto
+		(
+		l.Code,
+		l.Description
+		)
+		from LOMORM00005 as l
+		where (l.Code =: code or l.Description =: description)
+		and  l.Active = true
+	</query>
+
+	<!--//LandDAO.CheckExist2//-->
+	<query name="LandDAO.CheckExist2">
+		select new LandDto
+		(
+		l.Code,
+		l.Description,
+		l.Active,
+		l.TS,
+		l.CreatedDate,
+		l.CreatedUserId,
+		l.UpdatedDate,
+		l.UpdatedUserId
+		)
+		from LOMORM00005 as l
+		where (l.Code =: code or l.Description =: description)
+	</query>
+
+
+	<!--//LandDAO.SelectAll//-->
+	<query name="LandDAO.SelectAll">
+		select new LandDto
+		(
+		l.Code,
+		l.Description,
+		l.Active,
+		l.TS,
+		l.CreatedDate,
+		l.CreatedUserId,
+		l.UpdatedDate,
+		l.UpdatedUserId
+		)
+		from LOMORM00005 as l
+		where l.Active = true
+	</query>
+
+  <query name="LandDAO.Update">
+    update LOMORM00005 as land set
+    land.Description = :desp,
+    land.UpdatedDate = :updatedDate,
+    land.UpdatedUserId = :updatedUserId
+    where
+    land.Code=:code and
+    land.Active = true
+  </query>
+
+	<!--//LandDAO.SelectByCode//-->
+	<query name="LandDAO.SelectByCode">
+		select new LandDto(
+		l.Code,
+		l.Description,
+		l.Active,
+		l.TS,
+		l.CreatedDate,
+		l.CreatedUserId,
+		l.UpdatedDate,
+		l.UpdatedUserId
+		)
+		from LOMORM00005 as l
+		where l.Code = :code
+		and l.Active = true
+	</query>
+
+</hibernate-mapping>

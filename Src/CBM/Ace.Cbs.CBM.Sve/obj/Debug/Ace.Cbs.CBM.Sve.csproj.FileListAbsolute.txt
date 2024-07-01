@@ -1,0 +1,241 @@
+E:\Mine\FDPB\Source Code\CBS_FDB_Version 1.1\Src\Ace.Cbs.CBM.Sve\bin\Debug\Ace.Cbs.CBM.Sve.dll
+E:\Mine\FDPB\Source Code\CBS_FDB_Version 1.1\Src\Ace.Cbs.CBM.Sve\bin\Debug\Ace.Cbs.CBM.Sve.pdb
+E:\Mine\FDPB\Source Code\CBS_FDB_Version 1.1\Src\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+E:\Mine\FDPB\Source Code\CBS_FDB_Version 1.1\Src\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\FDPB\2. TEST TO VERSION DELIVER\FarmLoan\Source (09022017)\06032017\output\Ace.Cbs.CBM.Sve.dll
+D:\FDPB\2. TEST TO VERSION DELIVER\FarmLoan\Source (09022017)\06032017\output\Ace.Cbs.CBM.Sve.pdb
+D:\FDPB\2. TEST TO VERSION DELIVER\FarmLoan\Source (09022017)\06032017\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\ResolveAssemblyReference.cache
+D:\FDPB\2. TEST TO VERSION DELIVER\FarmLoan\Source (09022017)\06032017\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\FDPB\2. TEST TO VERSION DELIVER\FarmLoan\Source (09022017)\06032017\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\FDPB\TESTING\SOURCE\06032017\output\Ace.Cbs.CBM.Sve.dll
+D:\FDPB\TESTING\SOURCE\06032017\output\Ace.Cbs.CBM.Sve.pdb
+D:\FDPB\TESTING\SOURCE\06032017\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\FDPB\TESTING\SOURCE\06032017\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\FDPB\TESTING\SOURCE\06032017\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\my\FDP Bank\Sources\CBS\06032017\output\Ace.Cbs.CBM.Sve.dll
+D:\my\FDP Bank\Sources\CBS\06032017\output\Ace.Cbs.CBM.Sve.pdb
+D:\my\FDP Bank\Sources\CBS\06032017\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\my\FDP Bank\Sources\CBS\06032017\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\my\FDP Bank\Sources\CBS\06032017\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\my\FDP Bank\Sources\CBS\20170308\output\Ace.Cbs.CBM.Sve.dll
+D:\my\FDP Bank\Sources\CBS\20170308\output\Ace.Cbs.CBM.Sve.pdb
+D:\my\FDP Bank\Sources\CBS\20170308\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\my\FDP Bank\Sources\CBS\20170308\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\my\FDP Bank\Sources\CBS\20170308\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\FDPB\2. TEST TO VERSION DELIVER\Source Code Latest\18052017_Latest\output\Ace.Cbs.CBM.Sve.dll
+D:\FDPB\2. TEST TO VERSION DELIVER\Source Code Latest\18052017_Latest\output\Ace.Cbs.CBM.Sve.pdb
+D:\FDPB\2. TEST TO VERSION DELIVER\Source Code Latest\18052017_Latest\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\ResolveAssemblyReference.cache
+D:\FDPB\2. TEST TO VERSION DELIVER\Source Code Latest\18052017_Latest\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\FDPB\2. TEST TO VERSION DELIVER\Source Code Latest\18052017_Latest\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\FDPB\2. TEST TO VERSION DELIVER\Source Code Latest\14062017_Latest\output\Ace.Cbs.CBM.Sve.dll
+D:\FDPB\2. TEST TO VERSION DELIVER\Source Code Latest\14062017_Latest\output\Ace.Cbs.CBM.Sve.pdb
+D:\FDPB\2. TEST TO VERSION DELIVER\Source Code Latest\14062017_Latest\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\ResolveAssemblyReference.cache
+D:\FDPB\2. TEST TO VERSION DELIVER\Source Code Latest\14062017_Latest\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\FDPB\2. TEST TO VERSION DELIVER\Source Code Latest\14062017_Latest\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\PRISTINE\Source True\17-07-2017-Latest\output\Ace.Cbs.CBM.Sve.dll
+D:\PRISTINE\Source True\17-07-2017-Latest\output\Ace.Cbs.CBM.Sve.pdb
+D:\PRISTINE\Source True\17-07-2017-Latest\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\PRISTINE\Source True\17-07-2017-Latest\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\PRISTINE\Source True\17-07-2017-Latest\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\PRISTINE\18-07-2017\17-07-2017-Latest\output\Ace.Cbs.CBM.Sve.dll
+D:\PRISTINE\18-07-2017\17-07-2017-Latest\output\Ace.Cbs.CBM.Sve.pdb
+D:\PRISTINE\18-07-2017\17-07-2017-Latest\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\ResolveAssemblyReference.cache
+D:\PRISTINE\18-07-2017\17-07-2017-Latest\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\PRISTINE\18-07-2017\17-07-2017-Latest\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\my\PRISTINE\SOURCES\CBS\22072017\output\Ace.Cbs.CBM.Sve.dll
+D:\my\PRISTINE\SOURCES\CBS\22072017\output\Ace.Cbs.CBM.Sve.pdb
+D:\my\PRISTINE\SOURCES\CBS\22072017\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\ResolveAssemblyReference.cache
+D:\my\PRISTINE\SOURCES\CBS\22072017\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\my\PRISTINE\SOURCES\CBS\22072017\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\1. Projects\PRISTINE\output\Ace.Cbs.CBM.Sve.dll
+D:\1. Projects\PRISTINE\output\Ace.Cbs.CBM.Sve.pdb
+D:\1. Projects\PRISTINE\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\ResolveAssemblyReference.cache
+D:\1. Projects\PRISTINE\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\1. Projects\PRISTINE\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\PRISTINE\SOURCE CODE\DayBookOK_FromHWKO\PRISTINE\output\Ace.Cbs.CBM.Sve.dll
+D:\PRISTINE\SOURCE CODE\DayBookOK_FromHWKO\PRISTINE\output\Ace.Cbs.CBM.Sve.pdb
+D:\PRISTINE\SOURCE CODE\DayBookOK_FromHWKO\PRISTINE\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\PRISTINE\SOURCE CODE\DayBookOK_FromHWKO\PRISTINE\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\PRISTINE\SOURCE CODE\DayBookOK_FromHWKO\PRISTINE\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\my\PRISTINE\SOURCES\CBS\20170816\output\Ace.Cbs.CBM.Sve.dll
+D:\my\PRISTINE\SOURCES\CBS\20170816\output\Ace.Cbs.CBM.Sve.pdb
+D:\my\PRISTINE\SOURCES\CBS\20170816\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\ResolveAssemblyReference.cache
+D:\my\PRISTINE\SOURCES\CBS\20170816\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\my\PRISTINE\SOURCES\CBS\20170816\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\my\PRISTINE\SOURCES\CBS\20170925\output\Ace.Cbs.CBM.Sve.dll
+D:\my\PRISTINE\SOURCES\CBS\20170925\output\Ace.Cbs.CBM.Sve.pdb
+D:\my\PRISTINE\SOURCES\CBS\20170925\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\ResolveAssemblyReference.cache
+D:\my\PRISTINE\SOURCES\CBS\20170925\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\my\PRISTINE\SOURCES\CBS\20170925\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\1. Projects\PRISTINE_UPDATE_CLIENTVERSION\20170925\output\Ace.Cbs.CBM.Sve.dll
+D:\1. Projects\PRISTINE_UPDATE_CLIENTVERSION\20170925\output\Ace.Cbs.CBM.Sve.pdb
+D:\1. Projects\PRISTINE_UPDATE_CLIENTVERSION\20170925\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\ResolveAssemblyReference.cache
+D:\1. Projects\PRISTINE_UPDATE_CLIENTVERSION\20170925\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\1. Projects\PRISTINE_UPDATE_CLIENTVERSION\20170925\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\my\PRISTINE\SOURCES\CBS\20171127\output\Ace.Cbs.CBM.Sve.dll
+D:\my\PRISTINE\SOURCES\CBS\20171127\output\Ace.Cbs.CBM.Sve.pdb
+D:\my\PRISTINE\SOURCES\CBS\20171127\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\ResolveAssemblyReference.cache
+D:\my\PRISTINE\SOURCES\CBS\20171127\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\my\PRISTINE\SOURCES\CBS\20171127\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\my\PRISTINE\SOURCES\CBS\20171204\output\Ace.Cbs.CBM.Sve.dll
+D:\my\PRISTINE\SOURCES\CBS\20171204\output\Ace.Cbs.CBM.Sve.pdb
+D:\my\PRISTINE\SOURCES\CBS\20171204\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\ResolveAssemblyReference.cache
+D:\my\PRISTINE\SOURCES\CBS\20171204\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\my\PRISTINE\SOURCES\CBS\20171204\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+E:\my\PRISTINE\SOURCES\CBS\20171204\output\Ace.Cbs.CBM.Sve.dll
+E:\my\PRISTINE\SOURCES\CBS\20171204\output\Ace.Cbs.CBM.Sve.pdb
+E:\my\PRISTINE\SOURCES\CBS\20171204\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+E:\my\PRISTINE\SOURCES\CBS\20171204\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+E:\my\PRISTINE\SOURCES\CBS\20171204\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+E:\my\PRISTINE\SOURCES\CBS\20171229\output\Ace.Cbs.CBM.Sve.dll
+E:\my\PRISTINE\SOURCES\CBS\20171229\output\Ace.Cbs.CBM.Sve.pdb
+E:\my\PRISTINE\SOURCES\CBS\20171229\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+E:\my\PRISTINE\SOURCES\CBS\20171229\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+E:\my\PRISTINE\SOURCES\CBS\20171229\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\PRISTINE\PRISTINE CLIENT VERSION\2018\SOURCES\24\Source\20171229\output\Ace.Cbs.CBM.Sve.dll
+D:\PRISTINE\PRISTINE CLIENT VERSION\2018\SOURCES\24\Source\20171229\output\Ace.Cbs.CBM.Sve.pdb
+D:\PRISTINE\PRISTINE CLIENT VERSION\2018\SOURCES\24\Source\20171229\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\PRISTINE\PRISTINE CLIENT VERSION\2018\SOURCES\24\Source\20171229\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\PRISTINE\PRISTINE CLIENT VERSION\2018\SOURCES\24\Source\20171229\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\PRISTINE\PRISTINE CLIENT VERSION\2018\CLIENT VERSION SOURCES\24\Source\20171229\output\Ace.Cbs.CBM.Sve.dll
+D:\PRISTINE\PRISTINE CLIENT VERSION\2018\CLIENT VERSION SOURCES\24\Source\20171229\output\Ace.Cbs.CBM.Sve.pdb
+D:\PRISTINE\PRISTINE CLIENT VERSION\2018\CLIENT VERSION SOURCES\24\Source\20171229\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\PRISTINE\PRISTINE CLIENT VERSION\2018\CLIENT VERSION SOURCES\24\Source\20171229\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\PRISTINE\PRISTINE CLIENT VERSION\2018\CLIENT VERSION SOURCES\24\Source\20171229\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\PRISTINE\SOURCE CODE\1. DEVELOPMENT SOURCE\23 APR\20180531\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\PRISTINE\SOURCE CODE\1. DEVELOPMENT SOURCE\23 APR\20180531\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\PRISTINE\SOURCE CODE\1. DEVELOPMENT SOURCE\23 APR\20180531\output\Ace.Cbs.CBM.Sve.dll
+D:\PRISTINE\SOURCE CODE\1. DEVELOPMENT SOURCE\23 APR\20180531\output\Ace.Cbs.CBM.Sve.pdb
+D:\PRISTINE\SOURCE CODE\1. DEVELOPMENT SOURCE\23 APR\20180531\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\PRISTINE\SOURCE CODE\30072018\20180531\output\Ace.Cbs.CBM.Sve.dll
+D:\PRISTINE\SOURCE CODE\30072018\20180531\output\Ace.Cbs.CBM.Sve.pdb
+D:\PRISTINE\SOURCE CODE\30072018\20180531\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\PRISTINE\SOURCE CODE\30072018\20180531\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\PRISTINE\SOURCE CODE\30072018\20180531\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+E:\my\PRISTINE\SOURCES\CBS\201810101\20180531\output\Ace.Cbs.CBM.Sve.dll
+E:\my\PRISTINE\SOURCES\CBS\201810101\20180531\output\Ace.Cbs.CBM.Sve.pdb
+E:\my\PRISTINE\SOURCES\CBS\201810101\20180531\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+E:\my\PRISTINE\SOURCES\CBS\201810101\20180531\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+E:\my\PRISTINE\SOURCES\CBS\201810101\20180531\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\PRISTINE\20181102\201810101\20180531\output\Ace.Cbs.CBM.Sve.dll
+D:\PRISTINE\20181102\201810101\20180531\output\Ace.Cbs.CBM.Sve.pdb
+D:\PRISTINE\20181102\201810101\20180531\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\PRISTINE\20181102\201810101\20180531\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\PRISTINE\20181102\201810101\20180531\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\output\Ace.Cbs.CBM.Sve.dll
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\output\Ace.Cbs.CBM.Sve.pdb
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+E:\WORKING\Pristine\Pristine Project\output\Ace.Cbs.CBM.Sve.dll
+E:\WORKING\Pristine\Pristine Project\output\Ace.Cbs.CBM.Sve.pdb
+E:\WORKING\Pristine\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+E:\WORKING\Pristine\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+E:\WORKING\Pristine\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\output\Ace.Cbs.CBM.Sve.dll
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\output\Ace.Cbs.CBM.Sve.pdb
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\output\Ace.Cbs.CBM.Sve.dll
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\output\Ace.Cbs.CBM.Sve.pdb
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\02. Testing Version\My Latest\12092019\output\Ace.Cbs.CBM.Sve.dll
+D:\02. Testing Version\My Latest\12092019\output\Ace.Cbs.CBM.Sve.pdb
+D:\02. Testing Version\My Latest\12092019\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\02. Testing Version\My Latest\12092019\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\02. Testing Version\My Latest\12092019\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\02. Testing Version\My Latest\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\02. Testing Version\My Latest\Pristine Project\output\Ace.Cbs.CBM.Sve.dll
+D:\02. Testing Version\My Latest\Pristine Project\output\Ace.Cbs.CBM.Sve.pdb
+D:\02. Testing Version\My Latest\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\02. Testing Version\My Latest\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\output\Ace.Cbs.CBM.Sve.dll
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\output\Ace.Cbs.CBM.Sve.pdb
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+E:\~WorkFromHome\Banking_02\Pristine Project\Output\Ace.Cbs.CBM.Sve.dll
+E:\~WorkFromHome\Banking_02\Pristine Project\Output\Ace.Cbs.CBM.Sve.pdb
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\Saung\1.Pristine\Source code\Pristine Project\output\Ace.Cbs.CBM.Sve.dll
+D:\Saung\1.Pristine\Source code\Pristine Project\output\Ace.Cbs.CBM.Sve.pdb
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\Saung\1.Pristine\03.Source code\Pristine Project\output\Ace.Cbs.CBM.Sve.dll
+D:\Saung\1.Pristine\03.Source code\Pristine Project\output\Ace.Cbs.CBM.Sve.pdb
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\output\Ace.Cbs.CBM.Sve.dll
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\output\Ace.Cbs.CBM.Sve.pdb
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\Pristine Source Code\Copy of CBS SourceCode\output\Ace.Cbs.CBM.Sve.dll
+D:\Pristine Source Code\Copy of CBS SourceCode\output\Ace.Cbs.CBM.Sve.pdb
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\output\Ace.Cbs.CBM.Sve.dll
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\output\Ace.Cbs.CBM.Sve.pdb
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\output\Ace.Cbs.CBM.Sve.dll
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\output\Ace.Cbs.CBM.Sve.pdb
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\output\Ace.Cbs.CBM.Sve.dll
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\output\Ace.Cbs.CBM.Sve.pdb
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\output\Ace.Cbs.CBM.Sve.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\output\Ace.Cbs.CBM.Sve.pdb
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\output\Ace.Cbs.CBM.Sve.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\output\Ace.Cbs.CBM.Sve.pdb
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\output\Ace.Cbs.CBM.Sve.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\output\Ace.Cbs.CBM.Sve.pdb
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\output\Ace.Cbs.CBM.Sve.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\output\Ace.Cbs.CBM.Sve.pdb
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\output\Ace.Cbs.CBM.Sve.dll
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\output\Ace.Cbs.CBM.Sve.pdb
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\output\Ace.Cbs.CBM.Sve.dll
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\output\Ace.Cbs.CBM.Sve.pdb
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\output\Ace.Cbs.CBM.Sve.dll
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\output\Ace.Cbs.CBM.Sve.pdb
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csprojResolveAssemblyReference.cache
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\output\Ace.Cbs.CBM.Sve.dll
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\output\Ace.Cbs.CBM.Sve.pdb
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.dll
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.pdb
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csproj.AssemblyReference.cache
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csproj.CoreCompileInputs.cache
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\CBM\Ace.Cbs.CBM.Sve\obj\Debug\Ace.Cbs.CBM.Sve.csproj.CopyComplete

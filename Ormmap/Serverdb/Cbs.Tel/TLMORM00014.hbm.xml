@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--ZBankUser-->
+<!-- 
+// <copyright file="TLMORM00014.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>Nyo Me San</CreatedUser>
+// <CreatedDate>2013-05-21</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version>1.0</Version>
+
+-->
+
+<hibernate-mapping assembly="Ace.Cbs.Tel.Dmd" namespace="Ace.Cbs.Tel.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+	<import class="Ace.Cbs.Tel.Dmd.TLMDTO00014, Ace.Cbs.Tel.Dmd" rename="zbankuserdto"/>
+	<class name="TLMORM00014" table="ZBankUser" >
+		<id name="Id">			
+			<column name="Id" sql-type="int" not-null="true" />
+		</id>
+		<property name="UserId">
+			<column name="UserId" sql-type="varchar" not-null="true" />
+		</property>
+		<property name="UserName">
+			<column name="UserName" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="Description">
+			<column name="Description" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="Password">
+			<column name="Password" sql-type="varchar" not-null="true" />
+		</property>
+		<property name="ConfirmPassword">
+			<column name="ConfirmPassword" sql-type="varchar" not-null="true" />
+		</property>
+		<property name="DefaultGroup">
+			<column name="DefaultGroup" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="Groups">
+			<column name="Groups" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="UserLevel">
+			<column name="UserLevel" sql-type="numeric" not-null="false" />
+		</property>
+		<property name="Workstations">
+			<column name="Workstations" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="Disable">
+			<column name="Disable" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="DateTime">
+			<column name="Date_Time" sql-type="datetime" not-null="false" />
+		</property>
+		<property name="CloseDateTime">
+			<column name="Closedate_Time" sql-type="datetime" not-null="false" />
+		</property>
+		<property name="CounterNo">
+			<column name="CounterNo" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="UiqueId">
+			<column name="UId" sql-type="char" not-null="true" />
+		</property>
+		<property name="SourceBranchCode">
+			<column name="SourceBr" sql-type="varchar" not-null="false" />
+		</property>
+		<!--Support fields-->
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="true"/>
+		</version>
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+	</class>
+</hibernate-mapping>

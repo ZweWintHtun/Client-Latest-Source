@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<hibernate-mapping assembly="Ace.Cbs.Tcm.Dmd" namespace="Ace.Cbs.Tcm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Tcm.Dmd.TCMDTO00052, Ace.Cbs.Tcm.Dmd" rename="TCMDTO00052"/>
+  <class name="TCMORM00052" table="DailyReport">
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <!--<generator class="increment">        
+      </generator>-->                 
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+
+    <property name="Cur">
+      <column name="Cur" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="ReceiptCash">
+      <column name="ReceiptCash" sql-type="decimal" not-null="true" />
+    </property>
+
+    <property name="ReceiptCashVou">
+      <column name="ReceiptCashVou" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="ReceiptTransfer">
+      <column name="ReceiptTransfer" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="ReceiptTransferVou">
+      <column name="ReceiptTransferVou" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="ReceiptClearing">
+      <column name="ReceiptClearing" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="ReceiptClearingVou">
+      <column name="ReceiptClearingVou" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="PaymentCash">
+      <column name="PaymentCash" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="PaymentCashVou">
+      <column name="PaymentCashVou" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="PaymentTransfer">
+      <column name="PaymentTransfer" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="PaymentTransferVou">
+      <column name="PaymentTransferVou" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="PaymentClearing">
+      <column name="PaymentClearing" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="PaymentClearingVou">
+      <column name="PaymentClearingVou" sql-type="decimal" not-null="true" />
+    </property>
+
+    <property name="DrawingCash">
+      <column name="DrawingCash" sql-type="decimal" not-null="true" />
+    </property>
+
+    <property name="DrawingCashVou">
+      <column name="DrawingCashVou" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="DrawingTransfer">
+      <column name="DrawingTransfer" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="DrawingTransferVou">
+      <column name="DrawingTransferVou" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="EncashCash">
+      <column name="EncashCash" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="EncashCashVou">
+      <column name="EncashCashVou" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="EncashTransfer">
+      <column name="EncashTransfer" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="EncashTransferVou">
+      <column name="EncashTransferVou" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CashInHand">
+      <column name="CashInHand" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CashWithCBM">
+      <column name="CashWithCBM" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="ACWithOthBank">
+      <column name="ACWithOthBank" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CurOpened">
+      <column name="CurOpened" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CurClosed">
+      <column name="CurClosed" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CurTotal">
+      <column name="CurTotal" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CurOBal">
+      <column name="CurOBal" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CurDep">
+      <column name="CurDep" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CurWith">
+      <column name="CurWith" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="SavOpened">
+      <column name="SavOpened" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="SavClosed">
+      <column name="SavClosed" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="SavTotal">
+      <column name="SavTotal" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="SavOBal">
+      <column name="SavOBal" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="SavDep">
+      <column name="SavDep" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="SavWith">
+      <column name="SavWith" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CalOpened">
+      <column name="CalOpened" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CalClosed">
+      <column name="CalClosed" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CalTotal">
+      <column name="CalTotal" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CalOBal">
+      <column name="CalOBal" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CalDep">
+      <column name="CalDep" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="CalWith">
+      <column name="CalWith" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="FixOpened">
+      <column name="FixOpened" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="FixClosed">
+      <column name="FixClosed" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="FixTotal">
+      <column name="FixTotal" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="FixOBal">
+      <column name="FixOBal" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="FixDep">
+      <column name="FixDep" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="FixWith">
+      <column name="FixWith" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="Date_Time">
+      <column name="Date_Time" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  <query name="DeleteDailyReportByCurDate">
+    Delete
+    From TCMORM00052
+    Where Cur=:CUR
+	and Active = true
+  </query>
+
+  <!--//TLFDAO.SelectMaxId//-->
+  <query name="TCMDAO00052.SelectMaxId">
+    select new TCMDTO00052
+    (
+    MAX(drpt.Id)
+    )
+    from TCMORM00052 as drpt
+  </query>
+
+  <query name="SelectDailyReportData">
+    Select new TCMDTO00052
+    (
+    D.Cur,
+    D.ReceiptCash,
+    D.ReceiptCashVou,
+    D.ReceiptTransfer,
+    D.ReceiptTransferVou,
+    D.ReceiptClearing,
+    D.ReceiptClearingVou,
+    D.PaymentCash,
+    D.PaymentCashVou,
+    D.PaymentTransfer,
+    D.PaymentTransferVou,
+    D.PaymentClearing,
+    D.PaymentClearingVou,
+    D.DrawingCash,
+    D.DrawingCashVou,
+    D.DrawingTransfer,
+    D.DrawingTransferVou,
+    D.EncashCash,
+    D.EncashCashVou,
+    D.EncashTransfer,
+    D.EncashTransferVou,
+    D.CashInHand,
+    D.CashWithCBM,
+    D.ACWithOthBank,
+    D.CurOpened,
+    D.CurClosed,
+    D.CurTotal,
+    D.CurOBal,
+    D.CurDep,
+    D.CurWith,
+    D.SavOpened,
+    D.SavClosed,
+    D.SavTotal,
+    D.SavOBal,
+    D.SavDep,
+    D.SavWith,
+    D.CalOpened,
+    D.CalClosed,
+    D.CalTotal,
+    D.CalOBal,
+    D.CalDep,
+    D.CalWith,
+    D.FixOpened,
+    D.FixClosed,
+    D.FixTotal,
+    D.FixOBal,
+    D.FixDep,
+    D.FixWith,
+    D.Date_Time,
+    D.Active,
+    D.CreatedDate,
+    D.CreatedUserId,
+    D.UpdatedDate,
+    D.UpdatedUserId
+    )
+    From TCMORM00052 as D
+    Where D.Cur =:Cur
+	and D.Active = true
+  </query>
+  
+  <!--<query name="UpdateDailyReport">
+    Update TCMORM00052 as D
+    set
+    D.CUR = :CUR
+    D.RECEIPTCASH = :
+    D.RECEIPTCASHVOU
+    D.RECEIPTTRANSFER
+    D.RECEIPTTRANSFERVOU
+    D.RECEIPTCLEARING
+    D.RECEIPTCLEARINGVOU
+    D.PAYMENTCASH
+    D.PAYMENTCASHVOU
+    D.PAYMENTTRANSFER
+    D.PAYMENTTRANSFERVOU
+    D.PAYMENTCLEARING
+    D.PAYMENTCLEARINGVOU
+    D.DRAWINGCASH
+    D.DRAWINGCASHVOU
+    D.DRAWINGTRANSFER
+    D.DRAWINGTRANSFERVOU
+    D.ENCASHCASH
+    D.ENCASHCASHVOU
+    D.ENCASHTRANSFER
+    D.ENCASHTRANSFERVOU
+    D.CASHINHAND
+    D.CASHWITHCBM
+    D.ACWITHOTHBANK
+    D.CUROPENED
+    D.CURCLOSED
+    D.CURTOTAL
+    D.CALOBAL
+    D.CALDEP
+    D.CALWITH
+    D.FIXOPENED
+    D.FIXCLOSED
+    D.FIXTOTAL
+    D.FIXOBAL
+    D.FIXDEP
+    D.FIXWITH
+    D.DATE_TIME
+    D.Active
+    D.CreatedDate
+    D.CreatedUserId
+    D.UpdatedDate
+    D.UpdatedUserId
+  </query>-->
+
+  <query name="TCMDAO0011.SelectAllFromDailyReport">
+    select new TCMDTO00052
+    (
+    dlyreport.Cur,
+    dlyreport.ReceiptCash,
+    dlyreport.ReceiptCashVou,
+    dlyreport.ReceiptTransfer,
+    dlyreport.ReceiptTransferVou,
+    dlyreport.ReceiptClearing,
+    dlyreport.ReceiptClearingVou,
+    dlyreport.PaymentCash,
+    dlyreport.PaymentCashVou,
+    dlyreport.PaymentTransfer,
+    dlyreport.PaymentTransferVou,
+    dlyreport.PaymentClearing,
+    dlyreport.PaymentClearingVou,
+    dlyreport.DrawingCash,
+    dlyreport.DrawingCashVou,
+    dlyreport.DrawingTransfer,
+    dlyreport.DrawingTransferVou,
+    dlyreport.EncashCash,
+    dlyreport.EncashCashVou,
+    dlyreport.EncashTransfer,
+    dlyreport.EncashTransferVou,
+    dlyreport.CashInHand,
+    dlyreport.CashWithCBM,
+    dlyreport.ACWithOthBank,
+    dlyreport.CurOpened,
+    dlyreport.CurClosed,
+    dlyreport.CurTotal,
+    dlyreport.CurOBal,
+    dlyreport.CurDep,
+    dlyreport.CurWith,
+    dlyreport.SavOpened,
+    dlyreport.SavClosed,
+    dlyreport.SavTotal,
+    dlyreport.SavOBal,
+    dlyreport.SavDep,
+    dlyreport.SavWith,
+    dlyreport.CalOpened,
+    dlyreport.CalClosed,
+    dlyreport.CalTotal,
+    dlyreport.CalOBal,
+    dlyreport.CalDep,
+    dlyreport.CalWith,
+    dlyreport.FixOpened,
+    dlyreport.FixClosed,
+    dlyreport.FixTotal,
+    dlyreport.FixOBal,
+    dlyreport.FixDep,
+    dlyreport.FixWith,
+    dlyreport.Date_Time
+    )
+    from TCMORM00052 as dlyreport
+    where Convert(char(10),dlyreport.Date_Time,111)=:datetime and dlyreport.Cur=:cur and dlyreport.Active=true
+  </query>
+
+  <query name="TCMDAO00011.UpdateDailyReport">
+    update TCMORM00052 dlyreport
+    set
+    dlyreport.ReceiptCash=:receiptcash,
+    dlyreport.ReceiptCashVou=:receiptcashvou,
+    dlyreport.ReceiptTransfer=:receiptTran,
+    dlyreport.ReceiptTransferVou=:receiptTranVou,
+    dlyreport.ReceiptClearing=:receiptClearing,
+    dlyreport.ReceiptClearingVou=:receiptClearingVou,
+    dlyreport.PaymentCash=:paymentCash,
+    dlyreport.PaymentCashVou=:paymentCashVou,
+    dlyreport.PaymentTransfer=:paymentTran,
+    dlyreport.PaymentTransferVou=:paymentTranVou,
+    dlyreport.PaymentClearing=:paymentClearing,
+    dlyreport.PaymentClearingVou=:paymentClearingVou,
+    dlyreport.DrawingCash=:drawingCash,
+    dlyreport.DrawingCashVou=:drawingCashVou,
+    dlyreport.DrawingTransfer=:drawingTran,
+    dlyreport.DrawingTransferVou=:drawingTanVou,
+    dlyreport.EncashCash=:encashCash,
+    dlyreport.EncashCashVou=:encashCashVou,
+    dlyreport.EncashTransfer=:encashTran,
+    dlyreport.EncashTransferVou=:encashTranVou,
+    dlyreport.CashInHand=:cashinHand,
+    dlyreport.CashWithCBM=:cashwithcbm,
+    dlyreport.ACWithOthBank=:acwithothbank,
+    dlyreport.CurOpened=:curopened,
+    dlyreport.CurClosed=:curclosed,
+    dlyreport.CurTotal=:curtotal,
+    dlyreport.CurOBal=:curobal,
+    dlyreport.CurDep=:curdep,
+    dlyreport.CurWith=:curwith,
+    dlyreport.SavOpened=:savopend,
+    dlyreport.SavClosed=:saveclosed,
+    dlyreport.SavTotal=:savetotal,
+    dlyreport.SavOBal=:saveobal,
+    dlyreport.SavDep=:savedep,
+    dlyreport.SavWith=:savwith,
+    dlyreport.CalOpened=:calopend,
+    dlyreport.CalClosed=:calclosed,
+    dlyreport.CalTotal=:caltotal,
+    dlyreport.CalOBal=:calobal,
+    dlyreport.CalDep=:caldep,
+    dlyreport.CalWith=:calwith,
+    dlyreport.FixOpened=:fixopened,
+    dlyreport.FixClosed=:fixclosed,
+    dlyreport.FixTotal=:fixtotal,
+    dlyreport.FixOBal=:fixobal,
+    dlyreport.FixDep=:fixdep,
+    dlyreport.FixWith=:fixwith,
+    dlyreport.UpdatedDate=:updateddate,
+    dlyreport.UpdatedUserId=:updateduserId
+    where dlyreport.Cur=:currencycode and dlyreport.Active=true
+  </query>
+
+</hibernate-mapping>

@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--TranType-->
+<!-- 
+// <copyright file="TLMORM00005.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>Nyo Me San</CreatedUser>
+// <CreatedDate>2013-05-21</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version>1.0</Version>
+
+-->
+<hibernate-mapping assembly="Ace.Cbs.Tel.Dmd" namespace="Ace.Cbs.Tel.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+	
+	<import class="Ace.Cbs.Tel.Dmd.TLMDTO00005, Ace.Cbs.Tel.Dmd" rename="trantypedto"/>
+	<class name="TLMORM00005" table="TranType" >
+		
+		<id name="TransactionCode">			
+		  <column name="TranCode" sql-type="varchar" not-null="true" />
+		</id>
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+    
+		<property name="Description">
+			<column name="Desp" sql-type="nvarchar" not-null="true" />
+		</property>
+		<property name="Narration">
+			<column name="Narration" sql-type="nvarchar" not-null="false" />
+		</property>
+		<property name="Status">
+			<column name="Status" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="PBReference">
+			<column name="PBReference" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="RVReference">
+			<column name="RVReference" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="UniqueId">
+			<column name="UId" sql-type="char" not-null="false" />
+		</property>
+		<!--Support fields-->
+		
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+	</class>
+
+	<query name="TLMDAO00005.SelectTranTypeStatus">
+		select new trantypedto
+		(tt.Status
+		)
+		from TLMORM00005 as tt where tt.TransactionCode=:transactionCode and tt.Active = true
+
+	</query>
+
+	<!--//TranType.CheckExist//-->
+	<query name="TranTypeDAO.CheckExist">
+		select new trantypedto(
+		t.TransactionCode,
+		t.Description,
+		t.Narration,
+		t.Status,
+		t.PBReference,
+		t.RVReference,
+		t.UniqueId )
+		from TLMORM00005 as t
+		<!--where ( t.TransactionCode =: tranCode or t.Description =: desp  )-->
+    where t.TransactionCode =: tranCode
+    and  t.Active = true
+  </query>
+
+  <!--//TranType.CheckExist2//-->
+  <query name="TranTypeDAO.CheckExist2">
+    select new trantypedto(
+    t.TransactionCode,
+    t.Description,
+    t.Narration,
+    t.Status,
+    t.PBReference,
+    t.RVReference,
+    t.UniqueId,
+    t.Active,
+    t.TS,
+    t.CreatedDate,
+    t.CreatedUserId,
+    t.UpdatedDate,
+    t.UpdatedUserId
+    )
+    from TLMORM00005 as t
+    where ( t.TransactionCode =: TranTypeCode or t.Description =: description  )
+    <!--where t.TransactionCode =: tranCode
+    and  t.Active = true-->
+  </query>
+
+	<!--//TranTypeDAO.SelectAll//-->
+	<query name="TranTypeDAO.SelectAll">
+		select new trantypedto(
+		t.TransactionCode,
+		t.Description,
+		t.Narration,
+		t.Status,
+		t.PBReference,
+		t.RVReference,
+		t.UniqueId,
+		t.Active,
+		t.TS,
+		t.CreatedDate,
+		t.CreatedUserId,
+		t.UpdatedDate,
+		t.UpdatedUserId
+		)
+		from TLMORM00005 as t
+		where t.Active = true
+	</query>
+
+	<!--//TranTypeDAO.SelectByTranCode//-->
+	<query name="TranTypeDAO.SelectByTranCode">
+		select new trantypedto(
+		t.TransactionCode,
+		t.Description,
+		t.Narration,
+		t.Status,
+		t.PBReference,
+		t.RVReference,
+		t.UniqueId,
+		t.Active,
+		t.TS,
+		t.CreatedDate,
+		t.CreatedUserId,
+		t.UpdatedDate,
+		t.UpdatedUserId
+		)
+		from TLMORM00005 as t
+		where t.TransactionCode = :tranCode
+		and t.Active = true
+	</query>
+
+	
+	
+</hibernate-mapping>

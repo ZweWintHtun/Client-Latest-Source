@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F0E652B2-4782-4F0B-976F-E1BBD8E3E1B4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ace.Cbs.Tel.Ptr</RootNamespace>
+    <AssemblyName>Ace.Cbs.Tel.Ptr</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ace.Cbs.Cx.Cle, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Cx.Cle.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Cx.Com">
+      <HintPath>..\..\..\Output\Ace.Cbs.Cx.Com.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Pfm.Ctr">
+      <HintPath>..\..\..\Output\Ace.Cbs.Pfm.Ctr.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Pfm.Dmd">
+      <HintPath>..\..\..\Output\Ace.Cbs.Pfm.Dmd.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Tel.Dmd">
+      <HintPath>..\..\..\Output\Ace.Cbs.Tel.Dmd.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Admin.DataModel">
+      <HintPath>..\..\..\Output\Ace.Windows.Admin.DataModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Core">
+      <HintPath>..\..\..\Output\Ace.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.CXClient">
+      <HintPath>..\..\..\Output\Ace.Windows.CXClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate33, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\Spring.Data.NHibernate33.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TLMCTL00001.cs" />
+    <Compile Include="TLMCTL00002.cs" />
+    <Compile Include="TLMCTL00003.cs" />
+    <Compile Include="TLMCTL00004.cs" />
+    <Compile Include="TLMCTL00005.cs" />
+    <Compile Include="TLMCTL00006.cs" />
+    <Compile Include="TLMCTL00007.cs" />
+    <Compile Include="TLMCTL00008.cs" />
+    <Compile Include="TLMCTL00009.cs" />
+    <Compile Include="TLMCTL00010.cs" />
+    <Compile Include="TLMCTL00011.cs" />
+    <Compile Include="TLMCTL00012.cs" />
+    <Compile Include="TLMCTL00013.cs" />
+    <Compile Include="TLMCTL00014.cs" />
+    <Compile Include="TLMCTL00016.cs" />
+    <Compile Include="TLMCTL00017.cs" />
+    <Compile Include="TLMCTL00018.cs" />
+    <Compile Include="TLMCTL00019.cs" />
+    <Compile Include="TLMCTL00020.cs" />
+    <Compile Include="TLMCTL00015.cs" />
+    <Compile Include="TLMCTL00021.cs" />
+    <Compile Include="TLMCTL00023.cs" />
+    <Compile Include="TLMCTL00025.cs" />
+    <Compile Include="TLMCTL00026.cs" />
+    <Compile Include="TLMCTL00027.cs" />
+    <Compile Include="TLMCTL00028.cs" />
+    <Compile Include="TLMCTL00031.cs" />
+    <Compile Include="TLMCTL00033.cs" />
+    <Compile Include="TLMCTL00035.cs" />
+    <Compile Include="TLMCTL00036.cs" />
+    <Compile Include="TLMCTL00038.cs" />
+    <Compile Include="TLMCTL00039.cs" />
+    <Compile Include="TLMCTL00040.cs" />
+    <Compile Include="TLMCTL00041.cs" />
+    <Compile Include="TLMCTL00042.cs" />
+    <Compile Include="TLMCTL00043.cs" />
+    <Compile Include="TLMCTL00044.cs" />
+    <Compile Include="TLMCTL00045.cs" />
+    <Compile Include="TLMCTL00046.cs" />
+    <Compile Include="TLMCTL00047.cs" />
+    <Compile Include="TLMCTL00048.cs" />
+    <Compile Include="TLMCTL00049.cs" />
+    <Compile Include="TLMCTL00050.cs" />
+    <Compile Include="TLMCTL00051.cs" />
+    <Compile Include="TLMCTL00053.cs" />
+    <Compile Include="TLMCTL00054.cs" />
+    <Compile Include="TLMCTL00055.cs" />
+    <Compile Include="TLMCTL00056.cs" />
+    <Compile Include="TLMCTL00057.cs" />
+    <Compile Include="TLMCTL00059.cs" />
+    <Compile Include="TLMCTL00063.cs" />
+    <Compile Include="TLMCTL00064.cs" />
+    <Compile Include="TLMCTL00065.cs" />
+    <Compile Include="TLMCTL00071.cs" />
+    <Compile Include="TLMCTL00072.cs" />
+    <Compile Include="TLMCTL00073.cs" />
+    <Compile Include="TLMCTL00075.cs" />
+    <Compile Include="TLMCTL00076.cs" />
+    <Compile Include="TLMCTL00078.cs" />
+    <Compile Include="TLMCTL00079.cs" />
+    <Compile Include="TLMCTL00080.cs" />
+    <Compile Include="TLMCTL00081.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Cx\Ace.Cbs.Cx.Ser\Ace.Cbs.Cx.Ser.csproj">
+      <Project>{4A8FE202-C6E6-4279-A1FD-E9F0BE3FCD9F}</Project>
+      <Name>Ace.Cbs.Cx.Ser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Loan\Ace.Cbs.Loan.Ctr\Ace.Cbs.Loan.Ctr.csproj">
+      <Project>{8E57EAE3-7397-490E-B276-123DAC52B728}</Project>
+      <Name>Ace.Cbs.Loan.Ctr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Loan\Ace.Cbs.Loan.Dmd\Ace.Cbs.Loan.Dmd.csproj">
+      <Project>{9D836AEE-6202-4573-B5CD-EB5D6F0F50FA}</Project>
+      <Name>Ace.Cbs.Loan.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Loan\Ace.Cbs.Loan.Sve\Ace.Cbs.Loan.Sve.csproj">
+      <Project>{C82405FD-E802-4B13-8353-C95619118BCE}</Project>
+      <Name>Ace.Cbs.Loan.Sve</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tcm\Ace.Cbs.Tcm.Dmd\Ace.Cbs.Tcm.Dmd.csproj">
+      <Project>{F4D9433A-689F-4964-857C-D3C14355A870}</Project>
+      <Name>Ace.Cbs.Tcm.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ace.Cbs.Tel.Ctr\Ace.Cbs.Tel.Ctr.csproj">
+      <Project>{E940CDA8-DE03-44C7-BF69-37EB9ACCD7C6}</Project>
+      <Name>Ace.Cbs.Tel.Ctr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ace.Cbs.Tel.Sve\Ace.Cbs.Tel.Sve.csproj">
+      <Project>{EFC8C5C5-8F98-4B4E-A0DD-70AA90954096}</Project>
+      <Name>Ace.Cbs.Tel.Sve</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

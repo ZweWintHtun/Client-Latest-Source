@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00402, Ace.Cbs.Loan.Dmd" rename="lrpDto"/>
+  <class name="LOMORM00402" table="[LRP99#00]">
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+
+    <property name="LNO">
+      <column name="LNO" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="RepayNo">
+      <column name="REPAYNO" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="AcctNo">
+      <column name="ACCTNO" sql-type="varchar" not-null="true" />
+    </property>
+    
+    <property name="Date_Time">
+      <column name="DATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="Amount">
+      <column name="AMOUNT" sql-type="numeric" not-null="true" />
+    </property>   
+
+    <property name="Interest">
+      <column name="INTEREST" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="UserNo">
+      <column name="USERNO" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="UID">
+      <column name="UID" sql-type="uniqueidentifier" not-null="false" />
+    </property>
+    
+    <property name="SourceBr">
+      <column name="SOURCEBR" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Cur">
+      <column name="CUR" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="SettlementDate">
+      <column name="SETTLEMENTDATE" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="LCState">
+      <column name="LCState" sql-type="varchar" not-null="false" />
+    </property>
+
+	<property name="Old_IntRate">
+		<column name="Old_IntRate" sql-type="varchar" not-null="false" />
+	</property>
+
+	<property name="New_IntRate">
+		<column name="New_IntRate" sql-type="varchar" not-null="false" />
+	</property>
+	  
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+  <!--//LOMDAO00402.SelectMaxId//-->
+  <query name="LOMDAO00402.SelectMaxId">
+    select new lrpDto
+    (
+    MAX(s.Id)
+    )
+    from LOMORM00402 as s
+  </query>
+</hibernate-mapping>
+

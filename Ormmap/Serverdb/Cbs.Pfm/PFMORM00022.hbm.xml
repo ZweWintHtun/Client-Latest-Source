@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00022, Ace.Cbs.Pfm.Dmd" rename="subaccounttypedto"/>
+
+  <class name="PFMORM00022" table="SubAccountType" >
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+
+    <property name="Code">
+      <column name="Code" sql-type="varchar" length="50" not-null="true" />
+    </property>
+
+    <property name="Description">
+      <column name="Description" sql-type="varchar" length="100" not-null="true" />
+    </property>
+
+    <property name="Symbol">
+      <column name="Symbol" sql-type="varchar" length="10" not-null="true" />
+    </property>
+
+    <property name="AccountSignature">
+      <column name="AccountSign" sql-type="varchar" length="50" not-null="true" />
+    </property>
+    
+    <property name="AccountTypeId">
+      <column name="AccountTypeId" sql-type="int" not-null="true" />
+    </property>
+
+    <many-to-one name="AccountType" column="[AccountTypeId]" class="PFMORM00015" insert="false" update="false"></many-to-one>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  <query name="CXCOM00010.GetSymbolByAccountTypeAndSubAccountType">
+    select subaccounttype.Symbol from PFMORM00015 accounttype inner join accounttype.SubAccountTypes subaccounttype
+    where accounttype.Code = :accountTypeCode
+    and subaccounttype.Code = :subAccountTypeCode
+    and  accounttype.Active = true
+    and subaccounttype.Active = true
+  </query>
+
+  <query name="CXCOM00010.GetAccountSignatureByAccountTypeAndSubAccountType">
+    select subaccounttype.AccountSignature from PFMORM00015 accounttype inner join accounttype.SubAccountTypes subaccounttype
+    where accounttype.Code = :accountTypeCode
+    and subaccounttype.Code = :subAccountTypeCode
+    and  accounttype.Active = true
+    and subaccounttype.Active = true
+  </query>
+
+	<!--//SubAccountTypeDAO.CheckExist//-->
+	<query name="SubAccountTypeDAO.CheckExist">
+		select new subaccounttypedto(
+		a.Id,
+		a.Code,
+		a.Description,
+		a.Symbol,
+		a.AccountSignature )
+		from PFMORM00022 as a
+		where ( a.Code =: code and a.Description =: description)
+		and  a.Active = true
+	</query>
+
+	<!--//SubAccountTypeDAO.SelectAll//-->
+	<query name="SubAccountTypeDAO.SelectAll">
+    select new subaccounttypedto(
+    s.Id,
+    s.Code,
+    s.Description,
+    s.Symbol,
+    s.AccountSignature,
+    s.AccountTypeId,
+    a.Code,
+    a.Description,
+    s.Active,
+    s.TS,
+    s.CreatedUserId,
+    s.CreatedDate,
+    s.UpdatedUserId,
+    s.UpdatedDate
+    )
+    from PFMORM00022 as s
+    left join s.AccountType as a
+    where s.Active = true
+    and a.Active = true
+    order by a.Code asc
+  </query>
+
+	<!--//SubAccountTypeDAO.SelectById//-->
+	<query name="SubAccountTypeDAO.SelectById">
+		select new subaccounttypedto(
+		s.Id,
+		s.Code,
+		s.Description,
+		s.Symbol,
+		s.AccountSignature,
+		s.AccountTypeId,
+		a.Code,
+		a.Description,
+		s.Active,
+		s.TS,
+		s.CreatedUserId,
+		s.CreatedDate,
+		s.UpdatedUserId,
+		s.UpdatedDate
+		)
+		from PFMORM00022 as s
+		left join s.AccountType as a
+		where s.Id = :id
+		and s.Active = true
+		and a.Active = true
+	</query>
+  
+  <!--//SubAccountTypeDAO.SelectByCodeAndAccountTypeId//-->
+  <query name="SubAccountTypeDAO.SelectByCodeAndAccountTypeId">
+	  select new subaccounttypedto(
+	  s.Id,
+	  s.Code,
+	  s.Description,
+	  s.Symbol,
+	  s.AccountSignature )
+	  from PFMORM00022 as s
+	  where s.Code =: code
+	  and s.AccountTypeId =: acTypeId
+	  and s.Active = true
+  </query>
+  
+</hibernate-mapping>

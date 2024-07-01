@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Windows.Ix.DataModel" namespace="Ace.Windows.Ix.DataModel" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Windows.Ix.Core.DataModel.WorkStationCurrentComponentVersionDTO, Ace.Windows.Ix.Core" rename="workstationcurrentcomponentversiondto"/>
+
+  <class name="WorkStationCurrentComponentVersion" table="[WorkStationCurrentComponentVersion]" >
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+    <property name="WorkStationId">
+      <column name="WorkStationId" sql-type="int" not-null="true" />
+    </property>
+    <property name="InstallerTypeId">
+      <column name="InstallerTypeId" sql-type="int" not-null="true" />
+    </property>
+    <property name="CurrentComponentVersionNo">
+      <column name="CurrentComponentVersionNo" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="PreviousComponentVersionNo">
+      <column name="PreviousComponentVersionNo" sql-type="varchar" not-null="true" />
+    </property>
+	  <property name="CurrentVersionBuildNo">
+		  <column name="CurrentVersionBuildNo" sql-type="int" not-null="true" />
+	  </property>
+    <property name="IsManualUpdate" >
+      <column name="IsManualUpdate" sql-type="bit" not-null="true" default="0" />
+    </property>
+
+    <property name="Active" not-null="true" />
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+    <many-to-one name="InstallerType" column="[InstallerTypeId]" class="Ace.Windows.Ix.DataModel.InstallerType" insert="false" update="false" ></many-to-one>
+    <many-to-one name="CreatedUser" column="[CreatedUserId]" class="Ace.Windows.Admin.DataModel.User" insert="false" update="false"></many-to-one>
+	<many-to-one name="WorkStation" column="[WorkStationId]" class="Ace.Windows.Admin.DataModel.WorkStation" insert="false" update="false" ></many-to-one>
+	<many-to-one name="UpdatedUser" column="[UpdatedUserId]" class="Ace.Windows.Admin.DataModel.User" insert="false" update="false"></many-to-one>
+  </class>	
+	
+	<query name="WorkStationCurrentComponentVersionDAO.UpdatePreviousComponentVersionAndCurrentComponentVersion">
+		update WorkStationCurrentComponentVersion wccv
+		set
+		wccv.CurrentComponentVersionNo = :currentVersionNo,
+		wccv.PreviousComponentVersionNo = :previousVersionNo,
+		wccv.IsManualUpdate = :isManualUpdate,
+		wccv.CurrentVersionBuildNo = :currentVersionBuildNo,
+		wccv.UpdatedUserId = :updatedUserId,
+		wccv.UpdatedDate = :updatedDate
+		where wccv.Id = :id and wccv.TS = :ts and wccv.Active = true
+	</query>
+	<query name="SelectWorkStationCurrentComponentVersionByWorkStationIdAndInstallerTypeId">
+		select new workstationcurrentcomponentversiondto(
+		wccv.Id,
+		wccv.CurrentComponentVersionNo,
+		wccv.CurrentVersionBuildNo,
+		wccv.TS)
+		from WorkStationCurrentComponentVersion as wccv
+		where wccv.WorkStationId = :workStationId
+		and wccv.InstallerTypeId = :installerTypeId
+		and wccv.Active = true
+	</query>
+
+	<query name="WorkStationCurrentComponentVersionDAO.IsAlreadyExist">
+		select wccv.Id
+		from WorkStationCurrentComponentVersion as wccv
+		where wccv.WorkStationId = :workStationId
+		and wccv.InstallerTypeId = :installerTypeId
+		and wccv.Active = true
+	</query>
+
+	<query name="WorkStationCurrentComponentVersionDAO.CheckExist">
+		select wccv.Id
+		from WorkStationCurrentComponentVersion as wccv
+		where wccv.WorkStationId = :workStationId
+		and wccv.InstallerTypeId = :installerTypeId
+		and wccv.Active = true
+	</query>
+	
+	<query name="WorkStationCurrentComponentVersionDAO.UpdateByActiveFalse">
+		update WorkStationCurrentComponentVersion wccv
+		set
+		wccv.UpdatedUserId = :uptdateduserId,
+		wccv.UpdatedDate = :updatedDate,
+		wccv.Active = false
+		where
+		wccv.Id = :id and
+		wccv.TS = :ts and
+		wccv.Active = true
+	</query>
+
+
+	
+</hibernate-mapping>

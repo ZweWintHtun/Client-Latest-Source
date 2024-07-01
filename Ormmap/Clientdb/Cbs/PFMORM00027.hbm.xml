@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00027, Ace.Cbs.Pfm.Dmd" rename="curdto"/>
+
+  <class name="PFMORM00027" table="[Cur]" >
+
+    <id name="Cur">
+      <column name="Cur" sql-type="varchar" not-null="true" />
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+    
+    <property name="Description">
+      <column name="Desp" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Symbol">
+      <column name="Symbol" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="FirstInWord">
+      <column name="InwordDesp1" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="SecondInWord">
+      <column name="InwordDesp2" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="IsHomeCur">
+      <column name="IsHomeCur" sql-type="bit" not-null="true" />
+    </property>
+    <property name="Month1Ammount">
+      <column name="M1" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="Month2Ammount">
+      <column name="M2" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="Month3Ammount">
+      <column name="M3" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="Month4Ammount">
+      <column name="M4" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="Month5Ammount">
+      <column name="M5" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="Month6Ammount">
+      <column name="M6" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="Month7Ammount">
+      <column name="M7" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="Month8Ammount">
+      <column name="M8" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="Month9Ammount">
+      <column name="M9" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="Month10Ammount">
+      <column name="M10" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="Month11Ammount">
+      <column name="M11" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="Month12Ammount">
+      <column name="M12" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="Month13Ammount">
+      <column name="M13" sql-type="numeric" not-null="true" />
+    </property>
+	  <property name="CodeForCOA">
+		  <column name="ACode" sql-type="varchar" not-null="false" />
+	  </property>
+
+	  <!--Relationship-->
+    
+    <!--<many-to-one insert="false" update="false" lazy="false" name="CodeForCOA">
+      <column name="ACode" sql-type="varchar" not-null="false" />
+    </many-to-one>-->  
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+</hibernate-mapping>

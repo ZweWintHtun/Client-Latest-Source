@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Mnm.Dmd.MNMDTO00040, Ace.Cbs.Mnm.Dmd" rename="LedgerBalanceByGradeDTO"/>
+  <class name="MNMVIW00028" table="VW_MOB321SAOF" mutable="false">
+    <id name="Id">
+      <column name="Id" sql-type="int" not-null="true" />
+    </id>
+    <property name="AcctNo">
+      <column name="AcctNo" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="CBal">
+      <column name="CBAL" sql-type="numeric" not-null="true"/>
+    </property>
+    <property name="OverDrawn_Amount">
+      <column name="OVERDRAWN_AMOUNT" sql-type="numeric" not-null="true"/>
+    </property>
+    <property name="OvdLimit">
+      <column name="OVDLimit" sql-type="numeric" not-null="true"/>
+    </property>
+    <property name="Cur">
+      <column name="Cur" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="SourceBr">
+      <column name="SourceBr" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="ACSign">
+      <column name="ACSign" sql-type="varchar" not-null="true"/>
+    </property>
+  </class>
+
+</hibernate-mapping>

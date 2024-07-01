@@ -1,0 +1,2849 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+  <!--//TypeOfAdvanceController//-->
+  <object id="TypeOfAdvanceController" type="Ace.Cbs.Loan.Ptr.LOMCTL00002, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="TypeOfAdvanceErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="TypeOfAdvanceValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+
+        <entry key="txtCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Code"/>
+          </object>
+        </entry>
+        <entry key="txtDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Description"/>
+            <!--<property name="CustomValidatingMethod" value="txtDescription_CustomValidating"/>-->
+          </object>
+        </entry>
+
+        <entry key="txtCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Code"/>
+          </object>
+        </entry>
+        <entry key="txtDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Description"/>
+          </object>
+        </entry>
+
+
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//BusinessController//-->
+  <object id="BusinessController" type="Ace.Cbs.Loan.Ptr.LOMCTL00001, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+
+    <property name="ErrorProvider">
+      <object id="BusinessErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="BusinessValidator"/>
+      </object>
+    </property>
+
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="txtCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Code"/>
+          </object>
+        </entry>
+        <entry key="txtDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Description"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+
+  </object>
+
+  <!--//CustomerCharacterController//-->
+  <object id="CustomerCharacterController" type="Ace.Cbs.Loan.Ptr.LOMCTL00003, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="CustomerCharacterErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="CustomerCharacterValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="txtCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Code"/>
+          </object>
+        </entry>
+        <entry key="txtDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Description"/>
+          </object>
+        </entry>
+
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//GOODWILL//-->
+  <object id="GoodWillController" type="Ace.Cbs.Loan.Ptr.LOMCTL00004, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+
+    <property name="ErrorProvider">
+      <object id="GoodWillErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="GoodWillValidator"/>
+      </object>
+    </property>
+
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="txtCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Code"/>
+          </object>
+        </entry>
+        <entry key="txtDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Description"/>
+          </object>
+        </entry>
+
+      </dictionary>
+    </property>
+
+  </object>
+
+  <!--//LandController//-->
+  <object id="LandController" type="Ace.Cbs.Loan.Ptr.LOMCTL00005, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="LandErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="LandValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="txtCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Code"/>
+          </object>
+        </entry>
+        <entry key="txtDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Description"/>
+          </object>
+        </entry>
+
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//GJTController//-->
+  <object id="GJTController" type="Ace.Cbs.Loan.Ptr.LOMCTL00009, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="GJTErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="GJTValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="txtCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Code"/>
+          </object>
+        </entry>
+        <entry key="txtDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Description"/>
+          </object>
+        </entry>
+
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//GJKController//-->
+  <object id="GJKController" type="Ace.Cbs.Loan.Ptr.LOMCTL00010, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="GJKErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="GJKValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="txtKind">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Kind"/>
+          </object>
+        </entry>
+        <entry key="txtDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Description"/>
+          </object>
+        </entry>
+
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//INSURAN//-->
+  <object id="InsuranController" type="Ace.Cbs.Loan.Ptr.LOMCTL00006, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="INSURANErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="INSURAN.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+
+        <entry key="txtCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="INSUCODE"/>
+          </object>
+        </entry>
+        <entry key="txtDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="INSUDESP"/>
+          </object>
+        </entry>
+
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//StockController//-->
+  <object id="StockController" type="Ace.Cbs.Loan.Ptr.LOMCTL00007, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="StockErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="StockValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="txtStock">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="StockNo"/>
+          </object>
+        </entry>
+        <entry key="txtName">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Name"/>
+          </object>
+        </entry>
+
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//KindOfStockController//-->
+  <object id="KindOfStockController" type="Ace.Cbs.Loan.Ptr.LOMCTL00008, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="KindOfStockErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="KindOfStockValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="txtStock">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="KStockNo"/>
+          </object>
+        </entry>
+        <entry key="txtDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Desp"/>
+          </object>
+        </entry>
+
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//OverdraftLimitChangeController//-->
+  <object id="OverdraftLimitChangeController" type="Ace.Cbs.Loan.Ptr.LOMCTL00012, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="OverdraftLimitChangeErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="OverdraftLimitChangeValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtLoanNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Lno"/>
+            <property name="CustomValidatingMethod" value="txtLoanNo_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtNewODLimit">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="OverdraftAmount"/>
+            <property name="CustomValidatingMethod" value="txtNewODLimit_CustomValidating"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--Loan Registeration Controller-->
+  <object id="LoanRegisterationController" type="Ace.Cbs.Loan.Ptr.LOMCTL00011, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name ="ErrorProvider">
+      <object id="LoanRegisterationErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name ="Validator" ref="LoanRegisteration.Validation"/>
+      </object>
+    </property>
+
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtLoanNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Lno"/>
+            <property name="CustomValidatingMethod" value ="txtLoanNo_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Currency"/>
+            <!--<property name="CustomValidatingMethod" value ="cboCurrency"/>-->
+          </object>
+        </entry>
+
+        <entry key="mtxtAccountNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="AccountNo"/>
+            <property name="CustomValidatingMethod" value ="mtxtAccountNo_CustomValidating"/>
+          </object>
+        </entry>
+        <!--<entry key="cboTypeOfAdvance">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="TypeOfAdvance"/>
+          </object>
+        </entry>-->
+        <!--<entry key="cboRepayment">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Scharges"/>
+            <property name="CustomValidatingMethod" value ="cboRepayment_CustomValidating"/>
+          </object>
+        </entry>-->
+        <entry key="mtxtGuaranterAccountNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="GuaranteeAccountNo"/>
+            <property name="CustomValidatingMethod" value ="mtxtGuaranterAccountNo_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtPenalDuration">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Duration"/>
+            <property name="CustomValidatingMethod" value ="txtPenalDuration_CustomValidating"/>
+          </object>
+        </entry>
+
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//Loan Account Closing Controller-->
+  <object id="LoanAccClosingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00013, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name ="ErrorProvider">
+      <object id="LoanACCloseErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name ="Validator" ref="LoanACClose.Validation"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtLoanNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Lno"/>
+            <property name="CustomValidatingMethod" value="txtLoanNo_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtAccountNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="AccountNo"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//NonPerformanceLoanController//-->
+  <object id="NonPerformanceLoanController" type="Ace.Cbs.Loan.Ptr.LOMCTL00014, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="NonPerformanceLoanErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="NonPerformanceLoanValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtLoanNo">
+
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Lno"/>
+            <property name="CustomValidatingMethod" value="txtLoanNo_CustomValidating"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//NonPerformanceLoanReleaseController//-->
+  <object id="NonPerformanceLoanReleaseController" type="Ace.Cbs.Loan.Ptr.LOMCTL00015, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="NonPerformanceLoanReleaseErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="NonPerformanceLoanReleaseValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtLoanNo">
+
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Lno"/>
+            <property name="CustomValidatingMethod" value="txtLoanNo_CustomValidating"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//EnquiryByLegalAccountNoController//-->
+  <object id="EnquiryByLegalAccountNoController" type="Ace.Cbs.Loan.Ptr.LOMCTL00032, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="EnquiryByLegalAccountNoErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="EnquiryByLegalAccountNoValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="mtxtAccountNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="AcctNo"/>
+            <property name="CustomValidatingMethod" value ="mtxtAccountNo_CustomValidating"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//LegalCaseController//-->
+  <object id="LegalCaseController" type="Ace.Cbs.Loan.Ptr.LOMCTL00016, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="LegalCaseErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="LegalCaseValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtLoanNo">
+
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Lno"/>
+            <property name="CustomValidatingMethod" value="txtLoanNo_CustomValidating"/>
+          </object>
+        </entry>
+
+        <entry key="txtLegalCaseLawyer">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="LegaLawer"/>
+            <!--<property name="CustomValidatingMethod" value="txtLegalCaseLawyer_CustomValidating"/>-->
+          </object>
+        </entry>
+
+      </dictionary>
+    </property>
+  </object>
+
+  <!-- Special Transfer Voucher Form -->
+  <object id ="SpecialTransferVoucherController" type="Ace.Cbs.Loan.Ptr.LOMCTL00029, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="SpecialTransferErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="SpecialTransfer.Validator"/>
+        <property name="CustomValidatingMethod" value="gvTransferInformation_CustomValidating"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="mtxtAccountNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="AccountNo"/>
+            <property name="CustomValidatingMethod" value="mtxtAccountNo_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Currency"/>
+            <property name="CustomValidatingMethod" value="cboCurrency_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtNarration">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Narration"/>
+          </object>
+        </entry>
+        <entry key="txtChequeNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="ChequeNo"/>
+            <property name="CustomValidatingMethod" value="txtChequeNo_Validating" />
+          </object>
+        </entry>
+        <entry key="txtAmount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Amount"/>
+            <!--<property name="CustomValidatingMethod" value="txtAmount_CustomValidating"/>-->
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//EnquiryByLegalAccountNoController//-->
+  <object id="LoanVoucherController" type="Ace.Cbs.Loan.Ptr.LOMCTL00024, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="LoanVoucherValidatorErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="LoanVoucherValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtLoanNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Lno"/>
+            <property name="CustomValidatingMethod" value ="txtLoanNo_CustomValidating"/>
+          </object>
+        </entry>
+        <!--<entry key="txtPartialAmount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Lno"/>
+            <property name="CustomValidatingMethod" value ="txtPartialAmount_CustomValidating"/>
+          </object>
+        </entry>-->
+      </dictionary>
+    </property>
+  </object>
+
+
+  <!-- Loan Repayment Controller -->
+  <object id ="PaymentController" type="Ace.Cbs.Loan.Ptr.LOMCTL00025, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="LoansRepaymentErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="LoansRepaymentValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtLoanNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="LoanNo"/>
+            <property name="CustomValidatingMethod" value="txtLoanNo_CustomValidating"/>
+          </object>
+        </entry>
+        <!--<entry key="txtRepaymentAmount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="RepaymentAmount"/>
+            <property name="CustomValidatingMethod" value="txtRepaymentAmount_CustomValidating"/>
+          </object>
+        </entry>-->
+      </dictionary>
+    </property>
+  </object>
+
+
+  <object id ="RepaymentEditController" type="Ace.Cbs.Loan.Ptr.LOMCTL00030, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="RepaymentEditErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="LoansRepaymentEditingValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtLoanNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="LoanNo"/>
+            <property name="CustomValidatingMethod" value="txtLoanNo_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtNewRepaymentAmount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="RepaymentAmount"/>
+            <property name="CustomValidatingMethod" value="txtRepaymentAmount_CustomValidating"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//Loans Interest Editing Controller//-->
+  <object id="LoansInterestEditingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00020, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="LoansInterestEditingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="LoansInterestEditingValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtLoanNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="LNo"/>
+            <property name="CustomValidatingMethod" value="txtLoanNo_CustomValidating"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//Legal Process Editing Controller//-->
+  <object id="LegalProcessEditingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00021, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="LegalProcessEditingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="LegalProcessEditingValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtLoanNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Lno"/>
+            <property name="CustomValidatingMethod" value="txtLoanNo_CustomValidating"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+
+  <!--//Overdraft Interest Editing Controller//-->
+  <object id="OverDraftInterestEditingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00022, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="OverDraftInterestEditingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="OverDraftInterestEditingValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="mtxtAccountNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Acctno"/>
+            <property name="CustomValidatingMethod" value="mtxtAccountNo_CustomValidating"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//LegalCaseReleaseController//-->
+  <object id="LegalCaseReleaseController" type="Ace.Cbs.Loan.Ptr.LOMCTL00016, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="LegalCaseReleaseErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="LegalCaseReleaseValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtLoanNo">
+
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Lno"/>
+            <property name="CustomValidatingMethod" value="txtLoanNo_CustomValidating"/>
+          </object>
+        </entry>
+
+      </dictionary>
+    </property>
+  </object>
+
+  <!--LegalLoanRepaymentController-->
+  <object id="LegalLoanRepaymentController" type="Ace.Cbs.Loan.Ptr.LOMCTL00027, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="LegalLoanRepaymentErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="LegalLoanRepaymentValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="txtLoanNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Lno"/>
+            <property name="CustomValidatingMethod" value="txtLoanNo_CustomValidating"/>
+          </object>
+        </entry>
+
+        <entry key="txtRepaymentAmount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Amount"/>
+            <property name="CustomValidatingMethod" value="txtRepaymentAmount_CustomValidating"/>
+          </object>
+        </entry>
+
+      </dictionary>
+    </property>
+  </object>
+
+  <!--LegalODRepaymentController-->
+  <object id="LegalODRepaymentController" type="Ace.Cbs.Loan.Ptr.LOMCTL00028, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="LegalODRepaymentErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="LegalODRepaymentValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="txtLoanNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Lno"/>
+            <property name="CustomValidatingMethod" value="txtLoanNo_CustomValidating"/>
+          </object>
+        </entry>
+
+        <entry key="mtxtAccountNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="DrAccountNo"/>
+            <property name="CustomValidatingMethod" value="mtxtAccountNo_CustomValidating"/>
+          </object>
+        </entry>
+
+        <entry key="txtDepositAmount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Amount"/>
+            <property name="CustomValidatingMethod" value="txtDepositAmount_CustomValidating"/>
+          </object>
+        </entry>
+
+      </dictionary>
+    </property>
+  </object>
+
+  <!--Loan Interest Calculation-->
+  <object id="LoanInterestCalculation" type="Ace.Cbs.Loan.Ptr.LOMCTL00023, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+
+  </object>
+
+  <!--Loan Registration Data Enquiry-->
+  <object id="LoanRegistrationDataEnquiryController" type="Ace.Cbs.Loan.Ptr.LOMCTL00031, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+
+  </object>
+
+  <!--OD Registration Listing By Loans Type Controller-->
+  <object id="ODRegistrationListingByLoansTypeController" type="Ace.Cbs.Loan.Ptr.LOMCTL00035, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="ODRegistrationListingByLoansTypeErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="ODRegistrationListingByLoansType.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--Loans Registration Listing By Loans Type Controller-->
+  <object id="LoanRegistrationListingByLoansTypeController" type="Ace.Cbs.Loan.Ptr.LOMCTL00034, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="LoanRegistrationListingByLoansTypeErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="LoanRegistrationListingByLoansType.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--Loans And OD Listings  By Loans Type Controller-->
+  <object id="LoansAndODListingByLoansTypeController" type="Ace.Cbs.Loan.Ptr.LOMCTL00040, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="LoansAndODListingByLoansTypeErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="ODRegistrationListingByLoansType.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+
+  <!--Loans Account Close Listing  By Loans Type Controller-->
+  <object id="LoansAccountCloseListingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00042, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="LoansAccountCloseListingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="LoansAccountCloseListing.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//Loans Repayment Schedule By Date Controller//-->
+  <object id="LoansRepaymentScheduleByDateController" type="Ace.Cbs.Loan.Ptr.LOMCTL00047, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="LoansRepaymentScheduleByDateErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="LoansRepaymentScheduleByDate.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+
+        <entry key="txtLoansNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Lno"/>
+          </object>
+        </entry>
+
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//Loans Daily Position Listing Controller//-->
+  <object id="LoansDailyPositionListingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00049, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="LoansDailyPositionListingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="LoansDailyPositionListing.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//Expire Loans Listing Controller//-->
+  <object id="ExpireLoansListingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00051, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="ExpireLoansListingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="ExpireLoansListing.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+
+        <entry key="txtYear">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="RequiredYear"/>
+          </object>
+        </entry>
+
+        <entry key="cboMonth">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="RequiredMonth"/>
+          </object>
+        </entry>
+
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//Loans Interest Listing Controller//-->
+  <object id="LoansInterestListingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00045, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="LoansInterestListingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="LoansInterestListing.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+
+        <entry key="txtYear">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Budget"/>
+          </object>
+        </entry>
+
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//Overdraft Interest Listing Controller//-->
+  <object id="OverdraftInterestListingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00054, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="OverdraftInterestListingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="OverdraftInterestListing.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+
+        <entry key="txtYear">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Budget"/>
+          </object>
+        </entry>
+
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--Service Charges Listing Controller-->
+  <object id="ServiceChargesListingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00057, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="ServiceChargesListingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="ServiceChargesListing.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--OD Limit Change Listing By Date Controller-->
+  <object id="ODLimitChangeListingByDateController" type="Ace.Cbs.Loan.Ptr.LOMCTL00059, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="ODLimitChangeListingByDateErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="ODLimitChangeListingByDate.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--OD Limit Change Listing By Account Controller-->
+  <object id="ODLimitChangeListingByAccountController" type="Ace.Cbs.Loan.Ptr.LOMCTL00061, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="ODLimitChangeListingByAccountErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="ODLimitChangeListingByAccount.Validator"/>
+      </object>
+    </property>
+
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+
+        <entry key="mtxtAccountNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="AcctNo"/>
+          </object>
+        </entry>
+
+      </dictionary>
+    </property>
+  </object>
+
+  <!--Non Performance Loans Case Listing Controller-->
+  <object id="NonPerformanceLoansCaseListingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00063, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="NonPerformanceLoansCaseListingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="NonPerformanceLoansCaseListing.Validator"/>
+      </object>
+    </property>
+
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--Legal Case Listing Controller-->
+  <object id="LegalCaseListingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00065, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="LegalCaseListingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="LegalCaseListing.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+  <!--Dealer Registration Controller-->
+<object id="DealerRegistrationEntryController" type="Ace.Cbs.Loan.Ptr.LOMCTL00066, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+
+    <property name ="ErrorProvider">
+      <object id="DealerRegistrationProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name ="Validator" ref="DealerRegisteration.Validator"/>
+      </object>
+    </property>
+
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="mtxtAcctno">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="DealerAC"/>
+            <property name="CustomValidatingMethod" value ="mtxtAcctno_CustomValidating"/>
+          </object>
+        </entry>
+
+        <!--<entry key="txtDealerName">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="dname"/>
+          </object>
+        </entry>-->
+
+        <!--<entry key="txtDealerNRC">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="nRC"/>
+          </object>
+        </entry>
+        
+        <entry key="txtDealerPhone">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="dphone"/>
+          </object>
+        </entry>
+        
+        <entry key="txtDealerFax">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="fax"/>
+          </object>
+        </entry>
+        
+        <entry key="txtDealerEmail">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="email"/>
+          </object>
+        </entry>
+        
+        <entry key="txtDealerAddress">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="daddress"/>
+          </object>
+        </entry>
+
+        <entry key="txtDealerBusiName">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="business"/>
+          </object>
+        </entry>
+        
+        <entry key="txtDealerBusiCity">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="city"/>
+          </object>
+        </entry>
+        
+        <entry key="txtDealerBusiEmail">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="businessEmail"/>
+          </object>
+        </entry>
+        
+        <entry key="txtDealerBusiAddress">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="businessAddress"/>
+          </object>
+        </entry>
+        
+        <entry key="txtDealerBusiComis">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="commission"/>
+          </object>
+        </entry>-->
+
+      </dictionary>
+    </property>
+
+  </object>
+
+  <object id="DealerInformationSearchController" type="Ace.Cbs.Loan.Ptr.LOMCTL00080, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+
+  </object>
+
+  <object id="DealerInformationController" type="Ace.Cbs.Loan.Ptr.LOMCTL00422, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+
+  </object>
+
+  <object id="HPRegistetListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00096, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="HPRegisterListingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="HPRegisterListing.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+
+        <entry key="dtpStartDate">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="StartDate"/>
+          </object>
+        </entry>
+
+        <entry key="dtpEndDate">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="EndDate"/>
+          </object>
+        </entry>
+
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <object id="HPPaymentSchedule" type="Ace.Cbs.Loan.Ptr.LOMCTL00100, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="HPPaymentScheduleErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="HPPaymentSchedule.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+        <entry key="txtYear">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Year"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <object id="HPManualRepaymentController" type="Ace.Cbs.Loan.Ptr.LOMCTL00200, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <!--<property name="ErrorProvider">
+      <object id="HPManualRepaymentControllerErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="HPManualRepayment.Validator"/>
+      </object>
+    </property>-->
+    <!--<property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+        <entry key="cboMonth">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Month"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>-->
+  </object>
+
+  <object id="HPAutoPaymentProc" type="Ace.Cbs.Loan.Ptr.LOMCTL00201, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <object id="HPOverDraftListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00202, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <object id="HPInsufficientListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00203, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <object id="HPLateFeesCalculationProcess" type="Ace.Cbs.Loan.Ptr.LOMCTL00204, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <object id="PersonalLoansInfoListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00205, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <object id="BusinessLoanInterestListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00206, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <object id="PersonalLoansNPLCaseListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00207, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <object id="HPLateFeesRepaymentProcess" type="Ace.Cbs.Loan.Ptr.LOMCTL00208, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <object id="HPDailyPositionListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00209, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <object id="HPInformationListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00210, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <object id="HPPaymentListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00211, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <object id="HPRepaymentListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00212, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <object id="HPInterestDuePreListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00213, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <object id="HPRepaymentScheduleListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00214, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <object id="HPLateFeesAutoVoucherProcess" type="Ace.Cbs.Loan.Ptr.LOMCTL00215, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+  
+  <!--//SeasonCodeController//-->
+  <object id="SeasonCodeController" type="Ace.Cbs.Loan.Ptr.LOMCTL00071, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="SeasonCodeErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="SeasonCodeValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+
+        <entry key="txtCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Code"/>
+          </object>
+        </entry>
+        <entry key="txtDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Description"/>
+            <!--<property name="CustomValidatingMethod" value="txtDescription_CustomValidating"/>-->
+          </object>
+        </entry>
+
+        <entry key="txtCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Code"/>
+          </object>
+        </entry>
+        <entry key="txtDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Description"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//ProductCodeController//-->
+  <object id="ProductCodeController" type="Ace.Cbs.Loan.Ptr.LOMCTL00074, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="ProductCodeErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="SeasonCodeValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+
+        <entry key="txtCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Code"/>
+          </object>
+        </entry>
+        <entry key="txtDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Description"/>
+            <!--<property name="CustomValidatingMethod" value="txtDescription_CustomValidating"/>-->
+          </object>
+        </entry>
+
+        <entry key="txtCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Code"/>
+          </object>
+        </entry>
+        <entry key="txtDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Description"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+
+  <!--//HirePurchaseStockGroupController//-->
+  <object id="HirePurchaseStockGroupController" type="Ace.Cbs.Loan.Ptr.LOMCTL00068, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="HirePurchaseStockGroupErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="HirePurchaseStockGroupValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="txtStockGroupCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="GroupCode"/>
+          </object>
+        </entry>
+        <entry key="txtPrefixCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="PreFix"/>
+          </object>
+        </entry>
+        <entry key="txtDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Description"/>
+          </object>
+        </entry>
+
+
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//HirePurchaseStockItemController//-->
+  <object id="HirePurchaseStockItemController" type="Ace.Cbs.Loan.Ptr.LOMCTL00069, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="HirePurchaseStockItemErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="HirePurchaseStockItemValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="cboGroupCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="GroupCode"/>
+          </object>
+        </entry>
+        <entry key="txtSubCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SubCode"/>
+          </object>
+        </entry>
+        <entry key="txtDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Description"/>
+          </object>
+        </entry>
+
+
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//VillageGroupSetupController//-->
+  <object id="VillageGroupSetupController" type="Ace.Cbs.Loan.Ptr.LOMCTL00070, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="VillageGroupSetupErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="VillageGroupSetupValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="txtCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="VillageCode"/>
+          </object>
+        </entry>
+        <entry key="txtDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Desp"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//CropTypeSetupController//-->
+  <object id="CropTypeSetupController" type="Ace.Cbs.Loan.Ptr.LOMCTL00072, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="CropTypeSetupErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="CropTypeSetupValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="txtCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CropCode"/>
+          </object>
+        </entry>
+        <entry key="txtDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Desp"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//UMSetupController//-->
+  <object id="UMSetupController" type="Ace.Cbs.Loan.Ptr.LOMCTL00073, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="UMSetupErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="UMSetupValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="txtCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="UMCode"/>
+          </object>
+        </entry>
+        <entry key="txtDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="UMDesp"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//LSProductTypeItemController//-->
+  <object id="LSProductTypeItemController" type="Ace.Cbs.Loan.Ptr.LOMCTL00077, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="LSProductTypeItemErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="LSProductTypeItemValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="cboProductType">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="ProductCode"/>
+          </object>
+        </entry>
+        <entry key="cboLSBusinessType">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="LSBusinessCode"/>
+          </object>
+        </entry>
+        <entry key="cboUMCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="UMCode"/>
+          </object>
+        </entry>
+        <entry key="txtDurationMonths">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="DurationMonths"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//LiveStockTypeSetupController//-->
+  <object id="LiveStockTypeSetupController" type="Ace.Cbs.Loan.Ptr.LOMCTL00076, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="LiveStockTypeSetupErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="LiveStockTypeSetupValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Code"/>
+          </object>
+        </entry>
+        <entry key="txtDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Description"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+
+  <!--Dealer Registration Controller-->
+  <!--<object id="DealerRegistrationEntryController" type="Ace.Cbs.Loan.Ptr.LOMCTL00066, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+
+    <property name ="ErrorProvider">
+      <object id="DealerRegistrationProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name ="Validator" ref="DealerRegisteration.Validator"/>
+      </object>
+    </property>
+
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="mtxtDealerAcctno">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="DealerAC"/>
+            <property name="CustomValidatingMethod" value ="mtxtDealerAcctno_CustomValidating"/>
+          </object>
+        </entry>
+
+        -->
+  <!--<entry key="txtDealerName">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="dname"/>
+          </object>
+        </entry>-->
+  <!--
+
+        -->
+  <!--<entry key="txtDealerNRC">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="nRC"/>
+          </object>
+        </entry>
+        
+        <entry key="txtDealerPhone">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="dphone"/>
+          </object>
+        </entry>
+        
+        <entry key="txtDealerFax">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="fax"/>
+          </object>
+        </entry>
+        
+        <entry key="txtDealerEmail">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="email"/>
+          </object>
+        </entry>
+        
+        <entry key="txtDealerAddress">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="daddress"/>
+          </object>
+        </entry>
+
+        <entry key="txtDealerBusiName">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="business"/>
+          </object>
+        </entry>
+        
+        <entry key="txtDealerBusiCity">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="city"/>
+          </object>
+        </entry>
+        
+        <entry key="txtDealerBusiEmail">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="businessEmail"/>
+          </object>
+        </entry>
+        
+        <entry key="txtDealerBusiAddress">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="businessAddress"/>
+          </object>
+        </entry>
+        
+        <entry key="txtDealerBusiComis">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="commission"/>
+          </object>
+        </entry>-->
+  <!--
+
+      </dictionary>
+    </property>
+
+  </object>-->
+  <!--<object id="DealerInformationSearchController" type="Ace.Cbs.Loan.Ptr.LOMCTL00069, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+
+  </object>-->
+
+  <!--Farm Loan Registeration Entry Controller-->
+  <object id="FarmLoanRegisterationEntryController" type="Ace.Cbs.Loan.Ptr.LOMCTL00078, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name ="ErrorProvider">
+      <object id="FarmLoanRegisterationEntryErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name ="Validator" ref="FarmLoanRegisterationEntry.Validation"/>
+      </object>
+    </property>
+
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+
+        <entry key="mtxtAccountNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="AcctNo"/>
+            <property name="CustomValidatingMethod" value ="mtxtAcctNo_CustomValidating"/>
+          </object>
+        </entry>
+
+        <entry key="txtGroupNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="GroupNo"/>
+            <property name="CustomValidatingMethod" value ="txtGroupNo_CustomValidating"/>
+          </object>
+        </entry>
+
+        <!--<entry key="mtxtGuaranterAccountNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="GuaranteeAccountNo1"/>
+            <property name="CustomValidatingMethod" value ="mtxtGuaranterAccountNo1_CustomValidating"/>
+          </object>
+        </entry>
+
+        <entry key="mtxtGuaranterAccountNo2">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="GuaranteeAccountNo2"/>
+            <property name="CustomValidatingMethod" value ="mtxtGuaranterAccountNo2_CustomValidating"/>
+          </object>
+        </entry>-->
+
+      </dictionary>
+    </property>
+  </object>
+  
+  <!--//AGLoanProductTypeItemController//-->
+  <object id="AGLoanProductTypeItemController" type="Ace.Cbs.Loan.Ptr.LOMCTL00075, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="AGLoanProductTypeItemSetupErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="AGLoanProductTypeItemValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="cboProductType">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="ProductCode"/>
+          </object>
+        </entry>
+
+        <entry key="cboSeasonType">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SeasonCode"/>
+          </object>
+        </entry>
+
+        <entry key="cboUM">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="UMCode"/>
+          </object>
+        </entry>
+
+        <!--<entry key="cboSMonth">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SMonth"/>
+          </object>
+        </entry>
+        
+        <entry key="cboSDay">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SDay"/>
+          </object>
+        </entry>
+        
+        <entry key="cboEMonth">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="EMonth"/>
+          </object>
+        </entry>
+        
+        <entry key="cboEDay">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="EDay"/>
+          </object>
+        </entry>
+        
+        <entry key="cboDMonth">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="DMonth"/>
+          </object>
+        </entry>
+        
+        <entry key="cboDDay">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="DDay"/>
+          </object>
+        </entry>-->
+
+      </dictionary>
+    </property>
+  </object>
+
+  <!--EnquiryGroupController-->
+  <object id="EnquiryGroupController" type="Ace.Cbs.Loan.Ptr.LOMCTL00087, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+
+  </object>
+
+  <!--Farm Loan Interest Calculation Controller From Date To Date-->
+  <object id="FarmLoanInterestCalculationController" type="Ace.Cbs.Loan.Ptr.LOMCTL00089, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+
+  </object>
+
+
+  <!--Farm Loan Interest Calculation Monthly Controller-->
+  <object id="FarmLoanInterestCalculationMonthlyController" type="Ace.Cbs.Loan.Ptr.LOMCTL00090, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+
+  </object>
+
+  <!--Farm Loan Interest Calculation From Month To Month Controller-->
+  <object id="FarmLoanInterestCalculationFromMonthToMonthController" type="Ace.Cbs.Loan.Ptr.LOMCTL00091, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+
+  </object>
+
+
+  <!--//LoanRecordEntryController//-->
+  <object id="LoandRecordEntryController" type="Ace.Cbs.Loan.Ptr.LOMCTL00086, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="LoanRecordEntryErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="LoanRecordEntryValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboTownship">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="TownshipCode"/>
+            <property name="CustomValidatingMethod" value="cboTownship_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="cboVillageGroup">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="VillageCode"/>
+            <property name="CustomValidatingMethod" value="cboVillageGroup_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="cboBusinessType">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="BusinessCode"/>
+            <property name="CustomValidatingMethod" value="cboBusinessType_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtSuspendAmount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SuspendAmu"/>
+          </object>
+        </entry>
+        <entry key="txtTotalGroup">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="TotalGroup"/>
+            <property name="CustomValidatingMethod" value="txtTotalGroup_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtPopulation">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Population"/>
+            <property name="CustomValidatingMethod" value="txtPopulation_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtAcre">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Acre"/>
+            <property name="CustomValidatingMethod" value="txtAcre_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtSanctionAmount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SanctionAmu"/>
+          </object>
+        </entry>
+        <!--<entry key="txtRefundAmount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="RefundAmu"/>
+          </object>
+        </entry>-->
+        <!--<entry key="txtRefundVrNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="RefundVrNo"/>
+          </object>
+        </entry>-->
+      </dictionary>
+    </property>
+  </object>
+  <!-- Loan Repayment Controller -->
+  <object id="LoanRepaymentEntryController" type="Ace.Cbs.Loan.Ptr.LOMCTL00092, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="LoanRepaymentEntryErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="LoanRepaymentEntryValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtVrNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="VrNo"/>
+          </object>
+        </entry>
+        <entry key="txtLoanNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Lno"/>
+            <property name="CustomValidatingMethod" value="txtLoanNo_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtRepaymentAmount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="RepaymentAmount"/>
+            <property name="CustomValidatingMethod" value="txtRepaymentAmount_CustomValidating"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--AgriLoansReportsController-->
+  <object id="AgriLoansReportsController" type="Ace.Cbs.Loan.Ptr.LOMCTL00093, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="AgriLoansReportsErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="AgriLoansReports.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>  
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+  
+  <!--//HirePurchaseRegistrationController//-->
+  
+  <object id="HirePurchaseRegistrationController" type="Ace.Cbs.Loan.Ptr.LOMCTL00081, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+
+  <property name="ErrorProvider">
+      <object id="HPRegisterProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="HPRegisterValidator"/>
+      </object>
+    </property>
+
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="mtxtAccountNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Caccount"/>
+            <property name="CustomValidatingMethod" value ="mtxtAccountNo_CustomValidating"/>
+          </object>
+        </entry>
+
+        <!--<entry key="mtxtDealerAcctno">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="DealerAC"/>
+            <property name="CustomValidatingMethod" value ="mtxtDealerAcctno_CustomValidating"/>
+          </object>
+        </entry>-->
+
+        <entry key="mtxtGraunteeAcctno">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="guanacctno"/>
+            <property name="CustomValidatingMethod" value ="mtxtGraunteeAcctno_CustomValidating"/>
+          </object>
+        </entry>
+
+      </dictionary>
+    </property>
+
+  </object>
+
+  <!--//HirePurchaseRegistrationController//-->
+  <object id="HPVoucherDetailsController" type="Ace.Cbs.Loan.Ptr.LOMCTL00088, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+
+  </object>
+ 
+  <!-- LiveStock Loan Record Controller -->
+  <object id="LiveStockLoandRecordEntryController" type="Ace.Cbs.Loan.Ptr.LOMCTL00086, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="LiveStockLoanRecordEntryErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="LiveStockLoanRecordEntryValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboTownship">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="TownshipCode"/>
+            <property name="CustomValidatingMethod" value="cboTownship_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="cboVillageGroup">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="VillageCode"/>
+            <property name="CustomValidatingMethod" value="cboVillageGroup_CustomValidating"/>
+          </object>
+        </entry>        
+        <entry key="txtSuspendAmount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SuspendAmu"/>
+          </object>
+        </entry>
+        <entry key="txtPopulation">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Population"/>
+            <property name="CustomValidatingMethod" value="txtPopulation_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtAcre">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Acre"/>
+            <property name="CustomValidatingMethod" value="txtAcre_CustomValidating"/>
+          </object>
+        </entry>        
+        <entry key="txtSanctionAmount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SanctionAmu"/>
+          </object>
+        </entry>
+        <!--<entry key="txtRefundAmount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="RefundAmu"/>
+          </object>
+        </entry>
+        <entry key="txtRefundVrNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="RefundVrNo"/>
+          </object>
+        </entry>-->
+      </dictionary>
+    </property>
+  </object>
+  
+  <!-- LoanRecord Report-->
+  <object id="LoanRecordReportController" type="Ace.Cbs.Loan.Ptr.LOMCTL00102, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="LoanRecordReportValidator" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="LoanRecordReport.Validator"/>
+      </object>
+    </property>
+    <!--<property name="ErrorProvider">
+      <object id="LoanRecordReportValidator" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="LoanRecordReportValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+      
+      </dictionary>
+    </property>-->
+  </object>
+
+  <!-- Loan Repayment Information Controller -->
+  <object id="Controller" type="Ace.Cbs.Loan.Ptr.LOMCTL00104, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="LoanRepaymentInfoEntryErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="LoanRepaymentInfoEntryValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtLoanNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Lno"/>
+            <property name="CustomValidatingMethod" value="txtLoanNo_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtRepaymentAmount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="RepaymentAmount"/>
+            <property name="CustomValidatingMethod" value="txtRepaymentAmount_CustomValidating"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+
+  <!--//Farm Loan Penal Fee Calculation Controller// Updated By HWKO-->
+  <object id="FarmLoanPenalFeeCalculationController" type="Ace.Cbs.Loan.Ptr.LOMCTL00300, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+
+  </object>
+
+  <!--//Farm Loan Interest Editing Controller// Updated By HWKO-->
+  <object id="FarmLoanInterestEditingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00301, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="FarmLoanInterestEditingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="FarmLoanInterestEditingValidator"/>  
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtLoanNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="LNo"/>
+            <property name="CustomValidatingMethod" value="txtLoanNo_CustomValidating"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--FLOSTReportsController //Created by HWKO (22-Mar-2017)-->
+  <object id="FLOSTReportsController" type="Ace.Cbs.Loan.Ptr.LOMCTL00303, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="FLOSTReportsErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="FLOSTReports.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+        <entry key="cboVillageGroup">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="VillageCode"/>
+          </object>
+        </entry>
+        <entry key="cboTownship">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="TownshipCode"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+
+  <!--OD Interest Controller-->
+  <object id="ODInterestCalculationController" type="Ace.Cbs.Loan.Ptr.LOMCTL00400, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="ODInterestCalculatioErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtRequiredYear">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="CustomValidatingMethod" value="txtRequiredYear_CustomValidating"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>    
+  </object>
+
+
+  <!--FLIndividualOSTReportsController //Created by HWKO (05-Apr-2017)-->
+  <object id="FLIndividualOSTReportsController" type="Ace.Cbs.Loan.Ptr.LOMCTL00305, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="FLIndividualOSTReportsErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="FLIndividualOSTReports.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+        <entry key="cboVillageGroup">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="VillageCode"/>
+          </object>
+        </entry>
+        <entry key="cboTownship">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="TownshipCode"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--FLTotalDailyIncomeReportsController //Created by HWKO (25-Apr-2017)-->
+  <object id="FLTotalDailyIncomeReportsController" type="Ace.Cbs.Loan.Ptr.LOMCTL00307, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="FLTotalDailyIncomeReportsErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="FLTotalDailyIncomeReports.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--Personal Loan Registeration Controller // Added by HWKO (27-Jun-2017)-->
+  <object id="PersonalLoanRegisterationController" type="Ace.Cbs.Loan.Ptr.LOMCTL00311, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">    
+  </object>
+  <!--Business Loan Registeration LateFee Calculation-->
+  <object id="BusinessLoanLateFeeCalculationController" type="Ace.Cbs.Loan.Ptr.LOMCTL00403, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--Business Loan -->
+  <object id="BusinessLoanAutoPaymentController" type="Ace.Cbs.Loan.Ptr.LOMCTL00404, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+  <!--Business Loan Registeration LateFee Calculation-->
+  <object id="BLDailyInterestCalculationController" type="Ace.Cbs.Loan.Ptr.LOMCTL00407, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+  <!--Personal Loan Auto Payment Process Controller // Added by HWKO (05-Jul-2017)-->
+  <object id="PLAutoPaymentProc" type="Ace.Cbs.Loan.Ptr.LOMCTL00312, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  
+  </object>
+
+  <!--Personal Loan Late Fees Process Controller // Added by HWKO (07-Jul-2017)-->
+  <object id="PLLateFeesProc" type="Ace.Cbs.Loan.Ptr.LOMCTL00313, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+
+  </object>
+
+  <!--ExpiredLandLeaseListingController //Created by HWKO (11-Jul-2017)-->
+  <object id="ExpiredLandLeaseListingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00314, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="ExpiredLandLeaseListingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="ExpiredLandLeaseListing.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+        <!--<entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>-->
+      </dictionary>
+    </property>
+  </object>
+  <!--PLRepaymentScheduleController //Created by HWKO (14-Jul-2017)-->
+  <object id="PLRepaymentScheduleController" type="Ace.Cbs.Loan.Ptr.LOMCTL00316, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="PLRepaymentScheduleErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="PLRepaymentSchedule.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+        <!--<entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>-->
+      </dictionary>
+    </property>
+  </object>
+
+  <!--PLIntDuePreListingController //Created by HWKO (14-Jul-2017)-->
+  <object id="PLIntDuePreListingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00318, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="PLIntDuePreListingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="PLIntDuePreListing.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--PLODACListingController //Created by HWKO (17-Jul-2017)-->
+  <object id="PLODACListingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00320, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="PLODACListingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="PLODACListing.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--PLODACWithCompanyNameListingController //Created by HWKO (17-Jul-2017)-->
+  <object id="PLODACWithCompanyNameListingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00322, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="PLODACWithCompanyNameListingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="PLODACWithCompanyNameListing.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboCompanyName">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CompanyName"/>
+          </object>
+        </entry>
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+  <!--PLRepaymentListingController //Created by HWKO (20-Jul-2017)-->
+  <object id="PLRepaymentListingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00323, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="PLRepaymentListingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="PLRepaymentListing.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+  <!--Business Loans Interest Due PreListing-->
+  <object id="BusinessLoansInterestDuePreListingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00405, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+  <!--Business Loans Interest Listing ByGrade-->
+  <object id="BusinessLoansInterestListingByGradeController" type="Ace.Cbs.Loan.Ptr.LOMCTL00408, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+  
+  <!--Business Loans Service Charges Listing By Voucher Date-->
+  <object id="BusinessLoansServiceChargesListingByVoucherDateController" type="Ace.Cbs.Loan.Ptr.LOMCTL00410, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+  
+  <!--Business Loans Info listing by BLNo-->
+  <object id="BusinessLoansInfoListingByBLNoController" type="Ace.Cbs.Loan.Ptr.LOMCTL00412, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--Business Loans Repayment Info listing by BLNo-->
+  <object id="BusinessLoansRepaymentInfoListingByRepayDateController" type="Ace.Cbs.Loan.Ptr.LOMCTL00414, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--Business Loans NPL Info listing by NPLDate-->
+  <object id="BusinessLoansNPLListingByNPLDateController" type="Ace.Cbs.Loan.Ptr.LOMCTL00416, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//PersonalLoanVoucherEntryController// Added by HWKO (28-Jul-2017)-->
+  <object id="PersonalLoanVoucherEntryController" type="Ace.Cbs.Loan.Ptr.LOMCTL00325, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+   
+  </object>
+  <!--Business Loans Late Fees Auto Voucher-->
+  <object id="BusinessLoanLateFeeAutoVoucherController" type="Ace.Cbs.Loan.Ptr.LOMCTL00418, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//PersonalLoanManualPrepaymentController// Added by HWKO (13-Oct-2017)-->
+  <object id="PLManualPrepaymentController" type="Ace.Cbs.Loan.Ptr.LOMCTL00326, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//HPAbsentHistoryListing// Added by AAM (20-Oct-2017)-->
+  <object id="HPAbsentHistoryListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00216, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//PLAbsentHistoryListing// Added by AAM (23-Oct-2017)-->
+  <object id="PLAbsentHistoryListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00217, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//HPAbsentHistory_Enquiry// Added by AAM (23-Oct-2017)-->
+  <object id="HPAbsentHistory_Enquiry" type="Ace.Cbs.Loan.Ptr.LOMCTL00218, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//PLAbsentHistory_Enquiry// Added by AAM (24-Oct-2017)-->
+  <object id="PLAbsentHistory_Enquiry" type="Ace.Cbs.Loan.Ptr.LOMCTL00219, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//PLLatefeesAutoPayProcessController// Added by HWKO (24-Oct-2017)-->
+  <object id="PLLatefeesAutoPayProcessController" type="Ace.Cbs.Loan.Ptr.LOMCTL00327, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//PLVrOstdListingController// Added by HWKO (27-Oct-2017)-->
+  <object id="PLVrOstdListingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00328, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="PLVrOstdListingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="PLVrOstdListing.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>  
+  </object>
+
+  <!--//HPLateFeesOutstandingListing// Added by AAM (06-Nov-2017)-->
+  <object id="HPLateFeesOutstandingListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00220, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//BLVrOstdListingController// Added by HWKO (07-Nov-2017)-->
+  <object id="BLVrOstdListingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00330, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="BLVrOstdListingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="BLVrOstdListing.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBranchCode"/>
+          </object>
+        </entry>
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Currency"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--BLAbsentHistoryListing-->
+  <object id="BLAbsentHistoryListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00419, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+  
+
+
+  <!--//BLLateFeesOutstandingListing// Added by AAM (16-Nov-2017)-->
+  <object id="BLLateFeesOutstandingListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00221, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//PLLFOstdListingController// Added by HWKO (10-Nov-2017)-->
+  <object id="PLLFOstdListingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00332, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="PLLFOstdListingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="PLLFOstdListing.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--BLAbsentHistoryListing-->
+  <object id="BLAbsentHistoryEnquiry" type="Ace.Cbs.Loan.Ptr.LOMCTL00421, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//HPInstallmentListing// Added by AAM (27-Nov-2017)-->
+  <object id="HPInstallmentListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00222, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//PLInstallmentListing// Added by AAM (28-Nov-2017)-->
+  <object id="PLInstallmentListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00223, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//BLInstallmentListing// Added by AAM (29-Nov-2017)-->
+  <object id="BLInstallmentListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00224, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//PersonalLoansDailyPositionListing// Added by AAM (29-Nov-2017)-->
+  <object id="PersonalLoansDailyPositionListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00225, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//HPAutoPaySufficientListing// Added by AAM (05-Dec-2017)-->
+  <object id="HPAutoPaySufficientListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00227, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//PLAutoPaySufficientListing// Added by AAM (06-Dec-2017)-->
+  <object id="PLAutoPaySufficientListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00228, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//BLAutoPaySufficientListing// Added by AAM (06-Dec-2017)-->
+  <object id="BLAutoPaySufficientListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00229, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//BLOverDrawnListing// Added by AAM (07-Dec-2017)-->
+  <object id="BLOverDrawnListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00230, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--HPContractPrintingController //Created by HWKO (08-Dec-2017)-->
+  <object id="HPContractPrintingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00334, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="HPContractPrintingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="HPContractPrinting.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+        <!--<entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>-->
+      </dictionary>
+    </property>
+  </object>
+
+  <!--PLContractPrintingController //Created by HWKO (12-Dec-2017)-->
+  <object id="PLContractPrintingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00336, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="PLContractPrintingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="PLContractPrinting.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+        <!--<entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>-->
+      </dictionary>
+    </property>
+  </object>
+
+  <!--BLPGContractPrintingController //Created by HWKO (15-Dec-2017)-->
+  <object id="BLPGContractPrintingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00338, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="BLPGContractPrintingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="BLPGContractPrinting.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+        <!--<entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>-->
+      </dictionary>
+    </property>
+  </object>
+
+  <!--BLHPContractPrintingController //Created by HWKO (15-Dec-2017)-->
+  <object id="BLHPContractPrintingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00340, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="BLHPContractPrintingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="BLHPContractPrinting.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--BLLBContractPrintingController //Created by HWKO (15-Dec-2017)-->
+  <object id="BLLBContractPrintingController" type="Ace.Cbs.Loan.Ptr.LOMCTL00342, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="BLLBContractPrintingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="BLLBContractPrinting.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//LOANSSUMMARYREPORT// Added by AAM (07-Dec-2017)-->
+  <object id="LoansSummaryReport" type="Ace.Cbs.Loan.Ptr.LOMCTL00231, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//HPLateFeesRepaymentListing// Added by AAM (26-Dec-2017)-->
+  <object id="HPLateFeesRepaymentListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00232, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//PLLateFeesRepaymentListing// Added by AAM (26-Dec-2017)-->
+  <object id="PLLateFeesRepaymentListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00233, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//BLLateFeesRepaymentListing// Added by AAM (26-Dec-2017)-->
+  <object id="BLLateFeesRepaymentListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00234, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//HPAccountClosedListing// Added by AAM (28-Dec-2017)-->
+  <object id="HPAccountClosedListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00235, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//PLAccountClosedListing// Added by AAM (28-Dec-2017)-->
+  <object id="PLAccountClosedListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00235, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//BLAccountClosedListing// Added by AAM (28-Dec-2017)-->
+  <object id="BLAccountClosedListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00235, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//TransferTransactionListing// Added by AAM (05-Jan-2018)-->
+  <object id="TransferTransactionListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00236, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//HPRegistrationReversal// Added by AAM (19-Feb-2018)-->
+  <object id="HPRegistrationReversal" type="Ace.Cbs.Loan.Ptr.LOMCTL00237, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+  
+  <!--//ImportingDepositFromQP// Added by AAM (21-Feb-2018)-->
+  <object id="ImportingDepositFromQP" type="Ace.Cbs.Loan.Ptr.LOMCTL00238, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!-->//PLRegistrationReversal// Added by AAM (22-Mar-2018)-->
+  <object id="PLRegistrationReversal" type="Ace.Cbs.Loan.Ptr.LOMCTL00237, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!-->//PNLBalanceZerorizationForIncome// Added by AAM (28-Mar-2018)-->
+  <object id="PNLBalanceZerorizationForIncome" type="Ace.Cbs.Loan.Ptr.LOMCTL00237, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!-->//PNLBalanceZerorizationForExpense// Added by AAM (28-Mar-2018)-->
+  <object id="PNLBalanceZerorizationForExpense" type="Ace.Cbs.Loan.Ptr.LOMCTL00237, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!-->//BLRegistrationReversal// Added by AAM (03-Apr-2018)-->
+  <object id="BLRegistrationReversal" type="Ace.Cbs.Loan.Ptr.LOMCTL00237, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!-->//PLManualPrepaymentProcess// Added by AAM (05-Apr-2018)-->
+  <object id="PLManualPrepaymentProcess" type="Ace.Cbs.Loan.Ptr.LOMCTL00200, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!-->//HPInterestPrepaymentByDealer// Added by AAM (05-Apr-2018)-->
+  <object id="HPInterestPrepaymentByDealer" type="Ace.Cbs.Loan.Ptr.LOMCTL00237, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!-->//HPInterestPrepaidByDealerReport// Added by AAM (11-Apr-2018)-->
+  <object id="HPInterestPrepaidByDealerReport" type="Ace.Cbs.Loan.Ptr.LOMCTL00237, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+  
+    <!--//AccountClose// Added by AAM (23-May-2018)-->
+  <object id="AccountClose" type="Ace.Cbs.Loan.Ptr.LOMCTL00238, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//AccountClose// Added by AAM (23-May-2018)-->
+  <object id="AccountCloseListingReport" type="Ace.Cbs.Loan.Ptr.LOMCTL00238, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!-->//BL Daily Position Listing// Added by ZMS (02-JUL-2018)-->
+  <object id="DailyPositionListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00423, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!-->//Account Information Enquiry Added by ZMS (04-JUL-2018)-->
+  <object id="ACInfoEnquiry" type="Ace.Cbs.Loan.Ptr.LOMCTL00425, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+  <object id="ACInfoEnquiryMain" type="Ace.Cbs.Loan.Ptr.LOMCTL00426, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--Black Lists Manual (Internal Customer) Added by ZMS (26.11.2018)-->
+  <object id="BlackListInternalCustomerEnty" type="Ace.Cbs.Loan.Ptr.LOMCTL00427, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--Black Lists Manual (External Customer) Added by ZMS (28.11.2018)-->
+  <object id="BlackListExternalCustomerEnty" type="Ace.Cbs.Loan.Ptr.LOMCTL00428, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--Black Lists(Approve / Reject ) Added by ZMS (29.11.2018)-->
+  <object id="BlackListApproveReject" type="Ace.Cbs.Loan.Ptr.LOMCTL00429, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+  
+  <!--Black Lists(Approve / Reject ) Added by ZMS-->
+  <object id="BlackListRemove" type="Ace.Cbs.Loan.Ptr.LOMCTL00430, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--Warning Lists(Approve / Reject ) Added by YMP-->
+  <object id="WarningListRemove" type="Ace.Cbs.Loan.Ptr.LOMCTL00437, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--Black Lists Listing Added by ZMS-->
+  <object id="BlackListListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00431, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--Black Lists User Entry Added by ZMS-->
+  <object id="BlackListUserEntry" type="Ace.Cbs.Loan.Ptr.LOMCTL00433, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--Black Lists History Listing Added by ZMS-->
+  <object id="BlackListHistoryListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00434, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--Warning Lists Added by YMP (02.05.2019)-->
+  <object id="WarningListEnty" type="Ace.Cbs.Loan.Ptr.LOMCTL00435, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--Warning Lists Added by YMP (06.05.2019)-->
+  <object id="WarningListApproveReject" type="Ace.Cbs.Loan.Ptr.LOMCTL00436, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--Warning Lists Listing Added by YMP-->
+  <object id="WarningListListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00438, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--Warning Lists History Listing Added by YMP-->
+  <object id="WarningListHistoryListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00440, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--For Late Fee Info Added by YMP (15.05.2019)-->
+  <object id="LateFeeInfoController" type="Ace.Cbs.Loan.Ptr.LOMCTL00441, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--For Late Fee Exception (Checker) Added by YMP (17.05.2019)-->
+  <object id="LateFeeExceptionChecker" type="Ace.Cbs.Loan.Ptr.LOMCTL00442, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//TransferTransactionListing// Added by YMP-->
+  <object id="TransferTransactionListing_Two" type="Ace.Cbs.Loan.Ptr.LOMCTL00236, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+  
+  <!--//LimitExtendListListing// Added by YMP-->
+  <object id="LimitExtendListing" type="Ace.Cbs.Loan.Ptr.LOMCTL00444, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//LimitExtendEntry// Added by YMP-->
+  <object id="LimitExtendEntryController" type="Ace.Cbs.Loan.Ptr.LOMCTL00446, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+   <!--//Personal Loan ProductCode Setup-->
+   <object id="PersonalLoanProductCodeController" type="Ace.Cbs.Loan.Ptr.LOMCTL00415, Ace.Cbs.Loan.Ptr" parent="AbstractController" singleton="false">
+   </object>
+  
+</objects>
+
+
+

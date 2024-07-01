@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Mnm.Dmd.MNMDTO00039, Ace.Cbs.Mnm.Dmd" rename="custIDByDateDTO"/>
+  <class name="MNMVIW00023" table="VW_CUSTOMERID" mutable="false">
+    <id name="Id">
+      <column name="Id" sql-type="int" not-null="true" />
+    </id>
+    <property name="CustID">
+      <column name="CUSTID" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="Name">
+      <column name="NAME" sql-type="nvarchar" not-null="true"/>
+    </property>
+    <property name="Nrc">
+      <column name="NRC" sql-type="nvarchar" not-null="true"/>
+    </property>
+    <property name="FatherName">
+      <column name="FATHERNAME" sql-type="nvarchar" not-null="true"/>
+    </property>
+    <property name="OccupationCode">
+      <column name="OCCUPATIONCODE" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="Nationality">
+      <column name="NATIONALITY" sql-type="nvarchar" not-null="true"/>
+    </property>
+    <property name="PassportNo">
+      <column name="PASSPORTNO" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="TownshipCode">
+      <column name="TOWNSHIPCODE" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="StateCode">
+      <column name="STATECODE" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="CloseAc">
+      <column name="CLOSEAC" sql-type="numeric" not-null="true"/>
+    </property>
+    <property name="OpenAc">
+      <column name="OPENAC" sql-type="numeric" not-null="true"/>
+    </property>
+    <property name="Date_Time">
+      <column name="DATE_TIME" sql-type="datetime" not-null="true"/>
+    </property>
+    <property name="CloseDate">
+      <column name="CLOSEDATE" sql-type="datetime" not-null="true"/>
+    </property>
+    <property name="CityCode">
+      <column name="CITYCODE" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="Phone">
+      <column name="PHONE" sql-type="nvarchar" not-null="true"/>
+    </property>
+    <property name="Fax">
+      <column name="FAX" sql-type="nvarchar" not-null="true"/>
+    </property>
+    <property name="Email">
+      <column name="EMAIL" sql-type="nvarchar" not-null="true"/>
+    </property>
+    <property name="Address">
+      <column name="ADDRESS" sql-type="nvarchar" not-null="true"/>
+    </property>
+    <property name="NameOnly">
+      <column name="NAMEONLY" sql-type="nvarchar" not-null="true"/>
+    </property>
+    <property name="SourceBr">
+      <column name="SOURCEBR" sql-type="varchar" not-null="true"/>
+    </property>
+    <!--<property name="Cur">
+      <column name="Cur" sql-type="varchar" not-null="true"/>
+    </property>//Updated by HWKO (25-Aug-2017)-->
+    <property name="StateDesp">
+      <column name="STATEDESP" sql-type="nvarchar" not-null="true"/>
+    </property>
+    <property name="CityDesp">
+      <column name="CITYDESP" sql-type="nvarchar" not-null="true"/>
+    </property>
+    <property name="TownShipDesp">
+      <column name="TOWNSHIPDESP" sql-type="nvarchar" not-null="true"/>
+    </property>
+    <property name="OccupationDesp">
+      <column name="OCCUPATIONDESP" sql-type="nvarchar" not-null="true"/>
+    </property>    
+  </class>
+
+ 
+  
+</hibernate-mapping>

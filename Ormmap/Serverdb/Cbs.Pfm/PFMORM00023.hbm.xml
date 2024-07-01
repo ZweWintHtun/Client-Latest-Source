@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00023, Ace.Cbs.Pfm.Dmd" rename="fledgerdto"/>
+
+  <class name="PFMORM00023" table="[Fledger]" >
+
+    <id name="AccountNo">
+      <column name="AcctNo" sql-type="varchar" not-null="true" />
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+    
+    <property name="FixedBalance">
+      <column name="FBal" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="AccountSignature">
+      <column name="ACSign" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="LinkLimit">
+      <column name="LLimit" sql-type="int" not-null="false" />
+    </property>
+
+    <property name="DebitAccountNo">
+      <column name="DrAcctNo" sql-type="varchar" not-null="false" />
+    </property>
+
+
+    <property name="PrintLineNo">
+      <column name="PrnLineNo" sql-type="int" not-null="false" />
+    </property>
+
+    <property name="SourceBranchCode">
+      <column name="SourceBr" sql-type="varchar" not-null="true" />
+    </property>
+    
+    <property name="CurrencyCode">
+      <column name="Cur" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="Date_Time">
+      <column name="DATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="UserNo">
+      <column name="USERNO" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  <!--//PFMDAO00023.SelectACSignAndCurByAccountNo-->
+  <query name="PFMDAO00023.SelectACSignAndCurByAccountNo">
+    select new fledgerdto( f.AccountSignature,f.CurrencyCode,f.SourceBranchCode )
+    from PFMORM00023 as f
+    where f.AccountNo = :accountNo and f.Active = true
+  </query>
+
+  <!--//PFMDAO00023.UpdatePrnLineNo-->
+  <query name="PFMDAO00023.UpdatePrintLineNo">
+	  update PFMORM00023 f
+	  set f.PrintLineNo = :lineNo,
+	  f.UpdatedUserId = :updatedUserId,
+	  f.UpdatedDate = :updatedDate
+	  where f.AccountNo = :accountNo
+	  and f.Active = true
+  </query>
+
+  <query name="PFMDAO00023.SelectPrintLineNo">
+    select new fledgerdto(
+    fLedger.PrintLineNo
+    )
+    from PFMORM00023 as fLedger
+    where fLedger.AccountNo = :accountNo
+    and fLedger.Active = true
+  </query>
+
+  <query name="PFMDAO00023.UpdateFLedgerWithdraw">
+		update PFMORM00023 f set
+		f.FixedBalance = :fBal,
+		f.UpdatedUserId = :updatedUserId,
+		f.UpdatedDate = :updatedDate
+		where f.AccountNo = :accountNo and  f.Active = true
+  </query>
+
+  <query name="PFMDAO00023.UpdateFBalDeposit">
+	  update PFMORM00023 f set
+	  f.FixedBalance = f.FixedBalance +:fbal,
+	  f.UpdatedUserId = :updatedUserId,
+	  f.UpdatedDate = :updatedDate
+	  where f.AccountNo = :accountNo and  f.Active = true
+  </query>
+
+	<query name="PFMDAO00023.UpdateFBalWihdrawal">
+		update PFMORM00023 f set
+		f.FixedBalance = f.FixedBalance -:fbal,
+		f.UpdatedUserId = :updatedUserId,
+		f.UpdatedDate = :updatedDate
+		where f.AccountNo = :accountNo and  f.Active = true
+	</query>
+
+
+  <query name="PFMDAO00023.SelectFBalByAccountNo">
+		select new fledgerdto(
+		fLedger.FixedBalance
+		)
+		from PFMORM00023 as fLedger
+		where fLedger.AccountNo = :accountNo
+		and fLedger.Active = true
+  </query>
+
+	<query name="PFMDAO00023.SelectFLedgerByAccountNo">
+		select new fledgerdto(
+		fLedger.AccountNo,
+		fLedger.FixedBalance,
+		fLedger.AccountSignature,
+		fLedger.LinkLimit,
+		fLedger.DebitAccountNo,
+		fLedger.PrintLineNo,
+		fLedger.SourceBranchCode,
+		fLedger.CurrencyCode,
+		fLedger.Date_Time
+		)
+		from PFMORM00023 as fLedger
+		where fLedger.AccountNo = :accountNo
+		and fLedger.Active = true
+	</query>
+
+	<!--//PFMDAO00023.selectFledgerFbal-->
+	<query name="PFMDAO00023.SelectFBal">
+		select new fledgerdto(
+		fLedger.AccountNo,
+		fLedger.FixedBalance
+		)
+		from PFMORM00023 as fLedger
+		where fLedger.Active = true
+		and fLedger.SourceBranchCode = :SourceBranchCode
+	</query>
+	
+	<!-- For Shutdown -->
+	<query name="SelectSumFixedBalance">
+		select new fledgerdto (c.CurrencyCode,sum(c.FixedBalance))
+		from PFMORM00023 as c
+		where c.SourceBranchCode = :sourcebr and c.Active = true 
+		group by c.CurrencyCode
+	</query>
+</hibernate-mapping>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+	<import class="Ace.Cbs.Loan.Dmd.LOMDTO00101, Ace.Cbs.Loan.Dmd" rename="subProductTypedto"/>
+
+	<class name="LOMORM00101" table="PLSubProduct" >
+
+		<id name="Code">
+			<column name="GroupCode" sql-type="varchar" not-null="true" />
+		</id>
+
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="true"/>
+		</version>		
+
+		<property name="Description">
+			<column name="Description" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+
+	</class>
+
+	<!--//SubProductTypeDAO.CheckExist//-->
+	<query name="SubProductTypeDAO.CheckExist">
+    select new subProductTypedto
+    (
+    b.Code,
+    b.Description
+    )
+    from LOMORM00101 as b
+    where (b.Code =: code or b.Description =: description)
+    and  b.Active = true
+  </query>
+
+	<!--//BusinessDAO.SelectAll//-->
+	<query name="SubProductTypeDAO.SelectAll">
+    select new subProductTypedto
+    (
+    b.Code,
+    b.Description,
+    b.Active,
+    b.TS,
+    b.CreatedDate,
+    b.CreatedUserId,
+    b.UpdatedDate,
+    b.UpdatedUserId
+    )
+    from LOMORM00101 as b
+    where b.Active = true
+  </query>
+
+	<!--//SubProductTypeDAO.SelectById//-->
+	<query name="SubProductTypeDAO.SelectByCode">
+    select new subProductTypedto(
+    b.Code,
+    b.Description,
+    b.Active,
+    b.TS,
+    b.CreatedDate,
+    b.CreatedUserId,
+    b.UpdatedDate,
+    b.UpdatedUserId
+    )
+    from LOMORM00101 as b
+    where b.Code = :code
+    and b.Active = true
+  </query>
+
+</hibernate-mapping>
+

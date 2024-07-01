@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Mnm.Dmd.MNMDTO00035, Ace.Cbs.Mnm.Dmd" rename="ledgerBalanceDTO"/>
+  <class name="MNMVIW00012" table="VW_MOB3226" mutable="false">
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+    <property name="AcctNo">
+      <column name="ACCTNO" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="Name">
+      <column name="NAME" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="AMOUNT">
+      <column name="Amount" sql-type="numeric" not-null="true"/>
+    </property>
+    <property name="Fbal">
+      <column name="FBAL" sql-type="numeric" not-null="true"/>
+    </property>
+    <property name="AccruedStatus">
+      <column name="ACCRUEDSTATUS" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="Rno">
+      <column name="RNO" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="RDate">
+      <column name="RDATE" sql-type="datetime" not-null="true"/>
+    </property>
+    <property name="WDate">
+      <column name="WDATE" sql-type="datetime" not-null="true"/>
+    </property>
+    <property name="LastIntDate">
+      <column name="LASINTDATE" sql-type="datetime" not-null="true"/>
+    </property>
+    <property name="AcSign">
+      <column name="ACSIGN" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="Duration">
+      <column name="DURATION" sql-type="numeric" not-null="true"/>
+    </property>
+    <property name="MatureDate">
+      <column name="MATUREDATE" sql-type="datetime" not-null="true"/>
+    </property>
+    <property name="Cur">
+      <column name="CUR" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="SourceBr">
+      <column name="SOURCEBR" sql-type="varchar" not-null="true"/>
+    </property>
+  </class>
+
+  <query name="MNMVIW00012.SelectFixed">
+    select distinct new ledgerBalanceDTO(l.Name,l.AcctNo,l.Fbal)
+    from MNMVIW00012 as l
+    where l.SourceBr = :sourceBr and l.Cur = :cur
+  </query>
+
+  <query name="MNMVIW00012.SelectFixedByAllCurrency">
+    select distinct new ledgerBalanceDTO(l.Name,l.AcctNo,l.Fbal)
+    from MNMVIW00012 as l
+    where l.SourceBr = :sourceBr
+  </query>
+
+  <query name="MNMVIW00012.SelectFixedDepositByDuration">
+    select new ledgerBalanceDTO(
+    l.Name,
+    l.AcctNo,
+    l.AMOUNT,
+    l.MatureDate,
+    l.Rno,
+    l.RDate)
+    from MNMVIW00012 as l
+    where l.SourceBr = :sourceBr
+    and l.Duration =: duration
+  </query>
+  
+  
+  
+</hibernate-mapping>

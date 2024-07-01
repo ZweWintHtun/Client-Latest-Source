@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1F31AC7E-3278-4E29-A0D6-E6F151014577}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ace.Cbs.Loan.Dao</RootNamespace>
+    <AssemblyName>Ace.Cbs.Loan.Dao</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ace.Cbs.Loan.Dmd, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Ace.Cbs.Loan.Dmd\obj\Debug\Ace.Cbs.Loan.Dmd.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\..\Output\Server\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core">
+      <HintPath>..\..\..\Output\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data">
+      <HintPath>..\..\..\Output\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate33">
+      <HintPath>..\..\..\Output\Spring.Data.NHibernate33.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Component1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Component1.Designer.cs">
+      <DependentUpon>Component1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMDAO00101.cs" />
+    <Compile Include="LOMDAO00025.cs" />
+    <Compile Include="LOMDAO00001.cs" />
+    <Compile Include="LOMDAO00002.cs" />
+    <Compile Include="LOMDAO00003.cs" />
+    <Compile Include="LOMDAO00004.cs" />
+    <Compile Include="LOMDAO00005.cs" />
+    <Compile Include="LOMDAO00006.cs" />
+    <Compile Include="LOMDAO00007.cs" />
+    <Compile Include="LOMDAO00008.cs" />
+    <Compile Include="LOMDAO00009.cs" />
+    <Compile Include="LOMDAO00010.cs" />
+    <Compile Include="LOMDAO00011.cs" />
+    <Compile Include="LOMDAO00012.cs" />
+    <Compile Include="LOMDAO00015.cs" />
+    <Compile Include="LOMDAO00016.cs" />
+    <Compile Include="LOMDAO00017.cs" />
+    <Compile Include="LOMDAO00018.cs" />
+    <Compile Include="LOMDAO00019.cs" />
+    <Compile Include="LOMDAO00023.cs" />
+    <Compile Include="LOMDAO00013.cs" />
+    <Compile Include="LOMDAO00022.cs" />
+    <Compile Include="LOMDAO00034.cs" />
+    <Compile Include="LOMDAO00035.cs" />
+    <Compile Include="LOMDAO00042.cs" />
+    <Compile Include="LOMDAO00044.cs" />
+    <Compile Include="LOMDAO00047.cs" />
+    <Compile Include="LOMDAO00051.cs" />
+    <Compile Include="LOMDAO00057.cs" />
+    <Compile Include="LOMDAO00059.cs" />
+    <Compile Include="LOMDAO00063.cs" />
+    <Compile Include="LOMDAO00064.cs" />
+    <Compile Include="LOMDAO00068.cs" />
+    <Compile Include="LOMDAO00069.cs" />
+    <Compile Include="LOMDAO00070.cs" />
+    <Compile Include="LOMDAO00071.cs" />
+    <Compile Include="LOMDAO00072.cs" />
+    <Compile Include="LOMDAO00073.cs" />
+    <Compile Include="LOMDAO00074.cs" />
+    <Compile Include="LOMDAO00075.cs" />
+    <Compile Include="LOMDAO00076.cs" />
+    <Compile Include="LOMDAO00077.cs" />
+    <Compile Include="LOMDAO00078.cs" />
+    <Compile Include="LOMDAO00079.cs" />
+    <Compile Include="LOMDAO00080.cs" />
+    <Compile Include="LOMDAO00085.cs" />
+    <Compile Include="LOMDAO00086.cs" />
+    <Compile Include="LOMDAO00093.cs" />
+    <Compile Include="LOMDAO00094.cs" />
+    <Compile Include="LOMDAO00096.cs" />
+    <Compile Include="LOMDAO00099.cs" />
+    <Compile Include="LOMDAO00102.cs" />
+    <Compile Include="LOMDAO00300.cs" />
+    <Compile Include="LOMDAO00302.cs" />
+    <Compile Include="LOMDAO00303.cs" />
+    <Compile Include="LOMDAO00305.cs" />
+    <Compile Include="LOMDAO00307.cs" />
+    <Compile Include="LOMDAO00309.cs" />
+    <Compile Include="LOMDAO00311.cs" />
+    <Compile Include="LOMDAO00312.cs" />
+    <Compile Include="LOMDAO00313.cs" />
+    <Compile Include="LOMDAO00314.cs" />
+    <Compile Include="LOMDAO00316.cs" />
+    <Compile Include="LOMDAO00401.cs" />
+    <Compile Include="LOMDAO00402.cs" />
+    <Compile Include="LOMDAO00403.cs" />
+    <Compile Include="LOMDAO00404.cs" />
+    <Compile Include="LOMDAO00405.cs" />
+    <Compile Include="LOMDAO00406.cs" />
+    <Compile Include="LOMDAO00415.cs" />
+    <Compile Include="LOMDAO00427.cs" />
+    <Compile Include="LOMDAO00435..cs" />
+    <Compile Include="LOMDAO00444.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Mnm\Ace.Cbs.Mnm.Dmd\Ace.Cbs.Mnm.Dmd.csproj">
+      <Project>{D8EA36A9-8BBC-4D2A-84C7-49BDA6006F94}</Project>
+      <Name>Ace.Cbs.Mnm.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tcm\Ace.Cbs.Tcm.Ctr\Ace.Cbs.Tcm.Ctr.csproj">
+      <Project>{77567CFC-17CF-4B2D-8502-028AA5E1019F}</Project>
+      <Name>Ace.Cbs.Tcm.Ctr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tel\Ace.Cbs.Tel.Dmd\Ace.Cbs.Tel.Dmd.csproj">
+      <Project>{4AE62F74-E000-4768-90BC-DCBBB1B4C68C}</Project>
+      <Name>Ace.Cbs.Tel.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ace.Cbs.Loan.Ctr\Ace.Cbs.Loan.Ctr.csproj">
+      <Project>{8E57EAE3-7397-490E-B276-123DAC52B728}</Project>
+      <Name>Ace.Cbs.Loan.Ctr</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

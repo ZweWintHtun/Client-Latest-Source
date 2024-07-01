@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Loans-->
+<!-- 
+// <copyright file="LOMORM00021.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>Nyo Me San</CreatedUser>
+// <CreatedDate>2013-05-21</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version>1.0</Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Tel.Dmd.TLMDTO00018, Ace.Cbs.Tel.Dmd" rename="loansdto" />
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00021, Ace.Cbs.Loan.Dmd" rename="lidto"/>
+  <class name="LOMORM00021" table="Loans">
+    <id name="Lno">
+      <column name="Lno" sql-type="varchar" not-null="true" />
+    </id>
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+    <property name="AccountNo">
+      <column name="AcctNo" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="AType">
+      <column name="AType" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="BType">
+      <column name="BType" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="SDate">
+      <column name="SDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="SAmount">
+      <column name="SAmt" sql-type="numeric" not-null="false" />
+    </property>
+    <property name="Time">
+      <column name="Time" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Loans_Type">
+      <column name="Loans_Type" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="ExpireDate">
+      <column name="ExpireDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="IntRate">
+      <column name="IntRate" sql-type="numeric" not-null="false" />
+    </property>
+    <property name="UnUsedRate">
+      <column name="UnUsedRate" sql-type="numeric" not-null="false" />
+    </property>
+    <property name="UsedOverRate">
+      <column name="UsedOverRate" sql-type="numeric" not-null="false" />
+    </property>
+    <property name="FirstSAmount">
+      <column name="FirstSAmt" sql-type="numeric" not-null="false" />
+    </property>
+    <property name="LasIntDate">
+      <column name="LasIntDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="LasRepayNo">
+      <column name="LasRepayNo" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Min_Period">
+      <column name="Min_Period" sql-type="numeric" not-null="false" />
+    </property>
+    <property name="Vouchered">
+      <column name="Vouchered" sql-type="bit" not-null="true" />
+    </property>
+    <property name="ACSign">
+      <column name="ACSign" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="UserNo">
+      <column name="UserNo" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Assessor">
+      <column name="Assessor" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Lawer">
+      <column name="Lawer" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="LegalCase">
+      <column name="LegalCase" sql-type="bit" not-null="true" />
+    </property>
+    <property name="LegalDate">
+      <column name="LegalDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="LegaLawer">
+      <column name="LegaLawer" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="CloseDate">
+      <column name="CloseDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="NPLCase">
+      <column name="NPLCase" sql-type="bit" not-null="true" />
+    </property>
+    <property name="NPLDate">
+      <column name="NPLDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="LastUserNo">
+      <column name="LastUserNo" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="LastDate">
+      <column name="LastDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="Partial">
+      <column name="Partial" sql-type="bit" not-null="false" />
+    </property>
+    <property name="VoucherDate">
+      <column name="VoucherDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="PartialNo">
+      <column name="PartialNo" sql-type="int" not-null="false" />
+    </property>
+    <property name="Scharges">
+      <column name="Scharges" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="TodSerial">
+      <column name="TodSerial" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="TodCloseDate">
+      <column name="TodCloseDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="Charges_Status">
+      <column name="Charges_Status" sql-type="char" not-null="false" />
+    </property>
+    <property name="MarkNPLUser">
+      <column name="MarkNPLUser" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="NPLReleaseUser">
+      <column name="NPLReleaseUser" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="MarkLegalUser">
+      <column name="MarkLegalUser" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="LegalReleaseUser">
+      <column name="LegalReleaseUser" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="UniqueId">
+      <column name="UId" sql-type="char" not-null="false" />
+    </property>
+    <property name="SourceBranchCode">
+      <column name="SourceBr" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Currency">
+      <column name="Cur" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="BalStatus">
+      <column name="BalStatus" sql-type="bit" not-null="false" />
+    </property>
+    <property name="isLateFee">
+      <column name="isLateFee" sql-type="bit" not-null="false" />
+    </property>
+    <property name="isSCharge">
+      <column name="isSCharge" sql-type="bit" not-null="false" />
+    </property>
+
+    <!--<one-to-one name="Legal" column="[Lno]" class="LOMORM00013" insert="false" update="false"></one-to-one>-->
+    <!--Support fields-->
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+    <!--<bag name="Li" inverse="true" lazy="true" cascade="none">
+      <key column="[LNo]" />
+      <one-to-many class="Ace.Cbs.Mnm.Dmd.MNMORM00017" />
+    </bag>-->
+
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--RemitBrIBL-->
+<!-- 
+// <copyright file="TLMORM00029.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>Nyo Me San</CreatedUser>
+// <CreatedDate>2013-05-21</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version>1.0</Version>
+
+-->
+<hibernate-mapping assembly="Ace.Cbs.Tel.Dmd" namespace="Ace.Cbs.Tel.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+	<import class="Ace.Cbs.Tel.Dmd.TLMDTO00029, Ace.Cbs.Tel.Dmd" rename="remitbribldto"/>
+	<class name="TLMORM00029" table="RemitBrIbl" >
+		
+    <!--<id name="Id">
+			<column name="Id" sql-type="int" not-null="true"/>
+		</id>-->
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+    
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="true"/>
+		</version>
+		<property name="BranchCode">
+			<column name="BranchCode" sql-type="varchar(50)" not-null="true" />
+		</property>
+		<property name="TelaxCharges">
+			<column name="TlxCharges" sql-type="numeric(15, 2)" not-null="true" />
+		</property>
+		<property name="TTSerial">
+			<column name="TTSerial" sql-type="numeric(10, 0)" not-null="true" />
+		</property>
+		<property name="DraftSerial">
+			<column name="DrftSerial" sql-type="numeric(10, 0)" not-null="true" />
+		</property>
+		<property name="StateCode">
+			<column name="StateCode" sql-type="varchar(50)" not-null="false" />
+		</property>
+		<property name="DrawingAccount">
+			<column name="DrawAc" sql-type="varchar(50)" not-null="false" />
+		</property>
+		<property name="EncashAccount">
+			<column name="EncashAc" sql-type="varchar(50)" not-null="false" />
+		</property>
+		<property name="IBSComAccount">
+			<column name="IBSComAc" sql-type="varchar(50)" not-null="false" />
+		</property>
+		<property name="TelaxAccount">
+			<column name="TelexAc" sql-type="varchar(50)" not-null="false" />
+		</property>
+		<property name="IblSerial">
+			<column name="IblSerial" sql-type="numeric(12, 0)" not-null="false" />
+		</property>
+		<property name="IRPOAccount">
+			<column name="IRPOAC" sql-type="varchar(50)" not-null="false" />
+		</property>
+		<property name="UniqueIdentifier">
+			<column name="UId" sql-type="char(36)" not-null="true" />
+		</property>
+		<property name="SourceBranchCode">
+			<column name="SourceBr" sql-type="varchar(50)" not-null="false" />
+		</property>
+		<property name="Currency">
+			<column name="Cur" sql-type="varchar(50)" not-null="false" />
+		</property>
+		<!--Support Fields-->
+
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+
+	</class>
+
+
+	<query name="TLMDAO00029.UpdateSerial">
+		update TLMORM00029 remitbribl
+		set
+		remitbribl.IblSerial=:serial,
+		remitbribl.UpdatedDate=:updateddate,
+		remitbribl.UpdatedUserId=:updateduserId
+		where remitbribl.BranchCode =:drawerbank and
+		remitbribl.Currency=:currencycode
+		and remitbribl.Active = true
+	</query>
+
+</hibernate-mapping>

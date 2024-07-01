@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Tel.Dmd" namespace="Ace.Cbs.Tel.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Tel.Dmd.TLMDTO00009, Ace.Cbs.Tel.Dmd" rename="vw_denomultidto"/>
+  <class name="TLMVIW00D14" table="VW_Deno_Multi" mutable="false" >
+   
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+
+    <property name="tlf_eno">
+      <column name="tlf_eno" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="groupno">
+      <column name="groupno" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="reverse_status">
+      <column name="reverse_status" sql-type="bit" not-null="true"/>
+    </property>
+    <property name="actype">
+      <column name="actype" sql-type="varchar" not-null="false"/>
+    </property>
+    <property name="amount">
+      <column name="amount" sql-type="numeric" not-null="true"/>
+    </property>
+    <property name="Reverse">
+      <column name="Reverse" sql-type="bit" not-null="false"/>
+    </property>
+    <property name="userno">
+      <column name="userno" sql-type="varchar" not-null="false"/>
+    </property>
+    
+    <property name="status">
+      <column name="status" sql-type="varchar" not-null="false"/>
+    </property>
+   
+    <property name="counterno">
+      <column name="counterno" sql-type="varchar" not-null="false"/>
+    </property>
+
+    <property name="CASHDATE">
+      <column name="CASHDATE" sql-type="datetime" not-null="false"/>
+    </property>
+    
+    <property name="cur">
+      <column name="cur" sql-type="varchar" not-null="false"/>
+    </property>
+   
+    <property name="Income">
+      <column name="Income" sql-type="numeric" not-null="false"/>
+    </property>
+
+    <property name="Commucharge">
+      <column name="Commucharge" sql-type="numeric" not-null="false"/>
+    </property>
+   
+    <property name="SourceBr">
+      <column name="SourceBr" sql-type="varchar" not-null="false"/>
+    </property>
+  </class>
+
+  <!--//"TLMVIW00D14.SelectDataForMultiDeno"//-->
+  <query name="TLMVIW00D14.SelectDataForMultiDeno">
+    select new vw_denomultidto
+    ( vw_multideno.tlf_eno,
+    vw_multideno.groupno,
+    vw_multideno.actype,
+    vw_multideno.amount,
+    vw_multideno.userno,
+    vw_multideno.Income,
+    vw_multideno.Commucharge,
+    vw_multideno.counterno)
+    from TLMVIW00D14 as vw_multideno
+    where Convert(char(10),vw_multideno.CASHDATE,111) = Convert(char(10),:cashdate,111)
+    and vw_multideno.SourceBr = :sourcebr
+    and vw_multideno.cur = :cur
+    and vw_multideno.Reverse = false
+    and vw_multideno.reverse_status = false
+    and vw_multideno.groupno like 'G%'
+    order by vw_multideno.groupno asc , vw_multideno.Income asc
+  </query>
+
+  <!--//"TLMVIW00D14.SelectDataForMultiDeno"//-->
+  <query name="TLMVIW00D14.SelectDataForMultiDenoForAllCounter">
+    select new vw_denomultidto
+    ( vw_multideno.tlf_eno,
+    vw_multideno.groupno,
+    vw_multideno.actype,
+    vw_multideno.amount,
+    vw_multideno.userno,
+    vw_multideno.Income,
+    vw_multideno.Commucharge,
+    vw_multideno.counterno)
+    from TLMVIW00D14 as vw_multideno
+    where Convert(char(10),vw_multideno.CASHDATE,111) = Convert(char(10),:cashdate,111)
+    and vw_multideno.SourceBr = :sourcebr
+    and vw_multideno.cur = :cur
+    and vw_multideno.Reverse = false
+    and vw_multideno.reverse_status = false
+    and vw_multideno.groupno like 'G%'
+    and vw_multideno.counterno = :counterno
+    order by vw_multideno.groupno asc , vw_multideno.Income asc
+  </query>
+  
+</hibernate-mapping>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->               
+  <description>
+    Installer Service Common Module Objects Settings
+  </description>
+  <!--//ComponentUpdateService//-->
+  <object id="ComponentUpdateService" type="Ace.Windows.Ix.Server.Sve.ComponentUpdateService, Ace.Windows.Ix.Server" singleton="false">
+    <property name="InstallerTypeDAO" ref="InstallerTypeDAO"/>
+    <property name="ComponentVersionHeaderDAO" ref="ComponentVersionHeaderDAO"/>
+    <property name="ComponentVersionItemDAO" ref="ComponentVersionItemDAO"/>
+    <property name="ComponentVersionInstalledHistoryDAO" ref="ComponentVersionInstalledHistoryDAO"/>
+    <property name="ComponentFileDownloadedHistoryDAO" ref="ComponentFileDownloadedHistoryDAO"/>
+    <property name="WorkStationCurrentComponentVersionDAO" ref="WorkStationCurrentComponentVersionDAO"/>
+    <property name="InstallerInWorkStationDAO" ref="InstallerInWorkStationDAO"/>
+    <property name="CCCComponentVersionDownloadedForClientDAO" ref="CCCComponentVersionDownloadedForClientDAO"/>
+  </object>
+  <!--//DataVersionUpdateService//-->
+  <object id="DataVersionUpdateService" type="Ace.Windows.Ix.Server.Sve.DataVersionUpdateService, Ace.Windows.Ix.Server" singleton="false">
+    <property name="WorkStationCurrentClientDataVersionDAO" ref="WorkStationCurrentClientDataVersionDAO"/>   
+    <property name="ClientDataVersionHeaderDAO" ref="ClientDataVersionHeaderDAO"/>
+    <property name="ClientDataVersionItemDAO" ref="ClientDataVersionItemDAO"/>
+    <property name="ClientDataVersionDAO" ref="ClientDataVersionDAO"/>
+    <property name="DataVersionUpdateDAO" ref="DataVersionUpdateDAO"/>
+  </object>
+	<!--//Manual Upgrade New Version Service//-->
+	<object id="ManualUpgradeNewVersionService" type="Ace.Windows.Ix.Server.Sve.ManualUpgradeNewVersionService, Ace.Windows.Ix.Server" singleton="false">
+		<property name="ComponentVersionHeaderDAO" ref="ComponentVersionHeaderDAO"/>
+		<property name="ClientDataVersionHeaderDAO" ref="ClientDataVersionHeaderDAO"/>
+		<property name="WorkStationCurrentComponentVersionDAO" ref="WorkStationCurrentComponentVersionDAO"/>
+		<property name="ComponentVersionInstalledHistoryDAO" ref="ComponentVersionInstalledHistoryDAO"/>
+		<property name="WorkStationCurrentClientDataVersionDAO" ref="WorkStationCurrentClientDataVersionDAO"/>
+		<property name="CCCComponentVersionDownloadedForClientDAO" ref="CCCComponentVersionDownloadedForClientDAO"/>
+	</object>
+	<object id="ServerClientDataUpdateService" type="Ace.Windows.Ix.Server.Sve.ServerClientDataUpdateService, Ace.Windows.Ix.Server" singleton="false">		
+		<property name="ServerClientDataUpdateDAO" ref="ServerClientDataUpdateDAO"/>
+	</object>
+</objects>

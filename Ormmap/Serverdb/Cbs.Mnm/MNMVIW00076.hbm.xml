@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Mnm.Dmd.MNMDTO00076, Ace.Cbs.Mnm.Dmd" rename="dto"/>
+  <class name="MNMVIW00076" table="VW_MOB3522_ALL" mutable="false">
+
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+
+    <property name="PONO">
+      <column name="PONO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="ACCTNO">
+      <column name="ACCTNO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="ADATE">
+      <column name="ADATE" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="IDATE">
+      <column name="IDATE" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="AMOUNT">
+      <column name="AMOUNT" sql-type="decimal" not-null="false" />
+    </property>
+
+    <property name="STATUS">
+      <column name="STATUS" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="CUR">
+      <column name="CUR" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="SourceBr">
+      <column name="SourceBr" sql-type="varchar" not-null="false" />
+    </property>
+  </class>
+
+  <query name="MNMVIW00076.SelectPoNo">
+    select new dto
+    (
+    vw.PONO,
+    vw.ACCTNO,
+    vw.IDATE,
+    vw.ADATE,
+    vw.AMOUNT,
+    vw.STATUS,
+    vw.CUR
+    )
+    from MNMVIW00076 as vw
+    where vw.IDATE=null
+    and vw.SourceBr = :SourceBr
+
+  </query>
+</hibernate-mapping>
+

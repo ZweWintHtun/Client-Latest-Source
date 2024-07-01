@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Windows.Core" namespace="Ace.Windows.Core" xmlns="urn:nhibernate-mapping-2.2">
+
+	<!--CustomerId Table Fields-->
+	<class name="Ace.Windows.Core.Invoking.InvokingLog1" table="[InvokingLog1]" >
+
+	<id name="Id" type="Int32" unsaved-value="0">
+		<generator class="increment">
+		</generator>
+	</id>
+	
+	<property name="LogId">
+		<column name="LogId" sql-type="varchar" />
+	</property>
+
+    <property name="BranchCode">
+      <column name="BranchCode" sql-type="varchar" />
+    </property>
+	
+	<property name="ProgramId">
+		<column name="ProgramId" sql-type="nvarchar"  />
+	</property>
+
+    <property name="MachineName">
+      <column name="MachineName" sql-type="nvarchar"  />
+    </property>
+
+    <property name="MachineUserName">
+      <column name="MachineUserName" sql-type="nvarchar"  />
+    </property>
+
+    <property name="SystemUserId">
+      <column name="SystemUserId" sql-type="int"  />
+    </property>
+	
+    <property name="SystemUserName">
+      <column name="SystemUserName" sql-type="nvarchar"  />
+    </property>
+	
+    <property name="ServiceName">
+      <column name="ServiceName" sql-type="nvarchar"  />
+    </property>
+	
+    <property name="MethodName">
+      <column name="MethodName" sql-type="nvarchar"  />
+    </property>
+	
+    <property name="CreatedTime">
+      <column name="CreatedTime" sql-type="datetime"  />
+    </property>
+	
+    <property name="IPAddress">
+      <column name="IPAddress" sql-type="nvarchar"  />
+    </property>
+	
+    <property name="PhysicalAddress">
+      <column name="PhysicalAddress" sql-type="nvarchar"  />
+    </property>
+	
+    <property name="InputDataSize">
+      <column name="InputDataSize" sql-type="int"  />
+    </property>
+	
+    <property name="OutputDataSize">
+      <column name="OutputDataSize" sql-type="int"  />
+    </property>
+	
+    <property name="Port">
+      <column name="Port" sql-type="int"  />
+    </property>
+	
+    <property name="InputDataContent">
+      <column name="InputDataContent" sql-type="blob"  />
+    </property>
+	
+    <property name="OutputDataContent">
+      <column name="OutputDataContent" sql-type="blob"  />
+    </property>
+	
+    <property name="ResponseMessageCode">
+      <column name="RespondMessageCode" sql-type="nvarchar"  />
+    </property>
+	
+    <property name="ErrorOccured">
+      <column name="ErrorOccured" sql-type="nvarchar"  />
+    </property>
+	
+	<property name="ConnectionType">
+      <column name="ConnectionType" sql-type="int"  />
+    </property>
+	
+    <property name="ActionStatus">
+      <column name="ActionStatus" sql-type="int"  />
+    </property>
+  </class>
+</hibernate-mapping>

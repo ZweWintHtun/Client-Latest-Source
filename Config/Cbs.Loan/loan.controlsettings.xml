@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+
+  <!-- Region Insuran Type -->
+
+
+  <object id="INSURAN.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="txtCode" />
+  </object>
+
+  <object id="INSURAN.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+				  value="txtCode" />
+
+	</object>         
+
+
+  <!-- EndRegion -->
+
+
+  <!-- REGION GOODWILL Type -->     
+  <object id="GOODWILL.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls" value="txtCode" />
+  </object>
+
+  <object id="GOODWILL.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls" value="txtCode" />
+
+  </object>         
+
+
+
+  <!-- END REGION -->
+
+  <!--Added by YMP for "Seperating EOD Process" at 31-07-2019-->
+  <object id="HPRegisterReverse.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+            value="txtHPNo" />
+  </object>
+
+
+  
+  <!--Added by YMP for "Seperating EOD Process" at 31-07-2019-->
+  <object id="BLRegister.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+            value="grpLoanRegistration,grpSanctionAmount,grpLoanInterest,grpPenalFee,tbLoanProduct" />
+  </object>
+
+  
+  <!--Added by YMP for "Seperating EOD Process" at 31-07-2019-->
+  <object id="BLVoucher.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+            value="txtEntryNo,txtLoanNo,txtCurrency,txtSanctionAmount,rdoFull,rdoPartial,txtPartialAmount,gdvAccountInfo" />
+  </object>
+
+  
+  <!--Added by YMP for "Seperating EOD Process" at 31-07-2019-->
+  <object id="BLLimitChange.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+            value="gbRepayment,groupBox1,gpLimitIncrease,gvAccountList" />
+  </object>
+
+  
+  <!--Added by YMP for "Seperating EOD Process" at 31-07-2019-->
+  <object id="BLRegisterReverse.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+            value="txtBLNo" />
+  </object>
+
+  
+  <!--Added by YMP for "Seperating EOD Process" at 31-07-2019-->
+  <object id="PLRegister.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+            value="grpLoanRegistration,grpGuarantorInfo,grpSanctionAmount,grpLoanInterest" />
+  </object>
+
+  <!--Added by YMP for "Seperating EOD Process" at 31-07-2019-->
+  <object id="PLVoucher.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+            value="txtEntryNo,txtLoanNo,txtCurrency,txtSanctionAmount,gdvAccountInfo" />
+  </object>
+
+  
+  <!--Added by YMP for "Seperating EOD Process" at 31-07-2019-->
+  <object id="PLRegisterReverse.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+            value="txtPLNo" />
+  </object>
+
+  
+  <!--Added by YMP for "Seperating EOD Process" at 31-07-2019-->
+  <object id="HPRegister.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+            value="panel1,panel2,groupBox1,groupBox2,txtRemarks" />
+  </object>
+
+
+  <!--Added by YMP for "Seperating EOD Process" at 31-07-2019-->
+  <object id="PLManualPrepayment.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+            value="groupBox3,groupBox1,groupBox2" />
+  </object>
+
+  
+  <!--Added by YMP for "Seperating EOD Process" at 31-07-2019-->
+  <object id="HPManualPrepayment.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+            value="txtHPNo,txtETerm,chkRentalDiscountEdit,txtRentalDisRate" />
+  </object>
+
+  <!-- REGION LAND Type --> 
+  <object id="Land.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls" value="txtCode" />
+  </object>
+
+  <object id="Land.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls" value="txtCode" />
+  </object>     
+  <!-- END REGION -->
+
+  <!-- REGION Gold and Jewellery Type -->
+  <object id="GJT.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls" value="txtCode" />
+  </object>
+
+
+  <object id="GJT.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls" value="txtCode" />
+  </object>
+
+  <!-- REGION GJK Kind -->
+  <object id="GJK.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls" value="txtKind" />
+  </object>
+
+  <object id="GJK.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls" value="txtKind" />
+  </object>
+  <!-- END REGION -->
+
+  <!-- For Special Transfer Voucher(Need to Edit)-->     
+  <object id="SpecialTransfer.Enable.Cheque" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+				  value="txtChequeNo" />
+  </object>
+  <object id="SpecialTransfer.Disable.Cheque" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="txtChequeNo" />
+  </object>
+
+  <object id="Currency.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="cboCurrency" />
+  </object>
+
+  <object id="Currency.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+				  value="cboCurrency" />
+  </object>
+  
+  <!--<object id="SpecialTransfer.Disable.Printing" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="chkPrintTransaction" />
+  </object>
+  <object id="SpecialTransfer.Enable.Printing" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+				  value="chkPrintTransaction" />
+  </object>-->
+
+  <!--<object id="Transfer.Disable.Credit" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="gbIncomeType,txtChequeNo,gbChargesInformation,chkInputIncomeAmount" />
+  </object>-->
+  <!--addation-->
+
+  <!-- END REGION -->
+
+</objects>
+

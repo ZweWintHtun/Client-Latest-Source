@@ -1,0 +1,2720 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8FA61A35-29AE-4E9F-8520-09DD2BE4222A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ace.Cbs.Loan.Vew</RootNamespace>
+    <AssemblyName>Ace.Cbs.Loan.Vew</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ace.Cbs.Cx.Cle, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Cx.Cle.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Loan.Dmd, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Ace.Cbs.Loan.Dmd\obj\Debug\Ace.Cbs.Loan.Dmd.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Loan.Vew, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Ace.Windows.Admin.DataModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Admin.DataModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.CXClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.CXClient.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.TemplateEngine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Viewing.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataSetConversion, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.VSDesigner, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Spring.Core, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate33, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\Spring.Data.NHibernate33.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.7.0.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LOMVEW00030.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00030.Designer.cs">
+      <DependentUpon>LOMVEW00030.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00001.Designer.cs">
+      <DependentUpon>LOMVEW00001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00002.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00002.Designer.cs">
+      <DependentUpon>LOMVEW00002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00003.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00003.Designer.cs">
+      <DependentUpon>LOMVEW00003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00004.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00004.Designer.cs">
+      <DependentUpon>LOMVEW00004.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00005.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00005.Designer.cs">
+      <DependentUpon>LOMVEW00005.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00006.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00006.Designer.cs">
+      <DependentUpon>LOMVEW00006.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00007.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00007.Designer.cs">
+      <DependentUpon>LOMVEW00007.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00008.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00008.Designer.cs">
+      <DependentUpon>LOMVEW00008.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00009.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00009.Designer.cs">
+      <DependentUpon>LOMVEW00009.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00010.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00010.Designer.cs">
+      <DependentUpon>LOMVEW00010.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00012.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00012.Designer.cs">
+      <DependentUpon>LOMVEW00012.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00011.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00011.Designer.cs">
+      <DependentUpon>LOMVEW00011.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00013.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00013.Designer.cs">
+      <DependentUpon>LOMVEW00013.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00014.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00014.Designer.cs">
+      <DependentUpon>LOMVEW00014.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00015.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00015.Designer.cs">
+      <DependentUpon>LOMVEW00015.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00016.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00016.Designer.cs">
+      <DependentUpon>LOMVEW00016.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00020.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00020.Designer.cs">
+      <DependentUpon>LOMVEW00020.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00025.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00025.Designer.cs">
+      <DependentUpon>LOMVEW00025.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00021.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00021.Designer.cs">
+      <DependentUpon>LOMVEW00021.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00023.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00023.designer.cs">
+      <DependentUpon>LOMVEW00023.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00024.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00024.Designer.cs">
+      <DependentUpon>LOMVEW00024.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00026.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00026.Designer.cs">
+      <DependentUpon>LOMVEW00026.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00027.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00027.Designer.cs">
+      <DependentUpon>LOMVEW00027.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00028.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00028.Designer.cs">
+      <DependentUpon>LOMVEW00028.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00029.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00029.Designer.cs">
+      <DependentUpon>LOMVEW00029.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00031.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00031.Designer.cs">
+      <DependentUpon>LOMVEW00031.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00032.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00032.Designer.cs">
+      <DependentUpon>LOMVEW00032.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00033.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00033.Designer.cs">
+      <DependentUpon>LOMVEW00033.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00034.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00034.Designer.cs">
+      <DependentUpon>LOMVEW00034.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00035.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00035.Designer.cs">
+      <DependentUpon>LOMVEW00035.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00036.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00036.Designer.cs">
+      <DependentUpon>LOMVEW00036.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00037.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00037.Designer.cs">
+      <DependentUpon>LOMVEW00037.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00038.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00038.designer.cs">
+      <DependentUpon>LOMVEW00038.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00039.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00039.Designer.cs">
+      <DependentUpon>LOMVEW00039.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00040.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00040.Designer.cs">
+      <DependentUpon>LOMVEW00040.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00042.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00042.Designer.cs">
+      <DependentUpon>LOMVEW00042.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00043.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00043.Designer.cs">
+      <DependentUpon>LOMVEW00043.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00044.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00044.designer.cs">
+      <DependentUpon>LOMVEW00044.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00045.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00045.designer.cs">
+      <DependentUpon>LOMVEW00045.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00046.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00046.designer.cs">
+      <DependentUpon>LOMVEW00046.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00047.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00047.Designer.cs">
+      <DependentUpon>LOMVEW00047.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00048.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00048.Designer.cs">
+      <DependentUpon>LOMVEW00048.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00049.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00049.Designer.cs">
+      <DependentUpon>LOMVEW00049.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00050.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00050.Designer.cs">
+      <DependentUpon>LOMVEW00050.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00051.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00051.designer.cs">
+      <DependentUpon>LOMVEW00051.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00052.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00052.designer.cs">
+      <DependentUpon>LOMVEW00052.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00053.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00053.designer.cs">
+      <DependentUpon>LOMVEW00053.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00054.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00054.Designer.cs">
+      <DependentUpon>LOMVEW00054.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00055.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00055.Designer.cs">
+      <DependentUpon>LOMVEW00055.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00056.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00056.Designer.cs">
+      <DependentUpon>LOMVEW00056.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00057.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00057.Designer.cs">
+      <DependentUpon>LOMVEW00057.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00058.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00058.Designer.cs">
+      <DependentUpon>LOMVEW00058.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00059.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00059.Designer.cs">
+      <DependentUpon>LOMVEW00059.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00060.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00060.Designer.cs">
+      <DependentUpon>LOMVEW00060.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00061.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00061.Designer.cs">
+      <DependentUpon>LOMVEW00061.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00062.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00062.Designer.cs">
+      <DependentUpon>LOMVEW00062.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00063.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00063.Designer.cs">
+      <DependentUpon>LOMVEW00063.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00064.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00064.Designer.cs">
+      <DependentUpon>LOMVEW00064.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00065.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00065.Designer.cs">
+      <DependentUpon>LOMVEW00065.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00066.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00066.Designer.cs">
+      <DependentUpon>LOMVEW00066.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00067.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00067.Designer.cs">
+      <DependentUpon>LOMVEW00067.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00068.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00068.Designer.cs">
+      <DependentUpon>LOMVEW00068.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00069.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00069.Designer.cs">
+      <DependentUpon>LOMVEW00069.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00070.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00070.Designer.cs">
+      <DependentUpon>LOMVEW00070.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00071.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00071.designer.cs">
+      <DependentUpon>LOMVEW00071.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00072.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00072.Designer.cs">
+      <DependentUpon>LOMVEW00072.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00073.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00073.Designer.cs">
+      <DependentUpon>LOMVEW00073.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00074.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00074.designer.cs">
+      <DependentUpon>LOMVEW00074.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00075.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00075.designer.cs">
+      <DependentUpon>LOMVEW00075.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00076.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00076.designer.cs">
+      <DependentUpon>LOMVEW00076.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00077.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00077.Designer.cs">
+      <DependentUpon>LOMVEW00077.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00078.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00078.Designer.cs">
+      <DependentUpon>LOMVEW00078.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00080.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00080.Designer.cs">
+      <DependentUpon>LOMVEW00080.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00081.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00081.Designer.cs">
+      <DependentUpon>LOMVEW00081.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00086.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00086.designer.cs">
+      <DependentUpon>LOMVEW00086.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00087.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00087.designer.cs">
+      <DependentUpon>LOMVEW00087.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00088.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00088.Designer.cs">
+      <DependentUpon>LOMVEW00088.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00089.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00089.Designer.cs">
+      <DependentUpon>LOMVEW00089.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00090.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00090.Designer.cs">
+      <DependentUpon>LOMVEW00090.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00091.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00091.Designer.cs">
+      <DependentUpon>LOMVEW00091.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00092.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00092.designer.cs">
+      <DependentUpon>LOMVEW00092.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00093.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00093.Designer.cs">
+      <DependentUpon>LOMVEW00093.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00094.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00094.Designer.cs">
+      <DependentUpon>LOMVEW00094.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00096.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00096.designer.cs">
+      <DependentUpon>LOMVEW00096.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00097.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00097.designer.cs">
+      <DependentUpon>LOMVEW00097.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00098.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00098.designer.cs">
+      <DependentUpon>LOMVEW00098.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00100.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00100.designer.cs">
+      <DependentUpon>LOMVEW00100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00101.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00101.Designer.cs">
+      <DependentUpon>LOMVEW00101.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00102.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00102.Designer.cs">
+      <DependentUpon>LOMVEW00102.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00103.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00103.Designer.cs">
+      <DependentUpon>LOMVEW00103.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00104.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00104.Designer.cs">
+      <DependentUpon>LOMVEW00104.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00200.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00200.designer.cs">
+      <DependentUpon>LOMVEW00200.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00201.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00201.Designer.cs">
+      <DependentUpon>LOMVEW00201.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00202.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00202.Designer.cs">
+      <DependentUpon>LOMVEW00202.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00203.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00203.Designer.cs">
+      <DependentUpon>LOMVEW00203.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00204.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00204.designer.cs">
+      <DependentUpon>LOMVEW00204.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00205.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00205.Designer.cs">
+      <DependentUpon>LOMVEW00205.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00206.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00206.designer.cs">
+      <DependentUpon>LOMVEW00206.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00207.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00207.Designer.cs">
+      <DependentUpon>LOMVEW00207.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00208.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00208.Designer.cs">
+      <DependentUpon>LOMVEW00208.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00209.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00209.Designer.cs">
+      <DependentUpon>LOMVEW00209.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00210.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00210.Designer.cs">
+      <DependentUpon>LOMVEW00210.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00211.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00211.Designer.cs">
+      <DependentUpon>LOMVEW00211.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00212.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00212.designer.cs">
+      <DependentUpon>LOMVEW00212.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00213.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00213.designer.cs">
+      <DependentUpon>LOMVEW00213.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00214.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00214.designer.cs">
+      <DependentUpon>LOMVEW00214.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00215.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00215.designer.cs">
+      <DependentUpon>LOMVEW00215.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00216.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00216.designer.cs">
+      <DependentUpon>LOMVEW00216.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00217.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00217.designer.cs">
+      <DependentUpon>LOMVEW00217.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00218.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00218.designer.cs">
+      <DependentUpon>LOMVEW00218.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00219.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00219.designer.cs">
+      <DependentUpon>LOMVEW00219.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00220.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00220.Designer.cs">
+      <DependentUpon>LOMVEW00220.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00221.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00221.Designer.cs">
+      <DependentUpon>LOMVEW00221.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00222.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00222.designer.cs">
+      <DependentUpon>LOMVEW00222.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00223.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00223.Designer.cs">
+      <DependentUpon>LOMVEW00223.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00224.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00224.Designer.cs">
+      <DependentUpon>LOMVEW00224.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00225.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00225.Designer.cs">
+      <DependentUpon>LOMVEW00225.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00227.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00227.Designer.cs">
+      <DependentUpon>LOMVEW00227.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00228.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00228.Designer.cs">
+      <DependentUpon>LOMVEW00228.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00229.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00229.Designer.cs">
+      <DependentUpon>LOMVEW00229.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00230.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00230.Designer.cs">
+      <DependentUpon>LOMVEW00230.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00231.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00231.Designer.cs">
+      <DependentUpon>LOMVEW00231.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00232.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00232.Designer.cs">
+      <DependentUpon>LOMVEW00232.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00233.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00233.Designer.cs">
+      <DependentUpon>LOMVEW00233.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00234.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00234.Designer.cs">
+      <DependentUpon>LOMVEW00234.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00235.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00235.designer.cs">
+      <DependentUpon>LOMVEW00235.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00236.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00236.designer.cs">
+      <DependentUpon>LOMVEW00236.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00237.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00237.designer.cs">
+      <DependentUpon>LOMVEW00237.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00238.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00238.Designer.cs">
+      <DependentUpon>LOMVEW00238.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00239.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00239.Designer.cs">
+      <DependentUpon>LOMVEW00239.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00240.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00240.Designer.cs">
+      <DependentUpon>LOMVEW00240.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00241.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00241.Designer.cs">
+      <DependentUpon>LOMVEW00241.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00242.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00242.Designer.cs">
+      <DependentUpon>LOMVEW00242.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00243.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00243.Designer.cs">
+      <DependentUpon>LOMVEW00243.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00244.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00244.Designer.cs">
+      <DependentUpon>LOMVEW00244.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00245.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00245.Designer.cs">
+      <DependentUpon>LOMVEW00245.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00246.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00246.Designer.cs">
+      <DependentUpon>LOMVEW00246.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00247.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00247.Designer.cs">
+      <DependentUpon>LOMVEW00247.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00248.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00248.Designer.cs">
+      <DependentUpon>LOMVEW00248.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00249.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00249.Designer.cs">
+      <DependentUpon>LOMVEW00249.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00250.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00250.designer.cs">
+      <DependentUpon>LOMVEW00250.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00251.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00251.Designer.cs">
+      <DependentUpon>LOMVEW00251.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00300.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00300.designer.cs">
+      <DependentUpon>LOMVEW00300.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00301.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00301.designer.cs">
+      <DependentUpon>LOMVEW00301.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00303.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00303.Designer.cs">
+      <DependentUpon>LOMVEW00303.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00304.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00304.Designer.cs">
+      <DependentUpon>LOMVEW00304.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00305.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00305.Designer.cs">
+      <DependentUpon>LOMVEW00305.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00306.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00306.Designer.cs">
+      <DependentUpon>LOMVEW00306.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00307.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00307.Designer.cs">
+      <DependentUpon>LOMVEW00307.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00308.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00308.Designer.cs">
+      <DependentUpon>LOMVEW00308.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00309.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00309.Designer.cs">
+      <DependentUpon>LOMVEW00309.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00310.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00310.Designer.cs">
+      <DependentUpon>LOMVEW00310.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00311.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00311.Designer.cs">
+      <DependentUpon>LOMVEW00311.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00312.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00312.Designer.cs">
+      <DependentUpon>LOMVEW00312.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00313.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00313.Designer.cs">
+      <DependentUpon>LOMVEW00313.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00314.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00314.Designer.cs">
+      <DependentUpon>LOMVEW00314.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00315.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00315.Designer.cs">
+      <DependentUpon>LOMVEW00315.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00316.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00316.Designer.cs">
+      <DependentUpon>LOMVEW00316.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00317.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00317.Designer.cs">
+      <DependentUpon>LOMVEW00317.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00318.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00318.Designer.cs">
+      <DependentUpon>LOMVEW00318.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00319.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00319.Designer.cs">
+      <DependentUpon>LOMVEW00319.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00320.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00320.Designer.cs">
+      <DependentUpon>LOMVEW00320.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00321.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00321.Designer.cs">
+      <DependentUpon>LOMVEW00321.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00322.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00322.Designer.cs">
+      <DependentUpon>LOMVEW00322.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00323.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00323.Designer.cs">
+      <DependentUpon>LOMVEW00323.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00324.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00324.Designer.cs">
+      <DependentUpon>LOMVEW00324.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00325.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00325.Designer.cs">
+      <DependentUpon>LOMVEW00325.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00326.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00326.Designer.cs">
+      <DependentUpon>LOMVEW00326.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00327.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00327.designer.cs">
+      <DependentUpon>LOMVEW00327.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00328.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00328.Designer.cs">
+      <DependentUpon>LOMVEW00328.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00329.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00329.Designer.cs">
+      <DependentUpon>LOMVEW00329.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00330.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00330.Designer.cs">
+      <DependentUpon>LOMVEW00330.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00331.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00331.Designer.cs">
+      <DependentUpon>LOMVEW00331.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00332.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00332.Designer.cs">
+      <DependentUpon>LOMVEW00332.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00333.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00333.Designer.cs">
+      <DependentUpon>LOMVEW00333.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00334.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00334.Designer.cs">
+      <DependentUpon>LOMVEW00334.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00335.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00335.Designer.cs">
+      <DependentUpon>LOMVEW00335.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00336.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00336.Designer.cs">
+      <DependentUpon>LOMVEW00336.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00337.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00337.Designer.cs">
+      <DependentUpon>LOMVEW00337.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00338.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00338.Designer.cs">
+      <DependentUpon>LOMVEW00338.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00339.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00339.Designer.cs">
+      <DependentUpon>LOMVEW00339.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00340.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00340.Designer.cs">
+      <DependentUpon>LOMVEW00340.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00341.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00341.Designer.cs">
+      <DependentUpon>LOMVEW00341.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00342.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00342.Designer.cs">
+      <DependentUpon>LOMVEW00342.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00343.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00343.Designer.cs">
+      <DependentUpon>LOMVEW00343.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00344.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00344.Designer.cs">
+      <DependentUpon>LOMVEW00344.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00345.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00345.Designer.cs">
+      <DependentUpon>LOMVEW00345.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00346.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00346.Designer.cs">
+      <DependentUpon>LOMVEW00346.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00403.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00403.designer.cs">
+      <DependentUpon>LOMVEW00403.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00404.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00404.Designer.cs">
+      <DependentUpon>LOMVEW00404.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00405.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00405.designer.cs">
+      <DependentUpon>LOMVEW00405.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00406.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00406.designer.cs">
+      <DependentUpon>LOMVEW00406.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00407.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00407.Designer.cs">
+      <DependentUpon>LOMVEW00407.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00408.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00408.designer.cs">
+      <DependentUpon>LOMVEW00408.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00409.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00409.designer.cs">
+      <DependentUpon>LOMVEW00409.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00410.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00410.designer.cs">
+      <DependentUpon>LOMVEW00410.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00411.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00411.designer.cs">
+      <DependentUpon>LOMVEW00411.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00412.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00412.Designer.cs">
+      <DependentUpon>LOMVEW00412.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00413.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00413.Designer.cs">
+      <DependentUpon>LOMVEW00413.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00414.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00414.Designer.cs">
+      <DependentUpon>LOMVEW00414.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00415.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00415.Designer.cs">
+      <DependentUpon>LOMVEW00415.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00416.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00416.Designer.cs">
+      <DependentUpon>LOMVEW00416.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00417.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00417.Designer.cs">
+      <DependentUpon>LOMVEW00417.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00418.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00418.Designer.cs">
+      <DependentUpon>LOMVEW00418.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00419.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00419.Designer.cs">
+      <DependentUpon>LOMVEW00419.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00420.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00420.Designer.cs">
+      <DependentUpon>LOMVEW00420.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00421.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00421.Designer.cs">
+      <DependentUpon>LOMVEW00421.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00422.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00422.Designer.cs">
+      <DependentUpon>LOMVEW00422.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00423.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00423.Designer.cs">
+      <DependentUpon>LOMVEW00423.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00424.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00424.Designer.cs">
+      <DependentUpon>LOMVEW00424.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00425.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00425.Designer.cs">
+      <DependentUpon>LOMVEW00425.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00426.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00426.Designer.cs">
+      <DependentUpon>LOMVEW00426.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00427.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00427.Designer.cs">
+      <DependentUpon>LOMVEW00427.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00428.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00428.Designer.cs">
+      <DependentUpon>LOMVEW00428.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00429.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00429.Designer.cs">
+      <DependentUpon>LOMVEW00429.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00430.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00430.Designer.cs">
+      <DependentUpon>LOMVEW00430.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00431.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00431.Designer.cs">
+      <DependentUpon>LOMVEW00431.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00432.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00432.Designer.cs">
+      <DependentUpon>LOMVEW00432.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00433.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00433.Designer.cs">
+      <DependentUpon>LOMVEW00433.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00434.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00434.Designer.cs">
+      <DependentUpon>LOMVEW00434.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00435.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00435.Designer.cs">
+      <DependentUpon>LOMVEW00435.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00436.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00436.Designer.cs">
+      <DependentUpon>LOMVEW00436.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00437.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00437.Designer.cs">
+      <DependentUpon>LOMVEW00437.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00438.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00438.Designer.cs">
+      <DependentUpon>LOMVEW00438.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00439.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00439.Designer.cs">
+      <DependentUpon>LOMVEW00439.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00440.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00440.Designer.cs">
+      <DependentUpon>LOMVEW00440.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00441.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00441.Designer.cs">
+      <DependentUpon>LOMVEW00441.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00442.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00442.Designer.cs">
+      <DependentUpon>LOMVEW00442.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00443.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00443.Designer.cs">
+      <DependentUpon>LOMVEW00443.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00444.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00444.designer.cs">
+      <DependentUpon>LOMVEW00444.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00445.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00445.designer.cs">
+      <DependentUpon>LOMVEW00445.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00446.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00446.designer.cs">
+      <DependentUpon>LOMVEW00446.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOMVEW00447.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOMVEW00447.Designer.cs">
+      <DependentUpon>LOMVEW00447.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RDLC\DsReport.cs">
+      <DependentUpon>DsReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RDLC\DsReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RDLC\RptBLContractPrintingHYPO.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptBLContractPrintingHYPO.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RDLC\RptBLContractPrintingLB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptBLContractPrintingLB.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RDLC\RptHPContractInstallment.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptHPContractInstallment.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RDLC\RptHPContractPrinting.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptHPContractPrinting.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RDLC\RptPLContractInstallment.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptPLContractInstallment.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RDLC\RptPLContractPrinting.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptPLContractPrinting.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Toolbox\RadioListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LOMVEW00026.resx">
+      <DependentUpon>LOMVEW00026.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00030.resx">
+      <DependentUpon>LOMVEW00030.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00001.resx">
+      <DependentUpon>LOMVEW00001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00002.resx">
+      <DependentUpon>LOMVEW00002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00003.resx">
+      <DependentUpon>LOMVEW00003.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00004.resx">
+      <DependentUpon>LOMVEW00004.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00005.resx">
+      <DependentUpon>LOMVEW00005.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00006.resx">
+      <DependentUpon>LOMVEW00006.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00007.resx">
+      <DependentUpon>LOMVEW00007.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00008.resx">
+      <DependentUpon>LOMVEW00008.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00009.resx">
+      <DependentUpon>LOMVEW00009.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00010.resx">
+      <DependentUpon>LOMVEW00010.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00012.resx">
+      <DependentUpon>LOMVEW00012.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00011.resx">
+      <DependentUpon>LOMVEW00011.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00013.resx">
+      <DependentUpon>LOMVEW00013.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00014.resx">
+      <DependentUpon>LOMVEW00014.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00015.resx">
+      <DependentUpon>LOMVEW00015.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00016.resx">
+      <DependentUpon>LOMVEW00016.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00020.resx">
+      <DependentUpon>LOMVEW00020.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00025.resx">
+      <DependentUpon>LOMVEW00025.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00021.resx">
+      <DependentUpon>LOMVEW00021.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00023.resx">
+      <DependentUpon>LOMVEW00023.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00024.resx">
+      <DependentUpon>LOMVEW00024.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00027.resx">
+      <DependentUpon>LOMVEW00027.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00028.resx">
+      <DependentUpon>LOMVEW00028.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00029.resx">
+      <DependentUpon>LOMVEW00029.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00031.resx">
+      <DependentUpon>LOMVEW00031.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00032.resx">
+      <DependentUpon>LOMVEW00032.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00033.resx">
+      <DependentUpon>LOMVEW00033.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00034.resx">
+      <DependentUpon>LOMVEW00034.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00035.resx">
+      <DependentUpon>LOMVEW00035.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00036.resx">
+      <DependentUpon>LOMVEW00036.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00037.resx">
+      <DependentUpon>LOMVEW00037.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00038.resx">
+      <DependentUpon>LOMVEW00038.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00039.resx">
+      <DependentUpon>LOMVEW00039.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00040.resx">
+      <DependentUpon>LOMVEW00040.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00042.resx">
+      <DependentUpon>LOMVEW00042.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00043.resx">
+      <DependentUpon>LOMVEW00043.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00044.resx">
+      <DependentUpon>LOMVEW00044.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00045.resx">
+      <DependentUpon>LOMVEW00045.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00046.resx">
+      <DependentUpon>LOMVEW00046.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00047.resx">
+      <DependentUpon>LOMVEW00047.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00048.resx">
+      <DependentUpon>LOMVEW00048.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00049.resx">
+      <DependentUpon>LOMVEW00049.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00050.resx">
+      <DependentUpon>LOMVEW00050.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00051.resx">
+      <DependentUpon>LOMVEW00051.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00052.resx">
+      <DependentUpon>LOMVEW00052.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00053.resx">
+      <DependentUpon>LOMVEW00053.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00054.resx">
+      <DependentUpon>LOMVEW00054.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00055.resx">
+      <DependentUpon>LOMVEW00055.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00056.resx">
+      <DependentUpon>LOMVEW00056.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00057.resx">
+      <DependentUpon>LOMVEW00057.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00058.resx">
+      <DependentUpon>LOMVEW00058.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00059.resx">
+      <DependentUpon>LOMVEW00059.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00060.resx">
+      <DependentUpon>LOMVEW00060.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00061.resx">
+      <DependentUpon>LOMVEW00061.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00062.resx">
+      <DependentUpon>LOMVEW00062.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00063.resx">
+      <DependentUpon>LOMVEW00063.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00064.resx">
+      <DependentUpon>LOMVEW00064.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00065.resx">
+      <DependentUpon>LOMVEW00065.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00066.resx">
+      <DependentUpon>LOMVEW00066.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00067.resx">
+      <DependentUpon>LOMVEW00067.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00068.resx">
+      <DependentUpon>LOMVEW00068.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00069.resx">
+      <DependentUpon>LOMVEW00069.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00070.resx">
+      <DependentUpon>LOMVEW00070.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00071.resx">
+      <DependentUpon>LOMVEW00071.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00072.resx">
+      <DependentUpon>LOMVEW00072.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00073.resx">
+      <DependentUpon>LOMVEW00073.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00074.resx">
+      <DependentUpon>LOMVEW00074.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00075.resx">
+      <DependentUpon>LOMVEW00075.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00076.resx">
+      <DependentUpon>LOMVEW00076.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00077.resx">
+      <DependentUpon>LOMVEW00077.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00078.resx">
+      <DependentUpon>LOMVEW00078.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00080.resx">
+      <DependentUpon>LOMVEW00080.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00081.resx">
+      <DependentUpon>LOMVEW00081.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00086.resx">
+      <DependentUpon>LOMVEW00086.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00087.resx">
+      <DependentUpon>LOMVEW00087.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00088.resx">
+      <DependentUpon>LOMVEW00088.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00089.resx">
+      <DependentUpon>LOMVEW00089.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00090.resx">
+      <DependentUpon>LOMVEW00090.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00091.resx">
+      <DependentUpon>LOMVEW00091.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00092.resx">
+      <DependentUpon>LOMVEW00092.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00093.resx">
+      <DependentUpon>LOMVEW00093.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00094.resx">
+      <DependentUpon>LOMVEW00094.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00096.resx">
+      <DependentUpon>LOMVEW00096.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00097.resx">
+      <DependentUpon>LOMVEW00097.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00098.resx">
+      <DependentUpon>LOMVEW00098.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00100.resx">
+      <DependentUpon>LOMVEW00100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00101.resx">
+      <DependentUpon>LOMVEW00101.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00102.resx">
+      <DependentUpon>LOMVEW00102.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00103.resx">
+      <DependentUpon>LOMVEW00103.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00104.resx">
+      <DependentUpon>LOMVEW00104.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00200.resx">
+      <DependentUpon>LOMVEW00200.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00201.resx">
+      <DependentUpon>LOMVEW00201.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00202.resx">
+      <DependentUpon>LOMVEW00202.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00203.resx">
+      <DependentUpon>LOMVEW00203.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00204.resx">
+      <DependentUpon>LOMVEW00204.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00205.resx">
+      <DependentUpon>LOMVEW00205.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00206.resx">
+      <DependentUpon>LOMVEW00206.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00207.resx">
+      <DependentUpon>LOMVEW00207.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00208.resx">
+      <DependentUpon>LOMVEW00208.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00209.resx">
+      <DependentUpon>LOMVEW00209.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00210.resx">
+      <DependentUpon>LOMVEW00210.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00211.resx">
+      <DependentUpon>LOMVEW00211.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00212.resx">
+      <DependentUpon>LOMVEW00212.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00213.resx">
+      <DependentUpon>LOMVEW00213.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00214.resx">
+      <DependentUpon>LOMVEW00214.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00215.resx">
+      <DependentUpon>LOMVEW00215.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00216.resx">
+      <DependentUpon>LOMVEW00216.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00217.resx">
+      <DependentUpon>LOMVEW00217.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00218.resx">
+      <DependentUpon>LOMVEW00218.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00219.resx">
+      <DependentUpon>LOMVEW00219.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00220.resx">
+      <DependentUpon>LOMVEW00220.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00221.resx">
+      <DependentUpon>LOMVEW00221.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00222.resx">
+      <DependentUpon>LOMVEW00222.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00223.resx">
+      <DependentUpon>LOMVEW00223.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00224.resx">
+      <DependentUpon>LOMVEW00224.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00225.resx">
+      <DependentUpon>LOMVEW00225.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00227.resx">
+      <DependentUpon>LOMVEW00227.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00228.resx">
+      <DependentUpon>LOMVEW00228.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00229.resx">
+      <DependentUpon>LOMVEW00229.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00230.resx">
+      <DependentUpon>LOMVEW00230.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00231.resx">
+      <DependentUpon>LOMVEW00231.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00232.resx">
+      <DependentUpon>LOMVEW00232.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00233.resx">
+      <DependentUpon>LOMVEW00233.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00234.resx">
+      <DependentUpon>LOMVEW00234.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00235.resx">
+      <DependentUpon>LOMVEW00235.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00236.resx">
+      <DependentUpon>LOMVEW00236.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00237.resx">
+      <DependentUpon>LOMVEW00237.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00238.resx">
+      <DependentUpon>LOMVEW00238.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00239.resx">
+      <DependentUpon>LOMVEW00239.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00240.resx">
+      <DependentUpon>LOMVEW00240.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00241.resx">
+      <DependentUpon>LOMVEW00241.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00242.resx">
+      <DependentUpon>LOMVEW00242.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00243.resx">
+      <DependentUpon>LOMVEW00243.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00244.resx">
+      <DependentUpon>LOMVEW00244.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00245.resx">
+      <DependentUpon>LOMVEW00245.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00246.resx">
+      <DependentUpon>LOMVEW00246.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00247.resx">
+      <DependentUpon>LOMVEW00247.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00248.resx">
+      <DependentUpon>LOMVEW00248.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00249.resx">
+      <DependentUpon>LOMVEW00249.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00250.resx">
+      <DependentUpon>LOMVEW00250.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00251.resx">
+      <DependentUpon>LOMVEW00251.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00300.resx">
+      <DependentUpon>LOMVEW00300.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00301.resx">
+      <DependentUpon>LOMVEW00301.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00303.resx">
+      <DependentUpon>LOMVEW00303.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00304.resx">
+      <DependentUpon>LOMVEW00304.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00305.resx">
+      <DependentUpon>LOMVEW00305.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00306.resx">
+      <DependentUpon>LOMVEW00306.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00307.resx">
+      <DependentUpon>LOMVEW00307.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00308.resx">
+      <DependentUpon>LOMVEW00308.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00309.resx">
+      <DependentUpon>LOMVEW00309.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00310.resx">
+      <DependentUpon>LOMVEW00310.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00311.resx">
+      <DependentUpon>LOMVEW00311.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00312.resx">
+      <DependentUpon>LOMVEW00312.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00313.resx">
+      <DependentUpon>LOMVEW00313.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00314.resx">
+      <DependentUpon>LOMVEW00314.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00315.resx">
+      <DependentUpon>LOMVEW00315.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00316.resx">
+      <DependentUpon>LOMVEW00316.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00317.resx">
+      <DependentUpon>LOMVEW00317.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00318.resx">
+      <DependentUpon>LOMVEW00318.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00319.resx">
+      <DependentUpon>LOMVEW00319.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00320.resx">
+      <DependentUpon>LOMVEW00320.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00321.resx">
+      <DependentUpon>LOMVEW00321.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00322.resx">
+      <DependentUpon>LOMVEW00322.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00323.resx">
+      <DependentUpon>LOMVEW00323.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00324.resx">
+      <DependentUpon>LOMVEW00324.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00325.resx">
+      <DependentUpon>LOMVEW00325.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00326.resx">
+      <DependentUpon>LOMVEW00326.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00327.resx">
+      <DependentUpon>LOMVEW00327.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00328.resx">
+      <DependentUpon>LOMVEW00328.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00329.resx">
+      <DependentUpon>LOMVEW00329.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00330.resx">
+      <DependentUpon>LOMVEW00330.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00331.resx">
+      <DependentUpon>LOMVEW00331.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00332.resx">
+      <DependentUpon>LOMVEW00332.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00333.resx">
+      <DependentUpon>LOMVEW00333.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00334.resx">
+      <DependentUpon>LOMVEW00334.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00335.resx">
+      <DependentUpon>LOMVEW00335.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00336.resx">
+      <DependentUpon>LOMVEW00336.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00337.resx">
+      <DependentUpon>LOMVEW00337.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00338.resx">
+      <DependentUpon>LOMVEW00338.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00339.resx">
+      <DependentUpon>LOMVEW00339.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00340.resx">
+      <DependentUpon>LOMVEW00340.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00341.resx">
+      <DependentUpon>LOMVEW00341.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00342.resx">
+      <DependentUpon>LOMVEW00342.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00343.resx">
+      <DependentUpon>LOMVEW00343.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00344.resx">
+      <DependentUpon>LOMVEW00344.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00345.resx">
+      <DependentUpon>LOMVEW00345.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00346.resx">
+      <DependentUpon>LOMVEW00346.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00403.resx">
+      <DependentUpon>LOMVEW00403.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00404.resx">
+      <DependentUpon>LOMVEW00404.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00405.resx">
+      <DependentUpon>LOMVEW00405.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00406.resx">
+      <DependentUpon>LOMVEW00406.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00407.resx">
+      <DependentUpon>LOMVEW00407.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00408.resx">
+      <DependentUpon>LOMVEW00408.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00409.resx">
+      <DependentUpon>LOMVEW00409.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00410.resx">
+      <DependentUpon>LOMVEW00410.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00411.resx">
+      <DependentUpon>LOMVEW00411.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00412.resx">
+      <DependentUpon>LOMVEW00412.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00413.resx">
+      <DependentUpon>LOMVEW00413.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00414.resx">
+      <DependentUpon>LOMVEW00414.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00415.resx">
+      <DependentUpon>LOMVEW00415.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00416.resx">
+      <DependentUpon>LOMVEW00416.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00417.resx">
+      <DependentUpon>LOMVEW00417.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00418.resx">
+      <DependentUpon>LOMVEW00418.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00419.resx">
+      <DependentUpon>LOMVEW00419.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00420.resx">
+      <DependentUpon>LOMVEW00420.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00421.resx">
+      <DependentUpon>LOMVEW00421.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00422.resx">
+      <DependentUpon>LOMVEW00422.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00423.resx">
+      <DependentUpon>LOMVEW00423.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00424.resx">
+      <DependentUpon>LOMVEW00424.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00425.resx">
+      <DependentUpon>LOMVEW00425.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00426.resx">
+      <DependentUpon>LOMVEW00426.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00427.resx">
+      <DependentUpon>LOMVEW00427.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00428.resx">
+      <DependentUpon>LOMVEW00428.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00429.resx">
+      <DependentUpon>LOMVEW00429.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00430.resx">
+      <DependentUpon>LOMVEW00430.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00431.resx">
+      <DependentUpon>LOMVEW00431.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00432.resx">
+      <DependentUpon>LOMVEW00432.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00433.resx">
+      <DependentUpon>LOMVEW00433.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00434.resx">
+      <DependentUpon>LOMVEW00434.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00435.resx">
+      <DependentUpon>LOMVEW00435.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00436.resx">
+      <DependentUpon>LOMVEW00436.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00437.resx">
+      <DependentUpon>LOMVEW00437.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00438.resx">
+      <DependentUpon>LOMVEW00438.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00439.resx">
+      <DependentUpon>LOMVEW00439.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00440.resx">
+      <DependentUpon>LOMVEW00440.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00441.resx">
+      <DependentUpon>LOMVEW00441.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00442.resx">
+      <DependentUpon>LOMVEW00442.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00443.resx">
+      <DependentUpon>LOMVEW00443.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00444.resx">
+      <DependentUpon>LOMVEW00444.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00445.resx">
+      <DependentUpon>LOMVEW00445.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00446.resx">
+      <DependentUpon>LOMVEW00446.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOMVEW00447.resx">
+      <DependentUpon>LOMVEW00447.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\LOMRDLC00001.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00002.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00003.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00004.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00005.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00006.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00007.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00008.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00009.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00010.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00011.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00012.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00013.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00014.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00015.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00016.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00017.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00018.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00019.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00020.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00021.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00022.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00023.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00024.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00025.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00026.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00027.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00028.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00029.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00030.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00031.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00032.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00033.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00034.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00036.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00037.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00038.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00039.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00040.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00041.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00042.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00043.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00044.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00045.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00046.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00049.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00050.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00051.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00052.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00053.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00054.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00055.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00056.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00058.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\LOMRDLC00059.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\LOMRDLC00060.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00061.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00062.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00063.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00064.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00065.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00057.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00066.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00067.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00068.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00069.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00070.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00071.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00072.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00073.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00074.rdlc">
+      <SubType>Form</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\LOMRDLC00075.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00076.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00077.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00078.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00079.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00080.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00081.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00082.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00083.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00084.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00085.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00086.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00087.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00088.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00089.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00090.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00091.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00092.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00093.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00094.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00095.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00096.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00097.rdlc" />
+    <EmbeddedResource Include="RDLC\LOMRDLC00098.rdlc" />
+    <EmbeddedResource Include="RDLC\RptBLContractPrintingHYPO.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptBLContractPrintingHYPO.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\RptBLContractPrintingLB.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptBLContractPrintingLB.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\RptHPContractInstallment.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptHPContractInstallment.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\RptHPContractPrinting.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptHPContractPrinting.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\RptPLContractInstallment.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptPLContractInstallment.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\RptPLContractPrinting.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptPLContractPrinting.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Mnm\Ace.Cbs.Mnm._Excel\Ace.Cbs.Mnm._Excel.csproj">
+      <Project>{3DCA00B9-CA43-4843-B3F0-3C5525433C80}</Project>
+      <Name>Ace.Cbs.Mnm._Excel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Sam\Ace.Cbs.Sam.Dmd\Ace.Cbs.Sam.Dmd.csproj">
+      <Project>{1D745D46-24C2-4DFB-B9F2-E7033EB438E4}</Project>
+      <Name>Ace.Cbs.Sam.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tcm\Ace.Cbs.Tcm.Ctr\Ace.Cbs.Tcm.Ctr.csproj">
+      <Project>{77567CFC-17CF-4B2D-8502-028AA5E1019F}</Project>
+      <Name>Ace.Cbs.Tcm.Ctr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tcm\Ace.Cbs.Tcm.Dmd\Ace.Cbs.Tcm.Dmd.csproj">
+      <Project>{F4D9433A-689F-4964-857C-D3C14355A870}</Project>
+      <Name>Ace.Cbs.Tcm.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Mnm\Ace.Cbs.Mnm.Dmd\Ace.Cbs.Mnm.Dmd.csproj">
+      <Project>{D8EA36A9-8BBC-4D2A-84C7-49BDA6006F94}</Project>
+      <Name>Ace.Cbs.Mnm.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ace.Cbs.Loan.Ctr\Ace.Cbs.Loan.Ctr.csproj">
+      <Project>{8E57EAE3-7397-490E-B276-123DAC52B728}</Project>
+      <Name>Ace.Cbs.Loan.Ctr</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Cx\Ace.Cbs.Cx.Com\Ace.Cbs.Cx.Com.csproj">
+      <Project>{83A33F31-AFB5-4778-8AEF-42EB781DD861}</Project>
+      <Name>Ace.Cbs.Cx.Com</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Pfm\Ace.Cbs.Pfm.Dmd\Ace.Cbs.Pfm.Dmd.csproj">
+      <Project>{8F20F64D-FF47-47A3-87CA-30D8A12B5B75}</Project>
+      <Name>Ace.Cbs.Pfm.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tel\Ace.Cbs.Tel.Dmd\Ace.Cbs.Tel.Dmd.csproj">
+      <Project>{4AE62F74-E000-4768-90BC-DCBBB1B4C68C}</Project>
+      <Name>Ace.Cbs.Tel.Dmd</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\Resources\cancel_01.gif" />
+    <Content Include="Properties\Resources\Delete_Main.png" />
+    <Content Include="Properties\Resources\Delete_Main1.png" />
+    <Content Include="Properties\Resources\edit.jpg" />
+    <Content Include="Properties\Resources\Edit_Main.png" />
+    <Content Include="Properties\Resources\Edit_Main1.png" />
+    <Content Include="Properties\Resources\find1.png" />
+    <Content Include="Properties\Resources\Log Out_16x16.png" />
+    <Content Include="Properties\Resources\logo.ico" />
+    <Content Include="Properties\Resources\Money_Calculator.ico" />
+    <Content Include="Properties\Resources\refresh.ico" />
+    <Content Include="Resources\cancel_01.gif" />
+    <Content Include="Resources\Delete_Main.png" />
+    <Content Include="Resources\Delete_Main1.png" />
+    <Content Include="Resources\edit.jpg" />
+    <Content Include="Resources\Edit_Main.png" />
+    <Content Include="Resources\Edit_Main1.png" />
+    <Content Include="Resources\find1.png" />
+    <Content Include="Resources\Log Out_16x16.png" />
+    <Content Include="Resources\logo.ico" />
+    <Content Include="Resources\Money_Calculator.ico" />
+    <Content Include="Resources\refresh.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00081.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00082.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00083.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00084.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00092.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00095.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00096.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00100.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00200.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00202.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00203.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00204.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00205.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00206.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00207.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00208.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00209.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00210.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00211.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00212.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00213.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00214.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00215.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00216.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00217.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00218.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00219.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00220.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00221.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00222.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00223.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00224.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00225.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00226.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00227.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00228.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00229.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00230.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00231.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00232.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00234.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00235.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00236.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00237.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00238.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00239.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00240.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00241.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00242.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00243.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00244.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00245.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00414.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00423.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00427.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00001.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00002.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00004.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00007.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00008.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00009.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00010.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00011.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00012.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00013.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00014.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00015.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00016.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00017.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00018.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00021.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00023.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00024.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00025.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00034.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00035.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00044.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00047.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00054.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00055.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00057.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00059.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00060.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00068.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00069.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00070.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00071.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00072.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00073.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00074.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00075.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00076.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00077.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00078.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00079.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00080.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00085.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00086.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00093.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00094.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00099.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00102.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00201.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00300.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00302.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO003031.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00305.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00307.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00309.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00311.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00312.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00313.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00314.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00316.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00325.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00326.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00334.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00336.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00338.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00339.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00401.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00402.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00405.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMDTO00406.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00001.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00002.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00003.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00004.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00005.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00006.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00007.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00008.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00009.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00010.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00011.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00012.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00013.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00014.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00015.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00016.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00017.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00018.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00019.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00021.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00022.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00023.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00024.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00025.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00026.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00068.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00069.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00070.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00071.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00072.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00073.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00074.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00075.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00076.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00077.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00078.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00079.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00085.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00086.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00099.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00100.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00300.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00302.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00311.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00312.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00313.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00401.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00402.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00403.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00404.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMORM00405.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMVIW00001.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMVIW00002.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMVIW00034.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMVIW00035.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMVIW00042.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMVIW00047.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMVIW00051.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMVIW00057.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMVIW00059.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMVIW00061.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMVIW00093.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMVIW00094.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMVIW00303.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMVIW00305.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMVIW00307.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMVIW00309.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMVIW00314.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMVIW00316.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMVIW00405.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.LOMVIW00414.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00018.datasource" />
+    <None Include="RDLC\DsReport.xsc">
+      <DependentUpon>DsReport.xsd</DependentUpon>
+    </None>
+    <None Include="RDLC\DsReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RDLC\DsReport.xss">
+      <DependentUpon>DsReport.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

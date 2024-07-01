@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00008, Ace.Cbs.Loan.Dmd" rename="GjkDto"/>
+
+  <class name="LOMORM00008" table="GJKCode">
+
+    <id name="Kind">
+      <column name="Gjkind" sql-type="varchar" not-null="true"/>
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+
+    <property name="Description">
+      <column name="Desp" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  <!--//GJKDAO.CheckExist//-->
+  <query name="GJKDAO.CheckExist">
+    select new GjkDto
+    (
+    g.Kind,
+    g.Description
+    )
+    from LOMORM00008 as g
+    where (g.Kind =: kind or g.Description =: description)
+    and  g.Active = true
+  </query>
+
+	<!--//GJKDAO.CheckExist2//-->
+	<query name="GJKDAO.CheckExist2">
+		select new GjkDto
+		(
+		g.Kind,
+		g.Description,
+		g.Active,
+		g.TS,
+		g.CreatedUserId,
+		g.CreatedDate,
+		g.UpdatedUserId,
+		g.UpdatedDate
+		)
+		from LOMORM00008 as g
+		where (g.Kind =: kind or g.Description =: description)
+	</query>
+
+  <!--//GJKDAO.SelectAll//-->
+  <query name="GJKDAO.SelectAll">
+    select new GjkDto
+    (
+    g.Kind,
+    g.Description,
+    g.Active,
+    g.TS,
+    g.CreatedUserId,
+    g.CreatedDate,
+    g.UpdatedUserId,
+    g.UpdatedDate
+    )
+    from LOMORM00008 as g
+    where g.Active = true
+  </query>
+
+  <query name="GJKDAO.Update">
+    update LOMORM00008 as g set
+    g.Description = :desp,
+    g.UpdatedDate = :updatedDate,
+    g.UpdatedUserId = :updatedUserId
+    where
+    g.Kind=:kind and
+    g.Active = true
+  </query>
+
+  <!--//GJKDAO.SelectByCode//-->
+  <query name="GJKDAO.SelectByCode">
+    select new GjkDto(
+    g.Kind,
+    g.Description,
+    g.Active,
+    g.TS,
+    g.CreatedUserId,
+    g.CreatedDate,
+    g.UpdatedUserId,
+    g.UpdatedDate
+    )
+    from LOMORM00008 as g
+    where g.Kind = :kind
+    and g.Active = true
+  </query>
+
+</hibernate-mapping>

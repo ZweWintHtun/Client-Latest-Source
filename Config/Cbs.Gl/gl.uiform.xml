@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Referenced by main application context configuration file -->
+<objects xmlns="http://www.springframework.net">
+  <description>
+    UIForm Objects Settings
+  </description>
+
+  <!--//Report Format Entry (Selection)//-->
+  <object id="frmGLMVEW00006.ReportFormatEntry" type="Ace.Cbs.Gl.Vew.GLMVEW00006, Ace.Cbs.Gl.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="ParentMenu" value="Report Format Entry"/>
+  </object>
+  
+  <!--//Report Statement (Selection)//-->
+  <object id="frmGLMVEW00006.ReportStatement" type="Ace.Cbs.Gl.Vew.GLMVEW00006, Ace.Cbs.Gl.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="ParentMenu" value="Report Statement"/>
+  </object>
+
+  <!--//Report Format Entry//-->
+  <object id="frmGLMVEW00007" type="Ace.Cbs.Gl.Vew.GLMVEW00007, Ace.Cbs.Gl.Vew" parent="NonSecureDockForm" singleton="false">
+	  <property name="Controller" ref="ReportFormatEntryController"/> 
+  </object>
+
+	<!--//Format And Formula Entry//-->
+	<object id="frmGLMVEW00018" type="Ace.Cbs.Gl.Vew.GLMVEW00018, Ace.Cbs.Gl.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="FormName" value="Format and Formula"/>
+		<property name="Controller" ref="FormatAndFormulaEntryController"/>
+	</object>
+
+	<!--//Formula Edition//-->
+	<object id="frmGLMVEW00022" type="Ace.Cbs.Gl.Vew.GLMVEW00022, Ace.Cbs.Gl.Vew" parent="NonSecureDockForm" singleton="false">
+		<!--<property name="Controller" ref="FormulaEditionController"/>-->
+	</object>
+
+
+	<!--//Report Statement//-->
+  <object id="frmGLMVEW00011" type="Ace.Cbs.Gl.Vew.GLMVEW00011, Ace.Cbs.Gl.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="ReportStatementController"/>
+  </object>
+
+	<!--Encash Remit Registration Entry-->
+	<object id="frmGLMVEW00004" type="Ace.Cbs.Gl.Vew.GLMVEW00004, Ace.Cbs.Gl.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="MonthlyBudgetedEntryController"/>
+		<property name="FormName" value="isNotHomeCur"/>
+	</object>
+
+	<!--Encash Remit Registration Entry (Home Currency)-->
+	<object id="frmGLMVEW00004.HomeCurrency" type="Ace.Cbs.Gl.Vew.GLMVEW00004, Ace.Cbs.Gl.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="MonthlyBudgetedEntryController"/>
+		<property name="FormName" value="isHomeCur"/>
+	</object>
+
+	<!--Enquiry On Ledger-->
+	<object id="frmGLMVEW00008" type="Ace.Cbs.Gl.Vew.GLMVEW00008, Ace.Cbs.Gl.Vew" parent="NonSecureBaseForm" singleton="false">
+		<property name="Controller" ref="EnquiryOnLedgerController"/>
+	</object>
+  
+  <!--Monthly CurrecyRate Entry-->
+  <object id="frmGLMVEW00001" type="Ace.Cbs.Gl.Vew.GLMVEW00001, Ace.Cbs.Gl.Vew" parent="NonSecureBaseForm" singleton="false">
+    <property name="Controller" ref="MonthlyCurrencyRateEntryController"/>
+  </object>
+	
+  <!--//Charge of Account Listing//-->
+  <object id="frmGLMVEW00013" type="Ace.Cbs.Gl.Vew.GLMVEW00013, Ace.Cbs.Gl.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="ChartofAccountController"/>
+    <property name="IsShowDialog" value="false"/>
+  </object>
+
+  <!--OLS Total Listing-->
+  <object id="frmGLMVEW00009" type="Ace.Cbs.Gl.Vew.GLMVEW00009, Ace.Cbs.Gl.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="OLSTotalController"/>
+  </object>
+
+  <!--Income and Expenditure-->
+  <object id="frmGLMVEW00010" type="Ace.Cbs.Gl.Vew.GLMVEW00010, Ace.Cbs.Gl.Vew" parent="NonSecureBaseForm" singleton="false">
+    <property name="Controller" ref="IncomeExpenditureController"/>
+  </object>
+
+  <!--Income and Expenditure ReportViewer-->
+  <object id="frmGLMVEW00015.ReportViewer" type="Ace.Cbs.Gl.Vew.GLMVEW00015, Ace.Cbs.Gl.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+
+	<!--OLS Total Listing ReportViewer-->
+  <object id="frmGLMVEW00014.ReportViewer" type="Ace.Cbs.Gl.Vew.GLMVEW00014, Ace.Cbs.Gl.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+	
+	<!--Opening Balance Entry-->
+	<object id="frmGLMVEW00002" type="Ace.Cbs.Gl.Vew.GLMVEW00002, Ace.Cbs.Gl.Vew" parent="NonSecureDockForm" singleton="false">
+		<property name="Controller" ref="OpeningBalanceEntryController"/>
+	</object>
+
+	<!--Yearly Budget Entry-->
+	<object id="frmGLMVEW00003" type="Ace.Cbs.Gl.Vew.GLMVEW00003, Ace.Cbs.Gl.Vew" parent="NonSecureDockForm" singleton="false">
+		<property name="Controller" ref="YearlyBudgetEntryController"/>
+	</object>
+
+  <!--Liabilities Account Code Accepted Form-->
+  <object id="frmGLMVEW00012" type="Ace.Cbs.Gl.Vew.GLMVEW00012, Ace.Cbs.Gl.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="LiabilitiesAccountController"/>
+  </object>
+
+  <!--Find Form-->
+  <object id="frmGLMVEW00019" type="Ace.Cbs.Gl.Vew.GLMVEW00019, Ace.Cbs.Gl.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="FormName" value="Find Form"/>
+    <property name="Controller" ref="FindFormController"/>
+  </object>
+
+  <!--Insert Range of Account Form-->
+  <object id="frmGLMVEW00020" type="Ace.Cbs.Gl.Vew.GLMVEW00020, Ace.Cbs.Gl.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="FormName" value="Insert Range Account"/>
+    <property name="Controller" ref="InsertRangeAccountController"/>
+  </object>
+
+  <!--Delete Range of Account Form-->
+  <object id="frmGLMVEW00021" type="Ace.Cbs.Gl.Vew.GLMVEW00021, Ace.Cbs.Gl.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="FormName" value="Delete Range Account"/>
+    <property name="Controller" ref="DeleteRangeAccountController"/>
+  </object>
+
+  <!--Report Satatement Report Viewer-->
+  <object id="frmGLMVEW00016" type="Ace.Cbs.Gl.Vew.GLMVEW00016, Ace.Cbs.Gl.Vew" parent="NonSecureDockForm" singleton="false">
+  </object>
+
+  <!--Monthly Posting-->
+  <object id="frmGLMVEW00023" type="Ace.Cbs.Gl.Vew.GLMVEW00023, Ace.Cbs.Gl.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="MonthlyPostingController"/>
+  </object>
+
+	<!--Monthly Report(Income and Expenditure Report,General Returns)-->
+	<object id="frmGLMVEW00027" type="Ace.Cbs.Gl.Vew.GLMVEW00027, Ace.Cbs.Gl.Vew" parent="NonSecureDockForm" singleton="false">
+		<property name="Controller" ref="MonthlyReportController"/>
+	</object>
+
+  <!--Statement Of Financial Position Report-->
+  <object id="frmGLMVEW00028" type="Ace.Cbs.Gl.Vew.GLMVEW00028, Ace.Cbs.Gl.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="Controller" ref="StatementOfFinancialPositionController"/>
+  </object>
+
+  <!--Statement Of Financial Position Report Viewer-->
+  <object id="frmGLMVEW00029.ReportViewer" type="Ace.Cbs.Gl.Vew.GLMVEW00029, Ace.Cbs.Gl.Vew" parent="NonSecureDockForm" singleton="false">
+  </object>
+
+  <!--Monthly Report Setup-->
+  <object id="frmGLMVEW00030" type="Ace.Cbs.Gl.Vew.GLMVEW00030, Ace.Cbs.Gl.Vew" parent="SecureDockForm" singleton="false">
+  <property name="Controller" ref="MonthlyPostingController"/>
+ </object>
+	
+  <!--Monthly Report Setup Edit-->
+  <object id="frmGLMVEW00031" type="Ace.Cbs.Gl.Vew.GLMVEW00031, Ace.Cbs.Gl.Vew" parent="SecureDockForm" singleton="false">
+		<property name="Controller" ref="MonthlyPostingController"/>
+   </object>
+
+</objects>	

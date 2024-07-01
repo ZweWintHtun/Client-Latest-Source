@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+	<import class="Ace.Cbs.Loan.Dmd.LOMDTO00010, Ace.Cbs.Loan.Dmd" rename="KStockDto"/>
+
+	<class name="LOMORM00010" table="KSTOCK" >
+
+		<id name="KStockNo">
+			<column name="KSTOCK" sql-type="varchar" not-null="true" />
+		</id>
+
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="true"/>
+		</version>
+
+		<property name="Desp">
+			<column name="DESP" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+
+	</class>
+
+	<!--//KStockDAO.CheckExist//-->
+	<query name="KStockDAO.CheckExist">
+		select new KStockDto
+		(
+		ks.KStockNo,
+		ks.Desp
+		)
+		from LOMORM00010 as ks
+		where (ks.KStockNo =: kstockno or ks.Desp =: desp)
+		and  ks.Active = true
+	</query>
+
+  <!--//KStockDAO.CheckExist2//-->
+  <query name="KStockDAO.CheckExist2">
+    select new KStockDto
+    (
+    ks.KStockNo,
+    ks.Desp,
+    ks.Active,
+    ks.TS,
+    ks.CreatedDate,
+    ks.CreatedUserId,
+    ks.UpdatedDate,
+    ks.UpdatedUserId
+    )
+    from LOMORM00010 as ks
+    where (ks.KStockNo =: kstockNo or ks.Desp =: kstockName)
+
+  </query>
+
+	<!--//KStockDAO.SelectAll//-->
+	<query name="KStockDAO.SelectAll">
+		select new KStockDto
+		(
+		ks.KStockNo,
+		ks.Desp,
+		ks.Active,
+		ks.TS,
+		ks.CreatedDate,
+		ks.CreatedUserId,
+		ks.UpdatedDate,
+		ks.UpdatedUserId
+		)
+		from LOMORM00010 as ks
+		where ks.Active = true
+	</query>
+
+	<!--//KStockDAO.SelectById//-->
+	<query name="KStockDAO.SelectByCode">
+		select new KStockDto(
+		ks.KStockNo,
+		ks.Desp,
+		ks.Active,
+		ks.TS,
+		ks.CreatedDate,
+		ks.CreatedUserId,
+		ks.UpdatedDate,
+		ks.UpdatedUserId
+		)
+		from LOMORM00010 as ks
+		where ks.KStockNo = :kstockno
+		and ks.Active = true
+	</query>
+
+</hibernate-mapping>

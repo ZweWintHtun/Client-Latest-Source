@@ -1,0 +1,628 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:v="http://www.springframework.net/validation">
+
+  <description>
+    UI Control Settings
+  </description>
+
+  <!--Region Transfer Entry-->
+  <object id="Transfer.Disable.Load" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="txtVoucherNo,gbChargesInformation,txtDescription,chkInputIncomeAmount,gbIncomeType" />
+  </object>
+
+  <object id="Transfer.Enable.Load" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+				  value="gbChargesInformation,chkPrintTransaction" />
+  </object>
+
+  <object id="Transfer.Disable.Charges" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="gbChargesInformation" />
+  </object>
+
+  <object id="Transfer.Disable.Printing" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="chkPrintTransaction" />
+  </object>
+
+  <object id="Transfer.Enable.Printing" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+				  value="chkPrintTransaction" />
+  </object>
+
+  <object id="Transfer.Disable.LocalDebit" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="gbChargesInformation,chkInputIncomeAmount" />
+  </object>
+
+  <object id="Transfer.Disable.Credit" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="gbIncomeType,txtChequeNo,gbChargesInformation,chkInputIncomeAmount" />
+  </object>
+
+  <object id="Transfer.Disable.OnlineCredit" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="gbIncomeType,txtChequeNo,gbChargesInformation" />
+  </object>
+
+  <object id="Transfer.Disable.Cheque" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="txtChequeNo" />
+  </object>
+  <object id="Transfer.Enable.Cheque" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+				  value="txtChequeNo" />
+  </object>
+
+  <object id="Transfer.Enable.OnlineDebit" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+				  value="gbIncomeType,chkInputIncomeAmount" />
+  </object>
+
+  <!-- region addition-->
+  <object id="Transfer.Disable.LocalAccount" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="gbIncomeType,txtChequeNo" />
+  </object>
+
+  <object id="Transfer.Enable.OnlineAccount" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+				  value="gbIncomeType,txtChequeNo" />
+  </object>
+
+  <object id="Transfer.Enable.COAAccount" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+				  value="butEnquiry,gbIncomeType,txtChequeNo" />
+  </object>
+
+  <object id="Transfer.Disable.COAAccount" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="butEnquiry,gbIncomeType,txtChequeNo" />
+  </object>
+  <!--addation-->
+
+  <!--Endregion-->
+
+  <object id="Curreny.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="cboCurrency" />
+  </object>
+
+  <object id="Curreny.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+				  value="cboCurrency" />
+  </object>
+
+  <object id="Deposit.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="txtVoucherNo,txtName,txtNRC,txtDate,gbDepositTransitions,chkInputIncomeAmount,txtTotalAmount" />
+  </object>
+
+  <object id="Deposit.OnlieDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="gbDepositTransitions" />
+  </object>
+
+  <!--Added by HMW for "Seperating EOD Process" at 29-07-2019-->
+  <object id="Deposit.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+	<property name="DisableControls"
+					value="txtVoucherNo,cboCurrency,mtxtAccountNo,txtName,txtNRC,txtAmount,txtNarration,butEnquiry,butCalculate,butAdd,txtDate,gbDepositTransitions,chkInputIncomeAmount,chkPrintTransactions,txtTotalAmount" />
+  </object>
+
+  
+  <!--Added by YMP for "Seperating EOD Process" at 30-07-2019-->
+  <object id="CounterWithdraw.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+            value="txtEntryNo,txtCounterNo,cboCurrency,ntxtAmount" />
+  </object>
+
+  <!--Added by YMP for "Seperating EOD Process" at 30-07-2019-->
+  <object id="DomesticVoucher.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+            value="mtxtVoucherNo,cboCurrency,rdoCreditVoucher,rdoDebitVoucher,mtxtAccountNo,txtNarration,txtAmount" />
+  </object>
+
+  <!--Added by YMP for "Seperating EOD Process" at 30-07-2019-->
+  <object id="WithdrawEntry.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+            value="txtGroupNo,cboCurrency,chkVIPCustomer,mtxtAccountNo,butEnquiry,txtChequeNo,txtAmount,butCalculate,rdoIncomeByCash,rdoIncomeByTransfer,chkInputIncomeAmount,rdoJointTypeA,rdoJointTypeB,txtCommunicationCharges,txtCommissions,chkPrintTransactions,butAdd,gvMultiAccountWithdrawl" />
+  </object>
+
+  <!--Added by YMP for "Seperating EOD Process" at 30-07-2019-->
+  <object id="CashPaymentDenomination.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+            value="txtEntryNo,mtxtAccountNo,txtDescription,txtPONo,txtCurrency,txtAmount" />
+  </object>
+
+  
+  <!--Added by YMP for "Seperating EOD Process" at 30-07-2019-->
+  <object id="PaymentToDealerByCash.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+            value="txtGroupNo,cboCurrency,txtPaymentOrderNo,txtAmount,txtTotalAmount,txtRegisterNo,butAdd,gvPaymentOrder,txtBudgetYear" />
+  </object>
+
+  
+  <!--Added by YMP for "Seperating EOD Process" at 30-07-2019-->
+  <object id="VaultWithdrawDeno.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+            value="cboCurrency,txtDebitEntryNo,rdoDebitVault,rdoDebitCounter,cboFrom,ntxtDebitFromAmount,txtCreditEntryNo,rdoCreditBranch,rdoCreditVault,rdoCreditCounter,cboTo,ntxtCreditToAmount" />
+  </object>
+
+  
+  <!--Added by YMP for "Seperating EOD Process" at 30-07-2019-->
+  <object id="CenterTableDepositApprove.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+            value="gvDepositApprove" />
+  </object>
+  
+  
+  <!--Added by YMP for "Seperating EOD Process" at 30-07-2019-->
+  <object id="HPInterestPrepayment.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+            value="gbTransfer" />
+  </object>
+
+  
+  <!--Added by YMP for "Seperating EOD Process" at 30-07-2019-->
+  <object id="HPLateFeeRepay.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+            value="txtHPNo,txtEndTerm," />
+  </object>
+
+  <object id="Deposit.EnableTransactions" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+				  value="gbDepositTransitions" />
+  </object>
+
+  <object id="Deposit.EnableOnlineTransactions" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+				  value="chkInputIncomeAmount" />
+  </object>
+
+  <object id="Deno.DisableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="txtCounterNo,txtAmount,txtTotalAmount,txtRefundAmount" />
+  </object>
+
+  <object id="DenoRefund.DisableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="txtShortage,txtSurPlus,txtTotalAmount,txtRefundAmount" />
+  </object>
+
+  <object id="Clearing.Delivered" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleHiddenControls" value="lblReceiptAccountNo,mtxtReceiptAccountNo" />
+  </object>
+
+  <object id="POReceiptAmount.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="txtAmount" />
+  </object>
+
+  <!--<object id="ReceiptNo.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="EnableControls"
+				  value="txtDuration,txtAmount"
+              />
+	</object>-->
+  <!--<object id="ReceiptNo.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="txtDuration,txtAmount"/>
+  </object>-->
+
+  <object id="EncashRemittanceRegistration.PO.HiddenControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="HiddenControls"
+					  value="chkPOIssueForEncashment,gbPOIssue,txtPaymentOrderNo,txtBudgetYear,lblPONo" />
+  </object>
+
+  <object id="EncashRemittanceRegistration.PO.VisibleControl" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleControls"
+				  value="chkPOIssueForEncashment"/>
+  </object>
+
+  <object id="EncashRemittanceRegistration.Budget.VisibleControl" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleControls"
+					  value="gbPOIssue,txtPaymentOrderNo,txtBudgetYear,lblPONo"/>
+  </object>
+
+  <object id="EncashRemittanceRegistration.PaidBank.DisableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="cboPaidBank"
+              />
+  </object>
+
+  <object id="EncashRemittanceRegistration.Currency.DisableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="cboCurrency"
+              />
+  </object>
+
+  <object id="EncashRemittanceRegistration.DisableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+					  value="cboCurrency,cboPaidBank,txtEncashAmount,rdoByTelaxTR,rdoByOnline"
+              />
+  </object>
+
+  <object id="EncashRemittanceRegistration.PaidBankandCurrency.EnableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+					  value="cboPaidBank,cboCurrency"
+              />
+  </object>
+
+  <!--DrawingRemittanceEntry-->
+  <!--<object id="DrawingRemittanceEntry.FormLoadDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="DisableControls" value="txtGroupNo,txtChequeNo,gvCustomer,grpDrawing" />
+	</object>-->
+  <object id="DrawingRemittanceEntry.FormLoadDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls" value="txtGroupNo,txtChequeNo,gvCustomer" />
+  </object>
+
+
+  <object id="DrawingRemittanceEntry.DrawRemittanceByAccountDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls" value="cboCurrency,txtName,txtNRC,txtAddress,txtPhone,txtGroupNo,txtChequeNo,gvCustomer" />
+  </object>
+
+  <object id="DrawingRemittanceEntry.CheckboxDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls" value="chkTakeIncome,grpDrawing" />
+  </object>
+  <object id="DrawingRemittanceEntry.CheckboxEnable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls" value="chkTakeIncome,grpDrawing" />
+  </object>
+
+  <object id="DrawingRemittanceEntry.ChequeNoEnable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls" value="txtChequeNo" />
+  </object>
+
+  <object id="DrawingRemittanceEntry.DrawingGroupBoxEnable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls" value="grpDrawing" />
+  </object>
+
+  <object id="DrawingRemittanceEntry.DrawingGroupBoxDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls" value="grpDrawing" />
+  </object>
+
+  <object id="DrawingRemittanceEntry.ContinueControlsDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls" value="chkVIPCustomer,grpIncome,mtxtAccountNo,cboCurrency,txtName,txtNRC,txtAddress,txtPhone,grpDrawing,txtNarration,txtTotalAmount,chkTakeIncome,txtChequeNo" />
+  </object>
+
+  <object id="DrawingRemittanceEntry.ContinueControlsEnable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls" value="chkVIPCustomer,grpIncome,mtxtAccountNo,cboCurrency,txtName,txtNRC,txtAddress,txtPhone,grpDrawing,txtNarration,txtTotalAmount,chkTakeIncome,txtChequeNo" />
+  </object>
+
+  <object id="DrawingRemittanceEntry.gvCustomerEnable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls" value="gvCustomer" />
+  </object>
+
+  <object id="DrawingRemittanceEntry.GroupBoxsDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls" value="grpIncome,grpDrawing" />
+  </object>
+
+  <object id="DrawingRemittanceEntry.InitializedState" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls" value="cboCurrency,txtName,txtNRC,txtAddress,txtPhone" />
+  </object>
+
+  <object id="FixedDepositWithdraw.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="cboReceiptNo,txtDate,txtDuration,txtAmount,txtVoucherNo,txtNoOfPerson,txtJointType,txtTotalAmount,txtInterestAfterTax"
+              />
+  </object>
+
+  <object id="FixedDepositWithdraw.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+				  value="cboReceiptNo"
+              />
+  </object>
+
+  <object id="FixedDepositDeposit.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="cboReceiptNo,txtDuration,txtAmount"
+              />
+  </object>
+
+  <!--DepositListingByAll-->
+  <object id="DepositListingByAll.VisibleHiddenControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleHiddenControls"
+				  value="lblAccountNo,lblCounterNo,mtxtAccountNo,txtCounterNo"
+              />
+  </object>
+
+  <!--DepositListingByAccountno-->
+  <object id="DepositListingByAccountNo.VisibleHiddenControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleHiddenControls"
+				  value="lblCounterNo,txtCounterNo"
+              />
+  </object>
+
+
+  <!--DepositListingByCounterNo-->
+  <object id="DepositListingByCounterNo.VisibleHiddenControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleHiddenControls"
+				  value="lblAccountNo,mtxtAccountNo"
+              />
+  </object>
+
+  <!--Income Listing-->
+  <object id="IncomeListing.VisibleHiddenControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleHiddenControls"
+				  value="lblTransactionType,cboTransactionType,chkReversalTransaction"
+              />
+  </object>
+
+  <!--Income Listing-->
+  <object id="OnlineTransaction.VisibleHiddenControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleHiddenControls"
+				  value="lblTransactionType,cboTransactionType"
+              />
+  </object>
+
+  <object id="TransactionListing.VisibleHiddenControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleHiddenControls"
+				  value="chkAllBranch"
+              />
+  </object>
+
+  <!--IBL Transaction-->
+  <object id="IBLTransaction.DisableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="cboBranchNo"
+              />
+  </object>
+  <!--IBL Transaction-->
+  <object id="IBLTransaction.EnableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+				  value="cboBranchNo"
+              />
+  </object>
+
+  <!--Encsh Remittance Listing-->
+  <object id="EncshRemittanceListing.VisibleHiddenControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleHiddenControls"
+				  value="rdoByAmountOutstanding"
+              />
+  </object>
+
+
+  <!--Day Book-->
+  <object id="DayBook.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="cboBranchNo"
+              />
+  </object>
+
+  <!--DepositListingByAccountType-->
+  <object id="DepositListingByAccountType.VisibleHiddenControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleHiddenControls"
+				  value="lblAccountNo ,lblCounterNo,mtxtAccountNo,cboCounterNo"
+              />
+  </object>
+
+  <object id="Withdrawal.Current" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="HiddenControls"
+					  value="lblAccountNo ,mtxtAccountNo,lblEnterTellerNo,mtxtEnterTellerNo"/>
+  </object>
+
+  <object id="Withdrawal.BL" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="HiddenControls"
+					  value="lblAccountNo ,mtxtAccountNo,lblEnterTellerNo,mtxtEnterTellerNo"/>
+  </object>
+
+  <object id="Withdrawal.HP" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="HiddenControls"
+					  value="lblAccountNo ,mtxtAccountNo,lblEnterTellerNo,mtxtEnterTellerNo"/>
+  </object>
+
+  <object id="Withdrawal.PL" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="HiddenControls"
+					  value="lblAccountNo ,mtxtAccountNo,lblEnterTellerNo,mtxtEnterTellerNo"/>
+  </object>
+
+  <object id="Withdrawal.DL" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="HiddenControls"
+					  value="lblAccountNo ,mtxtAccountNo,lblEnterTellerNo,mtxtEnterTellerNo"/>
+  </object>
+  <object id="Withdrawal.All" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="HiddenControls"
+					  value="lblAccountNo ,mtxtAccountNo,lblEnterTellerNo,mtxtEnterTellerNo"/>
+  </object>
+
+  <object id="Withdrawal.Saving" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="HiddenControls"
+					  value="lblAccountNo ,mtxtAccountNo,lblEnterTellerNo,mtxtEnterTellerNo"/>
+  </object>
+
+  <object id="Withdrawal.Fixed" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="HiddenControls"
+					  value="lblAccountNo ,mtxtAccountNo,lblEnterTellerNo,mtxtEnterTellerNo"/>
+  </object>
+
+  <object id="Withdrawal.AccountNo" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="HiddenControls"
+					  value="lblEnterTellerNo ,mtxtEnterTellerNo"/>
+  </object>
+
+  <object id="Withdrawal.Counter" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="HiddenControls"
+					  value="lblAccountNo ,mtxtAccountNo"/>
+  </object>
+
+  <object id="Withdraw.VIP.DisableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"  value="chkVIPCustomer"/>
+  </object>
+
+  <object id="Withdraw.ChequeNo.DisableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"  value="txtChequeNo"/>
+  </object>
+
+  <object id="WithdrawEntry.LastTimeDisableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+					  value="txtAmount,txtChequeNo"/>
+  </object>
+
+  <object id="WithdrawEntry.EnableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+					  value="butCalculate,rdoIncomeByCash,rdoIncomeByTransfer"/>
+  </object>
+
+  <object id="WithdrawEntry.gbOnlineInformation.EnableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+					  value="gbOnlineInformation"/>
+  </object>
+
+  <object id="WithdrawEntry.gbOnlineInformation.DisableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+					  value="gbOnlineInformation"/>
+  </object>
+
+  <object id="BankCashScroll.chkAllBranches.DisableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+						  value="cboBranchNo"/>
+  </object>
+
+  <object id="BankCashScroll.chkAllBranches.EnableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+						  value="cboBranchNo"/>
+  </object>
+
+  <object id="BankCashScroll.rdoHomeCur.DisableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+						  value="cboCurrency,chkByHomeCur"/>
+  </object>
+
+  <object id="BankCashScroll.rdoHomeCur.EnableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+						  value="cboCurrency,chkByHomeCur"/>
+  </object>
+
+  <object id="CounterWithdrawalEntry.DisableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls" value="txtEntryNo" />
+  </object>
+
+
+  <object id="CenterTableDepositApprove.HiddenControl" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="HiddenControls"
+				  value="lblNoCashierEntryNo"
+              />
+  </object>
+
+  <object id="CenterTableDepositApprove.VisibleControl" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleControls"
+				  value="lblNoCashierEntryNo"
+              />
+  </object>
+
+  <object id="IBLTransaction.Branch.EnableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+					  value="chkAllBranch"
+              />
+  </object>
+
+  <!--Region Withdrawal Entry-->
+  <object id="Withdraw.Local.EnableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+					  value="txtChequeNo,txtAmount,chkVIPCustomer,chkPrintTransactions,butAdd"
+              />
+  </object>
+
+  <object id="Withdraw.Online.EnableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+					  value="txtChequeNo,chkVIPCustomer,chkPrintTransactions,rdoIncomeByCash,rdoIncomeByTransfer,chkInputIncomeAmount"/>
+  </object>
+
+  <object id="WithdrawEntry.DisableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+					  value="txtGroupNo,rdoIncomeByCash,rdoIncomeByTransfer,chkInputIncomeAmount,gbOnlineInformation,chkPrintTransactions"/>
+  </object>
+
+  <object id="Withdraw.Currency.EnableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+						  value="cboCurrency"
+              />
+  </object>
+
+  <object id="Withdrw.InputIncome.DisableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+						  value="chkInputIncomeAmount"
+              />
+  </object>
+
+  <object id="Withdrw.InputIncome.EnableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+						  value="chkInputIncomeAmount"
+              />
+  </object>
+  <!--Endregion-->
+
+  <!--Region DayBook Form-->
+  <object id="DayBook.DisableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+						  value="cboCurrency"
+              />
+  </object>
+
+  <object id="DayBook.EnableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+						  value="cboCurrency"
+              />
+  </object>
+
+  <object id="DayBook.Currency.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="cboCurrency"
+              />
+  </object>
+  <object id="DayBook.SavingandFixed.HideControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleHiddenControls"
+				  value="chkBranch,cboBranchNo,lblBranch"
+              />
+  </object>
+  <object id="DayBook.SavingandFixed.ShowControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleHiddenControls"
+				  value="chkBranch,cboBranchNo,lblBranch"
+              />
+  </object>
+
+  <object id="Withdraw.Currency.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="cboCurrency"
+              />
+  </object>
+  <object id="Withdraw.Currency.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+				  value="cboCurrency"
+              />
+  </object>
+
+  <!--endregion-->
+
+  <!--Region Clearing Voucher-->
+  <object id="ClearingVoucher.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+				  value="mtxtAccountNo,txtDescription,txtAmount,cboCurrency,txtNarration,gbVoucherType,gvClearingVoucher"
+              />
+  </object>
+  <object id="ClearingVoucher.SwitchButton.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="butSwitch"
+              />
+  </object>
+  <object id="ClearingVoucher.SwitchButton.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+				  value="butSwitch"
+              />
+  </object>
+  <object id="ClearingVoucher.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="txtAmount,cboCurrency,txtNarration,gbVoucherType,butSwitch,gvClearingVoucher,mtxtAccountNo,txtDescription"
+              />
+  </object>
+  <!--endregion-->
+
+  <!--Region Report-->
+  <object id="Encash.AmountOutstanding.HideControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleHiddenControls"
+				  value="rdoByAmountOutstanding"
+              />
+  </object>
+  <!--Endregion-->
+
+</objects>

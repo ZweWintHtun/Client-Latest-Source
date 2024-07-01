@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--TEMPFReceipt-->
+<!-- 
+// <copyright file="MNMORM00042.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>KSW</CreatedUser>
+// <CreatedDate>07/17/2014</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version></Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+	<import class="Ace.Cbs.Mnm.Dmd.MNMDTO00042,Ace.Cbs.Mnm.Dmd" rename="TFreceiptdto"/>
+	<class name="MNMORM00042" table="TEMPFReceipt">
+
+		<id name="Id" type="Int32" unsaved-value="0">
+			<!--<generator class="increment">
+			</generator>-->
+		</id>
+
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="true"/>
+		</version>
+
+		<property name="RNo">
+			<column name="RNo" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="AcctNo">
+			<column name="AcctNo" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="Amount">
+			<column name="Amount" sql-type="numeric" not-null="true" />
+		</property>
+
+		<property name="Duration">
+			<column name="Duration" sql-type="numeric" not-null="true" />
+		</property>
+
+		<property name="WDate">
+			<column name="WDate" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="LasIntDate">
+			<column name="LasIntDate" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="PrnTime">
+			<column name="PrnTime" sql-type="int" not-null="false" />
+		</property>
+
+		<property name="LastPrnBal">
+			<column name="LastPrnBal" sql-type="numeric" not-null="true" />
+		</property>
+
+		<property name="BudEndAcc">
+			<column name="BudEndAcc" sql-type="numeric" not-null="true" />
+		</property>
+
+		<property name="BudEndTax">
+			<column name="BudEndTax" sql-type="numeric" not-null="true" />
+		</property>
+
+		<property name="Accrued">
+			<column name="Accrued" sql-type="numeric" not-null="true" />
+		</property>
+
+		<property name="DrAccured">
+			<column name="DrAccured" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="APerson">
+			<column name="APerson" sql-type="nvarchar" not-null="false" />
+		</property>
+
+		<property name="ACSign">
+			<column name="ACSign" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="IntRate">
+			<column name="IntRate" sql-type="numeric" not-null="true" />
+		</property>
+
+		<property name="AccruedStatus">
+			<column name="AccruedStatus" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="FirstRNo">
+			<column name="FirstRNo" sql-type="char" not-null="true" />
+		</property>
+
+		<property name="SourceBr">
+			<column name="SourceBr" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="ToAcctNo">
+			<column name="ToAcctNo" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="Cur">
+			<column name="Cur" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="FD">
+			<column name="FD" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="RDATE">
+			<column name="RDATE" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="USERNO">
+			<column name="USERNO" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="LastAccruedDate">
+			<column name="LastAccruedDate" sql-type="datetime" not-null="false" />
+		</property>
+
+
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+
+	</class>
+	<query name="TFrecipt.DeleteAll">
+		Delete From MNMORM00042 s where s.SourceBr=:SourceBr and s.Active=true
+	</query>
+
+
+</hibernate-mapping>

@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:v="http://www.springframework.net/validation">
+
+  <description>
+    UI Control Settings
+  </description>	
+	
+<!--Account Editing Current(Individual)-->
+	<object id="Current.Individual" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="VisibleHiddenControls"
+					  value="lblFatherGuardianshipNRC,
+                            lblGuardianshipName,		
+                            mtxtFatherGuardianshipNRC,
+                            txtGuardianshipName,
+                            gpLinkAccountInformation,
+                            butReceipt,
+                            lblReceiptNo,             
+                            txtReceiptNo,
+                            lblBusiness,
+                            txtBusiness,
+                            lblNameofFirm,
+                            txtNameofFirm"/>
+	</object>
+
+	<!--Account Editing Current(Private Firm)-->
+	<object id="Current.PrivateFirm" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="VisibleHiddenControls"
+					  value="butReceipt,
+                            lblFatherGuardianshipNRC,
+                            lblGuardianshipName,
+                            txtGuardianshipName,
+                            mtxtFatherGuardianshipNRC,
+                            gpLinkAccountInformation,
+                            lblReceiptNo,
+                            txtReceiptNo"/>
+	</object>
+
+	<!--Account Editing Saving(Individual)-->
+	<object id="Saving.Individual" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="VisibleHiddenControls"
+					  value="butCheque,
+                    butReceipt,
+                    lblFatherGuardianshipNRC,
+                    lblGuardianshipName,
+                    mtxtFatherGuardianshipNRC,
+                    txtGuardianshipName,
+                    gpLinkAccountInformation,
+                    lblReceiptNo,
+                    txtReceiptNo,
+                    lblChequeBookNo,
+                    txtChequeBookNo,
+                    lblBusiness,
+                    txtBusiness,
+                    lblNameofFirm,
+                    txtNameofFirm,
+                    lblChequeSerialNo,
+                    txtFromChequeNo,
+                    lblTo,
+                    txtToChequeNo"/>
+	</object>
+
+	<!--Account Editing Saving(Minor)-->
+	<object id="Saving.Minor" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="VisibleHiddenControls"
+					  value="butCheque,
+                  butReceipt,
+                  gpLinkAccountInformation,
+                  lblReceiptNo,
+                  txtReceiptNo,
+                  lblChequeBookNo,
+                  txtChequeBookNo,
+                  lblBusiness,
+                  txtBusiness,
+                  lblNameofFirm,
+                  txtNameofFirm,
+                  lblChequeSerialNo,
+                  txtFromChequeNo,
+                  lblTo,
+                  txtToChequeNo"/>
+	</object>
+
+	<!--Account Editing Fixed(Individual)-->
+	<object id="Fixed.Individual" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="VisibleHiddenControls"
+					  value="butCheque,
+                  lblFatherGuardianshipNRC,
+                  lblGuardianshipName,
+                  mtxtFatherGuardianshipNRC,
+                  txtGuardianshipName,
+                  lblChequeBookNo,
+                  txtChequeBookNo,
+                  lblBusiness,
+                  txtBusiness,
+                  lblNameofFirm,
+                  txtNameofFirm,
+                  lblChequeSerialNo,
+                  txtFromChequeNo,
+                  lblTo,
+                  txtToChequeNo,
+				  ntxtMinimumBalance,
+				  lblMinimumBalance"/>
+	</object>
+
+	<!--Account Editing Fixed(Minor)-->
+	<object id="Fixed.Minor" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="VisibleHiddenControls"
+					  value="butCheque,
+                  lblChequeBookNo,
+                  txtChequeBookNo,
+                  lblBusiness,
+                  txtBusiness,
+                  lblNameofFirm
+                  txtNameofFirm,
+                  lblChequeSerialNo,
+                  txtFromChequeNo,
+                  lblTo,
+                  txtToChequeNo,
+                  lblNameofFirm,txtNameofFirm,
+				  ntxtMinimumBalance,
+				  lblMinimumBalance"/>
+	</object>
+
+  <!--Transfer Scroll-->
+  <object id="TransferScroll.cboCurrency.DisableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+						  value="cboCurrency,chkByHomeCurrency"
+              />
+  </object>
+  <object id="TransferScroll.cboCurrency.EnableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+						  value="cboCurrency,chkByHomeCurrency"
+              />
+  </object>
+  <object id="TransferScroll.cboBranchNo.DisableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+						  value="cboBranchNo"
+              />
+  </object>
+  <object id="TransferScroll.cboBranchNo.EnableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+						  value="cboBranchNo"
+              />
+  </object>
+  <object id="RDImportantDataEdit.txtChequeNo.DisableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+						  value="txtChequeNo"
+              />
+  </object>
+  <object id="RDImportantDataEdit.txtChequeNo.EnableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+						  value="txtChequeNo"
+              />
+  </object>
+  <!--Transfer Scroll End-->
+
+  <!--Added by YMP for "Seperating EOD Process" at 31-07-2019-->
+  <object id="CashVoucherReverse.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls" value="mtxtEntryNo,txtNarration,gvCashVoucher" />
+  </object>
+
+  <!--Added by YMP for "Seperating EOD Process" at 31-07-2019-->
+  <object id="MutliDepostiWithdrawReverse.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls" value="txtGroupNo,txtEntryNo,gvReversal" />
+  </object>
+
+  
+  <!--Added by YMP for "Seperating EOD Process" at 31-07-2019-->
+  <object id="POReceiptReverse.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls" value="txtPaySlipNo,mtxtPONo,txtAmount,txtReceivedBank,txtBudget" />
+  </object>
+
+  
+  <!--Added by YMP for "Seperating EOD Process" at 31-07-2019-->
+  <object id="DeliverEdit.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls" value="txtPaySlipNo,mtxtAccountNo,txtCurrency,txtReceiptNo,txtPaidBank,mtxtOtherBankCheque,txtAmount,lsbCustomerNames,txtNote" />
+  </object>
+
+  
+  <!--Added by YMP for "Seperating EOD Process" at 31-07-2019-->
+  <object id="SavingInterestWithdrawReverse.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+	<property name="DisableControls" value="txtEntryNo,txtNarration,gvSavingInterestWithReversal" />
+  </object>
+
+  <!--Added by YMP for "Seperating EOD Process" at 31-07-2019-->
+  <object id="ClearingVoucher.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls" value="txtEntryNo,txtNarration,gvClearingVoucher" />
+  </object>
+
+  <!--Added by HMW for "Seperating EOD Process" at 13-08-2019-->
+  <object id="DenoEditIndividual.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+	<property name="DisableControls" value="txtEntryNo" />
+  </object>
+
+  <!--Added by HMW for "Seperating EOD Process" at 13-08-2019-->
+  <object id="DenoEditMultiple.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+	<property name="DisableControls" value="txtEntryNo" />
+  </object>
+
+  <!--Added by HMW for "Seperating EOD Process" at 13-08-2019-->
+  <object id="PORefundReverse.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+	<property name="DisableControls" value="rdoSinglePO,rdoMultiPO,txtGroupNo,txtPaymentOrderNo" />
+	</object>
+	
+
+</objects>

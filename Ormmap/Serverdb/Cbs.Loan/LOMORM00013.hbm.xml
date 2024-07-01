@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+	<import class="Ace.Cbs.Loan.Dmd.LOMDTO00013, Ace.Cbs.Loan.Dmd" rename="LegalDto"/>
+	<class name="LOMORM00013" table="Legal">
+
+		<id name="Id" type="Int32" unsaved-value="0">
+			<generator class="increment">
+			</generator>
+		</id>
+
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="true"/>
+		</version>
+
+		<property name="Lno">
+			<column name="Lno" sql-type="varchar" not-null="true" />
+		</property>
+		
+		<property name="AcctNo">
+			<column name="AcctNo" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="AcType">
+			<column name="AcType" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="LegalDate">
+			<column name="LegalDate" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="Bal">
+			<column name="Bal" sql-type="numeric" not-null="false" default="0"/>
+		</property>
+
+		<property name="OldInt">
+			<column name="OldInt" sql-type="numeric" not-null="false" default="0"/>
+		</property>
+
+		<property name="OldScharge">
+			<column name="OldScharge" sql-type="numeric" not-null="false" default="0"/>
+		</property>
+		
+		<property name="OldExtra">
+			<column name="OldExtra" sql-type="numeric" not-null="false" default="0"/>
+		</property>
+		
+		<property name="Interest">
+			<column name="Int" sql-type="numeric" not-null="false" default="0"/>
+		</property>
+
+		<property name="IntRate">
+			<column name="IntRate" sql-type="numeric" not-null="false" default="0"/>
+		</property>
+
+		<property name="CloseDate">
+			<column name="CloseDate" sql-type="datetime" not-null="false" />
+		</property>
+		
+		<property name="LastIntDate">
+			<column name="LastIntDate" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="NewBal">
+			<column name="NewBal" sql-type="numeric" not-null="false" default="0"/>
+		</property>
+		
+		<property name="AcceptDate">
+			<column name="AcceptDate" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="ReleaseDate">
+			<column name="ReleaseDate" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="LastRePayNo">
+			<column name="LastRePayNo" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="SourceBr">
+			<column name="SourceBr" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="Cur">
+			<column name="Cur" sql-type="varchar" not-null="true" />
+		</property>
+
+    <many-to-one name="Loans" column="[Lno]" class="Ace.Cbs.Tel.Dmd.TLMORM00018" insert="false" update="false"></many-to-one>
+
+    <!--<many-to-one name="Loans" column="[Lno]" class="Ace.Cbs.Loan.Dmd.LOMORM00021" insert="false" update="false"></many-to-one>-->
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  
+  </class>
+  <!--//LegalDAO.SelectLegalInfoByLoanNo//-->
+  <query name="LegalDAO.SelectLegalInfoByLoanNo">
+    select new LegalDto(
+    lg.Lno,
+    lg.AcctNo,
+    lg.AcType,
+    lg.Bal,
+    lg.OldInt,
+    lg.OldScharge,
+    lg.OldExtra,
+    lg.IntRate,
+    lg.SourceBr,
+    lg.Cur,
+    ln.LegaLawer,
+    ln.SAmount
+    )
+    from LOMORM00013 as lg
+    inner join lg.Loans ln
+    with ln.Active = true
+    where lg.Lno = ln.Lno
+    and lg.SourceBr=:sourceBr
+    and lg.Lno =:lno
+    and lg.Active = true
+    order by lg.ReleaseDate asc
+  </query>
+	
+	<!--<query name="LOMDAO00013.SelectAllByLoanNo">
+		select new LegalDto(
+		loan.LegaLawer,
+		legal.Lno,
+		legal.AcctNo,
+		legal.Actype,
+		legal.LegalDate,
+		legal.CloseDate,
+		legal.LastIntDate,
+		legal.AcceptDate,
+		legal.ReleaseDate
+		)
+		from LOMORM00013 as legal
+		inner join legal.LoansEntity as loan with loan.Active = true
+		where legal.Lno = loan.Lno and loan.Lno = :lno
+		and loan.Active = true and legal.SourceBr = :sourceBr and loan.SourceBranchCode = :sourceBr
+		and (legal.ReleaseDate is null or legal.ReleaseDate = '')
+	</query>-->
+
+  <!--LOMDAO00013.UpdateIntRate-->
+  <query name="LOMDAO00013.UpdateIntRate">
+    update LOMORM00013 as l
+    set l.IntRate = :intRate,
+    l.UpdatedDate = :updatedDate,
+    l.UpdatedUserId = :updatedUserId
+    where l.Lno = :lno and l.SourceBr=:sourceBr and l.Active = true
+  </query>
+
+	<!--<query name="LOMDAO00013.SelectAllByLoanNo">
+		select new LegalDto(
+		loan.LegaLawer,
+		legal.Lno,
+		legal.AcctNo,
+		legal.Actype,
+		legal.LegalDate,
+		legal.CloseDate,
+		legal.LastIntDate,
+		legal.AcceptDate,
+		legal.ReleaseDate
+		)
+		from LOMORM00013 as legal , TLMORM00018 as loan		
+		where legal.Lno = loan.Lno and loan.Lno = :lno and Legal.Active = true
+		and loan.Active = true and legal.SourceBr = :sourceBr and loan.SourceBranchCode = :sourceBr
+		and (legal.ReleaseDate is null or legal.ReleaseDate = '')
+	</query>-->
+
+	<query name="LOMDAO00013.SelectLegalInfoByLoanNo">
+		select new LegalDto
+		(
+		lg.Lno,
+		lg.AcctNo,
+		lg.AcType,
+		lg.LegalDate,
+		lg.Bal,
+		lg.OldInt,
+		lg.OldScharge,
+		lg.OldExtra,
+		lg.Interest,
+		lg.CloseDate,
+		lg.LastIntDate,
+		lg.AcceptDate,
+		lg.ReleaseDate
+		)
+		from  LOMORM00013 as lg
+		where lg.Lno = :lno and lg.SourceBr = :sourceBr
+		and (lg.ReleaseDate is null or lg.ReleaseDate = '') and lg.Active = true
+	</query>
+
+	
+	<!--LOMDAO00013.UpdateLegalForReleaseCase-->
+	<query name="LOMDAO00013.UpdateLegalForReleaseCase">
+    update LOMORM00013 legal
+    set legal.CloseDate = :updatedDate,
+    legal.ReleaseDate = :updatedDate,
+    legal.UpdatedDate = :updatedDate,
+    legal.UpdatedUserId = :updatedUserId,
+    legal.Active = false
+    where legal.Lno = :lno and legal.SourceBr = :sourceBr
+    and (legal.ReleaseDate is null or legal.ReleaseDate = '') and legal.Active = true
+  </query>
+
+	<query name="LOMDAO00013.SelectLegalInfoByCloseDateNull">
+		select new LegalDto
+		(
+		lg.Lno,
+		lg.AcctNo,
+		lg.AcType,
+		lg.LegalDate,
+		lg.Bal,
+		lg.OldInt,
+		lg.OldScharge,
+		lg.OldExtra,
+		lg.Interest,		
+		lg.IntRate,
+		lg.CloseDate,
+		lg.LastIntDate,
+		lg.NewBal,
+		lg.AcceptDate,
+		lg.ReleaseDate,
+		lg.LastRePayNo,
+		lg.SourceBr,
+		lg.Cur
+		)
+		from  LOMORM00013 as lg
+		where lg.Lno = :lno and lg.SourceBr = :sourceBr
+		and (lg.CloseDate is null or lg.CloseDate = '') and lg.Active = true
+	</query>
+
+	<!--LOMDAO00013.LOMDAO00013.UpateLegalForLegalLoanRepay-->
+	<query name="LOMDAO00013.UpateLegalForLegalLoanRepay">
+		update LOMORM00013 legal
+		set legal.NewBal = :currentBalance,
+		legal.LastRePayNo = :voucherNumber,		
+		legal.UpdatedDate = :updatedDate,
+		legal.UpdatedUserId = :updatedUserId
+		where legal.Lno = :lno and legal.AcctNo = :accountNo
+		and legal.SourceBr = :sourceBr and legal.Active = true
+	</query>
+
+
+</hibernate-mapping>
+
+

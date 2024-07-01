@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Tel.Dmd" namespace="Ace.Cbs.Tel.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+	<import class="Ace.Cbs.Tel.Dmd.TLMDTO00057, Ace.Cbs.Tel.Dmd" rename="drodto"/>
+
+	<class name="TLMVIW00014" table="DRAWING_REGISTER_LISITING_VW" mutable="false" >
+		
+		<id name="Id" type="Int32" unsaved-value="0">
+		</id>
+		<property name="CUR">
+			<column name="CUR" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="AMOUNT">
+			<column name="AMOUNT" sql-type="numeric(15,2)" not-null="false"/>
+		</property>
+		<property name="DENOMINATIONDATE">
+			<column name="DENOMINATIONDATE" sql-type="datetime" not-null="false"/>
+		</property>
+		<property name="DENOMINATIONTIME">
+			<column name="DENOMINATIONTIME" sql-type="datetime" not-null="false"/>
+		</property>
+		<property name="DATE_TIME">
+			<column name="DATE_TIME" sql-type="datetime" not-null="false"/>
+		</property>
+		<property name="TIME">
+			<column name="TIME" sql-type="datetime" not-null="false"/>
+		</property>
+		<property name="REGISTERNO">
+			<column name="REGISTERNO" sql-type="varchar" not-null="false"/>
+		</property>
+		<property name="VOUCHER_DATE">
+			<column name="VOUCHER_DATE" sql-type="datetime" not-null="false"/>
+		</property>
+		<property name="VOUCHER_TIME">
+			<column name="VOUCHER_TIME" sql-type="datetime" not-null="false"/>
+		</property>
+		<property name="PASSING_DATE">
+			<column name="PASSING_DATE" sql-type="datetime" not-null="false"/>
+		</property>
+		<property name="PASSING_TIME">
+			<column name="PASSING_TIME" sql-type="datetime" not-null="false"/>
+		</property>
+		<property name="BRANCHDESP">
+			<column name="BRANCHDESP" sql-type="varchar" not-null="false"/>
+		</property>
+		
+	</class>
+
+	<query name="TLMDAO00056.SelectDrawingRemittanceRegisterOutstanding">
+		<![CDATA[
+	select new drodto
+		(vw.CUR,
+		vw.AMOUNT,
+		vw.DENOMINATIONDATE,
+		vw.DENOMINATIONTIME,
+		vw.DATE_TIME,
+		vw.TIME,
+		vw.REGISTERNO,
+		vw.VOUCHER_DATE,
+		vw.VOUCHER_TIME,
+		vw.PASSING_DATE,
+		vw.PASSING_TIME,
+		vw.BRANCHDESP)
+		from TLMVIW00014 as vw	
+		where vw.DATE_TIME > :startDate  and vw.DATE_TIME < :endDate
+		order by vw.BRANCHDESP asc
+		]]>
+	</query>
+	
+	
+	
+	</hibernate-mapping>

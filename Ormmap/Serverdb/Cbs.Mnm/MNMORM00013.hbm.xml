@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--DATEFILE-->
+<!-- 
+// <copyright file="MNMORM00013.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>Banking</CreatedUser>
+// <CreatedDate>11/15/2013</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version></Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Mnm.Dmd.MNMDTO00013, Ace.Cbs.Mnm.Dmd" rename="MNMDTO00013"/>
+  <class name="MNMORM00013" table="DATEFILE">
+
+    <id name="FIXINTDATE">
+      <column name="FIXINTDATE" sql-type="datetime" not-null="true" />
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+
+    <property name="FIXVOUDATE">
+      <column name="FIXVOUDATE" sql-type="datetime" not-null="true" />
+    </property>
+
+    <property name="UID">
+      <column name="UID" sql-type="uniqueidentifier" not-null="true" />
+    </property>
+
+    <property name="SOURCEBR">
+      <column name="SOURCEBR" sql-type="varchar" not-null="false" />
+    </property>
+
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  <!--//DATEFILE.CheckExist//-->
+  <query name="DATEFILEDAO.CheckExist">
+    select new MNMDTO00013( d.FIXINTDATE,d.FIXVOUDATE,d.UID,d.SOURCEBR )
+    from MNMORM00013 as d where ( d.FIXINTDATE =: fIXINTDATE or d.FIXVOUDATE =: fIXVOUDATE or d.UID =: uID  ) and  d.Active = true
+  </query>
+
+  <!--//DATEFILEDAO.SelectAll//-->
+  <query name="DATEFILEDAO.SelectAll">
+    select new MNMDTO00013(
+    d.FIXINTDATE,
+    d.FIXVOUDATE,
+    d.UID,
+    d.SOURCEBR
+    )
+    from MNMORM00013 as d
+    where d.Active = true
+  </query>
+
+  <!--//DATEFILEDAO.SelectByFIXINTDATE//-->
+  <query name="DATEFILEDAO.SelectByFIXINTDATE">
+    select new MNMDTO00013(
+    d.FIXINTDATE,
+    d.FIXVOUDATE,
+    d.UID,
+    d.SOURCEBR
+    )
+    from MNMORM00013 as d
+    where d.FIXINTDATE = :fIXINTDATE
+    and d.Active = true
+  </query>
+
+
+</hibernate-mapping>

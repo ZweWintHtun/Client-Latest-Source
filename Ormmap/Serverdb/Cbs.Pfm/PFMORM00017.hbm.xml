@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00017, Ace.Cbs.Pfm.Dmd" rename="caofdto"/>
+
+  <class name="PFMORM00017" table="[CAOF]" >
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+	  <property name="CledgerAccountNo">
+		  <column name="AcctNo" sql-type="varchar" not-null="true" />
+	  </property>
+    <property name="Name">
+      <column name="Name" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="AccountSign">
+      <column name="ACSign" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Address">
+      <column name="Address" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="PhoneNo">
+      <column name="Phone" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Fax">
+      <column name="Fax" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Email">
+      <column name="Email" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Business">
+      <column name="Business" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="NRC">
+      <column name="NRC" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="NAMESP">
+      <column name="NAMESP" sql-type="varchar" not-null="false" />
+    </property>
+	  <property name="ESTATUS">
+		  <column name="ESTATUS" sql-type="varchar" not-null="false" />
+	  </property>
+    <property name="CODE">
+      <column name="CODE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="OPENDATE">
+      <column name="OPENDATE" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="USERNO">
+      <column name="USERNO" sql-type="varchar" not-null="false" />
+    </property>
+	  <property name="SourceBranchCode">
+	    <column name="SourceBr" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="CurrencyCode">
+	    <column name="Cur" sql-type="varchar" not-null="true" />
+	  </property>
+    <property name="JoinType">
+      <column name="JointType" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="AcceptedDate">
+      <column name="ADate" sql-type="datetime" not-null="false" />
+    </property>
+	  <property name="CustomerID">
+	    <column name="CustId" sql-type="varchar" not-null="false" />
+	  </property>
+	  <property name="City_Code">
+		  <column name="CityCode" sql-type="varchar" not-null="false" />
+	  </property>
+	  <property name="Township_Code">
+		  <column name="TownshipCode" sql-type="varchar" not-null="false" />
+	  </property>
+	  <property name="State_Code">
+		  <column name="StateCode" sql-type="varchar" not-null="false " />
+	  </property>
+	  <property name="CloseDate">
+      <column name="CloseDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="NoOfPersonSign">
+      <column name="NoPSign" sql-type="int" not-null="false" />
+    </property>
+    <property name="SerialofCustomer">
+      <column name="SrOfCust" sql-type="int" not-null="false" />
+    </property>
+    <!--//Added by HWKO (15-Aug-2017)-->
+    <property name="CpnyRegNo">
+      <column name="CpnyRegNo" sql-type="varchar" not-null="false " />
+    </property>
+    <property name="CpnyRegDate">
+      <column name="CpnyRegDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="CpnyRegExpDate">
+      <column name="CpnyRegExpDate" sql-type="datetime" not-null="false" />
+    </property>    
+    <!--//End Region-->
+    
+    <!--Relationship-->
+   
+    <many-to-one name="Cledger" column="[AcctNo]" class="PFMORM00028" insert="false" update="false"></many-to-one>
+	  <many-to-one name="Customer" column="[CustId]" class="PFMORM00001" insert="false" update="false"></many-to-one>
+	  <many-to-one name="Currency" column="[Cur]" class="Ace.Windows.Admin.DataModel.Currency" insert="false" update="false"></many-to-one>
+	  <many-to-one name="Branch" column="[SourceBr]" class="Ace.Windows.Admin.DataModel.Branch" insert="false" update="false"></many-to-one>
+	  <many-to-one name="CityCode" column="[CityCode]" class="Ace.Windows.Admin.DataModel.City" insert="false" update="false"></many-to-one>
+    <many-to-one name="TownshipCode" column="[TownshipCode]" class="Ace.Windows.Admin.DataModel.Township" insert="false" update="false"></many-to-one>
+    <many-to-one name="StateCode" column="[StateCode]" class="Ace.Windows.Admin.DataModel.State" insert="false" update="false"></many-to-one>	  
+	 
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false" />
+
+		
+  </class>
+
+  <!--//PFMDAO00017.UpdateCloseDate-->
+  <query name="PFMDAO00017.UpdateCloseDate">
+	  update PFMORM00017 c
+	  set
+	  c.CloseDate = :closeDate,
+	  c.UpdatedUserId = :updatedUserId,
+	  c.UpdatedDate = :updatedDate
+	  where c.CledgerAccountNo = :accountNo
+	  and c.Active = true
+  </query>
+
+  <query name="PFMORM00017.SelectCustID">
+    select new caofdto
+    (
+    caof.CustomerID
+    )
+    from PFMORM00017 as caof
+    where caof.CledgerAccountNo=:acctNo
+  </query>
+
+  <query name="CXDAO00006.CAOFSelectByAccountNumber">
+	  select new caofdto(
+	  caof.Id,
+	  caof.Name,
+	  caof.AccountSign,
+	  caof.Address,
+	  caof.PhoneNo,
+	  caof.Fax,
+	  caof.Email,
+	  caof.Business,
+	  caof.NRC,
+	  caof.CODE,
+	  caof.OPENDATE,
+	  caof.USERNO,
+	  caof.JoinType,
+	  caof.AcceptedDate,
+	  caof.CloseDate,
+	  caof.NoOfPersonSign,
+	  caof.SerialofCustomer,
+	  caof.SourceBranchCode,
+	  caof.CurrencyCode,
+	  caof.CledgerAccountNo,
+	  caof.CustomerID,
+	  caof.City_Code,
+	  caof.Township_Code,
+	  caof.State_Code,
+	  caof.TS,
+	  caof.Active,
+	  caof.CreatedDate,
+	  caof.CreatedUserId,
+	  caof.UpdatedDate,
+	  caof.UpdatedUserId
+	  )
+	  from PFMORM00017 as caof
+	  <!--inner join caof.Cledger as c with (c.CloseDate = null or c.CloseDate = '')-->
+    inner join caof.Cledger as c 
+	  where caof.CledgerAccountNo = :accountNumber
+	  and caof.Active = true
+	  order by caof.CustomerID
+
+  </query>
+
+  <query name="CXDAO00006.CAOFSelectByAccountNumberAndSerialofCustomer">
+	  select new caofdto(
+	  caof.Id,
+	  caof.Name,
+	  caof.AccountSign,
+	  caof.Address,
+	  caof.PhoneNo,
+	  caof.Fax,
+	  caof.Email,
+	  caof.Business,
+	  caof.NRC,
+	  caof.CODE,
+	  caof.OPENDATE,
+	  caof.USERNO,
+	  caof.JoinType,
+	  caof.AcceptedDate,
+	  caof.CloseDate,
+	  caof.NoOfPersonSign,
+	  caof.SerialofCustomer,
+	  caof.SourceBranchCode,
+	  caof.CurrencyCode,
+	  caof.CledgerAccountNo,
+	  caof.CustomerID,
+	  caof.City_Code,
+	  caof.Township_Code,
+	  caof.State_Code,
+	  caof.TS,
+	  caof.Active,
+	  caof.CreatedDate,
+	  caof.CreatedUserId,
+	  caof.UpdatedDate,
+	  caof.UpdatedUserId
+	  )
+	  from PFMORM00017 as caof
+	  inner join caof.Cledger as c with (c.CloseDate = null or c.CloseDate = '')
+	  where caof.CledgerAccountNo = :accountNumber
+	  and caof.SerialofCustomer = :serialOfCustomer
+	  and caof.Active = true
+
+  </query>
+  
+  <!--"PFMDAO00017.DeleteOldData"-->
+  <query name="PFMDAO00017.DeleteOldData">
+    delete from PFMORM00017 where CledgerAccountNo = :accountNo and Active = true
+  </query>
+
+	<!--"PFMDAO00017.UpdateCustIDByAccountNo"-->
+	<query name="PFMDAO00017.UpdateCustIDByAccountNo">
+		update PFMORM00017 c
+		set
+		c.UpdatedUserId = :updatedUserId,
+		c.UpdatedDate = :updatedDate,
+		c.CustomerID = :custId,
+		c.Name = :name,
+		c.Business = :business
+		where c.CledgerAccountNo = :accountNo
+		and c.Active = true
+	</query>
+
+	<!--PFMDAO00017.UpdateByUpdatedUser-->           <!--   ASDA-->
+	<query name="PFMDAO00017.UpdateByUpdatedUser">
+		update PFMORM00017 c
+		set
+		c.UpdatedUserId = :updatedUserId,
+		c.UpdatedDate = :updateDate
+		where c.CledgerAccountNo = :accountNo and c.SourceBranchCode = :sourceBr
+		and c.Active = true
+	</query>
+
+  <!--PFMDAO00017.SelectCustDataFromLoanAccountClose-->
+  <query name="PFMDAO00017.SelectCustDataFromLoanAccountClose">
+    select new caofdto(
+    caof.Id,
+    c.Name,
+    caof.AccountSign,
+    caof.Address,
+    caof.PhoneNo,
+    caof.Fax,
+    caof.Email,
+    caof.Business,
+    caof.NRC,
+    caof.CODE,
+    caof.OPENDATE,
+    caof.USERNO,
+    caof.JoinType,
+    caof.AcceptedDate,
+    caof.CloseDate,
+    caof.NoOfPersonSign,
+    caof.SerialofCustomer,
+    caof.SourceBranchCode,
+    caof.CurrencyCode,
+    caof.CledgerAccountNo,
+    caof.CustomerID,
+    caof.City_Code,
+    caof.Township_Code,
+    caof.State_Code,
+    caof.TS,
+    caof.Active,
+    caof.CreatedDate,
+    caof.CreatedUserId,
+    caof.UpdatedDate,
+    caof.UpdatedUserId,
+    cl.OverdraftLimit,
+    cl.MinimumBalance,
+    cl.CurrentBal
+    )
+    from PFMORM00017 as caof
+    inner join caof.Cledger as cl with (cl.CloseDate = null or cl.CloseDate = '')
+    right join caof.Customer as c with c.Active = true
+    where caof.CledgerAccountNo = :accountNumber
+    and caof.Active = true
+    order by caof.CustomerID
+  </query>
+
+</hibernate-mapping>

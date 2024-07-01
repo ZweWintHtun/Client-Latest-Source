@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00029, Ace.Cbs.Pfm.Dmd" rename="linkAccountdto"/>
+  <class name="MNMVIW00017" table="VW_LINK_CUR_SAVE" mutable="false">
+
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+
+    <property name="CurAcctNo">
+      <column name="CURACCTNO" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="SavAcctNo">
+      <column name="SAVACCTNO" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="CBal">
+      <column name="CBAL" sql-type="numeric" not-null="true" />
+    </property>
+
+    <property name="CMinBal">
+      <column name="CMINBAL" sql-type="numeric" not-null="true" />
+    </property>
+
+    <property name="SourceBr">
+      <column name="SourceBr" sql-type="varchar" not-null="true"/>
+    </property>
+
+
+    <property name="Active" not-null="true"/>
+    
+  </class>
+
+  <!--//Select Current Balance for Link Account //-->
+  <query name="SelectCbalForLinkAC">
+    select new linkAccountdto
+    (
+    vw.CurAcctNo,
+    vw.SavAcctNo,
+    vw.CBal,
+    vw.CMinBal
+    )
+    from MNMVIW00017 as vw
+    where vw.Active = true
+    and vw.SourceBr =: branchNo
+  </query>
+
+  <!--//Select Current Balance for Excess Account //-->
+  <query name="SelectCbalForExcessAC">
+    select new linkAccountdto
+    (
+    vw.CurAcctNo,
+    vw.SavAcctNo,
+    vw.CBal,
+    vw.CMinBal
+    )
+    from MNMVIW00017 as vw
+    where vw.CBal > vw.CMinBal
+    and vw.Active = true
+    and vw.SourceBr =: branchNo
+  </query>
+ 
+</hibernate-mapping>

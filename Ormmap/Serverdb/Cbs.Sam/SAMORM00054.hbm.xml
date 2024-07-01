@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Sam.Dmd" namespace="Ace.Cbs.Sam.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Sam.Dmd.SAMDTO00054, Ace.Cbs.Sam.Dmd" rename="NRCdto"/>
+
+  <class name="SAMORM00054" table="[NRCCodeSetUp]" >
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+    <property name="TownshipCode">
+      <column name="TownshipCode" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="TownshipDesp">
+      <column name="TownshipDesp" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="StateCode">
+      <column name="StateCode" sql-type="nvarchar" not-null="true" />
+    </property>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+    <!--Relationship-->
+    <!--<many-to-one name="State" column="[StateCode]" class="Ace.Windows.Admin.DataModel.State" insert="false" update="false"></many-to-one>-->
+  </class>
+
+  <!--//NRCDAO.CheckExist//-->
+  <query name="NRCDAO.CheckExist">
+    select new NRCdto
+    (n.Id,
+    n.TownshipCode,
+    n.TownshipDesp,
+    n.StateCode,
+    n.Active,
+    n.TS,
+    n.CreatedDate,
+    n.CreatedUserId,
+    n.UpdatedDate,
+    n.UpdatedUserId)
+    from SAMORM00054 as n where ( n.StateCode =: StateCode and n.TownshipCode =: TownshipCode ) and  n.Active = true
+  </query>
+
+  <!--//NRCDAO.CheckExist2//-->
+  <query name="NRCDAO.CheckExist2">
+    select new NRCdto(
+    n.Id,
+    n.TownshipCode,
+    n.TownshipDesp,
+    n.StateCode,
+    n.Active,
+    n.TS,
+    n.CreatedDate,
+    n.CreatedUserId,
+    n.UpdatedDate,
+    n.UpdatedUserId
+    )
+    from SAMORM00054 as n where ( n.StateCode =: StateCode and n.TownshipCode =: TownshipCode )
+  </query>
+
+  <!--//NRCDAO.SelectAll//-->
+  <query name="NRCDAO.SelectAll">
+    select new NRCdto(
+    n.Id,
+    n.TownshipCode,
+    n.TownshipDesp,
+    n.StateCode,
+    n.Active,
+    n.TS,
+    n.CreatedDate,
+    n.CreatedUserId,
+    n.UpdatedDate,
+    n.UpdatedUserId
+    )
+    from SAMORM00054 as n
+    where n.Active = true
+    order by n.TownshipCode asc
+  </query>
+
+  <!--//NRCDAO.SelectByStateCode//-->
+  <query name="NRCDAO.SelectByStateCode">
+    select new NRCdto(
+    n.Id,
+    n.TownshipCode,
+    n.TownshipDesp,
+    n.StateCode,
+    n.Active,
+    n.TS,
+    n.CreatedDate,
+    n.CreatedUserId,
+    n.UpdatedDate,
+    n.UpdatedUserId
+    )
+    from SAMORM00054 as n
+    where n.StateCode = :StateCode
+    and n.Active = true
+  </query>
+
+</hibernate-mapping>

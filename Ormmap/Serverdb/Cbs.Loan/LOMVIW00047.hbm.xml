@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00047, Ace.Cbs.Loan.Dmd" rename="vw_repayschedule_dto"/>
+  <class name="LOMVIW00047" table="VW_REPAYSCHEDULE" mutable="false">
+    
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+
+    <property name="LNO">
+      <column name="LNO" sql-type="varchar" not-null="true"/>
+    </property>
+    
+    <property name="ACCTNO">
+      <column name="ACCTNO" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="SAMT">
+      <column name="SAMT" sql-type="numeric" not-null="false"/>
+    </property>
+
+    <property name="NAME">
+      <column name="NAME" sql-type="nvarchar" not-null="false"/>
+    </property>
+
+    <property name="REPAYNO">
+      <column name="REPAYNO" sql-type="varchar" not-null="false"/>
+    </property>
+
+    <property name="FIRSTSAMT">
+      <column name="FIRSTSAMT" sql-type="numeric" not-null="false"/>
+    </property>
+    
+    <property name="Partial">
+      <column name="Partial" sql-type="bit" not-null="false"/>
+    </property>
+
+    <property name="CUR">
+      <column name="CUR" sql-type="varchar" not-null="true"/>
+    </property>
+
+    <property name="SOURCEBR">
+      <column name="SOURCEBR" sql-type="varchar" not-null="true"/>
+    </property>
+
+    <property name="DATE_TIME">
+      <column name="DATE_TIME" sql-type="datetime" not-null="true"/>
+    </property>
+
+    <property name="AMOUNT">
+      <column name="AMOUNT" sql-type="numeric" not-null="true"/>
+    </property>
+
+    <property name="INTEREST">
+      <column name="INTEREST" sql-type="numeric" not-null="true"/>
+    </property>
+    
+  </class>
+
+  <!--//LOMDAO00047.SelectLoansRepaymentScheduleByDate//-->
+  <query name="LOMDAO00047.SelectLoansRepaymentScheduleByDate">
+    select new vw_repayschedule_dto (
+    h.Id,
+    h.LNO,
+    h.ACCTNO,
+    h.SAMT,
+    h.NAME,
+    h.REPAYNO,
+    h.FIRSTSAMT,
+    h.Partial,
+    h.CUR,
+    h.DATE_TIME,
+    h.AMOUNT,
+    h.INTEREST
+    )
+    from LOMVIW00047 as h
+    where h.LNO = :loansNo
+    and CONVERT(char(10),h.DATE_TIME,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and h.SOURCEBR = :sourceBranchCode
+    and h.CUR = :cur
+  </query>
+</hibernate-mapping>

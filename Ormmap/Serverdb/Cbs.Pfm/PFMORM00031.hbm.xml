@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import rename="serverversiondto" class="Ace.Cbs.Pfm.Dmd.PFMDTO00031, Ace.Cbs.Pfm.Dmd"/>
+
+  <class name="PFMORM00031" table="ServerDataVersion" >
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+    
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+
+    <property name="Version">
+      <column name="Version" sql-type="numeric(18,2)" not-null="false" />
+    </property>
+    <property name="DataVersionId">
+      <column name="DataVersionId" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="DataIdValue">
+      <column name="DataIdValue" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Status">
+      <column name="Status" sql-type="int" not-null="false" />
+    </property>
+    <bag name="CCCDataVersions" inverse="true" cascade="all" >
+      <key column="ServerVersionId" />
+      <one-to-many class="PFMORM00030" />
+    </bag>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>  
+
+  <query name="ServerVersionDAO.SelectById">
+	  select new serverversiondto(sdv.Id, sdv.Version, dv.ORMName, dv.ORMDescription, dv.ORMProperties, dv.DTOName, dv.DataIdName, sdv.DataIdValue, sdv.Status)
+	  from PFMORM00076 as dv inner join dv.ServerDataVersions sdv
+	  where sdv.Id = :id
+	  and dv.Active = true
+	  and sdv.Active = true
+  </query>
+
+  <query name="ServerVersionDAO.SelectListByCounterIdVersionNumber">
+    select new serverversiondto(
+    sdv.Id,
+    sdv.DataVersionId,
+    dv.ORMDescription,
+    sdv.Version,
+    sdv.Status)
+    from PFMORM00076 dv inner join dv.ServerDataVersions sdv
+    where sdv.Version > :versionno
+    and sdv.Active = true
+    and sdv.Id not in
+    (select sv.Id
+    from PFMORM00031 as sv
+    inner join sv.CCCDataVersions as cv
+    where cv.CounterId = :counterid)
+  </query>
+  
+  
+</hibernate-mapping>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Mnm.Dmd.MNMDTO00037, Ace.Cbs.Mnm.Dmd" rename="ClosedAccountDTO"/>
+  <class name="MNMVIW00015" table="VW_CAC_CURCLOSE" mutable="false">
+    <id name="Id">
+      <column name="Id" sql-type="int" not-null="true" />
+    </id>
+    <property name="AcctNo">
+      <column name="ACCTNO" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="Name">
+      <column name="NAME" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="CloseDate">
+      <column name="CLOSEDATE" sql-type="datetime" not-null="true"/>
+    </property>
+    
+    <property name="CBal">
+      <column name="CBAL" sql-type="numeric" not-null="true"/>
+    </property>
+    <property name="Cur">
+      <column name="CUR" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="SourceBr">
+      <column name="SOURCEBR" sql-type="varchar" not-null="true"/>
+    </property>
+  </class>
+
+  <!--<query name="MNMVIW00015.SelectByDate">
+    select new currentClosedAccountDTO(C.AcctNo, C.Name, C.CloseDate, C.CBal, C.Cur, C.SourceBr)
+    from MNMVIW00015 as C
+    where C.CloseDate between :startDate and :endDate and C.SourceBr=:branch
+  </query>-->
+  
+</hibernate-mapping>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--[VW_MOB3522_NORMAL] Report-->
+<!-- 
+// <copyright file="TLMVIW00003.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser> Hsu Wai Htoo </CreatedUser>
+// <CreatedDate> 2013-08-22 </CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version>1.0</Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Tel.Dmd" namespace="Ace.Cbs.Tel.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Tel.Dmd.TLMDTO00016, Ace.Cbs.Tel.Dmd" rename="podto"/>
+  <class name="TLMVIW00003" table="VW_MOB3522_NORMAL" mutable="false" >
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+    <property name="Acode">
+      <column name="ACODE" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="PoNo">
+      <column name="PONO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="ADate">
+      <column name="ADATE" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="IDate">
+      <column name="IDATE" sql-type="datetime" not-null="false"/>
+    </property>
+
+    <property name="Amount">
+      <column name="AMOUNT" sql-type="numeric" not-null="false"/>
+    </property>
+
+    <property name="Status">
+      <column name="STATUS" sql-type="varchar" not-null="false"/>
+    </property>
+
+    <property name="Cur">
+      <column name="CUR" sql-type="varchar" not-null="false"/>
+    </property>
+    
+    <property name="SourceBranchCode">
+      <column name="SourceBr" sql-type="varchar" not-null="false"/>
+    </property>
+
+  </class>
+</hibernate-mapping>

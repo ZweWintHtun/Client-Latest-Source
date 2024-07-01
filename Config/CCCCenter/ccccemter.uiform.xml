@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    CCOMCenter UIForm Objects Settings
+  </description>
+	
+  <!--Workstation Component Version Monitoring Form-->
+  <object id="frmCCCOMVEW00001" type="Ace.Window.CccCenter.Com.View.CCCOMVEW00001, Ace.Window.CccCenter.Com.View" singleton="false" parent="SecureDockForm">
+    <property name="WorkstationComponentVersionController" ref="CCCOMCTL00001"/>
+  </object>
+
+  <!--Workstation Client Data Version Monitoring Form-->
+  <object id="frmCCCOMVEW00002" type="Ace.Window.CccCenter.Com.View.CCCOMVEW00002, Ace.Window.CccCenter.Com.View" singleton="false" parent="SecureDockForm">
+    <property name="WorkstationDataVersionMonitoringController" ref="CCCOMCTL00002"/> 
+  </object>
+
+	<object id="frmCCCOMVEW00004ManualUpdateVersion" type="Ace.Window.CccCenter.Com.View.CCCOMVEW00004, Ace.Window.CccCenter.Com.View" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="CCCOMCTL00004"/>
+		<property name="FormName" value="ManualUpdateVersionEntry"/>
+	</object>
+
+	<object id="frmCCCOMVEW00004ManualUpdateVersionCCC" type="Ace.Window.CccCenter.Com.View.CCCOMVEW00004, Ace.Window.CccCenter.Com.View" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="CCCOMCTL00004"/>
+		<property name="FormName" value="ManualUpdateVersionCCC"/>
+	</object>
+	
+	<!--CCC Download List for Other Installer Types-->
+	<object id="frmCCCOMVEW00005" type="Ace.Window.CccCenter.Com.View.CCCOMVEW00005, Ace.Window.CccCenter.Com.View" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="CCCOMCTL00005"/>
+	</object>
+ 
+</objects>	

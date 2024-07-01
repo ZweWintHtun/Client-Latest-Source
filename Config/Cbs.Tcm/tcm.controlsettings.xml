@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:v="http://www.springframework.net/validation">
+
+  <!--region FixedReceipt Editing-->
+  <object id="FormLoad.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="ntxtAmount,cboDurationDesp,ntxtInterestRate,chkAutoRenewal" />
+  </object>
+  
+  <object id="ReceiptNo.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+				  value="ntxtAmount,cboDurationDesp,ntxtInterestRate,chkAutoRenewal" />
+  </object>
+
+  <object id="FReceiptNo.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="mtxtReceiptNo" />
+  </object>
+  
+  <object id="FReceiptNo.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+				  value="mtxtReceiptNo" />
+  </object>
+  <!--endregion-->
+
+  <!--region Fixed Deposit Transfer-->
+  <object id="FixedDepositTransfer.Load.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="txtReceiptNo,txtChequeNo" />
+  </object>
+  <object id="FixedDepositTransfer.ChequeNo.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+				  value="txtChequeNo"/>
+  </object>
+  <!--endregion-->
+
+  <!--region Cash Closing-->
+  <object id="CashClosing.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="dtpCurrentSettlementDate,dtpNextSettlementDate" />
+  </object>  
+  <!--endregion-->
+ 
+	<!--region CleanCash Scroll-->
+	<object id="CleanCashScroll.chkAllBranches.DisableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="DisableControls"
+		               value="cboBranch"/>
+	</object>
+
+	<object id="CleanCashScroll.chkAllBranches.EnableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="EnableControls"
+						value="cboBranch"/>
+	</object>
+
+	<object id="CleanCashScroll.rdoHomeCurrency.DisableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="DisableControls"
+					    value="cboCurrency,chkByHomeCurrency"/>
+	</object>
+
+	<object id="CleanCashScroll.rdoHomeCurrency.EnableControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="EnableControls"
+						value="cboCurrency,chkByHomeCurrency"/>
+	</object>
+  
+	<!--endregion-->
+
+	<!--region Cheque Listing-->
+	<object id="Cheque.FormStart.HiddenControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="HiddenControls"
+		               value="lblStartDate,dtpStartDate,lblEndDate,dtpEndDate,lblAcctNo,mtxtAccountNo"/>
+	</object>
+
+	<object id="Cheque.ByDate.VisibleControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="VisibleControls"
+		               value="lblStartDate,dtpStartDate,lblEndDate,dtpEndDate"/>
+	</object>
+
+	<object id="Cheque.ByAccount.VisibleControls" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="VisibleControls"
+		               value="lblAcctNo,mtxtAccountNo"/>
+	</object>
+
+  <object id="CurrenyCode.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleControls"
+		               value=""/>
+    <property name="DisableControls"
+					    value="cboCurrency"/>
+  </object>
+
+  <object id="AccountNo.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleControls"
+		               value=""/>
+    <property name="DisableControls"
+					    value="mtxtAccountNo"/>
+  </object>
+
+  <object id="AccountNo.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleControls"
+                   value=""/>
+    <property name="EnableControls"
+              value="mtxtAccountNo"/>
+  </object>
+
+  <!--Added by YMP for "Seperating EOD Process" at 30-07-2019-->
+  <object id="NoteChangeDeposit.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+            value="cboCurrency,txtAmount,gvDenomination,txtCounterNo,txtAmount1,txtTotalAmount" />
+  </object>
+
+
+  <!--Added by YMP for "Seperating EOD Process" at 30-07-2019-->
+  <object id="DealerPayOutstandRefund.AllDisable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+            value="rdoCustomerPO,rdoInternalRemittancePO,txtPaymentOrderNo,mtxtAccountNo,txtBudgetYear,txtName" />
+  </object>
+
+  <object id="CurrenyCode.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleControls"
+                   value=""/>
+    <property name="EnableControls"
+              value="cboCurrency"/>
+  </object>
+     
+<!--endregion-->
+
+	<!--region Interest Edit-->
+	<object id="InterestEdit.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="DisableControls"
+					  value="mtxtAccountNo" />
+	</object>
+
+	<object id="InterestEdit.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+		<property name="EnableControls"
+					  value="mtxtAccountNo" />
+	</object>
+	<!--endregion-->
+</objects>

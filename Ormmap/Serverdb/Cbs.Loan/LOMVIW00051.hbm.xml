@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00035, Ace.Cbs.Loan.Dmd" rename="vw_exploans_dto"/>
+  <class name="LOMVIW00051" table="VW_ExpLoans" mutable="false">
+
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+
+    <property name="Lno">
+      <column name="Lno" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="AcctNo">
+      <column name="AcctNo" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="AType">
+      <column name="AType" sql-type="varchar" not-null="false"/>
+    </property>
+    <property name="SAmt">
+      <column name="SAmt" sql-type="numeric" not-null="false"/>
+    </property>
+    <property name="SDate">
+      <column name="SDate" sql-type="datetime" not-null="false"/>
+    </property>
+    <property name="ExpireDate">
+      <column name="ExpireDate" sql-type="datetime" not-null="false"/>
+    </property>
+    <property name="Cur">
+      <column name="Cur" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="SourceBr">
+      <column name="SourceBr" sql-type="varchar" not-null="true"/>
+    </property>
+  </class>
+
+  <!--//LOMDAO00051.SelectExpireLoansByCur//-->
+  <query name="LOMDAO00051.SelectExpireLoansByCur">
+    select new vw_exploans_dto (
+    h.Id,
+    h.Lno,
+    h.AcctNo,
+    h.AType,
+    h.SAmt,
+    h.SDate,
+    h.ExpireDate
+    )
+    from LOMVIW00051 as h
+    where CONVERT(char(10),DATENAME(month, h.ExpireDate)) = :month
+    and CONVERT(char(4),DATEPART(yy, h.ExpireDate)) = :year
+    and h.SourceBr = :sourceBranchCode
+    and h.Cur = :cur
+  </query>
+</hibernate-mapping>

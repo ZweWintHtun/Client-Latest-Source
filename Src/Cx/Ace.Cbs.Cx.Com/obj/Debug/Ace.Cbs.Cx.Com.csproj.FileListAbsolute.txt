@@ -1,0 +1,172 @@
+D:\PRISTINE\20181102\201810101\20180531\Output\Ace.Cbs.Cx.Com.dll
+D:\PRISTINE\20181102\201810101\20180531\Output\Ace.Cbs.Cx.Com.pdb
+D:\PRISTINE\20181102\201810101\20180531\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csprojResolveAssemblyReference.cache
+D:\PRISTINE\20181102\201810101\20180531\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.Utt.CXMessage.resources
+D:\PRISTINE\20181102\201810101\20180531\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.GenerateResource.Cache
+D:\PRISTINE\20181102\201810101\20180531\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.dll
+D:\PRISTINE\20181102\201810101\20180531\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.pdb
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Output\Ace.Cbs.Cx.Com.dll
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Output\Ace.Cbs.Cx.Com.pdb
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csprojResolveAssemblyReference.cache
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.Utt.CXMessage.resources
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.GenerateResource.Cache
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.dll
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.pdb
+E:\WORKING\Pristine\Pristine Project\Output\Ace.Cbs.Cx.Com.dll
+E:\WORKING\Pristine\Pristine Project\Output\Ace.Cbs.Cx.Com.pdb
+E:\WORKING\Pristine\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csprojResolveAssemblyReference.cache
+E:\WORKING\Pristine\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.Utt.CXMessage.resources
+E:\WORKING\Pristine\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.GenerateResource.Cache
+E:\WORKING\Pristine\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.dll
+E:\WORKING\Pristine\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.pdb
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Output\Ace.Cbs.Cx.Com.dll
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Output\Ace.Cbs.Cx.Com.pdb
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csprojResolveAssemblyReference.cache
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.Utt.CXMessage.resources
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.GenerateResource.Cache
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.dll
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.pdb
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csprojResolveAssemblyReference.cache
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.Utt.CXMessage.resources
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.GenerateResource.Cache
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.pdb
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Output\Ace.Cbs.Cx.Com.dll
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Output\Ace.Cbs.Cx.Com.pdb
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.dll
+D:\02. Testing Version\My Latest\12092019\Output\Ace.Cbs.Cx.Com.dll
+D:\02. Testing Version\My Latest\12092019\Output\Ace.Cbs.Cx.Com.pdb
+D:\02. Testing Version\My Latest\12092019\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csprojResolveAssemblyReference.cache
+D:\02. Testing Version\My Latest\12092019\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.Utt.CXMessage.resources
+D:\02. Testing Version\My Latest\12092019\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.GenerateResource.Cache
+D:\02. Testing Version\My Latest\12092019\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.dll
+D:\02. Testing Version\My Latest\12092019\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.pdb
+D:\02. Testing Version\My Latest\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csprojResolveAssemblyReference.cache
+D:\02. Testing Version\My Latest\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.Utt.CXMessage.resources
+D:\02. Testing Version\My Latest\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.GenerateResource.Cache
+D:\02. Testing Version\My Latest\Pristine Project\Output\Ace.Cbs.Cx.Com.dll
+D:\02. Testing Version\My Latest\Pristine Project\Output\Ace.Cbs.Cx.Com.pdb
+D:\02. Testing Version\My Latest\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.dll
+D:\02. Testing Version\My Latest\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.pdb
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Output\Ace.Cbs.Cx.Com.dll
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Output\Ace.Cbs.Cx.Com.pdb
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csprojResolveAssemblyReference.cache
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.Utt.CXMessage.resources
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.GenerateResource.Cache
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.dll
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.pdb
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csprojResolveAssemblyReference.cache
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.Utt.CXMessage.resources
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.GenerateResource.Cache
+E:\~WorkFromHome\Banking_02\Pristine Project\Output\Ace.Cbs.Cx.Com.dll
+E:\~WorkFromHome\Banking_02\Pristine Project\Output\Ace.Cbs.Cx.Com.pdb
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.dll
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.pdb
+D:\Saung\1.Pristine\Source code\Pristine Project\Output\Ace.Cbs.Cx.Com.dll
+D:\Saung\1.Pristine\Source code\Pristine Project\Output\Ace.Cbs.Cx.Com.pdb
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csprojResolveAssemblyReference.cache
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.Utt.CXMessage.resources
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.GenerateResource.Cache
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.dll
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.pdb
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Output\Ace.Cbs.Cx.Com.dll
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Output\Ace.Cbs.Cx.Com.pdb
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csprojResolveAssemblyReference.cache
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.Utt.CXMessage.resources
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.GenerateResource.Cache
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.dll
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.pdb
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Output\Ace.Cbs.Cx.Com.dll
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Output\Ace.Cbs.Cx.Com.pdb
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csprojResolveAssemblyReference.cache
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.Utt.CXMessage.resources
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.GenerateResource.Cache
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.dll
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.pdb
+D:\Pristine Source Code\Copy of CBS SourceCode\Output\Ace.Cbs.Cx.Com.dll
+D:\Pristine Source Code\Copy of CBS SourceCode\Output\Ace.Cbs.Cx.Com.pdb
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csprojResolveAssemblyReference.cache
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.Utt.CXMessage.resources
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.GenerateResource.Cache
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.dll
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.pdb
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Output\Ace.Cbs.Cx.Com.dll
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Output\Ace.Cbs.Cx.Com.pdb
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csprojResolveAssemblyReference.cache
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.Utt.CXMessage.resources
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.GenerateResource.Cache
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.dll
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.pdb
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Cx.Com.dll
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Cx.Com.pdb
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csprojResolveAssemblyReference.cache
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.Utt.CXMessage.resources
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.GenerateResource.Cache
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.dll
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.pdb
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Cx.Com.dll
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Cx.Com.pdb
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csprojResolveAssemblyReference.cache
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.Utt.CXMessage.resources
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.GenerateResource.Cache
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.dll
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.pdb
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Cx.Com.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Cx.Com.pdb
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csprojResolveAssemblyReference.cache
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.Utt.CXMessage.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.GenerateResource.Cache
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.pdb
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Cx.Com.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Cx.Com.pdb
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csprojResolveAssemblyReference.cache
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.Utt.CXMessage.resources
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.GenerateResource.Cache
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.pdb
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Cx.Com.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Cx.Com.pdb
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csprojResolveAssemblyReference.cache
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.Utt.CXMessage.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.GenerateResource.Cache
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.pdb
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Cx.Com.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Cx.Com.pdb
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csprojResolveAssemblyReference.cache
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.Utt.CXMessage.resources
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.GenerateResource.Cache
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.pdb
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Cx.Com.dll
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Cx.Com.pdb
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.Utt.CXMessage.resources
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.GenerateResource.Cache
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.dll
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.pdb
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.AssemblyReference.cache
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.CoreCompileInputs.cache
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.CopyComplete
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Cx.Com.dll
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Cx.Com.pdb
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csprojResolveAssemblyReference.cache
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.Utt.CXMessage.resources
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.GenerateResource.Cache
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.dll
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.pdb
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Output\Ace.Cbs.Cx.Com.dll
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Output\Ace.Cbs.Cx.Com.pdb
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csprojResolveAssemblyReference.cache
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.Utt.CXMessage.resources
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.GenerateResource.Cache
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.dll
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.pdb
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Output\Ace.Cbs.Cx.Com.dll
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Output\Ace.Cbs.Cx.Com.pdb
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.Utt.CXMessage.resources
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.GenerateResource.Cache
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.dll
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.pdb
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.AssemblyReference.cache
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.CoreCompileInputs.cache
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Cx\Ace.Cbs.Cx.Com\obj\Debug\Ace.Cbs.Cx.Com.csproj.CopyComplete

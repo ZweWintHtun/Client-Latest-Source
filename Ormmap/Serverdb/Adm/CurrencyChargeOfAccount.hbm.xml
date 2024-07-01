@@ -1,0 +1,845 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--CCOA-->
+<!-- 
+// <copyright file="SAMORM00005.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>KSW</CreatedUser>
+// <CreatedDate>08/23/2013</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version></Version>
+-->
+<hibernate-mapping assembly="Ace.Windows.Admin.DataModel" namespace="Ace.Windows.Admin.DataModel" xmlns="urn:nhibernate-mapping-2.2">
+
+	<import class="Ace.Windows.Admin.DataModel.CurrencyChargeOfAccountDTO, Ace.Windows.Admin.DataModel" rename="ccoadto"/>
+	<import class="Ace.Cbs.Mnm.Dmd.MNMDTO00010, Ace.Cbs.Mnm.Dmd" rename="prevccoadto"/>
+  <import class="Ace.Cbs.Gl.Dmd.GLMDTO00001, Ace.Cbs.Gl.Dmd" rename="formatFileDTO"/>
+	<class name="CurrencyChargeOfAccount" table="CCOA">
+
+    <composite-id>
+      <key-property name="ACODE" column="ACODE"></key-property>
+      <key-property name="DCODE" column="DCODE"></key-property>
+      <key-property name="CUR" column="CUR"></key-property>
+    </composite-id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="true"/>
+		</version>
+
+		<property name="BF">
+			<column name="BF" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="OBAL">
+			<column name="OBAL" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="HOBAL">
+			<column name="HOBAL" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="CBAL">
+			<column name="CBAL" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="M1">
+			<column name="M1" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="M2">
+			<column name="M2" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="M3">
+			<column name="M3" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="M4">
+			<column name="M4" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="M5">
+			<column name="M5" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="M6">
+			<column name="M6" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="M7">
+			<column name="M7" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="M8">
+			<column name="M8" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="M9">
+			<column name="M9" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="M10">
+			<column name="M10" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="M11">
+			<column name="M11" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="M12">
+			<column name="M12" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="M13">
+			<column name="M13" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MSRC1">
+			<column name="MSRC1" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MSRC2">
+			<column name="MSRC2" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MSRC3">
+			<column name="MSRC3" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MSRC4">
+			<column name="MSRC4" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MSRC5">
+			<column name="MSRC5" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MSRC6">
+			<column name="MSRC6" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MSRC7">
+			<column name="MSRC7" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MSRC8">
+			<column name="MSRC8" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MSRC9">
+			<column name="MSRC9" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MSRC10">
+			<column name="MSRC10" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MSRC11">
+			<column name="MSRC11" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MSRC12">
+			<column name="MSRC12" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MSRC13">
+			<column name="MSRC13" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BF1">
+			<column name="BF1" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BF2">
+			<column name="BF2" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BF3">
+			<column name="BF3" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BF4">
+			<column name="BF4" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BF5">
+			<column name="BF5" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BF6">
+			<column name="BF6" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BF7">
+			<column name="BF7" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BF8">
+			<column name="BF8" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BF9">
+			<column name="BF9" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BF10">
+			<column name="BF10" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BF11">
+			<column name="BF11" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BF12">
+			<column name="BF12" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BF13">
+			<column name="BF13" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BFSRC1">
+			<column name="BFSRC1" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BFSRC2">
+			<column name="BFSRC2" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BFSRC3">
+			<column name="BFSRC3" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BFSRC4">
+			<column name="BFSRC4" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BFSRC5">
+			<column name="BFSRC5" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BFSRC6">
+			<column name="BFSRC6" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BFSRC7">
+			<column name="BFSRC7" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BFSRC8">
+			<column name="BFSRC8" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BFSRC9">
+			<column name="BFSRC9" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BFSRC10">
+			<column name="BFSRC10" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BFSRC11">
+			<column name="BFSRC11" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BFSRC12">
+			<column name="BFSRC12" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BFSRC13">
+			<column name="BFSRC13" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MREV1">
+			<column name="MREV1" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MREV2">
+			<column name="MREV2" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MREV3">
+			<column name="MREV3" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MREV4">
+			<column name="MREV4" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MREV5">
+			<column name="MREV5" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MREV6">
+			<column name="MREV6" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MREV7">
+			<column name="MREV7" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MREV8">
+			<column name="MREV8" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MREV9">
+			<column name="MREV9" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MREV10">
+			<column name="MREV10" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MREV11">
+			<column name="MREV11" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MREV12">
+			<column name="MREV12" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="MREV13">
+			<column name="MREV13" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LYMSRC1">
+			<column name="LYMSRC1" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LYMSRC2">
+			<column name="LYMSRC2" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LYMSRC3">
+			<column name="LYMSRC3" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LYMSRC4">
+			<column name="LYMSRC4" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LYMSRC5">
+			<column name="LYMSRC5" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LYMSRC6">
+			<column name="LYMSRC6" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LYMSRC7">
+			<column name="LYMSRC7" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LYMSRC8">
+			<column name="LYMSRC8" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LYMSRC9">
+			<column name="LYMSRC9" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LYMSRC10">
+			<column name="LYMSRC10" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LYMSRC11">
+			<column name="LYMSRC11" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LYMSRC12">
+			<column name="LYMSRC12" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LYMSRC13">
+			<column name="LYMSRC13" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="SCCRBAL">
+			<column name="SCCRBAL" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="ACCRUED">
+			<column name="ACCRUED" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="BUDGET">
+			<column name="BUDGET" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="UID">
+			<column name="UID" sql-type="char" not-null="false" />
+		</property>
+		
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>		
+
+		<!--<many-to-one name="COAAccountCode" column="[ACode]" class="ChargeOfAccount" insert="false" update="false"></many-to-one>-->
+
+	</class>
+
+	<!--//CCOA.CheckExist//-->
+	<query name="CCOADAO.CheckExist">
+    select new ccoadto( c.ACODE,c.DCODE,c.CUR,c.BUDGET)
+    from CurrencyChargeOfAccount as c where ( c.ACODE =: aCODE and  c.DCODE =: dCODE and c.CUR =: cUR  and  c.Active = true )
+  </query>
+
+	<!--//CCOADAO.SelectAll//-->
+	<query name="CCOADAO.SelectAll">
+    select new ccoadto(
+    c.ACODE,
+    c.DCODE,
+    c.CUR,
+    c.BUDGET,
+    c.UID,
+    c.Active,
+    c.TS,
+    c.CreatedUserId,
+    c.CreatedDate,
+    c.UpdatedUserId,
+    c.UpdatedDate
+    )
+    from CurrencyChargeOfAccount as c
+    where c.Active = true
+  </query>
+
+	<!--//CCOADAO.SelectByACODE//-->
+	<query name="CCOADAO.SelectByACODE">
+    select new ccoadto(
+    c.ACODE,
+    c.DCODE,
+    c.CUR,
+    c.BUDGET,
+    c.UID,
+    c.Active,
+    c.TS,
+    c.CreatedUserId,
+    c.CreatedDate,
+    c.UpdatedUserId,
+    c.UpdatedDate
+    )
+    from CurrencyChargeOfAccount as c
+    where c.ACODE = :aCODE
+    and c.Active = true
+  </query>
+
+	<!--//CCOADAO.selectallforyearly//-->
+	<query name="CCOADAO.SelectAllForyearly">
+    select new ccoadto(
+    c.ACODE,
+    c.DCODE,
+    c.CUR,
+    c.BF,
+    c.OBAL,
+    c.HOBAL,
+    c.CBAL,
+    c.M1,
+    c.M2,
+    c.M3,
+    c.M4,
+    c.M5,
+    c.M6,
+    c.M7,
+    c.M8,
+    c.M9,
+    c.M10,
+    c.M11,
+    c.M12,
+    c.M13,
+    c.MSRC1,
+    c.MSRC2,
+    c.MSRC3,
+    c.MSRC4,
+    c.MSRC5,
+    c.MSRC6,
+    c.MSRC7,
+    c.MSRC8,
+    c.MSRC9,
+    c.MSRC10,
+    c.MSRC11,
+    c.MSRC12,
+    c.MSRC13,
+    c.BF1,
+    c.BF2,
+    c.BF3,
+    c.BF4,
+    c.BF5,
+    c.BF6,
+    c.BF7,
+    c.BF8,
+    c.BF9,
+    c.BF10,
+    c.BF11,
+    c.BF12,
+    c.BF13,
+    c.BFSRC1,
+    c.BFSRC2,
+    c.BFSRC3,
+    c.BFSRC4,
+    c.BFSRC5,
+    c.BFSRC6,
+    c.BFSRC7,
+    c.BFSRC8,
+    c.BFSRC9,
+    c.BFSRC10,
+    c.BFSRC11,
+    c.BFSRC12,
+    c.BFSRC13,
+    c.MREV1,
+    c.MREV2,
+    c.MREV3,
+    c.MREV4,
+    c.MREV5,
+    c.MREV6,
+    c.MREV7,
+    c.MREV8,
+    c.MREV9,
+    c.MREV10,
+    c.MREV11,
+    c.MREV12,
+    c.MREV13,
+    c.LYMSRC1,
+    c.LYMSRC2,
+    c.LYMSRC3,
+    c.LYMSRC4,
+    c.LYMSRC5,
+    c.LYMSRC6,
+    c.LYMSRC7,
+    c.LYMSRC8,
+    c.LYMSRC9,
+    c.LYMSRC10,
+    c.LYMSRC11,
+    c.LYMSRC12,
+    c.LYMSRC13,
+    c.SCCRBAL,
+    c.ACCRUED,
+    c.BUDGET,
+    c.UID,
+    c.Active,
+    c.TS,
+    c.CreatedUserId,
+    c.CreatedDate,
+    c.UpdatedUserId,
+    c.UpdatedDate
+    )
+    from CurrencyChargeOfAccount as c
+    where  c.Active = true
+    and c.DCODE =:dcode
+  </query>
+	
+	<!--Update balance By MNMSVE00006-->
+	<query name="CCOADAO.UpdateBalance">
+		update CurrencyChargeOfAccount s set
+		s.M1=s.M12,
+		s.MSRC1=s.MSRC12,
+		s.CBAL=s.M12,
+		s.OBAL=s.M12,
+		s.HOBAL=s.MSRC12,
+		s.UpdatedUserId = :updatedUserId,
+		s.UpdatedDate = :updatedDate
+		where  s.Active = true
+	</query>
+
+	<!--Update zero By MNMSVE00006-->
+	<query name="CCOADAO.UpdateZeroBalance">
+		update CurrencyChargeOfAccount c set
+		c.BF=0,
+		c.M2=0,
+		c.M3=0,
+		c.M4=0,
+		c.M5=0,
+		c.M6=0,
+		c.M7=0,
+		c.M8=0,
+		c.M9=0,
+		c.M10=0,
+		c.M11=0,
+		c.M12=0,
+		c.M13=0,
+		c.MSRC2=0,
+		c.MSRC3=0,
+		c.MSRC4=0,
+		c.MSRC5=0,
+		c.MSRC6=0,
+		c.MSRC7=0,
+		c.MSRC8=0,
+		c.MSRC9=0,
+		c.MSRC10=0,
+		c.MSRC11=0,
+		c.MSRC12=0,
+		c.MSRC13=0,
+		c.BF1=0,
+		c.BF2=0,
+		c.BF3=0,
+		c.BF4=0,
+		c.BF5=0,
+		c.BF6=0,
+		c.BF7=0,
+		c.BF8=0,
+		c.BF9=0,
+		c.BF10=0,
+		c.BF11=0,
+		c.BF12=0,
+		c.BF13=0,
+		c.BFSRC1=0,
+		c.BFSRC2=0,
+		c.BFSRC3=0,
+		c.BFSRC4=0,
+		c.BFSRC5=0,
+		c.BFSRC6=0,
+		c.BFSRC7=0,
+		c.BFSRC8=0,
+		c.BFSRC9=0,
+		c.BFSRC10=0,
+		c.BFSRC11=0,
+		c.BFSRC12=0,
+		c.BFSRC13=0,
+		c.MREV1=0,
+		c.MREV2=0,
+		c.MREV3=0,
+		c.MREV4=0,
+		c.MREV5=0,
+		c.MREV6=0,
+		c.MREV7=0,
+		c.MREV8=0,
+		c.MREV9=0,
+		c.MREV10=0,
+		c.MREV11=0,
+		c.MREV12=0,
+		c.MREV13=0,
+		c.LYMSRC1=0,
+		c.LYMSRC2=0,
+		c.LYMSRC3=0,
+		c.LYMSRC4=0,
+		c.LYMSRC5=0,
+		c.LYMSRC6=0,
+		c.LYMSRC7=0,
+		c.LYMSRC8=0,
+		c.LYMSRC9=0,
+		c.LYMSRC10=0,
+		c.LYMSRC11=0,
+		c.LYMSRC12=0,
+		c.LYMSRC13=0,
+		c.SCCRBAL=0,
+		c.ACCRUED=0,
+		c.BUDGET= :budget,
+		c.UpdatedUserId = :updatedUserId,
+		c.UpdatedDate = :updatedDate
+		where  c.Active = true
+	</query>	
+
+	<!--//CXCOM00010.SelectByACODEAndCurrency//--> 
+	<query name="CXCOM00010.SelectByACODEAndCurrency">
+		select new prevccoadto(
+		c.ACODE,
+		a.AccountName,
+		c.M1,
+		c.M2,
+		c.M3,
+		c.M4,
+		c.M5,
+		c.M6,
+		c.M7,
+		c.M8,
+		c.M9,
+		c.M10,
+		c.M11,
+		c.M12,
+		c.M13
+		)
+		from CurrencyChargeOfAccount as c , ChargeOfAccount as a
+		where c.ACODE = a.ACode and c.DCODE=a.DCODE
+		and a.ACode = :aCode
+		and c.CUR = :cur
+		and c.DCODE = :sourceBr and c.Active = true
+		and a.Active = true
+	</query>
+	
+	<!--GLMVEW00004.MonthlyBudgetedEntry-->
+	<query name="GLMVEW00004.MonthlyBudgetedEntry">
+		select new prevccoadto
+		(
+		cc.ACODE,
+		cc.DCODE,
+		c.AccountName,
+		cc.CUR,
+		cc.BF1,
+		cc.BF2,
+		cc.BF3,
+		cc.BF4,
+		cc.BF5,
+		cc.BF6,
+		cc.BF7,
+		cc.BF8,
+		cc.BF9,
+		cc.BF10,
+		cc.BF11,
+		cc.BF12
+		)
+		from CurrencyChargeOfAccount as cc ,  ChargeOfAccount as c
+		where cc.ACODE = c.ACode
+		and c.ACode not like '%000'
+		and cc.DCODE = c.DCODE
+		and cc.Active = true
+		and c.Active = true
+	</query>
+
+	<!--GLMVEW00004.MonthlyBudgetedEntryUpdate-->
+	<query name="GLMVEW00004.MonthlyBudgetedEntryUpdate">
+		update CurrencyChargeOfAccount as cc
+		set
+		cc.BF1 = :bf1,
+		cc.BF2 = :bf2,
+		cc.BF3 = :bf3,
+		cc.BF4 = :bf4,
+		cc.BF5 = :bf5,
+		cc.BF6 = :bf6,
+		cc.BF7 = :bf7,
+		cc.BF8 = :bf8,
+		cc.BF9 = :bf9,
+		cc.BF10 = :bf10,
+		cc.BF11 = :bf11,
+		cc.BF12 = :bf12,
+		cc.UpdatedUserId = :updatedUserId,
+		cc.UpdatedDate = :updatedDate
+		where cc.ACODE = :acode
+		and cc.DCODE = :dcode
+		and cc.CUR = :currency
+		and cc.Active = true
+	</query>
+
+	<!--GLMVEW00002.OpeningBalanceEntry-->
+	<query name="GLMVEW00002.OpeningBalanceEntry">
+		select new prevccoadto
+		(
+		c.ACode,
+		c.DCODE,
+		c.AccountName,
+		c.ACType,
+		cc.CUR,
+		cc.OBAL,
+		cc.HOBAL
+		)
+		from CurrencyChargeOfAccount as cc ,  ChargeOfAccount as c
+		where cc.ACODE = c.ACode and cc.DCODE = c.DCODE
+		and c.ACode not like '%000'
+		and (c.ACType='A' or c.ACType='L')
+		and cc.Active = true
+		and c.Active = true
+		order by c.ACType
+	</query>
+
+	<!--GLMVEW00002.OpeningBalanceEntryUpdate-->
+	<query name="GLMVEW00002.OpeningBalanceEntryUpdate">
+		update CurrencyChargeOfAccount as cc
+		set
+		cc.OBAL = :obal,
+		cc.HOBAL = :hobal,
+		cc.UpdatedUserId = :updatedUserId,
+		cc.UpdatedDate = :updatedDate
+		where cc.ACODE = :acode
+		and cc.DCODE = :dcode
+		and cc.CUR = :currency
+		and cc.Active = true
+	</query>
+
+	<!--GLMVEW00004.MonthlyBudgetedEntryHomeCurrency-->
+	<query name="GLMVEW00004.MonthlyBudgetedEntryHomeCurrency">
+		select new prevccoadto
+		(
+		cc.ACODE,
+		cc.DCODE,
+		c.AccountName,
+		cc.CUR,
+		cc.BFSRC1,
+		cc.BFSRC2,
+		cc.BFSRC3,
+		cc.BFSRC4,
+		cc.BFSRC5,
+		cc.BFSRC6,
+		cc.BFSRC7,
+		cc.BFSRC8,
+		cc.BFSRC9,
+		cc.BFSRC10,
+		cc.BFSRC11,
+		cc.BFSRC12
+		)
+		from CurrencyChargeOfAccount as cc ,  ChargeOfAccount as c
+		where cc.ACODE = c.ACode
+		and c.ACode not like '%000'
+		and cc.DCODE = c.DCODE
+		and cc.Active = true
+		and c.Active = true
+	</query>
+
+	<!--GLMVEW00004.MonthlyBudgetedEntryHomeCurrencyUpdate-->
+	<query name="GLMVEW00004.MonthlyBudgetedEntryHomeCurrencyUpdate">
+		update CurrencyChargeOfAccount as cc
+		set
+		cc.BFSRC1 = :bfsrc1,
+		cc.BFSRC2 = :bfsrc2,
+		cc.BFSRC3 = :bfsrc3,
+		cc.BFSRC4 = :bfsrc4,
+		cc.BFSRC5 = :bfsrc5,
+		cc.BFSRC6 = :bfsrc6,
+		cc.BFSRC7 = :bfsrc7,
+		cc.BFSRC8 = :bfsrc8,
+		cc.BFSRC9 = :bfsrc9,
+		cc.BFSRC10 = :bfsrc10,
+		cc.BFSRC11 = :bfsrc11,
+		cc.BFSRC12 = :bfsrc12,
+		cc.UpdatedUserId = :updatedUserId,
+		cc.UpdatedDate = :updatedDate
+		where cc.ACODE = :acode
+		and cc.DCODE = :dcode
+		and cc.CUR = :currency
+		and cc.Active = true
+	</query>
+
+	<!--GLMVEW00003.YearlyBudgetEntry-->
+	<query name="GLMVEW00003.YearlyBudgetEntry">
+		select new prevccoadto
+		(
+		cc.ACODE,
+		cc.DCODE,
+		cc.CUR,
+		cc.BF,
+		c.AccountName
+		)
+		from CurrencyChargeOfAccount as cc ,  ChargeOfAccount as c
+		where cc.ACODE = c.ACode and cc.DCODE = c.DCODE
+		and cc.ACODE not like '%000'
+		and cc.Active = true
+		and c.Active = true
+		order by cc.ACODE
+	</query>
+
+	<!--GLMVEW00002.OpeningBalanceEntryUpdate-->
+	<query name="GLMVEW00003.YearlyBudgetEntryUpdate">
+		update CurrencyChargeOfAccount as cc
+		set
+		cc.BF = :bf,
+		cc.UpdatedUserId = :updatedUserId,
+		cc.UpdatedDate = :updatedDate
+		where cc.ACODE = :acode
+		and cc.DCODE = :dcode
+		and cc.CUR = :currency
+		and cc.Active = true
+	</query>
+
+  <!--//CCOA.CheckExistByAcodeForDcodeNull//-->
+  <query name="CCOADAO.CheckExistByAcodeForDcodeNull">
+    select new ccoadto
+    ( c.ACODE,
+    c.DCODE,
+    c.CUR,
+    c.BUDGET)
+    from CurrencyChargeOfAccount as c
+    where ( c.ACODE =: aCODE and  c.DCODE = :dCode and  c.Active = true )
+  </query>
+  
+</hibernate-mapping>
+

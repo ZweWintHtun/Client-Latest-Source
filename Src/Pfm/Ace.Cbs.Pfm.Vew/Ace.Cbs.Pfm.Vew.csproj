@@ -1,0 +1,521 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A5472B4C-AFD4-4B38-A7FB-BBB70ABF214F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ace.Cbs.Pfm.Vew</RootNamespace>
+    <AssemblyName>Ace.Cbs.Pfm.Vew</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ace.Cbs.Cx.Cle, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Cx.Cle.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Loan.Ctr, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="Ace.Cbs.Loan.Vew, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Ace.Cbs.Mnm.Dmd, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Ace.Cbs.Mnm._Excel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="Ace.Cbs.Sam.Dmd, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Sam.Dmd.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Tcm.Ctr, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="Ace.Cbs.Tcm.Dmd, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Ace.Cbs.Tel.Dmd, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Ace.Windows.Admin.DataModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Admin.DataModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.CXClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.CXClient.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Spring.Core, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate33, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\Spring.Data.NHibernate33.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.7.0.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PFMVEW00001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00001.designer.cs">
+      <DependentUpon>PFMVEW00001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00002.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00002.designer.cs">
+      <DependentUpon>PFMVEW00002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00003.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00003.designer.cs">
+      <DependentUpon>PFMVEW00003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00004.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00004.Designer.cs">
+      <DependentUpon>PFMVEW00004.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00005.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00005.designer.cs">
+      <DependentUpon>PFMVEW00005.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00006.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00006.designer.cs">
+      <DependentUpon>PFMVEW00006.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00007.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00007.designer.cs">
+      <DependentUpon>PFMVEW00007.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00008.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00008.designer.cs">
+      <DependentUpon>PFMVEW00008.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00009.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00009.designer.cs">
+      <DependentUpon>PFMVEW00009.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00010.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00010.designer.cs">
+      <DependentUpon>PFMVEW00010.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00011.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00011.designer.cs">
+      <DependentUpon>PFMVEW00011.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00012.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00012.designer.cs">
+      <DependentUpon>PFMVEW00012.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00013.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00013.designer.cs">
+      <DependentUpon>PFMVEW00013.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00014.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00014.designer.cs">
+      <DependentUpon>PFMVEW00014.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00015.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00015.designer.cs">
+      <DependentUpon>PFMVEW00015.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00016.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00016.designer.cs">
+      <DependentUpon>PFMVEW00016.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00017.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00017.designer.cs">
+      <DependentUpon>PFMVEW00017.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00018.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00018.designer.cs">
+      <DependentUpon>PFMVEW00018.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00019.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00019.designer.cs">
+      <DependentUpon>PFMVEW00019.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00020.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00020.designer.cs">
+      <DependentUpon>PFMVEW00020.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00021.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00021.designer.cs">
+      <DependentUpon>PFMVEW00021.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00022.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00022.designer.cs">
+      <DependentUpon>PFMVEW00022.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00023.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00023.designer.cs">
+      <DependentUpon>PFMVEW00023.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00024.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00024.designer.cs">
+      <DependentUpon>PFMVEW00024.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00025.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00025.designer.cs">
+      <DependentUpon>PFMVEW00025.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00026.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00026.designer.cs">
+      <DependentUpon>PFMVEW00026.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00027.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00027.designer.cs">
+      <DependentUpon>PFMVEW00027.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00028.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00028.designer.cs">
+      <DependentUpon>PFMVEW00028.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00029.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00029.designer.cs">
+      <DependentUpon>PFMVEW00029.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00030.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00030.designer.cs">
+      <DependentUpon>PFMVEW00030.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00031.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00031.designer.cs">
+      <DependentUpon>PFMVEW00031.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00032.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00032.designer.cs">
+      <DependentUpon>PFMVEW00032.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00033.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00033.designer.cs">
+      <DependentUpon>PFMVEW00033.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00034.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00034.designer.cs">
+      <DependentUpon>PFMVEW00034.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00035.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00035.Designer.cs">
+      <DependentUpon>PFMVEW00035.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00078.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00078.designer.cs">
+      <DependentUpon>PFMVEW00078.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00079.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00079.Designer.cs">
+      <DependentUpon>PFMVEW00079.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFMVEW00080.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFMVEW00080.Designer.cs">
+      <DependentUpon>PFMVEW00080.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PFMVEW00001.resx">
+      <DependentUpon>PFMVEW00001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00004.resx">
+      <DependentUpon>PFMVEW00004.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00002.resx">
+      <DependentUpon>PFMVEW00002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00005.resx">
+      <DependentUpon>PFMVEW00005.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00006.resx">
+      <DependentUpon>PFMVEW00006.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00008.resx">
+      <DependentUpon>PFMVEW00008.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00009.resx">
+      <DependentUpon>PFMVEW00009.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00011.resx">
+      <DependentUpon>PFMVEW00011.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00012.resx">
+      <DependentUpon>PFMVEW00012.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00013.resx">
+      <DependentUpon>PFMVEW00013.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00003.resx">
+      <DependentUpon>PFMVEW00003.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00007.resx">
+      <DependentUpon>PFMVEW00007.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00010.resx">
+      <DependentUpon>PFMVEW00010.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00014.resx">
+      <DependentUpon>PFMVEW00014.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00015.resx">
+      <DependentUpon>PFMVEW00015.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00016.resx">
+      <DependentUpon>PFMVEW00016.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00017.resx">
+      <DependentUpon>PFMVEW00017.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00018.resx">
+      <DependentUpon>PFMVEW00018.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00019.resx">
+      <DependentUpon>PFMVEW00019.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00020.resx">
+      <DependentUpon>PFMVEW00020.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00021.resx">
+      <DependentUpon>PFMVEW00021.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00024.resx">
+      <DependentUpon>PFMVEW00024.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00025.resx">
+      <DependentUpon>PFMVEW00025.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00026.resx">
+      <DependentUpon>PFMVEW00026.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00023.resx">
+      <DependentUpon>PFMVEW00023.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00027.resx">
+      <DependentUpon>PFMVEW00027.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00022.resx">
+      <DependentUpon>PFMVEW00022.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00028.resx">
+      <DependentUpon>PFMVEW00028.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00029.resx">
+      <DependentUpon>PFMVEW00029.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00030.resx">
+      <DependentUpon>PFMVEW00030.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00031.resx">
+      <DependentUpon>PFMVEW00031.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00032.resx">
+      <DependentUpon>PFMVEW00032.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00033.resx">
+      <DependentUpon>PFMVEW00033.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00034.resx">
+      <DependentUpon>PFMVEW00034.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00035.resx">
+      <DependentUpon>PFMVEW00035.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00078.resx">
+      <DependentUpon>PFMVEW00078.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00079.resx">
+      <DependentUpon>PFMVEW00079.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFMVEW00080.resx">
+      <DependentUpon>PFMVEW00080.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\PFMRDLC00001.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\PFMRDLC00002.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\PFMRDLC00003.rdlc" />
+    <EmbeddedResource Include="RDLC\PFMRDLC00004.rdlc" />
+    <EmbeddedResource Include="RDLC\PFMRDLC00005.rdlc" />
+    <EmbeddedResource Include="RDLC\PFMRDLC00006.rdlc" />
+    <EmbeddedResource Include="RDLC\PFMRDLC00007.rdlc" />
+    <EmbeddedResource Include="RDLC\PFMRDLC00008.rdlc" />
+    <EmbeddedResource Include="RDLC\PFMRDLC00009.rdlc" />
+    <EmbeddedResource Include="RDLC\PFMRDLC00010.rdlc" />
+    <EmbeddedResource Include="RDLC\PFMRDLC00011.rdlc" />
+    <EmbeddedResource Include="RDLC\PFMRDLC00012.rdlc" />
+    <EmbeddedResource Include="RDLC\PFMRDLC00013.rdlc" />
+    <EmbeddedResource Include="RDLC\PFMRDLC00014.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\Ace.Cbs.Pfm.Dmd.PFMDTO00014.datasource" />
+    <None Include="Resources\cancel_01.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Cx\Ace.Cbs.Cx.Com\Ace.Cbs.Cx.Com.csproj">
+      <Project>{83A33F31-AFB5-4778-8AEF-42EB781DD861}</Project>
+      <Name>Ace.Cbs.Cx.Com</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Loan\Ace.Cbs.Loan.Dmd\Ace.Cbs.Loan.Dmd.csproj">
+      <Project>{9D836AEE-6202-4573-B5CD-EB5D6F0F50FA}</Project>
+      <Name>Ace.Cbs.Loan.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ace.Cbs.Pfm.Ctr\Ace.Cbs.Pfm.Ctr.csproj">
+      <Project>{A9887BFF-9218-4612-BA0A-BA3D5E6744E1}</Project>
+      <Name>Ace.Cbs.Pfm.Ctr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ace.Cbs.Pfm.Dmd\Ace.Cbs.Pfm.Dmd.csproj">
+      <Project>{8F20F64D-FF47-47A3-87CA-30D8A12B5B75}</Project>
+      <Name>Ace.Cbs.Pfm.Dmd</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

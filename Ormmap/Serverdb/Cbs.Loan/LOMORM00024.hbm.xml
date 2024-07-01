@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--PaymentInterval-->
+<!-- 
+// <copyright file="LOMORM00024.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>HM</CreatedUser>
+// <CreatedDate>19/01/2015</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version></Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00024, Ace.Cbs.Loan.Dmd" rename="paymentIntervalDto"/>
+  <class name="LOMORM00024" table="[PaymentInterval]">
+
+    <id name="Code">
+      <column name="Code" sql-type="varchar" not-null="true"/>
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+
+    <property name="Description">
+      <column name="Description" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="TermPerYear">
+      <column name="TermPerYear" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="USERNO">
+      <column name="USERNO" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Date_Time">
+      <column name="Date_Time" sql-type="datetime" not-null="true" />
+    </property>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+</hibernate-mapping>
+

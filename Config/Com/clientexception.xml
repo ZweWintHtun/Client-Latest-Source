@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+	<description>
+		Error Exception Settings
+	</description>
+
+  <object id="ClientErrorHandlerDefinition" type="Ace.Windows.Core.Utt.ErrorHandler, Ace.Windows.Core" singleton="false">
+    <property name="LoggerName" value="clientlog"/>
+    <property name="UnexpectedMessage" value="ME90043"/>
+    <property name="Messages">
+      <dictionary key-type="string" value-type="string">
+		    <entry key="Connection" value="ME90037" />
+        <entry key="SpringConfiguration" value="ME90041" />
+        <entry key="Database" value="ME90039" />
+      </dictionary>
+    </property>
+
+    <property name="Exceptions">
+      <dictionary key-type="string" value-type="System.Collections.Generic.List&lt;string>">
+		  <entry key="Connection">
+			  <list>
+				  <value>System.TimeoutException</value>
+				  <value>System.ServiceModel.EndpointNotFoundException</value>
+				  <value>System.ServiceModel.CommunicationObjectFaultedException</value>
+				  <value>System.ServiceModel.Security.SecurityNegotiationException</value>
+				  <value>System.Net.Sockets.SocketException</value>
+			  </list>
+		  </entry>
+		  <entry key="SpringConfiguration">
+          <list>
+            <value>System.TypeInitializationException</value>
+            <value>Spring.Objects.Factory.ObjectCreationException</value>
+            <value>Spring.Core.CannotLoadObjectTypeException</value>
+            <value>Spring.Objects.Factory.NoSuchObjectDefinitionException</value>
+          </list>
+        </entry>
+        <entry key="Database">
+          <list>
+            <value>System.Data.SqlClient.SqlException</value>
+			<value>Spring.Transaction.CannotCreateTransactionException</value>
+            <value>NHibernate.Exceptions.GenericADOException</value>
+            <value>Spring.Data.NHibernateOptimisticLockingFailureException</value>
+            <value>Spring.Data.UncategorizedAdoException</value>
+            <value>Spring.Data.BadSqlGrammarException</value>
+			<value>Spring.Dao.DataIntegrityViolationException</value>
+          </list>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+  
+</objects>

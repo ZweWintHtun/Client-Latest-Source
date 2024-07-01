@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+	<description>
+		DataAccess Objects Settings
+	</description>
+
+	<!--MinBalDAO-->
+	<object id="MinBalDAO" type="Ace.Cbs.Tcm.Dao.TCMDAO00007, Ace.Cbs.Tcm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+  <!--CashClosingDAO-->
+  <object id="CashClosingDAO" type="Ace.Cbs.Tcm.Dao.TCMDAO00009, Ace.Cbs.Tcm.Dao" singleton="false" >
+  <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+	<object id="TCMDAO00001" type="Ace.Cbs.Tcm.Dao.TCMDAO00001, Ace.Cbs.Tcm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+  
+  <!--Saving Interest Account Withdrawal DAO-->
+  <object id="SIAccWitDAO" type="Ace.Cbs.Tcm.Dao.TCMDAO00006, Ace.Cbs.Tcm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  
+  <!--NplIntDAO-->
+  <object id="NplIntDAO" type="Ace.Cbs.Tcm.Dao.TCMDAO00003, Ace.Cbs.Tcm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+	<!--ServiceChargesDAO-->
+	<object id="ServiceChargesDAO" type="Ace.Cbs.Tcm.Dao.TCMDAO00002, Ace.Cbs.Tcm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+  
+  <!--Daily Report DAO-->
+  <object id="DailyReportDAO" type="Ace.Cbs.Tcm.Dao.TCMDAO00052, Ace.Cbs.Tcm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--Ledger Balance DAO-->
+  <object id="LedgerBalanceDAO" type="Ace.Cbs.Tcm.Dao.TCMDAO00013, Ace.Cbs.Tcm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+</objects>

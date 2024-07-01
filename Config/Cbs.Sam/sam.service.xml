@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net"
+         >
+
+	<!-- Referenced by main application context configuration file -->
+	<description>
+		Service Objects Settings
+	</description>
+
+	<!--Region System Admin Module-->
+
+	<!--//AccountTypeService//-->
+	<object id="SAMSVE00001" type="Ace.Cbs.Sam.Sve.SAMSVE00001, Ace.Cbs.Sam.Sve" singleton="false">
+		<property name="AccountTypeDAO" ref="AccountTypeDAO"/>
+	</object>
+
+	<!--//SubAccountTypeService//-->
+	<object id="SAMSVE00002" type="Ace.Cbs.Sam.Sve.SAMSVE00002, Ace.Cbs.Sam.Sve" singleton="false">
+		<property name="SubAccountTypeDAO" ref="SubAccountTypeDAO"/>
+	</object>
+
+	<!--//AppSettingsService//-->
+	<object id="SAMSVE00010" type="Ace.Cbs.Sam.Sve.SAMSVE00010, Ace.Cbs.Sam.Sve" singleton="false">
+		<property name="AppSettingsDAO" ref="AppSettingsDAO"/>
+	</object>
+
+	<!--//DepositCodeService//-->
+	<object id="SAMSVE00008" type="Ace.Cbs.Sam.Sve.SAMSVE00008, Ace.Cbs.Sam.Sve" singleton="false">
+		<property name="DepositCodeDAO" ref="DepositCodeDAO"/>
+	</object>
+
+	<!--//HOLIDAYService//-->
+	<object id="SAMSVE00007" type="Ace.Cbs.Sam.Sve.SAMSVE00007, Ace.Cbs.Sam.Sve" singleton="false">
+		<property name="HOLIDAYDAO" ref="HOLIDAYDAO"/>
+	</object>
+  
+	<!--//InitialCodeService//-->
+	<object id="SAMSVE00021" type="Ace.Cbs.Sam.Sve.SAMSVE00021, Ace.Cbs.Sam.Sve" singleton="false">
+		<property name="InitialDAO" ref="InitialDAO"/>
+	</object>
+
+	<!--//OccupationCodeService//-->
+	<object id="SAMSVE00003" type="Ace.Cbs.Sam.Sve.SAMSVE00003, Ace.Cbs.Sam.Sve" singleton="false">
+		<property name="OccupationCodeDAO" ref="OccupationCodeDAO"/>
+	</object>
+
+	<!--//BCodeService//-->
+	<object id="SAMSVE00004" type="Ace.Cbs.Sam.Sve.SAMSVE00004, Ace.Cbs.Sam.Sve" singleton="false">
+		<property name="BCodeDAO" ref="BCodeDAO"/>
+	</object>
+
+	<!--//TestKeyService//-->
+	<object id="SAMSVE00019" type="Ace.Cbs.Sam.Sve.SAMSVE00019, Ace.Cbs.Sam.Sve" singleton="false">
+		<property name="DayKeyDAO" ref="DayKeyDAO"/>
+		<property name="MonthKeyDAO" ref="MonthKeyDAO"/>
+		<property name="AmountKeyDAO" ref="AmountKeyDAO"/>
+		<property name="BranchKeyDAO" ref="BranchKeyDAO"/>
+	</object>
+
+	<!--//FixRateService//-->
+	<object id="SAMSVE00015" type="Ace.Cbs.Sam.Sve.SAMSVE00015, Ace.Cbs.Sam.Sve" singleton="false">
+		<property name="FixRateDAO" ref="FixRateDAO"/>
+	</object>
+
+	<!--//ZoneService//-->
+	<object id="SAMSVE00017" type="Ace.Cbs.Sam.Sve.SAMSVE00017, Ace.Cbs.Sam.Sve" singleton="false">
+		<property name="ZoneDAO" ref="ZoneDAO"/>
+		<property name="BranchDAOForAll" ref="BranchDAOForAll"/>
+	</object>
+
+	<!--//MaxFileService//-->
+	<object id="SAMSVE00045" type="Ace.Cbs.Sam.Sve.SAMSVE00045, Ace.Cbs.Sam.Sve" singleton="false">
+		<property name="MaxFileDAO" ref="MaxFileDAO"/>
+	</object>
+
+	<!--//Branch_SERVERLOGService//-->
+	<object id="SAMSVE00020" type="Ace.Cbs.Sam.Sve.SAMSVE00020, Ace.Cbs.Sam.Sve" singleton="false">
+		<property name="SERVERLOGDAO" ref="SERVERLOGDAO"/>
+	</object>
+
+	<!--//RemittanceRateService//-->
+	<object id="SAMSVE00026" type="Ace.Cbs.Sam.Sve.SAMSVE00026, Ace.Cbs.Sam.Sve" singleton="false">
+		<property name="RemitBrDAO" ref="RemitBrDAO"/>
+		<property name="RmitRateDAO" ref="RmitRateDAO"/>
+    <property name="BranchDAOForAll" ref="BranchDAOForAll"/>
+	</object>
+
+	<!--//IBLRateBrService//-->
+	<object id="SAMSVE00025" type="Ace.Cbs.Sam.Sve.SAMSVE00025, Ace.Cbs.Sam.Sve" singleton="false">
+		<property name="RemitBrIblDAO" ref="RemitBrIblDAO"/>
+		<property name="IblDwtRateDAO" ref="IblDwtRateDAO"/>
+	</object>
+
+	<!--//PORateService//-->
+	<object id="SAMSVE00022" type="Ace.Cbs.Sam.Sve.SAMSVE00022, Ace.Cbs.Sam.Sve" singleton="false">
+		<property name="PORateDAO" ref="PORateDAO"/>
+	</object>
+
+	<!--//RateFileService//-->
+	<object id="SAMSVE00023" type="Ace.Cbs.Sam.Sve.SAMSVE00023, Ace.Cbs.Sam.Sve" singleton="false">
+		<property name="RateFileDAO" ref="RateFileDAO"/>
+	</object>
+
+	<!--//DenoService//-->
+	<object id="SAMSVE00024" type="Ace.Cbs.Sam.Sve.SAMSVE00024, Ace.Cbs.Sam.Sve" singleton="false">
+		<property name="DenoDAO" ref="DenoDAO"/>
+	</object>
+
+	<!--//NewSetupService//-->
+	<object id="SAMSVE00016" type="Ace.Cbs.Sam.Sve.SAMSVE00016, Ace.Cbs.Sam.Sve" singleton="false">
+		<property name="NewSetupDAO" ref="NewSetupDAO"/>
+	</object>
+
+	<!--//Sys001Service//-->
+	<object id="SAMSVE00049" type="Ace.Cbs.Sam.Sve.SAMSVE00049, Ace.Cbs.Sam.Sve" singleton="false">
+		<property name="Sys001DAO" ref="Sys001DAO"/>
+	</object>
+
+	<!--//MessageService//-->
+	<object id="SAMSVE00050" type="Ace.Cbs.Sam.Sve.SAMSVE00050, Ace.Cbs.Sam.Sve" singleton="false">
+		<property name="MessageDAO" ref="MessageDAO"/>
+	</object>
+
+	<!--//RateInfoService//-->
+	<object id="SAMSVE00051" type="Ace.Cbs.Sam.Sve.SAMSVE00051, Ace.Cbs.Sam.Sve" singleton="false">
+		<property name="RateInfoDAO" ref="RateInfoDAO"/>
+	</object>
+
+	<!--//TranTypeService//-->
+	<object id="SAMSVE00052" type="Ace.Cbs.Sam.Sve.SAMSVE00052, Ace.Cbs.Sam.Sve" singleton="false">
+		<property name="TranTypeDAO" ref="TranTypeDAO"/>
+	</object>
+
+	<!--//NationalityCodeService//-->
+	<object id="SAMSVE00053" type="Ace.Cbs.Sam.Sve.SAMSVE00053, Ace.Cbs.Sam.Sve" singleton="false">
+		<property name="NationalityCodeDAO" ref="NationalityCodeDAO"/>
+	</object>
+
+  <!--//InterestRateFileService//-->
+  <object id="SAMSVE00031" type="Ace.Cbs.Sam.Sve.SAMSVE00031, Ace.Cbs.Sam.Sve" singleton="false">   
+    <property name="ViewsDAO" ref="ViewDAO"/>
+  </object>
+
+  <!--//InterestRateFileService//-->
+  <object id="SAMSVE00056" type="Ace.Cbs.Sam.Sve.SAMSVE00056, Ace.Cbs.Sam.Sve" singleton="false">
+    <property name="NRCCodeDAO" ref="NRCCodeDAO"/>
+  </object> 
+
+	<object id="SAMSVE00054" type="Ace.Cbs.Sam.Sve.SAMSVE00054, Ace.Cbs.Sam.Sve" singleton="false">
+		<property name="BranchDAO" ref="BranchDAO"/>
+		<property name="RmitRateDAO" ref="RmitRateDAO"/>
+	</object>
+
+	<object id="SAMSVE00055" type="Ace.Cbs.Sam.Sve.SAMSVE00055, Ace.Cbs.Sam.Sve" singleton="false">
+		<property name="StateCodeDAO" ref="StateCodeDAO"/>
+		<property name="OccupationCodeDAO" ref="OccupationCodeDAO"/>
+		<property name="InitialDAO" ref="InitialDAO"/>
+		<property name="CityCodeDAO" ref="CityCodeDAO"/>
+		<property name="TownshipCodeDAO" ref="TownshipCodeDAO"/>
+		<property name="UserDAO" ref="UserDAO"/>
+	</object>
+
+	<!--Endregion-->
+
+</objects>

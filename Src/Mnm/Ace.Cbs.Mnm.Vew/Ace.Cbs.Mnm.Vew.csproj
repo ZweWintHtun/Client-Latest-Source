@@ -1,0 +1,1601 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3253EE47-FB71-4A5B-AD23-BEFD7671784B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ace.Cbs.Mnm.Vew</RootNamespace>
+    <AssemblyName>Ace.Cbs.Mnm.Vew</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ace.Cbs.Cx.Cle, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Cx.Cle.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Admin.DataModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Admin.DataModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.CXClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.CXClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Spring.Core, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate33, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\Spring.Data.NHibernate33.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.7.0.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MNMVEW00001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00001.designer.cs">
+      <DependentUpon>MNMVEW00001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00002.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00002.designer.cs">
+      <DependentUpon>MNMVEW00002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00003.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00003.designer.cs">
+      <DependentUpon>MNMVEW00003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00004.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00004.designer.cs">
+      <DependentUpon>MNMVEW00004.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00005.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00005.designer.cs">
+      <DependentUpon>MNMVEW00005.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00006.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00006.designer.cs">
+      <DependentUpon>MNMVEW00006.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00007.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00007.designer.cs">
+      <DependentUpon>MNMVEW00007.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00008.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00008.designer.cs">
+      <DependentUpon>MNMVEW00008.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00009.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00009.designer.cs">
+      <DependentUpon>MNMVEW00009.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00010.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00010.designer.cs">
+      <DependentUpon>MNMVEW00010.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00011.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00011.designer.cs">
+      <DependentUpon>MNMVEW00011.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00012.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00012.designer.cs">
+      <DependentUpon>MNMVEW00012.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00013.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00013.designer.cs">
+      <DependentUpon>MNMVEW00013.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00148.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00148.Designer.cs">
+      <DependentUpon>MNMVEW00148.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00139.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00139.Designer.cs">
+      <DependentUpon>MNMVEW00139.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00014.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00014.designer.cs">
+      <DependentUpon>MNMVEW00014.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00015.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00015.designer.cs">
+      <DependentUpon>MNMVEW00015.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00016.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00016.designer.cs">
+      <DependentUpon>MNMVEW00016.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00017.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00017.designer.cs">
+      <DependentUpon>MNMVEW00017.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00018.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00018.designer.cs">
+      <DependentUpon>MNMVEW00018.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00019.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00019.designer.cs">
+      <DependentUpon>MNMVEW00019.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00020.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00020.designer.cs">
+      <DependentUpon>MNMVEW00020.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00021.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00021.designer.cs">
+      <DependentUpon>MNMVEW00021.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00022.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00022.designer.cs">
+      <DependentUpon>MNMVEW00022.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00023.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00023.designer.cs">
+      <DependentUpon>MNMVEW00023.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00024.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00024.designer.cs">
+      <DependentUpon>MNMVEW00024.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00025.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00025.designer.cs">
+      <DependentUpon>MNMVEW00025.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00026.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00026.designer.cs">
+      <DependentUpon>MNMVEW00026.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00027.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00027.Designer.cs">
+      <DependentUpon>MNMVEW00027.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00028.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00028.designer.cs">
+      <DependentUpon>MNMVEW00028.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00029.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00029.designer.cs">
+      <DependentUpon>MNMVEW00029.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00030.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00030.Designer.cs">
+      <DependentUpon>MNMVEW00030.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00031.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00031.Designer.cs">
+      <DependentUpon>MNMVEW00031.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00032.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00032.designer.cs">
+      <DependentUpon>MNMVEW00032.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00033.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00033.Designer.cs">
+      <DependentUpon>MNMVEW00033.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00035.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00035.designer.cs">
+      <DependentUpon>MNMVEW00035.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00039.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00039.designer.cs">
+      <DependentUpon>MNMVEW00039.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00040.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00040.designer.cs">
+      <DependentUpon>MNMVEW00040.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00043.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00043.designer.cs">
+      <DependentUpon>MNMVEW00043.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00044.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00044.designer.cs">
+      <DependentUpon>MNMVEW00044.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00045.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00045.designer.cs">
+      <DependentUpon>MNMVEW00045.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00046.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00046.designer.cs">
+      <DependentUpon>MNMVEW00046.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00047.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00047.designer.cs">
+      <DependentUpon>MNMVEW00047.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00048.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00048.Designer.cs">
+      <DependentUpon>MNMVEW00048.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00049.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00049.designer.cs">
+      <DependentUpon>MNMVEW00049.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00050.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00050.designer.cs">
+      <DependentUpon>MNMVEW00050.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00052.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00052.designer.cs">
+      <DependentUpon>MNMVEW00052.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00053.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00053.designer.cs">
+      <DependentUpon>MNMVEW00053.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00054.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00054.designer.cs">
+      <DependentUpon>MNMVEW00054.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00055.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00055.designer.cs">
+      <DependentUpon>MNMVEW00055.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00056.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00056.designer.cs">
+      <DependentUpon>MNMVEW00056.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00057.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00057.designer.cs">
+      <DependentUpon>MNMVEW00057.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00058.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00058.designer.cs">
+      <DependentUpon>MNMVEW00058.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00059.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00059.designer.cs">
+      <DependentUpon>MNMVEW00059.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00060.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00060.designer.cs">
+      <DependentUpon>MNMVEW00060.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00062.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00062.designer.cs">
+      <DependentUpon>MNMVEW00062.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00063.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00063.designer.cs">
+      <DependentUpon>MNMVEW00063.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00064.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00064.designer.cs">
+      <DependentUpon>MNMVEW00064.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00066.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00066.designer.cs">
+      <DependentUpon>MNMVEW00066.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00067.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00067.designer.cs">
+      <DependentUpon>MNMVEW00067.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00068.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00068.designer.cs">
+      <DependentUpon>MNMVEW00068.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00069.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00069.designer.cs">
+      <DependentUpon>MNMVEW00069.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00070.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00070.designer.cs">
+      <DependentUpon>MNMVEW00070.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00071.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00071.designer.cs">
+      <DependentUpon>MNMVEW00071.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00072.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00072.designer.cs">
+      <DependentUpon>MNMVEW00072.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00073.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00073.designer.cs">
+      <DependentUpon>MNMVEW00073.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00074.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00074.designer.cs">
+      <DependentUpon>MNMVEW00074.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00075.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00075.designer.cs">
+      <DependentUpon>MNMVEW00075.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00076.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00076.designer.cs">
+      <DependentUpon>MNMVEW00076.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00077.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00077.designer.cs">
+      <DependentUpon>MNMVEW00077.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00078.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00078.designer.cs">
+      <DependentUpon>MNMVEW00078.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00079.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00079.designer.cs">
+      <DependentUpon>MNMVEW00079.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00081.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00081.Designer.cs">
+      <DependentUpon>MNMVEW00081.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00082.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00082.Designer.cs">
+      <DependentUpon>MNMVEW00082.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00083.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00083.Designer.cs">
+      <DependentUpon>MNMVEW00083.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00084.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00084.Designer.cs">
+      <DependentUpon>MNMVEW00084.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00085.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00085.Designer.cs">
+      <DependentUpon>MNMVEW00085.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00086.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00086.Designer.cs">
+      <DependentUpon>MNMVEW00086.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00087.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00087.Designer.cs">
+      <DependentUpon>MNMVEW00087.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00088.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00088.Designer.cs">
+      <DependentUpon>MNMVEW00088.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00089.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00089.Designer.cs">
+      <DependentUpon>MNMVEW00089.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00090.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00090.Designer.cs">
+      <DependentUpon>MNMVEW00090.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00091.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00091.Designer.cs">
+      <DependentUpon>MNMVEW00091.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00092.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00092.Designer.cs">
+      <DependentUpon>MNMVEW00092.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00093.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00093.Designer.cs">
+      <DependentUpon>MNMVEW00093.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00094.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00094.Designer.cs">
+      <DependentUpon>MNMVEW00094.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00095.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00095.Designer.cs">
+      <DependentUpon>MNMVEW00095.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00096.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00096.Designer.cs">
+      <DependentUpon>MNMVEW00096.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00097.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00097.Designer.cs">
+      <DependentUpon>MNMVEW00097.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00098.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00098.Designer.cs">
+      <DependentUpon>MNMVEW00098.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00099.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00099.Designer.cs">
+      <DependentUpon>MNMVEW00099.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00100.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00100.Designer.cs">
+      <DependentUpon>MNMVEW00100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00101.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00101.Designer.cs">
+      <DependentUpon>MNMVEW00101.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00102.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00102.Designer.cs">
+      <DependentUpon>MNMVEW00102.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00103.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00103.Designer.cs">
+      <DependentUpon>MNMVEW00103.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00104.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00104.Designer.cs">
+      <DependentUpon>MNMVEW00104.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00105.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00105.Designer.cs">
+      <DependentUpon>MNMVEW00105.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00106.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00106.Designer.cs">
+      <DependentUpon>MNMVEW00106.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00107.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00107.Designer.cs">
+      <DependentUpon>MNMVEW00107.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00108.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00108.Designer.cs">
+      <DependentUpon>MNMVEW00108.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00109.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00109.Designer.cs">
+      <DependentUpon>MNMVEW00109.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00110.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00110.Designer.cs">
+      <DependentUpon>MNMVEW00110.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00111.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00111.Designer.cs">
+      <DependentUpon>MNMVEW00111.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00112.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00112.Designer.cs">
+      <DependentUpon>MNMVEW00112.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00113.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00113.Designer.cs">
+      <DependentUpon>MNMVEW00113.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00114.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00114.Designer.cs">
+      <DependentUpon>MNMVEW00114.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00115.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00115.Designer.cs">
+      <DependentUpon>MNMVEW00115.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00116.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00116.Designer.cs">
+      <DependentUpon>MNMVEW00116.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00117.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00117.Designer.cs">
+      <DependentUpon>MNMVEW00117.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00118.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00118.Designer.cs">
+      <DependentUpon>MNMVEW00118.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00119.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00119.Designer.cs">
+      <DependentUpon>MNMVEW00119.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00120.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00120.Designer.cs">
+      <DependentUpon>MNMVEW00120.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00121.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00121.Designer.cs">
+      <DependentUpon>MNMVEW00121.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00122.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00122.Designer.cs">
+      <DependentUpon>MNMVEW00122.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00123.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00123.Designer.cs">
+      <DependentUpon>MNMVEW00123.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00124.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00124.Designer.cs">
+      <DependentUpon>MNMVEW00124.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00125.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00125.Designer.cs">
+      <DependentUpon>MNMVEW00125.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00126.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00126.Designer.cs">
+      <DependentUpon>MNMVEW00126.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00127.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00127.Designer.cs">
+      <DependentUpon>MNMVEW00127.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00128.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00128.Designer.cs">
+      <DependentUpon>MNMVEW00128.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00129.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00129.Designer.cs">
+      <DependentUpon>MNMVEW00129.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00130.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00130.Designer.cs">
+      <DependentUpon>MNMVEW00130.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00131.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00131.Designer.cs">
+      <DependentUpon>MNMVEW00131.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00132.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00132.Designer.cs">
+      <DependentUpon>MNMVEW00132.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00133.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00133.Designer.cs">
+      <DependentUpon>MNMVEW00133.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00134.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00134.Designer.cs">
+      <DependentUpon>MNMVEW00134.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00135.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00135.Designer.cs">
+      <DependentUpon>MNMVEW00135.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00136.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00136.Designer.cs">
+      <DependentUpon>MNMVEW00136.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00137.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00137.Designer.cs">
+      <DependentUpon>MNMVEW00137.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00140.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00140.Designer.cs">
+      <DependentUpon>MNMVEW00140.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00141.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00141.Designer.cs">
+      <DependentUpon>MNMVEW00141.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00142.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00142.Designer.cs">
+      <DependentUpon>MNMVEW00142.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00143.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00143.Designer.cs">
+      <DependentUpon>MNMVEW00143.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00144.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00144.Designer.cs">
+      <DependentUpon>MNMVEW00144.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00146.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00146.Designer.cs">
+      <DependentUpon>MNMVEW00146.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00149.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00149.Designer.cs">
+      <DependentUpon>MNMVEW00149.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00150.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00150.Designer.cs">
+      <DependentUpon>MNMVEW00150.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00151.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00151.Designer.cs">
+      <DependentUpon>MNMVEW00151.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00152.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00152.Designer.cs">
+      <DependentUpon>MNMVEW00152.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00153.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00153.Designer.cs">
+      <DependentUpon>MNMVEW00153.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00156.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00156.Designer.cs">
+      <DependentUpon>MNMVEW00156.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00157.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00157.Designer.cs">
+      <DependentUpon>MNMVEW00157.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00159.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00159.Designer.cs">
+      <DependentUpon>MNMVEW00159.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00158.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00158.Designer.cs">
+      <DependentUpon>MNMVEW00158.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00160.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00160.Designer.cs">
+      <DependentUpon>MNMVEW00160.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00161.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00161.designer.cs">
+      <DependentUpon>MNMVEW00161.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00162.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00162.Designer.cs">
+      <DependentUpon>MNMVEW00162.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00163.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00163.Designer.cs">
+      <DependentUpon>MNMVEW00163.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00164.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00164.Designer.cs">
+      <DependentUpon>MNMVEW00164.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00165.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00165.Designer.cs">
+      <DependentUpon>MNMVEW00165.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNMVEW00166.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNMVEW00166.designer.cs">
+      <DependentUpon>MNMVEW00166.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MNMVEW00139.resx">
+      <DependentUpon>MNMVEW00139.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00027.resx">
+      <DependentUpon>MNMVEW00027.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00130.resx">
+      <DependentUpon>MNMVEW00130.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00131.resx">
+      <DependentUpon>MNMVEW00131.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00132.resx">
+      <DependentUpon>MNMVEW00132.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00133.resx">
+      <DependentUpon>MNMVEW00133.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00134.resx">
+      <DependentUpon>MNMVEW00134.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00135.resx">
+      <DependentUpon>MNMVEW00135.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00136.resx">
+      <DependentUpon>MNMVEW00136.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00137.resx">
+      <DependentUpon>MNMVEW00137.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00140.resx">
+      <DependentUpon>MNMVEW00140.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00141.resx">
+      <DependentUpon>MNMVEW00141.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00142.resx">
+      <DependentUpon>MNMVEW00142.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00143.resx">
+      <DependentUpon>MNMVEW00143.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00144.resx">
+      <DependentUpon>MNMVEW00144.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00146.resx">
+      <DependentUpon>MNMVEW00146.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00148.resx">
+      <DependentUpon>MNMVEW00148.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00149.resx">
+      <DependentUpon>MNMVEW00149.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00150.resx">
+      <DependentUpon>MNMVEW00150.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00151.resx">
+      <DependentUpon>MNMVEW00151.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00152.resx">
+      <DependentUpon>MNMVEW00152.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00153.resx">
+      <DependentUpon>MNMVEW00153.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00156.resx">
+      <DependentUpon>MNMVEW00156.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00157.resx">
+      <DependentUpon>MNMVEW00157.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00159.resx">
+      <DependentUpon>MNMVEW00159.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00158.resx">
+      <DependentUpon>MNMVEW00158.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00160.resx">
+      <DependentUpon>MNMVEW00160.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00161.resx">
+      <DependentUpon>MNMVEW00161.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00162.resx">
+      <DependentUpon>MNMVEW00162.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00163.resx">
+      <DependentUpon>MNMVEW00163.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00164.resx">
+      <DependentUpon>MNMVEW00164.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00165.resx">
+      <DependentUpon>MNMVEW00165.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00166.resx">
+      <DependentUpon>MNMVEW00166.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00011.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00012.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00021.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00026.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00039.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00046.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00049.rdlc" />
+    <EmbeddedResource Include="MNMVEW00001.resx">
+      <DependentUpon>MNMVEW00001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00002.resx">
+      <DependentUpon>MNMVEW00002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00003.resx">
+      <DependentUpon>MNMVEW00003.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00004.resx">
+      <DependentUpon>MNMVEW00004.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00005.resx">
+      <DependentUpon>MNMVEW00005.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00006.resx">
+      <DependentUpon>MNMVEW00006.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00007.resx">
+      <DependentUpon>MNMVEW00007.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00008.resx">
+      <DependentUpon>MNMVEW00008.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00009.resx">
+      <DependentUpon>MNMVEW00009.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00010.resx">
+      <DependentUpon>MNMVEW00010.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00011.resx">
+      <DependentUpon>MNMVEW00011.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00012.resx">
+      <DependentUpon>MNMVEW00012.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00013.resx">
+      <DependentUpon>MNMVEW00013.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00014.resx">
+      <DependentUpon>MNMVEW00014.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00015.resx">
+      <DependentUpon>MNMVEW00015.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00016.resx">
+      <DependentUpon>MNMVEW00016.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00017.resx">
+      <DependentUpon>MNMVEW00017.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00018.resx">
+      <DependentUpon>MNMVEW00018.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00019.resx">
+      <DependentUpon>MNMVEW00019.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00020.resx">
+      <DependentUpon>MNMVEW00020.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00021.resx">
+      <DependentUpon>MNMVEW00021.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00022.resx">
+      <DependentUpon>MNMVEW00022.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00023.resx">
+      <DependentUpon>MNMVEW00023.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00024.resx">
+      <DependentUpon>MNMVEW00024.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00025.resx">
+      <DependentUpon>MNMVEW00025.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00026.resx">
+      <DependentUpon>MNMVEW00026.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00028.resx">
+      <DependentUpon>MNMVEW00028.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00029.resx">
+      <DependentUpon>MNMVEW00029.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00030.resx">
+      <DependentUpon>MNMVEW00030.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00031.resx">
+      <DependentUpon>MNMVEW00031.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00032.resx">
+      <DependentUpon>MNMVEW00032.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00033.resx">
+      <DependentUpon>MNMVEW00033.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00035.resx">
+      <DependentUpon>MNMVEW00035.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00039.resx">
+      <DependentUpon>MNMVEW00039.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00040.resx">
+      <DependentUpon>MNMVEW00040.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00043.resx">
+      <DependentUpon>MNMVEW00043.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00044.resx">
+      <DependentUpon>MNMVEW00044.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00045.resx">
+      <DependentUpon>MNMVEW00045.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00046.resx">
+      <DependentUpon>MNMVEW00046.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00047.resx">
+      <DependentUpon>MNMVEW00047.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00048.resx">
+      <DependentUpon>MNMVEW00048.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00049.resx">
+      <DependentUpon>MNMVEW00049.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00050.resx">
+      <DependentUpon>MNMVEW00050.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00052.resx">
+      <DependentUpon>MNMVEW00052.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00053.resx">
+      <DependentUpon>MNMVEW00053.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00054.resx">
+      <DependentUpon>MNMVEW00054.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00055.resx">
+      <DependentUpon>MNMVEW00055.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00056.resx">
+      <DependentUpon>MNMVEW00056.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00057.resx">
+      <DependentUpon>MNMVEW00057.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00058.resx">
+      <DependentUpon>MNMVEW00058.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00059.resx">
+      <DependentUpon>MNMVEW00059.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00060.resx">
+      <DependentUpon>MNMVEW00060.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00062.resx">
+      <DependentUpon>MNMVEW00062.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00063.resx">
+      <DependentUpon>MNMVEW00063.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00064.resx">
+      <DependentUpon>MNMVEW00064.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00066.resx">
+      <DependentUpon>MNMVEW00066.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00067.resx">
+      <DependentUpon>MNMVEW00067.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00068.resx">
+      <DependentUpon>MNMVEW00068.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00069.resx">
+      <DependentUpon>MNMVEW00069.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00070.resx">
+      <DependentUpon>MNMVEW00070.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00071.resx">
+      <DependentUpon>MNMVEW00071.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00072.resx">
+      <DependentUpon>MNMVEW00072.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00073.resx">
+      <DependentUpon>MNMVEW00073.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00074.resx">
+      <DependentUpon>MNMVEW00074.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00075.resx">
+      <DependentUpon>MNMVEW00075.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00076.resx">
+      <DependentUpon>MNMVEW00076.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00077.resx">
+      <DependentUpon>MNMVEW00077.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00078.resx">
+      <DependentUpon>MNMVEW00078.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00079.resx">
+      <DependentUpon>MNMVEW00079.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00081.resx">
+      <DependentUpon>MNMVEW00081.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00082.resx">
+      <DependentUpon>MNMVEW00082.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00083.resx">
+      <DependentUpon>MNMVEW00083.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00084.resx">
+      <DependentUpon>MNMVEW00084.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00085.resx">
+      <DependentUpon>MNMVEW00085.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00086.resx">
+      <DependentUpon>MNMVEW00086.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00087.resx">
+      <DependentUpon>MNMVEW00087.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00088.resx">
+      <DependentUpon>MNMVEW00088.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00089.resx">
+      <DependentUpon>MNMVEW00089.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00090.resx">
+      <DependentUpon>MNMVEW00090.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00091.resx">
+      <DependentUpon>MNMVEW00091.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00092.resx">
+      <DependentUpon>MNMVEW00092.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00093.resx">
+      <DependentUpon>MNMVEW00093.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00094.resx">
+      <DependentUpon>MNMVEW00094.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00095.resx">
+      <DependentUpon>MNMVEW00095.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00096.resx">
+      <DependentUpon>MNMVEW00096.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00097.resx">
+      <DependentUpon>MNMVEW00097.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00098.resx">
+      <DependentUpon>MNMVEW00098.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00099.resx">
+      <DependentUpon>MNMVEW00099.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00100.resx">
+      <DependentUpon>MNMVEW00100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00101.resx">
+      <DependentUpon>MNMVEW00101.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00102.resx">
+      <DependentUpon>MNMVEW00102.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00103.resx">
+      <DependentUpon>MNMVEW00103.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00104.resx">
+      <DependentUpon>MNMVEW00104.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00105.resx">
+      <DependentUpon>MNMVEW00105.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00106.resx">
+      <DependentUpon>MNMVEW00106.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00107.resx">
+      <DependentUpon>MNMVEW00107.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00108.resx">
+      <DependentUpon>MNMVEW00108.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00109.resx">
+      <DependentUpon>MNMVEW00109.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00110.resx">
+      <DependentUpon>MNMVEW00110.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00111.resx">
+      <DependentUpon>MNMVEW00111.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00112.resx">
+      <DependentUpon>MNMVEW00112.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00113.resx">
+      <DependentUpon>MNMVEW00113.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00114.resx">
+      <DependentUpon>MNMVEW00114.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00115.resx">
+      <DependentUpon>MNMVEW00115.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00116.resx">
+      <DependentUpon>MNMVEW00116.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00117.resx">
+      <DependentUpon>MNMVEW00117.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00118.resx">
+      <DependentUpon>MNMVEW00118.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00119.resx">
+      <DependentUpon>MNMVEW00119.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00120.resx">
+      <DependentUpon>MNMVEW00120.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00121.resx">
+      <DependentUpon>MNMVEW00121.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00122.resx">
+      <DependentUpon>MNMVEW00122.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00123.resx">
+      <DependentUpon>MNMVEW00123.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00124.resx">
+      <DependentUpon>MNMVEW00124.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00125.resx">
+      <DependentUpon>MNMVEW00125.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00126.resx">
+      <DependentUpon>MNMVEW00126.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00127.resx">
+      <DependentUpon>MNMVEW00127.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00128.resx">
+      <DependentUpon>MNMVEW00128.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNMVEW00129.resx">
+      <DependentUpon>MNMVEW00129.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00001.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00002.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00003.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00004.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00005.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00006.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00007.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00008.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00009.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00010.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00013.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00014.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00015.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00016.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00017.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00018.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00019.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00020.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00022.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00023.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00024.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00025.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00027.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00028.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00029.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00030.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00031.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00032.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00033.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00034.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00035.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00036.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00037.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00038.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00040.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00041.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00042.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00043.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00044.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00045.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00047.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00048.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00050.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00051.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00052.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00053.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00054.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00055.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00056.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00057.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00058.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00059.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00071.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00072.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00081.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00082.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00083.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00084.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00085.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00086.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00087.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00088.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00090.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00091.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00092.rdlc" />
+    <EmbeddedResource Include="MNM_RDLC\MNMRDLC00093.rdlc" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Calculate.bmp" />
+    <None Include="Properties\DataSources\Ace.Cbs.Mnm.Dmd.MNMDTO00035.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Mnm.Dmd.MNMDTO000391.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Mnm.Dmd.MNMDTO00054.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Mnm.Dmd.MNMDTO00077.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Mnm.Dmd.MNMDTO00071.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Pfm.Dmd.PFMDTO00039.datasource" />
+    <None Include="Resources\MultiPO1.bmp" />
+    <None Include="Resources\SinglePO1.bmp" />
+    <None Include="Resources\Posting1.gif" />
+    <None Include="Resources\Calculate2.bmp" />
+    <None Include="Resources\Calculate1.bmp" />
+    <Content Include="Resources\Calculate3.bmp" />
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-3-Process-Accept.ico" />
+    <Content Include="Resources\cancel_01.gif" />
+    <None Include="Resources\cancel_011.gif" />
+    <Content Include="Resources\Delete_Main.png" />
+    <Content Include="Resources\Edit_Main.png" />
+    <None Include="Resources\images.jpg" />
+    <Content Include="Resources\logo.ico" />
+    <Content Include="Resources\MultiPO.bmp" />
+    <Content Include="Resources\Posting.gif" />
+    <Content Include="Resources\SinglePO.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Cx\Ace.Cbs.Cx.Com\Ace.Cbs.Cx.Com.csproj">
+      <Project>{83A33F31-AFB5-4778-8AEF-42EB781DD861}</Project>
+      <Name>Ace.Cbs.Cx.Com</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Pfm\Ace.Cbs.Pfm.Dmd\Ace.Cbs.Pfm.Dmd.csproj">
+      <Project>{8F20F64D-FF47-47A3-87CA-30D8A12B5B75}</Project>
+      <Name>Ace.Cbs.Pfm.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tel\Ace.Cbs.Tel.Dmd\Ace.Cbs.Tel.Dmd.csproj">
+      <Project>{4AE62F74-E000-4768-90BC-DCBBB1B4C68C}</Project>
+      <Name>Ace.Cbs.Tel.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ace.Cbs.Mnm.Ctr\Ace.Cbs.Mnm.Ctr.csproj">
+      <Project>{5793ACFC-ED60-4E4E-86F3-221487DD0C8F}</Project>
+      <Name>Ace.Cbs.Mnm.Ctr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ace.Cbs.Mnm.Dmd\Ace.Cbs.Mnm.Dmd.csproj">
+      <Project>{D8EA36A9-8BBC-4D2A-84C7-49BDA6006F94}</Project>
+      <Name>Ace.Cbs.Mnm.Dmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ace.Cbs.Mnm.Ptr\Ace.Cbs.Mnm.Ptr.csproj">
+      <Project>{E4CC6822-EA23-41D8-A9E9-F19CCBFEC54E}</Project>
+      <Name>Ace.Cbs.Mnm.Ptr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ace.Cbs.Mnm._Excel\Ace.Cbs.Mnm._Excel.csproj">
+      <Project>{3DCA00B9-CA43-4843-B3F0-3C5525433C80}</Project>
+      <Name>Ace.Cbs.Mnm._Excel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

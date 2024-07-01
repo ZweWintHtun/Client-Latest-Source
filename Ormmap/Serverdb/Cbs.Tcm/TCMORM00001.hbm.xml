@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Start-->
+<!-- 
+// <copyright file="TCMORM00001.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>Banking</CreatedUser>
+// <CreatedDate>11/14/2013</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version></Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Tcm.Dmd" namespace="Ace.Cbs.Tcm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+	<import class="Ace.Cbs.Tcm.Dmd.TCMDTO00001, Ace.Cbs.Tcm.Dmd" rename="TCMDTO00001"/>
+	<class name="TCMORM00001" table="Start">
+
+		<id name="Date">
+			<column name="Date" sql-type="datetime" not-null="true" />
+		</id>
+
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="true"/>
+		</version>
+
+		<property name="BankCode">
+			<column name="BankCode" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="BankHead">
+			<column name="BankHead" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="GetColo">
+			<column name="GetColo" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="Status">
+			<column name="Status" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="Stop">
+			<column name="Stop" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="UId">
+			<column name="UId" sql-type="char" not-null="true" />
+		</property>
+
+		<property name="SourceBr">
+			<column name="SourceBr" sql-type="varchar" not-null="true" />
+		</property>
+
+
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+
+	</class>
+	
+	<query name="TCMDAO00001.SelectStartBySourceBr">
+		select new TCMDTO00001
+		(s.BankHead,
+		s.Status,
+		s.Date
+		)
+		from TCMORM00001 as s
+		where s.SourceBr = :sourceBr and s.Active = true
+	</query>
+	
+	<query name="TCMDAO00001.UpdateStatusAndDateBySourceBr">
+		update TCMORM00001 s
+		set s.Status = :status,
+		s.Date = :date,
+		s.UpdatedDate = :updatedDate,
+		s.UpdatedUserId = :updatedUserId		
+		where s.SourceBr = :sourceBr and s.Active = true
+	</query>
+	<query name="TCMDAO00001.UpdateStatusBySourceBr">
+		update TCMORM00001 s
+		set s.Status = :status,		
+		s.UpdatedDate = :updatedDate,
+		s.UpdatedUserId = :updatedUserId
+		where s.SourceBr = :sourceBr and s.Active = true
+	</query>
+</hibernate-mapping>

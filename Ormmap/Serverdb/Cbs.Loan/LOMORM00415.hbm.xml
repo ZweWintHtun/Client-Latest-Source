@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+	<import class="Ace.Cbs.Loan.Dmd.LOMDTO00415, Ace.Cbs.Loan.Dmd" rename="ProductCodeDto"/>
+
+	<class name="LOMORM00415" table="PersonalLoan_Product_Setup" >
+
+		<id name="Id" type="Int32" unsaved-value="0">
+			<generator class="increment">
+			</generator>
+		</id>
+		
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="true"/>
+		</version>
+
+		<property name="ProductCode">
+			<column name="ProductCode" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="Description">
+			<column name="Description" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="RelatedGLACode">
+			<column name="RelatedGLACode" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+
+	</class>
+
+	<!--//PersonalLoanProductCodeDAO.CheckExist//-->
+	<query name="PersonalLoanProductCodeDAO.CheckExist">
+		select new ProductCodeDto
+		(
+		a.Id,
+		a.ProductCode,
+		a.Description,
+		a.RelatedGLACode )
+		from LOMORM00415 as a
+		where (a.ProductCode = :productCode or a.Description = :description or a.RelatedGLACode = :gLCode)
+		and  a.Active = true
+	</query>
+
+	<!--//PersonalLoanProductCodeDAO.CheckExist//-->
+	<query name="PersonalLoanProductCodeDAO.CheckExist2">
+		select new ProductCodeDto(
+		a.Id,
+		a.ProductCode,
+		a.Description,
+		a.RelatedGLACode,
+		a.Active,
+		a.TS,
+		a.CreatedDate,
+		a.CreatedUserId,
+		a.UpdatedDate,
+		a.UpdatedUserId
+		)
+		from LOMORM00415 as a
+		where (a.ProductCode = :productCode or a.Description = :description or a.RelatedGLACode = :gLCode)
+	</query>
+
+
+	<!--//PersonalLoanProductCodeDAO.SelectAll//-->
+	<query name="PersonalLoanProductCodeDAO.SelectAll">
+		select new ProductCodeDto(
+		a.Id,
+		a.ProductCode,
+		a.Description,
+		a.RelatedGLACode,
+		a.Active,
+		a.TS,
+		a.CreatedDate,
+		a.CreatedUserId,
+		a.UpdatedDate,
+		a.UpdatedUserId
+		)
+		from LOMORM00415 as a
+		where a.Active = true
+	</query>
+
+	<sql-query name="PersonalLoanProductCodeDAO.SelectAll_ACode">
+		select distinct  ACode,ACName from COA 	Where  Active=1  and ACode != subString(ACode,1,3)+'000' order by ACode
+	</sql-query>
+
+	<sql-query name="PersonalLoanProductCodeDAO.Save">
+		Insert into  PersonalLoan_Product_Setup
+		(Id,ProductCode ,Description,RelatedGLACode, Active, CreatedDate,CreatedUserId )
+		select isnull((select MAX(Id) from PersonalLoan_Product_Setup),0)+1,:ProductCode,:Description ,:RelatedGLACode, :Active,:CreatedDate,:CreatedUserId
+	</sql-query>
+
+	<sql-query name="PersonalLoanProductCodeDAO.Update">
+		update PersonalLoan_Product_Setup
+		set
+		<!--ProductCode = :ProductCode,-->
+		Description = :Description,
+		RelatedGLACode = :RelatedGLACode,
+		UpdatedDate = :updatedDate,
+		UpdatedUserId = :updatedUserId
+		where Id = :Id
+		and Active = :Active
+	</sql-query>
+
+	<sql-query name="PersonalLoanProductCodeDAO.Delete">
+		update PersonalLoan_Product_Setup
+		set Active = 0
+		where Id = :Id
+	</sql-query>
+
+</hibernate-mapping>

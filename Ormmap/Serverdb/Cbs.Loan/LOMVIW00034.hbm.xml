@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00034, Ace.Cbs.Loan.Dmd" rename="LoanRegistrationListingDto"/>
+  <class name="LOMVIW00034" table="VW_LOAN_DAILY_POSITION" mutable="false" >
+
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+    
+    <property name="LNO">
+      <column name="LNO" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="ACCTNO">
+      <column name="ACCTNO" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="SAMT">
+      <column name="SAMT" sql-type="numeric" not-null="false"/>
+    </property>
+    <property name="CUR">
+      <column name="CUR" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="SDATE">
+      <column name="SDATE" sql-type="datetime" not-null="false"/>
+    </property>
+    <property name="FIRSTSAMT">
+      <column name="FIRSTSAMT" sql-type="numeric" not-null="false"/>
+    </property>
+    <property name="EXPIREDATE">
+      <column name="EXPIREDATE" sql-type="datetime" not-null="false"/>
+    </property>
+    <property name="LEGALCASE">
+      <column name="LEGALCASE" sql-type="bit" not-null="true"/>
+    </property>
+    <property name="NPLCASE">
+      <column name="NPLCASE" sql-type="bit" not-null="true"/>
+    </property>
+    <property name="NAME">
+      <column name="NAME" sql-type="nvarchar" not-null="false"/>
+    </property>
+    <property name="CBAL">
+      <column name="CBAL" sql-type="numeric" not-null="false"/>
+    </property>
+    <property name="ATYPE">
+      <column name="ATYPE" sql-type="varchar" not-null="false"/>
+    </property>
+    <property name="LOANS_TYPE">
+      <column name="LOANS_TYPE" sql-type="varchar" not-null="true"/>
+    </property>   
+    <property name="SourceBr">
+      <column name="SourceBr" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="FORCE_SALE_VALUE">
+      <column name="FORCE_SALE_VALUE" sql-type="numeric" not-null="false"/>
+    </property>
+    <property name="Active">
+      <column name="Active" sql-type="bit" not-null="true"/>
+    </property>
+  </class>
+
+  <!--//LoanRegistrationListingDto.Land & Building//-->
+  <query name="LoanRegistrationListingDAO.SelectLoanListing">
+	  select new LoanRegistrationListingDto(
+	  l.Id,
+	  l.LNO,
+	  l.ACCTNO,
+	  l.SAMT,
+	  l.CUR,
+	  l.SDATE,
+	  l.FIRSTSAMT,
+	  l.EXPIREDATE,
+	  l.NAME,
+	  l.SourceBr,
+	  l.CBAL,
+	  l.ATYPE
+	  )
+	  from LOMVIW00034 as l
+	  where l.ATYPE = 'LOANS'
+	  and l.LOANS_TYPE = :loans
+	  and CONVERT(char(10),l.SDATE, 111) between CONVERT(char(10),:startDate, 111) and CONVERT(char(10),:endDate, 111)
+	  and l.SourceBr = :sourceBranchCode
+	  and l.Active=True
+	  and l.CUR = :cur
+	  order by l.LNO asc
+  </query>
+	<!--//LoanRegistrationListingDto..SelectLoanListingAll//--><!--
+	<query name="LOMDAO00034.SelectLoanListingAll">
+		select new LoanRegistrationListingAllDto(
+		h.Id,
+		h.LNO,
+		h.ACCTNO,
+		h.NAME,
+		h.EXPIREDATE,
+		h.SAMT,
+		h.CBAL
+		)
+		from LOMVIW00035 as h
+		where CONVERT(char(10),h.SDATE,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+		and h.ATYPE = 'LOANS'
+		and h.SourceBr = :sourceBranchCode
+		and h.CUR = :cur
+		and h.Active = true
+	</query>-->
+  <query name="LoanRegistrationListingDAO.SelectLoanListingAll">
+	  select new LoanRegistrationListingDto(
+	  l.Id,
+	  l.LNO,
+	  l.ACCTNO,
+	  l.SAMT,
+	  l.CUR,
+	  l.SDATE,
+	  l.FIRSTSAMT,
+	  l.EXPIREDATE,
+	  l.NAME,
+	  l.SourceBr,
+	  l.CBAL,
+	  l.ATYPE
+	  )
+	  from LOMVIW00034 as l
+	  where l.ATYPE = 'LOANS'
+	  and CONVERT(char(10),l.SDATE, 111) between CONVERT(char(10),:startDate, 111) and CONVERT(char(10),:endDate, 111)
+	  and l.SourceBr = :sourceBranchCode
+	  and l.Active=True
+	  and l.CUR = :cur
+	  order by l.LNO asc
+  </query> 
+</hibernate-mapping>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Gl.Dmd" namespace="Ace.Cbs.Gl.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Gl.Dmd.GLMDTO00013, Ace.Cbs.Gl.Dmd" rename="VW_COA_ListDTO"/>
+  <class name="GLMVIW00013" table="VW_COA_List" mutable="false">
+
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+
+    <property name="ACODE">
+      <column name="ACODE" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="DCODE">
+      <column name="DCODE" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="ACNAME">
+      <column name="ACNAME" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="ACTYPE">
+      <column name="ACTYPE" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="CBMACODE">
+      <column name="CBMACODE" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="PDATE">
+      <column name="PDATE" sql-type="datetime" not-null="false" />
+    </property>
+
+    
+  </class>
+
+  <query name="GLMVIW00013.SelectDataOrderByACode">
+	  select new VW_COA_ListDTO
+	  (
+	  COA.ACODE,
+	  COA.ACNAME,
+	  COA.ACTYPE
+	  )
+	  from GLMVIW00013 as COA
+	  where COA.DCODE = :sourceBr
+	  order by COA.ACTYPE ASC
+  </query>
+  
+</hibernate-mapping>

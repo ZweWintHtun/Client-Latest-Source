@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+	<description>
+		Common Module DataAccess Objects Settings
+	</description>
+	
+
+	<!-- Region Server Common Module -->
+
+  <!-- Server Version DAO (Common Module) -->
+  <object id="ServerVersionDAO" type="Ace.Cbs.Cx.Ser.Dao.CXDAO00001,Ace.Cbs.Cx.Ser"  singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!-- Server Version DAO (Common Module) -->
+   <object id="ViewDAO" type="Ace.Cbs.Cx.Ser.Dao.CXDAO00009,Ace.Cbs.Cx.Ser"  singleton="false">
+		<property name="SessionFactory" ref="MySessionFactory"/>
+   </object>
+  
+  <!--//CodeGeneratorDAO//-->
+  <object id="CodeGeneratorDAO" type="Ace.Cbs.Cx.Ser.Dao.CXDAO00002, Ace.Cbs.Cx.Ser" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!-- Printing DAO -->
+  <object id="PrintingDAO" type="Ace.Cbs.Cx.Ser.Dao.CXDAO00003, Ace.Cbs.Cx.Ser" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="RegisterDAO" type="Ace.Cbs.Cx.Ser.Dao.CXDAO00008, Ace.Cbs.Cx.Ser" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--<object id="REDAO" type="Ace.CBS.CX.SER.DAO.TLMDAO00001, Ace.CBS.CX.SER" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>-->
+
+	<object id="DataGenerateDAO" type="Ace.Cbs.Cx.Ser.Dao.CXDAO00010, Ace.Cbs.Cx.Ser" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+  <!--//PrintChequeDAO//-->
+  <object id="CodeCheckerDAO" type="Ace.Cbs.Cx.Ser.Dao.CXDAO00006, Ace.Cbs.Cx.Ser" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//Installer Update Definition DAO //-->
+  <object id="InstallerUpdateDefinitionDAO" type="Ace.Windows.CXServer.DAO.FXCXDAO00007, Ace.Windows.CXServer" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//Installer Update Log DAO //-->
+  <object id="InstallerUpdateLogDAO" type="Ace.Windows.CXServer.DAO.FXCXDAO00008, Ace.Windows.CXServer" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--Counter DAO-->
+  <object id="CounterDAO" type="Ace.Cbs.Cx.Ser.Dao.CXDAO00007, Ace.Cbs.Cx.Ser" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--TLF DAO-->
+  <object id="Tlfdao" type="Ace.Cbs.Cx.Ser.Dao.CXDAO00004, Ace.Cbs.Cx.Ser" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--Cash DAO-->
+  <object id="CashDAO" type="Ace.Cbs.Cx.Ser.Dao.CXDAO00005, Ace.Cbs.Cx.Ser" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--IBLTLF DAO-->
+  <object id="Ibltlfdao" type="Ace.Cbs.Cx.Ser.Dao.CXDAO00011, Ace.Cbs.Cx.Ser" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--HisCashDeno DAO-->
+  <object id="HisCashDenoDAO" type="Ace.Cbs.Cx.Ser.Dao.CXDAO00012, Ace.Cbs.Cx.Ser" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--frpn DAO-->
+  <object id="FrpnDAO" type="Ace.Cbs.Cx.Ser.Dao.CXDAO00013, Ace.Cbs.Cx.Ser" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+	<!--framework all  DAO-->
+   <object id="FrwAllDAO" type="Ace.Cbs.Cx.Ser.Dao.CXDAO00014, Ace.Cbs.Cx.Ser" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+   </object>	
+
+  <!-- EndRegion -->
+
+</objects>

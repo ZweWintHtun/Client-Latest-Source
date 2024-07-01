@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00069, Ace.Cbs.Loan.Dmd" rename="StockItemDto"/>
+
+  <class name="LOMORM00069" table="StockItem" >
+
+    <id name="SubCode">
+      <column name="SubCode" sql-type="varchar" not-null="true" />
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+
+    <property name="Description">
+      <column name="Description" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="GroupCode">
+      <column name="GroupCode" sql-type="varchar" not-null="true" />
+    </property>
+
+    <many-to-one name="GroupCodeId" column="[GroupCode]" class="LOMORM00068" insert="false" update="false"></many-to-one>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  <!--//StockItemDAO.CheckExist//-->
+  <query name="StockItemDAO.CheckExist">
+    select new StockItemDto
+    (
+    a.GroupCode,
+    a.SubCode,
+    a.Description )
+    from LOMORM00069 as a
+    where (  a.SubCode = :subCode)
+    and  a.Active = true
+  </query>
+
+  <!--//StockItemDAO.CheckExist2//-->
+  <query name="StockItemDAO.CheckExist2">
+    select new StockItemDto(
+    a.GroupCode,
+    a.SubCode,
+    a.Description,
+    a.Active,
+    a.TS,
+    a.CreatedDate,
+    a.CreatedUserId,
+    a.UpdatedDate,
+    a.UpdatedUserId
+    )
+    from LOMORM00069 as a
+    where ( a.SubCode = :subCode )
+  </query>
+
+
+  <!--//StockItemDAO.SelectAll//-->
+  <query name="StockItemDAO.SelectAll">
+    select new StockItemDto(
+    a.GroupCode,
+    a.SubCode,
+    a.Description,
+    a.Active,
+    a.TS,
+    a.CreatedDate,
+    a.CreatedUserId,
+    a.UpdatedDate,
+    a.UpdatedUserId
+    )
+    from LOMORM00069 as a
+    where a.Active = true
+    order by a.GroupCode,a.Description
+  </query>
+
+</hibernate-mapping>

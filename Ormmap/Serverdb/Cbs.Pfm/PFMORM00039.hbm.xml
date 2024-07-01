@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00039, Ace.Cbs.Pfm.Dmd" rename="perguandto"/>
+
+  <class name="PFMORM00039" table="Per_Guan" >
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+
+    <property name="LineNo">
+      <column name="Lno" sql-type="varchar(15)" not-null="true" />
+    </property>
+
+    <property name="AccountNo">
+      <column name="AcctNo" sql-type="varchar(50)" not-null="false" />
+    </property>
+
+    <property name="Name">
+      <column name="Name" sql-type="nvarchar(100)" not-null="false" />
+    </property>
+
+    <property name="AccountSignature">
+      <column name="ACSign" sql-type="varchar(50)" not-null="false" />
+    </property>
+
+    <property name="Address">
+      <column name="Address" sql-type="nvarchar(100)" not-null="false" />
+    </property>
+
+    <property name="Phone">
+      <column name="Phone" sql-type="varchar(50)" not-null="false" />
+    </property>
+
+    <property name="NRC">
+      <column name="NRC" sql-type="nvarchar(50)" not-null="false" />
+    </property>
+
+    <property name="BranchCode">
+      <column name="SourceBr" sql-type="varchar(50)" not-null="true" />
+    </property>
+
+    <property name="CurrencyCode">
+      <column name="Cur" sql-type="varchar(50)" not-null="true" />
+    </property>
+
+    <property name="ClosedDate">
+      <column name="CloseDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="GuarantorCompanyName">
+      <column name="CompanyName" sql-type="nvarchar(100)" not-null="true" />
+    </property>
+    
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  <query name="CXDAO00006.GetLoanAccountCountFromPer_GuanByAccountNo">
+	  select count(Id)
+	  from PFMORM00039
+	  where AccountNo = :accountNo
+	  and (ClosedDate = null or ClosedDate = '')
+	  and Active = true
+  </query>
+
+  <!--Select PersonalGuarantee Information By LoanNo and Sourcebr-->
+  <query name="SelectPersonalGuaranteeInfoByLoanNoandSourcebr">
+    select new perguandto
+    (
+    p.LineNo,
+    p.AccountNo,
+    p.Name,
+    p.AccountSignature,
+    p.Address,
+    p.Phone,
+    p.NRC,
+    p.BranchCode,
+    p.CurrencyCode,
+    p.ClosedDate,
+    p.GuarantorCompanyName
+    )
+    from PFMORM00039 as p
+    where p.LineNo = :lno
+    and p.BranchCode = :sourcebr
+    and p.Active = true
+  </query>
+  <!--"PFMDAO00039 ==>> UpdatePer_GuaranteeInfoByLoanNoAndSourceBr"-->
+  <query name="PFMDAO00039.UpdatePer_GuaranteeInfoByLoanNoAndSourceBr">
+    update PFMORM00039 p
+    set 
+    p.Name =:name,
+    p.Phone =:phone,
+    p.NRC =:nrc,
+    p.GuarantorCompanyName=:guarantorCompanyName,
+    p.UpdatedDate =:updatedDate,
+    p.UpdatedUserId = :updatedUserId
+    where p.LineNo = :lno
+    and p.BranchCode = :sourcebr
+    <!--and p.GuarantorCompanyName=:guarantorCompanyName-->
+    and p.Active = true
+  </query>
+  
+</hibernate-mapping>

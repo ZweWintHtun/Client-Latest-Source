@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00406, Ace.Cbs.Loan.Dmd" rename="blDetailsDto"/>
+  <class name="LOMORM00405" table="Business_Loans_Details">
+
+    <id name="Id">
+      <column name="Id" sql-type="int" not-null="true" />
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+
+    <property name="Lno">
+      <column name="Lno" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="Acctno">
+      <column name="Acctno" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="LoansPeriod">
+      <column name="LoansPeriod" sql-type="int" not-null="false" />
+    </property>
+
+    <property name="TermNo">
+      <column name="TermNo" sql-type="int" not-null="false" />
+    </property>
+
+    <property name="FirstSAmt">
+      <column name="FirstSAmt" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="Capital">
+      <column name="Capital" sql-type="numeric" not-null="false" />
+    </property>
+    
+    <property name="RemainingCapital">
+      <column name="RemainingCapital" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="RepayCapital">
+      <column name="RepayCapital" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="ActualRepayCapital">
+      <column name="ActualRepayCapital" sql-type="numeric" not-null="false" />
+    </property>
+    
+    <property name="InterestRate">
+      <column name="InterestRate" sql-type="numeric" not-null="false" />
+    </property> 
+    
+    <property name="RepayInterestAmount">
+      <column name="RepayInterestAmount" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="ActualRepayInterestAmount">
+      <column name="ActualRepayInterestAmount" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="InterestAmountPerDay">
+      <column name="InterestAmountPerDay" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="TotalInterestAmount">
+      <column name="TotalInterestAmount" sql-type="numeric" not-null="false" />
+    </property> 
+
+    <property name="StartDate">
+      <column name="StartDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="EndDate">
+      <column name="EndDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="CapitalDueDate">
+      <column name="CapitalDueDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="CapitalPaidDate">
+      <column name="CapitalPaidDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="InterestDate">
+      <column name="InterestDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="InterestPaidDate">
+      <column name="InterestPaidDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="GracePeriodDueDate">
+      <column name="GracePeriodDueDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="HasLimitChange">
+      <column name="HasLimitChange" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="LimitChangeAmount">
+      <column name="LimitChangeAmount" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="LimitChangeDate">
+      <column name="LimitChangeDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="LCInterestPrevDays">
+      <column name="LCInterestPrevDays" sql-type="numeric" not-null="false" />
+    </property>
+   
+    <property name="SChargeAmt">
+      <column name="SChargeAmt" sql-type="numeric" not-null="false" />
+    </property>
+    
+    <property name="ODAmount">
+      <column name="ODAmount" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="ODAmountHistory">
+      <column name="ODAmountHistory" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="ODStartDate">
+      <column name="ODStartDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="ODPaidDate">
+      <column name="ODPaidDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="LateFees">
+      <column name="LateFees" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="LateFeesAmtPerDay">
+      <column name="LateFeesAmtPerDay" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="TotalLateFees">
+      <column name="TotalLateFees" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="LatefeesStartDate">
+      <column name="LatefeesStartDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="LatefeesPaidDate">
+      <column name="LatefeesPaidDate" sql-type="datetime" not-null="false" />
+    </property>
+    
+    <property name="UserNo">
+      <column name="UserNo" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="ReverseStatus">
+      <column name="ReverseStatus" sql-type="bit" not-null="false" />
+    </property>
+
+    <property name="RegDueDate">
+      <column name="RegDueDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="Manual_Status">
+      <column name="Manual_Status" sql-type="bit" not-null="false" />
+    </property>
+
+    <property name="AutoPayRunDate">
+      <column name="AutoPayRunDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="InterestStatus">
+      <column name="InterestStatus" sql-type="bit" not-null="false" />
+    </property>
+
+    <property name="CapitalStatus">      
+      <column name="CapitalStatus" sql-type="bit" not-null="false" />
+    </property>
+
+    <property name="LateFeeStatus">
+      <column name="LateFeeStatus" sql-type="bit" not-null="false" />
+    </property>
+
+    <property name="ODPaidStatus">
+      <column name="ODPaidStatus" sql-type="bit" not-null="false" />
+    </property>
+
+    <property name="LateDays">
+      <column name="LateDays" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="LateMonth">
+      <column name="LateMonth" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="HasDeposit">
+      <column name="HasDeposit" sql-type="bit" not-null="false" />
+    </property>
+    
+    <property name="DepositDate">
+      <column name="DepositDate" sql-type="datetime" not-null="false" />
+    </property>
+    
+    <property name="LegalCase">
+      <column name="LegalCase" sql-type="numeric" not-null="true" />
+    </property>
+    
+    <property name="LegalDate">
+      <column name="LegalDate" sql-type="datetime" not-null="false" />
+    </property>
+    
+    <property name="LegaLawer">
+      <column name="LegaLawer" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="CloseDate">
+      <column name="CloseDate" sql-type="datetime" not-null="false" />
+    </property>
+    
+    <property name="NPLCase">
+      <column name="NPLCase" sql-type="numeric" not-null="true" />
+    </property>
+    
+    <property name="NPLDate">
+      <column name="NPLDate" sql-type="datetime" not-null="false" />
+    </property>
+    
+    <property name="MarkNPLUser">
+      <column name="MarkNPLUser" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="NPLReleaseUser">
+      <column name="NPLReleaseUser" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="MarkLegalUser">
+      <column name="MarkLegalUser" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="LegalReleaseUser">
+      <column name="LegalReleaseUser" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="UId">
+      <column name="UId" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="SourceBr">
+      <column name="SourceBr" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Cur">
+      <column name="Cur" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+	<!--<sql-query  name="LOMDAO00405.SelectLNo_byAcctNo">
+		select count(*) Count_Lno from(
+		select distinct LNo from Business_Loans_Details Where AcctNo = :AcctNo)a
+	</sql-query>-->
+</hibernate-mapping>

@@ -1,0 +1,608 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    Service Objects Settings
+  </description>
+
+  <!--//JointEditService//-->
+  <object id="MNMSVE00032" type="Ace.Cbs.Mnm.Sve.MNMSVE00032, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="CodeChecker" ref="CXSVE00006"/>
+    <property name="CodeCheckerDAO" ref="CodeCheckerDAO"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <property name="CaofDAO" ref="CaofDAO"/>
+    <property name="CustomerIdDAO" ref="CustomerIdDAO"/>
+    <property name="SAOFDAO" ref="SaOfDAO"/>
+    <property name="FAOFDAO" ref="FAOFDAO"/>
+    <property name="FLedgerDAO" ref="FledgerDAO"/>
+    <property name="AcTypeCheckingService" ref="MNMSVE00033"/>
+  </object>
+
+  <!--//Cash Voucher Service//-->
+  <object id="MNMSVE00008" type="Ace.Cbs.Mnm.Sve.MNMSVE00008, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="TlfDAO" ref="TLFDAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="ReversalSVE" ref="CXSVE00006"/>
+    <property name="ibltlfDAO" ref="IBLTLFDAO"/>
+  </object>
+
+  <!--//Cross Change Service//-->
+  <object id="MNMSVE00024" type="Ace.Cbs.Mnm.Sve.MNMSVE00024, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="ReDAO" ref="RemittanceEncashDAO"/>
+  </object>
+
+  <!--//PO issue by Transfer Editting Service//-->
+  <object id="MNMSVE00020" type="Ace.Cbs.Mnm.Sve.MNMSVE00020, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="PODAO" ref="PODAO"/>
+    <property name="CodeChecker" ref="CXSVE00006"/>
+  </object>
+
+  <!--//Bank Statement Monthly//-->
+  <object id="MNMSVE00046" type="Ace.Cbs.Mnm.Sve.MNMSVE00046, Ace.Cbs.Mnm.Sve" singleton="true">
+    <property name="ViewDAO" ref="ViewDAO"/>
+    <property name="CurrentAllDAO" ref="BankStatementMonthlyDAO"/>
+    <property name="DataGenerateService" ref="CXSVE00010"/>
+  </object>
+
+  <!--//CashVoucherService//-->
+  <object id="MNMSVE00019" type="Ace.Cbs.Mnm.Sve.MNMSVE00019, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="ReDAO" ref="REDAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="TLFDao" ref="TLFDAO"/>
+    <property name="PODao" ref ="PODAO"/>
+    <property name="TranTypeDao" ref="TranTypeDAO"/>
+  </object>
+
+
+  <!--//TriBalanceGroupReportService//-->
+  <object id="MNMSVE00060" type="Ace.Cbs.Mnm.Sve.MNMSVE00060, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="FixRateDAO" ref="FixRateDAO"/>
+    <property name="ViewDAO" ref="ViewDAO"/>
+  </object>
+
+
+  <!--//TriBalanceGroupReportService//-->
+  <object id="MNMSVE00092" type="Ace.Cbs.Mnm.Sve.MNMSVE00092, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="ProcedureDAO" ref="DataGenerateDAO"/>
+    <property name="BLFDAO" ref="FrwAllDAO"/>
+  </object>
+
+  <!--//Link Auto Priority Listing Service//-->
+  <object id="MNMSVE00129" type="Ace.Cbs.Mnm.Sve.MNMSVE00129, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="LinkAutoDAO" ref="LinkAutoDAO"/>
+  </object>
+
+  <!--//TriBalanceDetailReportService//-->
+  <object id="MNMSVE00091" type="Ace.Cbs.Mnm.Sve.MNMSVE00091, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="ViewDAO" ref="ViewDAO"/>
+    <property name="BLFDAO" ref="FrwAllDAO"/>
+  </object>
+
+  <!--//BalanceConfirmationReportService//-->
+  <object id="MNMSVE00047" type="Ace.Cbs.Mnm.Sve.MNMSVE00047, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="ViewDAO" ref="ViewDAO"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <property name="CodeCheckerDAO" ref="CodeCheckerDAO" />
+  </object>
+
+  <!--//LinkACReportService//-->
+  <object id="MNMSVE00069" type="Ace.Cbs.Mnm.Sve.MNMSVE00069, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="ViewDAO" ref="ViewDAO"/>
+    <property name="LinkAccountDAO" ref="LinkAccountDAO"/>
+  </object>
+
+  <!--//FixedDeposit Listing Service//-->
+  <object id="MNMSVE00058" type="Ace.Cbs.Mnm.Sve.MNMSVE00058, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="ViewDAO" ref="ViewDAO"/>
+  </object>
+
+  <!--Fixed Deposit Receipt Service -->
+  <object id="MNMSVE00059" type="Ace.Cbs.Mnm.Sve.MNMSVE00059, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="FLedgerDAO" ref="FledgerDAO" />
+    <property name="CommonDAO" ref="CodeCheckerDAO" />
+    <property name="ViewDAO" ref="ViewDAO"/>
+  </object>
+
+
+  <!--//Deliver and Receipt Service//-->
+  <object id="MNMSVE00011" type="Ace.Cbs.Mnm.Sve.MNMSVE00011, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="TlfDAO" ref="TLFDAO"/>
+    <property name="bcodeDAO" ref="BCodeDAO"/>
+    <property name="CxDAO" ref="CodeCheckerDAO"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <property name="FLedgerDAO" ref="FledgerDAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="ReversalTlf" ref="CXSVE00006"/>
+    <property name="CoaDAO" ref="CoaDAO"/>
+  </object>
+
+  <!--Current,Saving,Fixed Account Edit Service -->
+  <object id="MNMSVE00031" type="Ace.Cbs.Mnm.Sve.MNMSVE00031, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="CodeGenerator" ref="CXSVE00002" />
+    <property name="CledgerDAO" ref="CledgerDAO" />
+    <property name="CaofDAO" ref="CaofDAO" />
+    <property name="BalanceDAO" ref="BalDAO" />
+    <property name="CustomerIdDAO" ref="CustomerIdDAO" />
+    <property name="SAOFDAO" ref="SaOfDAO" />
+    <property name="FAOFDAO" ref="FAOFDAO" />
+    <property name="FLedgerDAO" ref="FledgerDAO" />
+    <property name="CommonDAO" ref="AccountEditingDAO" />
+    <property name="CheckAccountDAO" ref="CodeCheckerDAO"/>
+    <property name="AcTypeCheckingService" ref="MNMSVE00033"/>
+  </object>
+
+  <!--Company Account Edit Service-->
+  <object id="MNMSVE00033" type="Ace.Cbs.Mnm.Sve.MNMSVE00033, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <property name="CaofDAO" ref="CaofDAO"/>
+    <property name="CustomerIdDAO" ref="CustomerIdDAO"/>
+    <property name="SAOFDAO" ref="SaOfDAO"/>
+    <property name="FAOFDAO" ref="FAOFDAO"/>
+    <property name="FLedgerDAO" ref="FledgerDAO"/>
+    <property name="CommonDAO" ref="CodeCheckerDAO"/>
+    <property name="FormatDao" ref="CodeGeneratorDAO"/>
+    <property name="AccountTypeDAO" ref="AccountTypeDAO"/>
+    <property name="SubAccountTypeDAO" ref="SubAccountTypeDAO"/>
+
+  </object>
+
+  <!--Clearing Voucher Reversal-->
+  <object id="MNMSVE00009" type="Ace.Cbs.Mnm.Sve.MNMSVE00009, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="TlfDao" ref="TLFDAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="CodeValidationChecker" ref="CXSVE00006"/>
+  </object>
+
+  <!--//PO Receipt Resersal Service//-->
+  <object id="MNMSVE00012" type="Ace.Cbs.Mnm.Sve.MNMSVE00012, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="TlfDAO" ref="TLFDAO"/>
+    <property name="codeCheckerDAO" ref="CodeCheckerDAO"/>
+    <property name="paymentOrderDAO" ref="PODAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="reversalSVE" ref="CXSVE00006"/>
+  </object>
+
+  <!--Ajustment Voucher Reversal-->
+  <object id="MNMSVE00010" type="Ace.Cbs.Mnm.Sve.MNMSVE00010, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="TlfDAO" ref="TLFDAO"/>
+    <property name="IBLTlfDAO" ref="IBLTLFDAO"/>
+    <property name="DepoDenoDAO" ref="DepoDenoDAO"/>
+    <property name="CommonDAO" ref="CodeGeneratorDAO"/>
+    <property name="GenerateVoucherDAO" ref="DataGenerateDAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="ReverSalDAO" ref="CXSVE00006"/>
+    <property name="IBLDAO" ref="CodeCheckerDAO"/>
+  </object>
+
+  <!--yearly posting-->
+  <object id="MNMSVE00006" type="Ace.Cbs.Mnm.Sve.MNMSVE00006, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="Sys001DAO" ref="Sys001DAO"/>
+    <property name="SyspostDAO" ref="SyspostDAO"/>
+    <property name="CcoaDAO" ref="FrwAllDAO"/>
+    <property name="PrevccoaDAO" ref="PrevccoaDAO"/>
+    <property name="NewSetupDAO" ref="NewSetupDAO"/>
+    <property name="BalDAO" ref="BalDAO"/>
+    <!--Added by AAM (20_Sep_2018)-->
+  </object>
+
+  <!--Month After posting-->
+  <object id="MNMSVE00002" type="Ace.Cbs.Mnm.Sve.MNMSVE00002, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="Sys001DAO" ref="Sys001DAO"/>
+    <property name="SyspostDAO" ref="SyspostDAO"/>
+    <property name="SiDAO" ref="SIDAO"/>
+    <property name="PrevSiDAO" ref="PrevsiDAO"/>
+    <property name="Tod_ScharedDAO" ref="TOd_SchargedDAO"/>
+    <property name="Prev_ScharedDAO" ref="PrevTOd_SchargedDAO"/>
+    <property name="OiDAO" ref="OIDAO"/>
+    <property name="Prev_OiDAO" ref="PrevOIDAO"/>
+    <property name="LoansDAO" ref="LoansDAO"/>
+    <property name="LiDAO" ref="LIDAO"/>
+    <property name="Prev_liDAO" ref="Prev_LIDAO"/>
+    <property name="Prev_farmliDAO" ref="Prev_farmliDAO"/>
+    <property name="FarmLiDAO" ref="FarmLiDAO"/>
+    <property name="CashdenoDAO" ref="CashDenoDAO"/>
+    <property name="Prev_cashdenoDAO" ref="Prev_CashdenoDAO"/>
+    <property name="DepodenoDAO" ref="DepoDenoDAO"/>
+    <property name="Prev_depodenoDAO" ref="Prev_DepodenoDAO"/>
+    <property name="BalDAO" ref="BalDAO"/>
+    <property name="Prev_BalDAO" ref="Prev_BalDAO"/>
+    <property name="FledgerDAO" ref="FledgerDAO"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <property name="IBLTLFDAO" ref="IBLTLFDAO"/>
+    <property name="Prev_IBLTLFDAO" ref="Prev_IblTlfDAO"/>
+    <property name="PODAO" ref="PODAO"/>
+    <property name="Prev_PODAO" ref="Prev_PODAO"/>
+    <property name="RDDAO" ref="RDDAO"/>
+    <property name="Prev_RDDAO" ref="Prev_RDDAO"/>
+    <property name="REDAO" ref="REDAO"/>
+    <property name="Prev_REDAO" ref="Prev_REDAO"/>
+    <property name="CommitDAO" ref="CommitDAO"/>
+    <property name="Prev_CommitDAO" ref="Prev_CommitDAO"/>
+    <property name="NewsetupDAO" ref="NewSetupDAO"/>
+    <property name="RemitBrDAO" ref="RemitBrDAO"/>
+    <property name="OutstandLoanBalanceDAO" ref="OutstandingLoanBalanceDAO"/>
+
+
+  </object>
+
+  <!-- Fixed Deposit Auto Renewal -->
+  <object id="MNMSVE00004" type="Ace.Cbs.Mnm.Sve.MNMSVE00004, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="sys001DAO" ref="Sys001DAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="FReceiptDAO" ref="FReceiptDAO"/>
+  </object>
+
+  <!--daily posting-->
+  <object id="MNMSVE00005" type="Ace.Cbs.Mnm.Sve.MNMSVE00005, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="SyspostDAO" ref="SyspostDAO"/>
+    <property name="NewSetupDAO" ref="NewSetupDAO"/>
+    <property name="DataGenerateService" ref="CXSVE00010"/>
+    <property name="ReporttlfDAO" ref="ReporttlfDAO"/>
+    <property name="vw_postingDAO" ref="ViewDAO"/>
+    <property name="CcoaDAO" ref="FrwAllDAO"/>
+    <property name="Sys001DAO" ref="Sys001DAO"/>
+    <property name="CurDAO" ref="CurDAO"/>
+    <property name="Tod_ScharedDAO" ref="TOd_SchargedDAO"/>
+  </object>
+
+  <!--Interest Nature Configuration-->
+  <object id="MNMSVE00007" type="Ace.Cbs.Mnm.Sve.MNMSVE00007, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="AppSettingsDAO" ref="AppSettingsDAO"/>
+  </object>
+
+
+  <!--CrossChange Service-->
+  <object id="MNMSVE00021" type="Ace.Cbs.Mnm.Sve.MNMSVE00021, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="RdDAO" ref="RDDAO"/>
+    <property name="DrawingPrintingDAO" ref="DrawingPrintingDAO"/>
+    <property name="TLFDAO" ref="TLFDAO"/>
+  </object>
+
+  <!--Saving Interest Calculation Service-->
+  <object id="MNMSVE00003" type="Ace.Cbs.Mnm.Sve.MNMSVE00003, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="report_TlfDAO" ref="ReportTLFDAO"/>
+    <property name="balDAO" ref="BalDAO"/>
+    <property name="newSetupDAO" ref="NewSetupDAO"/>
+    <property name="rateFileDAO" ref="RateFileDAO"/>
+    <property name="cxsve00010" ref="CXSVE00010"/>
+    <property name="cxDao00006" ref="CodeCheckerDAO"/>
+    <property name="siDAO" ref="SIDAO"/>
+    <property name="Sys001DAO" ref="Sys001DAO"/>
+  </object>
+
+  <!--Monthly Closing Before Day Close Service-->
+  <object id="MNMSVE00001" type="Ace.Cbs.Mnm.Sve.MNMSVE00001, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="Sys001DAO" ref="Sys001DAO"/>
+    <property name="NewSetupDAO" ref="NewSetupDAO"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <property name="SiDAO" ref="SIDAO"/>
+    <property name="RateFileDAO" ref="RateFileDAO"/>
+    <property name="SysPostDAO" ref="SyspostDAO"/>
+    <!--<property name="CoaSetupDAO" ref=""/>-->
+    <property name="OiDAO" ref="OIDAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="TrantypeDAO" ref="TranTypeDAO"/>
+    <property name="PrnFileDAO" ref="PrnDAO"/>
+    <property name="InTlfDAO" ref="InTlfDAO"/>
+    <property name="RateInfoDAO" ref="RateInfoDAO"/>
+    <property name="TlfDAO" ref="TLFDAO"/>
+    <property name="CoaDAO" ref="CoaDAO"/>
+    <property name="FreceiptDAO" ref="FReceiptDAO"/>
+    <property name="FixIntPostingBeforeDAO" ref="FixIntPostingBeforeDAO"/>
+    <property name="LoansDAO" ref="LoansDAO"/>
+    <property name="LegalIntDAO" ref="LegalIntDAO"/>
+    <property name="NplIntDAO" ref="NplIntDAO"/>
+    <property name="LIDAO" ref="LIDAO"/>
+    <property name="CommitFeesDAO" ref="CommitDAO"/>
+  </object>
+
+  <!--Interest Schedule Report Service-->
+  <object id="MNMSVE00050" type="Ace.Cbs.Mnm.Sve.MNMSVE00050, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="SiDAO" ref="SIDAO"/>
+    <property name="Pre_SiDAO" ref="PrevsiDAO"/>
+  </object>
+
+  <!--Saving Balance (interest) Report Service-->
+  <object id="MNMSVE00051" type="Ace.Cbs.Mnm.Sve.MNMSVE00051, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="ViewDAO" ref="ViewDAO"/>
+  </object>
+
+
+  <!--Ledger Balance By Transaction Report Service-->
+  <object id="MNMSVE00053" type="Ace.Cbs.Mnm.Sve.MNMSVE00053, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="ViewDAO" ref="ViewDAO"/>
+  </object>
+
+
+  <!--Transfer Scroll Report-->
+  <object id="MNMSVE00035" type="Ace.Cbs.Mnm.Sve.MNMSVE00035, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="ViewDAO" ref="ViewDAO"/>
+    <property name="DataGenerateService" ref="CXSVE00010"/>
+    <property name="DataGenerateDAO" ref="DataGenerateDAO"/>
+  </object>
+
+  <!--SubLedger Domestic Report-->
+  <object id="MNMSVE00054" type="Ace.Cbs.Mnm.Sve.MNMSVE00054, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="ViewDAO" ref="ViewDAO"/>
+    <property name="DataGenerateService" ref="CXSVE00010"/>
+    <property name="ReportTlfDAO" ref="ReportTLFDAO"/>
+    <property name="BLFDAO" ref="FrwAllDAO"/>
+  </object>
+
+  <!--SubLedger Domestic Report-->
+  <object id="MNMSVE00052" type="Ace.Cbs.Mnm.Sve.MNMSVE00052, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="ViewDAO" ref="ViewDAO"/>
+    <property name="DataGenerateService" ref="CXSVE00010"/>
+    <property name="CustomerDAO" ref="CodeCheckerDAO"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <!--<property name="ReportTlfDAO" ref="ReportTLFDAO"/>-->
+  </object>
+
+
+
+  <!--Trial Sheet-->
+  <object id="MNMSVE00045" type="Ace.Cbs.Mnm.Sve.MNMSVE00045, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="cxsve00010" ref="CXSVE00010"/>
+    <property name="csDAO" ref="CS99DAO"/>
+    <property name="ViewDAO" ref="ViewDAO"/>
+  </object>
+
+  <!--Closed Account-->
+  <object id="MNMSVE00063" type="Ace.Cbs.Mnm.Sve.MNMSVE00063, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="ViewDAO" ref="ViewDAO"/>
+  </object>
+
+  <!--Closed Account-->
+  <object id="MNMSVE00068" type="Ace.Cbs.Mnm.Sve.MNMSVE00068, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="ViewDAO" ref="ViewDAO"/>
+  </object>
+
+  <!--CustomerID Listing-->
+  <object id="MNMSVE00070" type="Ace.Cbs.Mnm.Sve.MNMSVE00070, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="ViewDAO" ref="ViewDAO"/>
+  </object>
+
+  <!--RD Personal Information Edit Service-->
+  <object id="MNMSVE00022" type="Ace.Cbs.Mnm.Sve.MNMSVE00022, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="RDDAO" ref="RDDAO"/>
+    <property name="DrawingPrintingDAO" ref="DrawingPrintingDAO"/>
+    <property name="DepoDenoDAO" ref="MultipleTransactionDenoOutstandingDAO"/>
+  </object>
+
+  <!--RE Personal Information Edit Service-->
+  <object id="MNMSVE00025" type="Ace.Cbs.Mnm.Sve.MNMSVE00025, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="REDAO" ref="RemittanceEncashDAO"/>
+  </object>
+
+  <!--Drawing Remittance Adjustment Service-->
+  <object id="MNMSVE00027" type="Ace.Cbs.Mnm.Sve.MNMSVE00027, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="RDDAO" ref="RDDAO"/>
+    <property name="DepoDenoDAO" ref="MultipleTransactionDenoOutstandingDAO"/>
+    <property name="_TLFDao" ref="TLFDAO" />
+    <property name="ReverSalDAO" ref="CXSVE00006"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="CodeCheckerDAO" ref="CodeCheckerDAO"/>
+    <property name="Sys001DAO" ref="Sys001DAO"/>
+    <property name="CashDenoDAO" ref="CashDenoDAO"/>
+    <property name="TLFDAO" ref="Tlfdao"/>
+    <property name="PrintDAO" ref="PrintingDAO"/>
+    <property name="FPRNDAO" ref="FrpnDAO"/>
+  </object>
+
+  <!--RE Important Information Edit Service-->
+  <object id="MNMSVE00026" type="Ace.Cbs.Mnm.Sve.MNMSVE00026, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="REDAO" ref="RemittanceEncashDAO"/>
+    <property name="PODAO" ref="PODAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="TLFDAO" ref="TLFDAO"/>
+    <property name="ReverSalDAO" ref="CXSVE00006"/>
+    <property name="CodeCheckerDAO" ref="CodeCheckerDAO"/>
+    <property name="Sys001DAO" ref="Sys001DAO"/>
+  </object>
+
+
+  <!--Customer Account Opening Listing-->
+  <object id="MNMSVE00057" type="Ace.Cbs.Mnm.Sve.MNMSVE00057, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="ViewDAO" ref="ViewDAO"/>
+  </object>
+
+  <!--RD Important Information Edit Service-->
+  <object id="MNMSVE00023" type="Ace.Cbs.Mnm.Sve.MNMSVE00023, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="TLFDAO" ref="TLFDAO"/>
+    <property name="RDDAO" ref="RDDAO"/>
+    <property name="DepoDenoDAO" ref="MultipleTransactionDenoOutstandingDAO"/>
+    <property name="CashDenoDAO" ref="CashDenoDAO"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <property name="CodeCheckerDAO" ref="CodeCheckerDAO"/>
+    <property name="FLedgerDAO" ref="FledgerDAO"/>
+    <property name="CoaDAO" ref="CoaDAO"/>
+    <property name="Sys001DAO" ref="Sys001DAO"/>
+    <property name="UChequeDAO" ref="UCheckDAO"/>
+    <property name="RDUpdateService" ref="MNMSVE00022"/>
+    <property name="DrawingPrintingDAO" ref="DrawingPrintingDAO"/>
+    <property name="CommonService" ref="CXSVE00006"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+  </object>
+
+  <!--Auto Link Schedule Service-->
+  <object id="MNMSVE00039" type="Ace.Cbs.Mnm.Sve.MNMSVE00039, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="DataGenerateService" ref="CXSVE00010"/>
+    <property name="ProcedureDAO" ref="DataGenerateDAO"/>
+  </object>
+
+  <object id="MNMSVE00013" type="Ace.Cbs.Mnm.Sve.MNMSVE00013, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="TLFDAO" ref="TLFDAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="SPDAO" ref="CXSVE00010"/>
+    <property name="SIACCWITDAO" ref="SIAccWitDAO"/>
+    <property name="SIDAO" ref="SIDAO"/>
+    <property name="CashDenoDAO" ref="CashDenoDAO"/>
+    <property name="PrintingDAO" ref="CXSVE00003"/>
+  </object>
+
+  <object id="MNMSVE00028" type="Ace.Cbs.Mnm.Sve.MNMSVE00028, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="REDAO" ref="RemittanceEncashDAO"/>
+    <property name="PODAO" ref="PODAO"/>
+    <property name="CodeCheckerDAO" ref="CodeCheckerDAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="ReversalService" ref="CXSVE00006"/>
+    <property name="TLFDAO" ref="TLFDAO"/>
+  </object>
+
+  <!--Fixed Deposit Certificate Printing Service-->
+  <object id="MNMSVE00030" type="Ace.Cbs.Mnm.Sve.MNMSVE00030, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="FReceiptDAO" ref="FReceiptDAO"/>
+    <property name="ViewDAO" ref="ViewDAO"/>
+    <property name="CustIdDAO" ref="CustomerIdDAO"/>
+    <property name="FixRateDAO" ref="FixRateDAO"/>
+    <property name="CodeCheckerDAO" ref="CodeCheckerDAO"/>
+  </object>
+
+  <!--//PORegisterByCashEditService//-->
+  <object id="MNMSVE00014" type="Ace.Cbs.Mnm.Sve.MNMSVE00014, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="CashDenoDAO" ref="CashDenoDAO"/>
+    <property name="DepoDenoDAO" ref="DepoDenoDAO"/>
+    <property name="PODAO" ref="PODAO"/>
+    <property name="TLFDAO" ref="TLFDAO"/>
+    <property name="TranTypeDAO" ref="TranTypeDAO"/>
+  </object>
+
+  <!--//PORegisterByTransferEdit//-->
+  <object id="MNMSVE00015" type="Ace.Cbs.Mnm.Sve.MNMSVE00015, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="PODAO" ref="PODAO"/>
+    <property name="CLedgerDAO" ref="CledgerDAO"/>
+    <property name="cxDAO00006" ref="CodeCheckerDAO"/>
+    <property name="ReversalService" ref="CXSVE00006"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="TLFDAO" ref="TLFDAO"/>
+  </object>
+
+  <!--RD And RE List (By Branch) Service-->
+  <object id="MNMSVE00077" type="Ace.Cbs.Mnm.Sve.MNMSVE00077, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="ViewDAO" ref="ViewDAO"/>
+  </object>
+
+  <!--RD And RE List (By Branch) Service-->
+  <object id="MNMSVE00076" type="Ace.Cbs.Mnm.Sve.MNMSVE00076, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="DAO" ref="POIRDAO"/>
+  </object>
+
+  <!--//PO Register Listing Service//-->
+  <object id="MNMSVE00073" type="Ace.Cbs.Mnm.Sve.MNMSVE00073, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="ViewDAO" ref="ViewDAO"/>
+  </object>
+
+
+  <!--//PO(Encah) Register Listing Service//-->
+  <object id="MNMSVE00078" type="Ace.Cbs.Mnm.Sve.MNMSVE00078, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="ViewDAO" ref="ViewDAO"/>
+  </object>
+
+  <!--//PO(Withdrawl)Encash Register Listing Service//-->
+  <object id="MNMSVE00079" type="Ace.Cbs.Mnm.Sve.MNMSVE00079, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="ViewDAO" ref="ViewDAO"/>
+  </object>
+
+  <!--//Fixed Renewal Status Listing//-->
+  <object id="MNMSVE00152" type="Ace.Cbs.Mnm.Sve.MNMSVE00152, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="ViewDAO" ref="ViewDAO"/>
+  </object>
+
+  <!--//PORefundReversalService//-->
+  <object id="MNMSVE00016" type="Ace.Cbs.Mnm.Sve.MNMSVE00016, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="CodeChecker" ref="CXSVE00006"/>
+    <property name="CashDenoDAO" ref="CashDenoDAO"/>
+    <property name="DepoDenoDAO" ref="DepoDenoDAO"/>
+    <property name="PODAO" ref="PODAO"/>
+    <property name="TLFDAO" ref="TLFDAO"/>
+    <property name="TranTypeDAO" ref="TranTypeDAO"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+  </object>
+
+
+
+  <!--//IR Outstanding Listing Service//-->
+  <object id="MNMSVE00124" type="Ace.Cbs.Mnm.Sve.MNMSVE00124, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="ViewDAO" ref="ViewDAO"/>
+  </object>
+
+
+  <!--Cash Denomination Edit Service-->
+  <object id="MNMSVE00139" type="Ace.Cbs.Mnm.Sve.MNMSVE00139, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="CashDenoDao" ref="CashDenoDAO"/>
+    <property name="DepoDenoDao" ref="DepoDenoDAO"/>
+    <property name="TlfDao" ref="TLFDAO"/>
+    <property name="CustomerCommonService" ref="CXSVE00006"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+  </object>
+
+  <!--//Fixed Deposit Interest Listing Service//-->
+  <object id="MNMSVE00066" type="Ace.Cbs.Mnm.Sve.MNMSVE00066, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="DataGenerateService" ref="CXSVE00010"/>
+    <property name="ProcedureDAO" ref="DataGenerateDAO"/>
+    <property name="FReceiptDAO" ref="FReceiptDAO"/>
+  </object>
+
+  <!--//Interest Outstanding//-->
+  <object id="MNMSVE00081" type="Ace.Cbs.Mnm.Sve.MNMSVE00081, Ace.Cbs.Mnm.Sve" singleton="true">
+    <property name="InterestOutstanding" ref="InterestOutstanding"/>
+  </object>
+
+  <!--//Saving Interest//-->
+  <object id="MNMSVE00064" type="Ace.Cbs.Mnm.Sve.MNMSVE00064, Ace.Cbs.Mnm.Sve" singleton="true">
+    <property name="PrevsiDAO" ref="PrevsiDAO"/>
+  </object>
+
+  <!--//Fixed end Interest//-->
+  <object id="MNMSVE00142" type="Ace.Cbs.Mnm.Sve.MNMSVE00142, Ace.Cbs.Mnm.Sve" singleton="true">
+    <property name="Sys001DAO" ref="Sys001DAO"/>
+    <property name="ProcedureDAO" ref="DataGenerateDAO"/>
+    <property name="TfixedDateDAO" ref="TempFreceiptDateDAO"/>
+    <property name="TfixedDAO" ref="TFreceiptDAO"/>
+    <property name="FreceiptDAO" ref="FReceiptDAO"/>
+    <property name="NewSetupDAO" ref="NewSetupDAO"/>
+
+  </object>
+
+  <!--//Fixed end Interest Listing//-->
+  <object id="MNMSVE00143" type="Ace.Cbs.Mnm.Sve.MNMSVE00143, Ace.Cbs.Mnm.Sve" singleton="true">
+    <property name="FixedYEDAO" ref="ViewDAO"/>
+  </object>
+
+  <!--//Auto Link Debit / Credit Listing Service//-->
+  <object id="MNMSVE00040" type="Ace.Cbs.Mnm.Sve.MNMSVE00040, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="DataGenerateService" ref="CXSVE00010"/>
+    <property name="ProcedureDAO" ref="DataGenerateDAO"/>
+    <property name="ReportTLFDAO"  ref="ReportTLFDAO"/>
+  </object>
+
+  <!--//Drawing/Encash Remittance Closing Monthly Listing//-->
+  <object id="MNMSVE00156" type="Ace.Cbs.Mnm.Sve.MNMSVE00156, Ace.Cbs.Mnm.Sve" singleton="true">
+    <property name="ViewDAO" ref="ViewDAO"/>
+  </object>
+  <object id="MNMSVE00071" type="Ace.Cbs.Mnm.Sve.MNMSVE00071, Ace.Cbs.Mnm.Sve" singleton="true">
+    <property name="ViewDAO" ref="ViewDAO"/>
+  </object>
+
+  <object id="MNMSVE00161" type="Ace.Cbs.Mnm.Sve.MNMSVE00161, Ace.Cbs.Mnm.Sve" singleton="true">
+    <property name="ViewDAO" ref="ViewDAO"/>
+  </object>
+
+  <!--Multiple Ajustment Voucher Reversal-->
+  <object id="MNMSVE00166" type="Ace.Cbs.Mnm.Sve.MNMSVE00166, Ace.Cbs.Mnm.Sve" singleton="false">
+    <property name="TlfDAO" ref="TLFDAO"/>
+    <property name="IBLTlfDAO" ref="IBLTLFDAO"/>
+    <property name="DepoDenoDAO" ref="DepoDenoDAO"/>
+    <property name="CommonDAO" ref="CodeGeneratorDAO"/>
+    <property name="GenerateVoucherDAO" ref="DataGenerateDAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="ReverSalDAO" ref="CXSVE00006"/>
+    <property name="IBLDAO" ref="CodeCheckerDAO"/>
+  </object>
+</objects>
+

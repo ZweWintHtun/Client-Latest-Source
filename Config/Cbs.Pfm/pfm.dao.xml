@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->               
+  <description>
+    DataAccess Objects Settings
+  </description>
+
+  <!--Pledge DAO-->
+  <object id="Per_GuaranteeDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00039, Ace.Cbs.Pfm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  
+  <!--Freceipt DAO-->
+  <object id="FReceiptDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00032, Ace.Cbs.Pfm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!-- PFMDAO00007 Printing User Entry-->
+  <object id="PrintUserDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00044,Ace.Cbs.Pfm.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+
+  <!--//StopChequeDAO//-->
+  <object id="StopChequeDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00011, Ace.Cbs.Pfm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//StartEndChequeDAO//-->
+  <object id="StartEndDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00014, Ace.Cbs.Pfm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--Fledger DAO-->
+
+  <object id="FledgerDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00023, Ace.Cbs.Pfm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--COA DAO-->
+
+  <object id="CoaDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00024, Ace.Cbs.Pfm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//CustomerIdDAO//-->
+  <object id="CustomerIdDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00001, Ace.Cbs.Pfm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+
+  <!--BalDAO-->
+  <object id="BalDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00033, Ace.Cbs.Pfm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+
+  <!--ChequeDAO-->
+  <object id="ChequeDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00006, Ace.Cbs.Pfm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//CledgerDAO//-->
+  <object id="CledgerDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00028, Ace.Cbs.Pfm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+
+  <!--SaofDAO-->
+  <object id="SaOfDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00016, Ace.Cbs.Pfm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--SIDAO-->
+  <object id="SIDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00040, Ace.Cbs.Pfm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--FAOFDAO-->
+  <object id="FAOFDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00021, Ace.Cbs.Pfm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//CaofDAO//-->
+  <object id="CaofDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00017, Ace.Cbs.Pfm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  <!--LinkAccountDAO-->
+  <object id="LinkAccountDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00029, Ace.Cbs.Pfm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  <!--//CustomerPhotoDAO//-->
+  <object id="CustomerPhotoDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00010, Ace.Cbs.Pfm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//PrintChequeDAO//-->
+  <object id="PrintChequeDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00014, Ace.Cbs.Pfm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!-- PFMDAO00007 Printing User Entry-->
+  <object id="PrintRecordDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00045, Ace.Cbs.Pfm.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!-- PFMDAO00008 Print Entity Transaction-->
+  <object id="PrnDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00043, Ace.Cbs.Pfm.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!-- PFMDAO00009 Print Line Entry-->
+  <object id="FPrnDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00058, Ace.Cbs.Pfm.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//AccountTypeDAO//-->
+  <object id="AccountTypeDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00015, Ace.Cbs.Pfm.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--UCheckDAO-->
+  <object id="UCheckDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00020, Ace.Cbs.Pfm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--CloseBalanceDAO-->
+  <object id="CloseBalanceDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00002, Ace.Cbs.Pfm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+	<!--TLFDAO-->
+	<object id="TLFDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00054, Ace.Cbs.Pfm.Dao" singleton="false" >
+	<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--//InitialDAO//-->
+	<object id="InitialDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00003, Ace.Cbs.Pfm.Dao" singleton="false">
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--//OccupationCodeDAO//-->
+	<object id="OccupationCodeDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00004, Ace.Cbs.Pfm.Dao" singleton="false">
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--//FixRateDAO//-->
+	<object id="FixRateDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00007, Ace.Cbs.Pfm.Dao" singleton="false">
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--//RateFileDAO//-->
+	<object id="RateFileDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00009, Ace.Cbs.Pfm.Dao" singleton="false">
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--//NewSetupDAO//-->
+	<object id="NewSetupDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00057, Ace.Cbs.Pfm.Dao" singleton="false">
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<!--Sys001 DAO-->
+	<object id="Sys001DAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00056, Ace.Cbs.Pfm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+  <!--//SubAccountTypeDAO//-->
+  <object id="SubAccountTypeDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00022, Ace.Cbs.Pfm.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--MaxFileDAO-->
+  <object id="MaxFileDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00008, Ace.Cbs.Pfm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//MessageDAO//-->
+  <object id="MessageDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00048, Ace.Cbs.Pfm.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//RateInfoDAO//-->
+  <object id="RateInfoDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00075, Ace.Cbs.Pfm.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+	<object id="ReportTLFDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00042, Ace.Cbs.Pfm.Dao" singleton="false">
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+  <object id="CS99DAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00036, Ace.Cbs.Pfm.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+	<!--//AppSettings DAO//-->
+	<object id="AppSettingsDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00053, Ace.Cbs.Pfm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+	<object id="SetUpDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00041, Ace.Cbs.Pfm.Dao" singleton="false" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+  <!--//SolidarityLendingEntryDAO//-->
+  <object id="SolidarityLendingEntryDAO" type="Ace.Cbs.Pfm.Dao.PFMDAO00078, Ace.Cbs.Pfm.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+</objects>

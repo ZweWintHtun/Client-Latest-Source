@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    Controller Objects Settings
+  </description>
+
+  <object name="SpringErrorsRenderer" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+  </object>
+
+  <!--//ActivateUserController//-->
+  <object id="ActivateUserController" type="Ace.Windows.Admin.Presenter.ActivateUserController, Ace.Windows.Admin.Presenter"  singleton="false">
+  </object>
+
+  <!---//SecurityInitializer//-->
+  <object id="SecurityInitializer" type="Ace.Windows.CXClient.Utilities.CXSecurityInitializer, Ace.Windows.CXClient" singleton="false">
+    <property name="MenuInGroupController" ref="MenuInGroupController"></property>
+  </object>
+
+  <!--//AbstractController//-->
+  <object id="AbstractController" type="Ace.Windows.Core.Presenter.AbstractPresenter, Ace.Windows.Core" abstract="true"  singleton="false">
+    <property name="ErrorProvider" ref="SpringErrorsRenderer"/>
+  </object>
+  
+  <!--//MainMenuController//-->
+  <object id="MainMenuController" type="Ace.Windows.Admin.Presenter.MainMenuController, Ace.Windows.Admin.Presenter"  singleton="false">
+  </object>
+
+  <!--//MainMenuController//-->
+  <object id="QuickAccessMenuController" type="Ace.Windows.Admin.Presenter.QuickAccessMenuController, Ace.Windows.Admin.Presenter"  singleton="false">
+  </object>
+
+  <!--//LogIn//-->
+  <object id="LoginController" type="Ace.Windows.Admin.Presenter.LoginController,  Ace.Windows.Admin.Presenter" parent="AbstractController"  singleton="false">
+    <property name="ErrorProvider">
+      <object id="LoginErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="LoginFormValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtLoginName">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="UserName"/>
+          </object>
+        </entry>
+        <entry key="txtLoginPassword">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Password"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//User//-->
+  <object id="UserController" type="Ace.Windows.Admin.Presenter.UserController, Ace.Windows.Admin.Presenter" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="UserErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="UsersFormValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtUserName">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="UserName"/>
+          </object>
+        </entry>
+	<!--//Commented by HWKO (10-Nov-2017)-->
+        <!--<entry key="txtCurrentPassword">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CurrentPassword"/>
+          </object>
+        </entry>-->
+
+        <entry key="txtPassword">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Password"/>
+          </object>
+        </entry>
+        <entry key="txtConfirmPassword">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="ConfirmPassword"/>
+          </object>
+        </entry>
+        <entry key="txtEmail">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Email"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//Role//-->
+  <object id="RoleController" type="Ace.Windows.Admin.Presenter.RoleController, Ace.Windows.Admin.Presenter" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//Menu//-->
+  <object id ="MenuController" type="Ace.Windows.Admin.Presenter.MenuController, Ace.Windows.Admin.Presenter" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--//Group//-->
+  <object id="GroupController" type="Ace.Windows.Admin.Presenter.GroupController, Ace.Windows.Admin.Presenter" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="GroupErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="GroupValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtGroupName">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="GroupName"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//Program//-->
+  <object id="ProgramController" type="Ace.Windows.Admin.Presenter.ProgramController, Ace.Windows.Admin.Presenter" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="ProgramErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="ProgramFormValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtProgramName" >
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="ProgramName"/>
+          </object>
+        </entry>
+        <entry key="cboProgramPath" >
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="ProgramPath"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+
+  </object>
+
+  <!--// ProgramInMenu//-->
+  <object id="ProgramInMenuController" type="Ace.Windows.Admin.Presenter.ProgramInMenuController, Ace.Windows.Admin.Presenter" parent="AbstractController" singleton="false">
+  </object>
+
+  <!--// MenuEntry//-->
+  <object id="MenuEntryController" type="Ace.Windows.Admin.Presenter.MenuEntryController, Ace.Windows.Admin.Presenter" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="MenuEntryErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="MenuEntryValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtMenuName">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="MenuName"/>
+          </object>
+        </entry>
+        <entry key="txtDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Description"/>
+          </object>
+        </entry>
+        <entry key="cboShortcut">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="ShortcutKey"/>
+          </object>
+        </entry>
+        <entry key="cboProgramName">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="ProgramId"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--// MenuInGroup//-->
+  <object id="MenuInGroupController" type="Ace.Windows.Admin.Presenter.MenuInGroupController, Ace.Windows.Admin.Presenter" parent="AbstractController">
+  </object>
+
+  <object id="FX.BinarySerializer" type="Ace.Windows.Core.Utt.BinarySerializer, Ace.Windows.Core" singleton="false" >
+    <property name="SerializeTypeList">
+      <list>
+        <value>Ace.Windows.Admin.DataModel.dll</value>
+        <!-- DTO dll -->
+        <value>Ace.Windows.Core.Invoking.RequestEntity, Ace.Windows.Core</value>
+        <value>Ace.Windows.Core.Invoking.ResponseEntity, Ace.Windows.Core</value>
+        <value>Ace.Windows.Core.DataModel.InstallerUpdateLogDTO,Ace.Windows.Core</value>
+        <value>System.Collections.Generic.List`1[System.String[]]</value>
+        <value>System.Collections.Generic.List`1[System.Decimal]</value>
+        <value>System.Collections.Generic.List`1[[Ace.Windows.Admin.DataModel.GroupDTO, Ace.Windows.Admin.DataModel]]</value>
+        <value>System.Collections.Generic.List`1[[Ace.Windows.Admin.DataModel.MenuDTO,Ace.Windows.Admin.DataModel]]</value>
+        <value>System.Collections.Generic.List`1[[Ace.Windows.Admin.DataModel.MenuInGroupDTO,Ace.Windows.Admin.DataModel]]</value>
+        <value>System.Collections.Generic.List`1[[Ace.Windows.Admin.DataModel.ProgramDTO,Ace.Windows.Admin.DataModel]]</value>
+        <value>System.Collections.Generic.List`1[[Ace.Windows.Admin.DataModel.ProgramInMenuDTO,Ace.Windows.Admin.DataModel]]</value>
+        <value>System.Collections.Generic.List`1[[Ace.Windows.Admin.DataModel.RoleDTO,Ace.Windows.Admin.DataModel]]</value>
+        <value>System.Collections.Generic.List`1[[Ace.Windows.Admin.DataModel.UserDTO,Ace.Windows.Admin.DataModel]]</value>
+        <value>System.Collections.Generic.List`1[[Ace.Windows.Admin.DataModel.GroupRoleDTO,Ace.Windows.Admin.DataModel]]</value>
+        <value>System.Collections.Generic.List`1[[Ace.Windows.Admin.DataModel.ProgramMenuDTO,Ace.Windows.Admin.DataModel]]</value>
+        <value>System.Collections.Generic.List`1[[Ace.Windows.Core.DataModel.InstallerUpdateDefinitionDTO,Ace.Windows.Core]]</value>
+        <value>System.Collections.Generic.List`1[[Ace.Windows.Ix.Core.DataModel.CCCComponentVersionDownloadedForClientDTO,Ace.Windows.Ix.Core]]</value>
+        <value>Ace.Windows.Ix.Core.DataModel.CCCComponentVersionDownloadedForClientDTO,Ace.Windows.Ix.Core</value>
+        <value>System.Collections.Generic.List`1[[Ace.Windows.Ix.Core.DataModel.DataVersionMetaDataHeader,Ace.Windows.Ix.Core]]</value>
+        <value>Ace.Windows.Ix.Core.DataModel.DataVersionMetaDataHeader,Ace.Windows.Ix.Core</value>
+        <value>System.Collections.Generic.List`1[[Ace.Windows.Ix.Core.DataModel.DataVersionMetaDataItem,Ace.Windows.Ix.Core]]</value>
+        <value>Ace.Windows.Ix.Core.DataModel.DataVersionMetaDataItem,Ace.Windows.Ix.Core</value>
+        <value>System.Collections.Generic.List`1[[Ace.Windows.Ix.Core.DataModel.ComponentFileDownloadedHistoryDTO,Ace.Windows.Ix.Core]]</value>
+        <value>Ace.Windows.Ix.Core.DataModel.ComponentFileDownloadedHistoryDTO,Ace.Windows.Ix.Core</value>
+        <value>System.Collections.Generic.List`1[[Ace.Windows.Ix.Core.DataModel.ComponentMetaDataHeader,Ace.Windows.Ix.Core]]</value>
+        <value>Ace.Windows.Ix.Core.DataModel.ComponentMetaDataHeader,Ace.Windows.Ix.Core</value>
+        <value>System.Collections.Generic.List`1[[Ace.Windows.Ix.Core.DataModel.ComponentMetaDataItem,Ace.Windows.Ix.Core]]</value>
+        <value>Ace.Windows.Ix.Core.DataModel.ComponentMetaDataItem,Ace.Windows.Ix.Core</value>
+        <value>System.Collections.Generic.List`1[[Ace.Windows.Ix.Core.DataModel.ComponentVersionInstalledHistoryDTO,Ace.Windows.Ix.Core]]</value>
+        <value>Ace.Windows.Ix.Core.DataModel.ComponentVersionInstalledHistoryDTO,Ace.Windows.Ix.Core</value>
+        <value>System.Collections.Generic.List`1[[Ace.Windows.Ix.Core.DataModel.InstallerInWorkStationDTO,Ace.Windows.Ix.Core]]</value>
+        <value>Ace.Windows.Ix.Core.DataModel.InstallerInWorkStationDTO,Ace.Windows.Ix.Core</value>
+        <value>System.Collections.Generic.List`1[[Ace.Windows.Ix.Core.DataModel.WorkStationCurrentClientDataVersionDTO,Ace.Windows.Ix.Core]]</value>
+        <value>Ace.Windows.Ix.Core.DataModel.WorkStationCurrentClientDataVersionDTO,Ace.Windows.Ix.Core</value>
+        <value>System.Collections.Generic.List`1[[Ace.Windows.Ix.Core.DataModel.WorkStationCurrentComponentVersionDTO,Ace.Windows.Ix.Core]]</value>
+        <value>Ace.Windows.Ix.Core.DataModel.WorkStationCurrentComponentVersionDTO,Ace.Windows.Ix.Core</value>
+        <value>System.Collections.Generic.List`1[[Ace.Windows.Ix.Core.DataModel.ManualUpgradeNewVersionDTO,Ace.Windows.Ix.Core]]</value>
+        <value>Ace.Windows.Ix.Core.DataModel.ManualUpgradeNewVersionDTO,Ace.Windows.Ix.Core</value>
+        <value>System.Collections.Generic.List`1[[Ace.Windows.Ix.Core.DataModel.ClientDataVersionDTO,Ace.Windows.Ix.Core]]</value>
+        <value>Ace.Windows.Ix.Core.DataModel.ClientDataVersionDTO,Ace.Windows.Ix.Core</value>
+        <value>System.Collections.Generic.List`1[[Ace.Windows.Ix.Core.DataModel.ChangeDataContent,Ace.Windows.Ix.Core]]</value>
+        <value>Ace.Windows.Ix.Core.DataModel.ChangeDataContent,Ace.Windows.Ix.Core</value>
+      </list>
+    </property>
+  </object>
+
+  <!--//CityCode//-->
+  <object id="CityCodeController" type="Ace.Windows.Admin.Presenter.CityController, Ace.Windows.Admin.Presenter" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="CityCodeErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="CityCode.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="txtCityCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CityCode"/>
+          </object>
+        </entry>
+        <entry key="txtCityName">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Description"/>
+          </object>
+        </entry>
+
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//StateCode//-->
+  <object id="StateCodeController" type="Ace.Windows.Admin.Presenter.StateController, Ace.Windows.Admin.Presenter" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="StateCodeErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="StateCode.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="txtStateCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="StateCode"/>
+          </object>
+        </entry>
+        <entry key="txtDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Description"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//TownshipCode//-->
+  <object id="TownshipCodeController" type="Ace.Windows.Admin.Presenter.TownshipController, Ace.Windows.Admin.Presenter" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="TownshipCodeErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="TownshipCode.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtTownshipCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="TownshipCode"/>
+          </object>
+        </entry>
+        <entry key="txtTownshipName">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Description"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+
+  <!--// UserPermission//-->
+  <object id="UserPermissionController" type="Ace.Windows.Admin.Presenter.UserPermissionController, Ace.Windows.Admin.Presenter" parent="AbstractController">
+  </object>
+
+  <!--//Branch//-->
+  <object id="BranchController" type="Ace.Windows.Admin.Presenter.BranchController, Ace.Windows.Admin.Presenter" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="BranchErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="Branch.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="txtBranchCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="BranchCode"/>
+          </object>
+        </entry>
+        <entry key="txtBranchAlias">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="BranchAlias"/>
+          </object>
+        </entry>
+        <entry key="txtBranchDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="BranchDescription"/>
+          </object>
+        </entry>
+        <entry key="txtBranchAddress">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Address"/>
+          </object>
+        </entry>
+        <entry key="txtFax">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Fax"/>
+          </object>
+        </entry>
+        <entry key="txtBranchPhoneNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Phone"/>
+          </object>
+        </entry>
+        <entry key="txtEmail">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Email"/>
+          </object>
+        </entry>
+        <entry key="cboStateCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="StateCode"/>
+          </object>
+        </entry>
+        <entry key="cboCityCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CityCode"/>
+          </object>
+        </entry>
+        <entry key="cboTownshipCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="TownshipCode"/>
+          </object>
+        </entry>
+        <entry key="chkOtherBank">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="OtherBank"/>
+          </object>
+        </entry>
+        <entry key="txtBankAlias">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Bank_Alias"/>
+          </object>
+        </entry>
+
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//CounterInfo//-->
+  <object id="CounterInfoController" type="Ace.Windows.Admin.Presenter.CounterInfoController, Ace.Windows.Admin.Presenter" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="COUNTERINFOErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="COUNTERINFO.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="txtCounterNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CounterNo"/>
+          </object>
+        </entry>
+        <entry key="txtDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Description"/>
+          </object>
+        </entry>
+        <entry key="cboCounterType">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CounterType"/>
+          </object>
+        </entry>
+        <entry key="cboTerminal">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="WorkStationId"/>
+            <property name="CustomValidatingMethod" value="cboWorkStation_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="cboBranchCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBranchCode"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//WorkStation//-->
+  <object id="WorkStationController" type="Ace.Windows.Admin.Presenter.WorkStationController, Ace.Windows.Admin.Presenter" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="WorkStationErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="WorkStation.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="txtName">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Name"/>
+          </object>
+        </entry>
+        <entry key="txtIPAddress">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="IPAddress"/>
+          </object>
+        </entry>
+        <entry key="txtPrinterName">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="PrinterName"/>
+          </object>
+        </entry>
+        <entry key="txtHostName">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="HostName"/>
+          </object>
+        </entry>
+        <entry key="txtMacAddress">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="MaskAddress"/>
+          </object>
+        </entry>
+        <entry key="cboBranchCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBranchCode"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//CounterType//-->
+  <object id="CounterTypeController" type="Ace.Windows.Admin.Presenter.CounterTypeController, Ace.Windows.Admin.Presenter" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="CounterTypeErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="CounterType.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="txtCounterType">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CounterType"/>
+          </object>
+        </entry>
+        <entry key="txtCounterDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CounterDescription"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//Cur//-->
+  <object id="CurController" type="Ace.Windows.Admin.Presenter.CurrencyController, Ace.Windows.Admin.Presenter" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="CurErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="Cur.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="txtCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+        <entry key="txtDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Description"/>
+          </object>
+        </entry>
+        <entry key="txtSymbol">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Symbol"/>
+          </object>
+        </entry>
+        <entry key="txtDesp1">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="FirstInWord"/>
+          </object>
+        </entry>
+        <entry key="txtDesp2">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SecondInWord"/>
+          </object>
+        </entry>
+        <entry key="cboCashac">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CodeForCOA"/>
+          </object>
+        </entry>
+
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//COA//-->
+  <object id="COAController" type="Ace.Windows.Admin.Presenter.ChargeOfAccountController, Ace.Windows.Admin.Presenter" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="COAErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="COA.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtAccountCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="ACode"/>
+          </object>
+        </entry>
+        <entry key="txtAccountName">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="AccountName"/>
+          </object>
+        </entry>
+        <entry key="cboDepartmentCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="DCODE"/>
+          </object>
+        </entry>
+        <entry key="cboAccountType">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="ACType"/>
+          </object>
+        </entry>
+        <entry key="txtCBMACode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CBMACode"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//Format//-->
+  <object id="FormatController" type="Ace.Windows.Admin.Presenter.FormatController, Ace.Windows.Admin.Presenter" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="FormatErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="FormatValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="txtCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Code"/>
+          </object>
+        </entry>
+        <entry key="txtDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Description"/>
+          </object>
+        </entry>
+        <entry key="txtCodeFormat">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CodeFormat"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//FormatDefinition//-->
+  <object id="FormatDefinitionController" type="Ace.Windows.Admin.Presenter.FormatDefinitionController, Ace.Windows.Admin.Presenter" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="FormatDefinitionErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="FormatDefinition.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtPortionCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="PortionCode"/>
+          </object>
+        </entry>
+        <!--<entry key="txtPrefix">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Prefix"/>
+          </object>
+        </entry>
+        <entry key="txtSuffix">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Suffix"/>
+          </object>
+        </entry>-->
+        <entry key="txtPosition">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Position"/>
+          </object>
+        </entry>
+        <entry key="txtLength">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Length"/>
+          </object>
+        </entry>
+        <entry key="cboFormatCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="FormatId"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--Region Installer-->
+
+  <!--Region HierarchyWorkStation-->
+  <object id="HierarchyWorkStationController" type="Ace.Windows.Admin.Presenter.HierarchyWorkStationController, Ace.Windows.Admin.Presenter" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="HierarchyWorkStationErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="HierarchyWorkStationValidatior"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboTerminalType">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="WorkStationTypeId"/>
+          </object>
+        </entry>
+        <entry key="cboBranchCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBranchCode"/>
+          </object>
+        </entry>
+        <entry key="txtTerminalDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="WorkStationDescription"/>
+          </object>
+        </entry>
+        <entry key="txtHostName">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="HostName"/>
+          </object>
+        </entry>
+        <entry key="txtTerminalIPAddress">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="IPAddress"/>
+          </object>
+        </entry>
+
+        <entry key="txtMaskAddress">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="MaskAddress"/>
+          </object>
+        </entry>
+        <entry key="mtxtTerminalMacAddress">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="MacAddress"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+  <!--EndRegion -->
+
+
+  <!--Region CounterInformation-->
+  <object id="CounterInformationController" type="Ace.Windows.Admin.Presenter.CounterInformationController, Ace.Windows.Admin.Presenter" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="CounterInformationControllerErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="CounterInformationValidatior"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboCounterType">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="CounterType"/>
+            <property name="CustomValidatingMethod" value="cboCounterType_CustomValidating"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+  <!--EndRegion -->
+
+
+  <!--EndRegion Installer-->
+
+</objects>

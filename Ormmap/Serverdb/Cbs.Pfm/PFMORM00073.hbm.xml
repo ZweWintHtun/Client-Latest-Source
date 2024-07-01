@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00073, Ace.Cbs.Pfm.Dmd" rename="freezeAccountDto"/>
+
+  <class name="PFMORM00073" table="FreezeAc" lazy="true" >
+   
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+    
+    <property name="AccountNo">
+      <column name="Acctno" sql-type="varchar(50)" not-null="true" />
+    </property>
+    <property name="Reason">
+      <column name="Reason" sql-type="nvarchar(200)" not-null="true" />
+    </property>
+    <property name="FreezeDate">
+      <column name="FDate" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="FreezeType">
+      <column name="FType" sql-type="char(1)" not-null="true" />
+    </property>
+    <property name="BranchCode">
+      <column name="SourceBr" sql-type="varchar(50)" not-null="true" />
+    </property>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+  </class>
+
+  <query name="CXDAO00006.GetFreezeAccountCountByAccountNo">
+    select new freezeAccountDto
+    (AccountNo)
+    from PFMORM00073
+    where AccountNo = :accountNo
+    and Active = true
+  </query>
+  
+</hibernate-mapping>

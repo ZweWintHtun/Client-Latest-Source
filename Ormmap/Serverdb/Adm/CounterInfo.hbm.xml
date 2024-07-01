@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Counter Info-->
+<!-- 
+// <copyright file="TLMORM00002.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>Nyo Me San</CreatedUser>
+// <CreatedDate>2013-05-21</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version>1.0</Version>
+-->
+<hibernate-mapping assembly="Ace.Windows.Admin.DataModel" namespace="Ace.Windows.Admin.DataModel" xmlns="urn:nhibernate-mapping-2.2">
+	<import class="Ace.Windows.Admin.DataModel.CounterInfoDTO, Ace.Windows.Admin.DataModel" rename="counterinfodto"/>
+	<class name="CounterInfo" table="CounterInfo" >
+		<id name="CounterNo">		
+			<column name="CounterNo" sql-type="varchar" not-null="true" />
+		</id>
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="true"/>
+		</version>
+    <property name="WorkStationId">
+      <column name="WorkStationId" sql-type="Int32" not-null="true" />
+    </property>
+    
+		<property name="Description">
+			<column name="Description" sql-type="nvarchar" not-null="true" />
+		</property>
+		<property name="CounterType">
+			<column name="CounterType" sql-type="nvarchar" not-null="false" />
+		</property>
+		<property name="HasVault">
+			<column name="HasVault" sql-type="bit" not-null="true" />
+		</property>
+		<property name="SourceBranchCode">
+			<column name="SourceBr" sql-type="varchar" not-null="true" />
+		</property>
+
+    <many-to-one name="WorkStation" column="[WorkStationId]" class="WorkStation" insert="false" update="false" ></many-to-one>
+    <many-to-one name="CounterTypeInfo" column="[CounterType]" class="CounterType" insert="false" update="false" ></many-to-one>
+		<!--Support Fields-->
+		
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+	</class>
+
+  <!--//COUNTERINFO.CheckExist//-->
+  <query name="COUNTERINFODAO.CheckExist">
+    select new counterinfodto(
+    c.CounterNo,
+    c.Description,
+    c.WorkStationId,
+    c.CounterType,
+    c.HasVault,
+    c.SourceBranchCode)
+    from CounterInfo as c
+    where ( c.CounterNo =: counterNo and c.SourceBranchCode =: sourceBranchCode ) and  c.Active = true
+  </query>
+
+<query name="COUNTERINFODAO.CheckExist2">
+    select new counterinfodto
+    (
+    c.CounterNo,
+    c.Description,
+    c.WorkStationId,
+    w.Name,
+    c.CounterType,
+    c.HasVault,
+    c.SourceBranchCode,
+    c.Active,
+    c.TS,
+    c.CreatedDate,
+    c.CreatedUserId,
+    c.UpdatedDate,
+    c.UpdatedUserId
+    )
+    from CounterInfo as c
+    inner join c.WorkStation as w
+    where ( c.CounterNo =: counterNo)
+    <!--where ( c.CounterNo =: counterNo or c.Description =: desp )-->
+  </query>
+  <!--//COUNTERINFODAO.SelectAll//-->
+  <query name="COUNTERINFODAO.SelectAll">
+	  select new counterinfodto(
+	  c.CounterNo,
+	  c.Description,
+	  c.WorkStationId,
+	  w.Name,
+	  c.CounterType,
+	  c.HasVault,
+	  c.SourceBranchCode,
+	  c.Active,
+	  c.TS,
+	  c.CreatedDate,
+	  c.CreatedUserId,
+	  c.UpdatedDate,
+	  c.UpdatedUserId
+	  )
+	  from CounterInfo as c
+	  inner join c.WorkStation as w
+	  where c.Active = true
+	  and w.Active = true
+  </query>
+
+  <!--//COUNTERINFODAO.SelectByCounterNo//-->
+  <query name="COUNTERINFODAO.SelectByCounterNo">
+	  select new counterinfodto(
+	  c.CounterNo,
+	  c.Description,
+	  c.WorkStationId,
+	  w.Name,
+	  c.CounterType,
+	  c.HasVault,
+	  c.SourceBranchCode,
+	  c.Active,
+	  c.TS,
+	  c.CreatedDate,
+	  c.CreatedUserId,
+	  c.UpdatedDate,
+	  c.UpdatedUserId
+	  )
+	  from CounterInfo as c
+	  inner join c.WorkStation as w
+	  where c.CounterNo = :counterNo
+	  and c.Active = true
+	  and w.Active = true
+  </query>
+
+  <!--//COUNTERINFODAO.SelectByCounterNo//-->
+  <query name="COUNTERINFODAO.SelectByWorkStationId">
+    select new counterinfodto(
+    c.CounterNo,
+    ct.CounterDescription,
+    c.WorkStationId,
+    c.CounterType,
+    c.HasVault
+    )
+    from CounterInfo as c
+    inner join c.CounterTypeInfo as ct
+    where c.WorkStationId = :workstationId
+    and c.SourceBranchCode =:sourceBr
+    and c.Active = true
+    and ct.Active = true
+  </query>
+
+  <!--//COUNTERINFODAO.SelectBySourceBranchCode//-->
+  <query name="COUNTERINFODAO.SelectBySourceBranchCode">
+	  select new counterinfodto(
+	  c.CounterNo,
+	  c.Description,
+	  c.WorkStationId,
+	  w.Name,
+	  c.CounterType,
+	  c.HasVault,
+	  c.SourceBranchCode,
+	  c.Active,
+	  c.TS,
+	  c.CreatedDate,
+	  c.CreatedUserId,
+	  c.UpdatedDate,
+	  c.UpdatedUserId
+	  )
+	  from CounterInfo as c
+	  inner join c.WorkStation as w
+	  where c.SourceBranchCode = :sourcebranchcode
+	  and c.Active = true
+	  and w.Active = true
+  </query>
+
+
+</hibernate-mapping>

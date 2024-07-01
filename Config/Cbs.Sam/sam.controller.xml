@@ -1,0 +1,942 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+	<description>
+		Controller Objects Settings
+	</description>
+
+	<!--Region System Admin-->
+
+  <!--//CCOA//-->
+	<object id="CCOAController" type="Ace.Cbs.Sam.Ptr.SAMCTL00047, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="CCOAErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="CCOA.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+				<entry key="cboAccountCode">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="ACODE"/>
+					</object>
+				</entry>
+				<entry key="txtBranchcode">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="DCODE"/>
+					</object>
+				</entry>
+				<entry key="txtCurrency">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="CUR"/>
+					</object>
+				</entry>
+				<entry key="txtbudget">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="BUDGET"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+	<!--//AppSettings//-->
+	<object id="AppSettingsController" type="Ace.Cbs.Sam.Ptr.SAMCTL00010, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="AppSettingsErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="AppSettings.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+				<entry key="txtKeyName">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="KeyName"/>
+					</object>
+				</entry>
+				<entry key="txtKeyValue">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="KeyValue"/>
+					</object>
+				</entry>
+				<entry key="txtDescription">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Description"/>
+					</object>
+				</entry>
+				<entry key="txtLocation">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Location"/>
+					</object>
+				</entry>
+				<entry key="txtType">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Type"/>
+					</object>
+				</entry>
+				<!--<entry key="txtBinaryValue">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="BinaryValue"/>
+          </object>
+        </entry>-->
+
+			</dictionary>
+		</property>
+	</object>
+
+	<!--//AccountType//-->
+	<object id="AccountTypeController" type="Ace.Cbs.Sam.Ptr.SAMCTL00001, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="AccountTypeErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="AccountTypeValidator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+				<entry key="txtCode">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Code"/>
+					</object>
+				</entry>
+				<entry key="txtDescription">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Description"/>
+					</object>
+				</entry>
+				<entry key="txtSymbol">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Symbol"/>
+					</object>
+				</entry>
+
+
+			</dictionary>
+		</property>
+	</object>
+
+	<!--//SubAccountType//-->
+	<object id="SubAccountTypeController" type="Ace.Cbs.Sam.Ptr.SAMCTL00002, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="SubAccountTypeErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="SubAccountTypeValidator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+				<entry key="cboAccountType">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="AccountTypeId"/>
+					</object>
+				</entry>
+				<entry key="txtCode">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Code"/>
+					</object>
+				</entry>
+				<entry key="txtDescription">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Description"/>
+					</object>
+				</entry>
+				<entry key="txtSymbol">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Symbol"/>
+					</object>
+				</entry>
+				<entry key="txtAccountSign">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="AccountSignature"/>
+					</object>
+				</entry>
+
+			</dictionary>
+		</property>
+	</object>
+
+	<!--//DEPOSITCODE//-->
+	<object id="DepositCodeController" type="Ace.Cbs.Sam.Ptr.SAMCTL00008, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="DEPOSITCODEErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="DEPOSITCODEValidator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="txtDepositCode">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="DepositCode"/>
+					</object>
+				</entry>
+				<entry key="txtDescription">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Description"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+	<!--//HOLIDAY//-->
+	<object id="HOLIDAYController" type="Ace.Cbs.Sam.Ptr.SAMCTL00007, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="HOLIDAYErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="HOLIDAYValidator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+				<entry key="dtpDate">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="DATE"/>
+					</object>
+				</entry>
+				<entry key="txtDESCRIPTION">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="DESCRIPTION"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+	<!--//InitialCode//-->
+	<object id="InitialCodeController" type="Ace.Cbs.Sam.Ptr.SAMCTL00021, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="InitialErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="InitialCodeValidator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+				<entry key="txtInitialCode">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Initial"/>
+					</object>
+				</entry>
+				<entry key="txtDescription">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Description"/>
+					</object>
+				</entry>
+
+
+			</dictionary>
+		</property>
+	</object>
+
+	<!--//OtherBankCode//-->
+	<object id="BCodeController" type="Ace.Cbs.Sam.Ptr.SAMCTL00004, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="BCodeErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="BCodeValidator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+				<entry key="txtBankCode">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="BCode"/>
+					</object>
+				</entry>
+				<entry key="txtBankName">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="BDesp"/>
+					</object>
+				</entry>
+				<!--<entry key="txtAccountNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="BAccountNo"/>
+					</object>
+				</entry>-->
+
+
+			</dictionary>
+		</property>
+	</object>
+
+	<!--//TestKey//-->
+	<object id="TestKeyController" type="Ace.Cbs.Sam.Ptr.SAMCTL00019, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="DayKeyErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="DayKeyValidator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+				<entry key="txtCode">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Code"/>
+            <property name="CustomValidatingMethod" value="txtCode_CustomValidating"/>
+					</object>
+				</entry>
+				<entry key="txtValue">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Value"/>
+            <property name="CustomValidatingMethod" value="txtValue_CustomValidating"/>
+					</object>
+				</entry>
+        <!--<entry key="dtpStartDate">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="StartDate"/>
+					</object>
+				</entry>-->
+
+			</dictionary>
+		</property>
+	</object>
+	
+	<!--//Zone//-->
+	<object id="ZoneController" type="Ace.Cbs.Sam.Ptr.SAMCTL00017, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="ZoneErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="Zone.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="cboZoneType">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="ZoneType"/>
+            <property name="CustomValidatingMethod" value="cboZoneType_CustomValidating"/>
+					</object>
+				</entry>
+				<entry key="cboBranchCode">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="BranchCode"/>
+            <property name="CustomValidatingMethod" value="cboBranchCode_CustomValidating"/>
+					</object>
+				</entry>
+				<entry key="txtAccountCode">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="AccountCode"/>
+            <property name="CustomValidatingMethod" value="txtAccountCode_CustomValidating"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+	<!--//FixRate//-->
+	<object id="FixRateController" type="Ace.Cbs.Sam.Ptr.SAMCTL00015, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="FixRateErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="FixRate.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+				<entry key="txtDescription">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Description"/>
+					</object>
+				</entry>
+				<entry key="txtRate">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Rate"/>
+					</object>
+				</entry>
+				<entry key="txtDuration">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Duration"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+  <!--//RemitBr//-->
+	<object id="IBLRateEntryController" type="Ace.Cbs.Sam.Ptr.SAMCTL00026, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="RemitBrErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="IBLRate.Validator"/>
+        <property name="CustomValidatingMethod" value="gvIBLRate_CustomValidating"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="cboBranchCode">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="BranchCode"/>
+					</object>
+				</entry>
+				<entry key="txtTelexCharge">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="TelaxCharges"/>
+					</object>
+				</entry>
+        <entry key="txtDrawingAccount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="DrawingAccount"/>
+            <property name="CustomValidatingMethod" value="txtDrawingAccount_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtEashaccount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="EncashAccount"/>
+            <property name="CustomValidatingMethod" value="txtEashaccount_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txComssAccount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="IBSComAccount"/>
+            <property name="CustomValidatingMethod" value="txComssAccount_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txttelexAccount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="TelaxAccount"/>
+            <property name="CustomValidatingMethod" value="txttelexAccount_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtIRpoaccount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="CustomValidatingMethod" value="txtIRpoaccount_CustomValidating"/>
+            <property name="Providers" value="IRPOAccount"/>
+          </object>
+        </entry>
+				<entry key="cboCurrency">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Currency"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+	<!--//RemitBrIbl//-->
+	<object id="RateEntryController" type="Ace.Cbs.Sam.Ptr.SAMCTL00025, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="RemitBrIBLErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="IBLbrRate.Validator"/>
+        <property name="CustomValidatingMethod" value="gvRemittanceBranchAndRate_CustomValidating"/>        
+      </object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+				<entry key="cboBranchCode">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="BranchCode"/>
+					</object>
+				</entry>
+				<entry key="txtTelexCharge">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="TelaxCharges"/>
+					</object>
+				</entry>
+        <entry key="txtDrawingAccount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="CustomValidatingMethod" value="txtDrawingAccount_CustomValidating"/>
+            <property name="Providers" value="DrawingAccount"/>
+          </object>
+        </entry>
+        <entry key="txtEashaccount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="CustomValidatingMethod" value="txtEashaccount_CustomValidating"/>
+            <property name="Providers" value="EncashAccount"/>
+          </object>
+        </entry>
+        <entry key="txComssAccount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="CustomValidatingMethod" value="txComssAccount_CustomValidating"/>
+            <property name="Providers" value="IBSComAccount"/>
+          </object>
+        </entry>
+        <entry key="txttelexAccount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="CustomValidatingMethod" value="txttelexAccount_CustomValidating"/>
+            <property name="Providers" value="TelaxAccount"/>
+          </object>
+        </entry>
+        <entry key="txtIRpoaccount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="CustomValidatingMethod" value="txtIRpoaccount_CustomValidating"/>
+            <property name="Providers" value="IRPOAccount"/>
+          </object>
+        </entry>
+				<entry key="cboCurrency">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Currency"/>
+					</object>
+				</entry>
+
+
+			</dictionary>
+		</property>
+	</object>
+
+	<!--//Branch server_SERVERLOG//-->
+	<object id="SERVERLOGController" type="Ace.Cbs.Sam.Ptr.SAMCTL00020, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="SERVERLOGErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="SERVERLOG.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+				<entry key="cboBranchCode">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="BRANCHNO"/>
+					</object>
+				</entry>
+				<entry key="txtServerName">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="SERVERNAME"/>
+					</object>
+				</entry>
+				<entry key="txtIPAddress">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="IPADDRESS"/>
+					</object>
+				</entry>
+				<entry key="txtDBName">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="DBNAME"/>
+					</object>
+				</entry>
+				<!--<entry key="rdoNewSystem">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="NewSystem"/>
+          </object>
+        </entry>
+        <entry key="rdoOldSystem">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="OldSystem"/>
+          </object>
+        </entry>
+        <entry key="rdoVsat">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Vsat"/>
+          </object>
+        </entry>
+        <entry key="rdoIPStar">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="IPStar"/>
+          </object>
+        </entry>-->
+
+
+			</dictionary>
+		</property>
+	</object>
+
+	<!--//NewSetup//-->
+	<object id="NewSetupController" type="Ace.Cbs.Sam.Ptr.SAMCTL00016, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="NewSetupErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="NewSetup.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+				<entry key="txtVariable">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Variable"/>
+					</object>
+				</entry>
+				<entry key="txtValue">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Value"/>
+					</object>
+				</entry>
+
+
+			</dictionary>
+		</property>
+	</object>
+
+	<!--//Sys001//-->
+	<object id="Sys001Controller" type="Ace.Cbs.Sam.Ptr.SAMCTL00049, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="Sys001ErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="Sys001.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="txtName">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Name"/>
+					</object>
+				</entry>
+        <entry key="cboBranchNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="BranchCode"/>
+            <property name="CustomValidatingMethod" value="cboBranchNo_CustomValidating"/>
+          </object>
+        </entry>
+			</dictionary>
+		</property>
+	</object>
+  
+	<!--//Message//-->
+	<object id="MessageController" type="Ace.Cbs.Sam.Ptr.SAMCTL00050, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="MessageErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="Message.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+				<entry key="txtCode">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Code"/>
+					</object>
+				</entry>
+
+				<entry key="txtDescription">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Description"/>
+					</object>
+				</entry>
+
+			</dictionary>
+		</property>
+	</object>
+
+	<!--//RateInfo//-->
+	<object id="RateInfoController" type="Ace.Cbs.Sam.Ptr.SAMCTL00051, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="RateInfoErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="RateInfo.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+				<entry key="cboCur">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="CurrencyCode"/>
+					</object>
+				</entry>
+				<entry key="cboRateType">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="RateType"/>
+					</object>
+				</entry>
+				<entry key="txtRate">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Rate"/>
+					</object>
+				</entry>
+				<!--<entry key="txtDenoRate">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="DenoRate"/>
+          </object>
+        </entry>-->
+				<entry key="dtpRDate">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="RegisterDate"/>
+					</object>
+				</entry>
+				<entry key="cboToCur">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="ToCurrencyCode"/>
+					</object>
+				</entry>
+
+
+			</dictionary>
+		</property>
+	</object>
+
+	<!--//TranType//-->
+	<object id="TranTypeController" type="Ace.Cbs.Sam.Ptr.SAMCTL00052, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="TranTypeErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="TranType.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+				<entry key="txtCode">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="TransactionCode"/>
+					</object>
+				</entry>
+				<entry key="txtDescription">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Description"/>
+					</object>
+				</entry>
+				<entry key="txtNarration">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Narration"/>
+					</object>
+				</entry>
+				<entry key="txtStatus">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Status"/>
+					</object>
+				</entry>
+				<entry key="txtPBReference">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="PBReference"/>
+					</object>
+				</entry>
+				<entry key="txtRVReference">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="RVReference"/>
+					</object>
+				</entry>
+
+
+			</dictionary>
+		</property>
+	</object>
+
+	<!--//PORate//-->
+	<object id="PORateController" type="Ace.Cbs.Sam.Ptr.SAMCTL00022, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="PORateErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="PORate.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="txtRate">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Rate"/>
+					</object>
+				</entry>
+				<entry key="txtFixedAmount">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="FixAmount"/>
+					</object>
+				</entry>
+				<entry key="txtStartAmount">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="StartNo"/>
+					</object>
+				</entry>
+				<entry key="txtEndAmount">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="EndNo"/>
+					</object>
+				</entry>
+				<entry key="cboCurrency">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Currency"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+	<!--//RateFile//-->
+	<object id="RateFileController" type="Ace.Cbs.Sam.Ptr.SAMCTL00023, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="RateFileErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="RateFile.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+				<entry key="txtCode">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Code"/>
+					</object>
+				</entry>
+				<entry key="txtDescription">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Description"/>
+					</object>
+				</entry>
+				<entry key="dtpRequiredMonth">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="DATE_TIME"/>
+					</object>
+				</entry>
+				<entry key="txtRate">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Rate"/>
+					</object>
+				</entry>
+
+			</dictionary>
+		</property>
+	</object>
+
+	<!--//Deno//-->
+	<object id="DenosetupController" type="Ace.Cbs.Sam.Ptr.SAMCTL00024, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="DenoErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="Deno.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+				<entry key="txtDescription">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Description"/>
+					</object>
+				</entry>
+				<entry key="txtD1">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<!--<property name="Providers" value="D1"/>-->
+            <property name="CustomValidatingMethod" value="txtD1_CustomValidating"/>
+					</object>
+				</entry>
+				<entry key="txtD2">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<!--<property name="Providers" value="D2"/>-->
+            <property name="CustomValidatingMethod" value="txtD2_CustomValidating"/>
+					</object>
+				</entry>
+				<entry key="cboCurrency">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Currency"/>
+					</object>
+				</entry>
+				<entry key="txtSymbol">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Symbol"/>
+					</object>
+				</entry>
+
+
+			</dictionary>
+		</property>
+	</object>
+
+  <!--//OccupationCode//-->
+  <object id="OccupationCodeController" type="Ace.Cbs.Sam.Ptr.SAMCTL00003, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="OccupationCodeErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="OccupationCodeValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="txtOccupationCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Occupation_Code"/>
+          </object>
+        </entry>
+        <entry key="txtDescription">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Description"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+  
+ 	<!--//NationalityCode//-->
+	<object id="NationalityCodeController" type="Ace.Cbs.Sam.Ptr.SAMCTL00053, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="NationalityCodeErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="NationalityCodeValidator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+				<entry key="txtCode">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Nationality_Code"/>
+					</object>
+				</entry>
+				<entry key="txtDescription">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="Description"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+	<!--//Branch Code Listing//-->
+	<object id="BranchCodeController" type="Ace.Cbs.Sam.Ptr.SAMCTL00054, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="BranchCodeErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="BranchCodeValidator"/>
+			</object>
+		</property>
+
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="cboStateCode">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="StateCode"/>
+					</object>
+				</entry>				
+				
+			</dictionary>
+		</property>
+	</object>
+
+	<!--//Code Listing//-->
+	<object id="CodeListingController" type="Ace.Cbs.Sam.Ptr.SAMCTL00055, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="CodeListingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="CodeListingValidator"/>
+			</object>
+		</property>
+
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="cboCodeType">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="CodeType"/>
+					</object>
+				</entry>
+
+			</dictionary>
+		</property>
+	</object>
+
+  <!--InterestRateFile Listing Controller-->
+  <object id="InterestRateController" type="Ace.Cbs.Sam.Ptr.SAMCTL00031, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+  </object>
+	<!--Endregion-->
+
+  <!--//NRCCodeController//-->
+  <object id="NRCCodeController" type="Ace.Cbs.Sam.Ptr.SAMCTL00056, Ace.Cbs.Sam.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="NRCCodeErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="NRCCodeValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+
+        <entry key="cboStateCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="StateCode"/>
+          </object>
+        </entry>
+        <entry key="txtTownshipCode">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="TownshipCode"/>
+            <property name="CustomValidatingMethod" value="txtTownshipCode_CustomValidating"/>
+          </object>
+        </entry>
+        <entry key="txtTownshipDesp">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="TownshipDesp"/>
+          </object>
+        </entry>
+
+
+      </dictionary>
+    </property>
+  </object>
+</objects>

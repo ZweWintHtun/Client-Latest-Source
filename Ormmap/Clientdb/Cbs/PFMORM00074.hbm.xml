@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00075, Ace.Cbs.Pfm.Dmd" rename="rateInfoDto"/>
+
+  <class name="PFMORM00074" table="RateInfo" lazy="true" >
+    <id name="Id" type="Int32" unsaved-value="0">
+      <!--<generator class="increment">
+      </generator>-->
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+    
+    <property name="CurrencyCode">
+      <column name="Cur" sql-type="varchar(50)" not-null="true" />
+    </property>
+    <property name="RateType">
+      <column name="RateType" sql-type="varchar(50)" not-null="true" />
+    </property>
+    <property name="Rate">
+      <column name="Rate" sql-type="numeric(15,2)" not-null="true" />
+    </property>
+    <property name="DenoRate">
+      <column name="DenoRate" sql-type="varchar(200)" not-null="false" />
+    </property>
+    <property name="RegisterDate">
+      <column name="RDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="LastModify">
+      <column name="LastModify" sql-type="bit" not-null="false" />
+    </property>
+    <property name="ToCurrencyCode">
+      <column name="ToCur" sql-type="varchar(50)" not-null="true" />
+    </property>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+  </class>
+
+  <query name="CXCOM00010.SelectRate">
+	  select rateInfo.Rate from PFMORM00074 as rateInfo
+	  where
+	  rateInfo.CurrencyCode = :currencyCode and
+	  rateInfo.RateType = :rateType and
+	  <!--YEAR(rateInfo.RegisterDate) = YEAR(CURRENT_DATE) and
+	  MONTH(rateInfo.RegisterDate) = MONTH(CURRENT_DATE) and
+	  DAY(rateInfo.RegisterDate) = DAY(CURRENT_DATE) and-->
+    rateInfo.LastModify = 1 and
+    rateInfo.ToCurrencyCode = :homeCur and
+    rateInfo.Active = true
+  </query>
+
+	<query name="CXCLE00011.SelectRateAndDenoRate">
+		select new rateInfoDto(
+		rateInfo.Rate,
+		rateInfo.DenoRate)
+		from PFMORM00074 as rateInfo
+		where
+		rateInfo.CurrencyCode = :currencyCode and
+		rateInfo.RateType = :rateType and
+		<!--YEAR(rateInfo.RegisterDate) = YEAR(CURRENT_DATE) and
+		MONTH(rateInfo.RegisterDate) = MONTH(CURRENT_DATE) and
+		DAY(rateInfo.RegisterDate) = DAY(CURRENT_DATE) and-->
+    rateInfo.LastModify = 1 and
+    rateInfo.ToCurrencyCode = :homeCur and
+    rateInfo.Active = 1
+  </query>
+
+  <query name="CXCOM00010.SelectAllDenoRate">
+	  select rateInfo.DenoRate from PFMORM00074 as rateInfo
+	  where
+	  rateInfo.CurrencyCode = :currencyCode and
+	  rateInfo.RateType = :rateType and
+	  rateInfo.ToCurrencyCode = :ToCur and
+	  YEAR(rateInfo.RegisterDate) = YEAR(CURRENT_DATE) and
+	  MONTH(rateInfo.RegisterDate) = MONTH(CURRENT_DATE) and
+	  DAY(rateInfo.RegisterDate) = DAY(CURRENT_DATE) and
+	  rateInfo.LastModify = 1 and
+	  rateInfo.Active = true
+  </query>
+  
+</hibernate-mapping>

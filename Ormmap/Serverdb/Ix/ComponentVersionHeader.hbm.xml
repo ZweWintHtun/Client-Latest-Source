@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Windows.Ix.DataModel" namespace="Ace.Windows.Ix.DataModel" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Windows.Ix.Core.DataModel.ComponentMetaDataHeader, Ace.Windows.Ix.Core" rename="cmetadata"/>
+	<import class="Ace.Windows.Ix.Core.DataModel.ManualUpgradeNewVersionDTO, Ace.Windows.Ix.Core" rename="manualUpgradeNewVersionDTO"/>
+ 
+    <import class="Ace.Cbs.Cen.Dto.CENDTO00001, Ace.Cbs.Cen.Dto" rename="componentversionheaderdto"/>
+    <import class="Ace.Cbs.Cen.Dto.CENDTO00004, Ace.Cbs.Cen.Dto" rename="cendto04"/>
+    <import class="Ace.Window.CccCenter.Com.Dto.CCCOMDTO00007, Ace.Window.CccCenter.Com.Dto" rename="ccomdto07"/>
+    <import class="Ace.Window.CccCenter.Com.Dto.CCCOMDTO00005, Ace.Window.CccCenter.Com.Dto" rename="cccomdto05"/>
+  <class name="ComponentVersionHeader" table="[ComponentVersionHeader]" >
+    
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+    <property name="Build">
+      <column name="Build" sql-type="int" not-null="true" />
+    </property>
+    <property name="InstallerTypeId">
+      <column name="InstallerTypeId" sql-type="int" not-null="true" />
+    </property>   
+    <property name="ComponentVersionNo">
+      <column name="ComponentVersionNo" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="VersionDescription">
+      <column name="VersionDescription" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="ReleaseDate">
+      <column name="ReleaseDate" sql-type="datetime" not-null="true" />
+    </property>
+
+    <property name="Active" not-null="true" />
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+<many-to-one name="CreatedUser" column="[CreatedUserId]" class="Ace.Windows.Admin.DataModel.User" insert="false" update="false"></many-to-one>
+    <many-to-one name="UpdatedUser" column="[UpdatedUserId]" class="Ace.Windows.Admin.DataModel.User" insert="false" update="false"></many-to-one>
+
+    <many-to-one name="InstallerType" column="[InstallerTypeId]" class="Ace.Windows.Ix.DataModel.InstallerType" insert="false" update="false"></many-to-one>
+  </class>
+
+  <query name="ComponentVersionHeaderDAO.NewComponentVersionCount">
+    <![CDATA[select count(Id) from ComponentVersionHeader as cvh
+    where cvh.ReleaseDate <= :today 
+    and cvh.InstallerTypeId = :installerTypeId 
+    and cvh.Active = true 
+    and cvh.CreatedDate > 
+    (select cvvh.CreatedDate 
+    from ComponentVersionHeader as cvvh
+    where ComponentVersionNo = :currentVersion
+    and InstallerTypeId = :installerTypeId and Active = true)
+     ]]>
+  </query>
+
+  <query name="ComponentVersionHeaderDAO.NewComponentVersionList">
+    <![CDATA[select Id from ComponentVersionHeader as cvh
+    where cvh.ReleaseDate <= :today 
+    and cvh.InstallerTypeId = :installerTypeId 
+    and cvh.Active = true 
+    and cvh.CreatedDate > 
+    (select cvvh.CreatedDate 
+    from ComponentVersionHeader as cvvh
+    where cvvh.ComponentVersionNo = :currentVersion
+    and cvvh.InstallerTypeId = :installerTypeId and Active = true)
+    order by cvh.Build desc
+     ]]>
+  </query>
+
+  <query name="ComponentVersionHeaderDAO.SelectComponentVersionHeaderById">
+    select new cmetadata(
+    cvh.Id,
+    cvh.InstallerTypeId,
+    cvh.ComponentVersionNo)
+    from ComponentVersionHeader as cvh
+    where cvh.Id = :id and cvh.Active = true
+  </query>
+  <query name="ComponentVersionHeaderDAO.SelectVersionNoByInstallerTypeIdInReport">
+    <![CDATA[select new cendto04
+    (
+    cvh.Id,
+    cvh.InstallerTypeId,
+    cvh.ComponentVersionNo,
+    cvh.Build
+    )
+    from ComponentVersionHeader as cvh
+    where cvh.InstallerTypeId = :installertypeid and cvh.Active = true
+    and cvh.ReleaseDate <= :today
+    order by cvh.Build desc
+    ]]>
+  </query>
+	
+	<query name="ComponentVersionHeaderDAO.SelectComponentVersionHeaderIdByVersionNoAndInstallerTypeId">
+		select new manualUpgradeNewVersionDTO(
+		cvh.Id,
+		cvh.Build
+		)
+		from ComponentVersionHeader as cvh
+		where cvh.ComponentVersionNo = :versionNo and
+		cvh.InstallerTypeId = :installerTypeId and
+		cvh.Active = true
+	</query>
+
+  <query name="ComponentVersionHeaderDAO.SelectVersionNoByInstallerTypeIdInCCC">
+    <![CDATA[select new ccomdto07
+    (
+    cvh.Id,
+    cvh.InstallerTypeId,
+    cvh.ComponentVersionNo,
+    cvh.Build   
+    )
+    from ComponentVersionHeader as cvh
+    where cvh.InstallerTypeId = :installertypeid and cvh.Active = true
+    and cvh.ReleaseDate <= :today
+    order by cvh.Build desc
+    ]]>
+  </query>
+
+  <!--Select Last Downloaded Version No By Installer TYpe Id-->
+  <query name="ComponentVersionHeaderDAO.SelectLastDownloadedComponentVersionNoByInstallerTypeId">
+    select new cccomdto05(
+    cvh.ComponentVersionNo,
+    cvh.Build
+    )
+    from ComponentVersionHeader as cvh
+    where cvh.InstallerTypeId = :installertypeId and cvh.Active = true
+    order by cvh.Build
+  </query>
+  <!---->
+	
+</hibernate-mapping>

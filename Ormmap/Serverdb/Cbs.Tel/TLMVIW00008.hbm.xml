@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--VW_IBL_Testkey-->
+<!-- 
+// <copyright file="TLMVIW00008.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser> Hsu Wai Htoo </CreatedUser>
+// <CreatedDate> 2013-08-22 </CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version>1.0</Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Tel.Dmd" namespace="Ace.Cbs.Tel.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Tel.Dmd.TLMDTO00037, Ace.Cbs.Tel.Dmd" rename="branchkeydto"/>
+  <class name="TLMVIW00008" table="VW_IBL_Testkey" mutable="false" >
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+    <property name="Code">
+      <column name="CODE" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="Value">
+      <column name="VALUE" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="Start_Date">
+      <column name="START_DATE" sql-type="datetime" not-null="false" />
+    </property>
+    
+    <property name="Status">
+      <column name="STATUS" sql-type="varchar" not-null="false"/>
+    </property>
+
+    <property name="Active" not-null="true"/>
+
+  </class>
+
+</hibernate-mapping>

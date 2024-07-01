@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net" xmlns:v="http://www.springframework.net/validation">
+
+  <description>
+    CCOMCenter Form Data Entity Validation Objects Injection
+  </description>
+	
+  <!--Region Manual Update Version Information-->
+	<v:group id="ManualUpdateVersionInformation.Validator" >
+		<v:required id="ManualUpdateVersionInformation.SourceBranchValidator" test="SourceBranchCode">
+			<v:message id="MV90029" providers="SourceBranchCode"/>
+		</v:required>
+	</v:group>
+	<!--Endregion-->
+	
+	<!--Region CCC Download List fort Other Installer Types-->
+	<v:group id="CCCDownloadListforOtherInstallerTypes.Validator" >
+		<v:required id="CCCDownloadListforOtherInstallerTypes.SourceBranchValidator" test="SourceBranchCode">
+			<v:message id="MV90029" providers="SourceBranchCode"/>
+		</v:required>
+		<v:required id="CCCDownloadListforOtherInstallerTypes.WorkStationIdValidator" test="WorkStationId">
+			<v:message id="MV90030" providers="WorkStationId"/>
+		</v:required>
+		<v:required id="CCCDownloadListforOtherInstallerTypes.InstallerTypeIdValidator" test="InstallerTypeId">
+			<v:message id="MV80011" providers="InstallerTypeId"/>
+		</v:required>
+	</v:group>
+	<!--EndRegion-->
+	
+</objects>

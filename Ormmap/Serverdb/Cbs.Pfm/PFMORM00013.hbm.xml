@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00013, Ace.Cbs.Pfm.Dmd" rename="stateCodedto"/>
+
+  <class name="PFMORM00013" table="[StateCode]" >
+    
+    <id name="State_Code">
+      <column name="StateCode" sql-type="varchar" not-null="true" />
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+
+    <property name="Description">
+      <column name="Desp" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="UserNo">
+      <column name="USERNO" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Date_Time">
+      <column name="DATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="EditDate_Time">
+      <column name="EDITDATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="EditUser">
+      <column name="EDITUSER" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="EditType">
+      <column name="EDITTYPE" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+	<!--//StateCode.CheckExist//-->
+	<query name="StateCodeDAO.CheckExist">
+		select new stateCodedto(
+		s.State_Code,
+		s.Description,
+		s.UserNo,
+		s.Date_Time,
+		s.EditDate_Time,
+		s.EditUser,
+		s.EditType )
+		from PFMORM00013 as s
+		where ( s.State_Code =: stateCode or s.Description =: desp  )
+		and  s.Active = true
+	</query>
+
+	<!--//StateCodeDAO.SelectAll//-->
+	<query name="StateCodeDAO.SelectAll">
+		select new stateCodedto(
+		s.State_Code,
+		s.Description,
+		s.UserNo,
+		s.Date_Time,
+		s.EditDate_Time,
+		s.EditUser,
+		s.EditType,
+		s.Active,
+		s.TS,
+		s.CreatedDate,
+		s.CreatedUserId,
+		s.UpdatedDate,
+		s.UpdatedUserId
+		)
+		from PFMORM00013 as s
+		where s.Active = true
+	</query>
+
+	<!--//StateCodeDAO.SelectByStateCode//-->
+	<query name="StateCodeDAO.SelectByStateCode">
+		select new stateCodedto(
+		s.State_Code,
+		s.Description,
+		s.UserNo,
+		s.Date_Time,
+		s.EditDate_Time,
+		s.EditUser,
+		s.EditType,
+		s.Active,
+		s.TS,
+		s.CreatedDate,
+		s.CreatedUserId,
+		s.UpdatedDate,
+		s.UpdatedUserId
+		)
+		from PFMORM00013 as s
+		where s.State_Code = :stateCode
+		and s.Active = true
+	</query>
+	
+</hibernate-mapping>

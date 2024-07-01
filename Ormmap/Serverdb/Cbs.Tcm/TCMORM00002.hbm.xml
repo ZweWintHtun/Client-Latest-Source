@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Service_Charges-->
+<!-- 
+// <copyright file="TCMORM00002.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>Banking</CreatedUser>
+// <CreatedDate>11/14/2013</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version></Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Tcm.Dmd" namespace="Ace.Cbs.Tcm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+	<import class="Ace.Cbs.Tcm.Dmd.TCMDTO00002, Ace.Cbs.Tcm.Dmd" rename="TCMDTO00002"/>
+	<class name="TCMORM00002" table="Service_Charges">
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+    
+    <property name="LNo">
+			<column name="LNo" sql-type="varchar" not-null="true" />
+		</property>	
+
+		<property name="AcctNo">
+			<column name="AcctNo" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="Desp">
+			<column name="Desp" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="GetColo">
+			<column name="GetColo" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="VouDate">
+			<column name="VouDate" sql-type="datetime" not-null="true" />
+		</property>
+
+		<property name="Amount">
+			<column name="Amount" sql-type="numeric" not-null="true" />
+		</property>
+
+		<property name="UId">
+			<column name="UId" sql-type="char" not-null="false" />
+		</property>
+
+		<property name="SourceBr">
+			<column name="SourceBr" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="Cur">
+			<column name="Cur" sql-type="varchar" not-null="true" />
+		</property>
+
+
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+
+	</class>
+
+  <!--//SChargeDAO.SelectMaxId//-->
+  <query name="Service_ChargesDAO.SelectMaxId">
+    select new TCMDTO00002
+    (
+    MAX(s.Id)
+    )
+    from TCMORM00002 as s
+  </query>
+</hibernate-mapping>

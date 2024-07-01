@@ -1,0 +1,1320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    UIForm Objects Settings
+  </description>
+
+  <!--//Type Of Advance//-->
+  <object id="frmLOMVEW00002" type="Ace.Cbs.Loan.Vew.LOMVEW00002, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="TypeOfAdvanceController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Business//-->
+  <object id="frmLOMVEW00001" type="Ace.Cbs.Loan.Vew.LOMVEW00001, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BusinessController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Customer Character Code//-->
+  <object id="frmLOMVEW00003" type="Ace.Cbs.Loan.Vew.LOMVEW00003, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="CustomerCharacterController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Good Will Code//-->
+  <object id="frmLOMVEW00004" type="Ace.Cbs.Loan.Vew.LOMVEW00004, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="GoodWillController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Land Code//-->
+  <object id="frmLOMVEW00005" type="Ace.Cbs.Loan.Vew.LOMVEW00005, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="LandController"/>
+  </object>
+  <!--Endregion-->
+
+
+  <!--//Gold and Jewellery Type//-->
+  <object id="frmLOMVEW00009" type="Ace.Cbs.Loan.Vew.LOMVEW00009, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="GJTController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Gold and Jewellery Kind//-->
+  <object id="frmLOMVEW00010" type="Ace.Cbs.Loan.Vew.LOMVEW00010, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="GJKController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//INSURAN//-->
+  <object id="frmLOMVEW00006" type="Ace.Cbs.Loan.Vew.LOMVEW00006, Ace.Cbs.Loan.Vew" singleton="false" parent="SecureDockForm">
+    <property name="Controller" ref="InsuranController"/>
+  </object>
+
+
+  <!--//Stock Code//-->
+  <object id="frmLOMVEW00007" type="Ace.Cbs.Loan.Vew.LOMVEW00007, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="StockController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//KStock No//-->
+  <object id="frmLOMVEW00008" type="Ace.Cbs.Loan.Vew.LOMVEW00008, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="KindOfStockController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Overdraft Limit Change Entry//-->
+  <object id="frmLOMVEW00012" type="Ace.Cbs.Loan.Vew.LOMVEW00012, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="OverdraftLimitChangeController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Loans Account Closing-->
+  <object id="frmLOMVEW00013" type="Ace.Cbs.Loan.Vew.LOMVEW00013, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="LoanAccClosingController"/>
+  </object>
+  <!--End Region-->
+
+  <!--//Loan Registeration//-->
+  <object id="frmLOMVEW00011.Entry" type="Ace.Cbs.Loan.Vew.LOMVEW00011, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="LoanRegisterationController"/>
+    <property name="FormName" value="Business Loan Registration Entry"/>
+  </object>
+
+  <!--//Loan Registeration//-->
+  <object id="frmLOMVEW00011.Edit" type="Ace.Cbs.Loan.Vew.LOMVEW00011, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="LoanRegisterationController"/>
+    <property name="FormName" value="Business Loan Registration Editting"/>
+  </object>
+
+  <!--//Loan Registeration//-->
+  <object id="frmLOMVEW00011.Enquiry" type="Ace.Cbs.Loan.Vew.LOMVEW00011, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="LoanRegisterationController"/>
+    <property name="FormName" value="Business Loan Registration Enquiry"/>
+  </object>
+
+
+  <!--//Non_PerformanceLoan Case Entry//-->
+  <object id="frmLOMVEW00014" type="Ace.Cbs.Loan.Vew.LOMVEW00014, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="NonPerformanceLoanController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Non_PerformanceLoan Release//-->
+  <object id="frmLOMVEW00015" type="Ace.Cbs.Loan.Vew.LOMVEW00015, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="NonPerformanceLoanReleaseController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Enquiry By Legal AccountNo//-->
+  <object id="frmLOMVEW00032" type="Ace.Cbs.Loan.Vew.LOMVEW00032, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="EnquiryByLegalAccountNoController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Report Viewer For Enquiry By Legal AccountNo//-->
+  <object id="frmLOMVEW00033" type="Ace.Cbs.Loan.Vew.LOMVEW00033, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+  </object>
+  <!--Endregion-->
+
+  <!--//Legal Sue Case Entry//-->
+  <object id="frmLOMVEW00016" type="Ace.Cbs.Loan.Vew.LOMVEW00016, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="LegalCaseController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Legal Sue Case Release Entry//-->
+  <object id="frmLOMVEW00016.LegalRelease" type="Ace.Cbs.Loan.Vew.LOMVEW00016, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="FormName" value="Release Legal Sue Case (Loan/OD)"/>
+    <property name="Controller" ref="LegalCaseReleaseController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Special Transfer Voucher Entry//-->
+  <object id="frmLOMVEW00029" type="Ace.Cbs.Loan.Vew.LOMVEW00029, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="SpecialTransferVoucherController"/>
+  </object>
+
+  <!--//Special Transfer Voucher Entry//-->
+  <object id="frmLOMVEW00024" type="Ace.Cbs.Loan.Vew.LOMVEW00024, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="LoanVoucherController"/>
+  </object>
+  <!--Endregion-->
+
+
+  <!--//Loan Repayment Entry//-->
+  <!--<object id="frmLOMVEW00025" type="Ace.Cbs.Loan.Vew.LOMVEW00025, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PaymentController"/>
+  </object>-->
+  <object id="frmLOMVEW00025.Entry" type="Ace.Cbs.Loan.Vew.LOMVEW00025, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PaymentController"/>
+  </object>  
+  <!--Endregion-->
+
+  <!--//Loan Repayment//-->
+  <object id="frmLOMVEW00025.Enquiry" type="Ace.Cbs.Loan.Vew.LOMVEW00025, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PaymentController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Loan Repayment Entry//-->
+  <object id="frmLOMVEW00030" type="Ace.Cbs.Loan.Vew.LOMVEW00030, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="RepaymentEditController"/>
+  </object>
+  <!--Endregion-->
+
+
+
+  <!--//Loans Interest Editing//-->
+  <object id="frmLOMVEW00020" type="Ace.Cbs.Loan.Vew.LOMVEW00020, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="LoansInterestEditingController" ref="LoansInterestEditingController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Legal Process Editing//-->
+  <object id="frmLOMVEW00021" type="Ace.Cbs.Loan.Vew.LOMVEW00021, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="LegalProcessEditingController" ref="LegalProcessEditingController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//OverDraft Interest Editing//-->
+  <object id="frmLOMVEW00022" type="Ace.Cbs.Loan.Vew.LOMVEW00022, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="OverDraftInterestEditingController" ref="OverDraftInterestEditingController"/>
+  </object>
+  <!--Endregion-->
+  <!--//Loans Registration Listing 2nd form//-->
+  <object id="frmLOMVEW00034" type="Ace.Cbs.Loan.Vew.LOMVEW00034, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="LoanRegistrationListingByLoansTypeController"/>
+  </object>
+  <!--//OverDraft Registration Listing 2nd form//-->
+  <object id="frmLOMVEW00035" type="Ace.Cbs.Loan.Vew.LOMVEW00035, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="ODRegistrationListingByLoansTypeController"/>
+  </object>
+
+  <!--//OverDraft Registration Listing 1st form//-->
+  <object id="frmLOMVEW00036" type="Ace.Cbs.Loan.Vew.LOMVEW00036, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+
+  </object>
+
+  <!--//OverDraft Registration Listing ReportViewer//-->
+  <object id="frmLOMVEW00037.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00037, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--//Loans Registration Listing form//-->
+  <object id="frmLOMVEW00038" type="Ace.Cbs.Loan.Vew.LOMVEW00038, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+
+  </object>
+  <!--//Loans and OverDraft Registration Listing 1st form//-->
+  <object id="frmLOMVEW00039" type="Ace.Cbs.Loan.Vew.LOMVEW00039, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+
+  </object>
+
+  <!--//Loans and OverDraft Registration Listing 2nd form//-->
+  <object id="frmLOMVEW00040" type="Ace.Cbs.Loan.Vew.LOMVEW00040, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="LoansAndODListingByLoansTypeController"/>
+  </object>
+
+  <!--//Legal Loan Repayment Entry//-->
+  <object id="frmLOMVEW00027" type="Ace.Cbs.Loan.Vew.LOMVEW00027, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="LegalLoanRepaymentController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Legal Loan Repayment Entry(OD)//-->
+  <object id="frmLOMVEW00028" type="Ace.Cbs.Loan.Vew.LOMVEW00028, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="LegalODRepaymentController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Registration Data Enquiry//-->
+  <object id="frmLOMVEW00031" type="Ace.Cbs.Loan.Vew.LOMVEW00031, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="LoanRegistrationDataEnquiryController"/>
+  </object>
+
+  <object id="frmLOMVEW00023" type="Ace.Cbs.Loan.Vew.LOMVEW00023, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="LoanInterestCalculation"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Loans Account Close Listing//-->
+  <object id="frmLOMVEW00042.All" type="Ace.Cbs.Loan.Vew.LOMVEW00042, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="FormName" value="LoansAccountCloseListing.All"/>
+    <property name="Controller" ref="LoansAccountCloseListingController"/>
+  </object>
+
+  <object id="frmLOMVEW00042.LoansOnly" type="Ace.Cbs.Loan.Vew.LOMVEW00042, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="FormName" value="LoansAccountCloseListing.LoansOnly"/>
+    <property name="Controller" ref="LoansAccountCloseListingController"/>
+  </object>
+
+  <object id="frmLOMVEW00042.ODOnly" type="Ace.Cbs.Loan.Vew.LOMVEW00042, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="FormName" value="LoansAccountCloseListing.ODOnly"/>
+    <property name="Controller" ref="LoansAccountCloseListingController"/>
+  </object>
+
+  <object id="frmLOMVEW00043.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00043, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//OD Calculation-->
+  <object id="frmLOMVEW00044" type="Ace.Cbs.Loan.Vew.LOMVEW00044, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="ODCalculationController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Loans Interest Listing 2st form-->
+  <object id="frmLOMVEW00045" type="Ace.Cbs.Loan.Vew.LOMVEW00045, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="LoansInterestListingController"/>
+  </object>
+
+  <!--//Loans Interest Listing 1st form//-->
+  <object id="frmLOMVEW00046" type="Ace.Cbs.Loan.Vew.LOMVEW00046, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+
+  </object>
+
+  <object id="frmLOMVEW00053.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00053, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Loans Repayment Schedule By Date//-->
+  <object id="frmLOMVEW00047" type="Ace.Cbs.Loan.Vew.LOMVEW00047, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="LoansRepaymentScheduleByDateController"/>
+  </object>
+
+  <object id="frmLOMVEW00048.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00048, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Loans Dailay Position Listing//-->
+  <object id="frmLOMVEW00049" type="Ace.Cbs.Loan.Vew.LOMVEW00049, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="LoansDailyPositionListingController"/>
+  </object>
+
+  <object id="frmLOMVEW00050.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00050, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--Endregion-->
+
+
+  <!--//Expire Loans Listing//-->
+  <object id="frmLOMVEW00051" type="Ace.Cbs.Loan.Vew.LOMVEW00051, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="ExpireLoansListingController"/>
+  </object>
+
+  <object id="frmLOMVEW00052.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00052, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Overdraft Interest Listing 1st form-->
+  <object id="frmLOMVEW00055" type="Ace.Cbs.Loan.Vew.LOMVEW00055, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+  </object>
+
+  <!--//Overdraft Interest Listing 2st form//-->
+  <object id="frmLOMVEW00054" type="Ace.Cbs.Loan.Vew.LOMVEW00054, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="OverdraftInterestListingController"/>
+  </object>
+
+  <object id="frmLOMVEW00056.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00056, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Service Charges Listing//-->
+  <object id="frmLOMVEW00057" type="Ace.Cbs.Loan.Vew.LOMVEW00057, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="ServiceChargesListingController"/>
+  </object>
+
+  <object id="frmLOMVEW00058.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00058, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//OD Limit Change Listing By Date//-->
+  <object id="frmLOMVEW00059" type="Ace.Cbs.Loan.Vew.LOMVEW00059, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="ODLimitChangeListingByDateController"/>
+  </object>
+
+  <object id="frmLOMVEW00060.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00060, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//OD Limit Change Listing By Account//-->
+  <object id="frmLOMVEW00061" type="Ace.Cbs.Loan.Vew.LOMVEW00061, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="ODLimitChangeListingByAccountController"/>
+  </object>
+
+  <object id="frmLOMVEW00062.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00062, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Non Performance Loans Case Listing//-->
+  <object id="frmLOMVEW00063" type="Ace.Cbs.Loan.Vew.LOMVEW00063, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="NonPerformanceLoansCaseListingController"/>
+  </object>
+
+  <object id="frmLOMVEW00064.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00064, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Legal Case Listing//-->
+  <object id="frmLOMVEW00065.LegalSueCaseList" type="Ace.Cbs.Loan.Vew.LOMVEW00065, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="FormName" value="LegalSueCaseList"/>
+    <property name="Controller" ref="LegalCaseListingController"/>
+  </object>
+
+  <object id="frmLOMVEW00065.LegalSueCaseClose" type="Ace.Cbs.Loan.Vew.LOMVEW00065, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="FormName" value="LegalSueCaseClose"/>
+    <property name="Controller" ref="LegalCaseListingController"/>
+  </object>
+
+  <object id="frmLOMVEW00066.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00066, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+
+  <object id="frmLOMVEW00067" type="Ace.Cbs.Loan.Vew.LOMVEW00067, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <!--<property name="IsShowDialog" value="false"/>-->
+    <property name="Controller" ref="DealerRegistrationEntryController"/>
+  </object>
+
+  <object id="frmLOMVEW00080" type="Ace.Cbs.Loan.Vew.LOMVEW00080, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <!--<property name="IsShowDialog" value="false"/>-->
+    <property name="Controller" ref="DealerInformationSearchController"/>
+  </object>
+  <!--//HirePurchaseRegistration Entry//-->
+  <object id="frmLOMVEW00081" type="Ace.Cbs.Loan.Vew.LOMVEW00081, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HirePurchaseRegistrationController"/>
+    <property name="FormName" value="Hire Purchase Registration Entry"/>
+  </object>
+
+  <!--//HirePurchaseRegistration Enquiry//--> <!--Added By AAM (08-Feb-2018)-->
+  <object id="frmLOMVEW00081.Enquiry" type="Ace.Cbs.Loan.Vew.LOMVEW00081, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HirePurchaseRegistrationController"/>
+    <property name="FormName" value="Hire Purchase Registration Enquiry"/>
+  </object>
+
+  <!-->//HPVoucherDetailsController//-->
+  <object id="frmLOMVEW00088" type="Ace.Cbs.Loan.Vew.LOMVEW00088, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPVoucherDetailsController"/>
+  </object>
+
+  <!-->//HPRegistetListing//-->
+  <object id="frmLOMVEW00096" type="Ace.Cbs.Loan.Vew.LOMVEW00096, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPRegistetListing"/>
+  </object>
+
+  <!-->//HPRegistetListing//-->
+  <object id="frmLOMVEW00100" type="Ace.Cbs.Loan.Vew.LOMVEW00100, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPPaymentSchedule"/>
+  </object>
+  
+  <!-->//HPRegistetListingReportViewer//-->
+  <object id="frmLOMVEW00097" type="Ace.Cbs.Loan.Vew.LOMVEW00097, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  
+  <!-->//HPRegistetListingReportViewer//-->
+  <object id="frmLOMVEW00200" type="Ace.Cbs.Loan.Vew.LOMVEW00200, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPManualRepaymentController"/>
+  </object>
+
+  <!-->//HPAutoPaymentProcess//-->
+  <object id="frmLOMVEW00201" type="Ace.Cbs.Loan.Vew.LOMVEW00201, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPAutoPaymentProc"/>
+  </object>
+
+  <!-->//HP OverDraft Listing//-->
+  <object id="frmLOMVEW00202" type="Ace.Cbs.Loan.Vew.LOMVEW00202, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPOverDraftListing"/>
+  </object>
+
+  <!-->//HP Insufficient Listing//-->
+  <object id="frmLOMVEW00203" type="Ace.Cbs.Loan.Vew.LOMVEW00203, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPInsufficientListing"/>
+  </object>
+
+  <!-->//HP Late Fees Calculation Process//-->
+  <object id="frmLOMVEW00204" type="Ace.Cbs.Loan.Vew.LOMVEW00204, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPLateFeesCalculationProcess"/>
+  </object>
+
+  <!-->//Personal Loans Information Listing//-->
+  <object id="frmLOMVEW00205" type="Ace.Cbs.Loan.Vew.LOMVEW00205, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PersonalLoansInfoListing"/>
+  </object>
+
+  <!-->//Business Loan Interest Listing//-->
+  <object id="frmLOMVEW00206" type="Ace.Cbs.Loan.Vew.LOMVEW00206, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BusinessLoanInterestListing"/>
+  </object>
+
+  <!-->//Personal Loans NPL Case Listing//-->
+  <object id="frmLOMVEW00207" type="Ace.Cbs.Loan.Vew.LOMVEW00207, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PersonalLoansNPLCaseListing"/>
+  </object>
+
+  <!-->//HP Late Fees RepaymentProcess//-->
+  <object id="frmLOMVEW00208" type="Ace.Cbs.Loan.Vew.LOMVEW00208, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPLateFeesRepaymentProcess"/>
+  </object>
+
+  <!-->//HP Daily Position Listing//-->
+  <object id="frmLOMVEW00209" type="Ace.Cbs.Loan.Vew.LOMVEW00209, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPDailyPositionListing"/>
+  </object>
+
+  <!-->//HP Information Listing//-->
+  <object id="frmLOMVEW00210" type="Ace.Cbs.Loan.Vew.LOMVEW00210, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPInformationListing"/>
+  </object>
+
+  <!-->//HP Payment Listing//-->
+  <object id="frmLOMVEW00211" type="Ace.Cbs.Loan.Vew.LOMVEW00211, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPPaymentListing"/>
+  </object>
+
+  <!-->//HP Repayment Listing//-->
+  <object id="frmLOMVEW00212" type="Ace.Cbs.Loan.Vew.LOMVEW00212, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPRepaymentListing"/>
+  </object>
+
+  <!-->//HP Interest Due Pre Listing//-->
+  <object id="frmLOMVEW00213" type="Ace.Cbs.Loan.Vew.LOMVEW00213, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPInterestDuePreListing"/>
+  </object>
+
+  <!-->//HP Repayment Schedule Listing//-->
+  <object id="frmLOMVEW00214" type="Ace.Cbs.Loan.Vew.LOMVEW00214, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPRepaymentScheduleListing"/>
+  </object>
+
+  <!-->HP Late Fees Auto Voucher Process-->
+  <object id="frmLOMVEW00215" type="Ace.Cbs.Loan.Vew.LOMVEW00215, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPLateFeesAutoVoucherProcess"/>
+  </object>
+  
+  <!--//Hire Purchase Stock Group Entry//-->
+  <object id="frmLOMVEW00068" type="Ace.Cbs.Loan.Vew.LOMVEW00068, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HirePurchaseStockGroupController"/>
+  </object>
+  <!--Endregion-->
+
+
+  <!--//Season Code//-->
+  <object id="frmLOMVEW00071" type="Ace.Cbs.Loan.Vew.LOMVEW00071, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="SeasonCodeController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Product Code//-->
+  <object id="frmLOMVEW00074" type="Ace.Cbs.Loan.Vew.LOMVEW00074, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="ProductCodeController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Hire Purchase Stock Item Entry//-->
+  <object id="frmLOMVEW00069" type="Ace.Cbs.Loan.Vew.LOMVEW00069, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HirePurchaseStockItemController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Village Group Entry//-->
+  <object id="frmLOMVEW00070" type="Ace.Cbs.Loan.Vew.LOMVEW00070, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="VillageGroupSetupController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Crop Type Entry//-->
+  <object id="frmLOMVEW00072" type="Ace.Cbs.Loan.Vew.LOMVEW00072, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="CropTypeSetupController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//UM Entry//-->
+  <object id="frmLOMVEW00073" type="Ace.Cbs.Loan.Vew.LOMVEW00073, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="UMSetupController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//LS Product Type Item Setup//-->
+  <object id="frmLOMVEW00077" type="Ace.Cbs.Loan.Vew.LOMVEW00077, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="LSProductTypeItemController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//LiveStockTypeSetup Entry//-->
+  <object id="frmLOMVEW00076" type="Ace.Cbs.Loan.Vew.LOMVEW00076, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="LiveStockTypeSetupController"/>
+  </object>
+
+  <!--//Farm Loan Registeration Entry//-->
+  <object id="frmLOMVEW00078.Entry" type="Ace.Cbs.Loan.Vew.LOMVEW00078, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="FarmLoanRegisterationEntryController"/>
+    <property name="FormName" value="Farm Loan Registration Entry"/>
+  </object>
+
+  <!--//Farm Loan Registeration Edit//-->
+  <object id="frmLOMVEW00078.Edit" type="Ace.Cbs.Loan.Vew.LOMVEW00078, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="FarmLoanRegisterationEntryController"/>
+    <property name="FormName" value="Farm Loan Registration Editting"/>
+  </object>
+
+  <!--//Farm Loan Registeration Enquiry//-->
+  <object id="frmLOMVEW00078.Enquiry" type="Ace.Cbs.Loan.Vew.LOMVEW00078, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="FarmLoanRegisterationEntryController"/>
+    <property name="FormName" value="Farm Loan Registration Enquiry"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Farm Loan Entry//-->
+  <object id="frmLOMVEW00087" type="Ace.Cbs.Loan.Vew.LOMVEW00087, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="EnquiryGroupController"/>
+  </object>
+
+  <!--Endregion-->
+
+  <!--//AGLoan Product Type Item//-->
+  <object id="frmLOMVEW00075" type="Ace.Cbs.Loan.Vew.LOMVEW00075, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="AGLoanProductTypeItemController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Farm Loan Interest Calculation From Date To Date//-->
+  <object id="frmLOMVEW00089" type="Ace.Cbs.Loan.Vew.LOMVEW00089, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="FarmLoanInterestCalculationController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Farm Loan Interest Calculation Monthly//-->
+  <object id="frmLOMVEW00090" type="Ace.Cbs.Loan.Vew.LOMVEW00090, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="FarmLoanInterestCalculationMonthlyController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Farm Loan Interest Calculation From Month To Month//-->
+  <object id="frmLOMVEW00091" type="Ace.Cbs.Loan.Vew.LOMVEW00091, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="FarmLoanInterestCalculationFromMonthToMonthController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//LoanRecord Entry//-->
+  <object id="frmLOMVEW00086" type="Ace.Cbs.Loan.Vew.LOMVEW00086, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="LoanRecordController" ref="LoandRecordEntryController"/>
+    <property name="LiveStockLoanController" ref="LiveStockLoandRecordEntryController"/>
+    <property name="FormName" value="Entry"/>
+    <property name="FormState" value="New"/>
+  </object>
+  <object id="frmLOMVEW00086.Edit" type="Ace.Cbs.Loan.Vew.LOMVEW00086, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="LoanRecordController" ref="LoandRecordEntryController"/>
+    <property name="LiveStockLoanController" ref="LiveStockLoandRecordEntryController"/>
+    <property name="FormName" value="Edit"/>
+    <property name="FormState" value="Edit"/>
+  </object>
+
+  <object id="frmLOMVEW00092" type="Ace.Cbs.Loan.Vew.LOMVEW00092, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="LoanRepaymentController" ref="LoanRepaymentEntryController"/>
+    <property name="LoanRecordController" ref="LoandRecordEntryController"/>
+  </object>
+  <!--//Agriculture Loans Reports//-->
+  <object id="frmLOMVEW00093.AgriLoan" type="Ace.Cbs.Loan.Vew.LOMVEW00093, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="FormName" value="AgricultureLoansReports"/>
+    <property name="Controller" ref="AgriLoansReportsController"/>
+  </object>
+
+  <object id="frmLOMVEW00093.LS" type="Ace.Cbs.Loan.Vew.LOMVEW00093, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="FormName" value="LiveStockLoansReports"/>
+    <property name="Controller" ref="AgriLoansReportsController"/>
+  </object>
+
+  <object id="frmLOMVEW00093.All" type="Ace.Cbs.Loan.Vew.LOMVEW00093, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="FormName" value="FarmLoansReports"/>
+    <property name="Controller" ref="AgriLoansReportsController"/>
+  </object>
+
+  <object id="frmLOMVEW00094.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00094, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--End Region-->
+  
+  <!-- LiveStock Loan Record -->
+  <object id="frmLOMVEW00098" type="Ace.Cbs.Loan.Vew.LOMVEW00098, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="LiveStockLoanController" ref="LiveStockLoandRecordEntryController"/>
+    <property name="FormName" value="Entry"/>
+    <property name="FormState" value="New"/>
+  </object>
+  <object id="frmLOMVEW00098.Edit" type="Ace.Cbs.Loan.Vew.LOMVEW00098, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="LiveStockLoanController" ref="LiveStockLoandRecordEntryController"/>
+    <property name="FormName" value="Edit"/>
+    <property name="FormState" value="Edit"/>
+  </object>
+
+  <!--Agri loan record listing-->
+  <object id="frmLOMVEW00102" type="Ace.Cbs.Loan.Vew.LOMVEW00102, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="LoanRecordReportController"/>
+    <property name="FormName" value="AGLoan"/>
+  </object>
+
+  <object id="frmLOMVEW00102.LSLoan" type="Ace.Cbs.Loan.Vew.LOMVEW00102, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="LoanRecordReportController"/>
+    <property name="FormName" value="LSLoan"/>
+  </object>
+
+  <object id="frmLOMVEW00101.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00101, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+
+  <object id="frmLOMVEW00103.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00103, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+
+  <object id="frmLOMVEW00104" type="Ace.Cbs.Loan.Vew.LOMVEW00104, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="Controller"/>
+    <property name="LoanRecordController" ref="LoandRecordEntryController"/>
+  </object>
+
+  <!--//Farm Loan Penal Fee Calculation// Updated By HWKO-->
+  <object id="frmLOMVEW00300" type="Ace.Cbs.Loan.Vew.LOMVEW00300, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="FarmLoanPenalFeeCalculationController"/>
+  </object>
+  <!--Endregion-->
+
+  <!--//Farm Loans Interest Editing// Updated By HWKO-->
+  <object id="frmLOMVEW00301" type="Ace.Cbs.Loan.Vew.LOMVEW00301, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="FarmLoanInterestEditingController"/>
+  </object>
+  <!--Endregion-->
+
+
+  <!--//Farm Loans Outstanding Register Reports// Created by HWKO (22-Mar-2017)-->
+  <object id="frmLOMVEW00303" type="Ace.Cbs.Loan.Vew.LOMVEW00303, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="FLOSTReportsController"/>
+  </object>
+
+  <object id="frmLOMVEW00304.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00304, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--End Region-->
+
+  <!--//Individual Loans Outstanding Register Reports// Created by HWKO (05-Apr-2017)-->
+  <object id="frmLOMVEW00305" type="Ace.Cbs.Loan.Vew.LOMVEW00305, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="FLIndividualOSTReportsController"/>
+  </object>
+
+  <object id="frmLOMVEW00306.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00306, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--End Region-->
+
+  <!--//Seasonal Loan Total Daily Income Reports// Created by HWKO (25-Apr-2017)-->
+  <object id="frmLOMVEW00307" type="Ace.Cbs.Loan.Vew.LOMVEW00307, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="FLTotalDailyIncomeReportsController"/>
+  </object>
+
+  <object id="frmLOMVEW00308.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00308, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--End Region-->
+
+  <!--//Personal Loan Registeration// Added By HWKO (27-Jun-2017)-->
+  <object id="frmLOMVEW00311.Entry" type="Ace.Cbs.Loan.Vew.LOMVEW00311, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PersonalLoanRegisterationController"/>
+    <property name="FormName" value="Personal Loan Registration Entry"/>
+  </object>
+
+  <!--//Personal Loan Registeration Enquiry// Added By HWKO (12-Jul-2017)-->
+  <object id="frmLOMVEW00311.Enquiry" type="Ace.Cbs.Loan.Vew.LOMVEW00311, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PersonalLoanRegisterationController"/>
+    <property name="FormName" value="Personal Loan Registration Enquiry"/>
+  </object>
+  <!--Endregion-->
+  <!--//Business Loan Late Fee Calculation//-->
+  <object id="frmLOMVEW00403" type="Ace.Cbs.Loan.Vew.LOMVEW00403, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BusinessLoanLateFeeCalculationController"/>
+  </object>
+
+  <!--//Business Loan Auto Payment Process//-->
+  <object id="frmLOMVEW00404" type="Ace.Cbs.Loan.Vew.LOMVEW00404, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BusinessLoanAutoPaymentController"/>
+  </object>
+
+  <!-->//Personal Loan Auto Payment Process// Added By HWKO (05-Jul-2017)-->
+  <object id="frmLOMVEW00312" type="Ace.Cbs.Loan.Vew.LOMVEW00312, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PLAutoPaymentProc"/>
+  </object>
+
+  <!-->//Personal Loan Late Fees Process// Added By HWKO (07-Jul-2017)-->
+  <object id="frmLOMVEW00313" type="Ace.Cbs.Loan.Vew.LOMVEW00313, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PLLateFeesProc"/>
+  </object>
+
+  <!--//Expired Land Lease Listing // Created by HWKO (11-Jul-2017)-->
+  <object id="frmLOMVEW00314" type="Ace.Cbs.Loan.Vew.LOMVEW00314, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="ExpiredLandLeaseListingController"/>
+  </object>
+
+  <object id="frmLOMVEW00315.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00315, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--End Region-->
+ 
+  <!--//Personal Loan Repayment Schedule Listing // Created by HWKO (14-Jul-2017)-->
+  <object id="frmLOMVEW00316" type="Ace.Cbs.Loan.Vew.LOMVEW00316, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PLRepaymentScheduleController"/>
+  </object>
+
+  <object id="frmLOMVEW00317.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00317, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--End Region-->
+
+  <!--//Personal Loan Interest Due Pre Listing // Created by HWKO (14-Jul-2017)-->
+  <object id="frmLOMVEW00318" type="Ace.Cbs.Loan.Vew.LOMVEW00318, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PLIntDuePreListingController"/>
+  </object>
+
+  <object id="frmLOMVEW00319.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00319, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--End Region-->
+  <!--BLDailyInterestCalculationController-->
+  <object id="frmLOMVEW00407" type="Ace.Cbs.Loan.Vew.LOMVEW00407, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BLDailyInterestCalculationController"/>
+  </object>
+  <!--End Region-->
+  <!--//Personal Loans Overdrawn A/C Listing &        
+  // Created by HWKO (17-Jul-2017)-->
+  <object id="frmLOMVEW00320" type="Ace.Cbs.Loan.Vew.LOMVEW00320, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PLODACListingController"/>
+  </object>
+
+  <!--Personal Loans Overdrawn with Company Name A/C Listing-->
+  <object id="frmLOMVEW00322" type="Ace.Cbs.Loan.Vew.LOMVEW00322, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PLODACWithCompanyNameListingController"/>
+  </object>
+
+  <object id="frmLOMVEW00321.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00321, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--End Region-->
+  <!--//Personal Loans Repayment Listing // Created by HWKO (20-Jul-2017)-->
+  <object id="frmLOMVEW00323" type="Ace.Cbs.Loan.Vew.LOMVEW00323, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PLRepaymentListingController"/>
+  </object>
+
+  <object id="frmLOMVEW00324.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00324, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--End Region-->
+  
+  <!--Business Loans Interest Due PreListing-->
+  <object id="frmLOMVEW00405" type="Ace.Cbs.Loan.Vew.LOMVEW00405, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BusinessLoansInterestDuePreListingController"/>
+  </object>
+  <object id="frmLOMVEW00406.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00406, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--End Region-->
+  
+  <!--.Business Loans listing by Grade-->
+  <object id="frmLOMVEW00408" type="Ace.Cbs.Loan.Vew.LOMVEW00408, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BusinessLoansInterestListingByGradeController"/>
+  </object>
+  <object id="frmLOMVEW00409.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00409, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--End Region-->
+  
+  <!--.Business Loans Service Charges listing by Vouchered Date-->
+  <object id="frmLOMVEW00410" type="Ace.Cbs.Loan.Vew.LOMVEW00410, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BusinessLoansServiceChargesListingByVoucherDateController"/>
+  </object>
+  <object id="frmLOMVEW00411.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00411, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--End Region-->
+
+  <!--.Business Loans Info listing by BLNo-->
+  <object id="frmLOMVEW00412" type="Ace.Cbs.Loan.Vew.LOMVEW00412, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BusinessLoansInfoListingByBLNoController"/>
+  </object>
+  <object id="frmLOMVEW00413.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00413, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--End Region-->
+
+  <!--.Business Loans Repayment Info listing by BLNo-->
+  <object id="frmLOMVEW00414" type="Ace.Cbs.Loan.Vew.LOMVEW00414, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BusinessLoansRepaymentInfoListingByRepayDateController"/>
+  </object>
+  <object id="frmLOMVEW00415.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00415, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--End Region-->
+
+  <!--.Business Loans NPL Info listing by NPLDate-->
+  <object id="frmLOMVEW00416" type="Ace.Cbs.Loan.Vew.LOMVEW00416, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BusinessLoansNPLListingByNPLDateController"/>
+  </object>
+  <object id="frmLOMVEW00417.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00417, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--End Region-->
+
+  <!--//Personal Loan Voucher Entry// Added By HWKO (28-Jul-2017)-->
+  <object id="frmLOMVEW00325" type="Ace.Cbs.Loan.Vew.LOMVEW00325, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PersonalLoanVoucherEntryController"/>
+  </object>
+  <!--Endregion-->
+  <!--Business Loans Late Fees Auto Voucher-->
+  <object id="frmLOMVEW00418" type="Ace.Cbs.Loan.Vew.LOMVEW00418, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BusinessLoanLateFeeAutoVoucherController"/>
+  </object>
+  <!--Endregion-->
+
+  <!-->//PersonalLoanManualPrepaymentView// Added by HWKO (13-Oct-2017)-->
+  <object id="frmLOMVEW00326" type="Ace.Cbs.Loan.Vew.LOMVEW00326, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PLManualPrepaymentController"/>
+  </object>
+
+  <!-->//HPAbsentHistoryListing// Added by AAM (20-Oct-2017)-->
+  <object id="frmLOMVEW00216" type="Ace.Cbs.Loan.Vew.LOMVEW00216, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPAbsentHistoryListing"/>
+  </object>
+
+  <!-->//PLAbsentHistoryListing// Added by AAM (23-Oct-2017)-->
+  <object id="frmLOMVEW00217" type="Ace.Cbs.Loan.Vew.LOMVEW00217, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PLAbsentHistoryListing"/>
+  </object>
+
+  <!-->//HPAbsentHistory_Enquiry// Added by AAM (23-Oct-2017)-->
+  <object id="frmLOMVEW00218" type="Ace.Cbs.Loan.Vew.LOMVEW00218, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPAbsentHistory_Enquiry"/>
+  </object>
+
+  <!-->//PLAbsentHistory_Enquiry// Added by AAM (24-Oct-2017)-->
+  <object id="frmLOMVEW00219" type="Ace.Cbs.Loan.Vew.LOMVEW00219, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PLAbsentHistory_Enquiry"/>
+  </object>
+  <!-->//PersonalLoans Latefees Auto Pay Process// Added by HWKO (24-Oct-2017)-->
+  <object id="frmLOMVEW00327" type="Ace.Cbs.Loan.Vew.LOMVEW00327, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PLLatefeesAutoPayProcessController"/>
+  </object>
+
+  <!-->//PersonalLoans Voucher Outstanding Listing// Added by HWKO (27-Oct-2017)-->
+  <object id="frmLOMVEW00328" type="Ace.Cbs.Loan.Vew.LOMVEW00328, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PLVrOstdListingController"/>
+  </object>
+
+  <object id="frmLOMVEW00329.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00329, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+
+  <!-->//HPLateFeesOutstandingListing// Added by AAM (06-Nov-2017)-->
+  <object id="frmLOMVEW00220" type="Ace.Cbs.Loan.Vew.LOMVEW00220, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPLateFeesOutstandingListing"/>
+  </object>
+
+  <!-->//BusinessLoans Voucher Outstanding Listing// Added by HWKO (07-Nov-2017)-->
+  <object id="frmLOMVEW00330" type="Ace.Cbs.Loan.Vew.LOMVEW00330, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BLVrOstdListingController"/>
+  </object>
+
+  <object id="frmLOMVEW00331.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00331, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+
+   <!--BLAbsentHistoryListing--> 
+  <object id="frmLOMVEW00419" type="Ace.Cbs.Loan.Vew.LOMVEW00419, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BLAbsentHistoryListing"/>
+  </object>
+  
+
+  <!-->//BLLateFeesOutstandingListing// Added by AAM (16-Nov-2017)-->
+  <object id="frmLOMVEW00221" type="Ace.Cbs.Loan.Vew.LOMVEW00221, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BLLateFeesOutstandingListing"/>
+  </object>
+
+  <!-->//Personal Loans Late Fees Outstanding Listing// Added by HWKO (10-Nov-2017)-->
+  <object id="frmLOMVEW00332" type="Ace.Cbs.Loan.Vew.LOMVEW00332, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PLLFOstdListingController"/>
+  </object>
+
+  <object id="frmLOMVEW00333.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00333, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+
+  <!--BLAbsentHistoryListing ReportViewer//-->
+  <object id="frmLOMVEW00420.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00420, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+
+  <!--BLAbsentHistoryEnquiry-->
+  <object id="frmLOMVEW00421" type="Ace.Cbs.Loan.Vew.LOMVEW00421, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BLAbsentHistoryEnquiry"/>
+  </object>
+
+  <!-->//HPInstallmentListing// Added by AAM (27-Nov-2017)-->
+  <object id="frmLOMVEW00222" type="Ace.Cbs.Loan.Vew.LOMVEW00222, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPInstallmentListing"/>
+  </object>
+
+  <!-->//PLInstallmentListing// Added by AAM (28-Nov-2017)-->
+  <object id="frmLOMVEW00223" type="Ace.Cbs.Loan.Vew.LOMVEW00223, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PLInstallmentListing"/>
+  </object>
+
+  <!-->//BLInstallmentListing// Added by AAM (29-Nov-2017)-->
+  <object id="frmLOMVEW00224" type="Ace.Cbs.Loan.Vew.LOMVEW00224, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BLInstallmentListing"/>
+  </object>
+
+  <!-->//PersonalLoansDailyPositionListing// Added by AAM (29-Nov-2017)-->
+  <object id="frmLOMVEW00225" type="Ace.Cbs.Loan.Vew.LOMVEW00225, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PersonalLoansDailyPositionListing"/>
+  </object>
+
+  <!-->//HPAutoPaySufficientListing// Added by AAM (05-Dec-2017)-->
+  <object id="frmLOMVEW00227" type="Ace.Cbs.Loan.Vew.LOMVEW00227, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPAutoPaySufficientListing"/>
+  </object>
+
+  <!-->//PLPaySufficientListing// Added by AAM (06-Dec-2017)-->
+  <object id="frmLOMVEW00228" type="Ace.Cbs.Loan.Vew.LOMVEW00228, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PLAutoPaySufficientListing"/>
+  </object>
+
+  <!-->//BLPaySufficientListing// Added by AAM (06-Dec-2017)-->
+  <object id="frmLOMVEW00229" type="Ace.Cbs.Loan.Vew.LOMVEW00229, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BLAutoPaySufficientListing"/>
+  </object>
+
+  <!-->//BLOverDrawnListing// Added by AAM (07-Dec-2017)-->
+  <object id="frmLOMVEW00230" type="Ace.Cbs.Loan.Vew.LOMVEW00230, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BLOverDrawnListing"/>
+  </object>
+
+  <!--//HP Contract Printing // Created by HWKO (08-Dec-2017)-->
+  <object id="frmLOMVEW00334" type="Ace.Cbs.Loan.Vew.LOMVEW00334, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPContractPrintingController"/>
+  </object>
+
+  <object id="frmLOMVEW00335.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00335, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+
+  <!--// Crystal Report // Created by YMP (30-Jan-2019)-->
+  <object id="frmLOMVEW00344.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00344, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--End Region-->
+
+  <!--//PL Contract Printing // Created by HWKO (12-Dec-2017)-->
+  <object id="frmLOMVEW00336" type="Ace.Cbs.Loan.Vew.LOMVEW00336, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PLContractPrintingController"/>
+  </object>
+
+  <object id="frmLOMVEW00337.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00337, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--End Region-->
+
+  <!--//BL Contract Printing (Personal Guarantee) // Created by HWKO (15-Dec-2017)-->
+  <object id="frmLOMVEW00338" type="Ace.Cbs.Loan.Vew.LOMVEW00338, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BLPGContractPrintingController"/>
+  </object>
+
+  <object id="frmLOMVEW00339.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00339, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  <!--End Region-->
+
+  <!--//BL Contract Printing (Hypothecation) // Created by HWKO (15-Dec-2017)-->
+  <object id="frmLOMVEW00340" type="Ace.Cbs.Loan.Vew.LOMVEW00340, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BLHPContractPrintingController"/>
+  </object>
+
+  <!--//BL Contract Printing (Hypothecation) - RDLC Report -->
+  <object id="frmLOMVEW00341.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00341, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+
+  <!--//BL Contract Printing (Hypothecation) - Crystal Report // Created by YMP (13-Feb-2019)-->
+  <object id="frmLOMVEW00346.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00346, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  
+  <!--End Region-->
+
+  <!--//BL Contract Printing (Land & Building) // Created by HWKO (15-Dec-2017)-->
+  <object id="frmLOMVEW00342" type="Ace.Cbs.Loan.Vew.LOMVEW00342, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BLLBContractPrintingController"/>
+  </object>
+
+  <object id="frmLOMVEW00343.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00343, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+
+  <!-->//BL Contract Printing (Land & Building) - Crystal Report// Added by YMP (07-Feb-2019)-->
+  <object id="frmLOMVEW00345.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00345, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  
+  <!--End Region-->
+
+  <!-->//LOANSSUMMARYREPORT// Added by AAM (14-Dec-2017)-->
+  <object id="frmLOMVEW00231" type="Ace.Cbs.Loan.Vew.LOMVEW00231, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="LoansSummaryReport"/>
+  </object>
+
+  <!-->//HP Late Fees Repayment Listing// Added by AAM (26-Dec-2017)-->
+  <object id="frmLOMVEW00232" type="Ace.Cbs.Loan.Vew.LOMVEW00232, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPLateFeesRepaymentListing"/>
+  </object>
+  
+  <!-->//PL Late Fees Repayment Listing// Added by AAM (26-Dec-2017)-->
+  <object id="frmLOMVEW00233" type="Ace.Cbs.Loan.Vew.LOMVEW00233, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PLLateFeesRepaymentListing"/>
+  </object>
+
+  <!-->//BL Late Fees Repayment Listing// Added by AAM (26-Dec-2017)-->
+  <object id="frmLOMVEW00234" type="Ace.Cbs.Loan.Vew.LOMVEW00234, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BLLateFeesRepaymentListing"/>
+  </object>
+
+  <!-->//HPAccountClosedListing// Added by AAM (28-Dec-2017)-->
+  <object id="frmLOMVEW00235" type="Ace.Cbs.Loan.Vew.LOMVEW00235, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPAccountClosedListing"/>
+  </object>
+
+  <!-->//PLAccountClosedListing// Added by AAM (28-Dec-2017)-->
+  <object id="frmLOMVEW00236" type="Ace.Cbs.Loan.Vew.LOMVEW00236, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PLAccountClosedListing"/>
+  </object>
+
+  <!-->//BLAccountClosedListing// Added by AAM (28-Dec-2017)-->
+  <object id="frmLOMVEW00237" type="Ace.Cbs.Loan.Vew.LOMVEW00237, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BLAccountClosedListing"/>
+  </object>
+
+  <!-->//TransferTransactionListing// Added by AAM (05-Jan-2018)-->
+  <object id="frmLOMVEW00238" type="Ace.Cbs.Loan.Vew.LOMVEW00238, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="TransferTransactionListing"/>
+  </object>
+
+  <!-->//HPRegistrationReversal// Added by AAM (19-Feb-2018)-->
+  <object id="frmLOMVEW00239" type="Ace.Cbs.Loan.Vew.LOMVEW00239, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPRegistrationReversal"/>
+  </object>
+
+  <!-->//Importing Deposit From QP// Added by AAM (21-Feb-2018)-->
+  <object id="frmLOMVEW00240" type="Ace.Cbs.Loan.Vew.LOMVEW00240, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="ImportingDepositFromQP"/>
+  </object>
+
+  <!-->//PLRegistrationReversal// Added by AAM (22-Mar-2018)-->
+  <object id="frmLOMVEW00241" type="Ace.Cbs.Loan.Vew.LOMVEW00241, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PLRegistrationReversal"/>
+  </object>
+
+  <!-->//PNLBalanceZerorizationForIncome// Added by AAM (28-Mar-2018)-->
+  <object id="frmLOMVEW00243" type="Ace.Cbs.Loan.Vew.LOMVEW00243, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PNLBalanceZerorizationForIncome"/>
+  </object>
+
+  <!-->//PNLBalanceZerorizationForExpense// Added by AAM (28-Mar-2018)-->
+  <object id="frmLOMVEW00244" type="Ace.Cbs.Loan.Vew.LOMVEW00244, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PNLBalanceZerorizationForExpense"/>
+  </object>
+
+  <!-->//BLRegistrationReversal// Added by AAM (03-Apr-2018)-->
+  <object id="frmLOMVEW00242" type="Ace.Cbs.Loan.Vew.LOMVEW00242, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BLRegistrationReversal"/>
+  </object>
+
+  <!-->//PLManualPrepaymentProcess// Added by AAM (05-Apr-2018)-->
+  <object id="frmLOMVEW00245" type="Ace.Cbs.Loan.Vew.LOMVEW00245, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PLManualPrepaymentProcess"/>
+  </object>
+
+  <!-->//HP Interest Pre-payment By Dealer,Added By AAM (06-Apr-2018)-->
+  <object id="frmLOMVEW00246" type="Ace.Cbs.Loan.Vew.LOMVEW00246, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPInterestPrepaymentByDealer"/>
+  </object>
+
+  <!-->//HP Interest Prepaid By Dealer Report,Added By AAM (11-Apr-2018)-->
+  <object id="frmLOMVEW00247" type="Ace.Cbs.Loan.Vew.LOMVEW00247, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="HPInterestPrepaidByDealerReport"/>
+  </object>
+  
+    <!--//Personal Loan Registeration Edit// Added By AAM (21-May-2018)-->
+  <object id="frmLOMVEW00311.Edit" type="Ace.Cbs.Loan.Vew.LOMVEW00311, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="PersonalLoanRegisterationController"/>
+    <property name="FormName" value="Personal Loan Registration Edit"/>
+  </object>
+  
+    <!-->//AccountClose// Added by AAM (23-May-2018)-->
+  <object id="frmLOMVEW00248" type="Ace.Cbs.Loan.Vew.LOMVEW00248, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="AccountClose"/>
+  </object>
+
+  <!-->//AccountClose// Added by AAM (30-May-2018)-->
+  <object id="frmLOMVEW00249" type="Ace.Cbs.Loan.Vew.LOMVEW00249, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="AccountCloseListingReport"/>
+  </object>
+
+  <!-->//Dealer Search// Added by ZMS (18-JUN-2018)-->
+  <object id="frmLOMVEW00422" type="Ace.Cbs.Loan.Vew.LOMVEW00422, Ace.Cbs.Loan.Vew" parent="NonSecureDockForm" singleton="false">
+    <!--<property name="IsShowDialog" value="false"/>-->
+    <property name="Controller" ref="DealerInformationController"/>
+  </object>
+
+  <!-->//Transaction Listing// Added by ZMS (20-JUN-2018)-->
+  <object id="frmLOMVEW00250" type="Ace.Cbs.Loan.Vew.LOMVEW00250, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="ImportingDepositFromQP"/>
+  </object>
+
+  <!-->//BL Daily Position Listing// Added by ZMS (02-JUL-2018)-->
+  <object id="frmLOMVEW00423" type="Ace.Cbs.Loan.Vew.LOMVEW00423, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="DailyPositionListing"/>
+  </object>
+  <object id="frmLOMVEW00424.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00424, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+  </object>
+  <!--endregion-->
+
+  <!-->//Account Information Enquiry Added by ZMS (04-JUL-2018)-->
+  <object id="frmLOMVEW00425.BusinessLoan" type="Ace.Cbs.Loan.Vew.LOMVEW00425, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="ACInfoEnquiry"/>
+  </object>
+  <object id="frmLOMVEW00425.PersonalLoan" type="Ace.Cbs.Loan.Vew.LOMVEW00425, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="ACInfoEnquiry"/>
+  </object>
+  <object id="frmLOMVEW00425.HirePurchase" type="Ace.Cbs.Loan.Vew.LOMVEW00425, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="ACInfoEnquiry"/>
+  </object>
+  <object id="frmLOMVEW00425.Dealer" type="Ace.Cbs.Loan.Vew.LOMVEW00425, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="ACInfoEnquiry"/>
+  </object>
+  <object id="frmLOMVEW00426" type="Ace.Cbs.Loan.Vew.LOMVEW00426, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="ACInfoEnquiryMain"/>
+  </object>
+  
+  <!-->//PLContractPrinting// Added by AAM (30_Aug_2018)-->
+  <object id="frmLOMVEW00251.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00251, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+
+  <!--Black Lists Manual (Internal Customer) Added by ZMS (26.11.2018)-->
+  <object id="frmLOMVEW00427" type="Ace.Cbs.Loan.Vew.LOMVEW00427, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BlackListInternalCustomerEnty"/>
+  </object>
+  
+ <!--Black Lists Manual (External Customer) Added by ZMS (28.11.2018)-->
+  <object id="frmLOMVEW00428" type="Ace.Cbs.Loan.Vew.LOMVEW00428, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BlackListExternalCustomerEnty"/>
+  </object>
+
+  <!--Black Lists(Approve / Reject ) Added by ZMS (29.11.2018)-->
+  <object id="frmLOMVEW00429" type="Ace.Cbs.Loan.Vew.LOMVEW00429, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BlackListApproveReject"/>
+  </object>
+
+  <!--Black Lists( Remove ) Added by ZMS -->
+  <object id="frmLOMVEW00430" type="Ace.Cbs.Loan.Vew.LOMVEW00430, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BlackListRemove"/>
+  </object>
+
+  <!--Warning Lists( Remove ) Added by YMP -->
+  <object id="frmLOMVEW00437" type="Ace.Cbs.Loan.Vew.LOMVEW00437, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="WarningListRemove"/>
+  </object>
+
+ <!--Black Lists Added by ZMS -->
+  <object id="frmLOMVEW00431" type="Ace.Cbs.Loan.Vew.LOMVEW00431, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BlackListListing"/>
+  </object>
+ <!--Black Lists Added by ZMS -->
+  <object id="frmLOMVEW00432.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00432, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+  </object>
+ <!--Black Lists Added by ZMS -->
+  <object id="frmLOMVEW00433" type="Ace.Cbs.Loan.Vew.LOMVEW00433, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BlackListUserEntry"/>
+  </object>
+ <!--Black Lists Added by ZMS -->
+  <object id="frmLOMVEW00434" type="Ace.Cbs.Loan.Vew.LOMVEW00434, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="BlackListHistoryListing"/>
+  </object>
+
+  <!--Warning Lists Added by YMP (02.05.2019)-->
+  <object id="frmLOMVEW00435" type="Ace.Cbs.Loan.Vew.LOMVEW00435, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="WarningListEnty"/>
+  </object>
+
+  <!--Warning Lists Added by YMP (06.05.2019)-->
+  <object id="frmLOMVEW00436" type="Ace.Cbs.Loan.Vew.LOMVEW00436, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="WarningListApproveReject"/>
+  </object>
+
+  <!--Warning Lists Added by YMP -->
+  <object id="frmLOMVEW00438" type="Ace.Cbs.Loan.Vew.LOMVEW00438, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="WarningListListing"/>
+  </object>
+
+  <!--Warning Lists Added by YMP -->
+  <object id="frmLOMVEW00439.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00439, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+  </object>
+
+  <!--Warning Lists (History) Listing Added by YMP -->
+  <object id="frmLOMVEW00440" type="Ace.Cbs.Loan.Vew.LOMVEW00440, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="WarningListHistoryListing"/>
+  </object>
+
+  <!--Late Fee Exception Added by YMP (15-May-2019) -->
+  <object id="frmLOMVEW00441" type="Ace.Cbs.Loan.Vew.LOMVEW00441, Ace.Cbs.Loan.Vew" singleton="false" parent="SecureDockForm">
+    <property name="ControllerLateFeeInfo" ref="LateFeeInfoController"/>
+  </object>
+
+  <!--Late Fee Exception (Checker) Added by YMP -->
+  <object id="frmLOMVEW00442" type="Ace.Cbs.Loan.Vew.LOMVEW00442, Ace.Cbs.Loan.Vew" singleton="false" parent="SecureDockForm">
+    <property name="Controller" ref="LateFeeExceptionChecker"/>
+  </object>
+
+  <!-->//TransferTransactionListing// Added by YMP-->
+  <object id="frmLOMVEW00443" type="Ace.Cbs.Loan.Vew.LOMVEW00443, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="TransferTransactionListing_Two"/>
+  </object>
+
+  <!--Limit Extend Lists Listing Added by YMP -->
+  <!--<object id="frmLOMVEW00444" type="Ace.Cbs.Loan.Vew.LOMVEW00444, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="LimitExtendListing"/>
+  </object> -->
+
+  <!--Limit Extend Lists Listing Added by YMP -->
+  <object id="frmLOMVEW00444" type="Ace.Cbs.Loan.Vew.LOMVEW00444, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="LimitExtendListing"/>
+  </object>
+
+  <!--Limit Extend Lists Listing Added by YMP -->
+  <object id="frmLOMVEW00445.ReportViewer" type="Ace.Cbs.Loan.Vew.LOMVEW00445, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+  </object>
+
+  <!--Limit Extend Entry Added by YMP -->
+  <object id="frmLOMVEW00446" type="Ace.Cbs.Loan.Vew.LOMVEW00446, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="LimitExtendEntryController"/>
+  </object>
+	
+  <!--Personal Loan ProductCode Setup-->	
+   <object id="frmLOMVEW00447" type="Ace.Cbs.Loan.Vew.LOMVEW00447, Ace.Cbs.Loan.Vew" singleton="false" parent="NonSecureDockForm">
+	  <property name="Controller" ref="PersonalLoanProductCodeController"/>
+    </object>
+</objects>
+

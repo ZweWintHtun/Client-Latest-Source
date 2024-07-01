@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Monthly_COA-->
+<!-- 
+// <copyright file="GLMORM0023.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>ZMS</CreatedUser>
+// <CreatedDate>02/03/2017</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version></Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Gl.Dmd" namespace="Ace.Cbs.Gl.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Gl.Dmd.GLMDTO00023, Ace.Cbs.Gl.Dmd" rename="monthlycoadto"/>
+  
+	<class name="GLMORM00023" table="Monthly_COA" mutable="false">
+
+	  <id name="Id" type="Int32" unsaved-value="0">
+      <!--<generator class="increment">
+      </generator>-->
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+
+    <property name="TYPE">
+      <column name="TYPE" sql-type="char" not-null="true" />
+    </property>
+
+    <property name="ITEM">
+      <column name="ITEM" sql-type="varchar" not-null="true" />
+    </property>
+
+	<property name="SUBITEM_No">
+		<column name="SUBITEM_No" sql-type="int" not-null="true" />
+	</property>
+
+	<property name="SUBITEM">
+      <column name="SUBITEM" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="ACODE">
+      <column name="ACODE" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="TITLE">
+      <column name="TITLE" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="SUBTITLE">
+      <column name="SUBTITLE" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Opening_bal">
+      <column name="Opening_bal" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="Closing_bal">
+      <column name="Closing_bal" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="Credit_Amount">
+      <column name="Credit_Amount" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="Debit_Amount">
+      <column name="Debit_Amount" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="DCode">
+      <column name="DCode" sql-type="varchar" not-null="false" />
+    </property>
+
+	<property name="OtherBankGroupTitle">
+		<column name="OtherBankGroupTitle" sql-type="varchar" not-null="false" />
+	</property>	  
+
+	 <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+	<!--Added by HMW (25-11-2022)-->
+	<!--<many-to-one name="COA" column="[ACODE]" class="ChargeOfAccount" insert="false" update="false" ></many-to-one>-->
+
+  </class>
+
+  <query name="GLMORM00023.UpdateAll">
+    update GLMORM00023 as l
+    set
+    l.Opening_bal = :Opening_bal,
+    l.Closing_bal = :Closing_bal,
+    l.Credit_Amount = :Credit_Amount,
+    l.Debit_Amount = :Debit_Amount,
+    l.UpdatedDate = :updatedDate,
+    l.UpdatedUserId = :updatedUserId
+    where l.DCode = :DCode
+    and  l.SUBITEM = :SUBITEM
+    and l.ITEM = :ITEM
+    and l.Active = true
+  </query>
+
+  <!--//Monthly_COA.SelectAll//-->
+  <!--
+  <query name="GLMORM00023.SelectAllMonthlyCOA">
+    select new monthlycoadto(
+    c.Type,
+    c.Item,
+    c.SubItem,
+    c.ACode,
+    c.Title,
+    c.SubTitle,
+    c.OpeningBalance,
+    c.ClosingBalance,
+    c.CreditAmount,
+    c.DebitAmount,
+    c.DCode,
+    c.Active,
+    c.TS,
+    c.CreatedUserId,
+    c.CreatedDate,
+    c.UpdatedUserId,
+    c.UpdatedDate
+    )
+    from GLMVIW00025 as c
+    where c.Active = true
+    and c.DCode= :dcode
+  </query>-->
+  <!--//Monthly_COA.SelectAll//-->
+
+<sql-query name="GLMORM00023.SelectAllByAccountCode">
+  select  ACode,ACName,ACType TYPE,subString(ACode,1,3)+'000' HACode  from COA Where ACode=:ACode and  Active=1  and subString(ACode,1,3)+'000' in(select ACode from COA)
+</sql-query>
+
+<!--Added by HMW (24-11-2022) : For Deleteing issue in "Monthly Report Setup Edit" (Wrong data select logic from COA)-->
+<sql-query name="GLMORM00023.SelectAllMonthlyCOAByAccountCode">
+	select  SUBITEM ACode,subString(SUBITEM,1,3)+'000' HACode,COA.ACName,TITLE,SUBTITLE,OtherBankGroupTitle,TYPE
+	from Monthly_COA, COA
+	Where Monthly_COA.SUBITEM=COA.ACode
+	and Monthly_COA.SUBITEM=:ACode
+	and Monthly_COA.Active=1 and subString(SUBITEM,1,3)+'000' in(select ACode from COA)
+</sql-query>	
+
+<sql-query name="GLMORM00023.SelectAllAccountType">
+	select distinct [Type] AccountType from Monthly_COA
+</sql-query>
+
+<sql-query name="GLMORM00023.SelectAllBranchCode">
+	select 'All' BranchCode
+	union all
+	select BranchCode from branch
+</sql-query>
+
+<sql-query name="GLMORM00023.SelectAllTITLE">
+	select * from (
+	select distinct cast(ITEM as int)SrNo,TITLE ,(select Max(cast(ITEM as int))+1 from Monthly_COA) MaxSrNo  from Monthly_COA )a order by SrNo
+</sql-query>
+
+<sql-query name="GLMORM00023.SelectAllTITLE_By_Type">
+	<!--select SrNo,SrNo NewSrNo ,TITLE, MaxSrNo from (
+	select distinct cast(ITEM as int)SrNo,TITLE, (select Max(cast(ITEM as int))+1 from Monthly_COA) MaxSrNo  from Monthly_COA  Where Type=:Type )a order by SrNo-->
+
+	<!--select distinct cast(ITEM as int) SrNo,cast(ITEM as int) NewSrNo,TITLE,(select COUNT(cast(ITEM as int)) from Monthly_COA Where Type=:Type) MaxSrNo
+	from Monthly_COA Where Type=:Type
+	order by SrNo-->
+
+	select distinct TITLE,cast(ITEM as int) SrNo,cast(ITEM as int) NewSrNo,(select COUNT(distinct(ITEM)) from Monthly_COA Where Type=:Type) MaxSrNo
+	from Monthly_COA Where Type=:Type
+	order by SrNo
+</sql-query>
+
+<sql-query name="GLMORM00023.SelectAllSUBTITLE_by_TITLE">
+	<!--select distinct SUBTITLE,SUBITEM_No,SUBITEM_No NewSubSrNo,(select Max(SUBITEM_No)+1 from  Monthly_COA Where TITLE=:TITLE) MaxSubSrNo from Monthly_COA Where TITLE=:TITLE order by SUBITEM_No,SUBTITLE-->
+
+	select distinct SUBTITLE,ITEM,SUBITEM_No,SUBITEM_No NewSubSrNo,(select COUNT(cast(SUBITEM_No as int)) from Monthly_COA Where TITLE=:TITLE) MaxSubSrNo
+	from Monthly_COA Where TITLE=:TITLE order by SUBITEM_No,SUBTITLE
+</sql-query>
+
+<!--
+<sql-query name="GLMORM00023.SelectAllOtherBankGroupTitle">
+	select distinct ACODE,ACName from COA Where substring(ACode, 1,3)='AAC' and substring(ACode, 1,3)=substring(:ACode, 1,3)
+</sql-query>-->
+  <sql-query name="GLMORM00023.SelectAllOtherBankGroupTitle">
+    select distinct ACODE,OtherBankGroupTitle from Monthly_COA coa Where substring(ACode, 1,3)='AAC' and substring(ACode, 1,3)=substring(:ACode, 1,3) order by coa.OtherBankGroupTitle
+  </sql-query>  
+
+<sql-query name="GLMORM00023.SaveAll">
+	Insert into  Monthly_COA
+	(ACODE,SUBITEM ,TYPE,TITLE,SUBTITLE ,ITEM ,Opening_bal,Closing_bal,Credit_Amount ,Debit_Amount ,DCode, Active,OtherBankGroupTitle, CreatedDate,CreatedUserId,SUBITEM_No)
+	select :ACODE,:SUBITEM ,:TYPE,:TITLE,:SUBTITLE ,:ITEM ,:Opening_bal,:Closing_bal,:Credit_Amount ,:Debit_Amount ,:DCode, :Active,:OtherBankGroupTitle,:CreatedDate,:CreatedUserId,:SUBITEM_No
+</sql-query>
+
+<sql-query name="GLMORM00023.Update_All">
+	update Monthly_COA
+	set
+	TITLE = :TITLE,
+	SUBTITLE = :SUBTITLE,
+	ITEM = :ITEM,
+	SUBITEM_No = :SUBITEM_No,
+	OtherBankGroupTitle = :OtherBankGroupTitle,
+	UpdatedDate = :updatedDate,
+	UpdatedUserId = :updatedUserId
+	where DCode = :DCode
+	<!--and ACODE = :ACODE--> <!--Comment by HMW at "28-11-2022" for data update issue (wrong acode parameter & no need in this condition)-->
+	and  SUBITEM = :SUBITEM
+	and TYPE = :TYPE
+	and Active = :Active
+</sql-query>
+
+<sql-query name="GLMORM00023.Update_Title_ItemOrder">
+	update Monthly_COA
+	set
+	ITEM = :ITEM,
+	UpdatedDate = :updatedDate,
+	UpdatedUserId = :updatedUserId
+	where DCode = :DCode
+	and  TYPE = :TYPE
+	and TITLE = :TITLE
+	and Active = :Active
+</sql-query>
+
+<sql-query name="GLMORM00023.Update_SubTitle_SubItemOrder">
+	update Monthly_COA
+	set
+SUBITEM_No = :SUBITEM_No,
+	UpdatedDate = :updatedDate,
+	UpdatedUserId = :updatedUserId
+	where DCode = :DCode
+	and  TYPE = :TYPE
+	and TITLE = :TITLE
+	and SUBTITLE = :SUBTITLE
+	and Active = :Active
+</sql-query>	
+
+<sql-query name="GLMORM00023.DeleteAll">
+	Delete from Monthly_COA
+	Where
+	SUBITEM = :SUBITEM and
+	TYPE = :TYPE and
+	TITLE = :TITLE and
+	SUBTITLE = :SUBTITLE and
+	ITEM = :ITEM and
+	<!--SUBITEM_No = :SUBITEM_No and-->
+	DCode = :DCode 
+</sql-query>
+
+	
+</hibernate-mapping>
+
+

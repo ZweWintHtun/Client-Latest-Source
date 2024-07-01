@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Mnm.Dmd.MNMDTO00040, Ace.Cbs.Mnm.Dmd" rename="LedgerBalanceByGradeDTO"/>
+	
+  <class name="MNMVIW00027" table="VW_AOFCUSTID_NAME" mutable="false">
+    <id name="Id">
+      <column name="Id" sql-type="int" not-null="true" />
+    </id>
+    <property name="AcctNo">
+      <column name="ACCTNO" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="Name">
+      <column name="NAME" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="Phone">
+      <column name="PHONE" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="Fax">
+      <column name="FAX" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="Address">
+      <column name="ADDRESS" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="Nrc">
+      <column name="NRC" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="ACSign">
+      <column name="ACSign" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="OpenDate">
+      <column name="OPENDATE" sql-type="datetime" not-null="true"/>
+    </property>
+  </class>
+
+	<query name="SelectCustomerNameByAccountNo">
+		select new LedgerBalanceByGradeDTO
+		( l.Name)
+		from MNMVIW00027 as l
+		where l.AcctNo = :acctno
+	</query>
+
+</hibernate-mapping>

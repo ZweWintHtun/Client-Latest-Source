@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+	<import class="Ace.Cbs.Loan.Dmd.LOMDTO00055, Ace.Cbs.Loan.Dmd" rename="installmentPerioddto"/>
+
+  	<class name="LOMORM00100" table="[InstallmentTypes]" >
+		
+		<id name="Id" type="Int32" unsaved-value="0">
+			<generator class="increment" />
+		</id>
+		
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="false"/>
+		</version>
+		
+		<property name="NAME">
+			<column name="Name" sql-type="varchar" not-null="true" />
+		</property>
+		<property name="NOOFDAY">
+			<column name="NoOfDay" sql-type="Int32" not-null="true" />
+		</property>
+		<property name="NOOFMONTH">
+			<column name="NoofMonth" sql-type="Int32" not-null="true" />
+		</property>
+		
+
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+
+	</class>
+
+  <!--<query name="InstallmentPeriodDAO.SelectMaxId">
+    select max(c.Id)
+    from LOMORM00100 as c
+  </query>
+  
+	-->
+    <!--//InstallmentPeriodDAO.CheckExist//-->
+      <!--
+	<query name="InstallmentPeriodDAO.CheckExist">
+		select new installmentPerioddto(
+		i.Id,
+		i.NAME,
+		i.NOOFDAY,
+		i.NOOFMONTH,
+		i.Active,
+		i.TS,
+		i.CreatedUserId,
+		i.CreatedDate,
+		i.UpdatedUserId,
+		i.UpdatedDate
+		)
+		from LOMORM00100 as i where ( i.Id = :Id or i.NAME= :NAME) and  i.Active = true
+	</query>
+
+
+	-->
+      <!--//InstallmentPeriodDAO.SelectAll//-->
+      <!--
+	<query name="InstallmentPeriodDAO.SelectAll">
+		select new installmentPerioddto(
+		i.Id,
+		i.NAME,
+		i.NOOFDAY,
+		i.NOOFMONTH,
+		i.Active,
+		i.TS,
+		i.CreatedUserId,
+		i.CreatedDate,
+		i.UpdatedUserId,
+		i.UpdatedDate
+		)
+		from LOMORM00100 as i
+		where i.Active = true
+	</query>	
+	
+	-->
+      <!--//InstallmentPeriodDAO.SelectByInstallmentPeriodId//-->
+      <!--
+	<query name="InstallmentPeriodDAO.SelectByInstallmentPeriodId">
+		select new installmentPerioddto(
+		i.Id,
+		i.NAME,
+		i.NOOFDAY,
+		i.NOOFMONTH,
+		i.Active,
+		i.TS,
+		i.CreatedUserId,
+		i.CreatedDate,
+		i.UpdatedUserId,
+		i.UpdatedDate
+		)
+		from LOMORM00100 as i
+		where i.Id = :Id
+		and i.Active = true
+	</query>
+
+	-->
+      <!--//InstallmentPeriodDAO.SelectByInstallmentPeriodId//-->
+      <!--
+	<query name="InstallmentPeriodDAO.SelectByInstallmentName">
+		select new installmentPerioddto(		
+		i.NAME,
+		i.NOOFDAY,
+		i.NOOFMONTH		
+		)
+		from LOMORM00100 as i
+		where i.NAME = :Name
+		and i.Active = true
+	</query>-->
+
+</hibernate-mapping>

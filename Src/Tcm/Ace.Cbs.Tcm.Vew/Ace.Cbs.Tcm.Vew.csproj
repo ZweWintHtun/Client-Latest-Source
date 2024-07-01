@@ -1,0 +1,870 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{72D3A234-0A7A-4F79-B1B7-2A949A3E5A41}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ace.Cbs.Tcm.Vew</RootNamespace>
+    <AssemblyName>Ace.Cbs.Tcm.Vew</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ace.Cbs.Cx.Cle, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Cx.Cle.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Cx.Com, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Cx.Com.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Pfm.Dmd, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Pfm.Dmd.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Tcm.Dmd, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Tcm.Dmd.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Tel.Dmd, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Tel.Dmd.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Admin.DataModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Admin.DataModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.CXClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.CXClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Reference Assemblies\Microsoft\VBPowerPacks\v10.0\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Aop, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\Spring.Aop.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate33, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\Spring.Data.NHibernate33.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.7.0.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Other\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00001.Designer.cs">
+      <DependentUpon>TCMVEW00001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TCMVEW00002.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00002.Designer.cs">
+      <DependentUpon>TCMVEW00002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00003.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00003.Designer.cs">
+      <DependentUpon>TCMVEW00003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00004.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00004.Designer.cs">
+      <DependentUpon>TCMVEW00004.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00005.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00005.Designer.cs">
+      <DependentUpon>TCMVEW00005.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00006.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00006.Designer.cs">
+      <DependentUpon>TCMVEW00006.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00007.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00007.Designer.cs">
+      <DependentUpon>TCMVEW00007.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00008.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00008.Designer.cs">
+      <DependentUpon>TCMVEW00008.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00009.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00009.Designer.cs">
+      <DependentUpon>TCMVEW00009.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00010.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00010.Designer.cs">
+      <DependentUpon>TCMVEW00010.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00011.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00011.Designer.cs">
+      <DependentUpon>TCMVEW00011.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00018.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00018.Designer.cs">
+      <DependentUpon>TCMVEW00018.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00019.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00019.Designer.cs">
+      <DependentUpon>TCMVEW00019.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00020.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00020.Designer.cs">
+      <DependentUpon>TCMVEW00020.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00012.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00012.Designer.cs">
+      <DependentUpon>TCMVEW00012.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00013.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00013.Designer.cs">
+      <DependentUpon>TCMVEW00013.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00014.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00014.Designer.cs">
+      <DependentUpon>TCMVEW00014.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00015.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00015.Designer.cs">
+      <DependentUpon>TCMVEW00015.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00016.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00016.Designer.cs">
+      <DependentUpon>TCMVEW00016.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00017.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00017.Designer.cs">
+      <DependentUpon>TCMVEW00017.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00022.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00022.Designer.cs">
+      <DependentUpon>TCMVEW00022.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00023.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00023.Designer.cs">
+      <DependentUpon>TCMVEW00023.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00025.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00025.Designer.cs">
+      <DependentUpon>TCMVEW00025.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00026.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00026.Designer.cs">
+      <DependentUpon>TCMVEW00026.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00027.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00027.Designer.cs">
+      <DependentUpon>TCMVEW00027.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00028.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00028.Designer.cs">
+      <DependentUpon>TCMVEW00028.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00029.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00029.Designer.cs">
+      <DependentUpon>TCMVEW00029.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00030.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00030.Designer.cs">
+      <DependentUpon>TCMVEW00030.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00031.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00031.Designer.cs">
+      <DependentUpon>TCMVEW00031.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00032.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00032.Designer.cs">
+      <DependentUpon>TCMVEW00032.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00033.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00033.Designer.cs">
+      <DependentUpon>TCMVEW00033.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00034.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00034.Designer.cs">
+      <DependentUpon>TCMVEW00034.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00035.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00035.Designer.cs">
+      <DependentUpon>TCMVEW00035.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00036.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00036.Designer.cs">
+      <DependentUpon>TCMVEW00036.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00037.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00037.Designer.cs">
+      <DependentUpon>TCMVEW00037.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00039.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00039.Designer.cs">
+      <DependentUpon>TCMVEW00039.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00044.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00044.Designer.cs">
+      <DependentUpon>TCMVEW00044.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00043.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00043.Designer.cs">
+      <DependentUpon>TCMVEW00043.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00045.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00045.Designer.cs">
+      <DependentUpon>TCMVEW00045.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00048.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00048.Designer.cs">
+      <DependentUpon>TCMVEW00048.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00049.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00049.Designer.cs">
+      <DependentUpon>TCMVEW00049.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00050.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00050.Designer.cs">
+      <DependentUpon>TCMVEW00050.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00051.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00051.Designer.cs">
+      <DependentUpon>TCMVEW00051.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00052.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00052.Designer.cs">
+      <DependentUpon>TCMVEW00052.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00054.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00054.Designer.cs">
+      <DependentUpon>TCMVEW00054.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00055.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00055.Designer.cs">
+      <DependentUpon>TCMVEW00055.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00056.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00056.Designer.cs">
+      <DependentUpon>TCMVEW00056.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00057.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00057.Designer.cs">
+      <DependentUpon>TCMVEW00057.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00058.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00058.Designer.cs">
+      <DependentUpon>TCMVEW00058.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00061.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00061.Designer.cs">
+      <DependentUpon>TCMVEW00061.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00046.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00046.designer.cs">
+      <DependentUpon>TCMVEW00046.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00047.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00047.Designer.cs">
+      <DependentUpon>TCMVEW00047.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00053.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00053.Designer.cs">
+      <DependentUpon>TCMVEW00053.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00059.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00059.Designer.cs">
+      <DependentUpon>TCMVEW00059.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00060.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00060.Designer.cs">
+      <DependentUpon>TCMVEW00060.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00062.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00062.Designer.cs">
+      <DependentUpon>TCMVEW00062.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00063.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00063.Designer.cs">
+      <DependentUpon>TCMVEW00063.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00064.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00064.Designer.cs">
+      <DependentUpon>TCMVEW00064.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00065.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00065.Designer.cs">
+      <DependentUpon>TCMVEW00065.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00066.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00066.Designer.cs">
+      <DependentUpon>TCMVEW00066.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00067.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00067.Designer.cs">
+      <DependentUpon>TCMVEW00067.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00068.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00068.Designer.cs">
+      <DependentUpon>TCMVEW00068.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCMVEW00071.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCMVEW00071.Designer.cs">
+      <DependentUpon>TCMVEW00071.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\TCMRDLC00005.rdlc" />
+    <EmbeddedResource Include="RDLC\TCMRDLC00007.rdlc" />
+    <EmbeddedResource Include="RDLC\TCMRDLC00009.rdlc" />
+    <EmbeddedResource Include="RDLC\TCMRDLC00012.rdlc" />
+    <EmbeddedResource Include="RDLC\TCMRDLC00013.rdlc" />
+    <EmbeddedResource Include="RDLC\TCMRDLC00016.rdlc" />
+    <EmbeddedResource Include="RDLC\TCMDayBookSummaryReport.rdlc" />
+    <EmbeddedResource Include="RDLC\TCMRDLC00001.rdlc" />
+    <EmbeddedResource Include="RDLC\TCMRDLC00002.rdlc" />
+    <EmbeddedResource Include="RDLC\TCMRDLC00003.rdlc" />
+    <EmbeddedResource Include="RDLC\TCMRDLC00004.rdlc" />
+    <EmbeddedResource Include="RDLC\TCMRDLC00006.rdlc" />
+    <EmbeddedResource Include="RDLC\TCMRDLC00008.rdlc" />
+    <EmbeddedResource Include="RDLC\TCMRDLC00010.rdlc" />
+    <EmbeddedResource Include="RDLC\TCMRDLC00011.rdlc" />
+    <EmbeddedResource Include="RDLC\TCMRDLC00014.rdlc" />
+    <EmbeddedResource Include="RDLC\TCMRDLC00015.rdlc" />
+    <EmbeddedResource Include="RDLC\TCMRDLC00017.rdlc" />
+    <EmbeddedResource Include="RDLC\TCMRDLC00018.rdlc" />
+    <EmbeddedResource Include="RDLC\TCMRDLC00019.rdlc" />
+    <EmbeddedResource Include="TCMVEW00001.resx">
+      <DependentUpon>TCMVEW00001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00002.resx">
+      <DependentUpon>TCMVEW00002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00003.resx">
+      <DependentUpon>TCMVEW00003.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00004.resx">
+      <DependentUpon>TCMVEW00004.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00005.resx">
+      <DependentUpon>TCMVEW00005.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00006.resx">
+      <DependentUpon>TCMVEW00006.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00007.resx">
+      <DependentUpon>TCMVEW00007.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00008.resx">
+      <DependentUpon>TCMVEW00008.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00009.resx">
+      <DependentUpon>TCMVEW00009.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00010.resx">
+      <DependentUpon>TCMVEW00010.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00011.resx">
+      <DependentUpon>TCMVEW00011.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00018.resx">
+      <DependentUpon>TCMVEW00018.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00019.resx">
+      <DependentUpon>TCMVEW00019.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00020.resx">
+      <DependentUpon>TCMVEW00020.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00012.resx">
+      <DependentUpon>TCMVEW00012.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00013.resx">
+      <DependentUpon>TCMVEW00013.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00014.resx">
+      <DependentUpon>TCMVEW00014.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00015.resx">
+      <DependentUpon>TCMVEW00015.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00016.resx">
+      <DependentUpon>TCMVEW00016.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00017.resx">
+      <DependentUpon>TCMVEW00017.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00022.resx">
+      <DependentUpon>TCMVEW00022.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00023.resx">
+      <DependentUpon>TCMVEW00023.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00025.resx">
+      <DependentUpon>TCMVEW00025.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00026.resx">
+      <DependentUpon>TCMVEW00026.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00027.resx">
+      <DependentUpon>TCMVEW00027.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00028.resx">
+      <DependentUpon>TCMVEW00028.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00029.resx">
+      <DependentUpon>TCMVEW00029.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00030.resx">
+      <DependentUpon>TCMVEW00030.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00031.resx">
+      <DependentUpon>TCMVEW00031.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00032.resx">
+      <DependentUpon>TCMVEW00032.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00033.resx">
+      <DependentUpon>TCMVEW00033.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00034.resx">
+      <DependentUpon>TCMVEW00034.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00035.resx">
+      <DependentUpon>TCMVEW00035.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00036.resx">
+      <DependentUpon>TCMVEW00036.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00037.resx">
+      <DependentUpon>TCMVEW00037.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00039.resx">
+      <DependentUpon>TCMVEW00039.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00044.resx">
+      <DependentUpon>TCMVEW00044.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00043.resx">
+      <DependentUpon>TCMVEW00043.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00045.resx">
+      <DependentUpon>TCMVEW00045.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00048.resx">
+      <DependentUpon>TCMVEW00048.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00049.resx">
+      <DependentUpon>TCMVEW00049.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00050.resx">
+      <DependentUpon>TCMVEW00050.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00051.resx">
+      <DependentUpon>TCMVEW00051.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00052.resx">
+      <DependentUpon>TCMVEW00052.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00054.resx">
+      <DependentUpon>TCMVEW00054.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00055.resx">
+      <DependentUpon>TCMVEW00055.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00056.resx">
+      <DependentUpon>TCMVEW00056.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00057.resx">
+      <DependentUpon>TCMVEW00057.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00058.resx">
+      <DependentUpon>TCMVEW00058.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00061.resx">
+      <DependentUpon>TCMVEW00061.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00046.resx">
+      <DependentUpon>TCMVEW00046.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00047.resx">
+      <DependentUpon>TCMVEW00047.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00053.resx">
+      <DependentUpon>TCMVEW00053.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00059.resx">
+      <DependentUpon>TCMVEW00059.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00060.resx">
+      <DependentUpon>TCMVEW00060.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00062.resx">
+      <DependentUpon>TCMVEW00062.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00063.resx">
+      <DependentUpon>TCMVEW00063.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00064.resx">
+      <DependentUpon>TCMVEW00064.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00065.resx">
+      <DependentUpon>TCMVEW00065.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00066.resx">
+      <DependentUpon>TCMVEW00066.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00067.resx">
+      <DependentUpon>TCMVEW00067.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00068.resx">
+      <DependentUpon>TCMVEW00068.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCMVEW00071.resx">
+      <DependentUpon>TCMVEW00071.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log Out_16x16.png" />
+    <None Include="Resources\cancel_01.gif" />
+    <None Include="Resources\Delete_Main.png" />
+    <None Include="Resources\Delete_Main1.png" />
+    <None Include="Resources\Edit_Main.png" />
+    <None Include="Resources\Edit_Main1.png" />
+    <None Include="Resources\find1.png" />
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-3-Process-Accept.ico" />
+    <None Include="Resources\images.jpg" />
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-3-Process-Accept-006.ico" />
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-3-Process-Accept-005.ico" />
+    <None Include="Resources\edit.jpg" />
+    <Content Include="Resources\ok.gif" />
+    <None Include="Properties\DataSources\Ace.Cbs.Pfm.Dmd.PFMDTO00006.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Pfm.Dmd.PFMDTO00011.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Pfm.Dmd.PFMDTO00014.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Pfm.Dmd.PFMDTO00020.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Pfm.Dmd.PFMDTO00042.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00001.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.DTO.TLMDTO00044.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.DTO.TLMDTO00048.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00001.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00002.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00003.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00004.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00005.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00007.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00009.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00010.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00012.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00013.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00015.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00016.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00017.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00018.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00019.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00020.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00025.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00026.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00027.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00028.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00029.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00030.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00031.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00032.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00033.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00034.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00035.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00036.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00037.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00038.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00039.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00040.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00041.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00042.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00043.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00045.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00047.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00050.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00052.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00053.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00054.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00055.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00056.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00057.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMDTO00058.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00001.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00002.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00003.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00004.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00005.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00007.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00009.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00010.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00011.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00012.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00013.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00015.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00016.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00017.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00018.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00019.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00020.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00021.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00025.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00026.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00027.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00028.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00029.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00030.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00031.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00032.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00033.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00034.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00035.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00036.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00037.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00040.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMORM00055.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00001.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00002.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00006.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00008.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00009.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00014.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00015.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00016.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00017.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00021.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00024.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00052.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW000A9.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00A11.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00A12.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00A13.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00A16.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00A52.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00B11.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00B12.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00B13.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00B16.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00B52.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00C11.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00C12.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00C13.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00C16.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00C52.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00D11.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00D12.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Tel.Dmd.TLMVIW00D13.datasource" />
+    <None Include="Resources\PostingOK.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Mnm\Ace.Cbs.Mnm.Ctr\Ace.Cbs.Mnm.Ctr.csproj">
+      <Project>{5793ACFC-ED60-4E4E-86F3-221487DD0C8F}</Project>
+      <Name>Ace.Cbs.Mnm.Ctr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tel\Ace.Cbs.Tel.Ctr\Ace.Cbs.Tel.Ctr.csproj">
+      <Project>{E940CDA8-DE03-44C7-BF69-37EB9ACCD7C6}</Project>
+      <Name>Ace.Cbs.Tel.Ctr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ace.Cbs.Tcm.Ctr\Ace.Cbs.Tcm.Ctr.csproj">
+      <Project>{77567CFC-17CF-4B2D-8502-028AA5E1019F}</Project>
+      <Name>Ace.Cbs.Tcm.Ctr</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

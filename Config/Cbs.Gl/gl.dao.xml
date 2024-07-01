@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+	<description>
+		DataAccess Objects Settings
+	</description>
+	
+	<!--MonthlyBudgetedEntryDAO-->
+	<object id="MonthlyBudgetedEntryDAO" type="Ace.Cbs.Gl.Dao.GLMDAO00004, Ace.Cbs.Gl.Dao" singleton="true" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+  <object id="ChartofAccountDAO" type="Ace.Cbs.Gl.Dao.GLMDAO00013, Ace.Cbs.Gl.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="OLSTotalDAO" type="Ace.Cbs.Gl.Dao.GLMDAO00009, Ace.Cbs.Gl.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  
+  <!--Liabilities Account Code-->
+  <object id="LiabilitiesDAO" type="Ace.Cbs.Gl.Dao.GLMDAO00012, Ace.Cbs.Gl.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="IncomeExpenditureDAO" type="Ace.Cbs.Gl.Dao.GLMDAO00010, Ace.Cbs.Gl.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+	<!--EnquiryOnLedgerDAO-->
+	<object id="EnquiryOnLedgerDAO" type="Ace.Cbs.Gl.Dao.GLMDAO00008, Ace.Cbs.Gl.Dao" singleton="true" >
+		<property name="SessionFactory" ref="MySessionFactory"/>	</object>
+
+
+  <!--CurrencyRateEntryDAO-->
+  <object id="CurrencyRateEntryDAO" type="Ace.Cbs.Gl.Dao.GLMDAO00001, Ace.Cbs.Gl.Dao" singleton="true" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+	<!--ReportFormatEntryDAO-->
+	<object id="ReportFormatEntryDAO" type="Ace.Cbs.Gl.Dao.GLMDAO00014, Ace.Cbs.Gl.Dao" singleton="true" >
+		<property name="SessionFactory" ref="MySessionFactory"/>
+	</object>
+
+  <object id="MonthlyCOADAO" type="Ace.Cbs.Gl.Dao.GLMDAO00023, Ace.Cbs.Gl.Dao" singleton="true" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//Added by HWKO (27-Sep-2017)-->
+  <object id="StatementOfFinancialPositionDAO" type="Ace.Cbs.Gl.Dao.GLMDAO00028, Ace.Cbs.Gl.Dao" singleton="true" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  
+</objects>

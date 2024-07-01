@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--PREV_RD-->
+<!-- 
+// <copyright file="MNMORM00020.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>Banking</CreatedUser>
+// <CreatedDate>11/15/2013</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version></Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Mnm.Dmd.MNMDTO00020, Ace.Cbs.Mnm.Dmd" rename="MNMDTO00020"/>
+  <class name="MNMORM00020" table="PREV_RD">
+
+    <id name="REGISTERNO">
+      <column name="REGISTERNO" sql-type="varchar" not-null="false" />
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+
+    <property name="DRAWINGNO">
+      <column name="DRAWINGNO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="DRAFTNO">
+      <column name="DRAFTNO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="DBANK">
+      <column name="DBANK" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="BR_ALIAS">
+      <column name="BR_ALIAS" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="TYPE">
+      <column name="TYPE" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="ACCTNO">
+      <column name="ACCTNO" sql-type="ACCTNO" not-null="false" />
+    </property>
+
+    <property name="NAME">
+      <column name="NAME" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="ADDRESS">
+      <column name="ADDRESS" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="NRC">
+      <column name="NRC" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="CHECKNO">
+      <column name="CHECKNO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="TOACCTNO">
+      <column name="TOACCTNO" sql-type="ACCTNO" not-null="false" />
+    </property>
+
+    <property name="TONAME">
+      <column name="TONAME" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="TONRC">
+      <column name="TONRC" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="TOADDRESS">
+      <column name="TOADDRESS" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="TESTKEY">
+      <column name="TESTKEY" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="AMOUNT">
+      <column name="AMOUNT" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="COMMISSION">
+      <column name="COMMISSION" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="TLXCHARGES">
+      <column name="TLXCHARGES" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="DATE_TIME">
+      <column name="DATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="RECEIPTDATE">
+      <column name="RECEIPTDATE" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="INCOMEDATE">
+      <column name="INCOMEDATE" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="RDTYPE">
+      <column name="RDTYPE" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="INCOMETYPE">
+      <column name="INCOMETYPE" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="ACSIGN">
+      <column name="ACSIGN" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="USERNO">
+      <column name="USERNO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="BUDGET">
+      <column name="BUDGET" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="SENDDATE">
+      <column name="SENDDATE" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="LOANSERIAL">
+      <column name="LOANSERIAL" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="DENO_STATUS">
+      <column name="DENO_STATUS" sql-type="char" not-null="false" />
+    </property>
+
+    <property name="PHONENO">
+      <column name="PHONENO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="TOPHONENO">
+      <column name="TOPHONENO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="NARRATION">
+      <column name="NARRATION" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="UID">
+      <column name="UId" sql-type="uniqueidentifier" not-null="false" />
+    </property>
+
+    <property name="SOURCEBR">
+      <column name="SOURCEBR" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="CUR">
+      <column name="CUR" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="CHANNEL">
+      <column name="CHANNEL" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="SETTLEMENTDATE">
+      <column name="SETTLEMENTDATE" sql-type="datetime" not-null="false" />
+    </property>
+
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+ 
+</hibernate-mapping>

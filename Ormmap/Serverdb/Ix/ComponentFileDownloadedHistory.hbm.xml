@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Windows.Ix.DataModel" namespace="Ace.Windows.Ix.DataModel" xmlns="urn:nhibernate-mapping-2.2">
+  <!--<import class="Ace.Windows.Ix.DataModel.ComponentFileDownloadedHistoryDTO" rename="componentfiledownloadedhistorydto"/>-->
+	<import class="Ace.Cbs.Cen.Dto.CENDTO00004, Ace.Cbs.Cen.Dto" rename="cendto04"/>
+  <class name="ComponentFileDownloadedHistory" table="[ComponentFileDownloadedHistory]" >
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+    <property name="ComponentVersionItemId">
+      <column name="ComponentVersionItemId" sql-type="int" not-null="true" />
+    </property>
+    <property name="WorkStationId">
+      <column name="WorkStationId" sql-type="int" not-null="true" />
+    </property>
+
+    <property name="Active" not-null="true" />
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+	  <many-to-one name="WorkStation" column="[WorkStationId]" class="Ace.Windows.Admin.DataModel.WorkStation" insert="false" update="false" ></many-to-one>
+	  <many-to-one name="CreatedUser" column="[CreatedUserId]" class="Ace.Windows.Admin.DataModel.User" insert="false" update="false"></many-to-one>
+	  <many-to-one name="ComponentVersionItem" column="[ComponentVersionItemId]" class="ComponentVersionItem" insert="false" update="false"></many-to-one>
+	  
+  </class>
+
+  <!--<query name="ComponentFileDownloadedHistoryDAO.SelectLastDownloadedComponentVersionItemIdByWorkStationId">
+    select cfdh.ComponentVersionItemId
+    from ComponentFileDownloadedHistory as cfdh
+    where cfdh.WorkStationId = :workStationId
+    and cfdh.CreatedDate > :previousVersionInstalledDate 
+    and cfdh.Active = true
+  </query> commented by YMA-->
+	
+	<query name="ComponentFileDownloadedHistoryDAO.SelectDownloadedHistoryDetailByWorkstation">
+		select new cendto04(
+		c.CreatedDate,
+		cu.UserName
+		)
+		from ComponentFileDownloadedHistory as c
+		inner join c.CreatedUser as cu with cu.Active = true
+		where
+		c.ComponentVersionItemId = :itemid and
+		c.WorkStationId = :workstationid and
+		c.Active = true
+		order by c.CreatedDate desc
+	</query>
+
+	
+	
+</hibernate-mapping>

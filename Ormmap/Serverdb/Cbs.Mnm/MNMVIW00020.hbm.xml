@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+	<import class="Ace.Cbs.Pfm.Dmd.PFMDTO00001, Ace.Cbs.Pfm.Dmd" rename="customerIddto"/>
+	<class name="MNMVIW00020" table="VW_BANKSTATEMENT_SAOF" mutable="false">
+
+		<id name="Id" type="Int32" unsaved-value="0">
+			<generator class="increment">
+			</generator>
+		</id>
+
+		<property name="Acctno">
+			<column name="ACCTNO" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="Name">
+			<column name="NAME" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="Address">
+			<column name="ADDRESS" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="NRC">
+			<column name="NRC" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="Cbal">
+			<column name="CBAL" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="Date_Time">
+			<column name="DATE_TIME" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="SourceBr">
+			<column name="SOURCEBR" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+
+	</class>
+
+	<query name="MNMVIW00020.SelectCustomerSavingAC_All">
+		select new customerIddto
+		( c.Acctno,
+		c.Name,
+		c.Address,
+		c.NRC,
+		c.Cbal,
+		c.Date_Time,
+		c.SourceBr)
+		from MNMVIW00020 as c where c.SourceBr = :SourceBr and c.Active=true
+	</query>
+
+  <query name="MNMVIW00020.SelectCustomerSavingAC_AllByMonth">
+    <![CDATA[
+    select new customerIddto
+    ( c.Acctno,
+    c.Name,
+    c.Address,
+    c.NRC,
+    c.Cbal,
+    c.Date_Time,
+    c.SourceBr)
+    from MNMVIW00020 as c 
+    where Convert(Char(7),c.Date_Time,111) <= :month and 
+    c.SourceBr = :SourceBr and c.Active=true order by c.Acctno
+    ]]>
+  </query>
+
+</hibernate-mapping>

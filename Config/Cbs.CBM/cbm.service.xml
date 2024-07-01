@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+  <!--Enquiry On Ledger-->
+  <object id="CBMSVE00001" type="Ace.Cbs.CBM.Sve.CBMSVE00001, Ace.Cbs.CBM.Sve" singleton="false">
+    <property name="CashInHandDAO" ref="CashInHandDAO"/>
+  </object>
+  
+</objects>

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Windows.Ix.DataModel" namespace="Ace.Windows.Ix.DataModel" xmlns="urn:nhibernate-mapping-2.2">
+  <!--<import class="Ace.Windows.Ix.DataModel.InstallerInWorkStationDTO" rename="installerinworkstationdto"/>-->
+  <import class="Ace.Window.CccCenter.Com.Dto.CCCOMDTO00005, Ace.Window.CccCenter.Com.Dto" rename="cccomdto05"/>
+	
+  <class name="InstallerInWorkStation" table="[InstallerInWorkStation]" >
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+    <property name="InstallerTypeId">
+      <column name="InstallerTypeId" sql-type="int" not-null="true" />
+    </property>
+    <property name="WorkStationId">
+      <column name="WorkStationId" sql-type="int" not-null="true" />
+    </property>
+    <property name="IsDownloadOnly" >
+      <column name="IsDownloadOnly" sql-type="bit" not-null="true" default="0" />
+    </property>
+
+    <property name="Active" not-null="true" />
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+	  
+	 <many-to-one name="InstallerType" column="[InstallerTypeId]" class="Ace.Windows.Ix.DataModel.InstallerType" insert="false" update="false"></many-to-one>
+	 <many-to-one name="WorkStation" column="[WorkStationId]" class="Ace.Windows.Admin.DataModel.WorkStation" insert="false" update="false"></many-to-one>
+  </class>
+
+	<query name="InstallerInWorkStationDAO.IsAlreadyExist">
+		select iiws.Id
+		from InstallerInWorkStation as iiws
+		where iiws.WorkStationId = :workStationId
+		and iiws.InstallerTypeId = :installerTypeId
+		and iiws.IsDownloadOnly = :isDownloadOnly
+		and iiws.Active = true
+	</query>
+
+	<query name="InstallerInWorkStationDAO.SelectBySourceBranchCode">
+		select new cccomdto05
+		(
+		iiw.Id,
+		iiw.TS,
+		w.Id,
+		i.Id,
+		w.SourceBranchCode,
+		w.Code,
+		w.HostName,
+		i.Code,
+		i.Description
+		)
+		from InstallerInWorkStation as iiw
+		inner join iiw.WorkStation as w with w.Active = true
+		inner join iiw.InstallerType as i with i.Active = true
+		where w.SourceBranchCode = :sourceBranchCode and
+		iiw.WorkStationId = :workStationId and
+	  	iiw.IsDownloadOnly = true and
+		iiw.Active = true
+	</query>
+
+	<query name="InstallerInWorkStationDAO.UpdateByWorkStationIdAndInstallerTypeId">
+		update InstallerInWorkStation iiw
+		set
+		iiw.WorkStationId = :workStationId,
+		iiw.InstallerTypeId = :installerTypeId,
+		iiw.IsDownloadOnly = true,
+		iiw.UpdatedUserId = :updatedUserId,
+		iiw.UpdatedDate = :updatedDate
+		where
+		iiw.Id = :id and
+		iiw.TS = :ts and
+		iiw.Active = true
+
+	</query>
+</hibernate-mapping>

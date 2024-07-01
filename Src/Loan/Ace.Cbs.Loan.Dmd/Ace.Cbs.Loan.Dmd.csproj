@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9D836AEE-6202-4573-B5CD-EB5D6F0F50FA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ace.Cbs.Loan.Dmd</RootNamespace>
+    <AssemblyName>Ace.Cbs.Loan.Dmd</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ace.Cbs.Pfm.Dmd, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Pfm.Dmd.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Tel.Dmd, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Tel.Dmd.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\DotNetBar for Windows Forms\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LOMORM00101.cs" />
+    <Compile Include="DTO\LOMDTO00101.cs" />
+    <Compile Include="DTO\LOMDTO00025.cs" />
+    <Compile Include="DTO\LOMDTO00001.cs" />
+    <Compile Include="DTO\LOMDTO00002.cs" />
+    <Compile Include="DTO\LOMDTO00004.cs" />
+    <Compile Include="DTO\LOMDTO00007.cs" />
+    <Compile Include="DTO\LOMDTO00008.cs" />
+    <Compile Include="DTO\LOMDTO00009.cs" />
+    <Compile Include="DTO\LOMDTO00010.cs" />
+    <Compile Include="DTO\LOMDTO00011.cs" />
+    <Compile Include="DTO\LOMDTO00013.cs" />
+    <Compile Include="DTO\LOMDTO00012.cs" />
+    <Compile Include="DTO\LOMDTO00014.cs" />
+    <Compile Include="DTO\LOMDTO00015.cs" />
+    <Compile Include="DTO\LOMDTO00016.cs" />
+    <Compile Include="DTO\LOMDTO00017.cs" />
+    <Compile Include="DTO\LOMDTO00018.cs" />
+    <Compile Include="DTO\LOMDTO00021.cs" />
+    <Compile Include="DTO\LOMDTO00023.cs" />
+    <Compile Include="DTO\LOMDTO00024.cs" />
+    <Compile Include="DTO\LOMDTO00034.cs" />
+    <Compile Include="DTO\LOMDTO00035.cs" />
+    <Compile Include="DTO\LOMDTO00044.cs" />
+    <Compile Include="DTO\LOMDTO00047.cs" />
+    <Compile Include="DTO\LOMDTO00054.cs" />
+    <Compile Include="DTO\LOMDTO00055.cs" />
+    <Compile Include="DTO\LOMDTO00057.cs" />
+    <Compile Include="DTO\LOMDTO00059.cs" />
+    <Compile Include="DTO\LOMDTO00060.cs" />
+    <Compile Include="DTO\LOMDTO00068.cs" />
+    <Compile Include="DTO\LOMDTO00069.cs" />
+    <Compile Include="DTO\LOMDTO00070.cs" />
+    <Compile Include="DTO\LOMDTO00071.cs" />
+    <Compile Include="DTO\LOMDTO00072.cs" />
+    <Compile Include="DTO\LOMDTO00073.cs" />
+    <Compile Include="DTO\LOMDTO00074.cs" />
+    <Compile Include="DTO\LOMDTO00075.cs" />
+    <Compile Include="DTO\LOMDTO00076.cs" />
+    <Compile Include="DTO\LOMDTO00077.cs" />
+    <Compile Include="DTO\LOMDTO00078.cs" />
+    <Compile Include="DTO\LOMDTO00079.cs" />
+    <Compile Include="DTO\LOMDTO00080.cs" />
+    <Compile Include="DTO\LOMDTO00081.cs" />
+    <Compile Include="DTO\LOMDTO00082.cs" />
+    <Compile Include="DTO\LOMDTO00083.cs" />
+    <Compile Include="DTO\LOMDTO00084.cs" />
+    <Compile Include="DTO\LOMDTO00085.cs" />
+    <Compile Include="DTO\LOMDTO00086.cs" />
+    <Compile Include="DTO\LOMDTO00092.cs" />
+    <Compile Include="DTO\LOMDTO00093.cs" />
+    <Compile Include="DTO\LOMDTO00094.cs" />
+    <Compile Include="DTO\LOMDTO00095.cs" />
+    <Compile Include="DTO\LOMDTO00096.cs" />
+    <Compile Include="DTO\LOMDTO00099.cs" />
+    <Compile Include="DTO\LOMDTO00100.cs" />
+    <Compile Include="DTO\LOMDTO00102.cs" />
+    <Compile Include="DTO\LOMDTO00200.cs" />
+    <Compile Include="DTO\LOMDTO00201.cs" />
+    <Compile Include="DTO\LOMDTO00202.cs" />
+    <Compile Include="DTO\LOMDTO00203.cs" />
+    <Compile Include="DTO\LOMDTO00204.cs" />
+    <Compile Include="DTO\LOMDTO00205.cs" />
+    <Compile Include="DTO\LOMDTO00206.cs" />
+    <Compile Include="DTO\LOMDTO00207.cs" />
+    <Compile Include="DTO\LOMDTO00208.cs" />
+    <Compile Include="DTO\LOMDTO00209.cs" />
+    <Compile Include="DTO\LOMDTO00210.cs" />
+    <Compile Include="DTO\LOMDTO00211.cs" />
+    <Compile Include="DTO\LOMDTO00212.cs" />
+    <Compile Include="DTO\LOMDTO00213.cs" />
+    <Compile Include="DTO\LOMDTO00214.cs" />
+    <Compile Include="DTO\LOMDTO00215.cs" />
+    <Compile Include="DTO\LOMDTO00216.cs" />
+    <Compile Include="DTO\LOMDTO00217.cs" />
+    <Compile Include="DTO\LOMDTO00218.cs" />
+    <Compile Include="DTO\LOMDTO00219.cs" />
+    <Compile Include="DTO\LOMDTO00220.cs" />
+    <Compile Include="DTO\LOMDTO00221.cs" />
+    <Compile Include="DTO\LOMDTO00222.cs" />
+    <Compile Include="DTO\LOMDTO00223.cs" />
+    <Compile Include="DTO\LOMDTO00224.cs" />
+    <Compile Include="DTO\LOMDTO00225.cs" />
+    <Compile Include="DTO\LOMDTO00226.cs" />
+    <Compile Include="DTO\LOMDTO00227.cs" />
+    <Compile Include="DTO\LOMDTO00228.cs" />
+    <Compile Include="DTO\LOMDTO00229.cs" />
+    <Compile Include="DTO\LOMDTO00230.cs" />
+    <Compile Include="DTO\LOMDTO00231.cs" />
+    <Compile Include="DTO\LOMDTO00232.cs" />
+    <Compile Include="DTO\LOMDTO00234.cs" />
+    <Compile Include="DTO\LOMDTO00235.cs" />
+    <Compile Include="DTO\LOMDTO00236.cs" />
+    <Compile Include="DTO\LOMDTO00237.cs" />
+    <Compile Include="DTO\LOMDTO00238.cs" />
+    <Compile Include="DTO\LOMDTO00239.cs" />
+    <Compile Include="DTO\LOMDTO00240.cs" />
+    <Compile Include="DTO\LOMDTO00241.cs" />
+    <Compile Include="DTO\LOMDTO00242.cs" />
+    <Compile Include="DTO\LOMDTO00243.cs" />
+    <Compile Include="DTO\LOMDTO00244.cs" />
+    <Compile Include="DTO\LOMDTO00245.cs" />
+    <Compile Include="DTO\LOMDTO00300.cs" />
+    <Compile Include="DTO\LOMDTO00302.cs" />
+    <Compile Include="DTO\LOMDTO00303.cs" />
+    <Compile Include="DTO\LOMDTO00305.cs" />
+    <Compile Include="DTO\LOMDTO00307.cs" />
+    <Compile Include="DTO\LOMDTO00309.cs" />
+    <Compile Include="DTO\LOMDTO00311.cs" />
+    <Compile Include="DTO\LOMDTO00312.cs" />
+    <Compile Include="DTO\LOMDTO00313.cs" />
+    <Compile Include="DTO\LOMDTO00314.cs" />
+    <Compile Include="DTO\LOMDTO00316.cs" />
+    <Compile Include="DTO\LOMDTO00325.cs" />
+    <Compile Include="DTO\LOMDTO00326.cs" />
+    <Compile Include="DTO\LOMDTO00334.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DTO\LOMDTO00336.cs" />
+    <Compile Include="DTO\LOMDTO00338.cs" />
+    <Compile Include="DTO\LOMDTO00339.cs" />
+    <Compile Include="DTO\LOMDTO00401.cs" />
+    <Compile Include="DTO\LOMDTO00402.cs" />
+    <Compile Include="DTO\LOMDTO00405.cs" />
+    <Compile Include="DTO\LOMDTO00406.cs" />
+    <Compile Include="DTO\LOMDTO00414.cs" />
+    <Compile Include="DTO\LOMDTO00415.cs" />
+    <Compile Include="DTO\LOMDTO00423.cs" />
+    <Compile Include="DTO\LOMDTO00427.cs" />
+    <Compile Include="DTO\LOMDTO00429.cs" />
+    <Compile Include="DTO\LOMDTO00433.cs" />
+    <Compile Include="DTO\LOMDTO00444.cs" />
+    <Compile Include="LOMORM00001.cs" />
+    <Compile Include="LOMORM00002.cs" />
+    <Compile Include="LOMORM00003.cs" />
+    <Compile Include="LOMORM00004.cs" />
+    <Compile Include="LOMORM00005.cs" />
+    <Compile Include="LOMORM00006.cs" />
+    <Compile Include="LOMORM00007.cs" />
+    <Compile Include="LOMORM00008.cs" />
+    <Compile Include="LOMORM00009.cs" />
+    <Compile Include="LOMORM00010.cs" />
+    <Compile Include="LOMORM00011.cs" />
+    <Compile Include="LOMORM00013.cs" />
+    <Compile Include="LOMORM00012.cs" />
+    <Compile Include="LOMORM00014.cs" />
+    <Compile Include="LOMORM00015.cs" />
+    <Compile Include="LOMORM00016.cs" />
+    <Compile Include="LOMORM00017.cs" />
+    <Compile Include="LOMORM00018.cs" />
+    <Compile Include="LOMORM00019.cs" />
+    <Compile Include="LOMORM00021.cs" />
+    <Compile Include="LOMORM00022.cs" />
+    <Compile Include="LOMORM00023.cs" />
+    <Compile Include="LOMORM00024.cs" />
+    <Compile Include="LOMORM00025.cs" />
+    <Compile Include="LOMORM00026.cs" />
+    <Compile Include="LOMORM00068.cs" />
+    <Compile Include="LOMORM00069.cs" />
+    <Compile Include="LOMORM00070.cs" />
+    <Compile Include="LOMORM00071.cs" />
+    <Compile Include="LOMORM00072.cs" />
+    <Compile Include="LOMORM00073.cs" />
+    <Compile Include="LOMORM00074.cs" />
+    <Compile Include="LOMORM00075.cs" />
+    <Compile Include="LOMORM00076.cs" />
+    <Compile Include="LOMORM00077.cs" />
+    <Compile Include="LOMORM00078.cs" />
+    <Compile Include="LOMORM00079.cs" />
+    <Compile Include="LOMORM00085.cs" />
+    <Compile Include="LOMORM00086.cs" />
+    <Compile Include="LOMORM00099.cs" />
+    <Compile Include="LOMORM00100.cs" />
+    <Compile Include="LOMORM00300.cs" />
+    <Compile Include="LOMORM00302.cs" />
+    <Compile Include="LOMORM00311.cs" />
+    <Compile Include="LOMORM00312.cs" />
+    <Compile Include="LOMORM00313.cs" />
+    <Compile Include="LOMORM00401.cs" />
+    <Compile Include="LOMORM00402.cs" />
+    <Compile Include="LOMORM00403.cs" />
+    <Compile Include="LOMORM00405.cs" />
+    <Compile Include="LOMORM00415.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LOMORM00404.cs" />
+    <Compile Include="VIW\LOMVIW00001.cs" />
+    <Compile Include="VIW\LOMVIW00002.cs" />
+    <Compile Include="VIW\LOMVIW00034.cs" />
+    <Compile Include="VIW\LOMVIW00035.cs" />
+    <Compile Include="VIW\LOMVIW00042.cs" />
+    <Compile Include="VIW\LOMVIW00047.cs" />
+    <Compile Include="VIW\LOMVIW00051.cs" />
+    <Compile Include="VIW\LOMVIW00057.cs" />
+    <Compile Include="VIW\LOMVIW00059.cs" />
+    <Compile Include="VIW\LOMVIW00061.cs" />
+    <Compile Include="VIW\LOMVIW00093.cs" />
+    <Compile Include="VIW\LOMVIW00094.cs" />
+    <Compile Include="VIW\LOMVIW00303.cs" />
+    <Compile Include="VIW\LOMVIW00305.cs" />
+    <Compile Include="VIW\LOMVIW00307.cs" />
+    <Compile Include="VIW\LOMVIW00309.cs" />
+    <Compile Include="VIW\LOMVIW00314.cs" />
+    <Compile Include="VIW\LOMVIW00316.cs" />
+    <Compile Include="VIW\LOMVIW00405.cs" />
+    <Compile Include="VIW\LOMVIW00414.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00209.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00218.datasource" />
+    <None Include="Properties\DataSources\Ace.Cbs.Loan.Dmd.DTO.LOMDTO00221.datasource" />
+    <None Include="Properties\DataSources\LOMDTO00059.datasource" />
+    <None Include="Properties\DataSources\LOMDTO00311.datasource" />
+    <None Include="Properties\DataSources\LOMDTO00316.datasource" />
+    <None Include="Properties\DataSources\LOMDTO00339.datasource" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

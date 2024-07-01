@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+  <!--//TypeOfAdvanceService//-->
+  <object id="LOMSVE00002" type="Ace.Cbs.Loan.Sve.LOMSVE00002, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="AdvanceDAO" ref="TypeOfAdvanceDAO"/>
+  </object>
+
+  <!--//BusinessService//-->
+  <object id="LOMSVE00001" type="Ace.Cbs.Loan.Sve.LOMSVE00001, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="BusinessDAO" ref="BusinessDAO"/>
+  </object>
+
+  <!--//CustomerCharacterService//-->
+  <object id="LOMSVE00003" type="Ace.Cbs.Loan.Sve.LOMSVE00003, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="CustomerCharacterDAO" ref="CustomerCharacterDAO"/>
+  </object>
+
+  <!--//GoodWillService//-->
+  <object id="LOMSVE00004" type="Ace.Cbs.Loan.Sve.LOMSVE00004, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="GoodWillDAO" ref="GoodWillDAO"/>
+  </object>
+
+  <!--//LandService//-->
+  <object id="LOMSVE00005" type="Ace.Cbs.Loan.Sve.LOMSVE00005, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="LandDAO" ref="LandDAO"/>
+  </object>
+
+  <!--//GJTService//-->
+  <object id="LOMSVE00009" type="Ace.Cbs.Loan.Sve.LOMSVE00009, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="GJTDAO" ref="GJTDAO"/>
+  </object>
+
+  <!--//GJKService//-->
+  <object id="LOMSVE00010" type="Ace.Cbs.Loan.Sve.LOMSVE00010, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="GJKDAO" ref="GJKDAO"/>
+  </object>
+
+  <!--//INSURANService//-->
+
+  <object id="LOMSVE00006" type="Ace.Cbs.Loan.Sve.LOMSVE00006, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="INSURANDAO" ref="INSURANDAO"/>
+  </object>
+
+  <!--//StockService//-->
+  <object id="LOMSVE00007" type="Ace.Cbs.Loan.Sve.LOMSVE00007, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="StockDAO" ref="StockDAO"/>
+  </object>
+
+  <!--//KStockService//-->
+  <object id="LOMSVE00008" type="Ace.Cbs.Loan.Sve.LOMSVE00008, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="KStockDAO" ref="KStockDAO"/>
+  </object>
+
+
+  <!--//NonPerformanceLoanService//-->
+  <!--
+	<object id="LOMSVE00014" type="Ace.Cbs.Loan.Sve.LOMSVE00014, Ace.Cbs.Loan.Sve" singleton="false">
+		<property name="LoansDAO" ref="LoansDAO"/>		
+
+	</object>-->
+
+
+  <!--//ODChangeLimitService//-->
+  <object id="LOMSVE00012" type="Ace.Cbs.Loan.Sve.LOMSVE00012, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="LoansDAO" ref="LoansDAO"/>
+    <property name="CodeChecker" ref="CXSVE00006"/>
+    <property name="NewSetupDAO" ref="NewSetupDAO"/>
+    <property name="RateFileDAO" ref="RateFileDAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="ServiceChargesDAO" ref="ServiceChargesDAO"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <property name="LMT99DAO" ref="LMT99DAO"/>
+  </object>
+
+  <!--//NonPerformanceLoanReleaseService//-->
+  <object id="LOMSVE00015" type="Ace.Cbs.Loan.Sve.LOMSVE00015, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="NplIntDAO" ref="NplIntDAO"/>
+    <property name="TLFDAO" ref="TLFDAO"/>
+    <property name="LoansDAO" ref="LoansDAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+  </object>
+
+  <!--//NonPerformanceLoanService//-->
+  <object id="LOMSVE00014" type="Ace.Cbs.Loan.Sve.LOMSVE00014, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="LoansDAO" ref="LoansDAO"/>
+  </object>
+
+  <object id="LOMSVE00011" type="Ace.Cbs.Loan.Sve.LOMSVE00011, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="LoanDAO" ref="LoansDAO"/>
+    <property name="AccountDAO" ref="CodeCheckerDAO"/>
+    <property name="Land_BldDAO" ref="LandAndBuildingDAO"/>
+    <!--<property name="PenalFeeDAO" ref="TypeOfAdvanceDAO"/>-->
+    <property name="SChargeDAO" ref="SChargeDAO"/>
+    <property name="LiDAO" ref="LIDAO"/>
+    <property name="PGDAO" ref="Per_GuaranteeDAO"/>
+    <property name="PledgeDAO" ref="PledgeDAO"/>
+    <property name="HypothecationDAO" ref="HypothecationDAO"/>
+    <property name="GJTypeDAO" ref="GJTypeDAO"/>
+    <property name="GJKindDAO" ref="GJKindDAO"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="OiDAO" ref="OIDAO"/>
+    <property name="CommitFeeDAO" ref="CommitDAO"/>
+    <property name="ServiceChargeDAO" ref="ServiceChargesDAO"/>
+    <property name="PenalFeeDAO" ref="PenalFeeDAO"/>
+    <property name="OutstandLoanBalanceDAO" ref="OutstandingLoanBalanceDAO"/>
+    <property name="LoanBTypeDAO" ref="LoanBTypeDAO"/>
+  </object>
+
+  <!--//EnquiryByLeagalAccountNoService//-->
+  <object id="LOMSVE00032" type="Ace.Cbs.Loan.Sve.LOMSVE00032, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <property name="ViewDAO" ref="ViewDAO"/>
+  </object>
+
+
+  <object id="LOMSVE00025" type="Ace.Cbs.Loan.Sve.LOMSVE00025, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="LoansDAO" ref="LoansDAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="TlfDAO" ref="TLFDAO"/>
+    <property name="SysDAO" ref="Sys001DAO"/>
+    <property name="OutstandLoanBalanceDAO" ref="OutstandingLoanBalanceDAO"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <property name="LRP9900DAO" ref="LRP9900DAO"/>
+    <property name="BLDetailsDAO" ref="BLDetailsDAO"/>
+  </object>
+
+  <object id="LOMSVE00030" type="Ace.Cbs.Loan.Sve.LOMSVE00030, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="LoansDAO" ref="LoansDAO"/>
+    <property name="TlfDAO" ref="TLFDAO"/>
+    <property name="SysDAO" ref="Sys001DAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="ReversalSVE" ref="CXSVE00006"/>
+  </object>
+
+  <!--//LegalCaseService//-->
+  <object id="LOMSVE00016" type="Ace.Cbs.Loan.Sve.LOMSVE00016, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="CodeChecker" ref="CXSVE00006"/>
+    <property name="LegalIntDAO" ref="LegalIntDAO"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <property name="LoansDAO" ref="LoansDAO"/>
+    <property name="DatagenerateDAO" ref="DataGenerateDAO"/>
+    <property name="ViewDAO" ref="ViewDAO"/>
+    <property name="SChargeDAO" ref="SChargeDAO"/>
+    <property name="LegalDAO" ref="LegalDAO"/>
+    <property name="LIDAO" ref="LIDAO"/>
+    <property name="OIDAO" ref="OIDAO"/>
+  </object>
+
+  <!--//Special Transfer Voucher//-->
+  <object id="LOMSVE00029" type="Ace.Cbs.Loan.Sve.LOMSVE00029, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="CodeChecker" ref="CXSVE00006"/>
+    <property name="CLedgerDAO" ref="CledgerDAO"/>
+    <property name="TLFDao" ref="TLFDAO"/>
+    <property name="NewSeUp" ref="NewSetupDAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="SPCommonService" ref="CXSVE00010"/>
+    <property name="UCheckDAO" ref="UCheckDAO"/>
+    <property name="PrnFileDAO" ref="PrnDAO"/>
+  </object>
+
+  <!--//EnquiryByLeagalAccountNoService//-->
+  <object id="LOMSVE00024" type="Ace.Cbs.Loan.Sve.LOMSVE00024, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="LoanDAO" ref="LOMSVE00014"/>
+    <property name="CLedgerDAO" ref="CledgerDAO"/>
+    <property name="AcctnoDAO" ref="LOMSVE00011"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="TlfDAO" ref="TLFDAO"/>
+    <property name="SysDAO" ref="Sys001DAO"/>
+    <property name="LoanVoucherDAO" ref="LoansDAO"/>
+    <property name="Partial_LoanDAO" ref="Partial_LoansDAO"/>
+    <property name="LIDAO" ref="LIDAO"/>
+    <property name="OutstandLoanBalanceDAO" ref="OutstandingLoanBalanceDAO"/>
+    <property name="BLDetailsDAO" ref="BLDetailsDAO"/>
+    <!--<property name="HpRegListsDAO" ref="hpRegListsDAO"/>    --><!--Added By AAM (15-Jan-2018)-->
+
+  </object>
+
+  <!--//LoanInterestEditingService//-->
+  <object id="LOMSVE00020" type="Ace.Cbs.Loan.Sve.LOMSVE00020, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="LoansDAO" ref="LoansDAO"/>
+    <property name="LIDAO" ref="LIDAO"/>
+  </object>
+
+  <!--//Legal Process EditingService//-->
+  <object id="LOMSVE00021" type="Ace.Cbs.Loan.Sve.LOMSVE00021, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="LoanDAO" ref="LoansDAO"/>
+    <property name="LegalDAO" ref="LegalDAO"/>
+  </object>
+
+  <!--//Overdraft Interest Editing Service//-->
+  <object id="LOMSVE00022" type="Ace.Cbs.Loan.Sve.LOMSVE00022, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="LoanDAO" ref="LoansDAO"/>
+    <property name="CLedgerDAO" ref="CLedgerDAO"/>
+    <property name="OIDAO" ref="OIDAO"/>
+  </object>
+
+
+  <!--//LegalLoanRepaymentService//-->
+  <object id="LOMSVE00027" type="Ace.Cbs.Loan.Sve.LOMSVE00027, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="LegalDAO" ref="LegalDAO"/>
+    <property name="CodeChecker" ref="CXSVE00006"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="LrpLegalDAO" ref="LrpLegalDAO"/>
+    <property name="TLFDAO" ref="TLFDAO"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+  </object>
+
+  <!--//LegalLoanRepaymentService//-->
+  <object id="LOMSVE00028" type="Ace.Cbs.Loan.Sve.LOMSVE00028, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="LegalDAO" ref="LegalDAO"/>
+    <property name="CodeChecker" ref="CXSVE00006"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="LrpLegalDAO" ref="LrpLegalDAO"/>
+    <property name="TLFDAO" ref="TLFDAO"/>
+  </object>
+
+  <!--//LoansRegistrationListingService//-->
+  <object id="LOMSVE00034" type="Ace.Cbs.Loan.Sve.LOMSVE00034, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="LoanRegistrationListingDAO" ref="LoanRegistrationListingDAO"/>
+    <property name="BLInfoListingDAO" ref="BLInfoListingDAO"/>
+  </object>
+
+  <!--//ODRegistrationListingService//-->
+  <object id="LOMSVE00035" type="Ace.Cbs.Loan.Sve.LOMSVE00035, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="ODRegistrationListingDAO" ref="ODRegistrationListingDAO"/>
+  </object>
+
+
+  <!--//LoansAccountCloseListingService//-->
+  <object id="LOMSVE00042" type="Ace.Cbs.Loan.Sve.LOMSVE00042, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="LoansAccountCloseListingDAO" ref="LoansAccountCloseListingDAO"/>
+  </object>
+
+
+  <!--//LoansAccountCloseListingService//-->
+  <!--
+  <object id="LOMSVE00042" type="Ace.Cbs.Loan.Sve.LOMSVE00042, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="LoansAccountCloseListingDAO" ref="LoansAccountCloseListingDAO"/>
+  </object>-->
+
+  <!--//ODInterestCalculationService//-->
+  <object id="LOMSVE00044" type="Ace.Cbs.Loan.Sve.LOMSVE00044, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="ODCalculationDAO" ref="ODCalculationDAO"/>
+  </object>
+
+  <!--//LoansRepaymentScheduleByDateService//-->
+  <object id="LOMSVE00047" type="Ace.Cbs.Loan.Sve.LOMSVE00047, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="LoansRepaymentScheduleByDateDAO" ref="LoansRepaymentScheduleByDateDAO"/>
+  </object>
+
+  <!--//ExpireLoansListingService//-->
+  <object id="LOMSVE00051" type="Ace.Cbs.Loan.Sve.LOMSVE00051, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="ExpireLoansListingDAO" ref="ExpireLoansListingDAO"/>
+  </object>
+
+  <!--//ServiceChargesListingService//-->
+  <object id="LOMSVE00057" type="Ace.Cbs.Loan.Sve.LOMSVE00057, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="ServiceChargesListingDAO" ref="ServiceChargesListingDAO"/>
+  </object>
+
+  <!--//ODLimitChangeByDateListingService//-->
+  <object id="LOMSVE00059" type="Ace.Cbs.Loan.Sve.LOMSVE00059, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="ODLimitChangeByDateListingDAO" ref="ODLimitChangeByDateListingDAO"/>
+  </object>
+
+  <!--//NonPerformanceLoansCaseListingService//-->
+  <object id="LOMSVE00063" type="Ace.Cbs.Loan.Sve.LOMSVE00063, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="NonPerformanceLoansCaseListingDAO" ref="NonPerformanceLoansCaseListingDAO"/>
+  </object>
+
+  <!--//Dealer Registration Entry//-->
+  <object id="LOMSVE00064" type="Ace.Cbs.Loan.Sve.LOMSVE00064, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="dealerRegistrationDAO" ref="dealerRegistrationDAO"/>
+    <property name="dealerInformationDAO" ref="dealerInformationDAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="CodeChecker" ref="CXSVE00006"/>
+  </object>
+
+  <!--//Dealer Information Search//-->
+  <object id="LOMSVE00080" type="Ace.Cbs.Loan.Sve.LOMSVE00080, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="dealerInformationDAO" ref="dealerInformationDAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="CodeChecker" ref="CXSVE00006"/>
+  </object>
+
+  <!--//HPRegisterListing//-->
+  <object id="LOMSVE00096" type="Ace.Cbs.Loan.Sve.LOMSVE00096, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="hpRegListsDAO" ref="hpRegListsDAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="CodeChecker" ref="CXSVE00006"/>
+    <property name="Sys001DAO" ref="Sys001DAO"/>
+    <!--<property name="TermDAO" ref="TermDAO"/>-->
+  </object>
+
+  <!--//SeasonCode//-->
+  <object id="LOMSVE00071" type="Ace.Cbs.Loan.Sve.LOMSVE00071, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="SeasonCodeDAO" ref="SeasonCodeDAO"/>
+    <property name="AGLoanProductTypeItemDAO" ref="AGLoanProductTypeItemDAO"/>
+    <property name="FarmLoanDAO" ref="FarmLoanDAO"/>
+  </object>
+
+  <!--//ProductCode//-->
+  <object id="LOMSVE00074" type="Ace.Cbs.Loan.Sve.LOMSVE00074, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="ProductCodeDAO" ref="ProductCodeDAO"/>
+  </object>
+
+  <!--//HirePurchaseStockGroupService//-->
+  <object id="LOMSVE00068" type="Ace.Cbs.Loan.Sve.LOMSVE00068, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="StockGroupDAO" ref="StockGroupDAO"/>
+  </object>
+
+  <!--//HirePurchaseStockItemService//-->
+  <object id="LOMSVE00069" type="Ace.Cbs.Loan.Sve.LOMSVE00069, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="StockItemDAO" ref="StockItemDAO"/>
+  </object>
+
+  <!--//VillageGroupSetupService//-->
+  <object id="LOMSVE00070" type="Ace.Cbs.Loan.Sve.LOMSVE00070, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="VillageGroupDAO" ref="VillageGroupDAO"/>
+  </object>
+
+  <!--//CropTypeSetupService//-->
+  <object id="LOMSVE00072" type="Ace.Cbs.Loan.Sve.LOMSVE00072, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="CropTypeDAO" ref="CropTypeDAO"/>
+    <property name="FarmLoanDAO" ref="FarmLoanDAO"/>
+  </object>
+
+  <!--//UMSetupService//-->
+  <object id="LOMSVE00073" type="Ace.Cbs.Loan.Sve.LOMSVE00073, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="UMDAO" ref="UMDAO"/>
+    <property name="LSProductTypeItemDAO" ref="LSProductTypeItemDAO"/>
+    <property name="AGLoanProductTypeItemDAO" ref="AGLoanProductTypeItemDAO"/>
+  </object>
+
+  <!--//LSProductTypeItemService//-->
+  <object id="LOMSVE00077" type="Ace.Cbs.Loan.Sve.LOMSVE00077, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="LSProductTypeItemDAO" ref="LSProductTypeItemDAO"/>
+    <property name="FarmLoanDAO" ref="FarmLoanDAO"/>
+  </object>
+
+  <!--//LiveStockTypeSetupService//-->
+  <object id="LOMSVE00076" type="Ace.Cbs.Loan.Sve.LOMSVE00076, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="LiveStockTypeDAO" ref="LiveStockTypeSetupDAO"/>
+    <property name="LSProductTypeItemDAO" ref="LSProductTypeItemDAO"/>
+  </object>
+
+  <!--//FarmLoanRegisterationEntryService//-->
+  <object id="LOMSVE00078" type="Ace.Cbs.Loan.Sve.LOMSVE00078, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="FarmLoanDAO" ref="FarmLoanDAO"/>
+    <property name="Land_BldDAO" ref="LandAndBuildingDAO"/>
+    <property name="PGDAO" ref="PGOfFarmLoanDAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="FarmLiDAO" ref="FarmLiDAO"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <property name="AccountDAO" ref="CodeCheckerDAO"/>
+    <property name="FarmLoanPenalFeeDAO" ref="FarmLoanPenalFeeDAO"/>
+  </object>
+
+  <!--//AGLoanProductTypeItemSetupService//-->
+  <object id="LOMSVE00075" type="Ace.Cbs.Loan.Sve.LOMSVE00075, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="AGLoanProductTypeItemDAO" ref="AGLoanProductTypeItemDAO"/>
+  </object>
+
+  <!--//FarmLoanInterestCalculationService (From Date To Date)//-->
+  <object id="LOMSVE00089" type="Ace.Cbs.Loan.Sve.LOMSVE00089, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="FarmLoanDAO" ref="FarmLoanDAO"/>
+    <property name="FarmLiDAO" ref="FarmLiDAO"/>
+  </object>
+
+
+  <!--//FarmLoanInterestCalculationMonthlyService//-->
+  <object id="LOMSVE00085" type="Ace.Cbs.Loan.Sve.LOMSVE00085, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="FarmLoanDAO" ref="FarmLoanDAO"/>
+    <property name="FarmLiDAO" ref="FarmLiDAO"/>
+  </object>
+
+
+  <object id="LOMSVE00086" type="Ace.Cbs.Loan.Sve.LOMSVE00086, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="LoanRecordDAO" ref="LoanRecordEntryDAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="ProductCodeDAO" ref="ProductCodeDAO"/>
+    <property name="LoanType_BusinessTypeDAO" ref="LoanType_BusinessTypeDAO"/>
+    <!--<property name="CropTypeDAO" ref="CropTypeDAO"/>-->
+
+    <property name="ProductCodeDAO" ref="ProductCodeDAO"/>
+  </object>
+
+  <object id="LOMSVE00092" type="Ace.Cbs.Loan.Sve.LOMSVE00092, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="LoanRepaymentDAO" ref="LoanRepaymentEntryDAO"/>
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+  </object>
+  <object id="LOMSVE00093" type="Ace.Cbs.Loan.Sve.LOMSVE00093, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="FarmLoanReportDAO" ref="FarmLoanReportDAO"/>
+    <property name="LSFarmLoanReportDAO" ref="LSFarmLoanReportDAO"/>
+  </object>
+
+  <object id="LOMSVE00102" type="Ace.Cbs.Loan.Sve.LOMSVE00102, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="AllLoanRecordDAO" ref="AllLoanRecordDAO"/>
+  </object>
+
+  <!--//FarmLoanPenalFeeCalculationService// Updated By HWKO-->
+  <object id="LOMSVE00300" type="Ace.Cbs.Loan.Sve.LOMSVE00300, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="FarmLoanDAO" ref="FarmLoanDAO"/>
+    <property name="FarmLoanPenalFeeDAO" ref="FarmLoanPenalFeeDAO"/>
+  </object>
+
+  <!--//FarmLoanInterestEdittingService// Updated By HWKO-->
+  <object id="LOMSVE00301" type="Ace.Cbs.Loan.Sve.LOMSVE00301, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="FarmLiDAO" ref="FarmLiDAO"/>
+  </object>
+
+  <!--//FarmLoanOutstandingReportService// Created By HWKO (22-Mar-2017)-->
+  <object id="LOMSVE00303" type="Ace.Cbs.Loan.Sve.LOMSVE00303, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="FarmLoanOSTReportDAO" ref="FarmLoanOSTReportDAO"/>
+  </object>
+
+  <!--//ODInterestECalculationService// Updated By HWKO-->
+  <object id="LOMSVE00400" type="Ace.Cbs.Loan.Sve.LOMSVE00400, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="report_TlfDAO" ref="ReportTLFDAO"/>
+    <property name="balDAO" ref="BalDAO"/>
+    <property name="newSetupDAO" ref="NewSetupDAO"/>
+    <property name="rateFileDAO" ref="RateFileDAO"/>
+    <property name="cxsve00010" ref="CXSVE00010"/>
+    <property name="cxDao00006" ref="CodeCheckerDAO"/>
+    <property name="oiDAO" ref="OIDAO"/>
+    <property name="Sys001DAO" ref="Sys001DAO"/>
+  </object>
+
+
+  <!--//FarmLoanIndividualOutstandingReportService// Created By HWKO (05-Apr-2017)-->
+  <object id="LOMSVE00305" type="Ace.Cbs.Loan.Sve.LOMSVE00305, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="FarmLoanOSTByWithdrawDateReportDAO" ref="FarmLoanOSTByWithdrawDateReportDAO"/>
+  </object>
+
+  <!--//FarmLoanTotalDailayIncomeReportService// Created By HWKO (25-Apr-2017)-->
+  <object id="LOMSVE00307" type="Ace.Cbs.Loan.Sve.LOMSVE00307, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="FarmLoanTotalDailyIncomeReportDAO" ref="FarmLoanTotalDailyIncomeReportDAO"/>
+  </object>
+
+  <!--//PersonalLoanRegisterationService// Created By HWKO -->
+  <object id="LOMSVE00311" type="Ace.Cbs.Loan.Sve.LOMSVE00311, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="AccountDAO" ref="CodeCheckerDAO"/>
+    <property name="PersonalLoanDAO" ref="PersonalLoanDAO"/>
+    <property name="PersonalLoanDetailDAO" ref="PersonalLoanDetailDAO"/>
+    <property name="PL_GuanDAO" ref="PL_GuanDAO"/>
+    <property name="CledgerDAO" ref="CledgerDAO"/>
+    <property name="PenalFeeDAO" ref="PenalFeeDAO"/>
+    <property name="Sys001DAO" ref="Sys001DAO"/>
+  </object>
+
+
+  <!--//BusinessLoanAutoPay,LFCalculation Service//-->
+  <object id="LOMSVE00403" type="Ace.Cbs.Loan.Sve.LOMSVE00403, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="BusinessLoansDAO" ref="BusinessLoansDAO"/>
+    <property name="Sys001DAO" ref="Sys001DAO"/>
+    <property name="BLDetailsDAO" ref="BLDetailsDAO"/>
+  </object>
+
+
+  <!--//ExpireLandLeaseListingService// Created By HWKO (11-Jul-2017)-->
+  <object id="LOMSVE00314" type="Ace.Cbs.Loan.Sve.LOMSVE00314, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="ExpireLandLeaseListingDAO" ref="ExpireLandLeaseListingDAO"/>
+  </object>
+
+
+  <!--//PLRepaymentScheduleService// Created By HWKO (14-Jul-2017)-->
+  <object id="LOMSVE00316" type="Ace.Cbs.Loan.Sve.LOMSVE00316, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="PLRepaymentScheduleListingDAO" ref="PLRepaymentScheduleListingDAO"/>
+  </object>
+
+  <!--Business Loans Interest Due PreListing-->
+  <object id="LOMSVE00405" type="Ace.Cbs.Loan.Sve.LOMSVE00405, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="BLInterestDuePreListingDAO" ref="BLInterestDuePreListingDAO"/>
+    <property name="LoansDAO" ref="LoansDAO"/>
+    <property name="BLDetailsDAO" ref="BLDetailsDAO"/>
+  </object>
+
+  <!--//PersonalLoanVoucherEntryService// Added By HWKO (28-Jul-2017) -->
+  <object id="LOMSVE00325" type="Ace.Cbs.Loan.Sve.LOMSVE00325, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="CodeGenerator" ref="CXSVE00002"/>
+    <property name="PersonalLoanDAO" ref="PersonalLoanDAO"/>
+    <!--<property name="HpRegListsDAO" ref="hpRegListsDAO"/>     --><!--Added By AAM (15-Jan-2018)-->
+
+  </object>
+
+  <!--Black Lists Manual (Internal Customer) Added by ZMS (26.11.2018)-->
+  <object id="LOMSVE00427" type="Ace.Cbs.Loan.Sve.LOMSVE00427, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="BLInternalCustEntyDAO" ref="BlackListInternalCustomerEntyDAO"/>
+  </object>
+
+  <!--Warning Lists Added by YMP (02.05.2019)-->
+  <object id="LOMSVE00435" type="Ace.Cbs.Loan.Sve.LOMSVE00435, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="WLInternalCustEntyDAO" ref="WarningListCustomerEntyDAO"/>
+  </object>
+  
+  <!--Limit Extend Lists Listing Added by YMP (10.06.2019)-->
+  <object id="LOMSVE00444" type="Ace.Cbs.Loan.Sve.LOMSVE00444, Ace.Cbs.Loan.Sve" singleton="false">
+    <property name="LimitExtendDAO" ref="LimitExtendListListingDAO"/>
+	<property name="RateFileDAO" ref="RateFileDAO"/>
+  </object>
+
+	<!--//Personal Loan ProductCode Setup-->
+   <object id="LOMSVE00415" type="Ace.Cbs.Loan.Sve.LOMSVE00415, Ace.Cbs.Loan.Sve" singleton="false">
+		<property name="PersonalLoanProductCodeDAO" ref="PersonalLoanProductCodeDAO"/>
+   </object>
+  
+</objects>

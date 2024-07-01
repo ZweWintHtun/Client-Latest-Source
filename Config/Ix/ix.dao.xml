@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->               
+  <description>
+    Installer DataAccess Objects Settings
+  </description>
+
+  <!--CCCComponentVersionDownloadedForClientDAO-->
+  <object id="CCCComponentVersionDownloadedForClientDAO" type="Ace.Windows.Ix.Dao.CCCComponentVersionDownloadedForClientDAO, Ace.Windows.Ix.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--ClientDataEntityDAO-->
+  <object id="ClientDataEntityDAO" type="Ace.Windows.Ix.Dao.ClientDataEntityDAO, Ace.Windows.Ix.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+<!--DataVersionUpdateDAO-->
+  <object id="DataVersionUpdateDAO" type="Ace.Windows.Ix.Server.Dao.DataVersionUpdateDAO, Ace.Windows.Ix.Server" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--InstallerInWorkStationDAO-->
+  <object id="InstallerInWorkStationDAO" type="Ace.Windows.Ix.Dao.InstallerInWorkStationDAO, Ace.Windows.Ix.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  
+  <!--ClientDataVersionDAO-->
+  <object id="ClientDataVersionDAO" type="Ace.Windows.Ix.Dao.ClientDataVersionDAO, Ace.Windows.Ix.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--ClientDataVersionHeaderDAO-->
+  <object id="ClientDataVersionHeaderDAO" type="Ace.Windows.Ix.Dao.ClientDataVersionHeaderDAO, Ace.Windows.Ix.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--ClientDataVersionItemDAO-->
+  <object id="ClientDataVersionItemDAO" type="Ace.Windows.Ix.Dao.ClientDataVersionItemDAO, Ace.Windows.Ix.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--InstallerTypeDAO-->
+  <object id="InstallerTypeDAO" type="Ace.Windows.Ix.Dao.InstallerTypeDAO, Ace.Windows.Ix.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--ComponentVersionHeaderDAO-->
+  <object id="ComponentVersionHeaderDAO" type="Ace.Windows.Ix.Dao.ComponentVersionHeaderDAO, Ace.Windows.Ix.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--ComponentVersionItemDAO-->
+  <object id="ComponentVersionItemDAO" type="Ace.Windows.Ix.Dao.ComponentVersionItemDAO, Ace.Windows.Ix.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--ComponentVersionInstalledHistoryDAO-->
+  <object id="ComponentVersionInstalledHistoryDAO" type="Ace.Windows.Ix.Dao.ComponentVersionInstalledHistoryDAO, Ace.Windows.Ix.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--ComponentFileDownloadedHistoryDAO-->
+  <object id="ComponentFileDownloadedHistoryDAO" type="Ace.Windows.Ix.Dao.ComponentFileDownloadedHistoryDAO, Ace.Windows.Ix.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--WorkStationCurrentComponentVersionDAO-->
+  <object id="WorkStationCurrentComponentVersionDAO" type="Ace.Windows.Ix.Dao.WorkStationCurrentComponentVersionDAO, Ace.Windows.Ix.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--WorkStationCurrentClientDataVersionDAO-->
+  <object id="WorkStationCurrentClientDataVersionDAO" type="Ace.Windows.Ix.Dao.WorkStationCurrentClientDataVersionDAO, Ace.Windows.Ix.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--WorkStationActivityStatusDAO-->
+  <object id="WorkStationActivityStatusDAO" type="Ace.Windows.Ix.Dao.WorkStationActivityStatusDAO, Ace.Windows.Ix.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  <object id="ServerClientDataUpdateDAO" type="Ace.Windows.Ix.Server.Dao.ServerClientDataUpdateDAO, Ace.Windows.Ix.Server" singleton="false" >
+		<property name="SessionFactory" ref="ServerDataSessionFactory"/>
+	</object>
+</objects>

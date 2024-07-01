@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    CCOMCenter Controller Objects Settings
+  </description>
+	
+  <object id="CCCOMCTL00001" type="Ace.Window.CccCenter.Com.Presenter.CCCOMCTL00001, Ace.Window.CccCenter.Com.Presenter" parent="AbstractController" singleton="false">
+  </object>
+	
+  <object id="CCCOMCTL00002" type="Ace.Window.CccCenter.Com.Presenter.CCCOMCTL00002, Ace.Window.CccCenter.Com.Presenter" parent="AbstractController" singleton="false">
+  </object>
+	
+  <object id="CCCOMCTL00004" type="Ace.Window.CccCenter.Com.Presenter.CCCOMCTL00004, Ace.Window.CccCenter.Com.Presenter" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="ManualUpdateVersionErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="ManualUpdateVersionInformation.Validator"/>
+			</object>
+		</property>
+
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="cboSourceBranch">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="ComponentVersionHeaderId"/>
+						<property name="CustomValidatingMethod" value="SourceBranch_CustomValidating"/>
+					</object>
+				</entry>
+
+			</dictionary>
+		</property>
+	</object>
+	
+	
+  <object id="CCCOMCTL00005" type="Ace.Window.CccCenter.Com.Presenter.CCCOMCTL00005, Ace.Window.CccCenter.Com.Presenter" parent="AbstractController" singleton="false">
+		<property name="ErrorProvider">
+			<object id="CCCDownloadListforOtherInstallerTypesErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name="Validator" ref="CCCDownloadListforOtherInstallerTypes.Validator"/>
+			</object>
+		</property>
+
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="cboSourceBranch">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="SourceBranchCode"/>						
+					</object>					
+				</entry>
+				<entry key="cboWorkStation">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="WorkStationId"/>
+					</object>
+				</entry>
+				<entry key="cboInstallerType">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="InstallerTypeId"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+</objects>

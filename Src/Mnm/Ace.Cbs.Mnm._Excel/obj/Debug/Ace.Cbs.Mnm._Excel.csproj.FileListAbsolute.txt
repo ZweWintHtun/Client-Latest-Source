@@ -1,0 +1,458 @@
+D:\PRISTINE\20181102\201810101\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\PRISTINE\20181102\201810101\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\PRISTINE\20181102\201810101\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.dll
+D:\PRISTINE\20181102\201810101\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Windows.Core.dll
+D:\PRISTINE\20181102\201810101\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Core.dll
+D:\PRISTINE\20181102\201810101\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\PRISTINE\20181102\201810101\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.NHibernate33.dll
+D:\PRISTINE\20181102\201810101\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NHibernate.dll
+D:\PRISTINE\20181102\201810101\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\log4net.dll
+D:\PRISTINE\20181102\201810101\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Common.Logging.dll
+D:\PRISTINE\20181102\201810101\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.dll
+D:\PRISTINE\20181102\201810101\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\AutoMapper.dll
+D:\PRISTINE\20181102\201810101\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NetSerializer.dll
+D:\PRISTINE\20181102\201810101\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Aop.dll
+D:\PRISTINE\20181102\201810101\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Iesi.Collections.dll
+D:\PRISTINE\20181102\201810101\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.pdb
+D:\PRISTINE\20181102\201810101\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.csprojResolveAssemblyReference.cache
+D:\PRISTINE\20181102\201810101\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\PRISTINE\20181102\201810101\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.dll
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Windows.Core.dll
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Core.dll
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.NHibernate33.dll
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NHibernate.dll
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\log4net.dll
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Common.Logging.dll
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.dll
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\AutoMapper.dll
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NetSerializer.dll
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Aop.dll
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Iesi.Collections.dll
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.pdb
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.csprojResolveAssemblyReference.cache
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.pdb
+E:\WORKING\Pristine\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.dll
+E:\WORKING\Pristine\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.pdb
+E:\WORKING\Pristine\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.dll
+E:\WORKING\Pristine\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Windows.Core.dll
+E:\WORKING\Pristine\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Core.dll
+E:\WORKING\Pristine\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+E:\WORKING\Pristine\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.NHibernate33.dll
+E:\WORKING\Pristine\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NHibernate.dll
+E:\WORKING\Pristine\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\log4net.dll
+E:\WORKING\Pristine\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Common.Logging.dll
+E:\WORKING\Pristine\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.dll
+E:\WORKING\Pristine\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\AutoMapper.dll
+E:\WORKING\Pristine\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NetSerializer.dll
+E:\WORKING\Pristine\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Aop.dll
+E:\WORKING\Pristine\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Iesi.Collections.dll
+E:\WORKING\Pristine\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.pdb
+E:\WORKING\Pristine\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.csprojResolveAssemblyReference.cache
+E:\WORKING\Pristine\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.dll
+E:\WORKING\Pristine\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.dll
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Windows.Core.dll
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Core.dll
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.NHibernate33.dll
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\log4net.dll
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Common.Logging.dll
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.dll
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\AutoMapper.dll
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NetSerializer.dll
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Aop.dll
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.pdb
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.csprojResolveAssemblyReference.cache
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NHibernate.dll
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Iesi.Collections.dll
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.dll
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Windows.Core.dll
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Core.dll
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.NHibernate33.dll
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NHibernate.dll
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\log4net.dll
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Common.Logging.dll
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.dll
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\AutoMapper.dll
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NetSerializer.dll
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Aop.dll
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Iesi.Collections.dll
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.pdb
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.csprojResolveAssemblyReference.cache
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\02. Testing Version\My Latest\12092019\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\02. Testing Version\My Latest\12092019\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\02. Testing Version\My Latest\12092019\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.dll
+D:\02. Testing Version\My Latest\12092019\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Windows.Core.dll
+D:\02. Testing Version\My Latest\12092019\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Core.dll
+D:\02. Testing Version\My Latest\12092019\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\02. Testing Version\My Latest\12092019\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.NHibernate33.dll
+D:\02. Testing Version\My Latest\12092019\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NHibernate.dll
+D:\02. Testing Version\My Latest\12092019\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\log4net.dll
+D:\02. Testing Version\My Latest\12092019\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Common.Logging.dll
+D:\02. Testing Version\My Latest\12092019\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.dll
+D:\02. Testing Version\My Latest\12092019\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\AutoMapper.dll
+D:\02. Testing Version\My Latest\12092019\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NetSerializer.dll
+D:\02. Testing Version\My Latest\12092019\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Aop.dll
+D:\02. Testing Version\My Latest\12092019\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Iesi.Collections.dll
+D:\02. Testing Version\My Latest\12092019\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.pdb
+D:\02. Testing Version\My Latest\12092019\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.csprojResolveAssemblyReference.cache
+D:\02. Testing Version\My Latest\12092019\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\02. Testing Version\My Latest\12092019\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.dll
+D:\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Windows.Core.dll
+D:\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Core.dll
+D:\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.NHibernate33.dll
+D:\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NHibernate.dll
+D:\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\log4net.dll
+D:\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Common.Logging.dll
+D:\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.dll
+D:\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\AutoMapper.dll
+D:\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NetSerializer.dll
+D:\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Aop.dll
+D:\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Iesi.Collections.dll
+D:\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.pdb
+D:\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.csprojResolveAssemblyReference.cache
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.dll
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Windows.Core.dll
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Core.dll
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.NHibernate33.dll
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NHibernate.dll
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\log4net.dll
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Common.Logging.dll
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.dll
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\AutoMapper.dll
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NetSerializer.dll
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Aop.dll
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Iesi.Collections.dll
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.pdb
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.csprojResolveAssemblyReference.cache
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.pdb
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.dll
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.pdb
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.dll
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Windows.Core.dll
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Core.dll
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.NHibernate33.dll
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NHibernate.dll
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\log4net.dll
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Common.Logging.dll
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.dll
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\AutoMapper.dll
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NetSerializer.dll
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Aop.dll
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Iesi.Collections.dll
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.pdb
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.csprojResolveAssemblyReference.cache
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.dll
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.dll
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Windows.Core.dll
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Core.dll
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.NHibernate33.dll
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NHibernate.dll
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\log4net.dll
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Common.Logging.dll
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.dll
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\AutoMapper.dll
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NetSerializer.dll
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Aop.dll
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Iesi.Collections.dll
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.pdb
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.csprojResolveAssemblyReference.cache
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.dll
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Windows.Core.dll
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Core.dll
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.NHibernate33.dll
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NHibernate.dll
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\log4net.dll
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Common.Logging.dll
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.dll
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\AutoMapper.dll
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NetSerializer.dll
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Aop.dll
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Iesi.Collections.dll
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.pdb
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.csprojResolveAssemblyReference.cache
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.dll
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Windows.Core.dll
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Core.dll
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.NHibernate33.dll
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NHibernate.dll
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\log4net.dll
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Common.Logging.dll
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.dll
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\AutoMapper.dll
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NetSerializer.dll
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Aop.dll
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Iesi.Collections.dll
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.pdb
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.csprojResolveAssemblyReference.cache
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.dll
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Windows.Core.dll
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Core.dll
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.NHibernate33.dll
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NHibernate.dll
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\log4net.dll
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Common.Logging.dll
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.dll
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\AutoMapper.dll
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NetSerializer.dll
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Aop.dll
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Iesi.Collections.dll
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.pdb
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.csprojResolveAssemblyReference.cache
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.dll
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Windows.Core.dll
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Core.dll
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.NHibernate33.dll
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NHibernate.dll
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\log4net.dll
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Common.Logging.dll
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.dll
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\AutoMapper.dll
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NetSerializer.dll
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Aop.dll
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Iesi.Collections.dll
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.pdb
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.csprojResolveAssemblyReference.cache
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.dll
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Windows.Core.dll
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Core.dll
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.NHibernate33.dll
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NHibernate.dll
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\log4net.dll
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Common.Logging.dll
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.dll
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\AutoMapper.dll
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NetSerializer.dll
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Aop.dll
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Iesi.Collections.dll
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.pdb
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.csprojResolveAssemblyReference.cache
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.dll
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Windows.Core.dll
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Core.dll
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.NHibernate33.dll
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NHibernate.dll
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\log4net.dll
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Common.Logging.dll
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.dll
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\AutoMapper.dll
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NetSerializer.dll
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Aop.dll
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Iesi.Collections.dll
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.pdb
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.csprojResolveAssemblyReference.cache
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Windows.Core.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Core.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.NHibernate33.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NHibernate.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\log4net.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Common.Logging.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\AutoMapper.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NetSerializer.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Aop.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Iesi.Collections.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.pdb
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.csprojResolveAssemblyReference.cache
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\25\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Windows.Core.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Core.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.NHibernate33.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NHibernate.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\log4net.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Common.Logging.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\AutoMapper.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NetSerializer.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Aop.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Iesi.Collections.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.pdb
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.csprojResolveAssemblyReference.cache
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Windows.Core.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Core.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.NHibernate33.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NHibernate.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\log4net.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Common.Logging.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\AutoMapper.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NetSerializer.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Aop.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Iesi.Collections.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.pdb
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.csprojResolveAssemblyReference.cache
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Windows.Core.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Core.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.NHibernate33.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NHibernate.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\log4net.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Common.Logging.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\AutoMapper.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NetSerializer.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Aop.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Iesi.Collections.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.pdb
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.csprojResolveAssemblyReference.cache
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.dll
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Windows.Core.dll
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Core.dll
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.NHibernate33.dll
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NHibernate.dll
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\log4net.dll
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Common.Logging.dll
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.dll
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\AutoMapper.dll
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NetSerializer.dll
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Aop.dll
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Iesi.Collections.dll
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.pdb
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.csprojResolveAssemblyReference.cache
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.dll
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Windows.Core.dll
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Core.dll
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.NHibernate33.dll
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NHibernate.dll
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\log4net.dll
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Common.Logging.dll
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.dll
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\AutoMapper.dll
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NetSerializer.dll
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Aop.dll
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Iesi.Collections.dll
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.pdb
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.csprojResolveAssemblyReference.cache
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.dll
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Windows.Core.dll
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Core.dll
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.NHibernate33.dll
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NHibernate.dll
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\log4net.dll
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Common.Logging.dll
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.dll
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\AutoMapper.dll
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NetSerializer.dll
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Aop.dll
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Iesi.Collections.dll
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.pdb
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.csprojResolveAssemblyReference.cache
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.dll
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Windows.Core.dll
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Core.dll
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.NHibernate33.dll
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NHibernate.dll
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\log4net.dll
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Common.Logging.dll
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Data.dll
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\AutoMapper.dll
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\NetSerializer.dll
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Spring.Aop.dll
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Iesi.Collections.dll
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\bin\Debug\Ace.Cbs.Gl.Dmd.pdb
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.dll
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.pdb
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.csproj.AssemblyReference.cache
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.csproj.CoreCompileInputs.cache
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Mnm\Ace.Cbs.Mnm._Excel\obj\Debug\Ace.Cbs.Mnm._Excel.csproj.CopyComplete

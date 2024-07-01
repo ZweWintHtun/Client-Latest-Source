@@ -1,0 +1,949 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:v="http://www.springframework.net/validation">
+
+
+  <!--//TypeOfAdvanceValidation//-->
+  <v:group id="TypeOfAdvanceValidator" >
+
+    <v:required id="TypeOfAdvance.codeValidator" test="Code">
+      <v:message id="MV20007" providers="Code"/>
+    </v:required>
+    <v:required id="TypeOfAdvance.descriptionValidator" test="Description">
+      <v:message id="MV90005" providers="Description"/>
+    </v:required>
+
+  </v:group>
+
+  <!--//BusinessValidation//-->
+  <v:group id="BusinessValidator" >
+
+    <v:required id="Business.codeValidator" test="Code">
+      <v:message id="MV20007" providers="Code"/>
+    </v:required>
+    <v:required id="Business.descriptionValidator" test="Description">
+      <v:message id="MV90005" providers="Description"/>
+    </v:required>
+
+  </v:group>
+
+  <!--//CustomerCharacterValidator//-->
+  <v:group id="CustomerCharacterValidator" >
+
+    <v:required id="CustomerCharacter.codeValidator" test="Code">
+      <v:message id="MV20007" providers="Code"/>
+    </v:required>
+    <v:required id="CustomerCharacter.descriptionValidator" test="Description">
+      <v:message id="MV90005" providers="Description"/>
+    </v:required>
+
+  </v:group>
+
+  <!--//GoodWillValidation//-->
+  <v:group id="GoodWillValidator" >
+
+    <v:required id="GoodWill.codeValidator" test="Code">
+      <v:message id="MV20007" providers="Code"/>
+    </v:required>
+    <v:required id="GoodWill.descriptionValidator" test="Description">
+      <v:message id="MV90005" providers="Description"/>
+    </v:required>
+
+  </v:group>
+
+  <!--//LandValidator//-->
+  <v:group id="LandValidator" >
+
+    <v:required id="Land.codeValidator" test="Code">
+      <v:message id="MV20007" providers="Code"/>
+    </v:required>
+    <v:required id="Land.descriptionValidator" test="Description">
+      <v:message id="MV90005" providers="Description"/>
+    </v:required>
+  </v:group>
+
+  <!--//GJTValidator//-->
+  <v:group id="GJTValidator" >
+    <v:required id="GJT.codeValidator" test="Code">
+      <v:message id="MV20007" providers="Code"/>
+    </v:required>
+    <v:required id="GJT.descriptionValidator" test="Description">
+      <v:message id="MV90005" providers="Description"/>
+    </v:required>
+  </v:group>
+
+  <!--//GJKValidator//-->
+  <v:group id="GJKValidator" >
+    <v:required id="GJK.codeValidator" test="Kind">
+      <v:message id="MV20007" providers="Kind"/>
+    </v:required>
+    <v:required id="GJK.descriptionValidator" test="Description">
+      <v:message id="MV90005" providers="Description"/>
+    </v:required>
+  </v:group>
+
+  <!--//INSURANValidation//-->
+  <v:group id="INSURAN.Validator" >
+    <v:required id="INSURAN.iNSUCODEValidator" test="INSUCODE">
+      <v:message id="MV20007" providers="INSUCODE"/>
+    </v:required>
+    <v:required id="INSURAN.iNSUDESPValidator" test="INSUDESP">
+      <v:message id="MV90005" providers="INSUDESP"/>
+    </v:required>
+  </v:group>
+
+  <!--//StockValidator//-->
+  <v:group id="StockValidator" >
+
+    <v:required id="Stock.stockNoValidator" test="StockNo">
+      <v:message id="MV20007" providers="StockNo"/>
+    </v:required>
+    <v:required id="Stock.stockNameValidator" test="Name">
+      <v:message id="MV90005" providers="Name"/>
+    </v:required>
+
+  </v:group>
+
+  <!--//KindOfStockValidator//-->
+  <v:group id="KindOfStockValidator" >
+    <v:required id="KStock.CodeValidator" test="KStockNo">
+      <v:message id="MV20007" providers="KStockNo"/>
+    </v:required>
+    <v:required id="KStock.DescriptionValidator" test="Desp">
+      <v:message id="MV90005" providers="Desp"/>
+    </v:required>
+  </v:group>
+
+  <!--//OverdraftLimitChangeValidator//-->
+  <v:group id="OverdraftLimitChangeValidator" >
+    <v:required id="LoanNo.CodeValidator" test="Lno">
+      <v:message id="MV90055" providers="Lno"/>
+    </v:required>
+
+    <v:required id="OverdraftAmount.OverdraftAmountValidator" test="OverdraftAmount">
+      <v:message id="MV90062" providers="OverdraftAmount"/>
+    </v:required>
+  </v:group>
+
+  <!--//KindOfStockValidator//-->
+  <v:group id="LoanRegisteration.Validation" >
+    <v:required id="LoanRegisteration.LoanNoValidator" test="Lno">
+      <v:message id="MV90055" providers="Lno"/>
+    </v:required>
+    <v:required id="LoanRegisteration.CurrencyValidator" test="Currency">
+      <v:message id="MV00020" providers="Currency"/>
+    </v:required>
+    <v:required id="LoanRegisteration.AccountNoValidator" test="AccountNo">
+      <v:message id="MV00046" providers="AccountNo"/>
+    </v:required>
+    <!--<v:required id="LoanRegisteration.TypeOfAdvanceValidator" test="TypeOfAdvance">
+      <v:message id="MV90098" providers="TypeOfAdvance"/>
+    </v:required>-->
+    <v:required id="LoanRegisteration.GuaranteeAccountNoValidator" test="GuaranteeAccountNo">
+      <v:message id="MV00046" providers="GuaranteeAccountNo"/>
+    </v:required>
+    <v:required id="LoanRegisteration.DurationValidator" test="Duration" when ="isPFcharge == true" >
+      <v:message id="MV00034" providers="Duration"/>
+    </v:required>
+    <!--<v:required id="LoanRegisteration.RepaymentPeriodValidator" test="Scharges">
+      <v:message id="MV90087" providers="Scharges"/>
+    </v:required>-->
+
+  </v:group>
+
+  <!--//NonPerformanceLoanValidator//-->
+  <v:group id="NonPerformanceLoanValidator" >
+    <v:required id="LoanNo.NPLCodeValidator" test="Lno">
+      <v:message id="MV90055" providers="Lno"/>
+    </v:required>
+  </v:group>
+
+  <!--//NonPerformanceLoanReleaseValidator//-->
+  <v:group id="NonPerformanceLoanReleaseValidator" >
+    <v:required id="LoanNo.NPLReleaseCodeValidator" test="Lno">
+      <v:message id="MV90055" providers="Lno"/>
+    </v:required>
+  </v:group>
+
+  <!--//LegalCaseValidator//-->
+  <v:group id="LegalCaseValidator" >
+    <v:required id="LoanNo.LegalCaseValidator" test="Lno">
+      <v:message id="MV90055" providers="Lno"/>
+    </v:required>
+    <v:required id="LegaLawer.LegalCaseValidator" test="LegaLawer">
+      <v:message id="MV90072" providers="LegaLawer"/>
+    </v:required>
+  </v:group>
+
+
+  <!--//EnquiryByLegalByAccountNoValidator//-->
+  <v:group id="EnquiryByLegalAccountNoValidator" >
+    <v:required id="AcctNo.EnquiryByLegalAccountNoValidator" test="AcctNo">
+      <v:message id="MV00046" providers="AcctNo"/>
+    </v:required>
+  </v:group>
+
+
+  <!--Special Transfer Voucher Validation -->
+  <v:group id="SpecialTransfer.Validator" >
+
+    <v:required id="SpecialTransfer.AccountNo.Validator" test="AccountNo">
+      <v:message id="MV00046" providers="AccountNo" />
+    </v:required>
+
+    <v:required id="SpecialTransfer.Currency.Validator" test="Currency">
+      <v:message id="MV00020" providers="Currency" />
+    </v:required>
+
+    <v:required id="SpecialTransfer.Narration.Validator" test="Narration">
+      <v:message id="MV00087" providers="Narration" />
+    </v:required>
+
+    <!--<v:required id="SpecialTransfer.ChequeNo.Validator" test="ChequeNo">
+      <v:message id="MV00059" providers="ChequeNo" />
+    </v:required>-->
+
+    <v:required id="SpecialTransfer.Amount.Validator" test="Amount">
+      <v:message id="MV00037" providers="Amount" />
+    </v:required>
+
+  </v:group>
+
+  <!--//LoansInterestEditingValidator//-->
+  <v:group id="LoansInterestEditingValidator" >
+    <v:required id="LoanNo.LoansInterestEditingValidator" test="LNo">
+      <v:message id="MV90055" providers="LNo"/>
+    </v:required>
+  </v:group>
+
+  <!--//Legal Process EditingValidator//-->
+  <v:group id="LegalProcessEditingValidator" >
+    <v:required id="LoanNo.LegalProcessEditingValidator" test="LNo">
+      <v:message id="MV90055" providers="Lno"/>
+    </v:required>
+  </v:group>
+
+  <!--//Loan Voucher Validator//-->
+  <v:group id="LoanVoucherValidator" >
+    <v:required id="LoanNo.LoanVoucherValidator" test="Lno">
+      <v:message id="MV90055" providers="Lno"/>
+    </v:required>
+  </v:group>
+
+  <!--//OverDraft Interest Editing Validator//-->
+  <v:group id="OverDraftInterestEditingValidator" >
+    <v:required id="AccountNo.OverDraftInterestEditingValidator" test="LNo">
+      <v:message id="MV90055" providers="Acctno"/>
+    </v:required>
+  </v:group>
+
+  <!--//LegalCaseReleaseValidator//-->
+  <v:group id="LegalCaseReleaseValidator" >
+    <v:required id="LoanNo.LegalCaseReleaseValidator" test="Lno">
+      <v:message id="MV90055" providers="Lno"/>
+    </v:required>
+  </v:group>
+
+  <!--//LegalCaseReleaseValidator//-->
+  <v:group id="LoansRepaymentValidator" >
+    <v:required id="LoanNo.LoansRepaymentValidator" test="LoanNo">
+      <v:message id="MV90055" providers="LoanNo"/>
+    </v:required>
+    <!--ZMS (23.05.2018)-->
+    <!--<v:required id="RepaymentAmount.LoansRepaymentValidator" test="RepaymentAmount">
+      <v:message id="MV90079" providers="RepaymentAmount"/>
+    </v:required>-->
+  </v:group>
+
+  <!--//LegalCaseReleaseValidator//-->
+  <v:group id="LoansRepaymentEditingValidator" >
+    <v:required id="LoanNo.LoansRepaymentEditingValidator" test="LoanNo">
+      <v:message id="MV90055" providers="LoanNo"/>
+    </v:required>
+    <!--ZMS (23.05.2018)-->
+    <!--<v:required id="RepaymentAmount.LoansRepaymentEditingValidator" test="RepaymentAmount">
+      <v:message id="MV90079" providers="RepaymentAmount"/>
+    </v:required>-->
+  </v:group>
+
+  <!--//LegalLoanRepaymentValidator//-->
+  <v:group id="LegalLoanRepaymentValidator" >
+    <v:required id="LoanNo.LegalLoanRepaymentValidator" test="Lno">
+      <v:message id="MV90055" providers="Lno"/>
+    </v:required>
+    <v:required id="Amount.LegalLoanRepaymentValidator" test="Amount">
+      <v:message id="MV90079" providers="Amount"/>
+    </v:required>
+  </v:group>
+
+  <!--//LegalODRepaymentValidator//-->
+  <v:group id="LegalODRepaymentValidator" >
+    <v:required id="LoanNo.LegalODRepaymentValidator" test="Lno">
+      <v:message id="MV90055" providers="Lno"/>
+    </v:required>
+    <v:required id="DrAccountNo.LegalODRepaymentValidator" test="DrAccountNo">
+      <v:message id="MV00046" providers="DrAccountNo"/>
+    </v:required>
+    <v:required id="Amount.LegalODRepaymentValidator" test="Amount">
+      <v:message id="MV90092" providers="Amount"/>
+    </v:required>
+  </v:group>
+
+  <!--//KindOfStockValidator//-->
+  <v:group id="LoanACClose.Validation" >
+    <v:required id="LoanACClose.LoanNoValidator" test="Lno">
+      <v:message id="MV90055" providers="Lno"/>
+    </v:required>
+    <v:required id="LoanACClose.AccountNoValidator" test="AccountNo">
+      <v:message id="MV00046" providers="AccountNo"/>
+    </v:required>
+  </v:group>
+
+  <!--//LoansAccountCloseListing.Validator//-->
+  <v:group id="LoansAccountCloseListing.Validator" >
+    <v:required id="LoansAccountCloseListingCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="LoansAccountCloseListingBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+  </v:group>
+
+  <!--//ODRegistrationListingByLoansType.Validator//-->
+  <v:group id="ODRegistrationListingByLoansType.Validator" >
+    <v:required id="ODRegistrationListingCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="ODRegistrationListingBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+  </v:group>
+
+  <!--//LoanRegistrationListingByLoansType.Validator//-->
+  <v:group id="LoanRegistrationListingByLoansType.Validator" >
+    <v:required id="LoanRegistrationListingCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="LoanRegistrationListingBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+  </v:group>
+
+  <!--//LoansRepaymentScheduleByDate.Validator//-->
+  <v:group id="LoansRepaymentScheduleByDate.Validator" >
+    <v:required id="LoansRepaymentScheduleByDateCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="LoansRepaymentScheduleByDateBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+    <v:required id="LoansRepaymentScheduleByDateLoansNoValidator" test="Lno">
+      <v:message id="MV90055" providers="Lno"/>
+    </v:required>
+  </v:group>
+
+  <!--//LoansDailyPositionListing.Validator//-->
+  <v:group id="LoansDailyPositionListing.Validator" >
+    <v:required id="LoansDailyPositionListingCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="LoansDailyPositionListingBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+  </v:group>
+
+  <!--//ExpireLoansListing.Validator//-->
+  <v:group id="ExpireLoansListing.Validator" >
+    <v:required id="ExpireLoansListingCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="ExpireLoansListingBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+    <v:required id="ExpireLoansListingYearValidator" test="RequiredYear">
+      <v:message id="MV90102" providers="RequiredYear"/>
+    </v:required>
+    <v:required id="ExpireLoansListingMonthValidator" test="RequiredMonth">
+      <v:message id="MV90103" providers="RequiredMonth"/>
+    </v:required>
+  </v:group>
+
+  <!--//HPRegisterListing.Validator//-->
+  <v:group id="HPRegisterListing.Validator" >
+    <v:required id="HPRegisterListingCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="HPRegisterListingBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+    <v:required id="HPRegisterListingStartDateValidator" test="StartDate">
+      <v:message id="MV90114" providers="StartDate"/>
+    </v:required>
+    <v:required id="HPRegisterListingEndDateValidator" test="EndDate">
+      <v:message id="MV90116" providers="EndDate"/>
+    </v:required>
+  </v:group>
+
+  <!--//HPPaymentSchedule.Validator//-->
+  <v:group id="HPPaymentSchedule.Validator" >
+    <v:required id="HPPaymentScheduleCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="HPPaymentScheduleBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+    <v:required id="HPPaymentScheduleYearValidator" test="Year">
+      <v:message id="MV90102" providers="Year"/>
+    </v:required>
+  </v:group>
+
+  <!--//LoansInterestListing.Validator//-->
+  <v:group id="LoansInterestListing.Validator" >
+    <v:required id="LoansInterestListingCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="LoansInterestListingBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+    <v:required id="LoansInterestListingBudgetValidator" test="Budget">
+      <v:message id="MV90102" providers="Budget"/>
+    </v:required>
+  </v:group>
+
+  <!--//OverdraftInterestListing.Validator//-->
+  <v:group id="OverdraftInterestListing.Validator" >
+    <v:required id="OverdraftInterestListingCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="OverdraftInterestListingBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+    <v:required id="OverdraftInterestListingBudgetValidator" test="Budget">
+      <v:message id="MV90102" providers="Budget"/>
+    </v:required>
+  </v:group>
+
+  <!--//ServiceChargesListing.Validator//-->
+  <v:group id="ServiceChargesListing.Validator" >
+    <v:required id="ServiceChargesListingCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="ServiceChargesListingBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+  </v:group>
+
+  <!--//ODLimitChangeListingByDate.Validator//-->
+  <v:group id="ODLimitChangeListingByDate.Validator" >
+    <v:required id="ODLimitChangeListingByDateCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="ODLimitChangeListingByDateBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+  </v:group>
+
+  <!--//ODLimitChangeListingByAccount.Validator//-->
+  <v:group id="ODLimitChangeListingByAccount.Validator" >
+    <v:required id="ODLimitChangeListingByAccountCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="ODLimitChangeListingByAccountBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+    <v:required id="ODLimitChangeListingByAccountAccountNoValidator" test="AcctNo">
+      <v:message id="MV00046" providers="AcctNo"/>
+    </v:required>
+  </v:group>
+
+  <!--//NonPerformanceLoansCaseListing.Validator//-->
+  <v:group id="NonPerformanceLoansCaseListing.Validator" >
+    <v:required id="NonPerformanceLoansCaseListingCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="NonPerformanceLoansCaseListingBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+  </v:group>
+
+  <!--//LegalCaseListing.Validator//-->
+  <v:group id="LegalCaseListing.Validator" >
+    <v:required id="LegalCaseListingCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="LegalCaseListingBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+  </v:group>
+
+  <!--//SeasonCode//-->
+  <v:group id="SeasonCodeValidator" >
+
+    <v:required id="SeasonCode.codeValidator" test="Code">
+      <v:message id="MV20007" providers="Code"/>
+    </v:required>
+    <v:required id="SeasonCode.descriptionValidator" test="Description">
+      <v:message id="MV90005" providers="Description"/>
+    </v:required>
+  </v:group>
+
+
+  <!--//HirePurchaseStockGroupValidator//-->
+  <v:group id="HirePurchaseStockGroupValidator" >
+    <v:required id="HirePurchaseStockGroup.GroupCodeValidator" test="GroupCode">
+      <v:message id="MV90105" providers="GroupCode"/>
+    </v:required>
+    <v:required id="HirePurchaseStockGroup.PreFixValidator" test="PreFix">
+      <v:message id="MV90107" providers="PreFix"/>
+    </v:required>
+    <v:required id="HirePurchaseStockGroup.DescriptionValidator" test="Description">
+      <v:message id="MV90005" providers="Description"/>
+    </v:required>
+  </v:group>
+
+  <!--//HirePurchaseStockItemValidator//-->
+  <v:group id="HirePurchaseStockItemValidator" >
+    <v:required id="HirePurchaseStockItem.GroupCodeValidator" test="GroupCode">
+      <v:message id="MV90105" providers="GroupCode"/>
+    </v:required>
+    <v:required id="HirePurchaseStockItem.SubCodeValidator" test="SubCode">
+      <v:message id="MV90106" providers="SubCode"/>
+    </v:required>
+    <v:required id="HirePurchaseStockItem.DescriptionValidator" test="Description">
+      <v:message id="MV90005" providers="Description"/>
+    </v:required>
+  </v:group>
+
+  <!--//VillageGroupSetupValidator//-->
+  <v:group id="VillageGroupSetupValidator" >
+
+    <v:required id="VillageGroupSetup.codeValidator" test="VillageCode">
+      <v:message id="MV20007" providers="VillageCode"/>
+    </v:required>
+    <v:required id="VillageGroupSetup.descriptionValidator" test="Desp">
+      <v:message id="MV90005" providers="Desp"/>
+    </v:required>
+
+  </v:group>
+
+  <!--//CropTypeSetupValidator//-->
+  <v:group id="CropTypeSetupValidator" >
+
+    <v:required id="CropTypeSetup.codeValidator" test="CropCode">
+      <v:message id="MV20007" providers="CropCode"/>
+    </v:required>
+    <v:required id="CropTypeSetup.descriptionValidator" test="Desp">
+      <v:message id="MV90005" providers="Desp"/>
+    </v:required>
+  </v:group>
+
+  <!--//UMSetupValidator//-->
+  <v:group id="UMSetupValidator" >
+
+    <v:required id="UMSetup.codeValidator" test="UMCode">
+      <v:message id="MV20007" providers="UMCode"/>
+    </v:required>
+    <v:required id="UMSetup.descriptionValidator" test="UMDesp">
+      <v:message id="MV90005" providers="UMDesp"/>
+    </v:required>
+  </v:group>
+
+  <!--//LSProductTypeItemValidator//-->
+  <v:group id="LSProductTypeItemValidator" >
+
+    <v:required id="LSProductTypeItem.produceCodeValidator" test="ProductCode">
+      <v:message id="MV90108" providers="ProductCode"/>
+    </v:required>
+    <v:required id="LSProductTypeItem.lsBusinessCodeValidator" test="LSBusinessCode">
+      <v:message id="MV90109" providers="LSBusinessCode"/>
+    </v:required>
+    <v:required id="LSProductTypeItem.umCodeValidator" test="UMCode">
+      <v:message id="MV90110" providers="UMCode"/>
+    </v:required>
+    <v:required id="LSProductTypeItem.descriptionValidator" test="DurationMonths">
+      <v:message id="MV90111" providers="DurationMonths"/>
+    </v:required>
+  </v:group>
+
+  <!--//LiveStockSetupValidator//-->
+  <v:group id="LiveStockTypeSetupValidator">
+
+    <v:required id="LiveStockTypeSetup.codeValidator" test="Code">
+      <v:message id="MV20007" providers="Code"/>
+    </v:required>
+    <v:required id="LiveStockTypeSetup.descriptionValidator" test="Description">
+      <v:message id="MV90005" providers="Description"/>
+    </v:required>
+
+  </v:group>
+
+  <!--//FarmLoanRegisterationEntry.Validation//-->
+  <v:group id="FarmLoanRegisterationEntry.Validation" >
+    <v:required id="FarmLoanRegisterationEntry.CurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="FarmLoanRegisterationEntry.AccountNoValidator" test="AcctNo">
+      <v:message id="MV00046" providers="AcctNo"/>
+    </v:required>
+    <v:required id="FarmLoanRegisterationEntry.GroupNoValidator" test="GroupNo">
+      <v:message id="MV90119" providers="GroupNo"/>
+    </v:required>
+    <!--<v:required id="FarmLoanRegisterationEntry.GuaranteeAccountNo1Validator" test="GuaranteeAccountNo1">
+      <v:message id="MV00046" providers="GuaranteeAccountNo1"/>
+    </v:required>
+    <v:required id="FarmLoanRegisterationEntry.GuaranteeAccountNo2Validator" test="GuaranteeAccountNo2">
+      <v:message id="MV00046" providers="GuaranteeAccountNo2"/>
+    </v:required>-->
+  </v:group>
+
+  <!--//AGLoanProductTypeItemSetupValidator//-->
+  <v:group id="AGLoanProductTypeItemValidator" >
+    <v:required id="AGLoanProductTypeItem.produceCodeValidator" test="ProductCode">
+      <v:message id="MV90108" providers="ProductCode"/>
+    </v:required>
+    <v:required id="AGLoanProductTypeItem.seasonCodeValidator" test="SeasonCode">
+      <v:message id="MV90112" providers="SeasonCode"/>
+    </v:required>
+    <v:required id="AGLoanProductTypeItem.umValidator" test="UMCode">
+      <v:message id="MV90110" providers="UMCode"/>
+    </v:required>
+    <v:required id="AGLoanProductTypeItem.SMonthValidator" test="SMonth">
+      <v:message id="MV90113" providers="SMonth"/>
+    </v:required>
+    <v:required id="AGLoanProductTypeItem.SDayValidator" test="SDay">
+      <v:message id="MV90114" providers="SDay"/>
+    </v:required>
+    <v:required id="AGLoanProductTypeItem.EMonthValidator" test="EMonth">
+      <v:message id="MV90115" providers="EMonth"/>
+    </v:required>
+    <v:required id="AGLoanProductTypeItem.EDayValidator" test="EDay">
+      <v:message id="MV90116" providers="EDay"/>
+    </v:required>
+    <v:required id="AGLoanProductTypeItem.DeadLineMonthValidator" test="DeadLineMonth">
+      <v:message id="MV90117" providers="DeadLineMonth"/>
+    </v:required>
+    <v:required id="AGLoanProductTypeItem.DeadLineDayValidator" test="DeadLineDay">
+      <v:message id="MV90118" providers="DeadLineDay"/>
+    </v:required>
+  </v:group>
+
+  <!--//LoanRecordEntryValidator-->
+  <v:group id="LoanRecordEntryValidator">
+    <v:required id="LoanRecordEntryValidator.SuspendAmu" test="SuspendAmu">
+      <v:message id="MV90121" providers="SuspendAmu"/>
+    </v:required>
+    <v:required id="LoanRecordEntryValidator.SanctionAmu" test="SanctionAmu">
+      <v:message id="MV90125" providers="SanctionAmu"/>
+    </v:required>
+    <!--<v:required id="LoanRecordEntryValidator.RefundAmu" test="RefundAmu">
+      <v:message id="MV90126" providers="RefundAmu"/>
+    </v:required>-->
+    <!--<v:required id="LoanRecordEntryValidator.RefundVrNo" test="RefundVrNo">
+      <v:message id="MV90127" providers="RefundVrNo"/>
+    </v:required>-->
+  </v:group>
+
+  <v:group id="LoanRepaymentEntryValidator">
+    <v:required id="LoanRepaymentEntryValidator.VrNo" test="VrNo">
+      <v:message id="MV90131" providers="VrNo"/>
+    </v:required>
+    <v:required id="LoanRepaymentEntryValidator.LoanNo" test="Lno">
+      <v:message id="MV90132" providers="Lno"/>
+    </v:required>
+    <v:required id="LoanRepaymentEntryValidator.RepaymentAmount" test="RepaymentAmount">
+      <v:message id="MV90133" providers="RepaymentAmount"/>
+    </v:required>
+  </v:group>
+
+  <!--//AgriLoansReports.Validator//-->
+  <v:group id="AgriLoansReports.Validator" >
+    <v:required id="AgriLoansReportsCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="AgriLoansReportsBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+  </v:group>
+
+
+  <!--//HPRegisterValidator//-->
+  <v:group id="HPRegisterValidator">
+
+    <v:required id="Caccount.HPRegisterValidator" test="Caccount">
+      <v:message id="MV00046" providers="Caccount"/>
+    </v:required>
+
+    <v:required id="guanacctno.HPRegisterValidator" test="guanacctno">
+      <v:message id="MV00046" providers="guanacctno"/>
+    </v:required>
+
+  </v:group>
+
+  <!--//DealerRegistrationEntry.Validator//-->
+  <v:group id="DealerRegisteration.Validator" >
+
+    <v:required id="dealerAC.DealerRegisterationValidator" test="dealerAC">
+      <v:message id="MV00046" providers="dealerAC"/>
+    </v:required>
+
+    <!--<v:required id="DealerRegisteration.dname.Validator" test="dname">
+      <v:message id="MV00002" providers="dname" />
+    </v:required>-->
+
+    <!--<v:required id="nRC.DealerRegisterationValidator" test="nRC" >
+      <v:message id="MV00004" providers="nRC" />
+    </v:required>
+
+    <v:required id="DrawingRemittanceEntry.DealerRegisterationValidator" test="Address">
+      <v:message id="MV00010" providers="Address" />
+    </v:required>
+
+    <v:required id="dphone.DealerRegisterationValidator" test="dphone">
+      <v:message id="MV00011" providers="dphone" />
+    </v:required>
+
+    <v:required id="fax.DealerRegisterationValidator" test="fax">
+      <v:message id="MV00031" providers="fax" />
+    </v:required>
+
+    <v:required id="email.DealerRegisterationValidator" test="email">
+      <v:message id="MV00030" providers="email" />
+    </v:required>
+    
+    <v:required id="daddress.DealerRegisterationValidator" test="daddress">
+      <v:message id="MV00010" providers="daddress" />
+    </v:required>
+    
+    <v:required id="business.DealerRegisterationValidator" test="business">
+      <v:message id="MV00002" providers="business" />
+    </v:required>
+    
+    <v:required id="city.DealerRegisterationValidator" test="city">
+      <v:message id="MV00007" providers="city" />
+    </v:required>
+    
+    <v:required id="businessEmail.DealerRegisterationValidator" test="businessEmail">
+      <v:message id="MV00030" providers="businessEmail" />
+    </v:required>
+    
+    <v:required id="businessAddress.DealerRegisterationValidator" test="businessAddress">
+      <v:message id="MV00010" providers="businessAddress" />
+    </v:required>
+    
+    <v:required id="commission.DealerRegisterationValidator" test="commission">
+      <v:message id="MV00087" providers="commission" />
+    </v:required>-->
+
+  </v:group>
+
+  <!-- LiveStock Loan Record Validator -->
+  <v:group id="LiveStockLoanRecordEntryValidator">
+    <v:required id="LiveStockLoanRecordEntryValidator.SuspendAmu" test="SuspendAmu">
+      <v:message id="MV90121" providers="SuspendAmu"/>
+    </v:required>
+    <v:required id="LiveStockLoanRecordEntryValidator.SanctionAmu" test="SanctionAmu">
+      <v:message id="MV90125" providers="SanctionAmu"/>
+    </v:required>
+    <!--<v:required id="LiveStockLoanRecordEntryValidator.RefundAmu" test="RefundAmu">
+      <v:message id="MV90126" providers="RefundAmu"/>
+    </v:required>
+    <v:required id="LiveStockLoanRecordEntryValidator.RefundVrNo" test="RefundVrNo">
+      <v:message id="MV90127" providers="RefundVrNo"/>
+    </v:required>-->
+  </v:group>
+  
+  <!-- Loan Record Report -->
+  <v:group id="LoanRecordReport.Validator" >
+    <v:required id="LoanRecordReport.TownshipValidator" test="townshipCode">
+      <v:message id="MV00020" providers="townshipCode"/>
+    </v:required>
+  </v:group>
+
+  <v:group id="LoanRepaymentInfoEntryValidator">
+    <v:required id="LoanRepaymentInfoEntryValidator.LoanNo" test="Lno">
+      <v:message id="MV90132" providers="Lno"/>
+    </v:required>
+    <v:required id="LoanRepaymentInfoEntryValidator.RepaymentAmount" test="RepaymentAmount">
+      <v:message id="MV90133" providers="RepaymentAmount"/>
+    </v:required>
+  </v:group>
+  
+  <!--//FarmLoanInterestEditingValidator// Updated By HWKO-->
+  <v:group id="FarmLoanInterestEditingValidator" >
+    <v:required id="LoanNo.FarmLoanInterestEditingValidator" test="LNo">
+      <v:message id="MV90055" providers="LNo"/>
+    </v:required>
+  </v:group>
+
+  <!--//FLOSTReports.Validator// Created by HWKO (22-Mar-2017)-->
+  <v:group id="FLOSTReports.Validator" >
+    <v:required id="FLOSTReportsCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="FLOSTReportsBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+    <v:required id="FLOSTReportsVillageValidator" test="VillageCode">
+      <v:message id="MV90152" providers="VillageCode"/>
+    </v:required>
+    <v:required id="FLOSTReportsTownshipValidator" test="TownshipCode">
+      <v:message id="MV90153" providers="TownshipCode"/>
+    </v:required>
+  </v:group>
+
+  <!--//FLIndividualOSTReports.Validator// Created by HWKO (05-Apr-2017)-->
+  <v:group id="FLIndividualOSTReports.Validator" >
+    <v:required id="FLIndividualOSTReportsCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="FLIndividualOSTReportsBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+    <v:required id="FLIndividualOSTReportsVillageValidator" test="VillageCode">
+      <v:message id="MV90152" providers="VillageCode"/>
+    </v:required>
+    <v:required id="FLIndividualOSTReportsTownshipValidator" test="TownshipCode">
+      <v:message id="MV90153" providers="TownshipCode"/>
+    </v:required>
+  </v:group>
+
+  <!--//FLTotalDailyIncomeReports.Validator// Created by HWKO (25-Apr-2017)-->
+  <v:group id="FLTotalDailyIncomeReports.Validator" >
+    <v:required id="FLTotalDailyIncomeReportsCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="FLTotalDailyIncomeReportsBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+  </v:group>
+
+  <!--//ExpiredLandLeaseListing.Validator// Created by HWKO (11-Jul-2017)-->
+  <v:group id="ExpiredLandLeaseListing.Validator" >
+    <!--<v:required id="ExpiredLandLeaseListingCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>-->
+    <v:required id="ExpiredLandLeaseListingBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+  </v:group>
+
+  <!--//PLRepaymentSchedule.Validator// Created by HWKO (14-Jul-2017)-->
+  <v:group id="PLRepaymentSchedule.Validator" >
+    <!--<v:required id="PLRepaymentScheduleCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>-->
+    <v:required id="PLRepaymentScheduleBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+  </v:group>
+
+  <!--//PLIntDuePreListing.Validator// Created by HWKO (14-Jul-2017)-->
+  <v:group id="PLIntDuePreListing.Validator" >
+    <v:required id="PLIntDuePreListingCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="PLIntDuePreListingBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+  </v:group>
+
+  <!--//PLODACListing.Validator// Created by HWKO (17-Jul-2017)-->
+  <v:group id="PLODACListing.Validator" >
+    <v:required id="PLODACListingCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="PLODACListingBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+  </v:group>
+
+  <!--//PLODACWithCompanyNameListing.Validator// Created by HWKO (17-Jul-2017)-->
+  <v:group id="PLODACWithCompanyNameListing.Validator" >
+    <v:required id="PLODACWithCompanyNameListingCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="PLODACWithCompanyNameListingBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+    <v:required id="PLODACWithCompanyNameListingCompanyNameValidator" test="CompanyName">
+      <v:message id="MV90174" providers="CompanyName"/>
+    </v:required>
+  </v:group>
+
+  <!--//PLRepaymentListing.Validator// Created by HWKO (20-Jul-2017)-->
+  <v:group id="PLRepaymentListing.Validator" >
+    <v:required id="PLRepaymentListingCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="PLRepaymentListingBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+  </v:group>
+
+  <!--//PLVrOstdListing.Validator// Created by HWKO (27-Oct-2017)-->
+  <v:group id="PLVrOstdListing.Validator" >
+    <v:required id="PLVrOstdListingCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="PLVrOstdListingBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+  </v:group>
+
+  <!--//BLVrOstdListing.Validator// Created by HWKO (07-Nov-2017)-->
+  <v:group id="BLVrOstdListing.Validator" >
+    <v:required id="BLVrOstdListingCurrencyValidator" test="Currency">
+      <v:message id="MV00020" providers="Currency"/>
+    </v:required>
+    <v:required id="BLVrOstdListingBranchValidator" test="SourceBranchCode">
+      <v:message id="MV00070" providers="SourceBranchCode"/>
+    </v:required>
+  </v:group>
+
+  <!--//PLLFOstdListing.Validator// Created by HWKO (10-Nov-2017)-->
+  <v:group id="PLLFOstdListing.Validator" >
+    <v:required id="PLLFOstdListingCurrencyValidator" test="Cur">
+      <v:message id="MV00020" providers="Cur"/>
+    </v:required>
+    <v:required id="PLLFOstdListingBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+  </v:group>
+
+  <!--//HPContractPrinting.Validator// Created by HWKO (08-Dec-2017)-->
+  <v:group id="HPContractPrinting.Validator" >
+    <v:required id="HPContractPrintingBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+  </v:group>
+
+  <!--//PLContractPrinting.Validator// Created by HWKO (12-Dec-2017)-->
+  <v:group id="PLContractPrinting.Validator" >
+    <v:required id="PLContractPrintingBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+  </v:group>
+
+  <!--//BLPGContractPrinting.Validator// Created by HWKO (15-Dec-2017)-->
+  <v:group id="BLPGContractPrinting.Validator" >
+    <v:required id="BLPGContractPrintingBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+  </v:group>
+
+  <!--//BLPGContractPrinting.Validator// Created by HWKO (15-Dec-2017)-->
+  <v:group id="BLHPContractPrinting.Validator" >
+    <v:required id="BLHPContractPrintingBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+  </v:group>
+
+  <!--//BLPGContractPrinting.Validator// Created by HWKO (15-Dec-2017)-->
+  <v:group id="BLLBContractPrinting.Validator" >
+    <v:required id="BLLBContractPrintingBranchValidator" test="SourceBr">
+      <v:message id="MV00070" providers="SourceBr"/>
+    </v:required>
+  </v:group>
+
+</objects>
+

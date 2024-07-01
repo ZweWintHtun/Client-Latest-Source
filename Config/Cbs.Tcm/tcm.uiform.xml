@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">  
+	
+  <!--Region System Start Up -->
+	<object id="frmTCMVEW00014" type="Ace.Cbs.Tcm.Vew.TCMVEW00014, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="StartUpController"/>
+	</object>
+	<!--endregion-->
+
+	<!--Region System Shut Down -->
+	<object id="frmTCMVEW00015" type="Ace.Cbs.Tcm.Vew.TCMVEW00015, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="ShutDownController"/>
+	</object>
+	<!--endregion-->
+
+  <!--Last Payment Denomination Entry-->
+  <object id="frmTCMVEW00007" type="Ace.Cbs.Tcm.Vew.TCMVEW00007, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="LastPaymentDenominationController"/>
+  </object>
+
+  <!--Clearing Receipt Reversal Listing-->
+  <object id="frmTCMVEW00037" type="Ace.Cbs.Tcm.Vew.TCMVEW00037, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="ReceiptReverseListingController"/>
+  </object>
+
+  <!--Clearing Receipt Reversal Listing (Report)-->
+  <object id="frmTCMVEW00058ReceiptReverse" type="Ace.Cbs.Tcm.Vew.TCMVEW00058, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+
+  <!-- Fixed Deposit Interest Withdrawal -->
+  <object id="frmTCMVEW00006.Withdrawal" type="Ace.Cbs.Tcm.Vew.TCMVEW00006, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="FixedDepositInterestController"/>
+    <property name="FormName" value="Fixed Deposit Interest Withdrawal"/>
+  </object>
+
+  <!-- Fixed Deposit Interest Transfer -->
+  <object id="frmTCMVEW00006.Transfer" type="Ace.Cbs.Tcm.Vew.TCMVEW00006, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="FixedDepositInterestController"/>
+    <property name="FormName" value="Fixed Deposit Interest Transfer"/>
+  </object>
+
+  <!-- Saving Interest Withdrawal -->
+  <object id="frmTCMVEW00005.Withdrawal" type="Ace.Cbs.Tcm.Vew.TCMVEW00005, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureDockForm">
+		<property name="Controller" ref="SavingInterestController"/>
+    <property name="FormName" value="Saving Interest Withdrawal"/>
+  </object>
+
+  <!-- Saving Interest Transfer -->
+  <object id="frmTCMVEW00005.Transfer" type="Ace.Cbs.Tcm.Vew.TCMVEW00005, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="Controller" ref="SavingInterestController"/>
+    <property name="FormName" value="Saving Interest Transfer"/>
+  </object>
+  
+  <!-- FixedReceipt Editing -->
+  <object id="frmTCMVEW00013" type="Ace.Cbs.Tcm.Vew.TCMVEW00013, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureDockForm">
+    <property name="FReceiptController" ref="FReceiptEditingController"/>
+  </object>
+  
+  <object id="frmTCMVEW00043" type="Ace.Cbs.Tcm.Vew.TCMVEW00043, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="ClearingPostingController" ref="ClearingPostingController"/>
+  </object>
+
+
+  <object id="frmTCMVEW00044" type="Ace.Cbs.Tcm.Vew.TCMVEW00044, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="POPrintingController" ref="POPrintingController"/>
+  </object>
+
+	<!-- Stop Payment Cheque Release Entry Form-->
+	<object id="frmTCMVEW00012" type="Ace.Cbs.Tcm.Vew.TCMVEW00012, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="StopPaymentChequeReleaseController"/>
+	</object>
+
+	<!-- Minimum Balance Entry Form-->
+	<object id="frmTCMVEW00020" type="Ace.Cbs.Tcm.Vew.TCMVEW00020, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="MinimumBalanceController"/>
+	</object>
+
+	<!-- Online Denomination Entry Form-->
+	<object id="frmTCMVEW00017" type="Ace.Cbs.Tcm.Vew.TCMVEW00017, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="OnlineCashDenoEntryController"/>
+	</object>
+
+	<!-- Clearing Paid Cheque Listing Report-->
+	<object id="frmTCMVEW00034.Receipt" type="Ace.Cbs.Tcm.Vew.TCMVEW00034, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="ClearingChequePaidListingReportController"/>
+		<property name="FormName" value="Receipt"/>
+	</object>
+
+	<!-- Clearing Paid Cheque Listing Report-->
+	<object id="frmTCMVEW00034.POReceipt" type="Ace.Cbs.Tcm.Vew.TCMVEW00034, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="ClearingChequePaidListingReportController"/>
+		<property name="FormName" value="POReceipt"/>
+	</object>
+
+	<!-- Clean Cash OverDraft -->
+	<object id="frmTCMVEW00029" type="Ace.Cbs.Tcm.Vew.TCMVEW00029, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="CleanCashODController"/>
+	</object>
+	
+	<!-- Daily Closing Clearing Form-->
+	<object id="frmTCMVEW00027" type="Ace.Cbs.Tcm.Vew.TCMVEW00027, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="DailyClosingClearingController"/>
+	</object>
+
+	<!-- Day Book Summary Report Form-->
+	<object id="frmTCMVEW00028" type="Ace.Cbs.Tcm.Vew.TCMVEW00028, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="DayBookSummaryController"/>
+	</object>
+
+	<!--TCMDayBookSummaryReport-->
+	<object id="frmTCMDayBookSummaryReport" type="Ace.Cbs.Tcm.Vew.TCMVEW00050, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+	
+	<!--Deactivate User Entry-->
+	<object id="frmTCMVEW00022" type="Ace.Cbs.Tcm.Vew.TCMVEW00022, Ace.Cbs.Tcm.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="DeactivateUserController"/>
+	</object>
+
+	<!--TCMScheduleReport-->
+	<object id="frmTCMScheduleReport" type="Ace.Cbs.Tcm.Vew.TCMVEW00048, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+
+	<!--TCMAbstractReport-->
+	<object id="frmTCMAbstractReport" type="Ace.Cbs.Tcm.Vew.TCMVEW00049, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+
+	<!--TCMScrollReport-->
+	<object id="frmTCMScrollReport" type="Ace.Cbs.Tcm.Vew.TCMVEW00060, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+
+	<!--TCMCleanCashODReport-->
+	<object id="frmTCMCleanCashODReport" type="Ace.Cbs.Tcm.Vew.TCMVEW00051, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+
+  <!--CutOff And CashClosing Entry-->
+  <object id="frmTCMVEW00016" type="Ace.Cbs.Tcm.Vew.TCMVEW00016, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="CashClosingController"/>
+  </object>
+
+	<!-- Cash Decleration Form-->
+	<object id="frmTCMVEW00025" type="Ace.Cbs.Tcm.Vew.TCMVEW00025, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="CashDeclerationController"/>
+	</object>
+
+	<!--Cash Decleration Report-->
+	<object id="frmTCMCashDeclerationReport" type="Ace.Cbs.Tcm.Vew.TCMVEW00046, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+  
+  <!-- Fixed Depoist Transfer Entry -->
+  <object id="frmTCMVEW00001" type="Ace.Cbs.Tcm.Vew.TCMVEW00001, Ace.Cbs.Tcm.Vew" singleton="false" parent="SecureDockForm">
+		<property name="FixedDepositTransferController" ref="FixedDepositTransferController"/>
+  </object>
+
+  <!--PO Issue By Transfer With Income-->
+  <object id="frmTCMVEW00003.Income" type="Ace.Cbs.Tcm.Vew.TCMVEW00003, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="POIssueByTransferController" ref="POIssueByTransferController"/>
+    <property name="FormName" value="POIssueByTransferIncome"/>
+  </object>
+
+  <!--PO Issue By Transfer No Income-->
+  <object id="frmTCMVEW00003.NoIncome" type="Ace.Cbs.Tcm.Vew.TCMVEW00003, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="POIssueByTransferController" ref="POIssueByTransferController"/>
+    <property name="FormName" value="POIssueByTransferNoIncome"/>
+  </object>
+  
+	<!--POIssueForEncashment-->
+	<object id="frmTCMVEW00004" type="Ace.Cbs.Tcm.Vew.TCMVEW00004, Ace.Cbs.Tcm.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="POIssueForEncashmentController"/>
+	</object>
+
+	<!--ChequeBok-->
+	<object id="frmTCMVEW00008" type="Ace.Cbs.Tcm.Vew.TCMVEW00008, Ace.Cbs.Tcm.Vew" singleton="false" parent="SecureDockForm">
+		<property name="Controller" ref="ChequeBookEditingcontroller"/>
+	</object>
+
+  <!--PO Printing Report Form-->
+  <object id="frmTCMVEW00061" type="Ace.Cbs.Tcm.Vew.TCMVEW00061, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="POPrintingReportController" ref="POPrintingReportController"/>
+  </object>
+
+	<!-- Clean Cash Form-->
+	<object id="frmTCMVEW00026" type="Ace.Cbs.Tcm.Vew.TCMVEW00026, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="CleanCashController"/>
+	</object>
+
+	<!--Clean Cash Report-->
+	<object id="frmTCMCleanCashReport" type="Ace.Cbs.Tcm.Vew.TCMVEW00047, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+
+	<!--Clearing Paid Cheque Listing Report-->
+	<object id="frmTCmReceiptReport" type="Ace.Cbs.Tcm.Vew.TCMVEW00055, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+
+	<!--Listing for Clearing with PO Receipt-->
+	<object id="frmTCMPOReceipt" type="Ace.Cbs.Tcm.Vew.TCMVEW00056, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+
+	<!-- Withdrawal Cheque Listing Form-->
+	<object id="frmTCMVEW00032" type="Ace.Cbs.Tcm.Vew.TCMVEW00032, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="WithdrawalChequeController"/>
+	</object>
+
+	<!--Withdrawal Cheque Listing Report-->
+	<object id="frmTCMWithdrawalChequeReport"  type="Ace.Cbs.Tcm.Vew.TCMVEW00053, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+
+	<!-- Issue/Stop/Print Cheque Listing Form-->
+	<object id="frmTCMVEW00039" type="Ace.Cbs.Tcm.Vew.TCMVEW00039, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="ChequeListingController"/>
+	</object>
+
+	<!--Issue/Stop/Print Cheque Listing Report-->
+	<object id="frmChequeListingReport" type="Ace.Cbs.Tcm.Vew.TCMVEW00059, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+
+	<object id="frmTCMVEW00062" type="Ace.Cbs.Tcm.Vew.TCMVEW00062, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="ReconsileController"/>
+	</object>
+
+	<!--Note Change Deposit Entry-->
+	<object id="frmTCMVEW00018.Receiving" type="Ace.Cbs.Tcm.Vew.TCMVEW00018, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="NoteChangeDepositController"/>
+    <property name="FormName" value="Receiving"/>
+	</object>
+
+  <object id="frmTCMVEW00018.Payment" type="Ace.Cbs.Tcm.Vew.TCMVEW00018, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="NoteChangeDepositController"/>
+    <property name="FormName" value="Payment"/>
+  </object>
+  
+  <object id="frmTCMVEW00018.ChiefCashierEntry" type="Ace.Cbs.Tcm.Vew.TCMVEW00018, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="NoteChangeDepositController"/>
+    <property name="FormName" value="ChiefCashierEntry"/>
+  </object>
+
+	<!--Note Change Withdrawal Entry-->
+	<object id="frmTCMVEW00019" type="Ace.Cbs.Tcm.Vew.TCMVEW00019, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="NoteChangeWithdrawlController"/>
+	</object>
+
+	<!--Customer Account Information-->
+	<object id="frmTCMVEW00045" type="Ace.Cbs.Tcm.Vew.TCMVEW00045, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="CustomerAccountEnquiryController"/>
+	</object>
+
+  <object id="frmTCMVEW00002" type="Ace.Cbs.Tcm.Vew.TCMVEW00002, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="PORefundController"/>
+  </object>
+  
+  <!--Group Cash Deposit-->
+  <object id="frmTCMVEW00063" type="Ace.Cbs.Tcm.Vew.TCMVEW00063, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="GroupCashDepositController"/>
+  </object>
+
+	<object id="frmTCMVEW00064" type="Ace.Cbs.Tcm.Vew.TCMVEW00064, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+	</object>
+
+
+  <!-- Clearing Delivered Reversal Listing Enquiry Form-->
+  <object id="frmTCMVEW00036" type="Ace.Cbs.Tcm.Vew.TCMVEW00036, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="ClearingDeliveredReversalController" ref="ClearingDeliveredReversalController"/>
+  </object>
+  
+  <!-- Clearing Delivered Reversal Listing Report Form-->
+  <object id="frmTCMVEW00057" type="Ace.Cbs.Tcm.Vew.TCMVEW00057, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+  </object>
+
+	<object id="frmTCMVEW00033NotYetPosted" type="Ace.Cbs.Tcm.Vew.TCMVEW00033, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="DeliveredChequeListingController"/>
+		<property name="FormName" value="NotYetPosted"/>
+	</object>
+	<object id="frmTCMVEW00033Posted" type="Ace.Cbs.Tcm.Vew.TCMVEW00033, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="DeliveredChequeListingController"/>
+		<property name="FormName" value="Posted"/>
+	</object>
+
+	<object id="frmTCMVEW00054" type="Ace.Cbs.Tcm.Vew.TCMVEW00054, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="DeliveredChequeReportController"/>
+
+	</object>
+
+  <!--Daily Report Modify Listing-->
+  <object id="frmTCMVEW00065" type="Ace.Cbs.Tcm.Vew.TCMVEW00065, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="DailyReportListingModifyController" ref="DailyReportListingModifyController"/>
+  </object>
+
+  <object id="frmTCMVEW00030" type="Ace.Cbs.Tcm.Vew.TCMVEW00030, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="DailyReportListingController"/>
+  </object>
+  
+  <object id="frmTCMVEW00052.ReportViewer" type="Ace.Cbs.Tcm.Vew.TCMVEW00052, Ace.Cbs.Tcm.Vew" parent="NonSecureDockForm" singleton="false">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  
+  <!--Ledger Balance By Transaction-->
+  <object id="frmTCMVEW00066" type="Ace.Cbs.Tcm.Vew.TCMVEW00066, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="LedgerBalanceController"/>
+  </object>
+
+	<!--IndividualDenominationDelete-->
+	<object id="frmTCMVEW00011" type="Ace.Cbs.Tcm.Vew.TCMVEW00011, Ace.Cbs.Tcm.Vew" parent="NonSecureDockForm" singleton="false">
+		<property name="Controller" ref="IndiDenoDeleteController"/>
+		<property name="IsShowDialog" value="false"/>
+	</object>
+
+  <object id="frmTCMVEW00067.ReportViewer" type="Ace.Cbs.Tcm.Vew.TCMVEW00067, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="IsShowDialog" value="false"/>
+  </object>
+  
+  <!--DenominationDelete-->
+  <object id="frmTCMVEW00031" type="Ace.Cbs.Tcm.Vew.TCMVEW00031, Ace.Cbs.Tcm.Vew" parent="NonSecureDockForm" singleton="false">
+    <!--<property name="Controller" ref="IndiDenoDeleteController"/>-->
+    <property name="IsShowDialog" value="false"/>
+  </object>
+
+	<!--DenominationDelete-->
+	<object id="frmTCMVEW00010" type="Ace.Cbs.Tcm.Vew.TCMVEW00010, Ace.Cbs.Tcm.Vew" parent="NonSecureDockForm" singleton="false">
+		<property name="Controller" ref="DenoDeleteController"/>		
+	</object>
+
+	<!--Interest Edit Entry-->
+	<object id="frmTCMVEW00009.OverdraftInterest" type="Ace.Cbs.Tcm.Vew.TCMVEW00009, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="InterestEditController"/>
+		<property name="FormName" value="OverdraftInterest"/>
+	</object>
+
+	<object id="frmTCMVEW00009.CommitmentFees" type="Ace.Cbs.Tcm.Vew.TCMVEW00009, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="InterestEditController"/>
+		<property name="FormName" value="CommitmentFees"/>
+	</object>
+
+	<object id="frmTCMVEW00009.TODExtraCharges" type="Ace.Cbs.Tcm.Vew.TCMVEW00009, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="InterestEditController"/>
+		<property name="FormName" value="TODExtraCharges"/>
+	</object>
+
+	<object id="frmTCMVEW00009.TODServiceCharges" type="Ace.Cbs.Tcm.Vew.TCMVEW00009, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="InterestEditController"/>
+		<property name="FormName" value="TODServiceCharges"/>
+	</object>
+
+	<object id="frmTCMVEW00068" type="Ace.Cbs.Tcm.Vew.TCMVEW00068, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+		<property name="Controller" ref="CutOffController"/>
+	</object>
+
+  <object id="frmTCMVEW00071" type="Ace.Cbs.Tcm.Vew.TCMVEW00071, Ace.Cbs.Tcm.Vew" singleton="false" parent="NonSecureBaseForm">
+    <property name="Controller" ref="DatabaseBackupController"/>
+  </object>
+
+</objects>	

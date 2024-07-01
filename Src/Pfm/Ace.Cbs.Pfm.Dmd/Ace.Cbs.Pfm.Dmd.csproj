@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8F20F64D-FF47-47A3-87CA-30D8A12B5B75}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ace.Cbs.Pfm.Dmd</RootNamespace>
+    <AssemblyName>Ace.Cbs.Pfm.Dmd</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ace.Windows.Admin.DataModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Admin.DataModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTO\PFMDTO00005.cs" />
+    <Compile Include="DTO\PFMDTO00012.cs" />
+    <Compile Include="DTO\PFMDTO00013.cs" />
+    <Compile Include="DTO\PFMDTO00036.cs" />
+    <Compile Include="DTO\PFMDTO00042.cs" />
+    <Compile Include="DTO\PFMDTO00067.cs" />
+    <Compile Include="DTO\PFMDTO00078.cs" />
+    <Compile Include="DTO\PFMDTO00079.cs" />
+    <Compile Include="DTO\PFMDTO00080.cs" />
+    <Compile Include="PFMORM00042.cs" />
+    <Compile Include="PFMORM00056.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PFMORM00076.cs" />
+    <Compile Include="DTO\PFMDTO00076.cs" />
+    <Compile Include="PFMORM00075.cs" />
+    <Compile Include="DTO\PFMDTO00056.cs" />
+    <Compile Include="DTO\PFMDTO00075.cs" />
+    <Compile Include="PFMORM00074.cs" />
+    <Compile Include="DTO\PFMDTO00073.cs" />
+    <Compile Include="DTO\PFMDTO00074.cs" />
+    <Compile Include="PFMORM00073.cs" />
+    <Compile Include="DTO\PFMDTO00057.cs" />
+    <Compile Include="DTO\PFMDTO00058.cs" />
+    <Compile Include="DTO\PFMDTO00059.cs" />
+    <Compile Include="DTO\PFMDTO00060.cs" />
+    <Compile Include="DTO\PFMDTO00061.cs" />
+    <Compile Include="DTO\PFMDTO00062.cs" />
+    <Compile Include="DTO\PFMDTO00063.cs" />
+    <Compile Include="DTO\PFMDTO00064.cs" />
+    <Compile Include="DTO\PFMDTO00068.cs" />
+    <Compile Include="DTO\PFMDTO00072.cs" />
+    <Compile Include="DTO\PFMDTO00001.cs" />
+    <Compile Include="DTO\PFMDTO00002.cs" />
+    <Compile Include="DTO\PFMDTO00003.cs" />
+    <Compile Include="DTO\PFMDTO00004.cs" />
+    <Compile Include="DTO\PFMDTO00006.cs" />
+    <Compile Include="DTO\PFMDTO00007.cs" />
+    <Compile Include="DTO\PFMDTO00009.cs" />
+    <Compile Include="DTO\PFMDTO00010.cs" />
+    <Compile Include="DTO\PFMDTO00011.cs" />
+    <Compile Include="DTO\PFMDTO00014.cs" />
+    <Compile Include="DTO\PFMDTO00015.cs" />
+    <Compile Include="DTO\PFMDTO00016.cs" />
+    <Compile Include="DTO\PFMDTO00017.cs" />
+    <Compile Include="DTO\PFMDTO00020.cs" />
+    <Compile Include="DTO\PFMDTO00021.cs" />
+    <Compile Include="DTO\PFMDTO00022.cs" />
+    <Compile Include="DTO\PFMDTO00023.cs" />
+    <Compile Include="DTO\PFMDTO00028.cs" />
+    <Compile Include="DTO\PFMDTO00029.cs" />
+    <Compile Include="DTO\PFMDTO00030.cs" />
+    <Compile Include="DTO\PFMDTO00031.cs" />
+    <Compile Include="DTO\PFMDTO00032.cs" />
+    <Compile Include="DTO\PFMDTO00033.cs" />
+    <Compile Include="DTO\PFMDTO00034.cs" />
+    <Compile Include="DTO\PFMDTO00038.cs" />
+    <Compile Include="DTO\PFMDTO00039.cs" />
+    <Compile Include="DTO\PFMDTO00040.cs" />
+    <Compile Include="DTO\PFMDTO00041.cs" />
+    <Compile Include="DTO\PFMDTO00043.cs" />
+    <Compile Include="DTO\PFMDTO00044.cs" />
+    <Compile Include="DTO\PFMDTO00045.cs" />
+    <Compile Include="DTO\PFMDTO00048.cs" />
+    <Compile Include="DTO\PFMDTO00049.cs" />
+    <Compile Include="DTO\PFMDTO00050.cs" />
+    <Compile Include="DTO\PFMDTO00053.cs" />
+    <Compile Include="DTO\PFMDTO00054.cs" />
+    <Compile Include="DTO\PFMDTO00055.cs" />
+    <Compile Include="PFMORM00053.cs" />
+    <Compile Include="PFMORM00001.cs" />
+    <Compile Include="PFMORM00002.cs" />
+    <Compile Include="PFMORM00003.cs" />
+    <Compile Include="PFMORM00004.cs" />
+    <Compile Include="PFMORM00006.cs" />
+    <Compile Include="PFMORM00007.cs" />
+    <Compile Include="PFMORM00009.cs" />
+    <Compile Include="PFMORM00010.cs" />
+    <Compile Include="PFMORM00011.cs" />
+    <Compile Include="PFMORM00014.cs" />
+    <Compile Include="PFMORM00015.cs" />
+    <Compile Include="PFMORM00016.cs" />
+    <Compile Include="PFMORM00017.cs" />
+    <Compile Include="PFMORM00020.cs" />
+    <Compile Include="PFMORM00021.cs" />
+    <Compile Include="PFMORM00022.cs" />
+    <Compile Include="PFMORM00023.cs" />
+    <Compile Include="PFMORM00028.cs" />
+    <Compile Include="PFMORM00029.cs" />
+    <Compile Include="PFMORM00030.cs" />
+    <Compile Include="PFMORM00031.cs" />
+    <Compile Include="PFMORM00032.cs" />
+    <Compile Include="PFMORM00033.cs" />
+    <Compile Include="PFMORM00034.cs" />
+    <Compile Include="PFMORM00036.cs" />
+    <Compile Include="PFMORM00038.cs" />
+    <Compile Include="PFMORM00039.cs" />
+    <Compile Include="PFMORM00040.cs" />
+    <Compile Include="PFMORM00041.cs" />
+    <Compile Include="PFMORM00043.cs" />
+    <Compile Include="PFMORM00044.cs" />
+    <Compile Include="PFMORM00045.cs" />
+    <Compile Include="PFMORM00048.cs" />
+    <Compile Include="PFMORM00054.cs" />
+    <Compile Include="PFMORM00057.cs" />
+    <Compile Include="PFMORM00058.cs" />
+    <Compile Include="PFMORM00078.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Loan\Ace.Cbs.Loan.Dmd\Ace.Cbs.Loan.Dmd.csproj">
+      <Project>{9D836AEE-6202-4573-B5CD-EB5D6F0F50FA}</Project>
+      <Name>Ace.Cbs.Loan.Dmd</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

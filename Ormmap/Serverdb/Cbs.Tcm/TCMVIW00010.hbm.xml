@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Tcm.Dmd" namespace="Ace.Cbs.Tcm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+	<import class="Ace.Cbs.Tel.Dmd.TLMDTO00018, Ace.Cbs.Tel.Dmd" rename="loan"/>
+	
+	<class name="TCMVIW00010" table="SYSTEM_SHUTDOWN_VW" mutable="false">
+
+		<id name="Id" type="Int32" unsaved-value="0">
+		</id>
+		<property name="LNO">
+			<column name="LNO" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="AccountNo">
+			<column name="AcctNo" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="AType">
+			<column name="AType" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="BType">
+			<column name="BType" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="SDate">
+			<column name="SDate" sql-type="datetime" not-null="false" />
+		</property>
+		<property name="SAmount">
+			<column name="SAmt" sql-type="numeric" not-null="false" />
+		</property>
+		<property name="Time">
+			<column name="Time" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="Loans_Type">
+			<column name="Loans_Type" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="ExpireDate">
+			<column name="ExpireDate" sql-type="datetime" not-null="false" />
+		</property>
+		<property name="IntRate">
+			<column name="IntRate" sql-type="numeric" not-null="false" />
+		</property>
+		<property name="UnUsedRate">
+			<column name="UnUsedRate" sql-type="numeric" not-null="false" />
+		</property>
+		<property name="FirstSAmount">
+			<column name="FirstSAmt" sql-type="numeric" not-null="false" />
+		</property>
+		<property name="LasIntDate">
+			<column name="LasIntDate" sql-type="datetime" not-null="false" />
+		</property>
+		<property name="LasRepayNo">
+			<column name="LasRepayNo" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="Min_Period">
+			<column name="Min_Period" sql-type="numeric" not-null="false" />
+		</property>
+		<property name="Vouchered">
+			<column name="Vouchered" sql-type="bit" not-null="false" />
+		</property>
+		<property name="ACSign">
+			<column name="ACSign" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="UserNo">
+			<column name="UserNo" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="Assessor">
+			<column name="Assessor" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="Lawer">
+			<column name="Lawer" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="LegalCase">
+			<column name="LegalCase" sql-type="bit" not-null="false" />
+		</property>
+		<property name="LegalDate">
+			<column name="LegalDate" sql-type="datetime" not-null="false" />
+		</property>
+		<property name="LegaLawer">
+			<column name="LegaLawer" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="CloseDate">
+			<column name="CloseDate" sql-type="datetime" not-null="false" />
+		</property>
+		<property name="NPLCase">
+			<column name="NPLCase" sql-type="bit" not-null="false" />
+		</property>
+		<property name="NPLDate">
+			<column name="NPLDate" sql-type="datetime" not-null="false" />
+		</property>
+		<property name="LastUserNo">
+			<column name="LastUserNo" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="LastDate">
+			<column name="LastDate" sql-type="datetime" not-null="false" />
+		</property>
+		<property name="Partial">
+			<column name="Partial" sql-type="bit" not-null="false" />
+		</property>
+		<property name="VoucherDate">
+			<column name="VoucherDate" sql-type="datetime" not-null="false" />
+		</property>
+		<property name="PartialNo">
+			<column name="PartialNo" sql-type="int" not-null="false" />
+		</property>
+		<property name="Scharges">
+			<column name="Scharges" sql-type="numeric" not-null="false" />
+		</property>
+		<property name="TodSerial">
+			<column name="TodSerial" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="TodCloseDate">
+			<column name="TodCloseDate" sql-type="datetime" not-null="false" />
+		</property>
+		<property name="Charges_Status">
+			<column name="Charges_Status" sql-type="char" not-null="false" />
+		</property>
+		<property name="ISEXPIREDATE">
+			<column name="ISEXPIREDDATE" sql-type="datetime" not-null="false" />
+		</property>
+		<property name="Sourcebr">
+			<column name="Sourcebr" sql-type="varchar" not-null="false" />
+		</property>
+		<property name="Active">
+			<column name="Active" sql-type="varchar" not-null="false" />
+		</property>
+
+		</class>
+
+	<query name="SelectInsuranceExpiredLoans">
+		<![CDATA[
+    select new loan
+    (
+    l.LNO,
+    l.AccountNo,
+    l.Loans_Type,
+    l.ISEXPIREDATE,
+    l.SAmount
+    )
+    from TCMVIW00010 as l
+    where Sourcebr = :SourceBr and
+    convert(char(10),l.ISEXPIREDATE,111) < convert(char(10),:sysdate,111) 
+		]]>
+  </query>
+  
+
+</hibernate-mapping>

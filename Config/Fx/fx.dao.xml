@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    DataAccess Objects Settings
+  </description>
+
+  <!--//MenuDAO//-->
+  <object id="MenuDAO" type="Ace.Windows.Admin.Dao.MenuDAO, Ace.Windows.Admin.Dao"  singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//ActivateUserDAO//-->
+  <object id="ActivateUserDAO" type="Ace.Windows.Admin.Dao.ActivateUserDAO, Ace.Windows.Admin.Dao"  singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  
+  <!--//GroupDAO//-->
+  <object id="GroupDAO" type="Ace.Windows.Admin.Dao.GroupDAO, Ace.Windows.Admin.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//RoleDAO//-->
+  <object id="RoleDAO" type="Ace.Windows.Admin.Dao.RoleDAO, Ace.Windows.Admin.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//UserDAO//-->
+  <object id="UserDAO" type="Ace.Windows.Admin.Dao.UserDAO, Ace.Windows.Admin.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//ProgramDAO//-->
+  <object id="ProgramDAO" type="Ace.Windows.Admin.Dao.ProgramDAO, Ace.Windows.Admin.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--// ProgramInMenuDAO//-->
+  <object id="ProgramInMenuDAO" type="Ace.Windows.Admin.Dao.ProgramInMenuDAO, Ace.Windows.Admin.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--// MenuInGroupDAO//-->
+  <object id="MenuInGroupDAO" type="Ace.Windows.Admin.Dao.MenuInGroupDAO, Ace.Windows.Admin.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--// ProgramInGroupDAO//-->
+  <object id="ProgramInGroupDAO" type="Ace.Windows.Admin.Dao.ProgramInGroupDAO, Ace.Windows.Admin.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//Installer Update Definition Dao //-->
+  <object id="InstallerUpdateDefinitionDAO" type="Ace.Windows.CXServer.Dao.FXCXDAO00007, Ace.Windows.CXServer" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//Installer Update Log Dao //-->
+  <object id="InstallerUpdateLogDAO" type="Ace.Windows.CXServer.Dao.FXCXDAO00008, Ace.Windows.CXServer" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//CityCodeDAO//-->
+  <object id="CityCodeDAO" type="Ace.Windows.Admin.Dao.CityDAO, Ace.Windows.Admin.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//StateCodeDAO//-->
+  <object id="StateCodeDAO" type="Ace.Windows.Admin.Dao.StateDAO, Ace.Windows.Admin.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//TownshipCodeDAO//-->
+  <object id="TownshipCodeDAO" type="Ace.Windows.Admin.Dao.TownshipDAO, Ace.Windows.Admin.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//WorkStationDAO//-->
+  <object id="WorkStationDAO" type="Ace.Windows.Admin.Dao.WorkStationDAO, Ace.Windows.Admin.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//BranchDAO//-->
+  <object id="BranchDAO" type="Ace.Windows.Admin.Dao.BranchDAO, Ace.Windows.Admin.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//COUNTERINFODAO//-->
+  <object id="CounterInfoDAO" type="Ace.Windows.Admin.Dao.CounterInfoDAO, Ace.Windows.Admin.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//User Permission//-->
+  <object id="UserPermissionDAO" type="Ace.Windows.Admin.Dao.UserPermissionDAO, Ace.Windows.Admin.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//CounterTypeDAO//-->
+  <object id="CounterTypeDAO" type="Ace.Windows.Admin.Dao.CounterTypeDAO, Ace.Windows.Admin.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//CurDAO//-->
+  <object id="CurDAO" type="Ace.Windows.Admin.Dao.CurrencyDAO, Ace.Windows.Admin.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--COADAO-->
+  <object id="COADAO" type="Ace.Windows.Admin.Dao.ChargeOfAccountDAO, Ace.Windows.Admin.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <object id="COASetupDAO" type="Ace.Windows.Admin.Dao.ChargeOfAccountSetupDAO, Ace.Windows.Admin.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//CCOADAO//-->
+  <object id="CCOADAO" type="Ace.Windows.Admin.Dao.CurrencyChargeOfAccountDAO, Ace.Windows.Admin.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//FormatDefinitionDAO//-->
+  <object id="FormatDefinitionDAO" type="Ace.Windows.Admin.Dao.FormatDefinitionDAO, Ace.Windows.Admin.Dao" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//FormatDAO//-->
+  <object id="FormatDAO" type="Ace.Windows.Admin.Dao.FormatDAO, Ace.Windows.Admin.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--Region Installer-->
+
+
+  <!--//CodeGeneratorDAO//-->
+  <object id="FX.CodeGeneratorDAO" type="Ace.Windows.Admin.Dao.CodeGeneratorDAO, Ace.Windows.Admin.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+  <!--//WorkStationTypeDAO//-->
+  <object id="WorkStationTypeDAO" type="Ace.Windows.Admin.Dao.WorkStationTypeDAO, Ace.Windows.Admin.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//HierarchyWorkStationDAO//-->
+  <object id="HierarchyWorkStationDAO" type="Ace.Windows.Admin.Dao.HierarchyWorkStationDAO, Ace.Windows.Admin.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//HierarchyWorkStationDAO//-->
+  <object id="CounterInformationDAO" type="Ace.Windows.Admin.Dao.CounterInformationDAO, Ace.Windows.Admin.Dao" singleton="false">
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--//HierarchyWorkStationDAO//-->
+  <object id="AppSettingDAO" type="Ace.Windows.CXServer.Dao.FXCXDAO00009, Ace.Windows.CXServer" singleton="false" >
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+
+  <!--EndRegion Installer-->
+</objects>

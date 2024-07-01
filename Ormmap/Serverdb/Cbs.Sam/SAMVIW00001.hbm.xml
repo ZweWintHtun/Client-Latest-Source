@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--VW_RATELIST-->
+<!-- 
+// <copyright file="SAMVIW00001.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>Hsu Wai Htoo</CreatedUser>
+// <CreatedDate>2015-02-02</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version></Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Sam.Dmd" namespace="Ace.Cbs.Sam.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Sam.Dmd.SAMDTO00056, Ace.Cbs.Sam.Dmd" rename="vintrateDto"/>
+  <class name="SAMVIW00001" table="VW_RATELIST" mutable="false" >
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>   
+    <property name="CODE">
+<column name="CODE"/>
+</property>
+
+    <property name="DURATION">
+ <column name="DURATION"/>
+ </property>
+
+<property name="DESP">
+ <column name="DESP"/>
+ </property>
+
+<property name="RATE">
+ <column name="RATE"/>
+ </property>
+
+<property name="DATE_TIME">
+ <column name="DATE_TIME"/>
+ </property>
+
+<property name="USERNO">
+ <column name="USERNO"/>
+ </property>
+
+<property name="STATUS">
+ <column name="STATUS"/>
+ </property>
+  </class>
+</hibernate-mapping>

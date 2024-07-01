@@ -1,0 +1,744 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--RE-->
+<!-- 
+// <copyright file="TLMORM00001.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>Nyo Me San</CreatedUser>
+// <CreatedDate>2013-05-21</CreatedDate>
+// <UpdatedUser>Hay Mar</UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version>1.0</Version>
+
+-->
+<hibernate-mapping assembly="Ace.Cbs.Tel.Dmd" namespace="Ace.Cbs.Tel.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+	
+	<import class="Ace.Cbs.Tel.Dmd.TLMDTO00001, Ace.Cbs.Tel.Dmd" rename="redto"/>
+	
+	<class name="TLMORM00001" table="RE">	
+		
+		<id name="RegisterNo">			
+			<column name="RegisterNo" sql-type="varchar" not-null="true" />
+		</id>
+
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="true"/>
+		</version>
+		
+		<property name="EncashNo">
+			<column name="EncashNo" sql-type="varchar" not-null="false" />
+		</property>
+		
+		<property name="Ebank">
+			<column name="Ebank" sql-type="varchar" not-null="false" />
+		</property>
+		
+		<property name="Br_Alias">
+			<column name="Br_Alias" sql-type="varchar" not-null="false" />
+		</property>
+		
+		<property name="Type">
+			<column name="Type" sql-type="varchar" not-null="false" />
+		</property>
+		
+		<property name="Name">
+			<column name="Name" sql-type="nvarchar" not-null="false" />
+		</property>
+		
+		<property name="NRC">
+			<column name="NRC" sql-type="nvarchar" not-null="false" />
+		</property>
+		
+		<property name="ToAccountNo">
+			<column name="ToAcctNo" sql-type="varchar" not-null="false" />
+		</property>
+		
+		<property name="ToName">
+			<column name="ToName" sql-type="nvarchar" not-null="false" />
+		</property>
+		
+		<property name="ToNRC">
+			<column name="ToNRC" sql-type="nvarchar" not-null="false" />
+		</property>
+		
+		<property name="ToAddress">
+			<column name="ToAddress" sql-type="nvarchar" not-null="false" />
+		</property>
+		
+		<property name="TestKey">
+			<column name="TestKey" sql-type="numeric" not-null="false" />
+		</property>
+		
+		<property name="Amount">
+			<column name="Amount" sql-type="numeric" not-null="false" />
+		</property>
+		
+		<property name="Date_Time">
+			<column name="Date_Time" sql-type="datetime" not-null="false" />
+		</property>
+		
+		<property name="IssueDate">
+			<column name="IssueDate" sql-type="datetime" not-null="false" />
+		</property>
+		
+		<property name="AccountSign">
+			<column name="AcSign" sql-type="varchar" not-null="false" />
+		</property>
+		
+		<property name="UserNo">
+			<column name="UserNo" sql-type="varchar" not-null="false" />
+		</property>
+		
+		<property name="Budget">
+			<column name="Budget" sql-type="varchar" not-null="false" />
+		</property>
+		
+		<property name="PrintStatus">
+			<column name="PrintStatus" sql-type="smallint" not-null="false" />
+		</property>
+		
+		<property name="PhoneNo">
+			<column name="PhoneNo" sql-type="nvarchar" not-null="false" />
+		</property>
+		
+		<property name="ToPhoneNo">
+			<column name="ToPhoneNo" sql-type="nvarchar" not-null="false" />
+		</property>
+		
+		<property name="UniqueId">
+			<column name="UId" sql-type="char" not-null="false" />
+		</property>
+		
+		<property name="SourceBranchCode">
+			<column name="SourceBr" sql-type="varchar" not-null="true" />
+		</property>
+		
+		<property name="Currency">
+			<column name="Cur" sql-type="varchar" not-null="true" />
+		</property>
+		
+		<property name="SettlementDate">
+			<column name="SettlementDate" sql-type="datetime" not-null="false" />
+		</property>
+
+		<!--Support Fields-->
+		
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+		
+	</class>
+  <query name="CXDAO00008.SelectByRERegisterNo">
+    select new redto
+    (re.RegisterNo,
+    re.ToAccountNo,
+    re.ToName,
+    re.Amount,
+    re.IssueDate,
+    re.Currency
+    )
+    from TLMORM00001 as re where re.RegisterNo=:registerNo and re.Active = true
+
+  </query>
+  
+  <!--Select RE Information fot EncashNo Editting-->
+  <query name="SelectREInfoByRegisterNo">
+    select new redto
+    (
+    re.RegisterNo,
+    re.Ebank,
+    re.Br_Alias,
+    re.Amount,
+    re.ToAccountNo,
+    re.ToName,
+    re.ToNRC,
+    re.ToAddress,
+    re.Name,
+    re.NRC
+    )
+    from TLMORM00001 as re where re.RegisterNo=:registerNo
+    and re.SourceBranchCode =:branchno
+    and re.Active = true
+
+  </query>
+
+	<query name="TLMDAO00001.SelectEncashData">
+		<![CDATA[
+		select new redto
+		(
+		re.RegisterNo,
+		re.Ebank,
+		re.ToAccountNo,
+		re.ToName,
+		re.Amount,
+		re.Currency,
+		re.AccountSign,
+		re.SourceBranchCode
+		)
+		from TLMORM00001 as re where (re.IssueDate = null or re.IssueDate = '')
+		and (re.ToAccountNo <> :istoAcctno)
+		and substring(re.ToAccountNo,1,2) <> :toAcctno 
+		and re.SourceBranchCode =:sourceBr
+    and re.Active = true order by re.RegisterNo
+		]]>
+	</query>
+
+	<query name="TLMDAO00001.SelectEncashDataCashType">
+    select new redto
+    (
+    re.RegisterNo,
+    re.Ebank,
+    re.ToAccountNo,
+    re.ToName,
+    re.Amount,
+    re.Currency,
+    re.AccountSign,
+    re.SourceBranchCode
+    )
+    from TLMORM00001 as re
+    where (re.IssueDate = null or re.IssueDate = '')
+    and (re.ToAccountNo = null or re.ToAccountNo = '' or re.ToAccountNo = :istoAcctno)
+    and re.SourceBranchCode =:sourceBr
+    and re.Active = true
+    order by re.RegisterNo
+  </query>
+
+
+  <!--UpdateREByRegiserNo-->
+  <query name="TLMDAO00001.UpdateREByRegisterNo">
+    update TLMORM00001 re set
+    re.IssueDate=:issueDate,
+    re.UpdatedUserId=:updatedUserId,
+    re.UpdatedDate=:updatedDate
+    where re.RegisterNo=:registerNo
+    and re.Active= true
+  </query>
+
+  <!--CheckExistRegisterNo-->
+	<query name="TLMDAO00001.CheckExist">
+		select new redto (
+		re.RegisterNo
+		)
+		from TLMORM00001 as re
+		where re.RegisterNo =: RegisterNo
+		and re.Active = true
+	</query>
+
+	<query name="CXDAO00006.SelectREByPONo">
+    select new redto
+    (
+    re.RegisterNo,
+    re.EncashNo,
+    re.Ebank,
+    re.Br_Alias,
+    re.Type,
+    re.Name,
+    re.NRC,
+    re.ToAccountNo,
+    re.ToName,
+    re.ToNRC,
+    re.ToAddress,
+    re.TestKey,
+    re.Amount,
+    re.Date_Time,
+    re.IssueDate,
+    re.AccountSign,
+    re.UserNo,
+    re.Budget,
+    re.PrintStatus,
+    re.PhoneNo,
+    re.ToPhoneNo,
+    re.UniqueId,
+    re.SourceBranchCode,
+    re.Currency,
+    re.SettlementDate,
+    re.Active,
+    re.CreatedDate,
+    re.CreatedUserId,
+    re.UpdatedDate,
+    re.UpdatedUserId
+    )
+    from TLMORM00001 as re
+    where re.ToAccountNo=:poNo
+    and re.Budget=:budgetYear
+    and re.SourceBranchCode=:sourcebr
+    and re.Active=true
+  </query>
+
+	<!-- SelectREByRegisterNo--><!--
+  <query name="TLMDAO00001.SelectREByRegisterNo">
+    select new redto
+    (
+    re.RegisterNo
+    re.EncashNo
+    re.Ebank
+    re.Br_Alias
+    re.Type
+    re.Name
+    re.NRC
+    re.ToAccountNo
+    re.ToName
+    re.ToNRC
+    re.ToAddress
+    re.TestKey
+    re.Amount
+    re.Date_Time
+    re.IssueDate
+    re.AccountSign
+    re.UserNo
+    re.Budget
+    re.PrintStatus
+    re.PhoneNo
+    re.ToPhoneNo
+    re.UniqueId
+    re.SourceBranchCode
+    re.Currency
+    re.SettlementDate
+    re.Active
+    re.CreatedDate
+    re.CreatedUserId
+    re.UpdatedDate
+    re.UpdatedUserId
+    )
+    from TLMORM00001 as re
+    where re.RegisterNo=:registerNo
+    and re.Ebank=:ebank
+    and re.ToAccountNo=:toAccountNo
+    and re.ToName=:toName
+    and re.ToNRC=:toNRC
+    and re.ToAddress=:toAddress
+    and re.Amount=:amount
+    and re.Active=true
+  </query>-->
+
+	<query name="TLMDAO00001.SelectRegisterNo">
+		<![CDATA[
+		select new redto
+		(
+		re.RegisterNo
+		)
+		from TLMORM00001 as re where (re.IssueDate = null or re.IssueDate = '') and (re.ToAccountNo <> null and re.ToAccountNo != '')
+		and substring(re.ToAccountNo,1,2) <> :toAcctno and re.Active = true order by re.RegisterNo
+		]]>
+	</query>
+
+
+
+	<query name="TLMDAO00001.UpdateRE">
+    update TLMORM00001 re
+    set
+    re.IssueDate = :issuedate,
+    re.EncashNo = :encashno,
+    re.SettlementDate = :settlementdate,
+    re.UpdatedUserId = :updatedUserId,
+    re.UpdatedDate = :updatedDate
+    where re.RegisterNo = :registerNo
+    and re.Active = true
+  </query>
+
+ 
+
+  <query name="TLMDAO00001.SelectToAcctNoByPONO">
+    select new redto
+    (
+    re.RegisterNo,
+    re.ToAccountNo
+    )
+    from TLMORM00001 as re
+    where re.ToAccountNo in (:polist)
+    and re.Active = true
+  </query>
+
+	<query name="TLMDAO00001.SelectEncashDataForIBLReconcile">
+		select new redto
+		(
+		re.RegisterNo,
+		re.Currency,
+		re.Amount,
+		re.ToAccountNo,
+		re.ToName,
+		re.Name,
+		re.Ebank,
+		re.SourceBranchCode
+		)
+		from TLMORM00001 as re
+		where Convert(char(10),re.Date_Time,111) = Convert(char(10),:datetime,111)
+		and re.Type = :type
+		and re.Ebank = :ebank
+		and re.SourceBranchCode = :sourcebrcode
+		and re.Active = true
+		order by re.RegisterNo
+	</query>
+
+  <query name="TLMDAO00001.SelectREForClearingPosting">
+    select new redto
+    (
+    re.RegisterNo,
+    re.EncashNo,
+    re.Currency,
+    re.Amount,
+    re.ToAccountNo,
+    re.ToName,
+    re.Name,
+    re.ToNRC,
+    re.NRC,
+    re.Date_Time,
+    re.Ebank,
+    re.SourceBranchCode,
+    re.PrintStatus,
+    re.TestKey,
+    re.Br_Alias,
+    re.Type,
+    re.ToAddress,
+    re.AccountSign,
+    re.Budget
+    )
+    from TLMORM00001 as re
+    where Convert(char(10),re.Date_Time,111) = :datetime
+    and (re.ToAccountNo !=null and re.ToAccountNo != '')
+    and (re.IssueDate != null and re.IssueDate != '')
+    and re.SourceBranchCode = :sourcebrcode
+    and re.Active = true
+    order by re.ToAccountNo
+  </query>
+
+  <!--<query name="TLMDAO00001.SelectEncashDataForIBLReconcileSide">
+    select new redto
+    (
+    re.RegisterNo,
+    re.Amount,
+    re.ToAccountNo,
+    re.ToName,
+    re.Name,
+    re.Ebank
+    )
+    from TLMORM00001 as re
+    where re.DateTime = :datetime
+    and re.Type = :type
+    and re.Ebank = :ebank
+    and (re.SendDate != null and re.SendDate != '')
+    and re.Active = true
+    order by re.RegisterNo
+  </query>-->
+
+  
+  <!-- SelectREForPassing-->
+	
+  <query name="TLMDAO00001.Select.EncashRemitPassingData">
+    select new redto
+    (
+    re.RegisterNo,
+    re.EncashNo,
+    re.Ebank,
+    re.Br_Alias,
+    re.Type,
+    re.Name,
+    re.NRC,
+    re.ToAccountNo,
+    re.ToName,
+    re.ToNRC,
+    re.ToAddress,
+    re.TestKey,
+    re.Amount,
+    re.Date_Time,
+    re.IssueDate,
+    re.AccountSign,
+    re.UserNo,
+    re.Budget,
+    re.PrintStatus,
+    re.PhoneNo,
+    re.ToPhoneNo,
+    re.UniqueId,
+    re.SourceBranchCode,
+    re.Currency,
+    re.SettlementDate,
+    re.Active,
+    re.CreatedDate,
+    re.CreatedUserId,
+    re.UpdatedDate,
+    re.UpdatedUserId
+    )
+    from TLMORM00001 as re
+    where re.Type = :type
+    and (re.IssueDate is null or re.IssueDate = '')
+    and re.SourceBranchCode =:sourceBranch
+    and re.Active = true
+    order by  re.Ebank , re.Date_Time
+  </query>
+
+  <!-- TLMDAO00001.Select.RegisterNoByPO-->
+	<query name="TLMDAO00001.Select.RegisterNoByPO">
+		select new redto
+		(
+		re.RegisterNo,
+		re.Active
+		)
+		from TLMORM00001 as re
+		where re.ToAccountNo = :acctno
+		and re.Active = true
+	</query>
+
+
+
+  <!-- TLMDAO00001.UpdatePrintStatusByRegisterNo in PO Printing-->
+  <query name="TLMDAO00001.UpdatePrintStatusByRegisterNo">
+    update TLMORM00001 re set
+    re.PrintStatus=:printstatus,
+    re.UpdatedUserId=:updatedUserId,
+    re.UpdatedDate=:updatedDate
+    where re.RegisterNo=:registerNo
+    and re.Active= true
+  </query>
+
+  <!-- TLMDAO00001.UpdateReEntityByRegisterNo for EncashNo Editting-->
+  <query name="TLMDAO00001.UpdateReEntityByRegisterNo">
+    update TLMORM00001 re set
+    re.RegisterNo =:registerno,
+    re.UpdatedUserId = :updatedUserId,
+    re.UpdatedDate = :updatedDate
+    where re.RegisterNo =:registerno_old
+    and re.Active= true
+  </query>
+
+
+  <!-- SelectRE-->
+	<query name="TLMDAO00001.SelectRE">
+    select new redto
+    (
+    re.RegisterNo,
+    re.EncashNo,
+    re.Ebank,
+    re.Br_Alias,
+    re.Type,
+    re.Name,
+    re.NRC,
+    re.ToAccountNo,
+    re.ToName,
+    re.ToNRC,
+    re.ToAddress,
+    re.TestKey,
+    re.Amount,
+    re.Date_Time,
+    re.IssueDate,
+    re.AccountSign,
+    re.UserNo,
+    re.Budget,
+    re.PrintStatus,
+    re.PhoneNo,
+    re.ToPhoneNo,
+    re.UniqueId,
+    re.SourceBranchCode,
+    re.Currency,
+    re.SettlementDate,
+    re.Active,
+    re.CreatedDate,
+    re.CreatedUserId,
+    re.UpdatedDate,
+    re.UpdatedUserId
+    )
+    from TLMORM00001 as re
+    where (re.Date_Time!=null and re.Date_Time!='')
+    and (re.IssueDate!= null and re.IssueDate!='')
+    and re.SourceBranchCode=:SourceBranchCode
+    and re.ToAccountNo not in (:polist)
+    and re.Active = true
+    <!--and re.ToAccountNo not in (:polist)-->
+	</query>
+
+	<query name="TLMDAO00001.DeleteRE">
+		delete from TLMORM00001 as re where nullif(re.Date_Time,'')!= ''
+		and nullif(re.IssueDate,'')!= ''
+		and re.SourceBranchCode=:SourceBranchCode
+		and re.ToAccountNo in (:polist)
+    and re.Active = true
+	</query>
+
+	<!-- TLMDAO00001.Select.REInfoByRegisterNo-->
+	<query name="TLMDAO00001.Select.REInfoByRegisterNo">
+		select new redto
+		(
+		re.RegisterNo,
+		re.Name,
+		re.Currency,
+		re.Amount,
+		re.IssueDate,
+		re.ToAccountNo,
+		re.Active
+		)
+		from TLMORM00001 as re
+		where re.RegisterNo = :registerno
+		and (re.ToAccountNo = null or re.ToAccountNo = '')
+		and (re.IssueDate = null or re.IssueDate = '')
+		and re.Active = true
+	</query>
+
+	
+	<!-- TLMDAO00001.UpdateReInfo-->
+
+	<query name="TLMDAO00001.UpdateReInfo">
+
+		update TLMORM00001 re
+		set
+		re.RegisterNo = :registerno,
+		re.EncashNo = :encashno,
+		re.ToAccountNo = :toaccountno,
+		re.IssueDate = :issuedate,
+		re.SettlementDate = :settlementdate,
+		re.UpdatedUserId = :updatedUserId,
+		re.UpdatedDate = :updatedDate
+		where re.RegisterNo = :registerno
+		and re.Active = true
+	</query>
+  
+  <!--TLMDAO00001.SelectByRegisterNo-->
+  <query name="TLMDAO00001.SelectByRegisterNo">
+    select new redto
+    (
+    re.RegisterNo,
+    re.EncashNo,
+    re.Ebank,
+    re.Br_Alias,
+    re.Type,
+    re.Name,
+    re.NRC,
+    re.ToAccountNo,
+    re.ToName,
+    re.ToNRC,
+    re.ToAddress,
+    re.TestKey,
+    re.Amount,
+    re.Date_Time,
+    re.IssueDate,
+    re.AccountSign,
+    re.UserNo,
+    re.Budget,
+    re.PrintStatus,
+    re.PhoneNo,
+    re.ToPhoneNo,
+    re.UniqueId,
+    re.SourceBranchCode,
+    re.Currency,
+    re.SettlementDate,
+    re.Active,
+    re.CreatedDate,
+    re.CreatedUserId,
+    re.UpdatedDate,
+    re.UpdatedUserId
+    )
+    from TLMORM00001 as re
+    where
+    re.RegisterNo = :registerNo and
+    re.SourceBranchCode = :sourceBr and
+    re.Active = true
+  </query>
+  
+  <!--TLMDAO00001.UpdateByResigerNo-->
+  <query name="TLMDAO00001.UpdateByResigerNo">
+    update TLMORM00001 re
+    set
+    re.Name = :name,
+    re.NRC = :nrc,
+    re.PhoneNo = :phone,
+    re.ToName = :toName,
+    re.ToNRC = :toNRC,
+    re.ToAddress = :toAddress,
+    re.ToPhoneNo = :toPhone,
+    re.UpdatedDate = :updatedDate,
+    re.UpdatedUserId = :updatedUserId
+    where
+    re.RegisterNo = :registerNo and
+    re.SourceBranchCode = :sourceBr and
+    re.Active = true
+  </query>
+
+  <query name="TLMDAO00001.UpdateByRegisterNoWithAmountAndIssueDate">
+	  update TLMORM00001 re
+	  set
+	  re.Amount = :amount,
+	  re.IssueDate = null,
+	  re.ToName = :name,
+	  re.ToNRC = :nrc,
+	  re.ToAddress = :address,
+	  re.ToPhoneNo = :phoneno,
+	  re.UpdatedDate = :updatedDate,
+	  re.UpdatedUserId = :updatedUserId
+	  where
+	  re.RegisterNo = :registerNo and
+	  re.SourceBranchCode = :sourceBr and
+	  re.Active = true
+  </query>
+  
+  <query name="TLMDAO00001.UpdateByRegisterNoWithAmount">
+	  update TLMORM00001 re
+	  set
+	  re.Amount = :amount,
+	  re.ToName = :name,
+	  re.ToNRC = :nrc,
+	  re.ToAddress = :address,
+	  re.ToPhoneNo = :phoneno,
+	  re.UpdatedDate = :updatedDate,
+	  re.UpdatedUserId = :updatedUserId
+	  where
+	  re.RegisterNo = :registerNo and
+	  re.SourceBranchCode = :sourceBr and
+	  re.Active = true
+  </query>
+
+  <query name="TLMDAO00001.DeleteREByResigsterNo">
+    update TLMORM00001 re
+    set
+    re.Active = false,
+    re.UpdatedDate = :updatedDate,
+    re.UpdatedUserId = :updatedUserId
+    where
+    re.RegisterNo = :registerNo and
+    re.SourceBranchCode = :sourceBr and
+    re.Active = true
+  </query>
+
+  <query name="TLMDAO00001.UpdateIssueDateAndToAcctNo">
+    update TLMORM00001 re
+    set
+    re.IssueDate = null,
+    re.ToAccountNo = null,
+    re.UpdatedDate = :updatedDate,
+    re.UpdatedUserId = :updatedUserId
+    where
+    re.RegisterNo = :registerNo and
+    re.SourceBranchCode = :sourceBr and
+    re.Active = true
+  </query>
+
+  <query name="TLMDAO00001.SelectREForPrinting">
+		select new redto
+		(
+		re.RegisterNo,
+		re.EncashNo,
+		re.Currency,
+		re.Amount,
+		re.ToAccountNo,
+		re.ToName,
+		re.Name,
+		re.ToNRC,
+		re.NRC,
+		re.Date_Time,
+		re.Ebank,
+		re.SourceBranchCode,
+		re.PrintStatus,
+		re.TestKey,
+		re.Br_Alias,
+		re.Type,
+		re.ToAddress,
+		re.AccountSign,
+		re.Budget
+		)
+		from TLMORM00001 as re
+		where re.RegisterNo = :registerNo
+		and re.SourceBranchCode = :sourceBranch
+		and re.Active = true
+
+	</query>
+
+</hibernate-mapping>

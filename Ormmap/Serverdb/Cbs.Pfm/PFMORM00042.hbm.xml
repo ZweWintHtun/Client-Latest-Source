@@ -1,0 +1,1175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Report_TLF-->
+<!-- 
+// <copyright file="PFMORM00042.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>NL</CreatedUser>
+// <CreatedDate>11/21/2013</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version></Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+	<import class="Ace.Cbs.Pfm.Dmd.PFMDTO00042, Ace.Cbs.Pfm.Dmd" rename="report_tlfDto"/>
+	<class name="PFMORM00042" table="Report_TLF">
+
+		<!--<id name="Eno">
+			<column name="Eno" sql-type="varchar" not-null="false" />
+		</id>-->
+    <composite-id>
+      <key-property name="Eno" column="Eno"></key-property>
+      <key-property name="AcctNo" column="AcctNo"></key-property>
+      <key-property name="ACode" column="ACode"></key-property>
+	  <key-property name="Status" column="Status"></key-property>	
+    </composite-id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+
+		<!--<property name="Eno">
+			<column name="Eno" sql-type="varchar" not-null="false" />
+		</property>-->
+
+		<!--<property name="AcctNo">
+			<column name="AcctNo" sql-type="varchar" not-null="false" />
+		</property>-->
+
+		<property name="Amount">
+			<column name="Amount" sql-type="numeric" not-null="false" />
+		</property>
+
+		<!--<property name="ACode">
+			<column name="ACode" sql-type="varchar" not-null="false" />
+		</property>-->
+
+		<property name="HomeAmount">
+			<column name="HomeAmount" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="HomeAmt">
+			<column name="HomeAmt" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="HomeOAmt">
+			<column name="HomeOAmt" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LocalAmount">
+			<column name="LocalAmount" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LocalAmt">
+			<column name="LocalAmt" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="LocalOAmt">
+			<column name="LocalOAmt" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="SourceCur">
+			<column name="SourceCur" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="CurCode">
+			<column name="CurCode" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="Cheque">
+			<column name="Cheque" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="PONo">
+			<column name="PONo" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="DRegisterNo">
+			<column name="DRegisterNo" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="ERegisterNo">
+			<column name="ERegisterNo" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="LgNo">
+			<column name="LgNo" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="LNo">
+			<column name="LNo" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="Desp">
+			<column name="Desp" sql-type="nvarchar" not-null="false" />
+		</property>
+
+		<property name="Narration">
+			<column name="Narration" sql-type="nvarchar" not-null="false" />
+		</property>
+
+		<property name="DATE_TIME">
+			<column name="DATE_TIME" sql-type="datetime" not-null="false" />
+		</property>
+
+		<!--<property name="Status">
+			<column name="Status" sql-type="varchar" not-null="false" />
+		</property>-->
+
+		<property name="TranCode">
+			<column name="TranCode" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="ACSign">
+			<column name="ACSign" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="DomBankPost">
+			<column name="DomBankPost" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="ClrPostStatus">
+			<column name="ClrPostStatus" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="OrgnEno">
+			<column name="OrgnEno" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="OrgnTranCode">
+			<column name="OrgnTranCode" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="OrgnCheque">
+			<column name="OrgnCheque" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="OrgnPONo">
+			<column name="OrgnPONo" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="OrgnDReg">
+			<column name="OrgnDReg" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="OrgnEReg">
+			<column name="OrgnEReg" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="OrgnLgNo">
+			<column name="OrgnLgNo" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="OrgnLno">
+			<column name="OrgnLno" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="UserNo">
+			<column name="UserNo" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="ContraEno">
+			<column name="ContraEno" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="ContraLno">
+			<column name="ContraLno" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="ContraDate">
+			<column name="ContraDate" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="OtherBank">
+			<column name="OtherBank" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="DeliverReturn">
+			<column name="DeliverReturn" sql-type="bit" not-null="false" />
+		</property>
+
+		<property name="ReceiptNo">
+			<column name="ReceiptNo" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="OtherBankChq">
+			<column name="OtherBankChq" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="OtherBankAcctNo">
+			<column name="OtherBankAcctNo" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="CustId">
+			<column name="CustId" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="GChqNo">
+			<column name="GChqNo" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="ChkTime">
+			<column name="ChkTime" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="WorkStation">
+			<column name="WorkStation" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="SourceBr">
+			<column name="SourceBr" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="Rate">
+			<column name="Rate" sql-type="numeric" not-null="false" />
+		</property>
+
+		<property name="SettlementDate">
+			<column name="SettlementDate" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="Channel">
+			<column name="Channel" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="RefVNo">
+			<column name="RefVNo" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="RefType">
+			<column name="RefType" sql-type="varchar" not-null="false" />
+		</property>
+
+		<property name="UId">
+			<column name="UId" sql-type="char" not-null="false" />
+		</property>
+
+
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+
+
+    <many-to-one name="CledgerAcctNo" column="[AcctNo]" class="PFMORM00028" insert="false" update="false"></many-to-one>
+    <many-to-one name="FledgerAcctNo" column="[AcctNo]" class="PFMORM00023" insert="false" update="false"></many-to-one>
+	</class>
+
+	<!--Listing Cheque PO Receipt-->
+	<query name ="PFMDAO00042.Cheque.POReceipt">
+    select new report_tlfDto
+    (
+    rtlf.Eno,
+    rtlf.AcctNo,
+    po.PONo,
+    po.ADate,
+    po.IDate,
+    rtlf.SourceCur,
+    rtlf.LocalAmount,
+    rtlf.DATE_TIME,
+    rtlf.OtherBank,
+    rtlf.UserNo,
+    rtlf.OrgnEno,
+    rtlf.WorkStation,
+    rtlf.Amount
+    )
+    from PFMORM00042 as rtlf , TLMORM00016 as po
+    where rtlf.TranCode = 'PORCL' and rtlf.PONo = po.PONo
+    and Convert(char(10),rtlf.DATE_TIME,111) between :startdate and :enddate
+    and rtlf.WorkStation = :workstation
+    and (po.IDate is not null or po.IDate != '')
+    and rtlf.Active = true
+    and po.Active = true
+    </query>
+	
+	
+	<!--PFMDAO00042.ClearingPaidChequeListing-->
+	<query name="PFMDAO00042.ClearingPaidChequeListing">
+    select new report_tlfDto
+    (
+    rtlf.Eno,
+    rtlf.AcctNo,
+    rtlf.Cheque,
+    rtlf.SourceCur,
+    rtlf.LocalAmt,
+    rtlf.DATE_TIME,
+    rtlf.OtherBank,
+    rtlf.UserNo,
+    rtlf.OrgnEno,
+    rtlf.Amount
+    )
+    from PFMORM00042 as rtlf
+    where
+    (upper(rtlf.Status) = 'LDR' or upper(rtlf.Status) = 'LCR')
+    and
+    (upper(rtlf.TranCode) = 'CLRECEIPT' or upper(rtlf.TranCode) = 'PORCL' or upper(rtlf.TranCode) = 'RCLDELI')
+    and Convert(char(10),rtlf.DATE_TIME,111) between :startdate and :enddate
+    and rtlf.WorkStation = :workstation
+    and rtlf.Active = true
+  </query>
+	
+	<!--For DailyPosting by Branch-->
+	<query name="ReportTLF.SelectAll">
+		select new report_tlfDto
+		(
+		p.Eno,
+		p.AcctNo,
+		p.Amount,
+		p.ACode,
+		p.HomeAmount,
+		p.HomeAmt,
+		p.HomeOAmt,
+		p.LocalAmount,
+		p.LocalAmt,
+		p.LocalOAmt,
+		p.SourceCur,
+		p.CurCode,
+		p.Cheque,
+		p.PONo,
+		p.DRegisterNo,
+		p.ERegisterNo,
+		p.LgNo,
+		p.LNo,
+		p.Desp,
+		p.Narration,
+		p.DATE_TIME,
+		p.Status,
+		p.TranCode,
+		p.ACSign,
+		p.DomBankPost,
+		p.ClrPostStatus,
+		p.OrgnEno,
+		p.OrgnTranCode,
+		p.OrgnCheque,
+		p.OrgnPONo,
+		p.OrgnDReg,
+		p.OrgnEReg,
+		p.OrgnLgNo,
+		p.OrgnLno,
+		p.UserNo,
+		p.ContraEno,
+		p.ContraLno,
+		p.ContraDate,
+		p.OtherBank,
+		p.DeliverReturn,
+		p.ReceiptNo,
+		p.OtherBankChq,
+		p.OtherBankAcctNo,
+		p.CustId,
+		p.GChqNo,
+		p.ChkTime,
+		p.WorkStation,
+		p.SourceBr,
+		p.Rate,
+		p.SettlementDate,
+		p.Channel,
+		p.RefVNo,
+		p.RefType,
+		p.UId,
+		p.Active,
+		p.TS,
+		p.CreatedUserId,
+		p.CreatedDate,
+		p.UpdatedUserId,
+		p.UpdatedDate
+		)
+		from PFMORM00042 as p
+		where  p.Active = true and p.SourceBr=:sourceBr
+	</query>
+
+	<!--Select Scehdule Report by Transaction Date-->
+	<query name="TCMVEW00029.Schedule.TransactionDate.Report">
+		select new report_tlfDto
+		(
+		rtlf.AcctNo,
+		rtlf.OtherBank,
+		rtlf.OtherBankChq,
+		bcode.BDesp,
+		rtlf.DATE_TIME,
+		rtlf.LocalAmount,
+		rtlf.WorkStation,
+		rtlf.SourceCur,
+		rtlf.SettlementDate
+		)
+		from PFMORM00042 as rtlf, TLMORM00040 as bcode
+		where rtlf.OtherBank = bcode.BCode
+		and rtlf.Status = :lcd
+		and Convert(char(10),rtlf.DATE_TIME,111) = :selectedDateTime
+		and rtlf.WorkStation = :workstation
+		and rtlf.SourceCur= :sourceCur
+		and rtlf.Active = true
+		and bcode.Active = true
+	</query>
+
+	<!--Select Scehdule Report by Settlement Date-->
+	<query name="TCMVEW00029.Schedule.Settlement.Report">
+		select new report_tlfDto
+		(
+		rtlf.AcctNo,
+		rtlf.OtherBank,
+		rtlf.OtherBankChq,
+		bcode.BDesp,
+		rtlf.DATE_TIME,
+		rtlf.LocalAmount,
+		rtlf.WorkStation,
+		rtlf.SourceCur,
+		rtlf.SettlementDate
+		)
+		from PFMORM00042 as rtlf, TLMORM00040 as bcode
+		where rtlf.OtherBank = bcode.BCode
+		and rtlf.Status = :lcd
+		and Convert(char(10),rtlf.SettlementDate,111) = :selectedDateTime
+		and rtlf.WorkStation = :workstation
+		and rtlf.SourceCur= :sourceCur
+		and rtlf.Active = true
+		and bcode.Active = true
+	</query>
+                          
+	<!-- Select Abstract Data by Transaction Date-->
+	<query name="TCMVEW00029.Abstract.TransactionDate.Report">
+		select new report_tlfDto
+		(
+		rtlf.Active,
+		rtlf.Eno,
+		rtlf.TranCode,
+		rtlf.OtherBank,
+		rtlf.OtherBankChq,
+		(case when (substring(rtlf.Eno,1,1) = :r)
+		then
+		rtlf.Cheque
+		end),
+		rtlf.OrgnPONo,
+		rtlf.RefVNo,
+		bcode.BDesp,
+		rtlf.DATE_TIME,
+		rtlf.LocalAmount,
+		rtlf.WorkStation,
+		rtlf.SourceCur,
+		rtlf.SettlementDate,
+		rtlf.PONo,
+		rtlf.RefType
+		)
+		from PFMORM00042 as rtlf,TLMORM00040 as bcode
+		where rtlf.OtherBank = bcode.BCode
+		and substring(rtlf.Status,1,1) = :status
+		and Convert(char(10),rtlf.DATE_TIME,111) = :selectDate
+		and rtlf.WorkStation = :workstation
+		and rtlf.SourceCur= :sourceCur
+		and rtlf.Active = true and bcode.Active = true
+	</query>
+
+	<!-- Select Abstract Data by Settlement Date-->
+	<query name="TCMVEW00029.Abstract.SettlementDate.Report">
+		select new report_tlfDto
+		(
+		rtlf.Active,
+		rtlf.Eno,
+		rtlf.TranCode,
+		rtlf.OtherBank,
+		rtlf.OtherBankChq,
+		(case when (substring(rtlf.Eno,1,1) = :r)
+		then
+		rtlf.Cheque
+		end),
+		rtlf.OrgnPONo,
+		rtlf.RefVNo,
+		bcode.BDesp,
+		rtlf.DATE_TIME,
+		rtlf.LocalAmount,
+		rtlf.WorkStation,
+		rtlf.SourceCur,
+		rtlf.SettlementDate,
+		rtlf.PONo,
+		rtlf.RefType
+		)
+		from PFMORM00042 as rtlf,TLMORM00040 as bcode
+		where rtlf.OtherBank = bcode.BCode
+		and substring(rtlf.Status,1,1) = :status
+		and Convert(char(10),rtlf.SettlementDate,111) = :selectDate
+		and rtlf.WorkStation = :workstation
+		and rtlf.SourceCur= :sourceCur
+		and rtlf.Active = true and bcode.Active = true
+	</query>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~ ♠ Select Scroll Data By Transaction Date ♠ ~~~~~~~~~~~~~~~~~~~~ -->
+	<!--TCMVEW00029.SelectScrollData-->
+	<query name="TCMVEW00029.SelectScrollData.TransactionDate.LC_1">
+		select new report_tlfDto
+		(
+		rtlf.AcctNo,
+		rtlf.OtherBankChq,
+		bcode.BDesp,
+		rtlf.LocalAmount,
+		rtlf.DATE_TIME,
+		rtlf.Eno,
+		rtlf.SettlementDate,
+		rtlf.SourceCur,
+		rtlf.WorkStation
+		)
+		from PFMORM00042 as rtlf ,TLMORM00040 as bcode
+		where rtlf.OtherBank = bcode.BCode
+		and rtlf.Status = :lcd
+		and rtlf.ClrPostStatus = :y
+		and rtlf.WorkStation = :workstation
+		and Convert(char(10),rtlf.DATE_TIME,111) = :selectedDate
+		and rtlf.SourceCur = :selectedCur
+		and rtlf.Active = true and bcode.Active = true
+	</query>
+
+	<!--TCMVEW00029.SelectScrollData-->
+	<query name="TCMVEW00029.SelectScrollData.TransactionDate.LC_2">
+		select new report_tlfDto
+		(
+		rtlf.AcctNo,
+		rtlf.LocalAmount,
+		rtlf.DATE_TIME,
+		rtlf.Eno,
+		rtlf.SettlementDate,
+		rtlf.SourceCur,
+		rtlf.WorkStation
+		)
+		from PFMORM00042 as rtlf,TLMORM00040 as bcode
+		where rtlf.Status = :lcd
+		and rtlf.ClrPostStatus = :y
+		and rtlf.WorkStation = :workstation
+		and Convert(char(10),rtlf.DATE_TIME,111) = :selectedDate
+		and rtlf.SourceCur = :selectedCur
+		and rtlf.Active = true
+	</query>
+
+	<!--TCMVEW00029.SelectScrollData.WithoutReversal-->
+	<query name="TCMVEW00029.SelectScrollData.WithoutReversal.TransactionDate.LC_1">
+		select new report_tlfDto
+		(
+		rtlf.AcctNo,
+		rtlf.OtherBankChq,
+		bcode.BDesp,
+		rtlf.LocalAmount,
+		rtlf.DATE_TIME,
+		rtlf.Eno,
+		rtlf.SettlementDate,
+		rtlf.SourceCur,
+		rtlf.WorkStation
+		)
+		from PFMORM00042 as rtlf,TLMORM00040 as bcode
+		where rtlf.OtherBank=bcode.BCode
+		and rtlf.Status = :lcd
+		and rtlf.ClrPostStatus = :y
+		and (rtlf.OrgnPONo is null or rtlf.OrgnPONo = '')
+		and rtlf.WorkStation = :workstation
+		and Convert(char(10),rtlf.DATE_TIME,111) = :selectedDate
+		and rtlf.SourceCur = :selectedCur
+		and rtlf.Active = true and bcode.Active = true
+	</query>
+	
+	<!--TCMVEW00029.SelectScrollData.WithoutReversal-->
+	<query name="TCMVEW00029.SelectScrollData.WithoutReversal.TransactionDate.LC_2">
+		select new report_tlfDto
+		(
+		rtlf.AcctNo,
+		rtlf.LocalAmount,
+		rtlf.DATE_TIME,
+		rtlf.Eno,
+		rtlf.SettlementDate,
+		rtlf.SourceCur,
+		rtlf.WorkStation
+		)
+		from PFMORM00042 as rtlf,TLMORM00040 as bcode
+		where rtlf.Status = :lcd
+		and rtlf.ClrPostStatus = :y
+		and (rtlf.OrgnPONo is null or rtlf.OrgnPONo = '')
+		and rtlf.WorkStation = :workstation
+		and Convert(char(10),rtlf.DATE_TIME,111) = :selectedDate
+		and rtlf.SourceCur = :selectedCur
+		and rtlf.Active = true
+	</query>
+
+	<!--TCMVEW00029.SelectScrollData-->
+	<query name="TCMVEW00029.SelectScrollData.TransactionDate.LD">
+		select new report_tlfDto
+		(
+		rtlf.AcctNo,
+		rtlf.LocalAmount,
+		rtlf.DATE_TIME,
+		rtlf.SettlementDate,
+		rtlf.SourceCur,
+		rtlf.WorkStation
+		)
+		from PFMORM00042 as rtlf
+		where rtlf.Status = :lcd or rtlf.Status = :ldp
+		and rtlf.WorkStation = :workstation
+		and Convert(char(10),rtlf.DATE_TIME,111) = :selectedDate
+		and rtlf.SourceCur = :selectedCur
+		and rtlf.Active = true
+	</query>
+
+	<!--TCMVEW00029.SelectScrollData-->
+	<query name="TCMVEW00029.SelectScrollData.WithoutReversal.TransactionDate.LD">
+		select new report_tlfDto
+		(
+		rtlf.AcctNo,
+		rtlf.LocalAmount,
+		rtlf.DATE_TIME,
+		rtlf.SettlementDate,
+		rtlf.SourceCur,
+		rtlf.WorkStation
+		)
+		from PFMORM00042 as rtlf
+		where rtlf.Status = :lcd or rtlf.Status = :ldp
+		and rtlf.Active = true
+		and rtlf.WorkStation = :workstation
+		and Convert(char(10),rtlf.DATE_TIME,111) = :selectedDate
+		and rtlf.SourceCur = :selectedCur
+		and (rtlf.OrgnPONo is null or rtlf.OrgnPONo = '')
+	</query>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~ Select Scroll Data By Settlement Date ~~~~~~~~~~~~~~~~~~~~ -->
+	<!--TCMVEW00029.SelectScrollData-->
+	<query name="TCMVEW00029.SelectScrollData.SettlementDate.LC_1">
+		select new report_tlfDto
+		(
+		rtlf.AcctNo,
+		rtlf.OtherBankChq,
+		bcode.BDesp,
+		rtlf.LocalAmount,
+		rtlf.DATE_TIME,
+		rtlf.Eno,
+		rtlf.SettlementDate,
+		rtlf.SourceCur,
+		rtlf.WorkStation
+		)
+		from PFMORM00042 as rtlf ,TLMORM00040 as bcode
+		where rtlf.OtherBank = bcode.BCode
+		and rtlf.Status = :lcd
+		and rtlf.ClrPostStatus = :y
+		and rtlf.WorkStation = :workstation
+		and Convert(char(10),rtlf.SettlementDate,111) = :selectedDate
+		and rtlf.SourceCur = :selectedCur
+		and rtlf.Active = true and bcode.Active = true
+	</query>
+
+	<!--TCMVEW00029.SelectScrollData-->
+	<query name="TCMVEW00029.SelectScrollData.SettlementDate.LC_2">
+		select new report_tlfDto
+		(
+		rtlf.AcctNo,
+		rtlf.LocalAmount,
+		rtlf.DATE_TIME,
+		rtlf.Eno,
+		rtlf.SettlementDate,
+		rtlf.SourceCur,
+		rtlf.WorkStation
+		)
+		from PFMORM00042 as rtlf,TLMORM00040 as bcode
+		where rtlf.Status = :lcd
+		and rtlf.ClrPostStatus = :y
+		and rtlf.WorkStation = :workstation
+		and Convert(char(10),rtlf.SettlementDate,111) = :selectedDate
+		and rtlf.SourceCur = :selectedCur
+		and rtlf.Active = true 
+	</query>
+
+	<!--TCMVEW00029.SelectScrollData.WithoutReversal-->
+	<query name="TCMVEW00029.SelectScrollData.WithoutReversal.SettlementDate.LC_1">
+		select new report_tlfDto
+		(
+		rtlf.AcctNo,
+		rtlf.OtherBankChq,
+		bcode.BDesp,
+		rtlf.LocalAmount,
+		rtlf.DATE_TIME,
+		rtlf.Eno,
+		rtlf.SettlementDate,
+		rtlf.SourceCur,
+		rtlf.WorkStation
+		)
+		from PFMORM00042 as rtlf,TLMORM00040 as bcode
+		where rtlf.OtherBank=bcode.BCode
+		and rtlf.Status = :lcd
+		and rtlf.ClrPostStatus = :y
+		and (rtlf.OrgnPONo is null or rtlf.OrgnPONo = '')
+		and rtlf.WorkStation = :workstation
+		and Convert(char(10),rtlf.SettlementDate,111) = :selectedDate
+		and rtlf.SourceCur = :selectedCur
+		and rtlf.Active = true and bcode.Active = true
+	</query>
+
+	<!--TCMVEW00029.SelectScrollData.WithoutReversal-->
+	<query name="TCMVEW00029.SelectScrollData.WithoutReversal.SettlementDate.LC_2">
+		select new report_tlfDto
+		(
+		rtlf.AcctNo,
+		rtlf.LocalAmount,
+		rtlf.DATE_TIME,
+		rtlf.Eno,
+		rtlf.SettlementDate,
+		rtlf.SourceCur,
+		rtlf.WorkStation
+		)
+		from PFMORM00042 as rtlf,TLMORM00040 as bcode
+		where rtlf.Status = :lcd
+		and rtlf.ClrPostStatus = :y
+		and (rtlf.OrgnPONo is null or rtlf.OrgnPONo = '')
+		and rtlf.WorkStation = :workstation
+		and Convert(char(10),rtlf.SettlementDate,111) = :selectedDate
+		and rtlf.SourceCur = :selectedCur
+		and rtlf.Active = true
+	</query>
+
+	<!--TCMVEW00029.SelectScrollData-->
+	<query name="TCMVEW00029.SelectScrollData.SettlementDate.LD">
+		select new report_tlfDto
+		(
+		rtlf.AcctNo,
+		rtlf.LocalAmount,
+		rtlf.DATE_TIME,
+		rtlf.SettlementDate,
+		rtlf.SourceCur,
+		rtlf.WorkStation
+		)
+		from PFMORM00042 as rtlf
+		where rtlf.Status = :lcd or rtlf.Status = :ldp
+		and rtlf.WorkStation = :workstation
+		and Convert(char(10),rtlf.SettlementDate,111) = :selectedDate
+		and rtlf.SourceCur = :selectedCur
+		and rtlf.Active = true
+	</query>
+
+	<!--TCMVEW00029.SelectScrollData-->
+	<query name="TCMVEW00029.SelectScrollData.WithoutReversal.SettlementDate.LD">
+		select new report_tlfDto
+		(
+		rtlf.AcctNo,
+		rtlf.LocalAmount,
+		rtlf.DATE_TIME,
+		rtlf.SettlementDate,
+		rtlf.SourceCur,
+		rtlf.WorkStation
+		)
+		from PFMORM00042 as rtlf
+		where rtlf.Status = :lcd or rtlf.Status = :ldp
+		and rtlf.Active = true
+		and rtlf.WorkStation = :workstation
+		and Convert(char(10),rtlf.SettlementDate,111) = :selectedDate
+		and rtlf.SourceCur = :selectedCur
+		and (rtlf.OrgnPONo is null or rtlf.OrgnPONo = '')
+	</query>
+
+	<query name="PFMDAO00042.SelectReportTLF">
+		select new report_tlfDto
+(AcctNo,DATE_TIME,LocalAmount,ACSign,Amount)
+from PFMORM00042 as rtlf
+		where
+		rtlf.WorkStation = :workstation
+		and month(rtlf.DATE_TIME) = :month
+		and year(rtlf.DATE_TIME) = :year
+		and substring(rtlf.ACSign,1,1) = :acSign
+		and substring(rtlf.Status,2,1) = :status
+		and (rtlf.OrgnEno is null or rtlf.OrgnEno = '')
+		and rtlf.SourceBr = :sourceBr
+		and rtlf.Active = true
+	</query>
+    
+		
+
+
+  <query name="PFMDAO00042.SelectByDebitListing">
+    select new report_tlfDto
+(
+    Eno,
+    AcctNo,
+    Desp,
+    Amount
+    )
+    from PFMORM00042 as rtlf
+    where
+    rtlf.WorkStation = :workstation
+    and rtlf.ACSign Like :acsign
+    and rtlf.SourceBr = :sourceBr
+    and rtlf.TranCode = :transactioncode
+    and Convert(char(10),rtlf.SettlementDate,111) =  Convert(char(10),:datetime,111)
+    and rtlf.SourceCur = : sourceCur
+    and rtlf.Active = true
+
+  </query>
+    
+
+
+
+
+
+  <!--♠ Overdraft Daybook TransactionDate WithoutReversal ♠-->
+	<query name="PFMDAO00042.SelectOverDraftDayBook.TransactionDate.WithoutReversal">
+		select new report_tlfDto
+		(
+		rtlf.Status,
+		rtlf.AcctNo,
+		cs.AccountNo,
+		cs.AccountName,
+		rtlf.Amount,
+		rtlf.LocalOAmt,
+		rtlf.DATE_TIME,
+		rtlf.WorkStation,
+		rtlf.SourceCur,
+		rtlf.Rate,
+		rtlf.SettlementDate,
+		rtlf.SourceBr
+		)
+		from PFMORM00042 as rtlf, ChargeOfAccountSetup as cs
+		where rtlf.SourceCur = cs.CurrencyCode
+		and cs.AccountName = :od
+		and
+		((substring(rtlf.ACSign,1,1) = :c and (rtlf.OrgnEno is null or rtlf.OrgnEno = ''))
+		or
+		(rtlf.AcctNo = (select c.AccountNo from ChargeOfAccountSetup as c where c.AccountName = :od))
+		and (rtlf.OrgnEno is null or rtlf.OrgnEno = '') and (rtlf.OrgnTranCode is null or rtlf.OrgnTranCode = ''))
+		and rtlf.SourceCur = :selectedCurrency
+		and Convert(char(10),rtlf.DATE_TIME,111) = :selectedDateTime
+		and rtlf.WorkStation = :workstation
+		and rtlf.Active = true and cs.Active = true
+	</query>
+
+
+	<!--♠ Overdraft Daybook Settlement Date WithoutReversal ♠-->
+	<query name="PFMDAO00042.SelectOverDraftDayBook.SettlementDate.WithoutReversal">
+		select new report_tlfDto
+		(
+		rtlf.Status,
+		rtlf.AcctNo,
+		cs.AccountNo,
+		cs.AccountName,
+		rtlf.Amount,
+		rtlf.LocalOAmt,
+		rtlf.DATE_TIME,
+		rtlf.WorkStation,
+		rtlf.SourceCur,
+		rtlf.Rate,
+		rtlf.SettlementDate,
+		rtlf.SourceBr
+		)
+		from PFMORM00042 as rtlf, ChargeOfAccountSetup as cs
+		where rtlf.SourceCur = cs.CurrencyCode
+		and cs.AccountName = :od
+		and
+		((substring(rtlf.ACSign,1,1) = :c and (rtlf.OrgnEno is null or rtlf.OrgnEno = ''))
+		or
+		(rtlf.AcctNo = (select c.AccountNo from ChargeOfAccountSetup as c where c.AccountName = :od))
+		and (rtlf.OrgnEno is null or rtlf.OrgnEno = '') and (rtlf.OrgnTranCode is null or rtlf.OrgnTranCode = ''))
+		and rtlf.SourceCur = :selectedCurrency
+		and Convert(char(10),rtlf.SettlementDate,111) = :selectedDateTime
+		and rtlf.WorkStation = :workstation
+		and rtlf.Active = true and cs.Active = true
+	</query>
+
+	<!--♠ Overdraft Daybook TransactionDate With Reversal ♠-->
+	<query name="PFMDAO00042.SelectOverDraftDayBook.TransactionDate.WithReversal">
+		select new report_tlfDto
+		(
+		rtlf.Status,
+		rtlf.AcctNo,
+		cs.AccountNo,
+		cs.AccountName,
+		rtlf.Amount,
+		rtlf.LocalOAmt,
+		rtlf.DATE_TIME,
+		rtlf.WorkStation,
+		rtlf.SourceCur,
+		rtlf.Rate,
+		rtlf.SettlementDate,
+		rtlf.SourceBr
+		)
+		from PFMORM00042 as rtlf, ChargeOfAccountSetup as cs
+		where rtlf.SourceCur = cs.CurrencyCode
+		and cs.AccountName = :od
+		and
+		((substring(rtlf.ACSign,1,1) = :c)
+		or
+		(rtlf.AcctNo = (select c.AccountNo from ChargeOfAccountSetup as c where c.AccountName = :od)))
+		and rtlf.SourceCur = :selectedCurrency
+		and Convert(char(10),rtlf.DATE_TIME,111) = :selectedDateTime
+		and rtlf.WorkStation = :workstation
+		and rtlf.Active = true and cs.Active = true
+	</query>
+
+	<!--♠ Overdraft Daybook Settlement Date With Reversal ♠-->
+	<query name="PFMDAO00042.SelectOverDraftDayBook.SettlementDate.WithReversal">
+		select new report_tlfDto
+		(
+		rtlf.Status,
+		rtlf.AcctNo,
+		cs.AccountNo,
+		cs.AccountName,
+		rtlf.Amount,
+		rtlf.LocalOAmt,
+		rtlf.DATE_TIME,
+		rtlf.WorkStation,
+		rtlf.SourceCur,
+		rtlf.Rate,
+		rtlf.SettlementDate,
+		rtlf.SourceBr
+		)
+		from PFMORM00042 as rtlf, ChargeOfAccountSetup as cs
+		where rtlf.SourceCur = cs.CurrencyCode
+		and
+		((substring(rtlf.ACSign,1,1) = :c)
+		or
+		(rtlf.AcctNo = (select c.AccountNo from ChargeOfAccountSetup as c where c.AccountName = :od)))
+		and rtlf.SourceCur = :selectedCurrency
+		and Convert(char(10),rtlf.SettlementDate,111) = :selectedDateTime
+		and rtlf.WorkStation = :workstation
+		and rtlf.Active = true and cs.Active = true
+	</query>
+
+	<!-- VW_BANKCASH_WITHOUT_REVERSAL -->
+	<query name="TCMVEW00025.SelectBankCashWithoutReversal1">
+		select new report_tlfDto
+		(
+		ACode,
+		Status,
+		LocalAmt,
+		LocalOAmt,
+		DATE_TIME,
+		WorkStation,
+		SourceCur,
+		SettlementDate,
+		Narration
+		)
+		from PFMORM00042 as rtlf
+		where rtlf.WorkStation = :workStationId
+		and rtlf.SourceCur=:sourceCurrency
+		and rtlf.SourceBr = :branchCode
+		and Convert(char(10),rtlf.SettlementDate,111) = :dateTime
+		and (substring(rtlf.Status,1,2)=:cashCreditStatus
+		or substring(rtlf.Status,1,2)=:cashDebitStatus)
+		and (rtlf.OrgnEno is null or rtlf.OrgnEno = '')
+		and rtlf.LocalAmt > 0
+		and rtlf.Active=true
+		Order By rtlf.ACode,rtlf.Status
+	</query>
+
+	<query name="TCMVEW00025.SelectBankCashWithoutReversal2">
+		select new report_tlfDto(
+		(
+		select coaSetup.AccountNo
+		from ChargeOfAccountSetup as coaSetup
+		where coaSetup.AccountName=:overDraftStatus
+		and coaSetup.CurrencyCode=:sourceCurrency
+		and coaSetup.SourceBranchCode=:branchCode
+		and coaSetup.Active=true
+		),
+		Status,
+		LocalAmt,
+		LocalOAmt,
+		DATE_TIME,
+		WorkStation,
+		SourceCur,
+		SettlementDate,
+		Narration
+		)
+		from PFMORM00042 as rtlf
+		where rtlf.WorkStation = :workStationId
+		and rtlf.SourceCur=:sourceCurrency
+		and rtlf.SourceBr = :branchCode
+		and Convert(char(10),rtlf.SettlementDate,111) = :dateTime
+		and (substring(rtlf.ACode,1,3)=:currentControlStatus
+		or substring(rtlf.Status,1,2)=:cashCreditStatus
+		or substring(rtlf.Status,1,2)=:cashDebitStatus)
+		and (rtlf.OrgnEno is null or rtlf.OrgnEno = '')
+		and rtlf.LocalOAmt > 0
+		and rtlf.Active=true
+	</query>
+
+
+	<!-- VW_BANKCASH -->
+	<query name="TCMVEW00025.SelectBankCashWithReversal1">
+		select new report_tlfDto
+		(
+		ACode,
+		Status,
+		LocalAmt,
+		LocalOAmt,
+		DATE_TIME,
+		WorkStation,
+		SourceCur,
+		SettlementDate,
+		Narration
+		)
+		from PFMORM00042 as rtlf
+		where  rtlf.WorkStation = :workStationId
+		and rtlf.SourceCur=:sourceCurrency
+		and rtlf.SourceBr = :branchCode
+		and Convert(char(10),rtlf.SettlementDate,111) = :dateTime
+		and (substring(rtlf.Status,1,2)=:cashCreditStatus
+		or substring(rtlf.Status,1,2)=:cashDebitStatus)
+		and rtlf.LocalAmt > 0
+		and rtlf.Active=true
+	</query>
+
+	<query name="TCMVEW00025.SelectBankCashWithReversal2">
+		select new report_tlfDto(
+		(
+		select coaSetup.AccountNo
+		from ChargeOfAccountSetup as coaSetup
+		where coaSetup.AccountName=:overDraftStatus
+		and coaSetup.CurrencyCode=:sourceCurrency
+		and coaSetup.SourceBranchCode=:branchCode
+		and coaSetup.Active=true
+		),
+		Status,
+		LocalAmt,
+		LocalOAmt,
+		DATE_TIME,
+		WorkStation,
+		SourceCur,
+		SettlementDate,
+		Narration
+		)
+		from PFMORM00042 as rtlf
+		where rtlf.WorkStation = :workStationId
+		and rtlf.SourceCur=:sourceCurrency
+		and rtlf.SourceBr = :branchCode
+		and Convert(char(10),rtlf.SettlementDate,111) = :dateTime
+		and (substring(rtlf.ACode,1,3)=:currentControlStatus)
+		or (substring(rtlf.Status,1,2)=:cashCreditStatus
+		or substring(rtlf.Status,1,2)=:cashDebitStatus)
+		and rtlf.LocalOAmt > 0
+		and rtlf.Active=true
+	</query>
+
+	<!--Region Delivered Cheque -->
+	<query name="PFMDAO00042.SelectDeliveredChequeBySourebrAndWorkstation">
+		select new report_tlfDto
+		(
+		Active,
+		Eno,
+		AcctNo,
+		OtherBankChq,
+		SourceCur,
+		LocalAmount,
+		DATE_TIME,
+		OtherBank,
+		ClrPostStatus,
+		WorkStation
+		)
+		from PFMORM00042 as rtlf
+		where rtlf.SourceBr = :sourcebr and
+		rtlf.WorkStation = :workstation and
+		rtlf.Active = true and
+		convert(char(10),rtlf.DATE_TIME,111) between convert(char(10),:startdate,111) and convert(char(10),:enddate,111) and
+		( rtlf.ACSign like 'C%' or rtlf.ACSign like 'S%' or rtlf.ACSign like 'F%')
+	</query>
+  
+  <!--Ledger Listing by Transaction-->
+  <query name="PFMDAO00042.SelectAAcctno">
+	  select new report_tlfDto
+	  (
+	  rtlf.AcctNo
+	  )
+	  from PFMORM00042 as rtlf
+	  where rtlf.WorkStation = :workStationId
+	  and rtlf.SourceCur=:currency
+	  and rtlf.Active = true 
+  </query>
+
+  <query name="PFMDAO00042.SelectCAcctno">
+	  select new report_tlfDto
+	  (
+	  rtlf.AcctNo
+	  )
+	  from PFMORM00042 as rtlf
+	  left join rtlf.CledgerAcctNo as L
+	  where rtlf.WorkStation = :workStationId
+	  and L.AccountSign like 'C%'
+	  and rtlf.SourceCur=:currency
+	  and rtlf.Active = true and L.Active = true
+  </query>
+  
+  <!--//Added by HWKO (17-Aug-2017)-->
+  <query name="PFMDAO00042.SelectBAcctno">
+    select new report_tlfDto
+    (
+    rtlf.AcctNo
+    )
+    from PFMORM00042 as rtlf
+    left join rtlf.CledgerAcctNo as L
+    where rtlf.WorkStation = :workStationId
+    and L.AccountSign like 'B%'
+    and rtlf.SourceCur=:currency
+    and rtlf.Active = true and L.Active = true
+  </query>
+
+  <query name="PFMDAO00042.SelectHAcctno">
+    select new report_tlfDto
+    (
+    rtlf.AcctNo
+    )
+    from PFMORM00042 as rtlf
+    left join rtlf.CledgerAcctNo as L
+    where rtlf.WorkStation = :workStationId
+    and L.AccountSign like 'H%'
+    and rtlf.SourceCur=:currency
+    and rtlf.Active = true and L.Active = true
+  </query>
+
+  <query name="PFMDAO00042.SelectPAcctno">
+    select new report_tlfDto
+    (
+    rtlf.AcctNo
+    )
+    from PFMORM00042 as rtlf
+    left join rtlf.CledgerAcctNo as L
+    where rtlf.WorkStation = :workStationId
+    and L.AccountSign like 'P%'
+    and rtlf.SourceCur=:currency
+    and rtlf.Active = true and L.Active = true
+  </query>
+
+  <query name="PFMDAO00042.SelectDAcctno">
+    select new report_tlfDto
+    (
+    rtlf.AcctNo
+    )
+    from PFMORM00042 as rtlf
+    left join rtlf.CledgerAcctNo as L
+    where rtlf.WorkStation = :workStationId
+    and L.AccountSign like 'D%'
+    and rtlf.SourceCur=:currency
+    and rtlf.Active = true and L.Active = true
+  </query>
+  <!--//End Region-->
+  
+  <query name="PFMDAO00042.SelectSAcctno">
+	  select new report_tlfDto
+	  (
+	  rtlf.AcctNo
+	  )
+	  from PFMORM00042 as rtlf
+	  left join rtlf.CledgerAcctNo as L
+	  where rtlf.WorkStation = :workStationId
+	  and L.AccountSign like 'S%'
+	  and rtlf.SourceCur=:currency
+	  and rtlf.Active = true and L.Active = true
+  </query>
+
+  <query name="PFMDAO00042.SelectFAcctno">
+	  select new report_tlfDto
+	  (
+	  rtlf.AcctNo
+	  )
+	  from PFMORM00042 as rtlf
+	  left join rtlf.FledgerAcctNo as F
+	  where rtlf.WorkStation = :workStationId
+	  and F.AccountSignature like 'F%'
+	  and rtlf.SourceCur=:currency
+	  and rtlf.Active = true and F.Active = true
+  </query>
+
+  <query name="PFMDAO00042.DeleteAllfromReportTlfbySourceBr">
+	  delete from PFMORM00042 where SourceBr = :SourceBr and  Active = true
+  </query>
+  <!--endregion-->
+	
+	
+</hibernate-mapping>

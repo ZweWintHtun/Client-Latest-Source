@@ -1,0 +1,117 @@
+D:\PRISTINE\20181102\201810101\20180531\Output\Ace.Cbs.Pfm.Sve.dll
+D:\PRISTINE\20181102\201810101\20180531\Output\Ace.Cbs.Pfm.Sve.pdb
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.csprojResolveAssemblyReference.cache
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.dll
+D:\PRISTINE\20181102\201810101\20180531\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.pdb
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Output\Ace.Cbs.Pfm.Sve.dll
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Output\Ace.Cbs.Pfm.Sve.pdb
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.csprojResolveAssemblyReference.cache
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.dll
+D:\PRISTINE\20181102\201810101_MyLatest\20180531\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.pdb
+E:\WORKING\Pristine\Pristine Project\Output\Ace.Cbs.Pfm.Sve.dll
+E:\WORKING\Pristine\Pristine Project\Output\Ace.Cbs.Pfm.Sve.pdb
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.csprojResolveAssemblyReference.cache
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.dll
+E:\WORKING\Pristine\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.pdb
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Output\Ace.Cbs.Pfm.Sve.dll
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Output\Ace.Cbs.Pfm.Sve.pdb
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.csprojResolveAssemblyReference.cache
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.dll
+D:\01. Deliver Version\2019\06. June\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.pdb
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.csprojResolveAssemblyReference.cache
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.pdb
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Output\Ace.Cbs.Pfm.Sve.dll
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Output\Ace.Cbs.Pfm.Sve.pdb
+D:\01. Deliver Version\2019\06. June\14\YMP Program\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.dll
+D:\02. Testing Version\My Latest\12092019\Output\Ace.Cbs.Pfm.Sve.dll
+D:\02. Testing Version\My Latest\12092019\Output\Ace.Cbs.Pfm.Sve.pdb
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.csprojResolveAssemblyReference.cache
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.dll
+D:\02. Testing Version\My Latest\12092019\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.pdb
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.csprojResolveAssemblyReference.cache
+D:\02. Testing Version\My Latest\Pristine Project\Output\Ace.Cbs.Pfm.Sve.dll
+D:\02. Testing Version\My Latest\Pristine Project\Output\Ace.Cbs.Pfm.Sve.pdb
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.dll
+D:\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.pdb
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Output\Ace.Cbs.Pfm.Sve.dll
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Output\Ace.Cbs.Pfm.Sve.pdb
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.csprojResolveAssemblyReference.cache
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.dll
+D:\02. Pristine\02. Testing Version\My Latest\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.pdb
+E:\~WorkFromHome\Banking_02\Pristine Project\Output\Ace.Cbs.Pfm.Sve.dll
+E:\~WorkFromHome\Banking_02\Pristine Project\Output\Ace.Cbs.Pfm.Sve.pdb
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.csprojResolveAssemblyReference.cache
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.dll
+E:\~WorkFromHome\Banking_02\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.pdb
+D:\Saung\1.Pristine\Source code\Pristine Project\Output\Ace.Cbs.Pfm.Sve.dll
+D:\Saung\1.Pristine\Source code\Pristine Project\Output\Ace.Cbs.Pfm.Sve.pdb
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.csprojResolveAssemblyReference.cache
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.dll
+D:\Saung\1.Pristine\Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.pdb
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Output\Ace.Cbs.Pfm.Sve.dll
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Output\Ace.Cbs.Pfm.Sve.pdb
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.csprojResolveAssemblyReference.cache
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.dll
+D:\Saung\1.Pristine\03.Source code\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.pdb
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Output\Ace.Cbs.Pfm.Sve.dll
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Output\Ace.Cbs.Pfm.Sve.pdb
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.csprojResolveAssemblyReference.cache
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.dll
+D:\Pristine Source Code\Saung Hnin Oo  Lastest(20211124)\Pristine Project\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.pdb
+D:\Pristine Source Code\Copy of CBS SourceCode\Output\Ace.Cbs.Pfm.Sve.dll
+D:\Pristine Source Code\Copy of CBS SourceCode\Output\Ace.Cbs.Pfm.Sve.pdb
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.csprojResolveAssemblyReference.cache
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.dll
+D:\Pristine Source Code\Copy of CBS SourceCode\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.pdb
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Output\Ace.Cbs.Pfm.Sve.dll
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Output\Ace.Cbs.Pfm.Sve.pdb
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.csprojResolveAssemblyReference.cache
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.dll
+D:\Work_Folder\PRISTINE\Repos\mfi-windows\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.pdb
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Sve.dll
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Sve.pdb
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.csprojResolveAssemblyReference.cache
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.dll
+D:\02. Pristine\05. Latest Source Code (@Client)\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.pdb
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Sve.dll
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Sve.pdb
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.csprojResolveAssemblyReference.cache
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.dll
+D:\Ace Project\#Pristine\Dev\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.pdb
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Sve.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Sve.pdb
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.csprojResolveAssemblyReference.cache
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.dll
+D:\02. Pristine\02. Testing Version\2023\02. Feb\07\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.pdb
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Sve.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Sve.pdb
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.csprojResolveAssemblyReference.cache
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\14\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.pdb
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Sve.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Sve.pdb
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.csprojResolveAssemblyReference.cache
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.dll
+D:\02. Pristine\03. Client Version\2023\02. Feb\20\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.pdb
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Sve.dll
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Sve.pdb
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.csprojResolveAssemblyReference.cache
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.dll
+D:\Ace Project\#Pristine\Dev\20230704\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.pdb
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Sve.dll
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Output\Ace.Cbs.Pfm.Sve.pdb
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.csprojResolveAssemblyReference.cache
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.dll
+D:\# FVS\1. Testing Version\mfi-windows-master\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.pdb
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Output\Ace.Cbs.Pfm.Sve.dll
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Output\Ace.Cbs.Pfm.Sve.pdb
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.csprojResolveAssemblyReference.cache
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.dll
+D:\# FVS\1. Testing Version\FVS Window Source Code\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.pdb
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Output\Ace.Cbs.Pfm.Sve.dll
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Output\Ace.Cbs.Pfm.Sve.pdb
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.dll
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.pdb
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.csproj.AssemblyReference.cache
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.csproj.CoreCompileInputs.cache
+D:\FVS\1. Testing Version\FVS Window (Latest Source)4\Client Latest Source\Src\Pfm\Ace.Cbs.Pfm.Sve\obj\Debug\Ace.Cbs.Pfm.Sve.csproj.CopyComplete

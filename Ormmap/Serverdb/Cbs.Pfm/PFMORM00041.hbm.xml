@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00041, Ace.Cbs.Pfm.Dmd" rename="setupdto"/>
+
+  <class name="PFMORM00041" table="[Setup]" >
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+    
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="false"/>
+    </version>
+
+	  <property name="Fixed3">
+		  <column name="Fixed3" sql-type="numeric(6,2)" not-null="true" default="0"/>
+	  </property>
+	  <property name="Fixed6">
+		  <column name="Fixed6" sql-type="numeric(6,2)" not-null="true" default="0"/>
+	  </property>
+	  <property name="Fixed9">
+		  <column name="Fixed9" sql-type="numeric(6,2)" not-null="true" default="0"/>
+	  </property>
+	  <property name="Fixed12">
+		  <column name="Fixed12" sql-type="numeric(6,2)" not-null="true" default="0"/>
+	  </property>
+	  <property name="Fixed24">
+		  <column name="Fixed24" sql-type="numeric(6,2)" not-null="true" default="0"/>
+	  </property>
+	  <property name="Fixed36">
+		  <column name="Fixed36" sql-type="numeric(6,2)" not-null="true" default="0"/>
+	  </property>
+	  <property name="Saving">
+		  <column name="Saving" sql-type="numeric(6,2)" not-null="true" default="0"/>
+	  </property>
+	  <property name="Tax">
+		  <column name="Tax" sql-type="numeric(6,2)" not-null="true" default="0"/>
+	  </property>
+	  <property name="OD">
+		  <column name="OD" sql-type="numeric(6,2)" not-null="true" default="0"/>
+	  </property>
+	  <property name="Loans">
+		  <column name="Loans" sql-type="numeric(6,2)" not-null="true" default="0"/>
+	  </property>
+	  <property name="LetterofGuarantee">
+		  <column name="LG" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="CurrentIndividual">
+		  <column name="CurInDi" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="CurrentJoint">
+		  <column name="CurJoint" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="CurrentCompany">
+		  <column name="CurCompany" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="CurrentPartner">
+		  <column name="CurPartner" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="CurrentAssociation">
+		  <column name="CurAsso" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="CurSole">
+		  <column name="CurSole" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="SavingIndividual">
+		  <column name="SavInDi" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="SavingJoint">
+		  <column name="SavJoint" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="SavingMinor">
+		  <column name="SavMinor" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="SavingOrganization">
+		  <column name="SavOrgani" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="FixedCompany">
+		  <column name="FixCompany" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="FixedIndividual">
+		  <column name="FixInDi" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="FixedJoint">
+		  <column name="FixJoint" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="FixedMinor">
+		  <column name="FixMinor" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="DenoStatus">
+		  <column name="DenoStatus" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="CCloseCha">
+		  <column name="CCloseCha" sql-type="numeric(15,2)" not-null="true" default="0"/>
+	  </property>
+	  <property name="SCloseCha">
+		  <column name="SCloseCha" sql-type="numeric(15,2)" not-null="true" default="0"/>
+	  </property>
+	  <property name="CurMonth">
+		  <column name="CurMonth" sql-type="numeric(3,0)" not-null="true" default="0"/>
+	  </property>
+	  <property name="SavMonth">
+		  <column name="SavMonth" sql-type="numeric(3,0)" not-null="true" default="0"/>
+	  </property>
+	  <property name="CurrentMinimumBalance">
+		  <column name="CurMinBal" sql-type="numeric(15,2)" not-null="true" default="0"/>
+	  </property>
+	  <property name="SavingMinimumBalance">
+		  <column name="SavMinBal" sql-type="numeric(15,2)" not-null="true" default="0"/>
+	  </property>
+	  <property name="CalMinBal">
+		  <column name="CalMinBal" sql-type="numeric(15,2)" not-null="true" default="0"/>
+	  </property>
+	  <property name="SDInDi">
+		  <column name="SDInDi" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="SDJoint">
+		  <column name="SDJoint" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="SDOrgain">
+		  <column name="SDOrgain" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="SDMinBal">
+		  <column name="SDMinBal" sql-type="numeric(15,2)" not-null="true" default="0"/>
+	  </property>
+	  <property name="CurrencyCode">
+		  <column name="Cur" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="SourceBranchCode">
+		  <column name="SourceBr" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="CashAC">
+		  <column name="CashAC" sql-type="varchar" not-null="true" />
+	  </property>
+
+	  <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  <!--//CXDAO00006.SelectMinBal-->
+  <query name="CXDAO00006.SelectMinBal">
+    Select new setupdto( s.CurrentMinimumBalance,s.SavingMinimumBalance ) from PFMORM00041 as s where s.CurrencyCode= : currencyCode and s.SourceBranchCode =: sourceBranch
+	and s.Active = true
+  </query>
+
+	<query name="PFMDAO00041.UpdateDenostatusBySourceBr">
+    update PFMORM00041 s
+    set s.DenoStatus = :denoStatus,
+    s.UpdatedDate = :updatedDate,
+    s.UpdatedUserId = :updatedUserId
+    where s.SourceBranchCode = :sourceBr and s.Active = true
+
+  </query>
+
+  
+</hibernate-mapping>

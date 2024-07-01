@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--VW_BANKCASH_WITHOUT_REVERSAL_BYHOMECUR-->
+<!-- 
+// <copyright file="TLMVIW00B52.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser> Hsu Wai Htoo </CreatedUser>
+// <CreatedDate> 2013-10-29 </CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>s
+// <Version>1.0</Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Tel.Dmd" namespace="Ace.Cbs.Tel.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00042, Ace.Cbs.Pfm.Dmd" rename="reportgeneratedto"/>
+  <class name="TLMVIW00B52" table="VW_BANKCASH_WITHOUT_REVERSAL_BYHOMECUR" mutable="false" >
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+    <property name="ACode">
+      <column name="ACODE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Status">
+      <column name="STATUS" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="HomeAmt">
+      <column name="HOMEAMT" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="HomeOAmt">
+      <column name="HOMEOAMT" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="Date_Time">
+      <column name="DATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="sourcebr">
+      <column name="sourcebr" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="SourceCur">
+      <column name="SOURCECUR" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="SettlementDate">
+      <column name="SETTLEMENTDATE" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="Narration">
+      <column name="Narration" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="WorkStation">
+      <column name="WorkStation" sql-type="varchar" not-null="false" />
+    </property>
+  </class>
+</hibernate-mapping>

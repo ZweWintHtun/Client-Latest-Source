@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    Controller Objects Settings
+  </description>
+  
+  <!--// CXPrintingUtilities//-->
+  <object id="CXPrintingUtilities" type="Ace.Cbs.Cx.Cle.CXCLE00006, Ace.Cbs.Cx.Cle" singleton="true">
+  </object>
+
+  <!--// CXPrintingController//-->
+  <object id="CXPrintingController" type="Ace.Cbs.Cx.Cle.CXCLE00005, Ace.Cbs.Cx.Cle" singleton="true">
+  </object>
+
+  <!--// CXCLE00013(GetRemitACode Controller)//-->
+  <object id="GetRemitACodeController" type="Ace.Cbs.Cx.Cle.CXCLE00013, Ace.Cbs.Cx.Cle" singleton="true">
+  </object>
+
+  <object id="CXCLE00008" type="Ace.Cbs.Cx.Cle.CXCLE00008, Ace.Cbs.Cx.Cle">
+  </object>
+
+  <object id="CXCLE00014" type="Ace.Cbs.Cx.Cle.CXCLE00014, Ace.Cbs.Cx.Cle">
+  </object>
+
+  <object id="CXCLE00010" type="Ace.Cbs.Cx.Cle.CXCLE00010, Ace.Cbs.Cx.Cle">
+  </object>
+
+  <object id="CXCLE00011" type="Ace.Cbs.Cx.Cle.CXCLE00011, Ace.Cbs.Cx.Cle">
+  </object>
+
+  <object id="CXCLE00012" type="Ace.Cbs.Cx.Cle.CXCLE00012, Ace.Cbs.Cx.Cle">
+  </object>
+
+  <object id="CXCLE00017" type="Ace.Cbs.Cx.Cle.CXCLE00017, Ace.Cbs.Cx.Cle">
+  </object>
+
+  <!--// Manager Approve Controller//-->
+  <object id="ManagerApproveFormController" type="Ace.Cbs.Cx.Cle.CXCTR00016, Ace.Cbs.Cx.Cle" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="ManagerApproveFormErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="ManagerApproveFormValidator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtUserName">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="UserName"/>
+          </object>
+        </entry>
+        <entry key="txtPassword">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Password"/>
+          </object>
+        </entry>
+        <entry key="txtConfirmPassword">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="ConfirmPassword"/>
+          </object>
+        </entry>
+        <entry key="txtTestKey">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="TestKey"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--//GetDenoStringandGetRefundString //-->
+  <object id="CXCLE00009" type="Ace.Cbs.Cx.Cle.CXCLE00009, Ace.Cbs.Cx.Cle">
+  </object>
+  
+  <!--//CalculateCharges //-->
+  <object id="CXCLE00015" type="Ace.Cbs.Cx.Cle.CXCLE00015, Ace.Cbs.Cx.Cle">
+  </object>
+  
+</objects>

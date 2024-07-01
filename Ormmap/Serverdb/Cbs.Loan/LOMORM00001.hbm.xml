@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+	<import class="Ace.Cbs.Loan.Dmd.LOMDTO00001, Ace.Cbs.Loan.Dmd" rename="businessdto"/>
+
+	<class name="LOMORM00001" table="BUSINESS" >
+
+		<id name="Code">
+			<column name="BUSICODE" sql-type="varchar" not-null="true" />
+		</id>
+
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="true"/>
+		</version>
+
+		<property name="Description">
+			<column name="BUSIDESP" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+
+	</class>
+
+	<!--//BusinessDAO.CheckExist//-->
+	<query name="BusinessDAO.CheckExist">
+		select new businessdto
+		( 
+		b.Code,
+		b.Description 
+		)
+		from LOMORM00001 as b
+		where (b.Code =: code or b.Description =: description)
+		and  b.Active = true
+	</query>
+
+	<!--//BusinessDAO.CheckExist2//-->
+	<query name="BusinessDAO.CheckExist2">
+		select new businessdto
+		(
+		b.Code,
+		b.Description,
+		b.Active,
+		b.TS,
+		b.CreatedDate,
+		b.CreatedUserId,
+		b.UpdatedDate,
+		b.UpdatedUserId
+		)
+		from LOMORM00001 as b
+		where (b.Code =: code or b.Description =: description)
+	</query>
+
+	<!--//BusinessDAO.SelectAll//-->
+	<query name="BusinessDAO.SelectAll">
+		select new businessdto
+		(		
+		b.Code,
+		b.Description,
+		b.Active,
+		b.TS,
+		b.CreatedDate,
+		b.CreatedUserId,
+		b.UpdatedDate,
+		b.UpdatedUserId
+		)
+		from LOMORM00001 as b
+		where b.Active = true
+	</query>
+
+	<!--//BusinessDAO.SelectById//-->
+	<query name="BusinessDAO.SelectByCode">
+		select new businessdto(
+		b.Code,
+		b.Description,
+		b.Active,
+		b.TS,
+		b.CreatedDate,
+		b.CreatedUserId,
+		b.UpdatedDate,
+		b.UpdatedUserId
+		)
+		from LOMORM00001 as b
+		where b.Code = :code
+		and b.Active = true
+	</query>
+
+</hibernate-mapping>
+

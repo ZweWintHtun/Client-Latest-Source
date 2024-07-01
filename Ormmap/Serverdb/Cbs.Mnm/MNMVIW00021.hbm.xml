@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00021, Ace.Cbs.Pfm.Dmd" rename="fixdto"/>
+  <class name="MNMVIW00021" table="VW_FIXLIST_ALL" mutable="false">
+
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+
+    <property name="AccountNo">
+      <column name="ACCTNO" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Name">
+      <column name="NAME" sql-type="nvarchar" not-null="false" />
+    </property>
+
+    <property name="CustomerId">
+      <column name="CUSTID" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="Address">
+      <column name="ADDRESS" sql-type="nvarchar" not-null="false" />
+    </property>
+
+    <property name="Phone">
+      <column name="PHONE" sql-type="nvarchar" not-null="false" />
+    </property>
+  
+    <property name="Fax">
+      <column name="FAX" sql-type="nvarchar" not-null="false" />
+    </property>
+    
+    <property name="Township_Code">
+      <column name="TOWNSHIPDESP" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="City_Code">
+      <column name="CITYDESP" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="State_Code">
+      <column name="STATEDESP" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="OpenDate">
+      <column name="OPENDATE" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="AccountSignature">
+      <column name="ACSIGN" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Description">
+      <column name="DESP" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="Nrc">
+      <column name="NRC" sql-type="nvarchar" not-null="false" />
+    </property>
+
+    <property name="CurrencyCode">
+      <column name="CUR" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="SourceBranchCode">
+      <column name="SOURCEBR" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Active" not-null="true"/>
+
+    <property name="AccruedStatus">
+      <column name="ACCRUEDSTATUS" sql-type="varchar" not-null="true" />
+    </property>
+
+  </class>
+
+  <!--//Select FixedDepoInfo For All //-->
+  <query name="SelectFixedDepoInfoForAll">
+    select distinct new fixdto
+    (
+    vw.AccountNo,
+    vw.Name,
+    vw.Address,
+    vw.OpenDate,
+    vw.Phone,
+    vw.Fax,
+    vw.Township_Code,
+    vw.City_Code,
+    vw.State_Code
+    )
+    from MNMVIW00021 as vw
+    where convert(char(10), vw.OpenDate, 111)
+    between convert(char(10), :sdate , 111) and convert(char(10),:edate, 111)
+    and vw.AccountSignature like 'F%'
+    and vw.SourceBranchCode =: branchno
+    and vw.CurrencyCode =:cur
+    and vw.Active = true
+  </query>
+  
+  <!--//Select FixedDepoInfo For All By Filter //-->
+  <query name="SelectFixedDepoInfoForAllByFilter">
+    select distinct new fixdto
+    (
+    vw.AccountNo,
+    vw.Name,
+    vw.Address,
+    vw.OpenDate,
+    vw.Phone,
+    vw.Fax,
+    vw.Township_Code,
+    vw.City_Code,
+    vw.State_Code
+    )
+    from MNMVIW00021 as vw
+    where convert(char(10), vw.OpenDate, 111)
+    between convert(char(10), :sdate , 111) and convert(char(10),:edate, 111)
+    and vw.AccountSignature like 'F%'
+    and vw.SourceBranchCode =: branchno
+    and vw.CurrencyCode =: cur
+    and vw.AccruedStatus =: accruedstatus
+    and vw.Active = true
+  </query>
+  <!--//Select FixedDepoInfo For Other //-->
+  <query name="SelectFixedDepoInfoForOther">
+    select new fixdto
+    (
+    vw.AccountNo,
+    vw.Name,
+    vw.Address,
+    vw.OpenDate,
+    vw.Phone,
+    vw.Fax,
+    vw.Township_Code,
+    vw.City_Code,
+    vw.State_Code
+    )
+    from MNMVIW00021 as vw
+    where convert(char(10), vw.OpenDate, 111)
+    between convert(char(10), :sdate , 111) and convert(char(10),:edate, 111)
+    and vw.SourceBranchCode =: branchno
+    and vw.CurrencyCode =: cur
+    and vw.AccountSignature =: acsign
+    and vw.Active = true
+  </query>
+  <!--//Select FixedDepoInfo For Other By Filter //-->
+  <query name="SelectFixedDepoInfoForOtherByFilter">
+    select new fixdto
+    (
+    vw.AccountNo,
+    vw.Name,
+    vw.Address,
+    vw.OpenDate,
+    vw.Phone,
+    vw.Fax,
+    vw.Township_Code,
+    vw.City_Code,
+    vw.State_Code
+    )
+    from MNMVIW00021 as vw
+    where convert(char(10), vw.OpenDate, 111)
+    between convert(char(10), :sdate , 111) and convert(char(10),:edate, 111)
+    and vw.SourceBranchCode =: branchno
+    and vw.CurrencyCode =: cur
+    and vw.AccountSignature =: acsign
+    and vw.AccruedStatus =: accruedstatus
+    and vw.Active = true
+  </query>
+  
+
+</hibernate-mapping>

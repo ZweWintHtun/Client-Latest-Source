@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:v="http://www.springframework.net/validation">
+
+  <description>
+    Form Data Entity Validation Objects Injection
+  </description>
+
+  <!-- ManagerApprove Form Validation -->
+  <v:group id="ManagerApproveFormValidator" >
+    <v:required id="ManagerApproveForm.UserName.Validator" test="UserName">
+      <v:message id="MV90011" providers="UserName" />
+    </v:required>
+
+    <v:required id="ManagerApproveForm.Password.Validator" test="Password">
+      <v:message id="MV90009" providers="Password" />
+    </v:required>
+    <v:required id="ManagerApproveForm.ConfirmPassword.Validator" test="ConfirmPassword">
+      <v:message id="MV90014" providers="ConfirmPassword" />
+    </v:required>
+    <v:condition id="ManagerApproveForm.ComparePasswordValidator" test="Password == ConfirmPassword">
+      <v:message id="MV90013" providers="ConfirmPassword"/>
+    </v:condition>
+    <v:required id="ManagerApproveForm.TestKey.Validator" test="TestKey" when="HasTestKey == true">
+      <v:message id="MV00169" providers="TestKey" />
+    </v:required>
+  </v:group>
+  
+</objects>

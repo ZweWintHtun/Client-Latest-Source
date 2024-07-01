@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+
+	<!-- RemittanceCalculator Validator -->
+	<object id ="MonthlyBudgetedEntryController" type="Ace.Cbs.Gl.Ptr.GLMCTL00004, Ace.Cbs.Gl.Ptr" parent="AbstractController" singleton="false">
+		<property name ="ErrorProvider">
+			<object id="MonthlyBudgetedEntryErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<!--<property name ="Validator" ref="MonthlyBudgetedEntry.Validator"/>-->
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+			</dictionary>
+		</property>
+	</object>
+  
+  <!-- COA Listing -->
+  <object id ="ChartofAccountController" type="Ace.Cbs.Gl.Ptr.GLMCTL00013, Ace.Cbs.Gl.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+  <!-- OLS Total Listing -->
+  <object id ="OLSTotalController" type="Ace.Cbs.Gl.Ptr.GLMCTL00009, Ace.Cbs.Gl.Ptr" parent="AbstractController" singleton="false">
+    <property name ="ErrorProvider">
+      <object id="OLSTotalErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name ="Validator" ref="OLSTotal.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+  <!-- Income Expenditure Listing -->
+  <object id ="IncomeExpenditureController" type="Ace.Cbs.Gl.Ptr.GLMCTL00010, Ace.Cbs.Gl.Ptr" parent="AbstractController" singleton="false">
+    <property name ="ErrorProvider">
+      <object id="IncomeExpenditureErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name ="Validator" ref="IncomeExpenditure.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtRequiredMonth">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Month"/>
+            <property name="CustomValidatingMethod" value="txtMonth_CustomValidate"/>
+          </object>
+        </entry>
+        <entry key="txtRequiredYear">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Year"/>
+            <property name="CustomValidatingMethod" value="txtYear_CustomValidate"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+  
+	<!--Enquiry On Ledger Controller-->
+	<object id="EnquiryOnLedgerController" type="Ace.Cbs.Gl.Ptr.GLMCTL00008, Ace.Cbs.Gl.Ptr" parent="AbstractController" singleton="false">
+		<property name ="ErrorProvider">
+			<object id="EnquiryOnLedgerErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name ="Validator" ref="EnquiryOnLedger.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="cboAccountNo">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="ACODE"/>
+					</object>
+				</entry>
+				<entry key="cboCurrency">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="CUR"/>
+            <property name="CustomValidatingMethod" value="cboCurrency_CustomValiding"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+  
+  <!--Monthly CurrencyRateEntry Controller-->
+  <object id="MonthlyCurrencyRateEntryController" type="Ace.Cbs.Gl.Ptr.GLMCTL00001, Ace.Cbs.Gl.Ptr" parent="AbstractController" singleton="false">
+  </object>
+
+	<!--Opening Balance Entry Controller-->
+		<object id="OpeningBalanceEntryController" type="Ace.Cbs.Gl.Ptr.GLMCTL00002, Ace.Cbs.Gl.Ptr" parent="AbstractController" singleton="false">
+	</object>
+
+	<!--YearlyBudgetEntryController-->	
+	<object id="YearlyBudgetEntryController" type="Ace.Cbs.Gl.Ptr.GLMCTL00003, Ace.Cbs.Gl.Ptr" parent="AbstractController" singleton="false">
+	</object>
+
+
+	<!--ReportFormatEntryController-->
+	<object id="ReportFormatEntryController" type="Ace.Cbs.Gl.Ptr.GLMCTL00007, Ace.Cbs.Gl.Ptr" parent="AbstractController" singleton="false">
+		<property name ="ErrorProvider">
+			<object id="ReportFormatEntryErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+				<property name ="Validator" ref="ReportFormatEntry.Validator"/>
+			</object>
+		</property>
+		<property name="ControlProvider">
+			<dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+				<entry key="mtxtFormatType">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="FormatType"/>
+					</object>
+				</entry>
+				<entry key="txtName">
+					<object type="Ace.Windows.Core.Presenter.ValidationProvider">
+						<property name="Providers" value="FormatName"/>
+					</object>
+				</entry>
+			</dictionary>
+		</property>
+	</object>
+
+  <!--Liabilities Account Code-->
+  <object id="LiabilitiesAccountController" type="Ace.Cbs.Gl.Ptr.GLMCTL00012, Ace.Cbs.Gl.Ptr" parent="AbstractController" singleton="false">
+
+    <property name ="ErrorProvider">
+      <object id="LiabilitiesAccountErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name ="Validator" ref="LiabilitiesAccount.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboPLA">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="AccountName"/>
+          </object>
+        </entry>
+        <entry key="cboPITA">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="AccountNo"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+    
+  </object>
+  
+  <!--Report Statement Controller-->
+  <object id="ReportStatementController" type="Ace.Cbs.Gl.Ptr.GLMCTL00011, Ace.Cbs.Gl.Ptr" parent="AbstractController" singleton="false">
+    <property name ="ErrorProvider">
+      <object id="ReportStatementErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name ="Validator" ref="ReportStatement.Validator"/>
+      </object>
+    </property>
+    <property name ="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtRequiredMonth">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Month"/>
+          </object>
+        </entry>
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="CustomValidatingMethod" value="cboCurrency_CustomValiding"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+
+	<!--FormatAndFormulaEntryController-->
+	<object id="FormatAndFormulaEntryController" type="Ace.Cbs.Gl.Ptr.GLMCTL00018, Ace.Cbs.Gl.Ptr" parent="AbstractController" singleton="false">
+	</object>
+
+  <!--Find Form-->
+  <object id="FindFormController" type="Ace.Cbs.Gl.Ptr.GLMCTL00019, Ace.Cbs.Gl.Ptr" parent="AbstractController" singleton="false">
+
+    <!--<property name ="ErrorProvider">
+      <object id="FindFormErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name ="Validator" ref="FindForm.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtLineNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="LineNo"/>
+          </object>
+        </entry>
+        <entry key="txtAccountNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="ACode"/>
+          </object>
+        </entry>
+        <entry key="txtDepartment">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="DCode"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>-->
+    
+  </object>
+
+  <!--Insert Range of Account Form-->
+  <object id="InsertRangeAccountController" type="Ace.Cbs.Gl.Ptr.GLMCTL00020, Ace.Cbs.Gl.Ptr" parent="AbstractController" singleton="false">
+
+    <property name ="ErrorProvider">
+      <object id="InsertRangeErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name ="Validator" ref="InsertRange.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cbofromAccount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="ACode"/>
+          </object>
+        </entry>
+        <entry key="cbotoAccount">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="AccountName"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+    
+  </object>
+
+  <!--Insert Range of Account Form-->
+  <object id="DeleteRangeAccountController" type="Ace.Cbs.Gl.Ptr.GLMCTL00021, Ace.Cbs.Gl.Ptr" parent="AbstractController" singleton="false">
+
+    <property name ="ErrorProvider">
+      <object id="DeleteRangeErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name ="Validator" ref="DeleteRange.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="txtFromLineNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Id"/>
+          </object>
+        </entry>
+        <entry key="txtToLineNo">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="LineNo"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+
+  </object>
+
+   <!--Monthly Posting-->
+  <object id="MonthlyPostingController" type="Ace.Cbs.Gl.Ptr.GLMCTL00023, Ace.Cbs.Gl.Ptr" parent="AbstractController" singleton="false">
+    <!--<property name ="ErrorProvider">
+      <object id="MonthlyPostingErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name ="Validator" ref="MonthlyPostingValidator"/>
+      </object> 
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="dtpMonthlyPosting">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="MonthlyPosting"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>-->
+  </object>
+	<!--Monthly Posting-->
+	<object id="MonthlyReportController" type="Ace.Cbs.Gl.Ptr.GLMCTL00027, Ace.Cbs.Gl.Ptr" parent="AbstractController" singleton="false">
+	</object>
+
+  <!--//Added by HWKO (27-Sep-2017)-->
+  <object id="StatementOfFinancialPositionController" type="Ace.Cbs.Gl.Ptr.GLMCTL00028, Ace.Cbs.Gl.Ptr" parent="AbstractController" singleton="false">
+    <property name="ErrorProvider">
+      <object id="StatementOfFinancialPositionErrorProvider" type="Ace.Windows.Core.Presenter.ErrorProviderErrorsRenderer, Ace.Windows.Core" singleton="false" >
+        <property name="Validator" ref="StatementOfFinancialPosition.Validator"/>
+      </object>
+    </property>
+    <property name="ControlProvider">
+      <dictionary key-type="string" value-type="Ace.Windows.Core.Presenter.ValidationProvider">
+        <entry key="cboBranch">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="SourceBr"/>
+          </object>
+        </entry>
+        <entry key="cboCurrency">
+          <object type="Ace.Windows.Core.Presenter.ValidationProvider">
+            <property name="Providers" value="Cur"/>
+          </object>
+        </entry>
+      </dictionary>
+    </property>
+  </object>
+  
+</objects>
+

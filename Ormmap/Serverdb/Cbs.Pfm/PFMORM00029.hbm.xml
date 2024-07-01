@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Pfm.Dmd" namespace="Ace.Cbs.Pfm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+	<import class="Ace.Cbs.Pfm.Dmd.PFMDTO00029, Ace.Cbs.Pfm.Dmd" rename="linkaccountdto"/>
+
+  <class name="PFMORM00029" table="[LinkAC]" >
+
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+
+	  <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+		  <column name="TS" sql-type="timestamp" not-null="false"/>
+	  </version>
+
+	  <property name="CurrentAccountNo">
+		  <column name="CurAcctNo" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="SavingAccountNo">
+		  <column name="SavAcctNo" sql-type="varchar" not-null="true" />
+	  </property>
+	  <property name="CALACCTNO">
+		  <column name="CALACCTNO" sql-type="varchar" not-null="false" />
+	  </property>
+	  <property name="MinimumCurrentAccountBalance">
+		  <column name="CMinBal" sql-type="numeric(12,2)" not-null="true" />
+	  </property>
+	  <property name="MinimumSavingAccountBalance">
+		  <column name="SMinBal" sql-type="numeric(12,2)" not-null="true" />
+	  </property>
+	  <property name="MinimumLinkAccountBalance">
+		  <column name="LMinBal" sql-type="numeric(12,2)" not-null="true" />
+	  </property>
+	  <property name="FirstPriority">
+		  <column name="FPri" sql-type="varchar" not-null="false" />
+	  </property>
+	  <property name="SecondPriority">
+		  <column name="SPri" sql-type="varchar" not-null="false" />
+	  </property>
+	  <property name="ThirdPriority">
+		  <column name="TPri" sql-type="varchar" not-null="false" />
+	  </property>
+	  <property name="CurrencyCode">
+		  <column name="Cur" sql-type="varchar" not-null="true" />
+	  </property>
+
+	  <many-to-one name="Currency" column="[Cur]" class="Ace.Windows.Admin.DataModel.Currency" insert="false" update="false"></many-to-one>
+	  
+	  <property name="SourceBranchCode">
+		  <column name="SourceBr" sql-type="varchar" not-null="true" />
+	  </property>
+	  <many-to-one name="Branch" column="[SourceBr]" class="Ace.Windows.Admin.DataModel.Branch" insert="false" update="false"></many-to-one>
+
+	  <property name="AccessDate">
+		  <column name="DATE_TIME" sql-type="datetime" not-null="false" />
+	  </property>
+	  <property name="CALDATE">
+		  <column name="CALDATE" sql-type="datetime" not-null="false" />
+	  </property>
+	  
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+	
+  </class>
+
+  <!--//Select For LinkAutoPriority //-->
+  <query name="SelectForLinkAutoPriority">
+    select new linkaccountdto
+    (
+    l.CurrentAccountNo,
+    l.SavingAccountNo,
+    l.CALACCTNO,
+    l.FirstPriority,
+    l.SecondPriority,
+    l.ThirdPriority
+    )
+    from PFMORM00029 as l
+    where l.Active = true
+    and l.SourceBranchCode = :SourceBr
+
+  </query>
+
+  <!--//PFMDAO00029.LinkAC_HasAlreadyLinkAccount //-->
+	<query name="PFMDAO00029.LinkAC_HasAlreadyLinkAccount">
+		select new linkaccountdto(l.Id)
+		from PFMORM00029 as l
+		where l.Active = true
+		and (l.CurrentAccountNo = :currentAccountNo or l.SavingAccountNo = :savingAccountNo
+		or l.CurrentAccountNo = :savingAccountNo or l.SavingAccountNo = :currentAccountNo)
+	</query>
+
+  <query name="CXDAO00006.GetLinkAccountCountByCurrentAccountNo">
+    select count(Id) from PFMORM00029 where CurrentAccountNo = :currentAccountNo and Active = true
+  </query>
+
+  <query name="CXDAO00006.GetLinkAccountCountBySavingAccountNo">
+    select count(Id) from PFMORM00029 where SavingAccountNo = :savingAccountNo and Active = true
+  </query>
+
+	<!--//PFMDAO00029.LinkAC_SelectLinkAmount //-->
+	<query name="PFMDAO00029.LinkAC_SelectLinkAmount">
+		select new linkaccountdto(l.MinimumCurrentAccountBalance,l.MinimumSavingAccountBalance)
+		from PFMORM00029 as l
+		where l.Active = true
+		and (l.CurrentAccountNo = :currentAccountNo or l.SavingAccountNo = :savingAccountNo
+		or l.CurrentAccountNo = :savingAccountNo or l.SavingAccountNo = :currentAccountNo)
+	</query>
+
+	<query name="CXDAO00006.GetLinkAccountBySavingAccountNo">
+		select new linkaccountdto
+		(
+		s.CurrentAccountNo,
+		s.Id
+		)
+		from PFMORM00029 as s where s.SavingAccountNo = :accountNo and s.Active = true
+	</query>
+
+	<query name="CXDAO00006.GetLinkAccountByCurrentAccountNo">
+		select new linkaccountdto
+		(
+		c.SavingAccountNo
+		)
+		from PFMORM00029 as c where c.CurrentAccountNo = :accountNo and c.Active = true
+	</query>
+  
+</hibernate-mapping>

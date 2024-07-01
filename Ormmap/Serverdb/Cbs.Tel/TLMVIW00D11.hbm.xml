@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Tel.Dmd" namespace="Ace.Cbs.Tel.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Tel.Dmd.TLMDTO00058, Ace.Cbs.Tel.Dmd" rename="daybookdto"/>
+  <class name="TLMVIW00D11" table="VW_CURRENT_REVERSAL_HOME" mutable="false" >
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+
+    <property name="Debit_Cash">
+      <column name="Debit_Cash" sql-type="numeric" not-null="false" />
+    </property>
+    <property name="Debit_Transfer">
+      <column name="Debit_Transfer" sql-type="numeric" not-null="false"/>
+    </property>
+    <property name="Debit_Clearing">
+      <column name="Debit_Clearing" sql-type="numeric" not-null="false"/>
+    </property>
+    <property name="Debit_Total">
+      <column name="Debit_Total" sql-type="numeric" not-null="false"/>
+    </property>
+    <property name="Account_No">
+      <column name="Account_No" sql-type="varchar" not-null="false"/>
+    </property>
+    <property name="Credit_Cash">
+      <column name="Credit_Cash" sql-type="numeric" not-null="false"/>
+    </property>
+    <property name="Credit_Clearing">
+      <column name="Credit_Clearing" sql-type="numeric" not-null="false"/>
+    </property>
+    <property name="Credit_Transfer">
+      <column name="Credit_Transfer" sql-type="numeric" not-null="false"/>
+    </property>
+    <property name="Credit_Total">
+      <column name="Credit_Total" sql-type="numeric" not-null="false"/>
+    </property>
+
+    <property name="Date_Time">
+      <column name="Date_Time" sql-type="datetime" not-null="false"/>
+    </property>
+    <property name="Sort_Date_Time">
+      <column name="Sort_Date_Time" sql-type="datetime" not-null="false"/>
+    </property>
+    <property name="WorkStation">
+      <column name="WorkStation" sql-type="varchar" not-null="false"/>
+    </property>
+
+    <property name="Rate">
+      <column name="Rate" sql-type="numeric" not-null="false"/>
+    </property>
+    <property name="SettlementDate">
+      <column name="SettlementDate" sql-type="datetime" not-null="false"/>
+    </property>
+
+    <property name="SourceCur">
+      <column name="SourceCur" sql-type="varchar" not-null="false"/>
+    </property>
+    <property name="SourceBr">
+      <column name="SourceBr" sql-type="varchar" not-null="false"/>
+    </property>
+  </class>
+</hibernate-mapping>

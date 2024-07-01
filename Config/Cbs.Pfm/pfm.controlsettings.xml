@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:v="http://www.springframework.net/validation">
+
+	<description>
+    UI Control Settings
+  </description>
+
+  <object id="Current.Individual" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleHiddenControls" 
+                  value="lblFatherGuardianshipNRC,
+                            lblGuardianshipName,
+                            mtxtFatherGuardianshipNRC,
+                            txtGuardianshipName,
+                            gpLinkAccountInformation,
+                            butReceipt,
+                            lblReceiptNo,             
+                            txtReceiptNo,
+                            lblBusiness,
+                            txtBusiness,
+                            lblNameofFirm,
+                            txtNameofFirm"/>
+  </object>
+
+  <object id="Current.PrivateFirm" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleHiddenControls"
+                  value="butReceipt,
+                            lblFatherGuardianshipNRC,
+                            lblGuardianshipName,
+                            txtGuardianshipName,
+                            mtxtFatherGuardianshipNRC,
+                            gpLinkAccountInformation,
+                            lblReceiptNo,
+                            txtReceiptNo"/>
+  </object>
+
+    <object id="Saving.Individual" type="Ace.Windows.CXClient.Controls.ControlSettings">
+      <property name="VisibleHiddenControls"
+                    value="butCheque,
+                    butReceipt,
+                    lblFatherGuardianshipNRC,
+                    lblGuardianshipName,
+                    mtxtFatherGuardianshipNRC,
+                    txtGuardianshipName,
+                    gpLinkAccountInformation,
+                    lblReceiptNo,
+                    txtReceiptNo,
+                    lblChequeBookNo,
+                    txtChequeBookNo,
+                    lblBusiness,
+                    txtBusiness,
+                    lblNameofFirm,
+                    txtNameofFirm,
+                    lblChequeSerialNo,
+                    txtFromChequeNo,
+                    lblTo,
+                    txtToChequeNo"/>
+  </object>
+
+  <object id="Saving.Minor" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleHiddenControls"
+                  value="butCheque,
+                  butReceipt,
+                  gpLinkAccountInformation,
+                  lblReceiptNo,
+                  txtReceiptNo,
+                  lblChequeBookNo,
+                  txtChequeBookNo,
+                  lblBusiness,
+                  txtBusiness,
+                  lblNameofFirm,
+                  txtNameofFirm,
+                  lblChequeSerialNo,
+                  txtFromChequeNo,
+                  lblTo,
+                  txtToChequeNo"/>
+  </object>
+
+  <object id="Fixed.Individual" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleHiddenControls"
+                  value="butCheque,
+                  lblFatherGuardianshipNRC,
+                  lblGuardianshipName,
+                  mtxtFatherGuardianshipNRC,
+                  txtGuardianshipName,
+                  lblChequeBookNo,
+                  txtChequeBookNo,
+                  lblBusiness,
+                  txtBusiness,
+                  lblNameofFirm,
+                  txtNameofFirm,
+                  lblChequeSerialNo,
+                  txtFromChequeNo,
+                  lblTo,
+                  txtToChequeNo"/>
+  </object>
+
+  <object id="Fixed.Minor" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleHiddenControls"
+                  value="butCheque,
+                  lblChequeBookNo,
+                  txtChequeBookNo,
+                  lblBusiness,
+                  txtBusiness,
+                  lblNameofFirm
+                  txtNameofFirm,
+                  lblChequeSerialNo,
+                  txtFromChequeNo,
+                  lblTo,
+                  txtToChequeNo,
+                  lblNameofFirm,txtNameofFirm"/>
+  </object>
+
+  <object id="Current.Company" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleHiddenControls"
+              value="lblBusiness, txtBusiness,
+              lblReceiptNo,txtReceiptNo,butReceipt,
+              gbLink"
+              />
+  </object>
+
+  <object id="Current.Partnership" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleHiddenControls"
+              value="lblReceiptNo,txtReceiptNo,butReceipt,
+              gbLink"
+              />
+  </object>
+
+  <object id="Current.Association" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleHiddenControls"
+              value="lblBusiness, txtBusiness,
+              lblReceiptNo,txtReceiptNo,butReceipt,
+              gbLink"
+              />
+  </object>
+
+  <object id="Saving.Company" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleHiddenControls"
+              value="lblBusiness, txtBusiness,
+              lblReceiptNo,txtReceiptNo,butReceipt,
+              gbLink,
+              lblChequeBookNo,txtChequeBookNo,butCheque,
+              lblChequeSerialNo,txtFromChequeNo,lblTo,txtToChequeNo"
+              />
+  </object>
+
+  <object id="Fixed.Company" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleHiddenControls"
+              value="lblBusiness, txtBusiness,     
+              lblChequeBookNo,txtChequeBookNo,butCheque,
+              lblChequeSerialNo,txtFromChequeNo,lblTo,txtToChequeNo"
+              />
+  </object>
+
+  <object id="Current.Joint" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleHiddenControls"
+              value="lblReceiptNo,txtReceiptNo,butReceipt,
+              gbLinkAccountInformation"
+              />
+  </object>
+
+  <object id="Saving.Joint" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleHiddenControls"
+              value="lblReceiptNo,txtReceiptNo,butReceipt,
+              gbLinkAccountInformation,
+              lblChequeBookNo,txtChequeBookNo,butCheque,
+              lblChequeSerialNo,txtFromChequeNo,lblTo,txtToChequeNo"
+              />
+  </object>
+
+  <object id="Fixed.Joint" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleHiddenControls"
+              value="lblChequeBookNo,txtChequeBookNo,butCheque,
+              lblChequeSerialNo,txtFromChequeNo,lblTo,txtToChequeNo"
+              />
+  </object>
+
+  <object id="PrintUserEntry.HiddenControlsOne" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="HiddenControls"
+              value="lblOldPassword,txtOldPassword"
+              />
+  </object>
+
+  <object id="PrintUserEntry.HiddenControlsTwo" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="HiddenControls"
+              value="lblNewPassword,txtNewPassword"
+              />
+  </object>
+
+  <object id="PrintUserEntry.HiddenControlsThree" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="HiddenControls"
+              value="lblConfirmPassword,txtConfirmPassword"
+              />
+  </object>
+
+  <object id="PrintUserEntry.VisibleControlsOne" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleControls"
+              value="lblOldPassword,txtOldPassword"
+              />
+  </object>
+
+  <object id="PrintUserEntry.VisibleControlsTwo" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleControls"
+              value="lblNewPassword,txtNewPassword"
+              />
+  </object>
+
+  <object id="PrintUserEntry.VisibleControlsThree" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleControls"
+              value="lblConfirmPassword,txtConfirmPassword"
+              />
+  </object>
+
+  <object id="ChequeEntry.VisibleAccountNo" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="HiddenControls"
+              value="lblAccountNo,mtxtAccountNo"
+              />
+  </object>
+
+  <object id="CustomerId.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+              value="txtName,txtNRC,cboStateCode,cboTownshipCode,cboNationalityCode,
+              txtNRCNo,txtGuardianshipName,txtFatherGuardianNRC, rdoNRC, rdoOther, rdoFatherNRC, rdoFatherOther,
+              cboFatherStateCode,cboFatherTownshipCode, cboFatherNationalityCode, txtFatherNRCNo,
+              txtFatherName,txtAddress,txtFax,txtEmail,
+              picSignature,picPhoto,chkVIPCustomer,cboGender,
+              txtRemark,txtPassportNo,dtpDOB,txtNickName,
+              txtPhone,cboState,cboCity,cboTownship,
+              cboInitial,cboOccupation,cboNationality,picPhoto,
+              picSignature,butClearPhoto,butScanner,butPhoto,butSignatureFile,butClearSignaturePhoto,btnViewPhoto,btnSignatureView"
+              />
+  </object>
+
+  <object id="CustomerId.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+              value="txtName,txtNRC,txtNRCNo,cboNationalityCode,cboTownshipCode,cboStateCode,
+              txtGuardianshipName,txtFatherGuardianNRC, cboFatherNationalityCode, txtFatherNRCNo, 
+              cboFatherStateCode, cboFatherTownshipCode, rdoNRC, rdoOther, rdoFatherNRC, rdoFatherOther,
+              txtFatherName,txtAddress,txtFax,txtEmail,
+              picSignature,picPhoto,chkVIPCustomer,cboGender,
+              txtRemark,txtPassportNo,dtpDOB,txtNickName,
+              txtPhone,cboState,cboCity,cboTownship,
+              cboInitial,cboOccupation,cboNationality,picPhoto,
+	      picSignature,butClearPhoto,butScanner,butPhoto,butSignatureFile,butClearSignaturePhoto,btnViewPhoto,btnSignatureView"
+              />
+  </object>
+
+  <object id="PrintUserEntry.DisableForNew" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+              value="txtAuthorizeName,txtOldPassword,butOk" />
+  </object>
+
+  <object id="PrintUserEntry.EnableAfterNew" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+              value="txtAuthorizeName,txtOldPassword,butOk" />
+  </object>
+  
+</objects>

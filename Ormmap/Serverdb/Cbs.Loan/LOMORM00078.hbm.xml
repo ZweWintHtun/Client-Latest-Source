@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00078, Ace.Cbs.Loan.Dmd" rename="FarmLoanDto"/>
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00085, Ace.Cbs.Loan.Dmd" rename="FarmLIDto"/>
+  
+  <class name="LOMORM00078" table="FarmLoan">    
+    <id name="Lno">
+      <column name="Lno" sql-type="varchar" not-null="true" />
+    </id>
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+    <property name="AcctNo">
+      <column name="AcctNo" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="AType">
+      <column name="AType" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="LoanType">
+      <column name="LoanType" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="LoanProductType">
+      <column name="LoanProductType" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="SDate">
+      <column name="SDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="SAmt">
+      <column name="SAmt" sql-type="numeric" not-null="false" />
+    </property>
+    <property name="Budget">
+    <column name="Budget" sql-type="varchar" not-null="false" />
+    </property>
+    
+    <property name="CloseDate">
+      <column name="CloseDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="ExpireDate">
+      <column name="ExpireDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="FirstSAmt">
+      <column name="FirstSAmt" sql-type="numeric" not-null="false" />
+    </property>
+    <property name="LastIntDate">
+      <column name="LastIntDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="IntRate">
+      <column name="IntRate" sql-type="numeric" not-null="false" />
+    </property>
+    <property name="Penalties">
+      <column name="Penalties" sql-type="numeric" not-null="false" />
+    </property>
+    <property name="Vourched">
+      <column name="Vourched" sql-type="bit" not-null="false" />
+    </property>
+    <property name="VourchedDate">
+      <column name="VourchedDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="Name">
+      <column name="Name" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="FatherName">
+      <column name="FatherName" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="NRC">
+      <column name="NRC" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Village">
+      <column name="Village" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Township">
+      <column name="Township" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Address">
+      <column name="Address" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="FarmName">
+      <column name="FarmName" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="LandNo">
+      <column name="LandNo" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="LandType">
+      <column name="LandType" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="SeasonType">
+      <column name="SeasonType" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="BusinessType">
+      <column name="BusinessType" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="GroupNo">
+      <column name="GroupNo" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="StartPeriod">
+      <column name="StartPeriod" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="EndPeriod">
+      <column name="EndPeriod" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="WithdrawDate">
+      <column name="WithdrawDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="LoanAmtPerAcre">
+      <column name="LoanAmtPerAcre" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="TotalAcre">
+      <column name="TotalAcre" sql-type="numeric" not-null="true" />
+    </property>
+    <property name="FarmSignature" >
+      <column name="FarmSignature" sql-type="image" length="2147483647" not-null="false" />
+    </property>
+    <property name="Signature" >
+      <column name="Signature" sql-type="image" length="2147483647" not-null="false" />
+    </property>
+    <property name="Remark">
+      <column name="Remark" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="ACSign">
+      <column name="ACSign" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="UniqueId">
+      <column name="UId" sql-type="char" not-null="false" />
+    </property>
+    <property name="SourceBr">
+      <column name="SourceBr" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Cur">
+      <column name="Cur" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+    <bag name="FarmLi" inverse="true" lazy="true" cascade="none">
+      <key column="[LNo]" />
+      <one-to-many class="Ace.Cbs.Loan.Dmd.LOMORM00085" />
+    </bag>
+    
+  </class>
+
+  <!--//FarmLoanDAO.SelectFarmLoanByGroupNo//-->
+  <query name="FarmLoanDAO.SelectFarmLoanByGroupNo">
+    select new FarmLoanDto
+    (
+    b.Lno,
+    b.AcctNo,
+    b.LoanProductType
+    )
+    from LOMORM00078 as b
+    where (b.GroupNo = :groupNo)
+    and  b.Active = true
+  </query>
+
+  <!--//FarmLoanDAO.SelectFarmLoanByAcctNoAndLNoAndWithdrawDate//-->
+  <query name="FarmLoanDAO.SelectFarmLoanByAcctNoAndLNoAndWithdrawDate">
+    select new FarmLoanDto
+    (
+    b.Lno,
+    b.AcctNo,
+    b.SAmt,
+    b.WithdrawDate
+    )
+    from LOMORM00078 as b
+    where (b.AcctNo = :acctNo)
+    and b.Lno = :lNo
+    and b.WithdrawDate BETWEEN :withdrawDate AND :repaymentDate
+    and b.Active = true
+  </query>
+
+  <!--//FarmLoanDAO.UpdateLastIntDate//-->
+  <query name="FarmLoanDAO.UpdateLastIntDate">
+    update LOMORM00078 b
+    set
+    b.LastIntDate = :lastIntDate,
+    b.UpdatedDate = :updatedDate,
+    b.UpdatedUserId = :updatedUserId
+    where b.Lno = :lno
+    and b.AcctNo = :acctNo
+    and b.SourceBr = :sourceBr
+    and b.Active = true
+  </query>
+
+  <!--//FarmLoanDAO.SelectFarmLIAndFarmLoanForIntCalMonthly//-->
+  <query name="FarmLoanDAO.SelectFarmLIAndFarmLoanForIntCalMonthly">
+    select new FarmLIDto
+    (
+    b.LNo,
+    b.AcctNo,
+    b.ACSign,
+    b.LoanProductCode,
+    b.CloseDate,
+    b.Budget,
+    b.PrincipalAmount,
+    b.TotalInt,
+    b.LastInt,
+    b.AccuredInt,
+    b.M1,
+    b.M2,
+    b.M3,
+    b.M4,
+    b.M5,
+    b.M6,
+    b.M7,
+    b.M8,
+    b.M9,
+    b.M10,
+    b.M11,
+    b.M12,
+    b.Cur,
+    b.SourceBr,
+    farmloans.SAmt,
+    farmloans.SDate
+    )
+    from LOMORM00078 as farmloans
+    inner join farmloans.FarmLi as b with b.Active = true
+    where (b.CloseDate = null or b.CloseDate = '')
+    and b.Budget = :year
+    and b.SourceBr = :sourceBr
+    and b.Active = true
+    and farmloans.WithdrawDate between convert(char(10),:smonth,111) and convert(char(10),:emonth,111)
+  </query>
+
+  <!--//FarmLoanDAO.SelectByLnoAndAcctNoAndWithdrawDate//-->
+  <query name="FarmLoanDAO.SelectByLnoAndAcctNoAndWithdrawDate">
+    select new FarmLoanDto
+    (
+    b.Lno,
+    b.AcctNo,
+    b.SDate,
+    b.SAmt,
+    b.StartPeriod,
+    b.EndPeriod,
+    b.WithdrawDate,
+    b.SourceBr,
+    b.Cur
+    )
+    from LOMORM00078 as b
+    where b.WithdrawDate between b.WithdrawDate and convert(char(10),:emonth,111)
+    and b.Lno = :lno
+    and b.AcctNo = :acctNo
+    and  b.Active = true
+  </query>
+
+  <!--//FarmLoanDAO.GetFarmLoansByLnoAndSourceBr//-->
+  <query name="FarmLoanDAO.GetFarmLoansByLnoAndSourceBr">
+    select new FarmLoanDto
+    (
+    b.Lno,
+    b.AcctNo,
+    b.AType,
+    b.LoanType,
+    b.LoanProductType,
+    b.SDate,
+    b.SAmt,
+    b.ExpireDate,
+    b.FirstSAmt,
+    b.LastIntDate,
+    b.IntRate,
+    b.Penalties,
+    b.Vourched,
+    b.VourchedDate,
+    b.Name,
+    b.FatherName,
+    b.NRC,
+    b.Village,
+    b.Township,
+    b.Address,
+    b.FarmName,
+    b.LandNo,
+    b.LandType,
+    b.SeasonType,
+    b.BusinessType,
+    b.GroupNo,
+    b.StartPeriod,
+    b.EndPeriod,
+    b.WithdrawDate,
+    b.LoanAmtPerAcre,
+    b.TotalAcre,
+    b.Remark,
+    b.ACSign,
+    b.SourceBr,
+    b.Cur,
+    b.FarmSignature,
+    b.Signature
+    )
+    from LOMORM00078 as b
+    where b.Lno = :lno
+    and b.SourceBr = :sourceBr
+    and  b.Active = true
+  </query>
+
+  <!--//FarmLoanDAO.UpdateFarmLoanByLnoAndSourceBr//-->
+  <query name="FarmLoanDAO.UpdateFarmLoanByLnoAndSourceBr">
+    update LOMORM00078 b
+    set
+    b.Name = :name,
+    b.FatherName = :fatherName,
+    b.NRC = :nrc,
+    b.Village = :village,
+    b.Township = :township,
+    b.Address = :address,
+    b.FarmName = :farmName,
+    b.LandNo = :landNo,
+    b.LandType = :landType,
+    b.SeasonType = :seasonType,
+    b.BusinessType = :businessType,
+    b.LoanProductType = :loanProductType,
+    b.GroupNo = :groupNo,
+    b.IntRate = :intRate,
+    b.Penalties = :penalties,
+    b.StartPeriod = :startPeriod,
+    b.EndPeriod = :endPeriod,
+    b.WithdrawDate = :withdrawDate,
+    b.ExpireDate = :expireDate,
+    b.LoanAmtPerAcre = :loanAmtPerAcre,
+    b.TotalAcre = :totalAcre,
+    b.SAmt = :sAmt,
+    b.FarmSignature = :farmSign,
+    b.Signature = :cusSign,
+    b.UpdatedDate = :updatedDate,
+    b.UpdatedUserId = :updatedUserId
+    where b.Lno = :lno
+    and b.SourceBr = :sourceBr
+  </query>
+
+  <!--//FarmLoanDAO.SelectFarmLoanByLandTypeAndBusinessType//-->
+  <query name="FarmLoanDAO.SelectFarmLoanByLandTypeAndBusinessType">
+    select new FarmLoanDto
+    (
+    b.Lno,
+    b.AcctNo,
+    b.LoanProductType
+    )
+    from LOMORM00078 as b
+    where b.LandType = :landType
+    and b.BusinessType = :businessType
+    and  b.Active = true
+  </query>
+
+</hibernate-mapping>
+  
+  

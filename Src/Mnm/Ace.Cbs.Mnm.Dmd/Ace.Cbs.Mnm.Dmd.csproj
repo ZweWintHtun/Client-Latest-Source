@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D8EA36A9-8BBC-4D2A-84C7-49BDA6006F94}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ace.Cbs.Mnm.Dmd</RootNamespace>
+    <AssemblyName>Ace.Cbs.Mnm.Dmd</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ace.Cbs.Pfm.Dmd, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Pfm.Dmd.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Cbs.Sam.Dmd, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Cbs.Sam.Dmd.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Admin.DataModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Admin.DataModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Windows.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Output\Ace.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTO\MNMDTO00001.cs" />
+    <Compile Include="DTO\MNMDTO00002.cs" />
+    <Compile Include="DTO\MNMDTO00003.cs" />
+    <Compile Include="DTO\MNMDTO00004.cs" />
+    <Compile Include="DTO\MNMDTO00005.cs" />
+    <Compile Include="DTO\MNMDTO00006.cs" />
+    <Compile Include="DTO\MNMDTO00007.cs" />
+    <Compile Include="DTO\MNMDTO00008.cs" />
+    <Compile Include="DTO\MNMDTO00009.cs" />
+    <Compile Include="DTO\MNMDTO00010.cs" />
+    <Compile Include="DTO\MNMDTO00011.cs" />
+    <Compile Include="DTO\MNMDTO00012.cs" />
+    <Compile Include="DTO\MNMDTO00013.cs" />
+    <Compile Include="DTO\MNMDTO00014.cs" />
+    <Compile Include="DTO\MNMDTO00015.cs" />
+    <Compile Include="DTO\MNMDTO00016.cs" />
+    <Compile Include="DTO\MNMDTO00018.cs" />
+    <Compile Include="DTO\MNMDTO00019.cs" />
+    <Compile Include="DTO\MNMDTO00020.cs" />
+    <Compile Include="DTO\MNMDTO00021.cs" />
+    <Compile Include="DTO\MNMDTO00023.cs" />
+    <Compile Include="DTO\MNMDTO00024.cs" />
+    <Compile Include="DTO\MNMDTO00026.cs" />
+    <Compile Include="DTO\MNMDTO00025.cs" />
+    <Compile Include="DTO\MNMDTO00022.cs" />
+    <Compile Include="DTO\MNMDTO00027.cs" />
+    <Compile Include="DTO\MNMDTO00032.cs" />
+    <Compile Include="DTO\MNMDTO00033.cs" />
+    <Compile Include="DTO\MNMDTO00034.cs" />
+    <Compile Include="DTO\MNMDTO00035.cs" />
+    <Compile Include="DTO\MNMDTO00036.cs" />
+    <Compile Include="DTO\MNMDTO00041.cs" />
+    <Compile Include="DTO\MNMDTO00042.cs" />
+    <Compile Include="DTO\MNMDTO00043.cs" />
+    <Compile Include="DTO\MNMDTO00044.cs" />
+    <Compile Include="DTO\MNMDTO00046.cs" />
+    <Compile Include="DTO\MNMDTO00054.cs" />
+    <Compile Include="DTO\MNMDTO00037.cs" />
+    <Compile Include="DTO\MNMDTO00038.cs" />
+    <Compile Include="DTO\MNMDTO00039.cs" />
+    <Compile Include="DTO\MNMDTO00040.cs" />
+    <Compile Include="DTO\MNMDTO00055.cs" />
+    <Compile Include="DTO\MNMDTO00071.cs" />
+    <Compile Include="DTO\MNMDTO00076.cs" />
+    <Compile Include="DTO\MNMDTO00077.cs" />
+    <Compile Include="DTO\MNMDTO00081.cs" />
+    <Compile Include="MNMORM00001.cs" />
+    <Compile Include="MNMORM00002.cs" />
+    <Compile Include="MNMORM00003.cs" />
+    <Compile Include="MNMORM00004.cs" />
+    <Compile Include="MNMORM00005.cs" />
+    <Compile Include="MNMORM00006.cs" />
+    <Compile Include="MNMORM00007.cs" />
+    <Compile Include="MNMORM00008.cs" />
+    <Compile Include="MNMORM00009.cs" />
+    <Compile Include="MNMORM00010.cs" />
+    <Compile Include="MNMORM00011.cs" />
+    <Compile Include="MNMORM00012.cs" />
+    <Compile Include="MNMORM00013.cs" />
+    <Compile Include="MNMORM00014.cs" />
+    <Compile Include="MNMORM00015.cs" />
+    <Compile Include="MNMORM00016.cs" />
+    <Compile Include="MNMORM00017.cs" />
+    <Compile Include="MNMORM00018.cs" />
+    <Compile Include="MNMORM00019.cs" />
+    <Compile Include="MNMORM00020.cs" />
+    <Compile Include="MNMORM00021.cs" />
+    <Compile Include="MNMORM00022.cs" />
+    <Compile Include="MNMORM00023.cs" />
+    <Compile Include="MNMORM00024.cs" />
+    <Compile Include="MNMORM00026.cs" />
+    <Compile Include="MNMORM00025.cs" />
+    <Compile Include="MNMORM00027.cs" />
+    <Compile Include="MNMORM00041.cs" />
+    <Compile Include="MNMORM00042.cs" />
+    <Compile Include="MNMVIW00001.cs" />
+    <Compile Include="MNMVIW00005.cs" />
+    <Compile Include="MNMVIW00006.cs" />
+    <Compile Include="MNMVIW00007.cs" />
+    <Compile Include="MNMVIW00008.cs" />
+    <Compile Include="MNMVIW00009.cs" />
+    <Compile Include="MNMVIW00010.cs" />
+    <Compile Include="MNMVIW00012.cs" />
+    <Compile Include="MNMVIW00015.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VIW\MNMVEW00036.cs" />
+    <Compile Include="VIW\MNMVEW00037.cs" />
+    <Compile Include="VIW\MNMVIW00002.cs" />
+    <Compile Include="VIW\MNMVIW00003.cs" />
+    <Compile Include="VIW\MNMVIW00011.cs" />
+    <Compile Include="VIW\MNMVIW00013.cs" />
+    <Compile Include="VIW\MNMVIW00014.cs" />
+    <Compile Include="VIW\MNMVIW00016.cs" />
+    <Compile Include="VIW\MNMVIW00018.cs" />
+    <Compile Include="VIW\MNMVIW00019.cs" />
+    <Compile Include="VIW\MNMVIW00020.cs" />
+    <Compile Include="VIW\MNMVIW00017.cs" />
+    <Compile Include="VIW\MNMVIW00021.cs" />
+    <Compile Include="VIW\MNMVIW00022.cs" />
+    <Compile Include="VIW\MNMVIW00023.cs" />
+    <Compile Include="VIW\MNMVIW00024.cs" />
+    <Compile Include="VIW\MNMVIW00025.cs" />
+    <Compile Include="VIW\MNMVIW00026.cs" />
+    <Compile Include="VIW\MNMVIW00027.cs" />
+    <Compile Include="VIW\MNMVIW00028.cs" />
+    <Compile Include="VIW\MNMVIW00029.cs" />
+    <Compile Include="VIW\MNMVIW00030.cs" />
+    <Compile Include="VIW\MNMVIW00031.cs" />
+    <Compile Include="VIW\MNMVIW00032.cs" />
+    <Compile Include="VIW\MNMVIW00035.cs" />
+    <Compile Include="VIW\MNMVIW00071.cs" />
+    <Compile Include="VIW\MNMVIW00072.cs" />
+    <Compile Include="VIW\MNMVIW00076.cs" />
+    <Compile Include="VIW\MNMVIW00033.cs" />
+    <Compile Include="VIW\MNMVIW00034.cs" />
+    <Compile Include="VIW\MNMVIW00077.cs" />
+    <Compile Include="VIW\MNMVIW00078.cs" />
+    <Compile Include="VIW\MNMVIW00079.cs" />
+    <Compile Include="VIW\MNMVIW00080.cs" />
+    <Compile Include="VIW\MNMVIW00081.cs" />
+    <Compile Include="VIW\MNMVIW00083.cs" />
+    <Compile Include="VIW\MNMVIW00084.cs" />
+    <Compile Include="VIW\MNMVIW00085.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\MNMDTO00007.datasource" />
+    <None Include="Properties\DataSources\MNMDTO00034.datasource" />
+    <None Include="Properties\DataSources\MNMDTO00038.datasource" />
+    <None Include="Properties\DataSources\MNMDTO00044.datasource" />
+    <None Include="Properties\DataSources\MNMDTO00076.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Tel\Ace.Cbs.Tel.Dmd\Ace.Cbs.Tel.Dmd.csproj">
+      <Project>{4AE62F74-E000-4768-90BC-DCBBB1B4C68C}</Project>
+      <Name>Ace.Cbs.Tel.Dmd</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

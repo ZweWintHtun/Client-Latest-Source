@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+	<import class="Ace.Cbs.Pfm.Dmd.PFMDTO00042, Ace.Cbs.Pfm.Dmd" rename="report_tlfDto"/>
+	<class name="LOMVIW00002" table="VW_MTHSCHARGE" mutable="false" >
+
+		<id name="Id" type="Int32" unsaved-value="0">
+		</id>
+
+		<property name="AcctNo">
+			<column name="AcctNo" sql-type="varchar" not-null="true" />
+		</property>
+	
+		<property name="Amount">
+			<column name="Amount" sql-type="numeric" not-null="false"/>
+		</property>
+		
+		<property name="DATE_TIME">
+			<column name="Date_time" sql-type="datetime" not-null="false"/>
+		</property>
+		
+		<property name="WorkStation">
+			<column name="WorkStation" sql-type="varchar" not-null="false"/>
+		</property>
+		
+		<property name="SourceBranch">
+			<column name="SourceBr" sql-type="datetime" not-null="true"/>
+		</property>
+	
+	</class>
+
+</hibernate-mapping>

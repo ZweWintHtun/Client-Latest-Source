@@ -1,0 +1,1599 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:db="http://www.springframework.net/database"
+         xmlns:tx="http://www.springframework.net/tx">
+
+  <description>
+    Client Data
+  </description>
+
+  <!--<db:provider id="ClientDataDbProvider" provider="SQLite-1.0.65" connectionString="Data Source=\\cbssvr\SQLite_PGFDB\PRISTINE_Client.db;Version=3"/>-->
+<!-- <db:provider id="ClientDataDbProvider" provider="SQLite-1.0.66" connectionString="Data Source=\\192.168.1.11\SQLite\PRISTINE_Server.db;Version=3"/>-->
+	<db:provider id="ClientDataDbProvider" provider="SQLite-1.0.66" connectionString="Data Source=\\127.0.0.1\SQLite\FVS_Server.db;Version=3"/>
+	<!--<DB: additionalproviders="" resource = "assembly: // mark/mark. configfiles/SQLite. xml"/>-->
+
+
+  <object id="ClientDataSessionFactory" type="Spring.Data.NHibernate.LocalSessionFactoryObject, Spring.Data.NHibernate33" singleton="true" >
+
+    <property name="ExposeTransactionAwareSessionFactory" value="true" />
+    <property name="DbProvider" ref="ClientDataDbProvider"/>
+    <property name="MappingResources">
+      <list>
+        <!-- Framework Module -->
+        <value>../ormmap/Clientdb/fx/AppSettings.hbm.xml</value>
+        <value>../ormmap/Clientdb/fx/Message.hbm.xml</value>
+        <value>../ormmap/Clientdb/fx/Branch.hbm.xml</value>
+        <value>../ormmap/Clientdb/fx/City.hbm.xml</value>
+        <value>../ormmap/Clientdb/fx/State.hbm.xml</value>
+        <value>../ormmap/clientdb/fx/WorkStationType.hbm.xml</value>
+        <value>../ormmap/Clientdb/fx/Township.hbm.xml</value>
+        <value>../ormmap/Clientdb/fx/ChargeOfAccount.hbm.xml</value>
+        <value>../ormmap/Clientdb/fx/ChargeOfAccountSetup.hbm.xml</value>
+        <value>../ormmap/Clientdb/fx/Currency.hbm.xml</value>
+        <value>../ormmap/Clientdb/fx/CounterType.hbm.xml</value>
+        <!--<value>../ormmap/clientdb/adm/CounterType.hbm.xml</value>-->
+        <value>../ormmap/Clientdb/fx/InvokingLog1.hbm.xml</value>
+        <value>../ormmap/Clientdb/ix/InstallerType.hbm.xml</value>
+        <value>../ormmap/clientdb/ix/ClientDataEntity.hbm.xml</value>
+
+        <value>../Ormmap/Clientdb/Cbs/PFMORM00003.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/PFMORM00004.hbm.xml</value>
+
+        <value>../Ormmap/Clientdb/Cbs/PFMORM00007.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/PFMORM00009.hbm.xml</value>
+
+        <value>../Ormmap/Clientdb/Cbs/PFMORM00015.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/PFMORM00022.hbm.xml</value>
+
+        <value>../Ormmap/Clientdb/Cbs/PFMORM00034.hbm.xml</value>
+
+        <value>../Ormmap/Clientdb/Cbs/PFMORM00038.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/PFMORM00041.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/PFMORM00048.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/PFMORM00053.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/PFMORM00056.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/PFMORM00057.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/PFMORM00074.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/PFMORM00078.hbm.xml</value>
+
+        <value>../Ormmap/Clientdb/Cbs/TLMORM00003.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/TLMORM00002.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/TLMORM00005.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/TLMORM00012.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/TLMORM00013.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/TLMORM00028.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/TLMORM00029.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/TLMORM00030.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/TLMORM00032.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/TLMORM00031.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/TLMORM00034.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/TLMORM00035.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/TLMORM00036.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/TLMORM00037.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/TLMORM00040.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/TLMORM00020.hbm.xml</value>
+
+        <value>../Ormmap/Clientdb/Cbs/SAMORM00003.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/SAMORM00053.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/SAMORM00054.hbm.xml</value>
+
+        <value>../Ormmap/Clientdb/Cbs/LOMORM00002.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/LOMORM00001.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/LOMORM00003.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/LOMORM00004.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/LOMORM00005.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/LOMORM00006.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/LOMORM00009.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/LOMORM00010.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/LOMORM00014.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/LOMORM00007.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/LOMORM00008.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/LOMORM00024.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/LOMORM00068.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/LOMORM00069.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/LOMORM00025.hbm.xml</value>
+
+        <value>../Ormmap/Clientdb/Cbs/LOMORM00071.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/LOMORM00074.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/LOMORM00075.hbm.xml</value>
+
+        <value>../Ormmap/Clientdb/Cbs/LOMORM00070.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/LOMORM00072.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/LOMORM00073.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/LOMORM00076.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/LOMORM00077.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/LOMORM00078.hbm.xml</value>
+
+
+        <value>../Ormmap/Clientdb/Cbs/LOMORM00100.hbm.xml</value>
+        <value>../Ormmap/Clientdb/Cbs/LOMORM00101.hbm.xml</value>
+      </list>
+
+    </property>
+    <property name="HibernateProperties">
+      <dictionary>
+        <entry key="hibernate.connection.provider" value="NHibernate.Connection.DriverConnectionProvider"/>
+        <entry key="dialect" value="NHibernate.Dialect.SQLiteDialect"/>
+        <entry key="hibernate.connection.driver_class" value="NHibernate.Driver.SQLite20Driver"/>
+        <entry key="query.substitutions" value="true=1;false=0"/>
+        <entry key="showsql" value="false"/>
+      </dictionary>
+    </property>
+  </object>
+
+  <object id="ClientSQLiteDataHandler" type="Ace.Windows.Core.Utt.ClientSQLiteDataHandler, Ace.Windows.Core">
+    <property name="SessionFactory" ref="ClientDataSessionFactory" />
+  </object>
+  
+  <object id="ClientDataHandler" type="Ace.Windows.Core.Utt.ClientDataHandler, Ace.Windows.Core">
+    <property name="SessionFactory" ref="ClientDataSessionFactory" />
+  </object>
+
+  <object id="CXCOM00006" type="Ace.Cbs.Cx.Com.Utt.CXCOM00006, Ace.Cbs.Cx.Com">
+  </object>
+
+  <object id="CXCOM00007" type="Ace.Cbs.Cx.Com.Utt.CXCOM00007, Ace.Cbs.Cx.Com">
+    <property name="SessionFactory" ref="ClientDataSessionFactory" />
+    <property name="AppSettingsORMName" value="PFMORM00053" />
+    <property name="MessageORMName" value="PFMORM00053" />
+  </object>
+
+  <object id="CXCOM00010" type="Ace.Cbs.Cx.Com.Utt.CXCOM00010, Ace.Cbs.Cx.Com">
+    <property name="SessionFactory" ref="ClientDataSessionFactory" />
+  </object>
+
+  <object id="CXClientDataHandler" type="Ace.Cbs.Cx.Cle.CXCLE00002, Ace.Cbs.Cx.Cle">
+    <property name="SessionFactory" ref="ClientDataSessionFactory" />
+  </object>
+
+  <object id="CXClientDataCustomQueryHandler" type="Ace.Cbs.Cx.Cle.CXCLE00001, Ace.Cbs.Cx.Cle">
+    <property name="SessionFactory" ref="ClientDataSessionFactory" />
+  </object>
+
+  <object id="CXCOM00011" type="Ace.Cbs.Cx.Com.Utt.CXCOM00011, Ace.Cbs.Cx.Com">
+    <property name="SessionFactory" ref="ClientDataSessionFactory" />
+  </object>
+
+  <object id="CXCOM00012" type="Ace.Cbs.Cx.Com.Utt.CXCOM00012, Ace.Cbs.Cx.Com">
+    <property name="SessionFactory" ref="ClientDataSessionFactory" />
+  </object>
+
+  <!-- Region Installer Client Data Query -->
+  <object id="ClientDataHandler.SelectInstallerTypeIdByCode" type="Ace.Windows.Core.DataModel.DataDefinition, Ace.Windows.Core">
+    <property name="ORMObjectName" value="InstallerType"/>
+    <property name ="ORMProperties" value="Id"/>
+    <property name="WhereProperties" value="Code, Active"/>
+  </object>
+  <object id="ClientDataHandler.SelectInstallerTypeNameById" type="Ace.Windows.Core.DataModel.DataDefinition, Ace.Windows.Core">
+    <property name="ORMObjectName" value="InstallerType"/>
+    <property name ="ORMProperties" value="Name"/>
+    <property name="WhereProperties" value="Id, Active"/>
+  </object>
+
+  <object id="ClientDataHandler.SelectAllInstallerTypeIdAndCode" type="Ace.Windows.Core.DataModel.DataDefinition, Ace.Windows.Core">
+    <property name="ORMObjectName" value="InstallerType"/>
+    <property name ="ORMProperties" value="Code,Id"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name="DTOObjectName" value="manualUpgradeNewVersionDTO"/>
+  </object>
+
+  <!-- EndRegion -->
+
+  <!-- Region Platform Client Data Query -->
+
+  <object id="CXCLE00006.SelectPrintLocationHeaderByCodeAndPosition" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00038"/>
+    <property name ="ORMProperties" value="Id, Code,Position, PrinterName, MaximumLine"/>
+    <property name="DTOObjectName" value="printlocationheaderdto"/>
+    <property name="WhereProperties" value="Code, Position"/>
+  </object>
+
+  <object id="CXCLE00006.SelectPrintLocationItemByPrintLocationHeaderIdAndLineNo" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00034"/>
+    <property name ="ORMProperties" value="Id, FontSize, XLocation, YLocation, Alignment, PrintLocationHeaderId, Length, LineNumber"/>
+    <property name="DTOObjectName" value="printlocationitemdto"/>
+    <property name ="WhereProperties" value="PrintLocationHeaderId, LineNumber"/>
+  </object>
+
+  <object id="CXCLE00006.SelectPrintLocationItemByPrintLocationHeaderId" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00034"/>
+    <property name ="ORMProperties" value="Id, FontSize, XLocation, YLocation, Alignment, PrintLocationHeaderId, Length, LineNumber"/>
+    <property name="DTOObjectName" value="printlocationitemdto"/>
+    <property name ="WhereProperties" value="PrintLocationHeaderId"/>
+    <property name ="OrderByProperties" value="LineNumber"/>
+  </object>
+
+  <object id="COADAO.SelectByBranchDetail" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="ChargeOfAccount"/>
+    <property name ="ORMProperties" value="ACode,AccountName,DCODE,CreatedUserId"/>
+    <property name="DTOObjectName" value="coadto"/>
+    <property name ="WhereProperties" value="DCODE,Active"/>
+    <property name ="OrderByProperties" value="ACode"/>
+  </object>
+
+  <object name="CityCode.Client.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="City"/>
+    <property name ="ORMProperties" value="CityCode, Description"/>
+    <property name="DTOObjectName" value="citycodedto"/>
+    <property name ="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Description"/>
+  </object>
+
+  <object name="StateCode.Client.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="State"/>
+    <property name ="ORMProperties" value="StateCode, Description"/>
+    <property name="DTOObjectName" value="stateCodedto"/>
+    <property name ="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="CreatedDate"/>
+  </object>
+
+  <!--For NRC Code-->
+  <object name="NRCCode.Client.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="SAMORM00054"/>
+    <property name ="ORMProperties" value="TownshipCode, TownshipDesp, StateCode"/>
+    <property name="DTOObjectName" value="NRCdto"/>
+    <property name ="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="TownshipCode Asc"/>
+  </object>
+
+  <object name="TownshipCode.Client.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="Township"/>
+    <property name ="ORMProperties" value="TownshipCode, Description"/>
+    <property name="DTOObjectName" value="townshipCodedto"/>
+    <property name ="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Description"/>
+  </object>
+
+  <object name="InitialCode.Client.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00003"/>
+    <property name ="ORMProperties" value="Initial, Description"/>
+    <property name="DTOObjectName" value="intialdto"/>
+    <property name ="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Description"/>
+  </object>
+
+  <object name="OccupationCode.Client.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00004"/>
+    <property name ="ORMProperties" value="Occupation_Code, Description"/>
+    <property name="DTOObjectName" value="occupationCodedto"/>
+    <property name ="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Description"/>
+  </object>
+
+  <object name="NationalityCode.Client.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="SAMORM00053"/>
+    <property name ="ORMProperties" value="Nationality_Code, Description"/>
+    <property name="DTOObjectName" value="NationalityCodedto"/>
+    <property name ="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Description"/>
+  </object>
+
+  <object name="CurrencyCode.Client.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="Currency"/>
+    <property name ="ORMProperties" value="Cur, Symbol"/>
+    <property name="DTOObjectName" value="curdto"/>
+    <property name ="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Symbol"/>
+  </object>
+
+  <object name="DepositCode.Client.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00020"/>
+    <property name ="ORMProperties" value="DepositCode, Description"/>
+    <property name ="WhereProperties" value="SourceBranchCode,Active"/>
+    <property name="DTOObjectName" value="depositcodedto"/>
+  </object>
+
+  <object name="FixRate.Client.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00007"/>
+    <property name ="ORMProperties" value="Description, Rate, Duration"/>
+    <property name="DTOObjectName" value="fixratedto"/>
+    <property name ="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Duration"/>
+  </object>
+
+  <object name="Setup.AccountClose.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00041"/>
+    <property name ="ORMProperties" value="CCloseCha"/>
+    <property name ="WhereProperties" value="CurrencyCode, SourceBranchCode, Active"/>
+  </object>
+
+  <object name="Setup.SavingAccountClose.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00041"/>
+    <property name ="ORMProperties" value="SCloseCha"/>
+    <property name ="WhereProperties" value="CurrencyCode, SourceBranchCode, Active"/>
+  </object>
+
+  <object name="COA.Client.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="ChargeOfAccount"/>
+    <property name ="ORMProperties" value="ACType"/>
+    <property name ="WhereProperties" value="ACode, DCODE, Active"/>
+  </object>
+
+  <object name="COASetup.AccountClose.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="ChargeOfAccountSetup"/>
+    <property name ="ORMProperties" value="AccountNo"/>
+    <property name ="WhereProperties" value="AccountName, CurrencyCode, SourceBranchCode, Active"/>
+  </object>
+
+  <object name="COASetup.Client.SelectCur" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="ChargeOfAccountSetup"/>
+    <property name ="ORMProperties" value="CurrencyCode"/>
+    <property name ="WhereProperties" value="AccountNo, SourceBranchCode, Active"/>
+  </object>
+
+  <object name="COASetup.Server.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="ChargeOfAccountSetup"/>
+    <property name ="ORMProperties" value="AccountNo"/>
+    <property name ="WhereProperties" value="AccountName, CurrencyCode, SourceBranchCode, Active"/>
+  </object>
+
+  <object name="RateFile.AccountClose.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00009"/>
+    <property name ="ORMProperties" value="Rate"/>
+    <property name ="WhereProperties" value="Code, Active"/>
+  </object>
+
+  <object name="CityCode.SelectByCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="City"/>
+    <property name ="ORMProperties" value="Description"/>
+    <property name ="WhereProperties" value="CityCode, Active"/>
+    <property name ="OrderByProperties" value="Description"/>
+  </object>
+
+  <!--<object name="BUSICode.Client.SelectByCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="LOMORM000001"/>
+    <property name ="ORMProperties" value="Code, Description"/>
+ 
+    <property name ="WhereProperties" value="Code,Active"/>
+    <property name ="OrderByProperties" value="Description"/>
+  </object>-->
+
+  <object name="OccupationCode.SelectByCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00004"/>
+    <property name ="ORMProperties" value="Description"/>
+    <property name ="WhereProperties" value="Occupation_Code,Active"/>
+    <property name ="OrderByProperties" value="Description"/>
+  </object>
+
+  <object name="StateCode.SelectByCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="State"/>
+    <property name ="ORMProperties" value="Description"/>
+    <property name ="WhereProperties" value="StateCode,Active"/>
+    <property name ="OrderByProperties" value="Description"/>
+  </object>
+
+  <object name="TownshipCode.SelectByCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="Township"/>
+    <property name ="ORMProperties" value="Description"/>
+    <property name ="WhereProperties" value="TownshipCode,Active"/>
+    <property name ="OrderByProperties" value="Description"/>
+  </object>
+
+  <object name="InitialCode.SelectByCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00003"/>
+    <property name ="ORMProperties" value="Description"/>
+    <property name ="WhereProperties" value="Initial,Active"/>
+    <property name ="OrderByProperties" value="Description"/>
+  </object>
+
+  <!-- EndRegion -->
+
+  <!-- Region Teller Common Module -->
+  <object name="CXCLE00015.Client.IBL.TLXChargesSelectedByBranchCodeandCur" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00029"/>
+    <property name ="ORMProperties" value="TelaxCharges"/>
+    <property name="DTOObjectName" value="remitbribldto"/>
+    <property name ="WhereProperties" value="BranchCode,Currency,SourceBranchCode,Active"/>
+  </object>
+
+  <object name="CXCLE00015.Client.IBS.TLXChargesSelectedByBranchCodeandCur" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00028"/>
+    <property name ="ORMProperties" value="TelaxCharges,Active"/>
+    <property name="DTOObjectName" value="remitbrdto"/>
+    <property name ="WhereProperties" value="BranchCode,Currency,SourceBranchCode,Active"/>
+  </object>
+
+  <object name="CXCLE00015.Client.IBSACSelectedByBRCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00031"/>
+    <property name ="ORMProperties" value="AccountCode"/>
+    <property name="DTOObjectName" value="zonedto"/>
+    <property name ="WhereProperties" value="BranchCode,SourceBranchCode"/>
+  </object>
+  <!-- EndRegion -->
+
+  <!-- Region Teller Client Data Query -->
+
+  <object name="TranType.Server.SelectByTranCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00005"/>
+    <property name ="ORMProperties" value="TransactionCode,Description,Narration,Status,PBReference,RVReference,UniqueId"/>
+    <property name="DTOObjectName" value="trantypedto"/>
+    <property name ="WhereProperties" value="TransactionCode"/>
+  </object>
+
+  <object name="CXCLE00004.Client.SelectForDeno" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00012"/>
+    <property name ="ORMProperties" value="Description"/>
+    <property name="DTOObjectName" value="Denodto"/>
+    <property name="WhereProperties" value="Currency,Active"/>
+    <property name ="OrderByProperties" value="D1 Desc"/>
+  </object>
+
+  <object name="BranchCode.Client.SelectOtherBank" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="Branch"/>
+    <property name ="ORMProperties" value="BranchCode,BranchDescription,BranchAlias"/>
+    <property name ="WhereProperties" value="OtherBank"/>
+    <property name="DTOObjectName" value="branchdto"/>
+  </object>
+
+  <object name="COASetup.Client.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="ChargeOfAccountSetup"/>
+    <property name ="ORMProperties" value="AccountNo"/>
+    <property name ="WhereProperties" value="AccountName, CurrencyCode, SourceBranchCode, Active"/>
+  </object>
+
+  <object name="COASetup.Client.SelectAccountNameAndAcode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="ChargeOfAccountSetup"/>
+    <property name ="ORMProperties" value="AccountNo,AccountName"/>
+    <property name ="WhereProperties" value="AccountName, CurrencyCode, SourceBranchCode, Active"/>
+  </object>
+
+  <object name="COA.Client.SelectAccountNameList" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="ChargeOfAccount"/>
+    <property name ="ORMProperties" value="ACode,AccountName,CreatedUserId"/>
+    <property name ="WhereProperties" value="ACode,DCODE,Active"/>
+    <property name="DTOObjectName" value="coadto"/>
+  </object>
+
+  <object name="COA.Client.SelectAccountName" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="ChargeOfAccount"/>
+    <property name ="ORMProperties" value="AccountName,Active"/>
+    <property name="DTOObjectName" value="coadto"/>
+    <property name ="WhereProperties" value="ACode,DCODE,Active"/>
+  </object>
+
+  <object name="RemitBranchIBL.Client.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00029"/>
+    <property name ="ORMProperties" value="TelaxCharges,IBSComAccount,TelaxAccount"/>
+    <property name="DTOObjectName" value="remitbribldto"/>
+    <property name ="WhereProperties" value="Currency,BranchCode,SourceBranchCode"/>
+  </object>
+
+  <object name="COA.Client.Select.AccountName" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="ChargeOfAccount"/>
+    <property name ="ORMProperties" value="AccountName,Active"/>
+    <property name="DTOObjectName" value="coadto"/>
+    <property name ="WhereProperties" value="ACode,DCODE"/>
+  </object>
+
+  <object name="IBLDrawingRate.Client.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00030"/>
+    <property name ="ORMProperties" value="StartNo,EndNo,Rate,FixAmount"/>
+    <property name="DTOObjectName" value="ibldrawingratedto"/>
+    <property name ="WhereProperties" value="Currency,BranchCode,SourceBranchCode,Active"/>
+  </object>
+
+  <object name="RemitBr.SelectEncashAccountCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00028"/>
+    <property name ="ORMProperties" value="EncashAccount,IRPOAccount"/>
+    <property name="DTOObjectName" value="remitbrdto"/>
+    <property name ="WhereProperties" value="BranchCode,Currency,SourceBranchCode"/>
+  </object>
+
+  <object name="CXCLE00015.RemitBr.SelectTelaxCharges" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00028"/>
+    <property name ="ORMProperties" value="TelaxCharges"/>
+    <property name="DTOObjectName" value="remitbrdto"/>
+    <property name ="WhereProperties" value="BranchCode,Currency"/>
+  </object>
+
+  <!--<object name="CXCLE00015.RmitRate.SelectRateandFixAmount" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+			<property name="ORMObjectName" value="TLMORM00032"/>
+			<property name ="ORMProperties" value="Rate,FixAmount"/>
+			<property name="DTOObjectName" value="remitbrdto"/>
+			<property name ="WhereProperties" value="BranchCode,Currency"/>
+		</object>-->
+
+  <object name="RemitBr.SelectDrawingAccountCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00028"/>
+    <property name ="ORMProperties" value="DrawingAccount,TelaxAccount,IBSComAccount"/>
+    <property name="DTOObjectName" value="remitbrdto"/>
+    <property name ="WhereProperties" value="BranchCode,Currency,SourceBranchCode"/>
+  </object>
+
+  <object id="CXCLE00014.HasACodeInCOA" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="ChargeOfAccount"/>
+    <property name ="ORMProperties" value="ACode"/>
+    <property name="WhereProperties" value="ACode,DCODE,Active"/>
+  </object>
+
+  <object id="CXCLE00010.SelectPORate" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00003"/>
+    <property name ="ORMProperties" value="Rate,FixAmount,StartNo,EndNo"/>
+    <property name="DTOObjectName" value="poratedto"/>
+    <property name="WhereProperties" value="Currency"/>
+  </object>
+
+  <object id="Deno.SelectByCurrencyCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00012"/>
+    <property name ="ORMProperties" value="Description, D1, D2, Symbol,Currency"/>
+    <property name ="WhereProperties" value="Currency,Active"/>
+    <property name ="OrderByProperties" value="D1 Desc,D2 Desc"/>
+    <property name="DTOObjectName" value="Denodto"/>
+  </object>
+
+  <object name="Cur.HomeCur.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="Currency"/>
+    <property name ="ORMProperties" value="Cur"/>
+    <property name="DTOObjectName" value="curdto"/>
+    <property name ="WhereProperties" value="IsHomeCur"/>
+  </object>
+
+  <!--Currency(Kyats and Pyas in words-->
+  <object name="Cur.DescriptioninWords.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="Currency"/>
+    <property name ="ORMProperties" value="FirstInWord,SecondInWord"/>
+    <property name="DTOObjectName" value="curdto"/>
+    <property name ="WhereProperties" value="Cur,Active"/>
+  </object>
+
+  <object name="Sys001.SelectSettlementDate" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00056"/>
+    <property name ="ORMProperties" value="SysDate"/>
+    <property name ="WhereProperties" value="Name,SourceBr,Active"/>
+  </object>
+
+  <!--Added by HMW at 30-Sept-2019-->
+  <object name="Sys001.SelectYearlyPostData" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+	<property name="ORMObjectName" value="PFMORM00056"/>
+	<property name ="ORMProperties" value="SysMonYear,Status,SysDate"/>
+	<property name ="DTOObjectName" value="sys001dto"/>
+	<property name ="WhereProperties" value="Name,SourceBr,Active"/>
+  </object>
+
+  <object name="TranType.Client.SelectByTranCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name ="ORMObjectName" value="TLMORM00005"/>
+    <property name ="ORMProperties" value="TransactionCode,Description,Narration,Status,PBReference,RVReference,UniqueId"/>
+    <property name ="DTOObjectName" value="trantypedto"/>
+    <property name ="WhereProperties" value="TransactionCode"/>
+  </object>
+
+  <object name="TranType.Client.SelectByStatus" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name ="ORMObjectName" value="TLMORM00005"/>
+    <property name ="ORMProperties" value="TransactionCode,Description,Narration,Status,PBReference,RVReference,UniqueId"/>
+    <property name ="DTOObjectName" value="trantypedto"/>
+    <property name ="WhereProperties" value="TransactionCode"/>
+  </object>
+
+  <!--<object name="COASetup.Client.Select" type="ACE.CBS.CX.COM.DMD.CXDMD00003, ACE.CBS.CX.COM">
+			<property name="ORMObjectName" value="PFMORM00025"/>
+			<property name ="ORMProperties" value="AccountNo"/>
+			<property name ="WhereProperties" value="AccountName, CurrencyCode, SourceBranchCode, Active"/>
+		</object>-->
+
+  <!--Wrong-->
+  <object name="RateInfo.Rate.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00074"/>
+    <property name ="ORMProperties" value="Rate"/>
+    <property name="DTOObjectName" value="rateInfoDto"/>
+    <property name ="WhereProperties" value="CurrencyCode,RateType,LastModify,ToCurrencyCode,Active"/>
+    <property name ="OrderByProperties" value="RDate Desc"/>
+  </object>
+
+  <object name="NewSetup.Client.SelectValueByVariable" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00057"/>
+    <property name ="ORMProperties" value="Variable,Value"/>
+    <property name="DTOObjectName" value="newsetupdto"/>
+    <property name ="WhereProperties" value="Variable"/>
+  </object>
+
+
+  <object name="CXCLE00012.TranType.Client.SelectByTranCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00005"/>
+    <property name ="ORMProperties" value="TransactionCode,Description,Narration,Status,PBReference,RVReference,UniqueId"/>
+    <property name="DTOObjectName" value="trantypedto"/>
+    <property name ="WhereProperties" value="TransactionCode"/>
+  </object>
+
+  <object name="BCode.Client.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00040"/>
+    <property name ="ORMProperties" value="BCode, BDesp"/>
+    <property name="DTOObjectName" value="bcodedto"/>
+    <property name ="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="BDesp"/>
+  </object>
+
+  <object name="Branch.Client.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="Branch"/>
+    <property name ="ORMProperties" value="BranchCode,BranchDescription,BranchAlias"/>
+    <property name="DTOObjectName" value="branchdto"/>
+  </object>
+
+  <object name="RemitBrIbl.Client.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00029"/>
+    <property name ="ORMProperties" value="DrawingAccount,EncashAccount,IBSComAccount,TelaxAccount"/>
+    <property name="DTOObjectName" value="remitbribldto"/>
+    <property name ="WhereProperties" value="BranchCode,Currency,SourceBranchCode"/>
+  </object>
+
+  <object name="Branch.Client.Alias.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="Branch"/>
+    <property name ="ORMProperties" value="BranchAlias"/>
+    <property name ="WhereProperties" value="BranchCode,Active"/>
+  </object>
+
+  <object name="Zone.ZoneType.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00031"/>
+    <property name ="ORMProperties" value="ZoneType,AccountCode"/>
+    <property name="DTOObjectName" value="zonedto"/>
+    <property name ="WhereProperties" value="BranchCode"/>
+  </object>
+
+
+  <!--<object name="Branch.Client.Phone.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+		<property name="ORMObjectName" value="Branch"/>
+		<property name ="ORMProperties" value="Phone,Fax"/>
+		<property name="DTOObjectName" value="branchdto"/>
+		<property name ="WhereProperties" value="BranchAlias"/>
+	  </object>-->
+
+  <object name="Branch.Client.isOtherBank.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="Branch"/>
+    <property name ="ORMProperties" value="BranchCode,BranchAlias,BranchDescription,Address,Fax,Phone,Email,StateCode,CityCode,TownshipCode,OtherBank,Bank_Alias"/>
+    <property name="DTOObjectName" value="branchdto"/>
+    <property name ="WhereProperties" value="BranchCode"/>
+  </object>
+
+  <object name="CounterInfo.Client.SelectAllCounterNo" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00002"/>
+    <property name ="ORMProperties" value="CounterNo"/>
+    <property name="DTOObjectName" value="counterinfodto"/>
+    <property name ="WhereProperties" value="SourceBranchCode"/>
+  </object>
+
+
+
+  <object name="CounterInfo.Client.SelectCounterTypeByCounterNo" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00002"/>
+    <property name ="ORMProperties" value="CounterNo"/>
+    <property name="DTOObjectName" value="counterinfodto"/>
+    <property name ="WhereProperties" value="CounterNo"/>
+  </object>
+
+  <object name="CashSetup.Client.SelectCashCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00013"/>
+    <property name ="ORMProperties" value="CashCode,Description"/>
+    <property name="DTOObjectName" value="cashsetupdto"/>
+  </object>
+
+  <object name="Branch.Client.SelectNotOtherBank" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="Branch"/>
+    <property name ="ORMProperties" value="BranchCode,BranchDescription,BranchAlias"/>
+    <property name="DTOObjectName" value="branchdto"/>
+    <property name ="WhereProperties" value="OtherBank"/>
+  </object>
+
+  <object name="CashSetup.Client.SelectByNotEqualCashCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00013"/>
+    <property name ="ORMProperties" value="CashCode,Description"/>
+    <property name="DTOObjectName" value="cashsetupdto"/>
+    <property name ="WhereProperties" value="CashCode"/>
+    <property name ="ComparisonOperator" value="!="/>
+  </object>
+
+  <object name="CashSetup.Client.SelectByCenterTableCashCodeDescription" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00013"/>
+    <property name ="ORMProperties" value="Description"/>
+    <property name ="WhereProperties" value="CashCode"/>
+
+  </object>
+
+  <object name="AccountType.Client.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00015"/>
+    <property name ="ORMProperties" value="Code, Description"/>
+    <property name="DTOObjectName" value="accounttypedto"/>
+    <property name="WhereProperties" value="Active"/>
+  </object>
+
+  <object name="COA.Client.SelectDCodeByACode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="ChargeOfAccount"/>
+    <property name ="ORMProperties" value="ACode,AccountName,DCODE"/>
+    <property name="DTOObjectName" value="coadto"/>
+    <property name ="WhereProperties" value="ACode,Active"/>
+    <property name ="OrderByProperties" value="ACode"/>
+  </object>
+
+  <!-- EndRegion -->
+
+  <!--Region Transfer And Clearing Client Data Query-->
+
+  <object name="Holiday.Client.Select" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="SAMORM00003"/>
+    <property name ="ORMProperties" value="DATE,DESCRIPTION"/>
+    <property name ="WhereProperties" value="Active"/>
+    <property name="DTOObjectName" value="holidaydto"/>
+    <property name ="OrderByProperties" value="DATE"/>
+  </object>
+
+  <!--Endregion-->
+
+  <!--Region Default Data-->
+
+  <object id="CodeType" type="System.Collections.Generic.Dictionary&lt;string,string>">
+    <constructor-arg>
+      <dictionary>
+        <entry key="Occupation" value="Occupation"/>
+        <entry key="State/Division" value="State/Division"/>
+        <entry key="City" value="City"/>
+        <entry key="Township" value="Township"/>
+        <entry key="Initial" value="Initial"/>
+      </dictionary>
+    </constructor-arg>
+  </object>
+
+  <object id="ZoneType" type="System.Collections.Generic.Dictionary&lt;string,string>">
+    <constructor-arg>
+      <dictionary>
+        <entry key="LOC" value="Local Zone"/>
+        <entry key="OTH" value="Other Zone"/>
+      </dictionary>
+    </constructor-arg>
+  </object>
+
+  <object id="CounterType" type="System.Collections.Generic.Dictionary&lt;string,string>">
+    <constructor-arg>
+      <dictionary>
+        <entry key="P" value="Payment"/>
+        <entry key="R" value="Receive"/>
+      </dictionary>
+    </constructor-arg>
+  </object>
+
+  <object id="AccountNoCheckDigitFormula1" type="System.Collections.Generic.List&lt;int>">
+    <constructor-arg>
+      <list>
+        <value>577</value>
+        <value>7</value>
+        <value>1</value>
+        <value>3</value>
+        <value>5</value>
+        <value>3</value>
+        <value>613</value>
+        <value>701</value>
+        <value>691</value>
+        <value>5</value>
+        <value>643</value>
+        <value>757</value>
+      </list>
+    </constructor-arg>
+  </object>
+
+  <object id="AccountNoCheckDigitFormula2" type="System.Collections.Generic.List&lt;int>">
+    <constructor-arg>
+      <list>
+        <value>3</value>
+        <value>5</value>
+        <value>7</value>
+        <value>5</value>
+        <value>3</value>
+        <value>1</value>
+        <value>0</value>
+        <value>0</value>
+        <value>757</value>
+        <value>701</value>
+        <value>691</value>
+        <value>577</value>
+        <value>643</value>
+        <value>613</value>
+      </list>
+    </constructor-arg>
+  </object>
+
+  <object id="CustomerNoCheckDigitFormula2" type="System.Collections.Generic.List&lt;int>">
+    <constructor-arg>
+      <list>
+        <value>3</value>
+        <value>5</value>
+        <value>7</value>
+        <value>5</value>
+        <value>3</value>
+        <value>1</value>
+        <value>757</value>
+        <value>701</value>
+        <value>691</value>
+        <value>577</value>
+      </list>
+    </constructor-arg>
+  </object>
+
+  <object id="Channel" type="System.Collections.Generic.List&lt;string>">
+    <constructor-arg>
+      <list>
+        <value>CBS</value>
+      </list>
+    </constructor-arg>
+  </object>
+
+  <object id="CurrentAccountFormType" type="System.Collections.Generic.Dictionary&lt;int,string>">
+    <constructor-arg>
+      <dictionary>
+        <entry key="0" value="Individual"/>
+        <entry key="1" value="Joint"/>
+        <entry key="2" value="Company"/>
+      </dictionary>
+    </constructor-arg>
+  </object>
+
+  <object id="SavingAccountFormType" type="System.Collections.Generic.Dictionary&lt;int,string>">
+    <constructor-arg>
+      <dictionary>
+        <entry key="0" value="Individual"/>
+        <entry key="1" value="Joint"/>
+        <entry key="2" value="Minor"/>
+        <entry key="3" value="Co./Organization"/>
+      </dictionary>
+    </constructor-arg>
+  </object>
+
+  <object id="SavingAccountWithdrawFormPrinting" type="System.Collections.Generic.Dictionary&lt;int,string>">
+    <constructor-arg>
+      <dictionary>
+        <entry key="0" value="Withdrawal Form"/>
+        <entry key="1" value="Withdrawal (Online) Form"/>
+      </dictionary>
+    </constructor-arg>
+  </object>
+
+  <object id="Gender" type="System.Collections.Generic.Dictionary&lt;string,string>">
+    <constructor-arg>
+      <dictionary>
+        <entry key="Male" value="Male"/>
+        <entry key="Female" value="Female"/>
+      </dictionary>
+    </constructor-arg>
+  </object>
+
+  <object id="TransactionType" type="System.Collections.Generic.Dictionary&lt;string,string>">
+    <constructor-arg>
+      <dictionary>
+        <entry key="-" value="-"/>
+        <entry key="Deposit" value="Deposit"/>
+        <entry key="Withdraw" value="Withdraw"/>
+        <entry key="TransferCredit" value="TransferCredit"/>
+        <entry key="TransferDebit" value="TransferDebit"/>
+      </dictionary>
+    </constructor-arg>
+  </object>
+
+  <object id="AccountType" type="System.Collections.Generic.Dictionary&lt;string,string>">
+    <constructor-arg>
+      <dictionary>
+        <entry key="A" value="Assets"/>
+        <entry key="E" value="Expenses"/>
+        <entry key="I" value="Income"/>
+        <entry key="L" value="Liabilities"/>
+      </dictionary>
+    </constructor-arg>
+  </object>
+
+  <object id="RateType" type="System.Collections.Generic.Dictionary&lt;string,string>">
+    <constructor-arg>
+      <dictionary>
+        <entry key="TT" value="TT"/>
+        <entry key="CS" value="CS"/>
+      </dictionary>
+    </constructor-arg>
+  </object>
+
+  <!--Endregion-->
+
+  <!--Region Center Client Data Query-->
+  <object id="ClientDataHandler.SelectAllBranch" type="Ace.Windows.Core.DataModel.DataDefinition, Ace.Windows.Core">
+    <property name="ORMObjectName" value="Branch"/>
+    <property name ="ORMProperties" value="BranchCode,BranchDescription,BranchAlias"/>
+    <property name="WhereProperties" value=" Active"/>
+    <property name="DTOObjectName" value="branchdto"/>
+  </object>
+  <object id="ClientDataHandler.SelectAllInstallerType" type="Ace.Windows.Core.DataModel.DataDefinition, Ace.Windows.Core">
+    <property name="ORMObjectName" value="InstallerType"/>
+    <property name ="ORMProperties" value="Id,Code,Description"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name="DTOObjectName" value="cendto03"/>
+  </object>
+  <object id="ClientDataHandler.SelectWorkstationTypeIdAndDescription" type="Ace.Windows.Core.DataModel.DataDefinition, Ace.Windows.Core">
+    <property name="ORMObjectName" value="WorkStationType"/>
+    <property name ="ORMProperties" value="Id,Description,Code"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name="DTOObjectName" value="ccomdto04"/>
+  </object>
+  <!--Endregion-->
+
+  <!-- Region CCC Center Query-->
+  <object id="ClientDataHandler.SelectAllInstallerTypeByCCC" type="Ace.Windows.Core.DataModel.DataDefinition, Ace.Windows.Core">
+    <property name="ORMObjectName" value="InstallerType"/>
+    <property name ="ORMProperties" value="Id,Code,Description"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name="DTOObjectName" value="ccomdto07"/>
+  </object>
+  <object id="ClientDataHandler.SelectCCCWorkStationTypeId" type="Ace.Windows.Core.DataModel.DataDefinition, Ace.Windows.Core">
+    <property name="ORMObjectName" value="WorkStationType"/>
+    <property name ="ORMProperties" value="Id"/>
+    <property name="WhereProperties" value="WorkStationLevel"/>
+    <property name="DTOObjectName" value="ccomdto04"/>
+  </object>
+  <!--End Region-->
+
+  <!--Region Select All & SelectById Client Data (NMS)-->
+
+  <!-- Region AccountType-->
+  <object name="PFMORM00015.Client.SelectAll" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00015"/>
+    <property name ="ORMProperties" value="Id,Code,Description,Symbol,Active,TS,CreatedUserId,CreatedDate,UpdatedUserId,UpdatedDate"/>
+    <property name="DTOObjectName" value="accounttypedto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Code"/>
+  </object>
+  <object name="PFMORM00015.Client.SelectById" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00015"/>
+    <property name ="ORMProperties" value="Id,Code,Description,Symbol,Active,TS,CreatedUserId,CreatedDate,UpdatedUserId,UpdatedDate"/>
+    <property name="WhereProperties" value="Id,Active"/>
+    <property name="DTOObjectName" value="accounttypedto"/>
+  </object>
+  <!--Endregion-->
+
+  <!--Region OccupationCode-->
+  <object name="PFMORM00004.Client.SelectAll" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00004"/>
+    <property name ="ORMProperties" value="Occupation_Code,Description,UserNo,Date_Time,EditDate_Time,EditUser,EditType,Defaults,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="occupationCodedto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Occupation_Code"/>
+  </object>
+  <object name="PFMORM00004.Client.SelectByOccupationCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00004"/>
+    <property name ="ORMProperties" value="Occupation_Code,Description,UserNo,Date_Time,EditDate_Time,EditUser,EditType,Defaults,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="WhereProperties" value="Occupation_Code,Active"/>
+    <property name="DTOObjectName" value="occupationCodedto"/>
+  </object>
+  <!--Endregion-->
+
+  <!--Region BCode-->
+  <object name="TLMORM00040.Client.SelectAll" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00040"/>
+    <property name ="ORMProperties" value="BCode,BDesp,BAccountNo,UniqueId,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="bcodedto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="BCode"/>
+  </object>
+  <object name="TLMORM00040.Client.SelectByBCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00040"/>
+    <property name ="ORMProperties" value="BCode,BDesp,BAccountNo,UniqueId,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="WhereProperties" value="BCode,Active"/>
+    <property name="DTOObjectName" value="bcodedto"/>
+  </object>
+
+  <!--Endregion-->
+
+  <!--Region Holiday-->
+  <object name="SAMORM00003.Client.SelectAll" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="SAMORM00003"/>
+    <property name ="ORMProperties" value="Id,DATE,DESCRIPTION,USERNO,UID,Active,TS,CreatedUserId,CreatedDate,UpdatedUserId,UpdatedDate"/>
+    <property name="DTOObjectName" value="holidaydto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="DATE Desc"/>
+  </object>
+  <object name="SAMORM00003.Client.SelectById" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="SAMORM00003"/>
+    <property name ="ORMProperties" value="Id,DATE,DESCRIPTION,USERNO,UID,Active,TS,CreatedUserId,CreatedDate,UpdatedUserId,UpdatedDate"/>
+    <property name="WhereProperties" value="Id,Active"/>
+    <property name="DTOObjectName" value="holidaydto"/>
+  </object>
+  <!--Endregion-->
+
+  <!--Region Depositcode-->
+  <object name="TLMORM00020.Client.SelectAll" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00020"/>
+    <property name ="ORMProperties" value="DepositCode,Description,UniqueId,SourceBranchCode,Active,TS,CreatedUserId,CreatedDate,UpdatedUserId,UpdatedDate"/>
+    <property name="DTOObjectName" value="depositcodedto"/>
+    <property name="WhereProperties" value="Active,SourceBranchCode"/>
+    <property name ="OrderByProperties" value="DepositCode"/>
+  </object>
+  <object name="TLMORM00020.Client.SelectByDepositcode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00020"/>
+    <property name ="ORMProperties" value="DepositCode,Description,UniqueId,SourceBranchCode,Active,TS,CreatedUserId,CreatedDate,UpdatedUserId,UpdatedDate"/>
+    <property name="WhereProperties" value="DepositCode,Active"/>
+    <property name="DTOObjectName" value="depositcodedto"/>
+  </object>
+  <!--Endregion-->
+
+  <!--Region Appsetting-->
+  <object name="PFMORM00053.Client.SelectAll" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00053"/>
+    <property name ="ORMProperties" value="Id,KeyName,KeyValue,BinaryValue,Description,Location,Type,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="appsettingsdto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="KeyName"/>
+  </object>
+  <object name="PFMORM00053.Client.SelectById" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00053"/>
+    <property name ="ORMProperties" value="Id,KeyName,KeyValue,BinaryValue,Description,Location,Type,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="WhereProperties" value="Id,Active"/>
+    <property name="DTOObjectName" value="appsettingsdto"/>
+  </object>
+  <!--Endregion-->
+
+  <!--Region Fixrate-->
+  <object name="PFMORM00007.Client.SelectAll" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00007"/>
+    <property name ="ORMProperties" value="Id,Description,DATE_TIME,IsLastModify,UserNumber,Rate,Duration,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="fixratedto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Duration"/>
+  </object>
+  <object name="PFMORM00007.Client.SelectById" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00007"/>
+    <property name ="ORMProperties" value="Id,Description,DATE_TIME,IsLastModify,UserNumber,Rate,Duration,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="WhereProperties" value="Id,Active"/>
+    <property name="DTOObjectName" value="fixratedto"/>
+  </object>
+  <!--Endregion-->
+
+  <!--Region NewSetUp-->
+  <object name="PFMORM00057.Client.SelectAll" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00057"/>
+    <property name ="ORMProperties" value="Variable,Value,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="newsetupdto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Variable"/>
+  </object>
+  <object name="PFMORM00057.Client.SelectByVariable" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00057"/>
+    <property name ="ORMProperties" value="Variable,Value,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="WhereProperties" value="Variable,Active"/>
+    <property name="DTOObjectName" value="newsetupdto"/>
+  </object>
+  <!--Endregion-->
+
+  <!--Region Zone-->
+  <object name="TLMORM00031.Client.SelectAll" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00031"/>
+    <property name ="ORMProperties" value="Id,ZoneType,ZoneDescription,BranchCode,AccountCode,UniqueId,SourceBranchCode,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="zonedto"/>
+    <property name="WhereProperties" value="SourceBranchCode,Active"/>
+    <property name ="OrderByProperties" value="ZoneType"/>
+  </object>
+  <object name="TLMORM00031.Client.SelectById" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00031"/>
+    <property name ="ORMProperties" value="Id,ZoneType,ZoneDescription,BranchCode,AccountCode,UniqueId,SourceBranchCode,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="zonedto"/>
+    <property name="WhereProperties" value="Id,Active"/>
+  </object>
+  <object name="TLMORM00031.Client.SelectAllByDistinct" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00031"/>
+    <property name ="ORMProperties" value="ZoneType,ZoneDescription,AccountCode"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name="DTOObjectName" value="zonedto"/>
+  </object>
+  <!--Endregion-->
+
+  <!--Region Branch-->
+  <object name="BranchCode.Client.SelectAllBranch" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="Branch"/>
+    <property name ="ORMProperties" value="BranchAlias"/>
+    <property name="WhereProperties" value="OtherBank,Active"/>
+    <property name="DTOObjectName" value="branchdto"/>
+  </object>
+  <object name="BranchCode.Client.SelectAllBranchCodes" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="Branch"/>
+    <property name ="ORMProperties" value="BranchCode"/>
+    <property name="DTOObjectName" value="branchdto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name="OrderByProperties" value="BranchCode"/>
+  </object>
+  <object name="BranchCode.Client.SelectByCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="Branch"/>
+    <property name ="ORMProperties" value="BranchAlias"/>
+    <property name ="WhereProperties" value="BranchCode, Active"/>
+    <property name ="OrderByProperties" value="BranchAlias"/>
+  </object>
+  <!--Endregion-->
+
+  <!--Region Day Key-->
+  <object name="TLMORM00034.Client.SelectAll" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00034"/>
+    <property name ="ORMProperties" value="Id,Code,Value,StartDate,UniqueId,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="daykeydto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="StartDate Desc"/>
+  </object>
+  <!--Endregion-->
+
+  <!--Region Month Key-->
+  <object name="TLMORM00035.Client.SelectAll" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00035"/>
+    <property name ="ORMProperties" value="Id,Code,Value,StartDate,UniqueId,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="allkeydto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="StartDate Desc"/>
+  </object>
+  <!--Endregion-->
+
+  <!--Region Amount Key-->
+  <object name="TLMORM00036.Client.SelectAll" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00036"/>
+    <property name ="ORMProperties" value="Id,Code,Value,StartDate,UniqueId,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="allkeydto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="StartDate Desc"/>
+  </object>
+  <!--Endregion-->
+
+  <!--Region Branch Key-->
+  <object name="TLMORM00037.Client.SelectAll" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00037"/>
+    <property name ="ORMProperties" value="Id,Code,Value,StartDate,UniqueId,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="allkeydto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="StartDate Desc"/>
+  </object>
+  <!--Endregion-->
+
+  <!--Region Initial-->
+  <object name="PFMORM00003.Client.SelectAll" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00003"/>
+    <property name ="ORMProperties" value="Initial,Description,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="intialdto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Initial"/>
+  </object>
+  <object name="PFMORM00003.Client.SelectByInitial" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00003"/>
+    <property name ="ORMProperties" value="Initial,Description,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="intialdto"/>
+    <property name="WhereProperties" value="Initial,Active"/>
+  </object>
+  <!--Endregion-->
+
+  <!--Region PORate-->
+  <object name="TLMORM00003.Client.SelectAll" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00003"/>
+    <property name ="ORMProperties" value="Id,Range,Rate,FixAmount,StartNo,EndNo,UniqueId,Currency,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="poratedto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Currency"/>
+  </object>
+  <object name="TLMORM00003.Client.SelectById" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00003"/>
+    <property name ="ORMProperties" value="Id,Range,Rate,FixAmount,StartNo,EndNo,UniqueId,Currency,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="poratedto"/>
+    <property name="WhereProperties" value="Id,Active"/>
+  </object>
+  <!--Endregion-->
+
+  <!--Region Currency-->
+  <object name="Currency.Client.SelectCur" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="Currency"/>
+    <property name ="ORMProperties" value="Cur"/>
+    <property name="DTOObjectName" value="curdto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Cur"/>
+  </object>
+  <!--endregion-->
+
+  <!--Region Ratefile-->
+  <object name="PFMORM00009.Client.SelectAll" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00009"/>
+    <property name ="ORMProperties" value="Code,Description,DATE_TIME,LASTMODIFY,USERNO,Rate,Duration,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="ratedto"/>
+    <property name="WhereProperties" value="LASTMODIFY,Active"/>
+    <property name ="OrderByProperties" value="Code"/>
+  </object>
+  <object name="PFMORM00009.Client.SelectByCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00009"/>
+    <property name ="ORMProperties" value="Code,Description,DATE_TIME,LASTMODIFY,USERNO,Rate,Duration,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="ratedto"/>
+    <property name ="WhereProperties" value="Code,Active"/>
+  </object>
+  <object name="PFMORM00009.Client.SelectByCodeAndLastModify" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00009"/>
+    <property name ="ORMProperties" value="Code,Description,DATE_TIME,LASTMODIFY,USERNO,Rate,Duration,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="ratedto"/>
+    <property name ="WhereProperties" value="Code,LASTMODIFY,Active"/>
+    <property name ="OrderByProperties" value="DATE_TIME Desc"/>
+  </object>
+  <!--Endregion-->
+
+  <!--Region Deno-->
+  <object name="TLMORM00012.Client.SelectAll" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00012"/>
+    <property name ="ORMProperties" value="Id,Description,D1,D2,UId,Currency,Symbol,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="Denodto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Currency"/>
+  </object>
+  <object name="TLMORM00012.Client.SelectById" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00012"/>
+    <property name ="ORMProperties" value="Id,Description,D1,D2,UId,Currency,Symbol,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="Denodto"/>
+    <property name ="WhereProperties" value="Id,Active"/>
+  </object>
+  <!--Endregion-->
+
+  <!--Region Nationality Code-->
+  <object name="SAMORM00053.Client.SelectAll" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="SAMORM00053"/>
+    <property name ="ORMProperties" value="Nationality_Code,Description,UserNo,Date_Time,EditDate_Time,EditUser,EditType,Defaults,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="NationalityCodedto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Nationality_Code"/>
+  </object>
+  <object name="SAMORM00053.Client.SelectByNationalityCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="SAMORM00053"/>
+    <property name ="ORMProperties" value="Nationality_Code,Description,UserNo,Date_Time,EditDate_Time,EditUser,EditType,Defaults,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="NationalityCodedto"/>
+    <property name ="WhereProperties" value="Nationality_Code,Active"/>
+  </object>
+  <!--Endregion-->
+
+  <!--Region Trantype-->
+  <object name="TLMORM00005.Client.SelectAll" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00005"/>
+    <property name ="ORMProperties" value="TransactionCode,Description,Narration,Status,PBReference,RVReference,UniqueId,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="trantypedto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="TransactionCode"/>
+  </object>
+  <object name="TLMORM00005.Client.SelectByTranCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00005"/>
+    <property name ="ORMProperties" value="TransactionCode,Description,Narration,Status,PBReference,RVReference,UniqueId,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="trantypedto"/>
+    <property name ="WhereProperties" value="TransactionCode,Active"/>
+    <property name ="OrderByProperties" value="TransactionCode"/>
+  </object>
+  <!--Endregion-->
+
+  <!--Region RateInfo-->
+  <object name="PFMORM00074.Client.SelectAll" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00074"/>
+    <property name ="ORMProperties" value="Id,CurrencyCode,RateType,Rate,DenoRate,RegisterDate,LastModify,ToCurrencyCode,Active,TS,CreatedUserId,CreatedDate,UpdatedUserId,UpdatedDate"/>
+    <property name="DTOObjectName" value="rateInfoDto"/>
+    <property name="WhereProperties" value="LastModify,Active"/>
+    <property name ="OrderByProperties" value="RDate Desc"/>
+  </object>
+  <object name="PFMORM00074.Client.SelectById" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00074"/>
+    <property name ="ORMProperties" value="Id,CurrencyCode,RateType,Rate,DenoRate,RegisterDate,LastModify,ToCurrencyCode,Active,TS,CreatedUserId,CreatedDate,UpdatedUserId,UpdatedDate"/>
+    <property name="DTOObjectName" value="rateInfoDto"/>
+    <property name ="WhereProperties" value="CurrencyCode,Active"/>
+  </object>
+  <!--Endregion-->
+
+  <!--Region Message-->
+  <object name="PFMORM00048.Client.SelectAll" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00048"/>
+    <property name ="ORMProperties" value="Code,Description,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="messagedto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Code"/>
+  </object>
+  <object name="PFMORM00048.Client.SelectByCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="PFMORM00048"/>
+    <property name ="ORMProperties" value="Code,Description,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="messagedto"/>
+    <property name ="WhereProperties" value="Code,Active"/>
+  </object>
+  <!--Endregion-->
+
+  <!--Region RemitbrIbl-->
+  <object name="TLMORM00029.Client.SelectByCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00029"/>
+    <property name ="ORMProperties" value="Id,BranchCode,TelaxCharges,TTSerial,DraftSerial,StateCode,DrawingAccount,EncashAccount,IBSComAccount,TelaxAccount,IblSerial,IRPOAccount,UniqueIdentifier,SourceBranchCode,Currency,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="remitbribldto"/>
+    <property name ="WhereProperties" value="BranchCode,SourceBranchCode,Currency,Active"/>
+  </object>
+  <!--Endregion-->
+
+  <!--Region IblDwtRate-->
+  <object name="TLMORM00030.Client.SelectById" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00030"/>
+    <property name ="ORMProperties" value="Id,RemitbrIblID,BranchCode,StartNo,EndNo,Rate,FixAmount,Discount,
+				  TrDiscount,CsDiscount,
+				  CsMinRate,MinRate,
+				  UniqueId,SourceBranchCode,
+				  Currency,Active,
+				  TS,CreatedUserId,
+				  CreatedDate,UpdatedUserId,
+				  UpdatedDate"/>
+    <property name="DTOObjectName" value="ibldrawingratedto"/>
+    <property name ="WhereProperties" value="RemitbrIblID,Active"/>
+  </object>
+  <!--Endregion-->
+
+  <!--Region RemitBr-->
+  <object name="TLMORM00028.Client.SelectByCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00028"/>
+    <property name ="ORMProperties" value="Id,BranchCode,TelaxCharges,TTSerial,DraftSerial,StateCode,DrawingAccount,EncashAccount,IBSComAccount,TelaxAccount,IblSerial,IRPOAccount,UniqueIdentifier,SourceBranchCode,Currency,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="remitbrdto"/>
+    <property name ="WhereProperties" value="BranchCode,SourceBranchCode,Currency,Active"/>
+  </object>
+  <!--Endregion-->
+
+  <!--Region RmitRate-->
+  <object name="TLMORM00032.Client.SelectById" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="TLMORM00032"/>
+    <property name ="ORMProperties" value="Id,RemitBrId,BranchCode,StartNo,EndNo,Rate,FixAmount,Discount,TrDiscount,CsDiscount,CsMinRate,MinRate,UniqueId,SourceBranchCode,Currency,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="rmitratedto"/>
+    <property name ="WhereProperties" value="RemitBrId,Active"/>
+  </object>
+  <!--Endregion-->
+
+  <object id="ClientDataHandler.SelectInstallerTypeNameByCode" type="Ace.Windows.Core.DataModel.DataDefinition, Ace.Windows.Core">
+    <property name="ORMObjectName" value="InstallerType"/>
+    <property name ="ORMProperties" value="Name"/>
+    <property name="WhereProperties" value="Code, Active"/>
+  </object>
+
+  <!--By SZ (to solve configuration error)-->
+  <object id="ClientDataHandler.SelectCenterWorkStationTypeId" type="Ace.Windows.Core.DataModel.DataDefinition, Ace.Windows.Core">
+    <property name="ORMObjectName" value="WorkStationType"/>
+    <property name ="ORMProperties" value="Id"/>
+    <property name="WhereProperties" value="WorkStationLevel,HasNoChild"/>
+  </object>
+  <!--Endregion-->
+
+  <!--Region Admin Query-->
+
+  <object name="ClientDataHandler.Township.Client.SelectAll" type="Ace.Windows.Core.DataModel.DataDefinition, Ace.Windows.Core">
+    <property name="ORMObjectName" value="Township"/>
+    <property name ="ORMProperties" value="TownshipCode,TS,Description,UserNo,Date_Time,EditDate_Time,EditUser,Edit_Type,Active,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="townshipCodedto"/>
+    <property name="WhereProperties" value="Active"/>
+  </object>
+
+  <object name="ClientDataHandler.City.Client.SelectAll" type="Ace.Windows.Core.DataModel.DataDefinition, Ace.Windows.Core">
+    <property name="ORMObjectName" value="City"/>
+    <property name ="ORMProperties" value="CityCode,Description,UserNo,Date_Time,EditDate_Time,EditUser,EditType,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="citycodedto"/>
+    <property name="WhereProperties" value="Active"/>
+  </object>
+
+  <object name="ClientDataHandler.State.Client.SelectAll" type="Ace.Windows.Core.DataModel.DataDefinition, Ace.Windows.Core">
+    <property name="ORMObjectName" value="State"/>
+    <property name ="ORMProperties" value="StateCode,Description,UserNo,Date_Time,EditDate_Time,EditUser,EditType,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="stateCodedto"/>
+    <property name="WhereProperties" value="Active"/>
+  </object>
+
+  <object name="ClientDataHandler.Cur.Client.SelectAll" type="Ace.Windows.Core.DataModel.DataDefinition, Ace.Windows.Core">
+    <property name="ORMObjectName" value="Currency"/>
+    <property name ="ORMProperties" value="Cur,Description,Symbol,FirstInWord,SecondInWord,IsHomeCur,CodeForCOA,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="curdto"/>
+    <property name="WhereProperties" value="Active"/>
+  </object>
+
+  <object name="ClientDataHandler.CounterType.Client.SelectAll" type="Ace.Windows.Core.DataModel.DataDefinition, Ace.Windows.Core">
+    <property name="ORMObjectName" value="CounterType"/>
+    <property name ="ORMProperties" value="CounterTypeCode,CounterDescription,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="counterTypeDTO"/>
+    <property name="WhereProperties" value="Active"/>
+  </object>
+
+  <object name="ClientDataHandler.COA.Client.SelectAll" type="Ace.Windows.Core.DataModel.DataDefinition, Ace.Windows.Core">
+    <property name="ORMObjectName" value="ChargeOfAccount"/>
+    <property name ="ORMProperties" value="ACode,AccountName,DCODE,ACType,PDate,CBMACode,Active,TS,CreatedDate,CreatedUserId,UpdatedDate,UpdatedUserId"/>
+    <property name="DTOObjectName" value="coadto"/>
+    <property name="WhereProperties" value="Active"/>
+  </object>
+
+  <object name="COASetup.Client.SelectByAccountNo" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="ChargeOfAccountSetup"/>
+    <property name ="ORMProperties" value="AccountName"/>
+    <property name ="WhereProperties" value="AccountNo,CurrencyCode,SourceBranchCode,Active"/>
+  </object>
+  <!--Endregion-->
+
+  <object name="Branch.Client.SelectActiveBranch" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="Branch"/>
+    <property name ="ORMProperties" value="BranchCode,BranchAlias,BranchDescription,Address,Fax,Phone,Email,StateCode,CityCode,TownshipCode,OtherBank,Bank_Alias"/>
+    <property name="DTOObjectName" value="branchdto"/>
+    <property name ="WhereProperties" value="BranchCode,Active"/>
+  </object>
+
+
+  <!--Region Loan Query-->
+
+  <object id="LOMORM00024.SelectAllPaymentInterval" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="LOMORM00024"/>
+    <property name ="ORMProperties" value="Description,TermPerYear,Code"/>
+    <property name="DTOObjectName" value="paymentIntervalDto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Code"/>
+  </object>
+
+  <object id="LOMORM00009.SelectAllStock" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="LOMORM00009"/>
+    <property name ="ORMProperties" value="StockNo,Name"/>
+    <property name="DTOObjectName" value="StockDto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="StockNo"/>
+  </object>
+
+  <object id="LOMORM00002.SelectAllAdvanceType" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="LOMORM00002"/>
+    <property name ="ORMProperties" value="Code,Description"/>
+    <property name="DTOObjectName" value="Advancedto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Code"/>
+  </object>
+
+  <object id="LOMORM00001.SelectAllBusinessType" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="LOMORM00001"/>
+    <property name ="ORMProperties" value="Code,Description"/>
+    <property name="DTOObjectName" value="businessdto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Code"/>
+  </object>
+  <object id="LOMORM00005.SelectAllLand" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="LOMORM00005"/>
+    <property name ="ORMProperties" value="Code,Description"/>
+    <property name="DTOObjectName" value="LandDto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Code"/>
+  </object>
+
+  <object id="LOMORM00004.SelectAllInsuranceType" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="LOMORM00004"/>
+    <property name ="ORMProperties" value="INSUCODE,INSUDESP"/>
+    <property name="DTOObjectName" value="InsuranDTO"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="INSUCODE"/>
+  </object>
+
+  <object id="LOMORM00003.SelectAllCustomerCharacterCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="LOMORM00003"/>
+    <property name ="ORMProperties" value="Code,Description"/>
+    <property name="DTOObjectName" value="CustomerCharacterDto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Code"/>
+  </object>
+
+  <object id="LOMORM00010.SelectAllKStock" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="LOMORM00010"/>
+    <property name ="ORMProperties" value="KStockNo,Desp"/>
+    <property name="DTOObjectName" value="KStockDto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="KStockNo"/>
+  </object>
+
+  <object id="LOMORM00007.SelectAllGJTCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="LOMORM00007"/>
+    <property name ="ORMProperties" value="Code,Description"/>
+    <property name="DTOObjectName" value="GjtDto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Code"/>
+  </object>
+
+  <object id="LOMORM00008.SelectAllGJKCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="LOMORM00008"/>
+    <property name ="ORMProperties" value="Kind,Description"/>
+    <property name="DTOObjectName" value="GjkDto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Kind"/>
+  </object>
+
+  <object id="LOMORM00006.SelectAllGoodWill" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="LOMORM00006"/>
+    <property name ="ORMProperties" value="Code,Description"/>
+    <property name="DTOObjectName" value="goodWilldto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Code"/>
+  </object>
+
+  <object id="LOMORM00014.SelectAllLandType" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="LOMORM00014"/>
+    <property name ="ORMProperties" value="LOANS_TYPE,LOANSDESP"/>
+    <property name="DTOObjectName" value="loanTypeDto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Id"/>
+  </object>
+
+  <object id="LOMORM00068.SelectAllStockGroup" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="LOMORM00068"/>
+    <property name ="ORMProperties" value="GroupCode,Description,PreFix"/>
+    <property name="DTOObjectName" value="StockGroupDto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="GroupCode"/>
+  </object>
+  
+  <object id="LOMORM00071.SelectAllSeasonCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="LOMORM00071"/>
+    <property name ="ORMProperties" value="Code,Description"/>
+    <property name="DTOObjectName" value="SeasonCodedto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Code"/>
+  </object>
+
+  <object id="LOMORM00072.SelectAllCropTypeCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="LOMORM00072"/>
+    <property name ="ORMProperties" value="CropCode,Desp"/>
+    <property name="DTOObjectName" value="CropTypeDto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="CropCode"/>
+  </object>
+
+  <object id="LOMORM00074.SelectAllProductCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="LOMORM00074"/>
+    <property name ="ORMProperties" value="Code,Description"/>
+    <property name="DTOObjectName" value="ProductCodedto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Code"/>
+  </object>
+
+  <object id="LOMORM00073.SelectAllUMCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="LOMORM00073"/>
+    <property name ="ORMProperties" value="UMCode,UMDesp"/>
+    <property name="DTOObjectName" value="UMDto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="UMCode"/>
+  </object>
+
+  <object id="LOMORM00076.SelectAllLSBusinessCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="LOMORM00076"/>
+    <property name ="ORMProperties" value="Code,Description"/>
+    <property name="DTOObjectName" value="lsbusinesstypedto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Code"/>
+  </object>
+
+  <object id="LOMORM00070.SelectAllVillageGroupCode" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="LOMORM00070"/>
+    <property name ="ORMProperties" value="VillageCode,Desp"/>
+    <property name="DTOObjectName" value="VillageGroupDto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="VillageCode"/>
+  </object>
+
+  <object id="LOMORM00077.SelectAllLSProductType" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="LOMORM00077"/>
+    <property name ="ORMProperties" value="LSProductTypeItemId,ProductCode,LSBusinessCode,UMCode,DurationMonths"/>
+    <property name="DTOObjectName" value="LSProductTypeItemDto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="ProductCode"/>
+  </object>
+
+  <object id="LOMORM00075.SelectAllAGProductTypeItem" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="LOMORM00075"/>
+    <property name ="ORMProperties" value="AGLoanProductTypeItemId,ProductCode,SeasonCode,UMCode,SDay,SMonth,EDay,EMonth,DeadLineDay,DeadLineMonth,USERNO,DATE_TIME"/>
+    <property name="DTOObjectName" value="AGLoanProductTypeItemdto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="SeasonCode"/>
+  </object>
+  <object name="COA.Client.SelectACName" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="ChargeOfAccount"/>
+    <property name ="ORMProperties" value="AccountName"/>
+    <property name ="WhereProperties" value="ACode, DCODE, Active"/>
+  </object>
+
+	<object id="LOMORM00100.SelectAllInstallmentName" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+		<property name="ORMObjectName" value="LOMORM00100"/>
+		<property name ="ORMProperties" value="NAME"/>
+		<property name="DTOObjectName" value="installmentPerioddto"/>
+		<property name="WhereProperties" value="NOOFMONTH,Active"/>
+	</object>
+	
+	<object id="LOMORM00100.SelectAllInstallmentPeriod" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+		<property name="ORMObjectName" value="LOMORM00100"/>
+		<property name ="ORMProperties" value="Id,NAME,NOOFMONTH"/>
+		<property name="DTOObjectName" value="installmentPerioddto"/>
+		<property name="WhereProperties" value="Active"/>
+		<property name ="OrderByProperties" value="Id"/>
+	</object>
+
+  <object id="LOMORM00101.SelectAllSubProductType" type="Ace.Cbs.Cx.Com.Dmd.CXDMD00003, Ace.Cbs.Cx.Com">
+    <property name="ORMObjectName" value="LOMORM00101"/>
+    <property name ="ORMProperties" value="Code,Description"/>
+    <property name="DTOObjectName" value="subProductTypedto"/>
+    <property name="WhereProperties" value="Active"/>
+    <property name ="OrderByProperties" value="Code"/>
+  </object>
+  
+</objects>

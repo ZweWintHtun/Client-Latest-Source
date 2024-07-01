@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Pfm.Dmd.PFMDTO00001, Ace.Cbs.Pfm.Dmd" rename="balanceConfirmCurrentdto"/>
+  <class name="MNMVIW00013" table="VW_BALANCE_CONFIRMATION_CAOF" mutable="false">
+
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+
+    <property name="AcctNo">
+      <column name="ACCTNO" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Name">
+      <column name="NAME" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="Address">
+      <column name="ADDRESS" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Nrc">
+      <column name="NRC" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="CBal">
+      <column name="CBAL" sql-type="numeric" not-null="true" />
+    </property>
+
+    <property name="Date_Time">
+      <column name="DATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="Desp">
+      <column name="DESP" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="SourceBranch">
+      <column name="SourceBr" sql-type="varchar" not-null="true"/>
+    </property>
+
+  </class>
+
+  <!--//SelectCurrentAccountInfo//-->
+  <query name="SelectCurrentAccountInfo">
+    select new balanceConfirmCurrentdto
+    (
+    vw.AcctNo,
+    vw.Name,
+    vw.CBal,
+    vw.Address,
+    vw.Nrc
+    )
+    from MNMVIW00013 as vw
+    where vw.SourceBranch =: sourceBr
+  </query>
+
+  <!--//Select CurrentAccount Information By accountno//-->
+  <query name="SelectCurrentAccountInfoByAcctno">
+    select new balanceConfirmCurrentdto
+    (
+    vw.AcctNo,
+    vw.Name,
+    vw.CBal,
+    vw.Address,
+    vw.Nrc
+    )
+    from MNMVIW00013 as vw
+    where vw.AcctNo =: acctno
+  </query>
+
+</hibernate-mapping>

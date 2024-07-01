@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:v="http://www.springframework.net/validation">
+
+  <description>
+    UI Control Settings
+  </description>
+
+  <!--Region CounterSetup -->
+  <object id="COUNTERINFO.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+              value="txtCounterNo" />
+  </object>
+
+  <object id="CounterInfo.Branch.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+              value="cboBranchCode" />
+  </object>
+
+  <object id="COUNTERINFO.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+              value="txtCounterNo" />
+  </object>
+  <!--Endregion-->
+
+  <!--Region Branch -->
+  <object id="Branch.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+              value="txtBranchCode" />
+  </object>
+
+  <object id="Branch.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+              value="txtBranchCode" />
+  </object>
+
+  <!--Region StateCode -->
+  <object id="StateCode.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+              value="txtStateCode" />
+  </object>
+
+  <object id="StateCode.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+              value="txtStateCode" />
+  </object>
+  <!--Endregion-->
+
+  <!--CurrencyCode-->
+  <object id="Cur.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="txtCurrency,chkHomeCurrency,txtSymbol,txtDesp1,txtDesp2,cboCashac" />
+  </object>
+
+  <object id="Cur.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+				  value="txtCurrency,chkHomeCurrency,txtSymbol,txtDesp1,txtDesp2,cboCashac" />
+  </object>
+
+  <!--DepartmentCode-->
+  <object id="DepartmentCode.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+				  value="cboDepartmentCode" />
+  </object>
+
+  <object id="DepartmentCode.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="cboDepartmentCode" />
+  </object>
+
+  <!--COACode-->
+  <object id="COA.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+				  value="txtAccountCode,cboAccountType,cboDepartmentCode,chkAllBranch" />
+  </object>
+
+  <object id="COA.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+				  value="txtAccountCode,cboAccountType,cboDepartmentCode,chkAllBranch" />
+  </object>
+
+  <!--Region TownshipCode -->
+  <object id="TownshipCode.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+              value="txtTownshipCode" />
+  </object>
+
+  <object id="TownshipCode.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+              value="txtTownshipCode" />
+  </object>
+  <!--Endregion-->
+
+  <!--Region CityCode -->
+  <object id="CityCode.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+              value="txtCityCode" />
+  </object>
+
+  <object id="CityCode.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+              value="txtCityCode" />
+  </object>
+  <!--Endregion-->
+
+  <!--Region CounterType-->
+  <object id="CounterType.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+              value="txtCounterType" />
+  </object>
+
+  <object id="CounterType.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+              value="txtCounterType" />
+  </object>
+  <!--Endregion-->
+
+  <!--Region Installer -->
+
+  <!--Region HierarchyWorkStation-->
+
+  <object id="HierarchyCenterTerminalFormLoad.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+              value="butDelete,butCancel,gbterminalinformation,butSave" />
+  </object>
+  <object id="HierarchyCenterTerminalTreeNodeClick.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+              value="gbterminalinformation,butSave,butDelete,butCancel" />
+  </object>
+
+
+  <object id="HierarchyCCTerminalFormLoad.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+              value="gbterminalinformation,butSave,butDelete,butCancel,butAddServer,butAddCenter" />
+  </object>
+
+  <object id="HierarchyTerminal.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+              value="gbterminalinformation,butSave,butDelete,butCancel" />
+  </object>
+
+  <object id="HierarchyCCCParentTerminal.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+              value="gbterminalinformation,butSave,butDelete,butCancel" />
+  </object>
+
+  <object id="HierarchyCCCChildTerminal.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+              value="gbterminalinformation,txtTerminalDescription,txtHostName,txtTerminalIPAddress,txtMaskAddress,mtxtTerminalMacAddress,txtPrinterName,butSave,butDelete,butCancel" />
+  </object>
+
+  <object id="HierarchyCCCCombo.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+              value="cboBranchCode,cboTerminalType" />
+  </object>
+
+  <object id="HierarchyCCCTerminal.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+              value="butAddServer,butAddCenter" />
+  </object>
+
+  <object id="HierarchyHasNoChildTerminal.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+              value="butChild" />
+  </object>
+
+  <object id="HierarchyHasNoChildTerminal.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+              value="butChild" />
+  </object>
+
+  <object id="HierarchyTerminalType.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+              value="cboTerminalType" />
+  </object>
+
+  <object id="HierarchyTerminalType.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+              value="cboTerminalType" />
+  </object>
+
+  <object id="HierarchyServer.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+              value="butAddServer" />
+  </object>
+  
+  <object id="HierarchyServer.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+              value="butAddServer" />
+  </object>
+  <!--Endregion-->
+
+  <!--Region CounterInformation-->
+  <object id="CounterInformation.Enable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="EnableControls"
+              value="cboCounterType,txtCounterNo,dgvWorkStation" />
+  </object>
+
+  <object id="CounterInformation.Disable" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+              value="cboCounterType,txtCounterNo,dgvWorkStation" />
+  </object>
+
+  <!--Endregion-->
+
+  <!--Endregion-->
+
+</objects>

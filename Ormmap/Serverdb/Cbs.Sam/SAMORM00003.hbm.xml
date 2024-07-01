@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--HOLIDAY-->
+<!-- 
+// <copyright file="SAMORM00003.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>Hay Mar</CreatedUser>
+// <CreatedDate>07/26/2013</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version></Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Sam.Dmd" namespace="Ace.Cbs.Sam.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+  <import class="Ace.Cbs.Sam.Dmd.SAMDTO00003, Ace.Cbs.Sam.Dmd" rename="holidaydto"/>
+  <class name="SAMORM00003" table="[HOLIDAY]">
+
+    <id name="Id" type="Int32" unsaved-value="0">
+      <generator class="increment">
+      </generator>
+    </id>
+
+    <version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+      <column name="TS" sql-type="timestamp" not-null="true"/>
+    </version>
+
+    <property name="DATE">
+      <column name="DATE" sql-type="datetime" not-null="true" />
+    </property>
+
+    <property name="DESCRIPTION">
+      <column name="DESCRIPTION" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="USERNO">
+      <column name="USERNO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="UID">
+      <column name="UID" sql-type="char" not-null="false" />
+    </property>
+
+    <property name="Active" not-null="true"/>
+    <property name="CreatedDate" not-null="true" update="false" />
+    <property name="CreatedUserId" not-null="true" update="false"/>
+    <property name="UpdatedDate" not-null="false" insert="false" />
+    <property name="UpdatedUserId" not-null="false" insert="false"/>
+
+  </class>
+
+  <!--//HOLIDAY.CheckExist//-->
+  <query name="HOLIDAYDAO.CheckExist">
+    select new holidaydto( h.Id,
+    h.DATE,
+    h.DESCRIPTION,
+    h.USERNO,
+    h.UID )
+    from SAMORM00003 as h where convert(char(10),h.DATE,111) =convert(char(10),: dATE,111)
+	and  h.Active = true
+  </query>
+
+  <!--//HOLIDAYDAO.SelectAll//-->
+  <query name="HOLIDAYDAO.SelectAll">
+    select new holidaydto(
+    h.Id,
+    h.DATE,
+    h.DESCRIPTION,
+    h.USERNO,
+    h.UID,
+    h.Active,
+    h.TS,
+    h.CreatedUserId,
+    h.CreatedDate,
+    h.UpdatedUserId,
+    h.UpdatedDate
+    )
+    from SAMORM00003 as h
+    where h.Active = true
+	order by h.DATE
+  </query>
+
+  <!--//HOLIDAYDAO.SelectById//-->
+  <query name="HOLIDAYDAO.SelectById">
+    select new holidaydto(
+    h.Id,
+    h.DATE,
+    h.DESCRIPTION,
+    h.USERNO,
+    h.UID,
+    h.Active,
+    h.TS,
+    h.CreatedUserId,
+    h.CreatedDate,
+    h.UpdatedUserId,
+    h.UpdatedDate
+    )
+    from SAMORM00003 as h
+    where h.Id = :id
+    and h.Active = true
+  </query>
+
+    <!--//HOLIDAYDAO.Selectbydate//-->
+	<query name="HOLIDAYDAO.SelectByDateAll">
+		select new holidaydto(
+		h.DATE,
+		h.DESCRIPTION
+		)
+		from SAMORM00003 as h
+		where h.Active = true
+		order by h.DATE 
+	</query>
+
+
+</hibernate-mapping>

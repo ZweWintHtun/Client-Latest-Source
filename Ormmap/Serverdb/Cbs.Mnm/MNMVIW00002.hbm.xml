@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Mnm.Dmd" namespace="Ace.Cbs.Mnm.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Mnm.Dmd.MNMDTO00010, Ace.Cbs.Mnm.Dmd" rename="trialDetaildto"/>
+  <class name="MNMVIW00002" table="VW_TRIAL_BALANCE_DETAIL" mutable="false">
+
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+
+    <property name="ACODE">
+      <column name="ACODE" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="DCODE">
+      <column name="DCODE" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="CBMACODE">
+      <column name="CBMACODE" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="ACNAME">
+      <column name="ACNAME" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="ACTYPE">
+      <column name="ACTYPE" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="CUR">
+      <column name="CUR" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="CBAL">
+      <column name="CBAL" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M1">
+      <column name="M1" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M2">
+      <column name="M2" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M3">
+      <column name="M3" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M4">
+      <column name="M4" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M5">
+      <column name="M5" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M6">
+      <column name="M6" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M7">
+      <column name="M7" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M8">
+      <column name="M8" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M9">
+      <column name="M9" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M10">
+      <column name="M10" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M11">
+      <column name="M11" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="M12">
+      <column name="M12" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="MSRC1">
+      <column name="MSRC1" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="MSRC2">
+      <column name="MSRC2" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="MSRC3">
+      <column name="MSRC3" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="MSRC4">
+      <column name="MSRC4" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="MSRC5">
+      <column name="MSRC5" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="MSRC6">
+      <column name="MSRC6" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="MSRC7">
+      <column name="MSRC7" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="MSRC8">
+      <column name="MSRC8" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="MSRC9">
+      <column name="MSRC9" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="MSRC10">
+      <column name="MSRC10" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="MSRC11">
+      <column name="MSRC11" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="MSRC12">
+      <column name="MSRC12" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="Active" not-null="true"/>
+    
+  </class>
+
+ </hibernate-mapping>

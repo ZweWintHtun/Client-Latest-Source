@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00400, Ace.Cbs.Loan.Dmd" rename="ODInterestCalculationDto"/>
+  <class name="LOMVIW00400" table="VW_MTHCALINT" mutable="false" >
+
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+    <property name="Acctno">
+      <column name="Acctno" sql-type="varchar" not-null="true"/>
+    </property>
+    <property name="Amount">
+      <column name="Amount" sql-type="numeric" not-null="false" />
+    </property>
+    <property name="SubStatus">
+      <column name="SubStatus" sql-type="varchar" not-null="false"/>
+    </property>
+    <property name="Date_time">
+      <column name="Date_time" sql-type="datetime" not-null="false"/>
+    </property>
+    <property name="WorkStation">
+      <column name="WorkStation" sql-type="varchar" not-null="false"/>
+    </property>
+    <property name="SourceBr">
+      <column name="SourceBr" sql-type="varchar" not-null="true"/>
+    </property>
+  </class>
+
+  <!--//LoanRegistrationListingDto.Land & Building//-->
+  <query name="SelectAllTransactionFromVW_MthCalInt">
+    select new ODInterestCalculationDto(
+    l.Acctno,
+    l.Amount,
+    l.SubStatus,
+    l.Date_time,
+    l.WorkStation,
+    l.SourceBr
+    )
+    from LOMVIW00400 as l
+    where l.SourceBr = :sourceBr
+    and CONVERT(char(10),l.Date_time, 111) between CONVERT(char(10),:startDate, 111) and CONVERT(char(10),:endDate, 111)
+    and l.WorkStation = :workStation
+    order by l.Acctno asc
+  </query>
+</hibernate-mapping>

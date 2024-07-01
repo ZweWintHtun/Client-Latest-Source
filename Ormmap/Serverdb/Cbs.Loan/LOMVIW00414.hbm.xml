@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--VW_BusinessLoansRepaymentListing-->
+<!-- 
+// <copyright file="LOMORM00405.hbm.xml" company="ACE Data Systems">
+// Copyright (c) ACE Data Systems. All rights reserved.
+// </copyright>
+// <CreatedUser>ZMS</CreatedUser>
+// <CreatedDate>2017-07-23</CreatedDate>
+// <UpdatedUser></UpdatedUser>
+// <UpdatedDate></UpdatedDate>
+// <Version>1.0</Version>
+-->
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Ace.Cbs.Loan.Dmd.LOMDTO00405, Ace.Cbs.Loan.Dmd" rename="VW_BusinessLoansRepaymentListing_dto"/>
+  <class name="LOMVIW00414" table="VW_BusinessLoansRepaymentListing" mutable="false">
+
+    <id name="Id" type="Int32" unsaved-value="0">
+    </id>
+
+    <property name="LNO">
+      <column name="LNO" sql-type="varchar" not-null="true"/>
+    </property>
+
+    <property name="AccountNo">
+      <column name="AcctNo" sql-type="varchar" not-null="true"/>
+    </property>
+
+    <property name="NAME">
+      <column name="NAME" sql-type="varchar" not-null="false"/>
+    </property>
+
+    <property name="ADDRESS">
+      <column name="ADDRESS" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="PHONE">
+      <column name="PHONE" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="IntPaidDate">
+      <column name="IntPaidDate" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="FirstDueDate">
+      <column name="FirstDueDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="FirstSAmt">
+      <column name="FirstSAmt" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="CurrentSanAmt">
+      <column name="CurrentSanAmt" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="IntRate">
+      <column name="IntRate" sql-type="numeric" not-null="true" />
+    </property>
+
+    <property name="SourceBr">
+      <column name="SourceBr" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="TotalLateFee">
+      <column name="TotalLateFee" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="TOD">
+      <column name="TOD" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="Cur">
+      <column name="Cur" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="VoucherDate">
+      <column name="VoucherDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="ExpireDate">
+      <column name="ExpireDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="TotalInt">
+      <column name="TotalInt" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="LastInt">
+      <column name="LastInt" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="SDate">
+      <column name="SDate" sql-type="datetime" not-null="false" />
+    </property>
+
+    <property name="SCharges">
+      <column name="SCharges" sql-type="numeric" not-null="false" />
+    </property>
+
+    <property name="isSCharge">
+      <column name="isSCharge" sql-type="bit" not-null="false" />
+    </property>
+
+    <property name="REPAYNO">
+      <column name="REPAYNO" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="InterestForRepay">
+      <column name="INTEREST" sql-type="numeric" not-null="false" />
+    </property>
+    <property name="RepayAmount">
+      <column name="AMOUNT" sql-type="numeric" not-null="false" />
+    </property>
+    <property name="RepayDate">
+      <column name="DATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+  </class>
+
+  
+  <!--BLInterestDuePreListingDAO.SelectByDueDateForBLIntDuePreListing-->
+  <query name="LOMVIW00414.SelectBLRepayInfoByRepaymentDateListing">
+    select new VW_BusinessLoansRepaymentListing_dto
+    (
+    b.Id,
+    b.LNO,
+    b.AccountNo,
+    b.NAME,
+    b.ADDRESS,
+    b.PHONE,
+    b.FirstSAmt,
+    b.CurrentSanAmt,
+    b.SourceBr,
+    b.Cur,
+    b.VoucherDate,
+    b.ExpireDate,
+    b.REPAYNO,
+    b.InterestForRepay,
+    b.RepayAmount,
+    b.RepayDate
+    )
+    from LOMVIW00414 as b
+    where CONVERT(char(10),b.RepayDate,111) between CONVERT(char(10),:startDate,111) and CONVERT(char(10),:endDate,111)
+    and b.Cur = :cur
+    and b.SourceBr = :sourceBranchCode
+  </query>
+  
+</hibernate-mapping>

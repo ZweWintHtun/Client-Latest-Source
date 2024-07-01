@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Ace.Cbs.Loan.Dmd" namespace="Ace.Cbs.Loan.Dmd" xmlns="urn:nhibernate-mapping-2.2">
+
+	<import class="Ace.Cbs.Loan.Dmd.LOMDTO00001, Ace.Cbs.Loan.Dmd" rename="CustomerCharacterDto"/>
+
+	<class name="LOMORM00003" table="CustomerCharacterCode" >
+
+		<id name="Code">
+			<column name="CharacterCode" sql-type="varchar" not-null="true" />
+		</id>
+
+		<version name="TS" generated="always" unsaved-value="null" type="BinaryBlob">
+			<column name="TS" sql-type="timestamp" not-null="true"/>
+		</version>
+
+		<property name="Description">
+			<column name="CharacterDescription" sql-type="varchar" not-null="true" />
+		</property>
+
+		<property name="Active" not-null="true"/>
+		<property name="CreatedDate" not-null="true" update="false" />
+		<property name="CreatedUserId" not-null="true" update="false"/>
+		<property name="UpdatedDate" not-null="false" insert="false" />
+		<property name="UpdatedUserId" not-null="false" insert="false"/>
+
+	</class>
+
+	<!--//CustomerCharacterDAO.CheckExist//-->
+	<query name="CustomerCharacterDAO.CheckExist">
+		select new CustomerCharacterDto
+		(
+		c.Code,
+		c.Description
+		)
+		from LOMORM00003 as c
+		where (c.Code =: code or c.Description =: description)
+		and  c.Active = true
+	</query>
+
+	<!--//CustomerCharacterDAO.CheckExist2//-->
+	<query name="CustomerCharacterDAO.CheckExist2">
+		select new CustomerCharacterDto
+		(
+		c.Code,
+		c.Description,
+		c.Active,
+		c.TS,
+		c.CreatedDate,
+		c.CreatedUserId,
+		c.UpdatedDate,
+		c.UpdatedUserId
+		)
+		from LOMORM00003 as c
+		where (c.Code =: code or c.Description =: description)
+	</query>
+
+	<!--//CustomerCharacterDAO.SelectAll//-->
+	<query name="CustomerCharacterDAO.SelectAll">
+		select new CustomerCharacterDto
+		(
+		c.Code,
+		c.Description,
+		c.Active,
+		c.TS,
+		c.CreatedDate,
+		c.CreatedUserId,
+		c.UpdatedDate,
+		c.UpdatedUserId
+		)
+		from LOMORM00003 as c
+		where c.Active = true
+	</query>
+
+	<!--//CustomerCharacterDAO.SelectById//-->
+	<query name="CustomerCharacterDAO.SelectByCode">
+		select new CustomerCharacterDto(
+		c.Code,
+		c.Description,
+		c.Active,
+		c.TS,
+		c.CreatedDate,
+		c.CreatedUserId,
+		c.UpdatedDate,
+		c.UpdatedUserId
+		)
+		from LOMORM00003 as c
+		where c.Code = :code
+		and c.Active = true
+	</query>
+
+</hibernate-mapping>
+

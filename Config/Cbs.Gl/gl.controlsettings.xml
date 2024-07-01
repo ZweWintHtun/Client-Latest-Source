@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:v="http://www.springframework.net/validation">
+
+  <description>
+    UI Control Settings
+  </description>
+
+  <object id="FormatEnty.HiddenFormatEnty" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="HiddenControls"
+              value="grpInputFormat"
+              />
+  </object>
+
+  <object id="FormatEnty.VisibleFormatEnty" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="VisibleControls"
+              value="grpInputFormat"
+              />
+  </object>
+
+  <object id="ReportStatement.DisableCurrency" type="Ace.Windows.CXClient.Controls.ControlSettings">
+    <property name="DisableControls"
+              value="cboCurrency"
+              />
+  </object>
+    <object id="ReportStatement.EnableCurrency" type="Ace.Windows.CXClient.Controls.ControlSettings">
+      <property name="EnableControls"
+                value="cboCurrency"
+              />
+    </object>
+  
+</objects>
